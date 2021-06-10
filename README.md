@@ -1,8 +1,8 @@
 # Fast Request
 
-![Version](http://phpstorm.espend.de/badge/2/version)
-![Downloads](http://phpstorm.espend.de/badge/2/downloads)
-![Downloads Last Month](http://phpstorm.espend.de/badge/2/last-month)
+![Version](http://phpstorm.espend.de/badge/16988/version)
+![Downloads](http://phpstorm.espend.de/badge/16988/downloads)
+![Downloads Last Month](http://phpstorm.espend.de/badge/16988/last-month)
 
 **Fast Request** is a plugin based on springmvc that help you quickly generate **url** and **params**.
 
