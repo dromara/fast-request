@@ -105,3 +105,6 @@ QQ 群:754131222
 希望各位路人大佬帮忙一起建设后续的功能,提供好的建议以及好的PR!
 
 * 支持发送请求 
+
+
+[latest-release]: https://github.com/kings1990/fast-request/releases/latest

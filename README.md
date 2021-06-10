@@ -39,7 +39,6 @@ modify key:<kbd>Preferences(Settings)</kbd> > <kbd>Keymap</kbd>
 
 other way:<kbd>Code(Toolbar)</kbd> > <kbd>Generate</kbd> > <kbd>Generate URL and Param</kbd>
 
-[latest-release]: https://github.com/kings1990/fast-request/releases/latest
 
 ## 3.config and usage
 ### 3.1 common config
@@ -102,3 +101,6 @@ If you think the plug-in is great and saves you a lot of time, then invite the a
 I very hope you can help build follow-up functions.Provide good idea and provide good PR!
 
 * support send request
+
+
+[latest-release]: https://github.com/kings1990/fast-request/releases/latest
