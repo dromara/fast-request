@@ -21,7 +21,7 @@
     ]]>
     </description>
 
-    <idea-version since-build="211"/>
+    <idea-version since-build="203"/>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
