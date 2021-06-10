@@ -1,0 +1,57 @@
+<idea-plugin>
+    <id>io.github.kings1990.FastRequest</id>
+    <name>Fast Request</name>
+    <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
+
+    <description><![CDATA[
+    Fast Request is a plugin based on springmvc that help you quickly generate url and params.<br/>
+    <br/>
+
+    <em>Support Springmvc/SpringBoot</em><br/><br/>
+    <em>For more information,Please goto <a href="https://github.com/kings1990/fast-request">Github</a></em><br/>
+
+    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.gif" /><br/>
+
+    <h3>v1.0.0</h3>
+    <ul>
+        <li>support Springmvc/SpringBoot</li>
+        <li>support custom domain</li>
+        <li>support custom params</li>
+     </ul>
+    ]]>
+    </description>
+
+    <idea-version since-build="185"/>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.java</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestComponent" order="first"/>
+        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService"/>
+        <applicationConfigurable id="p" displayName="Fast Request" instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
+            <configurable parentId="p" instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>
+        </applicationConfigurable>
+        <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest" factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory" secondary="false"/>
+        <notificationGroup id="Copy Notification Group" displayType="BALLOON" />
+    </extensions>
+
+    <actions >
+        <!-- Add your actions here -->
+        <group id="generateUrlAndParam" text="FastRequest" description="FastRequest" popup="true">
+            <separator/>
+            <group id="generateSubGroup"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="fastRequest.generator" class="io.github.kings1990.plugin.fastrequest.action.GenerateUrlAction" text="Generate URL and Param"
+                    description="Generate URL and Param">
+                <add-to-group group-id="JavaGenerateGroup1" anchor="before" relative-to-action="GenerateEquals"/>
+                <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="Default for XWin" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>

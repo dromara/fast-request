@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="io.github.kings1990.plugin.fastrequest.view.FastRequestToolWindow">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="7" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="665" height="449"/>
+    </constraints>
+    <properties/>
+    <border type="none">
+      <font/>
+      <color color="-789517"/>
+    </border>
+    <children>
+      <component id="c9219" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="100" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Current Env"/>
+        </properties>
+      </component>
+      <component id="1e43c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Url"/>
+        </properties>
+      </component>
+      <component id="cc153" class="javax.swing.JTextField" binding="urlTextField">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <tabbedpane id="fedad" binding="paramTabbedPane">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <tabbedpane id="241ea" binding="urlParamsTabbedPane">
+            <constraints>
+              <tabbedpane title="URL Params"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="57076" binding="urlParamsTablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Table"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <scrollpane id="e9944" binding="urlParamsTextPanel">
+                <constraints>
+                  <tabbedpane title="Text"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="60b30" class="javax.swing.JTextArea" binding="urlParamsTextArea">
+                    <constraints/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </tabbedpane>
+          <tabbedpane id="a2a76" binding="jsonTabbedPanel">
+            <constraints>
+              <tabbedpane title="JSON"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="857c6" binding="jsonTreeTablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Tree"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <scrollpane id="32fc8">
+                <constraints>
+                  <tabbedpane title="Text"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="58766" class="javax.swing.JTextArea" binding="jsonParamsTextArea">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </tabbedpane>
+          <tabbedpane id="9ade5" binding="urlEncodedTabbedPane">
+            <constraints>
+              <tabbedpane title="Form URL-Encoded"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="ff779" binding="urlEncodedTablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Table"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+              <scrollpane id="a971a" binding="urlEncodedTextPanel">
+                <constraints>
+                  <tabbedpane title="Text"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="928fa" class="javax.swing.JTextArea" binding="urlEncodedTextArea">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </tabbedpane>
+        </children>
+      </tabbedpane>
+      <component id="27e19" class="javax.swing.JComboBox" binding="methodTypeComboBox">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="GET"/>
+            <item value="POST"/>
+            <item value="DELETE"/>
+            <item value="PUT"/>
+          </model>
+        </properties>
+      </component>
+      <component id="15a4f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Current Project"/>
+        </properties>
+      </component>
+      <component id="c9cfb" class="javax.swing.JTextField" binding="currentDomainTextField">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="4" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <horizontalAlignment value="2"/>
+        </properties>
+      </component>
+      <component id="589cf" class="javax.swing.JButton" binding="coffeeMeButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Coffee me ~☕"/>
+        </properties>
+      </component>
+      <component id="26a6d" class="javax.swing.JButton" binding="starButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Star~⭐"/>
+        </properties>
+      </component>
+      <component id="8ece7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="e7a2e" class="javax.swing.JCheckBox" binding="enableProjectCheckBox" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text resource-bundle="io/github/kings1990/fastrequest/18n/fr" key="enable"/>
+        </properties>
+      </component>
+      <component id="5ee79" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Current Domain"/>
+        </properties>
+      </component>
+      <component id="93a67" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Param"/>
+        </properties>
+      </component>
+      <component id="6cc91" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Path Param"/>
+        </properties>
+      </component>
+      <grid id="286b3" binding="pathParamsPanel" custom-create="true" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="100"/>
+            <preferred-size width="-1" height="100"/>
+            <maximum-size width="-1" height="100"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <component id="98f42" class="javax.swing.JComboBox" binding="envComboBox">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model/>
+        </properties>
+      </component>
+      <component id="163a8" class="javax.swing.JComboBox" binding="projectComboBox">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+    </children>
+  </grid>
+  <inspectionSuppressions>
+    <suppress inspection="MissingMnemonic" id="e7a2e"/>
+    <suppress inspection="I18nForm" id="e7a2e"/>
+  </inspectionSuppressions>
+</form>
