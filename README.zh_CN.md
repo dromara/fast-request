@@ -10,7 +10,7 @@
 
 目前插件对标的是[Paw](https://paw.cloud/)
 
-如果你觉得本插件不错,请给Star,也欢迎提供优秀的PR
+如果你觉得本插件不错,请给个🌟Star吧,也欢迎提供优秀的PR
 
 ![example](./screenshot/example.gif)
 
