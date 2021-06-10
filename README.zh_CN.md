@@ -1,8 +1,8 @@
 # Fast Request
 
-![Version](http://phpstorm.espend.de/badge/2/version)
-![Downloads](http://phpstorm.espend.de/badge/2/downloads)
-![Downloads Last Month](http://phpstorm.espend.de/badge/2/last-month)
+![Version](http://phpstorm.espend.de/badge/16988/version)
+![Downloads](http://phpstorm.espend.de/badge/16988/downloads)
+![Downloads Last Month](http://phpstorm.espend.de/badge/16988/last-month)
 
 **Fast Request**是一个基于springmvc的帮助你快速生成**url**和**参数**的插件.
 
