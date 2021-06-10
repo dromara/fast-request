@@ -17,6 +17,8 @@ If you think this plugin help you, please **Star** project, and also welcome to 
 - document
     * [中文文档](README.zh_CN.md)
     * [English Document](README.md)
+
+QQ group:754131222  
   
 ## 1.Install
 **using IDE plugin system**

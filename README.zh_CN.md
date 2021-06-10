@@ -18,6 +18,8 @@
     * [中文文档](README.zh_CN.md)
     * [English Document](README.md)
 
+QQ 群:754131222
+
 ## 1.安装
 
 **插件市场安装**
