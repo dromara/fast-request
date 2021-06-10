@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin require-restart="true">
     <id>io.github.kings1990.FastRequest</id>
     <name>Fast Request</name>
     <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
