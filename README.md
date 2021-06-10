@@ -1,5 +1,6 @@
 # Fast Request
 
+[![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](http://phpstorm.espend.de/badge/16988/version)
 ![Downloads](http://phpstorm.espend.de/badge/16988/downloads)
 ![Downloads Last Month](http://phpstorm.espend.de/badge/16988/last-month)
@@ -105,3 +106,5 @@ I very hope you can help build follow-up functions.Provide good idea and provide
 
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
+[plugin]: https://plugins.jetbrains.com/plugin/16988
+[plugin-img]: https://img.shields.io/badge/plugin-FastRequest-x.svg
