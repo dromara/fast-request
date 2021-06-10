@@ -33,6 +33,7 @@ QQ group:754131222
 |key|scope|description|
 | --- | --- | --- |
 | <kbd> ctrl \ </kbd> | method(just put the cursor on method) | Generate the url and request parameters of the current method |
+
 if it doesn't work,you can search <kbd>Generate URL and Param</kbd> in key map and change the key
 
 modify key:<kbd>Preferences(Settings)</kbd> > <kbd>Keymap</kbd>
