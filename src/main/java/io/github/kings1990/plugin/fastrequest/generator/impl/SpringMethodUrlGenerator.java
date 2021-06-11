@@ -118,23 +118,17 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
      * @date 2021/05/23
      */
     public String getClassRequestMappingUrl(PsiMethod psiMethod) {
-        Constant.SpringControllerConfig[] controllerConfigArray = Constant.SpringControllerConfig.values();
+        String mapping = Constant.SpringMappingConfig.REQUEST_MAPPING.getCode();
         PsiClass containingClass = psiMethod.getContainingClass();
         if (containingClass == null) {
             return StringUtils.EMPTY;
         }
-        PsiAnnotation annotationController = null;
-        for (Constant.SpringControllerConfig controllerConfig : controllerConfigArray) {
-            String code = controllerConfig.getCode();
-            annotationController = containingClass.getAnnotation(code);
-            if (annotationController != null) {
-                break;
-            }
-        }
-        if (annotationController == null) {
+        PsiAnnotation annotationMapping = containingClass.getAnnotation(mapping);;
+
+        if (annotationMapping == null) {
             return StringUtils.EMPTY;
         }
-        PsiAnnotationMemberValue value = annotationController.findDeclaredAttributeValue("value");
+        PsiAnnotationMemberValue value = annotationMapping.findDeclaredAttributeValue("value");
         if (value == null) {
             return StringUtils.EMPTY;
         }
