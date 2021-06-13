@@ -1,5 +1,9 @@
 package io.github.kings1990.plugin.fastrequest.util;
 
+import java.math.BigDecimal;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class TypeUtil {
     public static String calcType(String dataMappingType) {
         switch (dataMappingType) {
@@ -44,6 +48,33 @@ public class TypeUtil {
         } else {
             return Type.String.name();
         }
+    }
+
+    public static String calcTypeByStringValue(String value) {
+        if ("true".equals(value) || "false".equals(value)) {
+            return Type.Boolean.name();
+        } else if (isNumeric(value)) {
+            return Type.Number.name();
+        } else {
+            return Type.String.name();
+        }
+    }
+
+    public static boolean isNumeric(String str) {
+        // 该正则表达式可以匹配所有的数字 包括负数
+        Pattern pattern = Pattern.compile("-?[0-9]+(\\.[0-9]+)?");
+        String bigStr;
+        try {
+            bigStr = new BigDecimal(str).toString();
+        } catch (Exception e) {
+            return false;//异常 说明包含非数字。
+        }
+
+        Matcher isNum = pattern.matcher(bigStr); // matcher是全匹配
+        if (!isNum.matches()) {
+            return false;
+        }
+        return true;
     }
 
     public enum Type {
