@@ -1,6 +1,13 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
+import cn.hutool.core.util.XmlUtil;
+import cn.hutool.http.HttpRequest;
+import cn.hutool.http.HttpResponse;
+import cn.hutool.http.HttpUtil;
+import cn.hutool.http.Method;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.intellij.openapi.diagnostic.Logger;
@@ -18,23 +25,20 @@ import com.intellij.ui.treeStructure.treetable.TreeColumnInfo;
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
 import icons.PluginIcons;
+import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.model.*;
-import io.github.kings1990.plugin.fastrequest.util.KV;
-import io.github.kings1990.plugin.fastrequest.util.ToolUtil;
-import io.github.kings1990.plugin.fastrequest.util.TypeUtil;
-import io.github.kings1990.plugin.fastrequest.util.UrlUtil;
+import io.github.kings1990.plugin.fastrequest.util.*;
 import io.github.kings1990.plugin.fastrequest.view.inner.SupportView;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
-import javax.swing.table.*;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeCellRenderer;
-import javax.swing.tree.TreeNode;
-import javax.swing.tree.TreePath;
+import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumnModel;
+import javax.swing.tree.*;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
@@ -43,6 +47,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.stream.Collectors;
 
 /**
  * FastRequest工具窗口
@@ -55,7 +60,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private static final Logger LOGGER = Logger.getInstance(CommonConfigView.class);
     public static final int JSON_TABLE_COLUMN_NAME_WIDTH = 200;
     public static final int JSON_TABLE_COLUMN_TYPE_WIDTH = 80;
-    public static final int TYPE_WIDTH = 60;
 
     private JPanel panel;
     private JComboBox<String> envComboBox;
@@ -65,7 +69,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JButton coffeeMeButton;
     private JTextField currentDomainTextField;
     private JTextField urlTextField;
-    private JTabbedPane paramTabbedPane;
     private JComboBox<String> methodTypeComboBox;
     private JTextArea urlParamsTextArea;
     private JTextArea jsonParamsTextArea;
@@ -79,15 +82,34 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JPanel pathParamsPanel;
     private JPanel jsonTreeTablePanel;
     private JTabbedPane jsonTabbedPanel;
+    private JPanel headerPanel;
+    private JTabbedPane tabbedPane;
+    private JButton sendButton;
+    private JTabbedPane responseTabbedPanel;
+    private JScrollPane responseBodyScrollPanel;
+    private JScrollPane responseInfoScrollPanel;
+    private JComboBox<Integer> responseStatusComboBox;
+    private JTextArea responseTextArea;
+    private JPanel responseInfoPanel;
+    private JPanel panelResponse;
+    private JScrollPane responseBodyScrollPane;
 
     private JBTable urlParamsTable;
     private JBTable urlEncodedTable;
     private JBTable pathParamsTable;
     private TreeTableView jsonTreeTable;
+    private JBTable responseInfoTable;
 
+
+    private List<DataMapping> headerParamsKeyValueList;
+    private List<ParamKeyValue> responseInfoParamsKeyValueList = new ArrayList<>();
     private List<ParamKeyValue> pathParamsKeyValueList = new ArrayList<>();
     private List<ParamKeyValue> urlParamsKeyValueList = new ArrayList<>();
     private List<ParamKeyValue> urlEncodedKeyValueList = new ArrayList<>();
+    private LinkedHashMap<String, Object> bodyParamMap;
+
+    //1.json 2.urlencoded
+    private Integer bodyType;
 
     private AtomicBoolean urlEncodedParamChangeFlag;
     private AtomicBoolean urlParamsChangeFlag;
@@ -103,6 +125,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private ComboBox<String> typeJComboBox;
     private ComboBox<String> normalTypeJComboBox;
 
+    private JTextField getKeyTextField(String text) {
+        JTextField jTextField = new JTextField(text);
+        jTextField.setText(text);
+        return jTextField;
+    }
+
     private ComboBox getTypeComboBox(String type) {
         ComboBox<String> typeJComboBox = new ComboBox<>();
         typeJComboBox.setRenderer(new IconListRenderer(TYPE_ICONS));
@@ -111,6 +139,17 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         typeJComboBox.addItem(TypeUtil.Type.String.name());
         typeJComboBox.addItem(TypeUtil.Type.Object.name());
         typeJComboBox.addItem(TypeUtil.Type.Boolean.name());
+        if (type != null) {
+            typeJComboBox.setSelectedItem(type);
+        }
+        return typeJComboBox;
+    }
+
+    private ComboBox getRootTypeComboBox(String type) {
+        ComboBox<String> typeJComboBox = new ComboBox<>();
+        typeJComboBox.setRenderer(new IconListRenderer(TYPE_ICONS));
+        typeJComboBox.addItem(TypeUtil.Type.Array.name());
+        typeJComboBox.addItem(TypeUtil.Type.Object.name());
         typeJComboBox.setSelectedItem(type);
         return typeJComboBox;
     }
@@ -142,10 +181,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         urlEncodedParamChangeFlag = new AtomicBoolean(true);
         urlParamsChangeFlag = new AtomicBoolean(true);
+
+        renderingHeaderTablePanel();
         renderingUrlParamsTablePanel();
         renderingUrlEncodedPanel();
         renderingPathParamsPanel();
         renderingJsonTreeTablePanel();
+        renderingResponseInfoPanel();
+
+        sendButton = new JButton(PluginIcons.ICON_SEND);
     }
 
     public FastRequestToolWindow(ToolWindow toolWindow) {
@@ -197,6 +241,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
         });
         methodTypeComboBox.setBackground(JBColor.BLUE);
+
+        //responseStatus ComboBox
+        List<Integer> values = new ArrayList<>(Constant.HttpStatusDesc.STATUS_MAP.keySet());
+        CollectionComboBoxModel<Integer> responseStatusComboBoxModel = new CollectionComboBoxModel<>(values);
+        responseStatusComboBox.setModel(responseStatusComboBoxModel);
 
 
         envComboBox.addItemListener(event -> {
@@ -280,23 +329,22 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 urlEncodedTextArea.setText(paramStr);
                 urlEncodedParamChangeFlag.set(false);
             }
-            if(urlEncodedTabbedPane.getSelectedIndex() == 0){
+            if (urlEncodedTabbedPane.getSelectedIndex() == 0) {
                 String paramStr = conventDataToString(urlEncodedKeyValueList);
                 String currentUrlParamText = urlEncodedTextArea.getText();
-                if(!paramStr.equals(currentUrlParamText)){
+                if (!paramStr.equals(currentUrlParamText)) {
                     String[] split = currentUrlParamText.split("&");
                     List<ParamKeyValue> currentUrlParamsKeyValueList = new ArrayList<>();
                     for (String s : split) {
                         String[] kvArray = s.split("=");
-                        if(kvArray.length == 2){
+                        if (kvArray.length == 2) {
                             String value = kvArray[1].replace("\n", "");
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0],kvArray[1],2,TypeUtil.calcTypeByStringValue(value));
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0], kvArray[1], 2, TypeUtil.calcTypeByStringValue(value));
                             currentUrlParamsKeyValueList.add(paramKeyValue);
                         }
                     }
                     urlEncodedKeyValueList = currentUrlParamsKeyValueList;
                     urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
-                    setUpNormalTypeColumn(urlEncodedTable.getColumnModel().getColumn(0));
                     resizeTable(urlEncodedTable);
                 }
             }
@@ -310,23 +358,22 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 urlParamsTextArea.setText(paramStr);
                 urlParamsChangeFlag.set(false);
             }
-            if(urlParamsTabbedPane.getSelectedIndex() == 0){
+            if (urlParamsTabbedPane.getSelectedIndex() == 0) {
                 String paramStr = conventDataToString(urlParamsKeyValueList);
                 String currentUrlParamText = urlParamsTextArea.getText();
-                if(!paramStr.equals(currentUrlParamText)){
+                if (!paramStr.equals(currentUrlParamText)) {
                     String[] split = currentUrlParamText.split("&");
                     List<ParamKeyValue> currentUrlParamsKeyValueList = new ArrayList<>();
                     for (String s : split) {
                         String[] kvArray = s.split("=");
-                        if(kvArray.length == 2){
+                        if (kvArray.length == 2) {
                             String value = kvArray[1].replace("\n", "");
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0],kvArray[1],2,TypeUtil.calcTypeByStringValue(value));
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0], kvArray[1], 2, TypeUtil.calcTypeByStringValue(value));
                             currentUrlParamsKeyValueList.add(paramKeyValue);
                         }
                     }
                     urlParamsKeyValueList = currentUrlParamsKeyValueList;
                     urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
-                    setUpNormalTypeColumn(urlParamsTable.getColumnModel().getColumn(0));
                     resizeTable(urlParamsTable);
                 }
             }
@@ -337,6 +384,68 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         urlEncodedTextArea.addMouseListener(copyMouseAdapter(urlEncodedTextArea));
         urlParamsTextArea.addMouseListener(copyMouseAdapter(urlParamsTextArea));
         urlTextField.addMouseListener(copyMouseAdapterField(urlTextField));
+
+        headerParamsKeyValueList = config.getHeaderList();
+        sendRequestAction();
+    }
+
+    private void sendRequestAction(){
+        //send request
+        sendButton.addActionListener(e -> {
+
+            String sendUrl = urlTextField.getText();
+            String methodType = (String) methodTypeComboBox.getSelectedItem();
+            HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), sendUrl);
+            Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue())));
+            request.header(headerMap);
+            Map<String, Object> formParam = urlParamsKeyValueList.stream().collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue));
+            String jsonParam = jsonParamsTextArea.getText();
+            String urlEncodedParam = urlEncodedTextArea.getText();
+            if(bodyType != null){
+                String bodyParam = bodyType == 1 ? jsonParam : urlEncodedParam;
+                request.body(bodyParam);
+            }
+            request.form(formParam);
+            try {
+                sendButton.setEnabled(false);
+                long start = System.currentTimeMillis();
+                HttpResponse response = request.execute();
+                int status = response.getStatus();
+                String body = response.body();
+                if(JsonUtil.isJSON2(body)){
+                    responseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
+                } else if(body.startsWith("<!DOCTYPE HTML>")){
+                    responseTextArea.setText(XmlUtil.format(body.replace("<!DOCTYPE HTML>","")));
+                } else{
+                    responseTextArea.setText(body);
+                }
+                long end = System.currentTimeMillis();
+                String duration = String.valueOf(end - start);
+
+                responseInfoParamsKeyValueList = Lists.newArrayList(
+                        new ParamKeyValue("Cost",duration + " ms",2,TypeUtil.Type.String.name()),
+                        new ParamKeyValue("Response status",status+" "+ Constant.HttpStatusDesc.STATUS_MAP.get(status))
+                );
+                responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+
+
+                responseStatusComboBox.setSelectedItem(status);
+                responseStatusComboBox.setBackground((status >= 200 && status < 300) ? JBColor.GREEN : JBColor.RED);
+
+                sendButton.setEnabled(true);
+            } catch (Exception exception){
+                String errorMsg = exception.getMessage();
+                sendButton.setEnabled(true);
+                responseTextArea.setText(errorMsg);
+                responseStatusComboBox.setSelectedItem(0);
+                responseStatusComboBox.setBackground(JBColor.RED);
+                responseInfoParamsKeyValueList = Lists.newArrayList(
+                        new ParamKeyValue("Error", errorMsg)
+                );
+                responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+            }
+            responseTabbedPanel.setSelectedIndex(0);
+        });
     }
 
     /**
@@ -454,9 +563,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         ParamGroup paramGroup = config.getParamGroup();
         LinkedHashMap<String, Object> pathParamMap = paramGroup.getPathParamMap();
         LinkedHashMap<String, Object> requestParamMap = paramGroup.getRequestParamMap();
-        LinkedHashMap<String, Object> bodyParamMap = paramGroup.getBodyParamMap();
+        bodyParamMap = paramGroup.getBodyParamMap();
         String methodType = paramGroup.getMethodType();
-
 
         methodTypeComboBox.setBackground(buildMethodColor(methodType));
 
@@ -464,17 +572,20 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         methodTypeComboBox.setSelectedItem(methodType);
 
         //request param
-
         String requestParamStr = conventDataToString(conventMapToList(requestParamMap));
 
         //默认urlParam是允许的即使是post json形式
         urlParamsKeyValueList = conventMapToList(requestParamMap);
         pathParamsKeyValueList = conventMapToList(pathParamMap);
-//        pathParamsKeyValueList = conventPathParamsToList(pathParamMap);
+        headerParamsKeyValueList = config.getHeaderList() == null?new ArrayList<>():config.getHeaderList();
 
         if ("GET".equals(methodType)) {
             urlParamsTextArea.setText(requestParamStr);
-            paramTabbedPane.setSelectedIndex(0);
+            if(pathParamsKeyValueList.isEmpty()){
+                tabbedPane.setSelectedIndex(2);
+            } else {
+                tabbedPane.setSelectedIndex(1);
+            }
             urlParamsTabbedPane.setSelectedIndex(0);
             //get请求urlencoded param参数为空
             urlEncodedKeyValueList = new ArrayList<>();
@@ -484,15 +595,19 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //body param
             if (!bodyParamMap.isEmpty()) {
                 //json
-                jsonParamsTextArea.setText(bodyParamMapToJson(bodyParamMap));
-                paramTabbedPane.setSelectedIndex(1);
+                tabbedPane.setSelectedIndex(3);
                 jsonTabbedPanel.setSelectedIndex(0);
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
+                bodyType = 1;
             } else {
                 //urlencoded
                 urlEncodedTextArea.setText(requestParamStr);
-                paramTabbedPane.setSelectedIndex(2);
+                if(requestParamStr.isEmpty()){
+                    tabbedPane.setSelectedIndex(2);
+                } else {
+                    tabbedPane.setSelectedIndex(4);
+                }
                 urlEncodedTabbedPane.setSelectedIndex(0);
                 urlEncodedKeyValueList = conventMapToList(requestParamMap);
                 //json设置为空
@@ -501,44 +616,63 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 //如果是非get请求则request Param为空转到url Encoded参数下
                 urlParamsKeyValueList = new ArrayList<>();
                 urlParamsTextArea.setText("");
+                bodyType = 2;
             }
         }
         //刷新table
-        TableColumnModel pathParamColumnModel = pathParamsTable.getColumnModel();
         pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
-        setUpNormalTypeColumn(pathParamColumnModel.getColumn(0));
         resizeTable(pathParamsTable);
 
-        TableColumnModel urlParamColumnModel = urlParamsTable.getColumnModel();
         urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
-        setUpNormalTypeColumn(urlParamColumnModel.getColumn(0));
         resizeTable(urlParamsTable);
 
-        TableColumnModel urlEncodedColumnModel = urlEncodedTable.getColumnModel();
         urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
-        setUpNormalTypeColumn(urlEncodedColumnModel.getColumn(0));
         resizeTable(urlEncodedTable);
 
         //json table
-        CustomNode root = new CustomNode("Root", "", TypeUtil.Type.Object.name());
-        convertToNode(root, bodyParamMap);
-        ListTreeTableModelOnColumns treeModel = new ListTreeTableModelOnColumns(root, jsonColumnInfo());
-        jsonTreeTable.setModel(treeModel);
-        //列宽
-        TableColumnModel columnModel = jsonTreeTable.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(JSON_TABLE_COLUMN_NAME_WIDTH);
-        columnModel.getColumn(1).setPreferredWidth(JSON_TABLE_COLUMN_TYPE_WIDTH);
-        expandAll(jsonTreeTable.getTree(), new TreePath(root), true);
-        jsonTreeTable.setTreeCellRenderer(new Renderer());
-//        setUpTypeColumn(jsonTreeTable.getColumnModel().getColumn(1));
+        refreshFirstInitJsonTable();
         setDomain(config);
+
 
     }
 
+    private void refreshFirstInitJsonTable() {
+        if(bodyParamMap.isEmpty()){
+            return;
+        }
+        ParamKeyValue firstValue = (ParamKeyValue) bodyParamMap.get(bodyParamMap.keySet().stream().findFirst().get());
+        CustomNode root = new CustomNode("Root", "", firstValue.getType());
+        convertToNode(true,root, bodyParamMap);
+
+        ((DefaultTreeModel)jsonTreeTable.getTableModel()).setRoot(root);
+        //列宽
+        TableColumnModel columnModel = jsonTreeTable.getColumnModel();
+//        columnModel.getColumn(0).setCellEditor(new KeyCellEditor(new JTextField()));
+//        setUpTypeColumn(columnModel.getColumn(1));
+        columnModel.getColumn(0).setPreferredWidth(JSON_TABLE_COLUMN_NAME_WIDTH);
+        columnModel.getColumn(1).setPreferredWidth(JSON_TABLE_COLUMN_TYPE_WIDTH);
+
+        expandAll(jsonTreeTable.getTree(), new TreePath(root), true);
+        jsonTreeTable.setTreeCellRenderer(new Renderer());
+
+        String type = root.getType();
+        if(TypeUtil.Type.Array.name().equals(type)){
+            JSONArray jsonArray = new JSONArray();
+            jsonTableNodeToJsonArray(jsonArray,root);
+            jsonParamsTextArea.setText(JSON.toJSONString(jsonArray, true));
+        } else {
+            JSONObject jsonObject = new JSONObject(new LinkedHashMap<>());
+            jsonTableNodeToJson(root,jsonObject);
+            jsonParamsTextArea.setText(JSON.toJSONString(jsonObject, true));
+        }
+
+    }
+
+
     public void resizeTable(JBTable table) {
-        table.getColumnModel().getColumn(0).setPreferredWidth((int) Math.round(table.getWidth() * 0.2));
-        table.getColumnModel().getColumn(1).setPreferredWidth((int) Math.round(table.getWidth() * 0.3));
-        table.getColumnModel().getColumn(2).setPreferredWidth((int) Math.round(table.getWidth() * 0.5));
+        table.getColumnModel().getColumn(0).setPreferredWidth((int) Math.round(table.getWidth() * 0.12));
+        table.getColumnModel().getColumn(1).setPreferredWidth((int) Math.round(table.getWidth() * 0.33));
+        table.getColumnModel().getColumn(2).setPreferredWidth((int) Math.round(table.getWidth() * 0.55));
     }
 
 
@@ -567,6 +701,41 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return url;
     }
 
+    private void renderingHeaderTablePanel(){
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+        JBTable headerTable = createHeaderTable();
+        headerTable.getEmptyText().setText("No header params");
+        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(headerTable);
+        toolbarDecorator.setMoveDownAction(null);
+        toolbarDecorator.setMoveUpAction(null);
+        toolbarDecorator.setAddAction(anActionButton -> {
+                    int selectedRow = headerTable.getSelectedRow();
+                    if (selectedRow == -1) {
+                        headerParamsKeyValueList.add(new DataMapping("", ""));
+                    } else {
+                        headerParamsKeyValueList.add(selectedRow + 1, new DataMapping("", ""));
+                    }
+                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
+                }
+        ).setRemoveAction(anActionButton -> {
+            int selectedRow = headerTable.getSelectedRow();
+            headerParamsKeyValueList.remove(selectedRow);
+            headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
+        });
+        headerPanel = toolbarDecorator.createPanel();
+    }
+
+    private void renderingResponseInfoPanel(){
+        responseInfoTable = createResponseInfoTable();
+        responseInfoTable.getEmptyText().setText("No info");
+        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(responseInfoTable);
+        toolbarDecorator.setMoveDownAction(null);
+        toolbarDecorator.setMoveUpAction(null);
+        toolbarDecorator.setAddAction(null);
+        toolbarDecorator.setRemoveAction(null);
+        responseInfoPanel = toolbarDecorator.createPanel();
+    }
 
     /**
      * 渲染UrlParams table面板
@@ -596,14 +765,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         urlParamsKeyValueList.add(selectedRow + 1, new ParamKeyValue("", "", 2, TypeUtil.Type.String.name()));
                     }
                     urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
-                    setUpNormalTypeColumn(urlParamsTable.getColumnModel().getColumn(0));
                     resizeTable(urlParamsTable);
                 }
         ).setRemoveAction(anActionButton -> {
             int selectedRow = urlParamsTable.getSelectedRow();
             urlParamsKeyValueList.remove(selectedRow);
             urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
-            setUpNormalTypeColumn(urlParamsTable.getColumnModel().getColumn(0));
             resizeTable(urlParamsTable);
         });
         urlParamsTablePanel = toolbarDecorator.createPanel();
@@ -611,16 +778,60 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
     private void renderingJsonTreeTablePanel() {
         jsonTreeTable = createJsonParamKeyValueTable();
-        expandAll(jsonTreeTable.getTree(), new TreePath(jsonTreeTable.getTableModel().getRoot()), true);
-        jsonTreeTable.setTreeCellRenderer(new Renderer());
-//        setUpTypeColumn(jsonTreeTable.getColumnModel().getColumn(1));
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(jsonTreeTable);
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);
-        toolbarDecorator.setAddAction(null);
-        toolbarDecorator.setRemoveAction(null);
+        toolbarDecorator.setAddAction(anActionButton -> {
+                    int selectedRow = jsonTreeTable.getSelectedRow();
+                    CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
+                    if (selectedRow == -1 || selectedRow == 0) {
+                        root.insert(new CustomNode("","",TypeUtil.Type.String.name()),0);
+                    } else {
+                        CustomNode node = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(selectedRow);
+                        CustomNode addNode = new CustomNode("","",TypeUtil.Type.String.name());
+                        if(TypeUtil.Type.Array.name().equals(node.getType()) || TypeUtil.Type.Object.name().equals(node.getType())){
+                            node.insert(addNode,0);
+                        } else {
+                            CustomNode parentNode = (CustomNode) node.getParent();
+                            parentNode.insert(addNode,parentNode.getIndex(node)+1);
+                        }
+                    }
+                    refreshJsonParamTable(root);
+                }
+        );
+        toolbarDecorator.setRemoveAction(anActionButton -> {
+            CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
+            int selectedRow = jsonTreeTable.getSelectedRow();
+            CustomNode node = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(selectedRow);
+            CustomNode parent = (CustomNode) node.getParent();
+            parent.remove(node);
+            refreshJsonParamTable(root);
+        });
+        toolbarDecorator.setRemoveActionUpdater(e -> jsonTreeTable.getSelectedRow()!= 0);
         jsonTreeTablePanel = toolbarDecorator.createPanel();
 
+    }
+
+    private void refreshJsonParamTable(CustomNode root){
+
+        ((DefaultTreeModel)jsonTreeTable.getTableModel()).setRoot(root);
+        //列宽
+        TableColumnModel columnModel = jsonTreeTable.getColumnModel();
+        columnModel.getColumn(0).setPreferredWidth(JSON_TABLE_COLUMN_NAME_WIDTH);
+        columnModel.getColumn(1).setPreferredWidth(JSON_TABLE_COLUMN_TYPE_WIDTH);
+        expandAll(jsonTreeTable.getTree(), new TreePath(root), true);
+        jsonTreeTable.setTreeCellRenderer(new Renderer());
+
+        String type = root.getType();
+        if(TypeUtil.Type.Array.name().equals(type)){
+            JSONArray jsonArray = new JSONArray();
+            jsonTableNodeToJsonArray(jsonArray,root);
+            jsonParamsTextArea.setText(JSON.toJSONString(jsonArray, true));
+        } else {
+            JSONObject jsonObject = new JSONObject(new LinkedHashMap<>());
+            jsonTableNodeToJson(root,jsonObject);
+            jsonParamsTextArea.setText(JSON.toJSONString(jsonObject, true));
+        }
     }
 
     private void renderingPathParamsPanel() {
@@ -638,7 +849,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         pathParamsKeyValueList.add(selectedRow + 1, new ParamKeyValue("", "", 2, TypeUtil.Type.String.name()));
                     }
                     pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
-                    setUpNormalTypeColumn(pathParamsTable.getColumnModel().getColumn(0));
                     resizeTable(pathParamsTable);
                     changeUrl();
                 }
@@ -646,7 +856,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             int selectedRow = pathParamsTable.getSelectedRow();
             pathParamsKeyValueList.remove(selectedRow);
             pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
-            setUpNormalTypeColumn(pathParamsTable.getColumnModel().getColumn(0));
             resizeTable(pathParamsTable);
             changeUrl();
         });
@@ -657,7 +866,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
      * 渲染UrlEncoded table面板
      *
      * @author Kings
-     * @date 2021/06/02
+     * @date 2021/06/02f
      */
     private void renderingUrlEncodedPanel() {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
@@ -690,14 +899,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         urlEncodedKeyValueList.add(selectedRow + 1, new ParamKeyValue("", "", 2, TypeUtil.Type.String.name()));
                     }
                     urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
-                    setUpNormalTypeColumn(urlEncodedTable.getColumnModel().getColumn(0));
                     resizeTable(urlEncodedTable);
                 }
         ).setRemoveAction(anActionButton -> {
             int selectedRow = urlEncodedTable.getSelectedRow();
             urlEncodedKeyValueList.remove(selectedRow);
             pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
-            setUpNormalTypeColumn(urlEncodedTable.getColumnModel().getColumn(0));
             resizeTable(urlEncodedTable);
         });
         urlEncodedTablePanel = toolbarDecorator.createPanel();
@@ -800,62 +1007,118 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private TreeTableView createJsonParamKeyValueTable() {
         //初始化为空
         LinkedHashMap<String, Object> bodyParamMap = new LinkedHashMap<>();
-
         CustomNode root = new CustomNode("Root", "", TypeUtil.Type.Object.name());
-        convertToNode(root, bodyParamMap);
+        convertToNode(true,root, bodyParamMap);
         ListTreeTableModelOnColumns model = new ListTreeTableModelOnColumns(root, jsonColumnInfo());
         TreeTableView table = new TreeTableView(model) {
+
             @Override
             public void setTreeCellRenderer(TreeCellRenderer renderer) {
                 super.setTreeCellRenderer(new Renderer());
             }
 
-//            @Override
-//            public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
-//                if(column == 1){
-//                    CustomNode node = (CustomNode) getValueAt(row, column);
-//                    String type = node.getType();
-//                    return getTypeComboBox(type);
-//                }
-//                return super.prepareRenderer(renderer, row, column);
-//            }
+            @Override
+            public TableCellEditor getCellEditor(int row, int column) {
+                if(column == 0){
+                    String key = (String) getValueAt(row, column);
+                    return new DefaultCellEditor(getKeyTextField(key));
+                }
+                if(column == 1){
+                    String type = (String) getValueAt(row, column);
+                    if(row == 0){
+                        return new DefaultCellEditor(getRootTypeComboBox(type));
+                    } else {
+                        return new DefaultCellEditor(getTypeComboBox(type));
+                    }
+                }
+                return super.getCellEditor(row, column);
+            }
+
+            @Override
+            public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
+                if (column == 1) {
+                    String type = (String) getValueAt(row, column);
+                    if(row ==0){
+                        return getRootTypeComboBox(type);
+                    } else {
+                        return getTypeComboBox(type);
+                    }
+                }
+                return super.prepareRenderer(renderer, row, column);
+            }
+
+            @Override
+            public Object getValueAt(int row, int column) {
+                ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
+                CustomNode node = (CustomNode) myModel.getRowValue(row);
+                if(column == 0){
+                    return node.getKey();
+                } else if(column == 1){
+                    return node.getType();
+                } else if(column == 2){
+                    return node.getValue();
+                }
+                return super.getValueAt(row, column);
+            }
 
             @Override
             public boolean isCellEditable(int row, int column) {
                 ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
                 CustomNode node = (CustomNode) myModel.getRowValue(row);
-                return !node.isRoot() && node.isLeaf() && column == 1;
+                CustomNode parent = (CustomNode)node.getParent();
+                return (node.isRoot() && column == 1)   ||
+                        (!node.isRoot() &&
+                                (((TypeUtil.Type.Array.name().equals(node.getType()) || TypeUtil.Type.Object.name().equals(node.getType())) && column == 1))
+                                ||((!TypeUtil.Type.Array.name().equals(node.getType()) && !TypeUtil.Type.Object.name().equals(node.getType())))
+                        )
+                        || (column == 0 && (parent != null && !parent.getType().equals(TypeUtil.Type.Array.name())))
+                        ;
             }
 
-            @Override
-            public void setCellEditor(TableCellEditor anEditor) {
-                super.setCellEditor(anEditor);
-            }
-
-//            @Override
-//            public Class<?> getColumnClass(int column) {
-//                if(column == 1){
-//                    return Icon.class;
-//                }
-//                return super.getColumnClass(column);
-//            }
 
             @Override
-            public void setValueAt(Object value, int row, int column) {
-                if (column == 1) {
-                    boolean changeFlag = false;
-                    ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
-                    CustomNode node = (CustomNode) myModel.getRowValue(row);
-                    TreeNode[] nodePath = node.getPath();
-                    if (!node.getValue().equals(value)) {
+                public void setValueAt(Object value, int row, int column) {
+                boolean changeFlag = false;
+                ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
+                CustomNode node = (CustomNode) myModel.getRowValue(row);
+                String oldType = node.getType();
+                if (column == 2 && (oldType.equals(TypeUtil.Type.Array.name()) || oldType.equals(TypeUtil.Type.Object.name()))) {
+                    return;
+                }
+                if (column == 0) {
+                    if (!value.equals(node.getKey())) {
                         changeFlag = true;
                     }
-                    String type = node.getType();
-                    node.setValue(value);
-                    if (changeFlag) {
-                        //更新bodyParamMap
-                        updateBodyParamMap(nodePath, value, type);
+                    node.setKey(value.toString());
+                } else if (column == 1) {
+                    if (!value.equals(oldType)) {
+                        changeFlag = true;
                     }
+                    String newType = value.toString();
+                    if (TypeUtil.Type.Object.name().equals(oldType) && !TypeUtil.Type.Object.name().equals(newType) ||
+                            TypeUtil.Type.Array.name().equals(oldType) && !TypeUtil.Type.Array.name().equals(newType)) {
+                        node.removeAllChildren();
+                        Object v = convertCellData(node.getValue(), newType);
+                        node.setValue(v);
+                    } else if (TypeUtil.Type.Object.name().equals(newType)) {
+                        node.setValue(null);
+                    } else if (TypeUtil.Type.Array.name().equals(newType)) {
+                        node.setKey("index 0");
+                        node.setValue(null);
+                    } else {
+                        Object v = convertCellData(node.getValue(), node.getType());
+                        node.setValue(v);
+                    }
+                    node.setType(newType);
+                } else {
+                    if (!value.equals(node.getValue())) {
+                        changeFlag = true;
+                    }
+                    node.setValue(value);
+                }
+                if (changeFlag) {
+                    CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
+                    refreshJsonParamTable(root);
                 }
             }
         };
@@ -864,39 +1127,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return table;
     }
 
-    private void updateBodyParamMap(TreeNode[] nodePath, Object value, String type) {
-        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
-        assert config != null;
-        ParamGroup paramGroup = config.getParamGroup();
-        LinkedHashMap<String, Object> bodyParamMap = paramGroup.getBodyParamMap();
-        String key;
-        ParamKeyValue kv = null;
-        for (int i = 1; i < nodePath.length; i++) {
-            //i=1 排除root节点
-            CustomNode node = (CustomNode) nodePath[i];
-            key = node.getKey();
-            if (TypeUtil.Type.Array.name().equals(node.getType()) && key.startsWith("index ")) {
-                //跳过数组
-                continue;
-            }
-            Object o;
-            if (kv == null) {
-                //第一个节点
-                o = bodyParamMap.get(key);
-            } else {
-                o = kv.getValue();
-            }
-            if (o instanceof KV) {
-                kv = (ParamKeyValue) ((KV) o).get(key);
-            } else if (o instanceof ArrayList) {
-                kv = (ParamKeyValue) ((KV) ((ArrayList) o).get(0)).get(key);
-            } else {
-                kv = (ParamKeyValue) o;
-            }
-        }
-        kv.setValue(convertCellData(value, type));
-        changeJsonText(bodyParamMap);
-    }
 
     /**
      * 解析数据,异常返回默认值
@@ -933,28 +1163,75 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         }
     }
 
-    private String bodyParamMapToJson(LinkedHashMap<String, Object> bodyParamMap) {
+    private void jsonTableNodeToJson(CustomNode firstNode,JSONObject jsonObject){
+        Iterator<TreeNode> treeNodeIterator = firstNode.children().asIterator();
+        while(treeNodeIterator.hasNext()){
+            CustomNode node = (CustomNode) treeNodeIterator.next();
+            String key = node.getKey();
+            String type = node.getType();
+            Object value = node.getValue();
+            if(TypeUtil.Type.Object.name().equals(type)){
+                if(node.getChildCount() == 0){
+                    continue;
+                }
+                if(key.contains("index ")){
+                    JSONObject jsonObjectChild = new JSONObject(new LinkedHashMap<>());
+                    jsonTableNodeToJson(node, jsonObjectChild);
+                    jsonObject.putAll(jsonObjectChild);
+                } else {
+                    JSONObject jsonObjectChild = new JSONObject(new LinkedHashMap<>());
+                    jsonTableNodeToJson(node, jsonObjectChild);
+                    jsonObject.put(key, jsonObjectChild);
+                }
+            } else if(TypeUtil.Type.Array.name().equals(type)){
+                if(node.getChildCount() == 0){
+                    continue;
+                }
+                JSONArray jsonArrayChild = new JSONArray();
+                jsonTableNodeToJsonArray(jsonArrayChild,node);
+                jsonObject.put(key,jsonArrayChild);
+            } else {
+                jsonObject.put(key,convertCellData(value,type));
+            }
+        }
+    }
+
+    private void jsonTableNodeToJsonArray(JSONArray jsonArrayChild,CustomNode nodeHasChild){
+        Iterator<TreeNode> treeNodeIterator = nodeHasChild.children().asIterator();
+        while(treeNodeIterator.hasNext()){
+            CustomNode node = (CustomNode) treeNodeIterator.next();
+            String key = node.getKey();
+            String type = node.getType();
+            Object value = node.getValue();
+            if(TypeUtil.Type.Object.name().equals(type)){
+                if(node.getChildCount() == 0){
+                    continue;
+                }
+                JSONObject jsonObjectChild = new JSONObject(new LinkedHashMap<>());
+                jsonTableNodeToJson(node, jsonObjectChild);
+                jsonArrayChild.add(jsonObjectChild);
+            } else if(TypeUtil.Type.Array.name().equals(type)){
+                if(node.getChildCount() == 0){
+                    continue;
+                }
+
+                JSONArray jsonArrayChildChild = new JSONArray();
+                jsonTableNodeToJsonArray(jsonArrayChildChild, node);
+                jsonArrayChild.addAll(jsonArrayChildChild);
+            } else {
+                jsonArrayChild.add(convertCellData(value,type));
+            }
+        }
+    }
+
+
+
+    private String bodyParamMapToJson() {
         LinkedHashMap<String, Object> map = new LinkedHashMap<>();
         convertToMap(bodyParamMap, map);
         return JSON.toJSONString(map, true);
     }
 
-    private void changeJsonText(LinkedHashMap<String, Object> bodyParamMap) {
-        //json
-        jsonParamsTextArea.setText(bodyParamMapToJson(bodyParamMap));
-    }
-
-    public void setUpTypeColumn(TableColumn typeColumn) {
-        typeColumn.setCellEditor(new DefaultCellEditor(typeJComboBox));
-        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-        typeColumn.setCellRenderer(renderer);
-    }
-
-    public void setUpNormalTypeColumn(TableColumn typeColumn) {
-        typeColumn.setCellEditor(new DefaultCellEditor(normalTypeJComboBox));
-        DefaultTableCellRenderer renderer = new DefaultTableCellRenderer();
-        typeColumn.setCellRenderer(renderer);
-    }
 
     class Renderer extends ColoredTreeCellRenderer {
         @Override
@@ -963,8 +1240,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             CustomNode node = (CustomNode) value;
 //            setBorder(BorderFactory.createLineBorder(JBColor.BLACK, 3));
             append(node.getKey());
-
-            setIcon(TYPE_ICONS.get(node.getType()));
+            setToolTipText(node.getComment());
         }
     }
 
@@ -1020,29 +1296,34 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 } else return o;
             }
         };
-//        ColumnInfo type = new ColumnInfo("Type") {
-//            @Nullable
-//            @Override
-//            public Object valueOf(Object o) {
-//                return o;
-//            }
-//            @Override
-//            public int getWidth(JTable table) {
-//                return JSON_TABLE_COLUMN_TYPE_WIDTH;
-//            }
-//        };
+        ColumnInfo type = new ColumnInfo("Type") {
+            @Nullable
+            @Override
+            public Object valueOf(Object o) {
+                if (o instanceof CustomNode) {
+                    return ((CustomNode) o).getType();
+                } else return o;
+            }
 
-        ColumnInfo[] columnInfos = new ColumnInfo[]{
+            @Override
+            public int getWidth(JTable table) {
+                return JSON_TABLE_COLUMN_TYPE_WIDTH;
+            }
+        };
+
+        ColumnInfo[] columnInfo = new ColumnInfo[]{
                 new TreeColumnInfo("Name") {
+
                     @Override
                     public int getWidth(JTable table) {
                         return JSON_TABLE_COLUMN_NAME_WIDTH;
                     }
+
                 },   // <-- This is important!
-//                type,
+                type,
                 value
         };
-        return columnInfos;
+        return columnInfo;
     }
 
 //    private CustomNode convertJsonObjectToNode(CustomNode node, JSONObject jsonObject) {
@@ -1088,8 +1369,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             if (TypeUtil.Type.Object.name().equals(type)) {
                 LinkedHashMap<String, Object> objectLinkedHashMap = new LinkedHashMap<>();
                 LinkedHashMap<String, Object> kv = (LinkedHashMap<String, Object>) dataValue;
-                convertToMap(kv, objectLinkedHashMap);
-                result.put(key, objectLinkedHashMap);
+                if (kv != null) {
+                    convertToMap(kv, objectLinkedHashMap);
+                    result.put(key, objectLinkedHashMap);
+                }
             } else if (TypeUtil.Type.Array.name().equals(type)) {
                 ArrayList<KV<String, ParamKeyValue>> dataList = (ArrayList<KV<String, ParamKeyValue>>) dataValue;
                 if (dataList.size() == 0) {
@@ -1123,8 +1406,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 if (TypeUtil.Type.Object.name().equals(type)) {
                     LinkedHashMap<String, Object> objectLinkedHashMap = new LinkedHashMap<>();
                     LinkedHashMap<String, Object> kvValue = (KV<String, Object>) value;
-                    convertToMap(kvValue, objectLinkedHashMap);
-                    result.put(k, objectLinkedHashMap);
+                    if (kvValue != null) {
+                        convertToMap(kvValue, objectLinkedHashMap);
+                        result.put(k, objectLinkedHashMap);
+                    }
                 } else if (TypeUtil.Type.Array.name().equals(type)) {
                     ArrayList<KV<String, ParamKeyValue>> dataList = (ArrayList<KV<String, ParamKeyValue>>) value;
                     if (dataList.size() != 0) {
@@ -1168,42 +1453,51 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             ParamKeyValue value = entry.getValue();
             String type = value.getType();
             Object dataValue = value.getValue();
+            String comment = value.getComment();
             if (TypeUtil.Type.Object.name().equals(type)) {
                 List<ParamKeyValue> childObject = new ArrayList<>();
                 convertToParamKeyValueList(prefixKey + key + ".", (KV<String, ParamKeyValue>) dataValue, childObject);
                 list.addAll(childObject);
             } else if (TypeUtil.Type.Array.name().equals(type)) {
-                ArrayList<KV<String, ParamKeyValue>> childList = (ArrayList<KV<String, ParamKeyValue>>) value.getValue();
+                ArrayList childList = (ArrayList) value.getValue();
                 if (list.size() == 0) {
                     continue;
                 }
                 convertArrayToParamKeyValueList(prefixKey + key, childList, list);
             } else {
-                list.add(new ParamKeyValue(prefixKey + key, dataValue, 2, type));
+                list.add(new ParamKeyValue(prefixKey + key, dataValue, 2, type, comment));
             }
         }
     }
 
-    private void convertArrayToParamKeyValueList(String key, ArrayList<KV<String, ParamKeyValue>> childList, List<ParamKeyValue> list) {
+    private void convertArrayToParamKeyValueList(String key, ArrayList childList, List<ParamKeyValue> list) {
         for (int i = 0; i < childList.size(); i++) {
             String arrayKey = key + "[" + i + "]";
-            KV<String, ParamKeyValue> kv = childList.get(i);
-            kv.forEach((k, v) -> {
-                ParamKeyValue value = kv.get(k);
-                Object dataValue = value.getValue();
-                String type = value.getType();
-                if (TypeUtil.Type.Object.name().equals(type)) {
-                    convertToParamKeyValueList(arrayKey + ".", (KV<String, ParamKeyValue>) dataValue, list);
-                } else if (TypeUtil.Type.Array.name().equals(type)) {
-                    ArrayList<KV<String, ParamKeyValue>> childArrayList = (ArrayList<KV<String, ParamKeyValue>>) value.getValue();
-                    if (childArrayList.size() != 0) {
-                        convertArrayToParamKeyValueList(key + "." + arrayKey, childArrayList, list);
+            Object o = childList.get(i);
+            if(o instanceof ParamKeyValue){
+                //非对象进入
+                ParamKeyValue paramKeyValue = (ParamKeyValue) o;
+                paramKeyValue.setKey(key+"[]");
+                list.add(paramKeyValue);
+            } else {
+                KV<String, ParamKeyValue> kv = (KV<String, ParamKeyValue>) o;
+                kv.forEach((k, v) -> {
+                    ParamKeyValue value = kv.get(k);
+                    Object dataValue = value.getValue();
+                    String type = value.getType();
+                    String comment = value.getComment();
+                    if (TypeUtil.Type.Object.name().equals(type)) {
+                        convertToParamKeyValueList(arrayKey + ".", (KV<String, ParamKeyValue>) dataValue, list);
+                    } else if (TypeUtil.Type.Array.name().equals(type)) {
+                        ArrayList<KV<String, ParamKeyValue>> childArrayList = (ArrayList<KV<String, ParamKeyValue>>) value.getValue();
+                        if (childArrayList.size() != 0) {
+                            convertArrayToParamKeyValueList(key + "." + arrayKey, childArrayList, list);
+                        }
+                    } else {
+                        list.add(new ParamKeyValue(arrayKey + "." + k, dataValue, 2, type,comment));
                     }
-                } else {
-                    list.add(new ParamKeyValue(arrayKey + "." + k, dataValue, 2, type));
-                }
-            });
-
+                });
+            }
         }
     }
 
@@ -1217,24 +1511,81 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
      * @author Kings
      * @date 2021/06/07
      */
-    private CustomNode convertToNode(CustomNode node, LinkedHashMap<String, Object> data) {
+    private CustomNode convertToNode(boolean isRoot,CustomNode node, LinkedHashMap<String, Object> data) {
         Set<String> keys = data.keySet();
         keys.forEach(key -> {
 //            node.setKey(key);
             ParamKeyValue value = (ParamKeyValue) data.get(key);
             String type = value.getType();
+            String comment = value.getComment();
             if (TypeUtil.Type.Object.name().equals(type)) {
                 KV valueJsonObject = (KV) value.getValue();
-                CustomNode customNode = new CustomNode(key, null, type);
-                node.add(convertToNode(customNode, valueJsonObject));
-            } else if (TypeUtil.Type.Array.name().equals(type)) {
-                ArrayList<KV<String, ParamKeyValue>> list = (ArrayList<KV<String, ParamKeyValue>>) value.getValue();
-                if (list.size() == 0) {
+                if (valueJsonObject == null) {
+                    CustomNode nodeObject = new CustomNode(key, null, TypeUtil.Type.Object.name(),comment);
+                    node.add(nodeObject);
                     return;
                 }
-                convertArrayToNode(key, list, node);
+                if(isRoot){
+                    convertToNode(false,node, valueJsonObject);
+                } else {
+                    CustomNode customNode = new CustomNode(key, null, type,comment);
+                    node.add(convertToNode(false,customNode, valueJsonObject));
+                }
+            } else if (TypeUtil.Type.Array.name().equals(type)) {
+                Object valueChild = value.getValue();
+                if(valueChild instanceof KV){
+                    CustomNode addNode;
+                    if(isRoot){
+                        addNode = new CustomNode("index 0", null, TypeUtil.Type.Object.name());
+                    } else {
+                        addNode = node;
+                    }
+
+                    KV k = (KV) valueChild;
+                    Object o = k.entrySet().stream().findFirst().get();
+                    if(o instanceof ArrayList){
+                        KV<String,ArrayList<ParamKeyValue>> listKV = k;
+                        for (Map.Entry<String, ArrayList<ParamKeyValue>> entry : listKV.entrySet()) {
+                            ArrayList<ParamKeyValue> basicTypeValue = entry.getValue();
+                            for (ParamKeyValue paramKeyValue : basicTypeValue) {
+                                CustomNode customNode = new CustomNode("", paramKeyValue.getValue(), paramKeyValue.getType(), comment);
+                                addNode.add(customNode);
+                            }
+                        }
+                    } else {
+                        //参数直接传BeanName []
+                        for (Map.Entry<String, ParamKeyValue> entry : ((KV<String, ParamKeyValue>) k).entrySet()) {
+                            ParamKeyValue paramKeyValue = entry.getValue();
+                            String childType = paramKeyValue.getType();
+                            String childKey = paramKeyValue.getKey();
+                            Object childValue = paramKeyValue.getValue();
+                            String childComment = paramKeyValue.getComment();
+                            if(TypeUtil.Type.Object.name().equals(childType)){
+                                CustomNode customNode = new CustomNode(childKey, null, childType, childComment);
+                                addNode.add(convertToNode(false,customNode,(KV)childValue));
+                            } else if(TypeUtil.Type.Array.name().equals(childType)){
+                                convertArrayToNode(false,childKey,childComment, (ArrayList) childValue, addNode);
+                            } else {
+                                CustomNode customNode = new CustomNode(childKey, childValue, childType, childComment);
+                                addNode.add(customNode);
+                            }
+                        }
+                    }
+                    if(isRoot){
+                        node.add(addNode);
+                    }
+                } else {
+                    ArrayList list = (ArrayList) valueChild;
+                    if (list.size() == 0) {
+                        CustomNode nodeArray = new CustomNode(key, null, TypeUtil.Type.Array.name(), comment);
+                        node.add(nodeArray);
+                        return;
+                    }
+
+                    convertArrayToNode(isRoot,key, comment, list, node);
+                }
             } else {
-                node.add(new CustomNode(key, value.getValue(), type));
+                node.add(new CustomNode(key, value.getValue(), type, comment));
             }
         });
         return node;
@@ -1250,39 +1601,56 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
      * @author Kings
      * @date 2021/06/07
      */
-    private void convertArrayToNode(String key, ArrayList<KV<String, ParamKeyValue>> dataList, CustomNode node) {
-        CustomNode nodeArray = new CustomNode(key, null, TypeUtil.Type.Array.name());
-        for (int j = 0; j < dataList.size(); j++) {
-            KV<String, ParamKeyValue> kv = dataList.get(j);
-            //todo add index
-            CustomNode nodeArrayIndex = new CustomNode("index " + j, null, TypeUtil.Type.Array.name());
-
-            kv.entrySet().forEach(inKv -> {
-                String inKey = inKv.getKey();
-                ParamKeyValue value = kv.get(inKey);
-                String type = value.getType();
-                if (TypeUtil.Type.Object.name().equals(type)) {
-                    KV valueKvObject = (KV) value.getValue();
-                    CustomNode customNode = new CustomNode(inKey, null, type);
-                    nodeArrayIndex.add(convertToNode(customNode, valueKvObject));
-                } else if (TypeUtil.Type.Array.name().equals(type)) {
-                    ArrayList<KV<String, ParamKeyValue>> list = (ArrayList<KV<String, ParamKeyValue>>) value.getValue();
-                    if (list.size() == 0) {
-                        return;
-                    }
-                    for (int i = 0; i < list.size(); i++) {
-                        CustomNode nodeArrayIn = new CustomNode(inKey, null, TypeUtil.Type.Array.name());
-                        convertArrayToNode(inKey, list, nodeArrayIn);
-                        nodeArrayIndex.add(nodeArrayIn);
-                    }
-                } else {
-                    nodeArrayIndex.add(new CustomNode(inKey, value.getValue(), type));
-                }
-            });
-            nodeArray.add(nodeArrayIndex);
-
+    private void convertArrayToNode(boolean isRoot,String key, String comment, ArrayList dataList, CustomNode node) {
+        CustomNode addNode;
+        if(isRoot){
+            addNode = node;
+        } else {
+            addNode = new CustomNode(key, null, TypeUtil.Type.Array.name(), comment);
         }
-        node.add(nodeArray);
+        for (int j = 0; j < dataList.size(); j++) {
+            Object o = dataList.get(j);
+            if(o instanceof ParamKeyValue){
+                //非对象进入
+                ParamKeyValue paramKeyValue = (ParamKeyValue) o;
+                CustomNode nodeArrayIndex = new CustomNode("index " + j, paramKeyValue.getValue(), paramKeyValue.getType());
+                addNode.add(nodeArrayIndex);
+            } else {
+                //对象进入
+                KV<String, ParamKeyValue> kv = (KV<String, ParamKeyValue>) dataList.get(j);
+                //todo add index
+                CustomNode nodeArrayIndex = new CustomNode("index " + j, null, TypeUtil.Type.Object.name());
+                kv.entrySet().forEach(inKv -> {
+                    String inKey = inKv.getKey();
+                    ParamKeyValue value = kv.get(inKey);
+                    String type = value.getType();
+                    String commentChild = value.getComment();
+                    if (TypeUtil.Type.Object.name().equals(type)) {
+                        KV valueKvObject = (KV) value.getValue();
+                        if (valueKvObject == null) {
+                            return;
+                        }
+                        CustomNode customNode = new CustomNode(inKey, null, type,commentChild);
+                        nodeArrayIndex.add(convertToNode(false, customNode, valueKvObject));
+                    } else if (TypeUtil.Type.Array.name().equals(type)) {
+                        ArrayList<KV<String, ParamKeyValue>> list = (ArrayList<KV<String, ParamKeyValue>>) value.getValue();
+                        if (list.size() == 0) {
+                            return;
+                        }
+                        for (int i = 0; i < list.size(); i++) {
+                            convertArrayToNode(false,inKey, commentChild,list, nodeArrayIndex);
+                        }
+                    } else {
+                        nodeArrayIndex.add(new CustomNode(inKey, value.getValue(), type, commentChild));
+                    }
+                });
+                addNode.add(nodeArrayIndex);
+            }
+        }
+        if(!isRoot){
+            node.add(addNode);
+        }
+
     }
 
     /**
@@ -1296,6 +1664,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         private String key;
         private Object value;
         private String type;
+        private String comment;
 
         public CustomNode() {
         }
@@ -1309,6 +1678,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             this.key = key;
             this.value = value;
             this.type = type;
+        }
+
+        public CustomNode(String key, Object value, String type,String comment) {
+            this.key = key;
+            this.value = value;
+            this.type = type;
+            this.comment = comment;
         }
 
 
@@ -1335,6 +1711,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         public void setType(String type) {
             this.type = type;
         }
+
+        public String getComment() {
+            return comment;
+        }
+
+        public void setComment(String comment) {
+            this.comment = comment;
+        }
     }
 
     /**
@@ -1353,23 +1737,20 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         JBTable table = new JBTable(model) {
 
             @Override
+            public TableCellEditor getCellEditor(int row, int column) {
+                if(column == 0){
+                    String type = (String) getValueAt(row, column);
+                    return new DefaultCellEditor(getNormalTypeComboBox(type));
+                }
+                return super.getCellEditor(row, column);
+            }
+
+            @Override
             public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
                 if (column == 0) {
                     ParamKeyValue paramKeyValue = pathParamsKeyValueList.get(row);
                     String type = paramKeyValue.getType();
-                    ComboBox typeComboBox = getNormalTypeComboBox(type);
-                    return typeComboBox;
-                }
-                if (column == 1) {
-                    ParamKeyValue paramKeyValue = pathParamsKeyValueList.get(row);
-                    String type = paramKeyValue.getType();
-                    String key = paramKeyValue.getKey();
-                    JLabel label = new JLabel(key, JLabel.LEFT);
-                    label.setFont(label.getFont().deriveFont(Font.ITALIC));
-                    label.setHorizontalAlignment(JLabel.LEFT);
-                    label.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-                    label.setIconTextGap(5);
-                    return label;
+                    return getNormalTypeComboBox(type);
                 }
                 return super.prepareRenderer(renderer, row, column);
             }
@@ -1451,21 +1832,27 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         JBTable table = new JBTable(model) {
 
             @Override
+            public TableCellEditor getCellEditor(int row, int column) {
+                if(column == 0){
+                    String type = (String) getValueAt(row, column);
+                    return new DefaultCellEditor(getNormalTypeComboBox(type));
+                }
+                return super.getCellEditor(row, column);
+            }
+
+            @Override
             public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
                 if (column == 0) {
                     ParamKeyValue paramKeyValue = urlEncodedKeyValueList.get(row);
                     String type = paramKeyValue.getType();
-                    ComboBox typeComboBox = getNormalTypeComboBox(type);
-                    return typeComboBox;
-                }
-                if (column == 1) {
+                    return getNormalTypeComboBox(type);
+                }  else if(column == 1){
                     ParamKeyValue paramKeyValue = urlEncodedKeyValueList.get(row);
-                    String key = paramKeyValue.getKey();
-                    JLabel label = new JLabel(key, JLabel.LEFT);
-                    label.setFont(label.getFont().deriveFont(Font.ITALIC));
-                    label.setHorizontalAlignment(JLabel.LEFT);
-                    label.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-                    return label;
+                    JTextField textField = new JTextField();
+                    textField.setText(getValueAt(row,column).toString());
+                    textField.setToolTipText(paramKeyValue.getComment());
+                    textField.setOpaque(false);
+                    return textField;
                 }
                 return super.prepareRenderer(renderer, row, column);
             }
@@ -1521,6 +1908,105 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return table;
     }
 
+    private ColumnInfo<Object, Object>[] getColumns(List<String> titleList){
+        ColumnInfo<Object, Object>[] columns = new ColumnInfo[titleList.size()];
+        for (int i = 0; i < titleList.size(); i++) {
+            ColumnInfo<Object, Object> envColumn = new ColumnInfo<>(titleList.get(i)) {
+                @Override
+                public @Nullable Object valueOf(Object o) {
+                    return o;
+                }
+            };
+
+            columns[i] = envColumn;
+        }
+        return columns;
+    }
+
+    private JBTable createHeaderTable(){
+        ColumnInfo<Object, Object>[] columns = getColumns(Lists.newArrayList("Header Name", "Header Value"));
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+        headerParamsKeyValueList = config.getHeaderList();
+        if (headerParamsKeyValueList == null) {
+            headerParamsKeyValueList = new ArrayList<>();
+        }
+        ListTableModel<DataMapping> model = new ListTableModel<>(columns, headerParamsKeyValueList);
+        JBTable table = new JBTable(model) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //默认只允许修改value不允许修改key
+                return true;
+            }
+
+            @Override
+            public Object getValueAt(int row, int column) {
+                if (headerParamsKeyValueList.isEmpty()) {
+                    return StringUtils.EMPTY;
+                }
+                DataMapping dataMapping = config.getHeaderList().get(row);
+                if (dataMapping == null) {
+                    return StringUtils.EMPTY;
+                }
+                if (column == 0) {
+                    return dataMapping.getType();
+                } else {
+                    return dataMapping.getValue();
+                }
+            }
+
+            @Override
+            public void setValueAt(Object aValue, int row, int column) {
+                if (column == 0) {
+                    DataMapping dataMapping = headerParamsKeyValueList.get(row);
+                    dataMapping.setType(aValue.toString());
+                }
+                if (column == 1) {
+                    DataMapping dataMapping = headerParamsKeyValueList.get(row);
+                    dataMapping.setValue(aValue.toString());
+                }
+                config.setHeaderList(headerParamsKeyValueList);
+            }
+        };
+
+        table.setVisible(true);
+        return table;
+    }
+
+    private JBTable createResponseInfoTable(){
+        ColumnInfo<Object, Object>[] columns = getColumns(Lists.newArrayList("Name", "Value"));
+        if (responseInfoParamsKeyValueList == null) {
+            responseInfoParamsKeyValueList = new ArrayList<>();
+        }
+        ListTableModel<ParamKeyValue> model = new ListTableModel<>(columns, responseInfoParamsKeyValueList);
+        JBTable table = new JBTable(model) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                //默认只允许修改value不允许修改key
+                return true;
+            }
+
+            @Override
+            public Object getValueAt(int row, int column) {
+                if (responseInfoParamsKeyValueList.isEmpty()) {
+                    return StringUtils.EMPTY;
+                }
+                ParamKeyValue keyValue = responseInfoParamsKeyValueList.get(row);
+                if (keyValue == null) {
+                    return StringUtils.EMPTY;
+                }
+                if (column == 0) {
+                    return keyValue.getKey();
+                } else {
+                    return keyValue.getValue();
+                }
+            }
+        };
+
+        table.setVisible(true);
+        return table;
+    }
+
     /**
      * 创建urlParams table
      *
@@ -1536,21 +2022,27 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         ListTableModel<ParamKeyValue> model = new ListTableModel<>(columns, urlParamsKeyValueList);
         JBTable table = new JBTable(model) {
             @Override
+            public TableCellEditor getCellEditor(int row, int column) {
+                if(column == 0){
+                    String type = (String) getValueAt(row, column);
+                    return new DefaultCellEditor(getNormalTypeComboBox(type));
+                }
+                return super.getCellEditor(row, column);
+            }
+
+            @Override
             public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
                 if (column == 0) {
                     ParamKeyValue paramKeyValue = urlParamsKeyValueList.get(row);
                     String type = paramKeyValue.getType();
-                    ComboBox typeComboBox = getNormalTypeComboBox(type);
-                    return typeComboBox;
-                }
-                if (column == 1) {
+                    return getNormalTypeComboBox(type);
+                }  else if(column == 1){
                     ParamKeyValue paramKeyValue = urlParamsKeyValueList.get(row);
-                    String key = paramKeyValue.getKey();
-                    JLabel label = new JLabel(key, JLabel.LEFT);
-                    label.setFont(label.getFont().deriveFont(Font.ITALIC));
-                    label.setHorizontalAlignment(JLabel.LEFT);
-                    label.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-                    return label;
+                    JTextField textField = new JTextField();
+                    textField.setText(getValueAt(row,column).toString());
+                    textField.setToolTipText(paramKeyValue.getComment());
+                    textField.setOpaque(false);
+                    return textField;
                 }
                 return super.prepareRenderer(renderer, row, column);
             }
@@ -1575,7 +2067,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public boolean isCellEditable(int row, int column) {
-                //默认只允许修改value不允许修改key
                 return true;
             }
 

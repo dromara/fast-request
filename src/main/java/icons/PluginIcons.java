@@ -13,7 +13,7 @@ public interface PluginIcons {
     Icon ICON_OBJECT = IconLoader.getIcon("/icon/object.svg", PluginIcons.class);
     Icon ICON_STRING = IconLoader.getIcon("/icon/string.svg", PluginIcons.class);
 
-
+    Icon ICON_SEND = IconLoader.getIcon("/icon/send.svg", PluginIcons.class);
     Icon ICON_ADD = IconLoader.getIcon("/icon/add.svg", PluginIcons.class);
     Icon ICON_DELETE = IconLoader.getIcon("/icon/delete.svg", PluginIcons.class);
 }

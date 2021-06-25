@@ -12,6 +12,8 @@ public class ParamKeyValue {
      */
     private String type;
 
+    private String comment;
+
     public ParamKeyValue(String key, Object value) {
         this.key = key;
         this.value = value;
@@ -28,6 +30,14 @@ public class ParamKeyValue {
         this.value = value;
         this.customFlag = customFlag;
         this.type = type;
+    }
+
+    public ParamKeyValue(String key, Object value, Integer customFlag, String type,String comment) {
+        this.key = key;
+        this.value = value;
+        this.customFlag = customFlag;
+        this.type = type;
+        this.comment = comment;
     }
 
     public String getKey() {
@@ -63,4 +73,11 @@ public class ParamKeyValue {
     }
 
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 }

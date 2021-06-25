@@ -5,19 +5,31 @@
 
     <description><![CDATA[
     Fast Request is a plugin based on springmvc that help you quickly generate url and params.<br/>
+    Fast Request also is a http client tool.<br/>
+    Plugin help you debug request just in Intellij frame<br/>
     <br/>
 
-    <em>Support Springmvc/SpringBoot</em><br/><br/>
+    <em>Support Springmvc/SpringBoot</em><br/>
+    <em>Support send http request</em><br/>
+    <br/>
     <em>For more information,Please goto <a href="https://github.com/kings1990/fast-request">Github</a></em><br/>
 
-    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.gif" /><br/>
+    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" /><br/>
+
+    <h3>v1.1.0</h3>
+    <ul>
+        <li>support http request</li>
+        <li>support modify and add params</li>
+        <li>beautify ui</li>
+        <li>fix some bugs</li>
+    </ul>
 
     <h3>v1.0.0</h3>
     <ul>
         <li>support Springmvc/SpringBoot</li>
         <li>support custom domain</li>
         <li>support custom params</li>
-     </ul>
+    </ul>
     ]]>
     </description>
 
