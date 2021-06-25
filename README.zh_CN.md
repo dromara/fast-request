@@ -91,10 +91,15 @@ QQ 群:754131222
 |![](./screenshot/icon/boolean.svg)|Boolean|
 
 ## 6.更新日志
+- v1.1.0(2021.07.01)
+  * 支持http请求发送
+  * 支持参数新增和修改
+  * 美化ui
+  * 修复了一些bug
 - v1.0.0(2021.06.09)
-  * support generate url and param
-  * support custom domain
-  * support custom params
+  * 支持生成参数和url
+  * 支持自定义域名
+  * 支持自定义参数
   
 ## 7.支持作者
 如果觉得插件很赞，为你节约了不少时间，那么就请作者喝杯咖啡吧~☕☕☕,非常感谢

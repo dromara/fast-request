@@ -68,6 +68,8 @@ public class FastRequestConfiguration implements Serializable {
 
     private int randomStringLength = 3;
 
+    private List<DataMapping> headerList;
+
     public List<String> getProjectList() {
         return projectList;
     }
@@ -154,5 +156,13 @@ public class FastRequestConfiguration implements Serializable {
 
     public void setRandomStringLength(int randomStringLength) {
         this.randomStringLength = randomStringLength;
+    }
+
+    public List<DataMapping> getHeaderList() {
+        return headerList;
+    }
+
+    public void setHeaderList(List<DataMapping> headerList) {
+        this.headerList = headerList;
     }
 }
