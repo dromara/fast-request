@@ -466,7 +466,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 String text = textarea.getText();
                 if (SwingUtilities.isRightMouseButton(e) && StringUtils.isNotEmpty(text)) {
                     ToolUtil.setClipboardString(text);
-                    MyNotifier.notifyCopy();
                 }
             }
         };
@@ -479,7 +478,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 String text = textField.getText();
                 if (SwingUtilities.isRightMouseButton(e) && StringUtils.isNotEmpty(text)) {
                     ToolUtil.setClipboardString(text);
-                    MyNotifier.notifyCopy();
                 }
             }
         };

@@ -46,7 +46,6 @@
             <configurable parentId="p" instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>
         </applicationConfigurable>
         <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest" factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory" secondary="false"/>
-        <notificationGroup id="Copy Notification Group" displayType="BALLOON" />
     </extensions>
 
     <actions >
