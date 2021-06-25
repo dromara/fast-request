@@ -88,6 +88,11 @@ icon and type mapping
 |![](./screenshot/icon/boolean.svg)|Boolean|
 
 ## 6.Updates
+- v1.1.0(2021.07.01)
+  * support http request
+  * support modify and add params
+  * beautify ui
+  * fix some bugs
 - v1.0.0(2021.06.09)
   * support generate url and param
   * support custom domain
