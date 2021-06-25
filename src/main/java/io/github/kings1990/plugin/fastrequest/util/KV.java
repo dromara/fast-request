@@ -7,10 +7,8 @@ import com.google.gson.GsonBuilder;
 import com.intellij.psi.*;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
-import com.intellij.psi.util.PsiTypesUtil;
 import com.intellij.psi.util.PsiUtil;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
-import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
 
@@ -32,8 +30,6 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     static {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
-        List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
-
         normalTypes.put("java.lang.Byte", 1);
         normalTypes.put("java.lang.Short", 1);
         normalTypes.put("java.lang.Integer", 1);
@@ -103,7 +99,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 
                 if (type instanceof PsiPrimitiveType) {       //primitive Type
                     //基本类型
-                    Object defaultValue = PsiTypesUtil.getDefaultValue(type);
+                    Object defaultValue = getPrimitiveDefaultValue(type);
                     ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue), comment);
                     kv.set(name, paramKeyValue);
                 } else {    //reference Type
@@ -126,7 +122,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 //                        String deepTypeName = deepType.getPresentableText();
                         String deepTypeName = deepType.getCanonicalText();
                         if (deepType instanceof PsiPrimitiveType) {
-                            Object defaultValue = PsiTypesUtil.getDefaultValue(deepType);
+                            Object defaultValue = getPrimitiveDefaultValue(deepType);
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue), comment);
                             KV kvIn = KV.create();
                             kvIn.set(name,paramKeyValue);
@@ -285,5 +281,30 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 
     public boolean equals(Object KV) {
         return KV instanceof KV && super.equals(KV);
+    }
+
+
+    public static Object getPrimitiveDefaultValue(PsiType type) {
+        if (!(type instanceof PsiPrimitiveType)) return null;
+        switch (type.getCanonicalText()) {
+            case "boolean":
+                return true;
+            case "byte":
+                return (byte)1;
+            case "char":
+                return '\1';
+            case "short":
+                return (short)1;
+            case "int":
+                return 1;
+            case "long":
+                return 1L;
+            case "float":
+                return 1F;
+            case "double":
+                return 1D;
+            default:
+                return null;
+        }
     }
 }
