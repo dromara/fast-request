@@ -108,8 +108,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private List<ParamKeyValue> urlEncodedKeyValueList = new ArrayList<>();
     private LinkedHashMap<String, Object> bodyParamMap;
 
-    //1.json 2.urlencoded
-    private Integer bodyType;
 
     private AtomicBoolean urlEncodedParamChangeFlag;
     private AtomicBoolean urlParamsChangeFlag;
@@ -401,10 +399,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             Map<String, Object> formParam = urlParamsKeyValueList.stream().collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue));
             String jsonParam = jsonParamsTextArea.getText();
             String urlEncodedParam = urlEncodedTextArea.getText();
-            if(bodyType != null){
-                String bodyParam = bodyType == 1 ? jsonParam : urlEncodedParam;
-                request.body(bodyParam);
+
+            //json优先
+            if(StringUtils.isNotEmpty(urlEncodedParam)){
+                request.body(urlEncodedParam);
             }
+            if(StringUtils.isNotEmpty(jsonParam)){
+                request.body(jsonParam);
+            }
+
             request.form(formParam);
             try {
                 sendButton.setEnabled(false);
@@ -599,7 +602,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 jsonTabbedPanel.setSelectedIndex(0);
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
-                bodyType = 1;
             } else {
                 //urlencoded
                 urlEncodedTextArea.setText(requestParamStr);
@@ -616,7 +618,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 //如果是非get请求则request Param为空转到url Encoded参数下
                 urlParamsKeyValueList = new ArrayList<>();
                 urlParamsTextArea.setText("");
-                bodyType = 2;
             }
         }
         //刷新table
