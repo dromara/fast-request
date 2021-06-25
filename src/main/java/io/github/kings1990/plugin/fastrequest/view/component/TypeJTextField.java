@@ -10,8 +10,8 @@ public class TypeJTextField extends JTextField {
 
     public TypeJTextField(Icon icon) {
         this.icon = icon;
-        Insets insets = JBUI.insetsLeft(40);
-        //设置文本输入距左边20
+        Insets insets = JBUI.insetsRight(40);
+        //设置文本输入距右边20
         this.setMargin(insets);
     }
 
@@ -23,6 +23,6 @@ public class TypeJTextField extends JTextField {
         int iconHeight = icon.getIconHeight();
         int Height = this.getHeight();
         //在文本框中画上之前图片
-        icon.paintIcon(this, g, 5, (Height - iconHeight) / 2);
+        icon.paintIcon(this, g, this.getWidth() - 30, (Height - iconHeight) / 2);
     }
 }

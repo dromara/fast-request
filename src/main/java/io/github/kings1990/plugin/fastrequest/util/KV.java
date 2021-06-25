@@ -5,10 +5,10 @@ import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.intellij.psi.*;
-import com.intellij.psi.util.PsiTypesUtil;
+import com.intellij.psi.javadoc.PsiDocComment;
+import com.intellij.psi.javadoc.PsiDocToken;
 import com.intellij.psi.util.PsiUtil;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
-import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
 
@@ -30,8 +30,6 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     static {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
-        List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
-
         normalTypes.put("java.lang.Byte", 1);
         normalTypes.put("java.lang.Short", 1);
         normalTypes.put("java.lang.Integer", 1);
@@ -44,12 +42,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 
         randomStringLength = config.getRandomStringLength();
         normalTypes.put("java.lang.String", "");
-        normalTypes.put("java.util.Date", df.format(new Date()));
-        normalTypes.put("java.sql.Date", df.format(new Date()));
-        normalTypes.put("java.sql.Timestamp", System.currentTimeMillis());
-        normalTypes.put("java.time.LocalDate", LocalDate.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString());
-        normalTypes.put("java.time.LocalTime", LocalTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString());
-        normalTypes.put("java.time.LocalDateTime", LocalDateTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString());
+
     }
 
     public <K, V> KV() {
@@ -68,6 +61,13 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     }
 
     public static KV getFields(PsiClass psiClass) {
+        normalTypes.put("java.util.Date", df.format(new Date()));
+        normalTypes.put("java.sql.Date", df.format(new Date()));
+        normalTypes.put("java.sql.Timestamp", System.currentTimeMillis());
+        normalTypes.put("java.time.LocalDate", LocalDate.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString());
+        normalTypes.put("java.time.LocalTime", LocalTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString());
+        normalTypes.put("java.time.LocalDateTime", LocalDateTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString());
+
         KV kv = KV.create();
 //        KV commentKV = KV.create();
 
@@ -75,6 +75,19 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
             for (PsiField field : psiClass.getAllFields()) {
                 PsiType type = field.getType();
                 String name = field.getName();
+                PsiDocComment docComment = field.getDocComment();
+                StringBuilder commentStringBuilder = new StringBuilder();
+                if(docComment != null){
+                    PsiElement[] descriptionElements = docComment.getDescriptionElements();
+                    for (PsiElement descriptionElement : descriptionElements) {
+                        if(descriptionElement instanceof PsiDocToken){
+                            commentStringBuilder.append(descriptionElement.getText());
+                        }
+                    }
+                }
+
+                String comment = commentStringBuilder.toString().trim();
+
                 if (Objects.requireNonNull(field.getModifierList()).hasExplicitModifier(PsiModifier.STATIC)) {
                     //fix static变量不转化
                     continue;
@@ -86,8 +99,8 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 
                 if (type instanceof PsiPrimitiveType) {       //primitive Type
                     //基本类型
-                    Object defaultValue = PsiTypesUtil.getDefaultValue(type);
-                    ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue));
+                    Object defaultValue = getPrimitiveDefaultValue(type);
+                    ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue), comment);
                     kv.set(name, paramKeyValue);
                 } else {    //reference Type
 //                    String fieldTypeName = type.getPresentableText();
@@ -95,11 +108,11 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                     if (isNormalType(fieldTypeName)) {    //normal Type
                         if ("java.lang.String".equals(fieldTypeName)) {
                             String v = randomStringLength < 1 ? "" : RandomUtil.randomString(randomStringLength);
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name());
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name(), comment);
                             kv.set(name, paramKeyValue);
                         } else {
                             Object v = normalTypes.get(fieldTypeName);
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.calcTypeByValue(v));
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.calcTypeByValue(v), comment);
                             kv.set(name, paramKeyValue);
                         }
 
@@ -109,54 +122,57 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 //                        String deepTypeName = deepType.getPresentableText();
                         String deepTypeName = deepType.getCanonicalText();
                         if (deepType instanceof PsiPrimitiveType) {
-                            Object defaultValue = PsiTypesUtil.getDefaultValue(deepType);
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue));
+                            Object defaultValue = getPrimitiveDefaultValue(deepType);
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue), comment);
                             KV kvIn = KV.create();
                             kvIn.set(name,paramKeyValue);
                             list.add(kvIn);
                         } else if (isNormalType(deepTypeName)) {
                             if ("java.lang.String".equals(deepTypeName)) {
                                 String v = randomStringLength < 1 ? "" : RandomUtil.randomString(randomStringLength);
-                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name());
+                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name(), comment);
                                 KV kvIn = KV.create();
                                 kvIn.set(name,paramKeyValue);
                                 list.add(kvIn);
                             } else {
                                 Object v = normalTypes.get(deepTypeName);
-                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.calcTypeByValue(v));
+                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.calcTypeByValue(v), comment);
                                 KV kvIn = KV.create();
                                 kvIn.set(name,paramKeyValue);
                                 list.add(kvIn);
                             }
                         } else {
                             KV fields = getFields(PsiUtil.resolveClassInType(deepType));
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, fields, 2, TypeUtil.Type.Object.name());
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, fields, 2, TypeUtil.Type.Object.name(), comment);
                             KV kvIn = KV.create();
                             kvIn.set(name,paramKeyValue);
                             list.add(kvIn);
                         }
-                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name());
+                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment);
                         kv.set(name, paramKeyValue);
                     } else if (fieldTypeName.contains("List")) {   //list type
                         PsiType iterableType = PsiUtil.extractIterableTypeParameter(type, false);
                         PsiClass iterableClass = PsiUtil.resolveClassInClassTypeOnly(iterableType);
                         ArrayList list = new ArrayList<>();
-                        String classTypeName = iterableClass.getName();
+                        String classTypeName = iterableClass.getQualifiedName();
+
                         if (isNormalType(classTypeName)) {
-                            if ("java.lang.String".equals(fieldTypeName)) {
+                            ParamKeyValue paramKeyValue;
+                            if ("java.lang.String".equals(classTypeName) || "String".equals(classTypeName)) {
                                 String v = randomStringLength < 1 ? "" : RandomUtil.randomString(randomStringLength);
-                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name());
+                                paramKeyValue = new ParamKeyValue("", v, 2, TypeUtil.Type.String.name(), comment);
                                 list.add(paramKeyValue);
                             } else {
-                                Object v = normalTypes.get(fieldTypeName);
-                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.calcTypeByValue(v));
+                                Object v = normalTypes.get(classTypeName);
+                                paramKeyValue = new ParamKeyValue("", v, 2, TypeUtil.calcTypeByValue(v), comment);
                                 list.add(paramKeyValue);
                             }
+                            kv.set(name, new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment));
                         } else {
                             list.add(getFields(iterableClass));
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment);
+                            kv.set(name, paramKeyValue);
                         }
-                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name());
-                        kv.set(name, paramKeyValue);
                     } else if (PsiUtil.resolveClassInClassTypeOnly(type).isEnum()) { //enum
                         ArrayList namelist = new ArrayList<String>();
                         PsiField[] fieldList = PsiUtil.resolveClassInClassTypeOnly(type).getFields();
@@ -167,11 +183,11 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                                 }
                             }
                         }
-                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, namelist, 2, TypeUtil.Type.Array.name());
+                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, namelist, 2, TypeUtil.Type.Array.name(), comment);
                         kv.set(name, paramKeyValue);
                     } else {    //class type
                         KV fields = getFields(PsiUtil.resolveClassInType(type));
-                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, fields, 2, TypeUtil.Type.Object.name());
+                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, fields, 2, TypeUtil.Type.Object.name(), comment);
                         kv.set(name, paramKeyValue);
                     }
                 }
@@ -265,5 +281,30 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 
     public boolean equals(Object KV) {
         return KV instanceof KV && super.equals(KV);
+    }
+
+
+    public static Object getPrimitiveDefaultValue(PsiType type) {
+        if (!(type instanceof PsiPrimitiveType)) return null;
+        switch (type.getCanonicalText()) {
+            case "boolean":
+                return true;
+            case "byte":
+                return (byte)1;
+            case "char":
+                return '\1';
+            case "short":
+                return (short)1;
+            case "int":
+                return 1;
+            case "long":
+                return 1L;
+            case "float":
+                return 1F;
+            case "double":
+                return 1D;
+            default:
+                return null;
+        }
     }
 }

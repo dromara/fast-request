@@ -1,7 +1,6 @@
 package io.github.kings1990.plugin.fastrequest.parse;
 
 import cn.hutool.core.util.RandomUtil;
-import cn.hutool.core.util.URLUtil;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
@@ -27,12 +26,27 @@ public class RequestParamParse extends AbstractParamParse {
         int randomStringLength = config.getRandomStringLength();
         for (ParamNameType paramNameType : requestParamList) {
             String type = paramNameType.getType();
+            boolean arrayFlag = type.contains("[]");
+            if(arrayFlag){
+                type = type.substring(type.indexOf("[")+1,type.indexOf("]"));
+            }
+            boolean listFlag = type.contains("List<");
+            if(listFlag){
+                type = type.substring(type.indexOf("<")+1,type.indexOf(">"));
+            }
+
             String name = paramNameType.getName();
             if ("java.lang.String".equals(type)) {
-                nameValueMap.put(name, new ParamKeyValue(name, RandomUtil.randomString(randomStringLength), 2, TypeUtil.Type.String.name()));
+                if(arrayFlag || listFlag){
+                    ParamKeyValue paramKeyValue = new ParamKeyValue(name+"[]", RandomUtil.randomString(randomStringLength), 2, TypeUtil.Type.String.name());
+                    nameValueMap.put(name,paramKeyValue);
+                } else {
+                    nameValueMap.put(name, new ParamKeyValue(name, RandomUtil.randomString(randomStringLength), 2, TypeUtil.Type.String.name()));
+                }
                 continue;
             }
-            DataMapping dataMapping = customDataMappingList.stream().filter(q -> type.equals(q.getType())).findFirst().orElse(null);
+            String finalType = type;
+            DataMapping dataMapping = customDataMappingList.stream().filter(q -> finalType.equals(q.getType())).findFirst().orElse(null);
             if (dataMapping != null) {
                 Object value = dataMapping.getValue();
                 if (JSONUtil.isJson(value.toString())) {
@@ -47,18 +61,23 @@ public class RequestParamParse extends AbstractParamParse {
                 continue;
             }
             //默认的数据映射解析参数
-            dataMapping = defaultDataMappingList.stream().filter(q -> type.equals(q.getType())).findFirst().orElse(null);
+            dataMapping = defaultDataMappingList.stream().filter(q -> finalType.equals(q.getType())).findFirst().orElse(null);
             if (dataMapping != null) {
                 Object value = dataMapping.getValue();
                 String calcType = TypeUtil.calcType(type);
-                nameValueMap.put(name, new ParamKeyValue(name, value, 2, calcType));
+                if(arrayFlag || listFlag){
+                    ParamKeyValue paramKeyValue = new ParamKeyValue(name+"[]", value, 2, calcType);
+                    nameValueMap.put(name,paramKeyValue);
+                } else {
+                    nameValueMap.put(name, new ParamKeyValue(name, value, 2, calcType));
+                }
                 continue;
             }
             //json解析
             KV kv = KV.getFields(paramNameType.getPsiClass());
             String json = kv.toPrettyJson();
             Map parse = JSON.parseObject(json, Map.class);
-            String queryParam = URLUtil.buildQuery(parse, null);
+//            String queryParam = URLUtil.buildQuery(parse, null);
             nameValueMap.put(name, new ParamKeyValue(name, kv, 1,TypeUtil.Type.Object.name()));
 
         }
