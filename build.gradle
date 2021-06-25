@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '1.0.0'
+version '1.1.0'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
