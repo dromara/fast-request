@@ -5,9 +5,9 @@
 ![Downloads](http://phpstorm.espend.de/badge/16988/downloads)
 ![Downloads Last Month](http://phpstorm.espend.de/badge/16988/last-month)
 
-**Fast Request** is a plugin based on springmvc that help you quickly generate **url** and **params**.
+**Fast Request** is a plugin based on springmvc that help you quickly generate **url** and **params**.It is also a http client tool.
 
-Just press the shortcut key,Plugin will give you the result
+Just press the shortcut key, Plugin will give you the url and params, Then click Send Request button to complete the http request
 
 The plugin UI references [Paw](https://paw.cloud/)
 
@@ -107,7 +107,7 @@ If you think the plug-in is great and saves you a lot of time, then invite the a
 ## 8.Plan
 I very hope you can help build follow-up functions.Provide good idea and provide good PR!
 
-* support send request
+* support send request(complete in v1.1.0)
 
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest

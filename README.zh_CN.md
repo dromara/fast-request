@@ -5,9 +5,9 @@
 ![Downloads](http://phpstorm.espend.de/badge/16988/downloads)
 ![Downloads Last Month](http://phpstorm.espend.de/badge/16988/last-month)
 
-**Fast Request**是一个基于springmvc的帮助你快速生成**url**和**参数**的插件.
+**Fast Request**是一个基于springmvc的帮助你快速生成**url**和**参数**的插件.同时也是一个http client工具
 
-你只需要按一下快捷键,插件就会给你方法的url和参数
+你只需要按一下快捷键,插件就会给你方法的url和参数,再点击发送请求即可完成http请求
 
 目前插件对标的是[Paw](https://paw.cloud/)
 
@@ -110,7 +110,7 @@ QQ 群:754131222
 ## 8.后续计划
 希望各位路人大佬帮忙一起建设后续的功能,提供好的建议以及好的PR!
 
-* 支持发送请求 
+* 支持发送请求 (v1.1.0已完成)
 
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
