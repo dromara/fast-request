@@ -88,7 +88,10 @@ icon and type mapping
 |![](./screenshot/icon/boolean.svg)|Boolean|
 
 ## 6.Updates
-- v1.1.0(2021.07.01)
+- v1.1.1(2021.06.28)
+  * params can delete batch
+  * fix some bugs
+- v1.1.0(2021.06.25)
   * support http request
   * support modify and add params
   * beautify ui
