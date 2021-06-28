@@ -411,7 +411,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     if(StringUtils.isNotEmpty(urlEncodedParam)){
                         request.body(urlEncodedParam);
                     }
-                    if(StringUtils.isNotEmpty(jsonParam)){
+                    if(StringUtils.isNotEmpty(jsonParam) && !"{}".equals(jsonParam) && !"[]".equals(jsonParam)){
                         request.body(jsonParam);
                     }
 
@@ -727,8 +727,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
                 }
         ).setRemoveAction(anActionButton -> {
-            int selectedRow = headerTable.getSelectedRow();
-            headerParamsKeyValueList.remove(selectedRow);
+            int[] selectedIndices = headerTable.getSelectionModel().getSelectedIndices();
+            List<Integer> indexes= Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+            indexes.stream().mapToInt(i -> i).forEach(headerParamsKeyValueList::remove);
             headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
         });
         headerPanel = toolbarDecorator.createPanel();
@@ -776,8 +777,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     resizeTable(urlParamsTable);
                 }
         ).setRemoveAction(anActionButton -> {
-            int selectedRow = urlParamsTable.getSelectedRow();
-            urlParamsKeyValueList.remove(selectedRow);
+            int[] selectedIndices = urlParamsTable.getSelectionModel().getSelectedIndices();
+            List<Integer> indexes= Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+            indexes.stream().mapToInt(i -> i).forEach(urlParamsKeyValueList::remove);
             urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
             resizeTable(urlParamsTable);
         });
@@ -861,8 +863,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     changeUrl();
                 }
         ).setRemoveAction(anActionButton -> {
-            int selectedRow = pathParamsTable.getSelectedRow();
-            pathParamsKeyValueList.remove(selectedRow);
+            int[] selectedIndices = pathParamsTable.getSelectionModel().getSelectedIndices();
+            List<Integer> indexes= Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+            indexes.stream().mapToInt(i -> i).forEach(pathParamsKeyValueList::remove);
             pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
             resizeTable(pathParamsTable);
             changeUrl();
@@ -910,8 +913,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     resizeTable(urlEncodedTable);
                 }
         ).setRemoveAction(anActionButton -> {
-            int selectedRow = urlEncodedTable.getSelectedRow();
-            urlEncodedKeyValueList.remove(selectedRow);
+            int[] selectedIndices = urlEncodedTable.getSelectionModel().getSelectedIndices();
+            List<Integer> indexes= Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+            indexes.stream().mapToInt(i -> i).forEach(urlEncodedKeyValueList::remove);
             pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
             resizeTable(urlEncodedTable);
         });
