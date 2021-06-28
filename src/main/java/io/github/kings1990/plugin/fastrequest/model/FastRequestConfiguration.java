@@ -68,7 +68,7 @@ public class FastRequestConfiguration implements Serializable {
 
     private int randomStringLength = 3;
 
-    private List<DataMapping> headerList;
+    private List<DataMapping> headerList = new ArrayList<>();
 
     public List<String> getProjectList() {
         return projectList;
