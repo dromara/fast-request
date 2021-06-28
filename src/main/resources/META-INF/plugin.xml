@@ -25,6 +25,7 @@
     <h3>v1.1.1</h3>
     <ul>
         <li>fix some bugs</li>
+        <li>params can delete batch</li>
     </ul>
 
     <h3>v1.1.0</h3>
