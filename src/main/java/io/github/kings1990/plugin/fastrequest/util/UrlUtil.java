@@ -1,5 +1,6 @@
 package io.github.kings1990.plugin.fastrequest.util;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -14,5 +15,15 @@ public class UrlUtil {
             result.add(m.group(1));
         }
         return result;
+    }
+
+    public static boolean isURL(String url) {
+        try {
+            url = (url.startsWith("http://") || url.startsWith("https://")) ? url : "http://" + url;
+            new URL(url).toURI();
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }

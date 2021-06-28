@@ -9,12 +9,23 @@
     Plugin help you debug request just in Intellij frame<br/>
     <br/>
 
+    中文:<br/>
+    Fast Request是一个基于springmvc的帮助你快速生成url和参数的插件.同时也是一个http client工具<br/>
+    Fast Request帮助你在IDEA界面内更快更高效得调试你的API
+    <br/><br/>
+
+
     <em>Support Springmvc/SpringBoot</em><br/>
     <em>Support send http request</em><br/>
     <br/>
     <em>For more information,Please goto <a href="https://github.com/kings1990/fast-request">Github</a></em><br/>
 
     <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" /><br/>
+
+    <h3>v1.1.1</h3>
+    <ul>
+        <li>fix some bugs</li>
+    </ul>
 
     <h3>v1.1.0</h3>
     <ul>

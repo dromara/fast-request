@@ -382,7 +382,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         urlEncodedTextArea.addMouseListener(copyMouseAdapter(urlEncodedTextArea));
         urlParamsTextArea.addMouseListener(copyMouseAdapter(urlParamsTextArea));
         urlTextField.addMouseListener(copyMouseAdapterField(urlTextField));
-
         headerParamsKeyValueList = config.getHeaderList();
         sendRequestAction();
     }
@@ -390,64 +389,71 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private void sendRequestAction(){
         //send request
         sendButton.addActionListener(e -> {
+            sendButton.setMultiClickThreshhold(2000);
+            sendButton.setEnabled(false);
+                try {
+                    String sendUrl = urlTextField.getText();
+                    if(StringUtils.isEmpty(sendUrl) || !UrlUtil.isURL(sendUrl)){
+                        responseTextArea.setText("Correct url required");
+                        sendButton.setEnabled(true);
+                        return;
+                    }
+                    String methodType = (String) methodTypeComboBox.getSelectedItem();
+                    HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), sendUrl);
+                    headerParamsKeyValueList = headerParamsKeyValueList == null?new ArrayList<>():headerParamsKeyValueList;
+                    Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue())));
+                    request.header(headerMap);
+                    Map<String, Object> formParam = urlParamsKeyValueList.stream().collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue));
+                    String jsonParam = jsonParamsTextArea.getText();
+                    String urlEncodedParam = urlEncodedTextArea.getText();
 
-            String sendUrl = urlTextField.getText();
-            String methodType = (String) methodTypeComboBox.getSelectedItem();
-            HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), sendUrl);
-            Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue())));
-            request.header(headerMap);
-            Map<String, Object> formParam = urlParamsKeyValueList.stream().collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue));
-            String jsonParam = jsonParamsTextArea.getText();
-            String urlEncodedParam = urlEncodedTextArea.getText();
+                    //json优先
+                    if(StringUtils.isNotEmpty(urlEncodedParam)){
+                        request.body(urlEncodedParam);
+                    }
+                    if(StringUtils.isNotEmpty(jsonParam)){
+                        request.body(jsonParam);
+                    }
 
-            //json优先
-            if(StringUtils.isNotEmpty(urlEncodedParam)){
-                request.body(urlEncodedParam);
-            }
-            if(StringUtils.isNotEmpty(jsonParam)){
-                request.body(jsonParam);
-            }
+                    request.form(formParam);
 
-            request.form(formParam);
-            try {
-                sendButton.setEnabled(false);
-                long start = System.currentTimeMillis();
-                HttpResponse response = request.execute();
-                int status = response.getStatus();
-                String body = response.body();
-                if(JsonUtil.isJSON2(body)){
-                    responseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
-                } else if(body.startsWith("<!DOCTYPE HTML>")){
-                    responseTextArea.setText(XmlUtil.format(body.replace("<!DOCTYPE HTML>","")));
-                } else{
-                    responseTextArea.setText(body);
+                    long start = System.currentTimeMillis();
+                    HttpResponse response = request.execute();
+                    int status = response.getStatus();
+                    String body = response.body();
+                    if(JsonUtil.isJSON2(body)){
+                        responseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
+                    } else if(body.startsWith("<!DOCTYPE HTML>")){
+                        responseTextArea.setText(XmlUtil.format(body.replace("<!DOCTYPE HTML>","")));
+                    } else{
+                        responseTextArea.setText(body);
+                    }
+                    long end = System.currentTimeMillis();
+                    String duration = String.valueOf(end - start);
+
+                    responseInfoParamsKeyValueList = Lists.newArrayList(
+                            new ParamKeyValue("Cost",duration + " ms",2,TypeUtil.Type.String.name()),
+                            new ParamKeyValue("Response status",status+" "+ Constant.HttpStatusDesc.STATUS_MAP.get(status))
+                    );
+                    responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+
+
+                    responseStatusComboBox.setSelectedItem(status);
+                    responseStatusComboBox.setBackground((status >= 200 && status < 300) ? JBColor.GREEN : JBColor.RED);
+
+                } catch (Exception exception){
+                    String errorMsg = exception.getMessage();
+                    responseTextArea.setText(errorMsg);
+                    responseStatusComboBox.setSelectedItem(0);
+                    responseStatusComboBox.setBackground(JBColor.RED);
+                    responseInfoParamsKeyValueList = Lists.newArrayList(
+                            new ParamKeyValue("Error", errorMsg)
+                    );
+                    responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
                 }
-                long end = System.currentTimeMillis();
-                String duration = String.valueOf(end - start);
-
-                responseInfoParamsKeyValueList = Lists.newArrayList(
-                        new ParamKeyValue("Cost",duration + " ms",2,TypeUtil.Type.String.name()),
-                        new ParamKeyValue("Response status",status+" "+ Constant.HttpStatusDesc.STATUS_MAP.get(status))
-                );
-                responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
-
-
-                responseStatusComboBox.setSelectedItem(status);
-                responseStatusComboBox.setBackground((status >= 200 && status < 300) ? JBColor.GREEN : JBColor.RED);
-
+                responseTabbedPanel.setSelectedIndex(0);
                 sendButton.setEnabled(true);
-            } catch (Exception exception){
-                String errorMsg = exception.getMessage();
-                sendButton.setEnabled(true);
-                responseTextArea.setText(errorMsg);
-                responseStatusComboBox.setSelectedItem(0);
-                responseStatusComboBox.setBackground(JBColor.RED);
-                responseInfoParamsKeyValueList = Lists.newArrayList(
-                        new ParamKeyValue("Error", errorMsg)
-                );
-                responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
-            }
-            responseTabbedPanel.setSelectedIndex(0);
+
         });
     }
 
@@ -709,6 +715,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);
         toolbarDecorator.setAddAction(anActionButton -> {
+                    if(headerParamsKeyValueList == null){
+                        headerParamsKeyValueList = new ArrayList<>();
+                    }
                     int selectedRow = headerTable.getSelectedRow();
                     if (selectedRow == -1) {
                         headerParamsKeyValueList.add(new DataMapping("", ""));

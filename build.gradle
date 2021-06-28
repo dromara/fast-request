@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '1.1.0'
+version '1.1.1'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
@@ -31,7 +31,11 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-
+    <h3>v1.1.1</h3>
+    <ul>
+        <li>fix some bugs</li>
+    </ul>
+    
     <h3>v1.1.0</h3>
     <ul>
         <li>support http request</li>
