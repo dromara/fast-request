@@ -13,7 +13,7 @@
 
 如果你觉得本插件不错,请给个🌟Star吧,也欢迎提供优秀的PR
 
-![example](./screenshot/example.png)
+![example](./screenshot/example.gif)
 
 - document
     * [中文文档](README.zh_CN.md)

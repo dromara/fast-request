@@ -13,7 +13,7 @@ The plugin UI references [Paw](https://paw.cloud/)
 
 If you think this plugin help you, please **🌟Star** project, and also welcome to provide excellent pull request
 
-![example](./screenshot/example.png)
+![example](./screenshot/example.gif)
 
 - document
     * [中文文档](README.zh_CN.md)
