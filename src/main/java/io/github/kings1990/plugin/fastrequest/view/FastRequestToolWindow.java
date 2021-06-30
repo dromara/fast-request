@@ -1,6 +1,6 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
-import cn.hutool.core.util.XmlUtil;
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
@@ -420,25 +420,26 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
                     long start = System.currentTimeMillis();
                     HttpResponse response = request.execute();
+                    long end = System.currentTimeMillis();
                     int status = response.getStatus();
                     String body = response.body();
                     if(JsonUtil.isJSON2(body)){
                         responseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
-                    } else if(body.startsWith("<!DOCTYPE HTML>")){
-                        responseTextArea.setText(XmlUtil.format(body.replace("<!DOCTYPE HTML>","")));
-                    } else{
-                        responseTextArea.setText(body);
+                    } else {
+                        String subBody = body.substring(0,32768);
+                        if(body.length() > 32768){
+                            subBody += "\n\ntext too large only show 32768 characters\n.............";
+                        }
+                        responseTextArea.setText(subBody);
                     }
-                    long end = System.currentTimeMillis();
                     String duration = String.valueOf(end - start);
 
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Cost",duration + " ms",2,TypeUtil.Type.String.name()),
-                            new ParamKeyValue("Response status",status+" "+ Constant.HttpStatusDesc.STATUS_MAP.get(status))
+                            new ParamKeyValue("Response status",status+" "+ Constant.HttpStatusDesc.STATUS_MAP.get(status)),
+                            new ParamKeyValue("Date", DateUtil.formatDateTime(new Date()))
                     );
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
-
-
                     responseStatusComboBox.setSelectedItem(status);
                     responseStatusComboBox.setBackground((status >= 200 && status < 300) ? JBColor.GREEN : JBColor.RED);
 
