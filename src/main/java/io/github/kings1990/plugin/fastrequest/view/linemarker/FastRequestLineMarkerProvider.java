@@ -40,7 +40,7 @@ public class FastRequestLineMarkerProvider implements LineMarkerProvider {
                         ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.PARAM_CHANGE_TOPIC);
                         configChangeNotifier.configChanged(true);
                     },
-                    GutterIconRenderer.Alignment.LEFT, ()-> "xxxxxx");
+                    GutterIconRenderer.Alignment.LEFT);
             lineMarkerInfo.createGutterRenderer();
             return lineMarkerInfo;
         }
