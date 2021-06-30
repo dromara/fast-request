@@ -388,8 +388,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
     private void sendRequestAction(){
         //send request
+        //2秒内不允许狂点
+        sendButton.setMultiClickThreshhold(2000);
         sendButton.addActionListener(e -> {
-            sendButton.setMultiClickThreshhold(2000);
             sendButton.setEnabled(false);
                 try {
                     String sendUrl = urlTextField.getText();
