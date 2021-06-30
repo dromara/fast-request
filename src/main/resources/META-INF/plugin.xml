@@ -22,6 +22,13 @@
 
     <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" /><br/>
 
+    <h3>v1.1.2</h3>
+    <ul>
+        <li>add line icon for method</li>
+        <li>limit send button click frequency</li>
+        <li>optimize response show large text</li>
+    </ul>
+
     <h3>v1.1.1</h3>
     <ul>
         <li>fix some bugs</li>
