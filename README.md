@@ -30,6 +30,9 @@ QQ group:754131222
 
 
 ## 2.Default shortcut key
+recommend way:just click FastRequest icon
+![](./screenshot/methodIcon.png)
+
 
 |key|scope|description|
 | --- | --- | --- |
@@ -40,6 +43,8 @@ if it doesn't work,you can search <kbd>Generate URL and Param</kbd> in key map a
 modify key:<kbd>Preferences(Settings)</kbd> > <kbd>Keymap</kbd>
 
 other way:<kbd>Code(Toolbar)</kbd> > <kbd>Generate</kbd> > <kbd>Generate URL and Param</kbd>
+
+
 
 
 ## 3.config and usage
@@ -88,6 +93,11 @@ icon and type mapping
 |![](./screenshot/icon/boolean.svg)|Boolean|
 
 ## 6.Updates
+- v1.1.2(2021.07.01)
+  * add line icon for method
+  * limit send button click frequency
+  * optimize response show large text
+
 - v1.1.1(2021.06.28)
   * params can delete batch
   * fix some bugs

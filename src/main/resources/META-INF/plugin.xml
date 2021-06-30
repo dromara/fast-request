@@ -11,7 +11,8 @@
 
     中文:<br/>
     Fast Request是一个基于springmvc的帮助你快速生成url和参数的插件.同时也是一个http client工具<br/>
-    Fast Request帮助你在IDEA界面内更快更高效得调试你的API
+    Fast Request帮助你在IDEA界面内更快更高效得调试你的API<br/>
+    QQ群:754131222
     <br/><br/>
 
 
@@ -21,6 +22,13 @@
     <em>For more information,Please goto <a href="https://github.com/kings1990/fast-request">Github</a></em><br/>
 
     <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" /><br/>
+
+    <h3>v1.1.2</h3>
+    <ul>
+        <li>add line icon for method</li>
+        <li>limit send button click frequency</li>
+        <li>optimize response show large text</li>
+    </ul>
 
     <h3>v1.1.1</h3>
     <ul>
@@ -59,6 +67,8 @@
             <configurable parentId="p" instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>
         </applicationConfigurable>
         <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest" factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory" secondary="false"/>
+
+        <codeInsight.lineMarkerProvider language="JAVA" implementationClass="io.github.kings1990.plugin.fastrequest.view.linemarker.FastRequestLineMarkerProvider"/>
     </extensions>
 
     <actions >
