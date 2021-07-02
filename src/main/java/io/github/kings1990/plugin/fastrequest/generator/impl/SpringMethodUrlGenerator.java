@@ -6,6 +6,7 @@ import com.intellij.psi.util.PsiUtil;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.generator.FastUrlGenerator;
+import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamGroup;
 import io.github.kings1990.plugin.fastrequest.model.ParamNameType;
@@ -30,7 +31,6 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
 
     @Override
     public String generate(PsiElement psiElement) {
-        String domain = config.getDomain();
         ParamGroup paramGroup = config.getParamGroup();
         if (!(psiElement instanceof PsiMethod)) {
             return StringUtils.EMPTY;
@@ -47,11 +47,6 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
 
         //pathParam
         LinkedHashMap<String, Object> pathParamMap = pathValueParamParse.parseParam(config, methodUrlParamList);
-//        methodUrl = buildPathParamUrl(methodUrl, pathParamMap);
-//        String url = classUrl + "/" + methodUrl;
-//        url = url.replace("//","/");
-//        paramGroup.setUrl(url);
-
 
         //requestParam
         LinkedHashMap<String, Object> requestParamMap = requestParamParse.parseParam(config, methodUrlParamList);
@@ -110,7 +105,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
 
     /**
      * 得到类的mappingUrl
-     * //@Controller("url") @RestController("url")
+     * //@Controller("xxController") @RequestMapping("url") or @RequestMapping("url/${fixed module name}/xxx")
      *
      * @param psiMethod psi的方法
      * @return {@link String }
@@ -132,7 +127,12 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         if (value == null) {
             return StringUtils.EMPTY;
         }
-        return value.getText().replace("\"", "");
+        String classUrl = value.getText();
+        List<DataMapping> urlReplaceMappingList = config.getUrlReplaceMappingList();
+        for (DataMapping dataMapping : urlReplaceMappingList) {
+            classUrl = classUrl.replace(dataMapping.getType(),dataMapping.getValue());
+        }
+        return classUrl.replace("\"", "");
     }
 
     public List<ParamNameType> getMethodBodyParamList(PsiMethod psiMethod) {

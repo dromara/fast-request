@@ -5,6 +5,8 @@ import com.intellij.codeInsight.daemon.LineMarkerProvider;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.editor.markup.GutterIconRenderer;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.wm.ToolWindow;
+import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.psi.PsiAnnotation;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiIdentifier;
@@ -34,6 +36,11 @@ public class FastRequestLineMarkerProvider implements LineMarkerProvider {
                         Project project = elt.getProject();
                         generatorUrlService.generate(methodElement);
 
+                        //打开工具窗口
+                        ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(project).getToolWindow("Fast Request");
+                        if(fastRequestToolWindow != null && !fastRequestToolWindow.isActive()){
+                            fastRequestToolWindow.show();
+                        }
                         //send message to change param
                         MessageBus messageBus = project.getMessageBus();
                         messageBus.connect();

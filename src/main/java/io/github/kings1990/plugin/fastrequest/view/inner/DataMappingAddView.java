@@ -23,7 +23,7 @@ public class DataMappingAddView extends DialogWrapper {
         if(StringUtils.isEmpty(javaTypeTextField.getText())){
             return new ValidationInfo("Please add javaType");
         }
-        if(StringUtils.isEmpty(javaTypeTextField.getText())){
+        if(StringUtils.isEmpty(defaultValueTextField.getText())){
             return new ValidationInfo("Please add default value");
         }
         return super.doValidate();
