@@ -75,6 +75,7 @@ public class CommonConfigView extends AbstractConfigurableView {
      */
     private void renderingTablePanel() {
         JBTable table = createTable();
+        table.getEmptyText().setText("Please set domain url");
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);
         toolbarDecorator.setRemoveAction(null);
         toolbarDecorator.setAddAction(null);
