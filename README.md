@@ -94,7 +94,7 @@ icon and type mapping
 
 ## 6.Updates
 - v1.1.3
-  * controller url fixed variable can replace by config
+  * url on controller can replace fixed variable with another by config
   * add some guide
   * show tool window when click generate icon
 - v1.1.2(2021.07.01)

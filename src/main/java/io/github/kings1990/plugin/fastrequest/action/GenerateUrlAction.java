@@ -32,7 +32,7 @@ public class GenerateUrlAction extends AnAction {
         //打开工具窗口
         ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(project).getToolWindow("Fast Request");
         if(fastRequestToolWindow != null && !fastRequestToolWindow.isActive()){
-            fastRequestToolWindow.show();
+            fastRequestToolWindow.activate(null);
         }
 
         //send message to change param

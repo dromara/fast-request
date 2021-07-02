@@ -34,7 +34,7 @@ patchPluginXml {
 
     <h3>v1.1.3</h3>
     <ul>
-        <li>controller url fixed variable can replace by config</li>
+        <li>url on controller can replace fixed variable with another by config</li>
         <li>add some guide</li>
         <li>show tool window when click generate icon</li>
     </ul>
