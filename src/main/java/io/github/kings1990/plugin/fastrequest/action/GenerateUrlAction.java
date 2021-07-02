@@ -5,6 +5,8 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.wm.ToolWindow;
+import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.psi.PsiElement;
 import com.intellij.util.messages.MessageBus;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
@@ -26,6 +28,12 @@ public class GenerateUrlAction extends AnAction {
         }
 
         generatorUrlService.generate(psiElement);
+
+        //打开工具窗口
+        ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(project).getToolWindow("Fast Request");
+        if(fastRequestToolWindow != null && !fastRequestToolWindow.isActive()){
+            fastRequestToolWindow.show();
+        }
 
         //send message to change param
         MessageBus messageBus = project.getMessageBus();

@@ -87,6 +87,7 @@ public class DataMappingConfigView extends AbstractConfigurableView {
             viewCustomDataMappingList = new ArrayList<>();
         }
         JBTable table = createCustomTable();
+        table.getEmptyText().setText("Example-> java type: com.baomidou.mybatisplus.extension.plugins.pagination.page ,default value: {\"size\":10,\"current\":1}");
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);

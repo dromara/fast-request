@@ -56,6 +56,11 @@ public class FastRequestConfiguration implements Serializable {
             new DataMapping("java.math.BigDecimal", "1")
     );
 
+    /**
+     * url替换规则
+     */
+    private List<DataMapping> urlReplaceMappingList = new ArrayList<>();
+
     private boolean enableFlag;
 
     private String enableEnv;
@@ -164,5 +169,13 @@ public class FastRequestConfiguration implements Serializable {
 
     public void setHeaderList(List<DataMapping> headerList) {
         this.headerList = headerList;
+    }
+
+    public List<DataMapping> getUrlReplaceMappingList() {
+        return urlReplaceMappingList;
+    }
+
+    public void setUrlReplaceMappingList(List<DataMapping> urlReplaceMappingList) {
+        this.urlReplaceMappingList = urlReplaceMappingList;
     }
 }
