@@ -120,8 +120,6 @@ QQ 群:754131222
 ## 8.后续计划
 希望各位路人大佬帮忙一起建设后续的功能,提供好的建议以及好的PR!
 
-* 支持发送请求 (v1.1.0已完成)
-
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
 [plugin]: https://plugins.jetbrains.com/plugin/16988
