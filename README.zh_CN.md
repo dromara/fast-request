@@ -94,6 +94,10 @@ QQ 群:754131222
 |![](./screenshot/icon/boolean.svg)|Boolean|
 
 ## 6.更新日志
+- v1.1.3
+  * controller上的RequestMapping支持变量替换
+  * 增加了一些引导
+  * 点击图标自动打开tool窗口
 - v1.1.2(2021.07.01)
   * 为方法增加了图标
   * 限制了发送按钮的频率

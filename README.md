@@ -93,6 +93,10 @@ icon and type mapping
 |![](./screenshot/icon/boolean.svg)|Boolean|
 
 ## 6.Updates
+- v1.1.3
+  * controller url fixed variable can replace by config
+  * add some guide
+  * show tool window when click generate icon
 - v1.1.2(2021.07.01)
   * add line icon for method
   * limit send button click frequency
