@@ -120,8 +120,6 @@ If you think the plug-in is great and saves you a lot of time, then invite the a
 ## 8.Plan
 I very hope you can help build follow-up functions.Provide good idea and provide good PR!
 
-* support send request(complete in v1.1.0)
-
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
 [plugin]: https://plugins.jetbrains.com/plugin/16988
