@@ -77,6 +77,23 @@ QQ 群:754131222
 {"size":10,"current":1}
 ```
 
+### 3.3 其他配置
+
+控制器上的url固定变量可以由配置替换,例如类控制器上url写法如下
+
+```
+@RequestMapping("/api/${api-module}/user")
+@Controller
+public class XxxController(){
+  ...
+}
+```
+
+实际的url是`/api/base/user`
+
+那么可以通过以下配置来替换`${api-module}`变量
+![](./screenshot/otherConfig.png)
+
 ## 4.小技巧
 1. 参数Table支持值修改,修改了PathParamTable对应的url会想要的变化
 2. Url Param、JSON、Form URL-Encoded Table支持参数修改,修改后的text tab也参数也会随之变化,在text框中点击**鼠标右键即可以复制参数**
@@ -92,37 +109,13 @@ QQ 群:754131222
 |![](./screenshot/icon/number.svg) |Number |
 |![](./screenshot/icon/string.svg) |String |
 |![](./screenshot/icon/boolean.svg)|Boolean|
+|![](./screenshot/icon/file.svg)|File|
 
-## 6.更新日志
-- v1.1.3
-  * controller上的RequestMapping支持变量替换
-  * 增加了一些引导
-  * 点击图标自动打开tool窗口
-- v1.1.2(2021.07.01)
-  * 为方法增加了图标
-  * 限制了发送按钮的频率
-  * 优化了response文本巨大的问题
-- v1.1.1(2021.06.28)
-  * 支持批量删除参数
-  * 修复了一些bug
-- v1.1.0(2021.06.25)
-  * 支持http请求发送
-  * 支持参数新增和修改
-  * 美化ui
-  * 修复了一些bug
-- v1.0.0(2021.06.09)
-  * 支持生成参数和url
-  * 支持自定义域名
-  * 支持自定义参数
-  
-## 7.支持作者
+## 6.支持作者
 如果觉得插件很赞，为你节约了不少时间，那么就请作者喝杯咖啡吧~☕☕☕,非常感谢
 
 | ![微信](./screenshot/pay/wechat.jpg) | ![支付宝](./screenshot/pay/alipay.png) |
 | --- | --- |
-
-## 8.后续计划
-希望各位路人大佬帮忙一起建设后续的功能,提供好的建议以及好的PR!
 
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest

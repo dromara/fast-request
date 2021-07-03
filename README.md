@@ -78,6 +78,22 @@ Example:
 {"size":10,"current":1}
 ```
 
+#### 3.3 Other config
+controller url fixed variable can replace by config, For example controller like this
+
+```
+@RequestMapping("/api/${api-module}/user")
+@Controller
+public class XxxController(){
+  ...
+}
+```
+
+the actual url is `/api/base/user`
+
+Then `${api-module}` can be replaced by the following configuration
+![](./screenshot/otherConfig.png)
+
 ## 4.Tips
 1. The parameter Table supports value modification,  the URL will change when Path Param Table params has been modified.
 2. Url Param、JSON、Form URL-Encoded Table support parameter modification,after modify,text tab parameters will also change accordingly,**right click in textarea to copy parameters**
@@ -91,38 +107,15 @@ icon and type mapping
 |![](./screenshot/icon/number.svg) |Number |
 |![](./screenshot/icon/string.svg) |String |
 |![](./screenshot/icon/boolean.svg)|Boolean|
+|![](./screenshot/icon/file.svg)|File|
 
-## 6.Updates
-- v1.1.3
-  * url on controller can replace fixed variable with another by config
-  * add some guide
-  * show tool window when click generate icon
-- v1.1.2(2021.07.01)
-  * add line icon for method
-  * limit send button click frequency
-  * optimize response show large text
 
-- v1.1.1(2021.06.28)
-  * params can delete batch
-  * fix some bugs
-- v1.1.0(2021.06.25)
-  * support http request
-  * support modify and add params
-  * beautify ui
-  * fix some bugs
-- v1.0.0(2021.06.09)
-  * support generate url and param
-  * support custom domain
-  * support custom params
-
-## 7.Donate
+## 6.Donate
 If you think the plug-in is great and saves you a lot of time, then invite the author to have a cup of coffee~☕☕☕,thank you very much!
 
 | ![微信](./screenshot/pay/wechat.jpg) | ![支付宝](./screenshot/pay/alipay.png) |
 | --- | --- |
 
-## 8.Plan
-I very hope you can help build follow-up functions.Provide good idea and provide good PR!
 
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
