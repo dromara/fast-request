@@ -166,7 +166,9 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
                     //PathVariable  RequestParam
                     Integer parseType = config.getParseType();
                     if (parseType == 1 || parseType == 2) {
-                        ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass, parseType);
+                        PsiAnnotationMemberValue value = annotation.findDeclaredAttributeValue("value");
+                        String name = value== null?param.getName():value.getText().replace("\"","");
+                        ParamNameType paramNameType = new ParamNameType(name, param.getType().getCanonicalText(), psiClass, parseType);
                         result.add(paramNameType);
                         parseFlag = true;
                         break;

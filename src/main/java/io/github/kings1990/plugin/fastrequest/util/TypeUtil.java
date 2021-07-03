@@ -82,6 +82,7 @@ public class TypeUtil {
         Array,
         String,
         Number,
-        Boolean
+        Boolean,
+        File
     }
 }

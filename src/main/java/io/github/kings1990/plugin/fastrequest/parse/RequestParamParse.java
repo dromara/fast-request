@@ -73,6 +73,10 @@ public class RequestParamParse extends AbstractParamParse {
                 }
                 continue;
             }
+            if("org.springframework.web.multipart.MultipartFile".equals(paramNameType.getType())){
+                nameValueMap.put(name, new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name()));
+                continue;
+            }
             //json解析
             KV kv = KV.getFields(paramNameType.getPsiClass());
             String json = kv.toPrettyJson();
