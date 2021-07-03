@@ -141,6 +141,9 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                                 kvIn.set(name,paramKeyValue);
                                 list.add(kvIn);
                             }
+                        }  else if("org.springframework.web.multipart.MultipartFile".equals(deepTypeName)){
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
+                            list.add(paramKeyValue);
                         } else {
                             KV fields = getFields(PsiUtil.resolveClassInType(deepType));
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, fields, 2, TypeUtil.Type.Object.name(), comment);
@@ -168,11 +171,19 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                                 list.add(paramKeyValue);
                             }
                             kv.set(name, new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment));
+                        } else if("org.springframework.web.multipart.MultipartFile".equals(classTypeName)){
+                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
+                            list.add(paramKeyValue);
+                            kv.set(name, new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment));
                         } else {
                             list.add(getFields(iterableClass));
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment);
                             kv.set(name, paramKeyValue);
                         }
+                    }  else if("org.springframework.web.multipart.MultipartFile".equals(fieldTypeName)){
+                        //文件上传
+                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
+                        kv.set(name, paramKeyValue);
                     } else if (PsiUtil.resolveClassInClassTypeOnly(type).isEnum()) { //enum
                         ArrayList namelist = new ArrayList<String>();
                         PsiField[] fieldList = PsiUtil.resolveClassInClassTypeOnly(type).getFields();

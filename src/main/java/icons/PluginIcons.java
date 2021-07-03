@@ -12,6 +12,7 @@ public interface PluginIcons {
     Icon ICON_NUMBER = IconLoader.getIcon("/icon/number.svg", PluginIcons.class);
     Icon ICON_OBJECT = IconLoader.getIcon("/icon/object.svg", PluginIcons.class);
     Icon ICON_STRING = IconLoader.getIcon("/icon/string.svg", PluginIcons.class);
+    Icon ICON_FILE = IconLoader.getIcon("/icon/file.svg", PluginIcons.class);
 
     Icon ICON_SEND = IconLoader.getIcon("/icon/send.svg", PluginIcons.class);
     Icon ICON_ADD = IconLoader.getIcon("/icon/add.svg", PluginIcons.class);

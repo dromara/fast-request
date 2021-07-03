@@ -10,9 +10,18 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
+import com.intellij.ide.DataManager;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.openapi.diagnostic.Logger;
+import com.intellij.openapi.fileChooser.FileChooser;
+import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.ComboBox;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
+import com.intellij.openapi.ui.TextFieldWithBrowseButton;
+import com.intellij.openapi.vfs.LocalFileSystem;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.CollectionComboBoxModel;
 import com.intellij.ui.ColoredTreeCellRenderer;
@@ -22,6 +31,7 @@ import com.intellij.ui.dualView.TreeTableView;
 import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
 import com.intellij.ui.treeStructure.treetable.TreeColumnInfo;
+import com.intellij.util.ui.AbstractTableCellEditor;
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
 import icons.PluginIcons;
@@ -43,6 +53,7 @@ import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.net.URI;
 import java.util.List;
 import java.util.*;
@@ -91,11 +102,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JComboBox<Integer> responseStatusComboBox;
     private JTextArea responseTextArea;
     private JPanel responseInfoPanel;
+    private JTabbedPane multipartTabbedPane;
+    private JPanel multipartTablePanel;
     private JPanel panelResponse;
     private JScrollPane responseBodyScrollPane;
 
     private JBTable urlParamsTable;
     private JBTable urlEncodedTable;
+    private JBTable multipartTable;
     private JBTable pathParamsTable;
     private TreeTableView jsonTreeTable;
     private JBTable responseInfoTable;
@@ -106,6 +120,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private List<ParamKeyValue> pathParamsKeyValueList = new ArrayList<>();
     private List<ParamKeyValue> urlParamsKeyValueList = new ArrayList<>();
     private List<ParamKeyValue> urlEncodedKeyValueList = new ArrayList<>();
+    private List<ParamKeyValue> multipartKeyValueList = new ArrayList<>();
     private LinkedHashMap<String, Object> bodyParamMap;
 
 
@@ -119,6 +134,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             .put(TypeUtil.Type.String.name(), PluginIcons.ICON_STRING)
             .put(TypeUtil.Type.Number.name(), PluginIcons.ICON_NUMBER)
             .put(TypeUtil.Type.Boolean.name(), PluginIcons.ICON_BOOLEAN)
+            .put(TypeUtil.Type.File.name(), PluginIcons.ICON_FILE)
             .build();
     private ComboBox<String> typeJComboBox;
     private ComboBox<String> normalTypeJComboBox;
@@ -162,6 +178,17 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return typeJComboBox;
     }
 
+    private ComboBox getNormalTypeAndFileComboBox(String type) {
+        ComboBox<String> typeJComboBox = new ComboBox<>();
+        typeJComboBox.setRenderer(new IconListRenderer(TYPE_ICONS));
+        typeJComboBox.addItem(TypeUtil.Type.Number.name());
+        typeJComboBox.addItem(TypeUtil.Type.String.name());
+        typeJComboBox.addItem(TypeUtil.Type.Boolean.name());
+        typeJComboBox.addItem(TypeUtil.Type.File.name());
+        typeJComboBox.setSelectedItem(type);
+        return typeJComboBox;
+    }
+
     private void createUIComponents() {
         typeJComboBox = new ComboBox<>();
         typeJComboBox.setRenderer(new IconListRenderer(TYPE_ICONS));
@@ -183,6 +210,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         renderingHeaderTablePanel();
         renderingUrlParamsTablePanel();
         renderingUrlEncodedPanel();
+        renderingMultipartPanel();
         renderingPathParamsPanel();
         renderingJsonTreeTablePanel();
         renderingResponseInfoPanel();
@@ -404,6 +432,22 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     headerParamsKeyValueList = headerParamsKeyValueList == null?new ArrayList<>():headerParamsKeyValueList;
                     Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue())));
                     request.header(headerMap);
+
+                    Map<String, Object> multipartFormParam = multipartKeyValueList.stream()
+                            .collect(HashMap::new, (m,v)-> {
+                                        Object value = v.getValue();
+                                        String key = v.getKey();
+                                        if (TypeUtil.Type.File.name().equals(v.getType())) {
+                                            if (value != null && !StringUtils.isBlank(value.toString())) {
+                                                m.put(key,new File(value.toString()));
+                                            } else {
+                                                m.put(key,null);
+                                            }
+                                        } else {
+                                            m.put(key,value);
+                                        }
+                                    }, HashMap::putAll);
+
                     Map<String, Object> formParam = urlParamsKeyValueList.stream().collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue));
                     String jsonParam = jsonParamsTextArea.getText();
                     String urlEncodedParam = urlEncodedTextArea.getText();
@@ -416,7 +460,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         request.body(jsonParam);
                     }
 
-                    request.form(formParam);
+                    if(!formParam.isEmpty()){
+                        request.form(formParam);
+                    }
+                    if(!multipartFormParam.isEmpty()){
+                        request.form(multipartFormParam);
+                    }
 
                     long start = System.currentTimeMillis();
                     HttpResponse response = request.execute();
@@ -567,6 +616,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
      * @date 2021/06/02
      */
     public void refresh() {
+        //reset value
+        multipartKeyValueList = new ArrayList<>();
+
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
         ParamGroup paramGroup = config.getParamGroup();
@@ -609,18 +661,29 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
             } else {
-                //urlencoded
-                urlEncodedTextArea.setText(requestParamStr);
-                if(requestParamStr.isEmpty()){
-                    tabbedPane.setSelectedIndex(2);
-                } else {
-                    tabbedPane.setSelectedIndex(4);
-                }
-                urlEncodedTabbedPane.setSelectedIndex(0);
                 urlEncodedKeyValueList = conventMapToList(requestParamMap);
+                boolean isMultipart = urlEncodedKeyValueList.stream().anyMatch(q -> TypeUtil.Type.File.name().equals(q.getType()));
+                if(isMultipart){
+                    if (requestParamStr.isEmpty()) {
+                        tabbedPane.setSelectedIndex(2);
+                    } else {
+                        tabbedPane.setSelectedIndex(5);
+                    }
+                    multipartKeyValueList = new ArrayList<>(urlEncodedKeyValueList);
+                    urlEncodedKeyValueList = new ArrayList<>();
+                } else {
+                    //urlencoded
+                    urlEncodedTextArea.setText(requestParamStr);
+                    if (requestParamStr.isEmpty()) {
+                        tabbedPane.setSelectedIndex(2);
+                    } else {
+                        tabbedPane.setSelectedIndex(4);
+                    }
+                    urlEncodedTabbedPane.setSelectedIndex(0);
+                    urlEncodedKeyValueList = conventMapToList(requestParamMap);
+                }
                 //json设置为空
                 jsonParamsTextArea.setText("");
-
                 //如果是非get请求则request Param为空转到url Encoded参数下
                 urlParamsKeyValueList = new ArrayList<>();
                 urlParamsTextArea.setText("");
@@ -635,6 +698,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
         resizeTable(urlEncodedTable);
+
+        multipartTable.setModel(new ListTableModel<>(getPathColumnInfo(), multipartKeyValueList));
+        resizeTable(multipartTable);
 
         //json table
         refreshFirstInitJsonTable();
@@ -918,10 +984,53 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             int[] selectedIndices = urlEncodedTable.getSelectionModel().getSelectedIndices();
             List<Integer> indexes= Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
             indexes.stream().mapToInt(i -> i).forEach(urlEncodedKeyValueList::remove);
-            pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
+            urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
             resizeTable(urlEncodedTable);
         });
         urlEncodedTablePanel = toolbarDecorator.createPanel();
+    }
+
+    public void renderingMultipartPanel(){
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+        ParamGroup paramGroup = config.getParamGroup();
+        LinkedHashMap<String, Object> bodyParamMap = paramGroup.getBodyParamMap();
+        String methodType = paramGroup.getMethodType();
+        if (!"GET".equals(methodType)) {
+            //body param
+            Object bodyParam = bodyParamMap.values().stream().findFirst().orElse("");
+            if ("".equals(bodyParam)) {
+                //json形式 urlencoded 值为空
+                multipartKeyValueList = new ArrayList<>();
+            }
+        } else {
+            //get urlencoded 值为空
+            multipartKeyValueList = new ArrayList<>();
+        }
+        multipartTable = createMultipartKeyValueTable();
+        multipartTable.getEmptyText().setText("No params");
+        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(multipartTable);
+        toolbarDecorator.setMoveDownAction(null);
+        toolbarDecorator.setMoveUpAction(null);
+
+        toolbarDecorator.setAddAction(anActionButton -> {
+                    int selectedRow = multipartTable.getSelectedRow();
+                    if (selectedRow == -1) {
+                        multipartKeyValueList.add(new ParamKeyValue("", "", 2, TypeUtil.Type.String.name()));
+                    } else {
+                        multipartKeyValueList.add(selectedRow + 1, new ParamKeyValue("", "", 2, TypeUtil.Type.String.name()));
+                    }
+                    multipartTable.setModel(new ListTableModel<>(getPathColumnInfo(), multipartKeyValueList));
+                    resizeTable(multipartTable);
+                }
+        ).setRemoveAction(anActionButton -> {
+            int[] selectedIndices = multipartTable.getSelectionModel().getSelectedIndices();
+            List<Integer> indexes= Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+            indexes.stream().mapToInt(i -> i).forEach(multipartKeyValueList::remove);
+            multipartTable.setModel(new ListTableModel<>(getPathColumnInfo(), multipartKeyValueList));
+            resizeTable(multipartTable);
+        });
+        multipartTablePanel = toolbarDecorator.createPanel();
     }
 
     /**
@@ -1491,7 +1600,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             if(o instanceof ParamKeyValue){
                 //非对象进入
                 ParamKeyValue paramKeyValue = (ParamKeyValue) o;
-                paramKeyValue.setKey(key+"[]");
+                paramKeyValue.setKey(key+"[0]");
                 list.add(paramKeyValue);
             } else {
                 KV<String, ParamKeyValue> kv = (KV<String, ParamKeyValue>) o;
@@ -1915,6 +2024,128 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         urlEncodedParamChangeFlag.set(true);
                     }
                     paramKeyValue.setValue(value);
+                }
+            }
+        };
+        table.setVisible(true);
+        return table;
+    }
+
+    class FileChooseCellEditor extends AbstractTableCellEditor {
+        private TextFieldWithBrowseButton textFieldWithBrowseButton;
+
+        public FileChooseCellEditor(TextFieldWithBrowseButton textFieldWithBrowseButton) {
+            this.textFieldWithBrowseButton = textFieldWithBrowseButton;
+        }
+
+        @Override
+        public Object getCellEditorValue() {
+            return textFieldWithBrowseButton;
+        }
+
+        @Override
+        public Component getTableCellEditorComponent(JTable jTable, Object o, boolean b, int i, int i1) {
+            return textFieldWithBrowseButton;
+        }
+    }
+
+    public JBTable createMultipartKeyValueTable() {
+        ColumnInfo<Object, Object>[] columns = getPathColumnInfo();
+        if (multipartKeyValueList == null) {
+            multipartKeyValueList = new ArrayList<>();
+        }
+        ListTableModel<ParamKeyValue> model = new ListTableModel<>(columns, multipartKeyValueList);
+        JBTable table = new JBTable(model) {
+
+            @Override
+            public TableCellEditor getCellEditor(int row, int column) {
+                if(column == 0){
+                    String type = (String) getValueAt(row, column);
+                    return new DefaultCellEditor(getNormalTypeAndFileComboBox(type));
+                }
+                if(column == 2){
+                    String type = (String) getValueAt(row, 0);
+                    String value = (String) getValueAt(row, 2);
+                    if(TypeUtil.Type.File.name().equals(type)){
+                        DataContext dataContext = DataManager.getInstance().getDataContext(panel);
+                        Project project = dataContext.getData(LangDataKeys.PROJECT);
+                        VirtualFile virtualFile = FileChooser.chooseFile(FileChooserDescriptorFactory.createSingleFileDescriptor(), project, LocalFileSystem.getInstance().findFileByIoFile(new File(value)));
+                        String path = virtualFile == null?value:virtualFile.getCanonicalPath();
+                        TextFieldWithBrowseButton textFieldWithBrowseButton = new TextFieldWithBrowseButton(new JTextField(path));
+                        return new FileChooseCellEditor (textFieldWithBrowseButton);
+                    }
+                }
+                return super.getCellEditor(row, column);
+            }
+
+            @Override
+            public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
+                if (column == 0) {
+                    ParamKeyValue paramKeyValue = multipartKeyValueList.get(row);
+                    String type = paramKeyValue.getType();
+                    return getNormalTypeAndFileComboBox(type);
+                }  else if(column == 1){
+                    ParamKeyValue paramKeyValue = multipartKeyValueList.get(row);
+                    JTextField textField = new JTextField();
+                    textField.setText(getValueAt(row,column).toString());
+                    textField.setToolTipText(paramKeyValue.getComment());
+                    textField.setOpaque(false);
+                    return textField;
+                }else if(column == 2){
+                    ParamKeyValue paramKeyValue = multipartKeyValueList.get(row);
+                    String type = paramKeyValue.getType();
+                    if(TypeUtil.Type.File.name().equals(type)){
+                        return new TextFieldWithBrowseButton(new JTextField(paramKeyValue.getValue().toString()));
+                    } else {
+                        return super.prepareRenderer(renderer, row, column);
+                    }
+
+                }
+                return super.prepareRenderer(renderer, row, column);
+            }
+
+            @Override
+            public Object getValueAt(int row, int column) {
+                if (multipartKeyValueList.isEmpty()) {
+                    return StringUtils.EMPTY;
+                }
+                ParamKeyValue keyValue = multipartKeyValueList.get(row);
+                if (keyValue == null) {
+                    return StringUtils.EMPTY;
+                }
+                if (column == 0) {
+                    return keyValue.getType();
+                } else if (column == 1) {
+                    return keyValue.getKey();
+                } else {
+                    return keyValue.getValue();
+                }
+            }
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return true;
+            }
+
+            @Override
+            public void setValueAt(Object aValue, int row, int column) {
+                if (column == 0) {
+                    ParamKeyValue paramKeyValue = multipartKeyValueList.get(row);
+                    paramKeyValue.setType(aValue.toString());
+                }
+                if (column == 1) {
+                    ParamKeyValue paramKeyValue = multipartKeyValueList.get(row);
+                    paramKeyValue.setKey(aValue.toString());
+                }
+                if (column == 2) {
+                    String value = aValue.toString();
+                    ParamKeyValue paramKeyValue = multipartKeyValueList.get(row);
+                    if(TypeUtil.Type.File.name().equals(paramKeyValue.getType())){
+                        paramKeyValue.setValue(((TextFieldWithBrowseButton) aValue).getText());
+                    } else {
+                        paramKeyValue.setValue(value);
+                    }
+
                 }
             }
         };
