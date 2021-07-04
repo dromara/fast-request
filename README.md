@@ -94,10 +94,7 @@ the actual url is `/api/base/user`
 Then `${api-module}` can be replaced by the following configuration
 ![](./screenshot/otherConfig.png)
 
-## 4.Tips
-1. The parameter Table supports value modification,  the URL will change when Path Param Table params has been modified.
-2. Url Param、JSON、Form URL-Encoded Table support parameter modification,after modify,text tab parameters will also change accordingly,**right click in textarea to copy parameters**
-## 5.Type Icon Mapping
+## 4.Type Icon Mapping
 icon and type mapping
 
 |Icon|Type|
@@ -110,7 +107,7 @@ icon and type mapping
 |![](./screenshot/icon/file.svg)|File|
 
 
-## 6.Donate
+## 5.Donate
 If you think the plug-in is great and saves you a lot of time, then invite the author to have a cup of coffee~☕☕☕,thank you very much!
 
 | ![微信](./screenshot/pay/wechat.jpg) | ![支付宝](./screenshot/pay/alipay.png) |
