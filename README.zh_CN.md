@@ -94,12 +94,8 @@ public class XxxController(){
 那么可以通过以下配置来替换`${api-module}`变量
 ![](./screenshot/otherConfig.png)
 
-## 4.小技巧
-1. 参数Table支持值修改,修改了PathParamTable对应的url会想要的变化
-2. Url Param、JSON、Form URL-Encoded Table支持参数修改,修改后的text tab也参数也会随之变化,在text框中点击**鼠标右键即可以复制参数**
 
-
-## 5.类型ICON映射
+## 4.类型ICON映射
 图标和类型映射关系
 
 |Icon|Type|
@@ -111,7 +107,7 @@ public class XxxController(){
 |![](./screenshot/icon/boolean.svg)|Boolean|
 |![](./screenshot/icon/file.svg)|File|
 
-## 6.支持作者
+## 5.支持作者
 如果觉得插件很赞，为你节约了不少时间，那么就请作者喝杯咖啡吧~☕☕☕,非常感谢
 
 | ![微信](./screenshot/pay/wechat.jpg) | ![支付宝](./screenshot/pay/alipay.png) |
