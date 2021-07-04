@@ -266,7 +266,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 }
             }
         });
-        methodTypeComboBox.setBackground(JBColor.BLUE);
+        methodTypeComboBox.setBackground(new JBColor(new Color(0, 191, 255),new Color(70, 130, 180)));
 
         //responseStatus ComboBox
         List<Integer> values = new ArrayList<>(Constant.HttpStatusDesc.STATUS_MAP.keySet());
@@ -490,13 +490,17 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     );
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
                     responseStatusComboBox.setSelectedItem(status);
-                    responseStatusComboBox.setBackground((status >= 200 && status < 300) ? JBColor.GREEN : JBColor.RED);
+
+                    JBColor green = new JBColor(new Color(0, 250, 154), new Color(60, 179, 113));
+                    JBColor red = new JBColor(new Color(220, 20, 60),new Color(178, 34, 34));
+
+                    responseStatusComboBox.setBackground((status >= 200 && status < 300) ? green : red);
 
                 } catch (Exception exception){
                     String errorMsg = exception.getMessage();
                     responseTextArea.setText(errorMsg);
                     responseStatusComboBox.setSelectedItem(0);
-                    responseStatusComboBox.setBackground(JBColor.RED);
+                    responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60),new Color(178, 34, 34)));
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Error", errorMsg)
                     );
@@ -597,16 +601,17 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     private JBColor buildMethodColor(String method) {
+        JBColor jbColor = JBColor.darkGray;
         if ("POST".equals(method)) {
-            return JBColor.GREEN;
+            jbColor = new JBColor(new Color(0, 250, 154), new Color(60, 179, 113));
         } else if ("DELETE".equals(method)) {
-            return JBColor.RED;
+            jbColor = new JBColor(new Color(220, 20, 60),new Color(178, 34, 34));
         } else if ("PUT".equals(method)) {
-            return JBColor.YELLOW;
+            jbColor = new JBColor(new Color(255, 215, 0),new Color(255, 215, 100));
         } else if ("GET".equals(method)) {
-            return JBColor.BLUE;
+            jbColor = new JBColor(new Color(0, 191, 255),new Color(70, 130, 180));
         }
-        return JBColor.darkGray;
+        return jbColor;
     }
 
     /**
@@ -1361,7 +1366,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         public void customizeCellRenderer(@NotNull JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
             //解决TreeTable key加上>
             CustomNode node = (CustomNode) value;
-//            setBorder(BorderFactory.createLineBorder(JBColor.BLACK, 3));
             append(node.getKey());
             setToolTipText(node.getComment());
         }
