@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '1.1.4'
+version '1.1.3'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
@@ -32,17 +32,12 @@ intellij {
 patchPluginXml {
     changeNotes """
 
-    <h3>v1.1.4</h3>
+    <h3>v1.1.3</h3>
     <ul>
         <li>multipartFile support(文件上传支持)</li>
         <li>fix parameters alias bug(参数别名bug修复)</li>
         <li>fix generate array parameters(数组参数生成bug修复)</li>
-    </ul>
-    
-    <h3>v1.1.3</h3>
-    <ul>
         <li>controller url fixed variable can replace by config(控制器上的url支持变量替换)</li>
-        <li>add some guide(修复了一些bug)</li>
         <li>show tool window when click generate icon(点击图标弹出工具窗口)</li>
     </ul>
     
