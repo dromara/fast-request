@@ -8,6 +8,7 @@ import cn.hutool.http.Method;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.intellij.ide.DataManager;
@@ -18,6 +19,7 @@ import com.intellij.openapi.fileChooser.FileChooser;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.ComboBox;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
 import com.intellij.openapi.vfs.LocalFileSystem;
@@ -31,6 +33,7 @@ import com.intellij.ui.dualView.TreeTableView;
 import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
 import com.intellij.ui.treeStructure.treetable.TreeColumnInfo;
+import com.intellij.ui.treeStructure.treetable.TreeTableTree;
 import com.intellij.util.ui.AbstractTableCellEditor;
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
@@ -58,6 +61,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 /**
@@ -104,7 +108,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JPanel responseInfoPanel;
     private JTabbedPane multipartTabbedPane;
     private JPanel multipartTablePanel;
-    private JPanel panelResponse;
+    private JButton cURLExportButton;
+    private JPanel jsonResponsePanel;
     private JScrollPane responseBodyScrollPane;
 
     private JBTable urlParamsTable;
@@ -113,6 +118,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JBTable pathParamsTable;
     private TreeTableView jsonTreeTable;
     private JBTable responseInfoTable;
+    private TreeTableView responseTable;
+    private JBTable headerTable;
 
 
     private List<DataMapping> headerParamsKeyValueList;
@@ -215,6 +222,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         renderingJsonTreeTablePanel();
         renderingResponseInfoPanel();
 
+        renderingJsonResponsePanel();
+
         sendButton = new JButton(PluginIcons.ICON_SEND);
     }
 
@@ -228,10 +237,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             try {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
-                    dp.browse(URI.create("https://github.com/kings1990/fast-request"));
+                    dp.browse(URI.create("https://github.com/kings1990/fast-request-doc"));
                 }
             } catch (Exception e) {
-                LOGGER.error("open url fail:https://github.com/kings1990/fast-request", e);
+                LOGGER.error("open url fail:https://github.com/kings1990/fast-request-doc", e);
             }
         });
 
@@ -412,6 +421,69 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         urlTextField.addMouseListener(copyMouseAdapterField(urlTextField));
         headerParamsKeyValueList = config.getHeaderList();
         sendRequestAction();
+
+        cURLExportAction();
+    }
+
+    private String getCurlDataAndCopy(){
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+        String methodType = (String) methodTypeComboBox.getSelectedItem();
+        String domain = config.getDomain();
+        String sendUrl = urlTextField.getText();
+        List<DataMapping> headerList = config.getHeaderList();
+        String urlParam = urlParamsTextArea.getText();
+        String jsonParam = jsonParamsTextArea.getText();
+        String urlEncodedParam = urlEncodedTextArea.getText();
+
+        if(StringUtils.isEmpty(sendUrl)){
+            Messages.showMessageDialog("Url not exist", "Error", Messages.getInformationIcon());
+            return "";
+        }
+        String url = domain + sendUrl;
+        if(StringUtils.isNotEmpty(urlParam)){
+            String urlParamDeal = urlParam.lines().collect(Collectors.joining(""));
+            url = url + "?" + urlParamDeal;
+        }
+
+        StringBuilder sb = new StringBuilder("curl -X ");
+        sb.append("\"").append(methodType).append("\" ");
+        sb.append("\"").append(url).append("\" \\\n");
+        for (DataMapping header : headerList) {
+            sb.append("-H '").append(header.getType()).append(": ").append(header.getValue()).append("' \\\n");
+        }
+        if(StringUtils.isNotEmpty(jsonParam) && !"{}".equals(jsonParam) && !"[]".equals(jsonParam)){
+            sb.append("-H '").append("Content-Type: application/json").append("' \\\n");
+        }
+
+        if(StringUtils.isNotEmpty(urlEncodedParam)){
+            String urlEncodedParamDeal = urlEncodedParam.lines().collect(Collectors.joining(""));
+            sb.append("-d '").append(urlEncodedParamDeal).append("' \\\n");
+        }
+        if(StringUtils.isNotEmpty(jsonParam) && !"{}".equals(jsonParam) && !"[]".equals(jsonParam)){
+            String jsonParamDeal = jsonParam.lines().collect(Collectors.joining(""));
+            sb.append("-d '").append(jsonParamDeal).append("' \\\n");
+        }
+
+        for (ParamKeyValue paramKeyValue : multipartKeyValueList) {
+            if(!TypeUtil.Type.File.name().equals(paramKeyValue.getType())){
+                sb.append("-F \"").append(paramKeyValue.getKey()).append("=").append(paramKeyValue.getValue().toString()).append("\" \\\n");;
+            } else {
+                sb.append("-F \"").append(paramKeyValue.getKey()).append("=").append("\" \\\n");;
+            }
+        }
+        String result = sb.toString();
+        ToolUtil.setClipboardString(result);
+        return result;
+    };
+
+    public void cURLExportAction(){
+        cURLExportButton.setMultiClickThreshhold(2000);
+        cURLExportButton.addActionListener(e -> {
+            sendButton.setEnabled(false);
+            getCurlDataAndCopy();
+            sendButton.setEnabled(true);
+        });
     }
 
     private void sendRequestAction(){
@@ -427,8 +499,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         sendButton.setEnabled(true);
                         return;
                     }
+                    FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+                    assert config != null;
+                    String domain = config.getDomain();
+
                     String methodType = (String) methodTypeComboBox.getSelectedItem();
-                    HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), sendUrl);
+                    HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), domain + sendUrl);
                     headerParamsKeyValueList = headerParamsKeyValueList == null?new ArrayList<>():headerParamsKeyValueList;
                     Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue())));
                     request.header(headerMap);
@@ -474,12 +550,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     String body = response.body();
                     if(JsonUtil.isJSON2(body)){
                         responseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
+                        responseTabbedPanel.setSelectedIndex(0);
+                        refreshResponseTable(body);
                     } else {
-                        String subBody = body.substring(0,32768);
+                        String subBody = body.substring(0, Math.min(body.length(), 32768));
                         if(body.length() > 32768){
                             subBody += "\n\ntext too large only show 32768 characters\n.............";
                         }
                         responseTextArea.setText(subBody);
+                        responseTabbedPanel.setSelectedIndex(1);
                     }
                     String duration = String.valueOf(end - start);
 
@@ -505,6 +584,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             new ParamKeyValue("Error", errorMsg)
                     );
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+
+                    responseTabbedPanel.setSelectedIndex(1);
                 }
                 responseTabbedPanel.setSelectedIndex(0);
                 sendButton.setEnabled(true);
@@ -624,6 +705,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //reset value
         multipartKeyValueList = new ArrayList<>();
 
+        urlParamsTextArea.setText("");
+        jsonParamsTextArea.setText("");
+        urlEncodedTextArea.setText("");
+
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
         ParamGroup paramGroup = config.getParamGroup();
@@ -675,6 +760,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         tabbedPane.setSelectedIndex(5);
                     }
                     multipartKeyValueList = new ArrayList<>(urlEncodedKeyValueList);
+                    urlEncodedTextArea.setText("");
                     urlEncodedKeyValueList = new ArrayList<>();
                 } else {
                     //urlencoded
@@ -715,11 +801,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     private void refreshFirstInitJsonTable() {
-        if(bodyParamMap.isEmpty()){
-            return;
+        CustomNode root;
+        if(!bodyParamMap.isEmpty()){
+            ParamKeyValue firstValue = (ParamKeyValue) bodyParamMap.get(bodyParamMap.keySet().stream().findFirst().get());
+            root = new CustomNode("Root", "", firstValue.getType());
+        } else {
+            root = new CustomNode("Root", "", TypeUtil.Type.Object.name());
         }
-        ParamKeyValue firstValue = (ParamKeyValue) bodyParamMap.get(bodyParamMap.keySet().stream().findFirst().get());
-        CustomNode root = new CustomNode("Root", "", firstValue.getType());
         convertToNode(true,root, bodyParamMap);
 
         ((DefaultTreeModel)jsonTreeTable.getTableModel()).setRoot(root);
@@ -760,8 +848,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         ParamGroup paramGroup = config.getParamGroup();
         String originUrl = paramGroup.getOriginUrl();
         String url = buildPathParamUrl(originUrl);
-        String domain = config.getDomain();
-        url = domain + ((url.startsWith("/") || "".equals(url)) ? "" : "/") + url;
+        url = ((url.startsWith("/") || "".equals(url)) ? "" : "/") + url;
         urlTextField.setText(url);
         paramGroup.setUrl(url);
     }
@@ -782,7 +869,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private void renderingHeaderTablePanel(){
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
-        JBTable headerTable = createHeaderTable();
+        headerTable = createHeaderTable();
         headerTable.getEmptyText().setText("No header params");
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(headerTable);
         toolbarDecorator.setMoveDownAction(null);
@@ -817,6 +904,41 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         toolbarDecorator.setAddAction(null);
         toolbarDecorator.setRemoveAction(null);
         responseInfoPanel = toolbarDecorator.createPanel();
+    }
+
+    private void renderingJsonResponsePanel(){
+        responseTable = createJsonResponseTable();
+        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(responseTable);
+        toolbarDecorator.setMoveDownAction(null);
+        toolbarDecorator.setMoveUpAction(null);
+        toolbarDecorator.setAddActionName("Add to Header Params").setAddAction(anActionButton -> {
+                    int selectedRow = responseTable.getSelectedRow();
+                    CustomNode node = (CustomNode) ((ListTreeTableModelOnColumns) responseTable.getTableModel()).getRowValue(selectedRow);
+                    String key = node.getKey();
+                    Object value = node.getValue();
+                    DataMapping dataMapping = headerParamsKeyValueList.stream().filter(q -> q.getType().equals(key)).findFirst().orElse(null);
+                    if(dataMapping == null){
+                        DataMapping addOne = new DataMapping(key,value.toString());
+                        headerParamsKeyValueList.add(addOne);
+                    } else {
+                        dataMapping.setValue(value.toString());
+                    }
+                    FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+                    assert config != null;
+                    config.setHeaderList(headerParamsKeyValueList);
+                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
+                    tabbedPane.setSelectedIndex(0);
+                }
+        );
+        toolbarDecorator.setRemoveAction(null);
+
+        toolbarDecorator.setAddActionUpdater(e -> {
+            int selectedRow = responseTable.getSelectedRow();
+            ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) responseTable.getTableModel();
+            CustomNode node = (CustomNode) myModel.getRowValue(selectedRow);
+            return node != null && node.isLeaf() && selectedRow != 0;
+        });
+        jsonResponsePanel = toolbarDecorator.createPanel();
     }
 
     /**
@@ -867,19 +989,44 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         toolbarDecorator.setAddAction(anActionButton -> {
                     int selectedRow = jsonTreeTable.getSelectedRow();
                     CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
+                    CustomNode addNode = new CustomNode("","",TypeUtil.Type.String.name());
                     if (selectedRow == -1 || selectedRow == 0) {
-                        root.insert(new CustomNode("","",TypeUtil.Type.String.name()),0);
+                        if(TypeUtil.Type.Array.name().equals(root.getType())){
+                            int childCount = root.getChildCount();
+                            addNode = new CustomNode("index "+ childCount, "", TypeUtil.Type.String.name());
+                            root.insert(addNode, childCount);
+                        } else {
+                            addNode = new CustomNode("", "", TypeUtil.Type.String.name());
+                            root.insert(addNode, 0);
+                        }
                     } else {
                         CustomNode node = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(selectedRow);
-                        CustomNode addNode = new CustomNode("","",TypeUtil.Type.String.name());
-                        if(TypeUtil.Type.Array.name().equals(node.getType()) || TypeUtil.Type.Object.name().equals(node.getType())){
+
+                        if(TypeUtil.Type.Object.name().equals(node.getType())){
                             node.insert(addNode,0);
-                        } else {
+                        } else if(TypeUtil.Type.Array.name().equals(node.getType())){
+                            int childCount = node.getChildCount();
+                            addNode = new CustomNode("index " + childCount,"",TypeUtil.Type.String.name());
+                            node.insert(addNode, childCount);
+                        }else {
                             CustomNode parentNode = (CustomNode) node.getParent();
-                            parentNode.insert(addNode,parentNode.getIndex(node)+1);
+                            if(TypeUtil.Type.Array.name().equals(parentNode.getType())){
+                                int childCount = parentNode.getChildCount();
+                                addNode = new CustomNode("index " + childCount,"",TypeUtil.Type.String.name());
+                                parentNode.insert(addNode, childCount);
+                            } else {
+                                parentNode.insert(addNode, parentNode.getIndex(node) + 1);
+                            }
                         }
                     }
-                    refreshJsonParamTable(root);
+                    refreshJsonParamTable(root,false);
+                    //展开节点
+                    TreeTableTree tree = jsonTreeTable.getTree();
+                    expandAll(tree,new TreePath(root),false);
+                    for (TreeNode treeNode : addNode.getPath()) {
+                        tree.expandPath(new TreePath(((CustomNode) treeNode).getPath()));
+                    }
+                    jsonTreeTable.setRowSelectionInterval(selectedRow,selectedRow);
                 }
         );
         toolbarDecorator.setRemoveAction(anActionButton -> {
@@ -888,21 +1035,38 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             CustomNode node = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(selectedRow);
             CustomNode parent = (CustomNode) node.getParent();
             parent.remove(node);
-            refreshJsonParamTable(root);
+            if(TypeUtil.Type.Array.name().equals(parent.getType())){
+                int idx = 0;
+                for (Enumeration<TreeNode> e = parent.children(); e.hasMoreElements(); ) {
+                    CustomNode n = (CustomNode) e.nextElement();
+                    n.setKey("index " + idx++);
+                }
+            }
+            refreshJsonParamTable(root,false);
+            //展开节点
+            TreeTableTree tree = jsonTreeTable.getTree();
+            expandAll(tree,new TreePath(root),false);
+            for (TreeNode treeNode : parent.getPath()) {
+                tree.expandPath(new TreePath(((CustomNode) treeNode).getPath()));
+            }
+            jsonTreeTable.setRowSelectionInterval(selectedRow,selectedRow);
+
         });
         toolbarDecorator.setRemoveActionUpdater(e -> jsonTreeTable.getSelectedRow()!= 0);
         jsonTreeTablePanel = toolbarDecorator.createPanel();
 
     }
 
-    private void refreshJsonParamTable(CustomNode root){
+    private void refreshJsonParamTable(CustomNode root,boolean expandAll){
 
         ((DefaultTreeModel)jsonTreeTable.getTableModel()).setRoot(root);
         //列宽
         TableColumnModel columnModel = jsonTreeTable.getColumnModel();
         columnModel.getColumn(0).setPreferredWidth(JSON_TABLE_COLUMN_NAME_WIDTH);
         columnModel.getColumn(1).setPreferredWidth(JSON_TABLE_COLUMN_TYPE_WIDTH);
-        expandAll(jsonTreeTable.getTree(), new TreePath(root), true);
+        if(expandAll){
+            expandAll(jsonTreeTable.getTree(), new TreePath(root), true);
+        }
         jsonTreeTable.setTreeCellRenderer(new Renderer());
 
         String type = root.getType();
@@ -915,6 +1079,22 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             jsonTableNodeToJson(root,jsonObject);
             jsonParamsTextArea.setText(JSON.toJSONString(jsonObject, true));
         }
+    }
+
+    public void refreshResponseTable(String body){
+        if(StringUtils.isBlank(body)){
+            return;
+        }
+        CustomNode root = new CustomNode("Root","");
+        if(body.startsWith("{")){
+            convertJsonObjectToNode(root,JSONObject.parseObject(body));
+            ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
+        } else {
+            convertJsonObjectToNode(root,JSONObject.parseObject(body));
+            ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
+        }
+
+        expandAll(responseTable.getTree(), new TreePath(root), true);
     }
 
     private void renderingPathParamsPanel() {
@@ -1197,9 +1377,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 return (node.isRoot() && column == 1)   ||
                         (!node.isRoot() &&
                                 (((TypeUtil.Type.Array.name().equals(node.getType()) || TypeUtil.Type.Object.name().equals(node.getType())) && column == 1))
-                                ||((!TypeUtil.Type.Array.name().equals(node.getType()) && !TypeUtil.Type.Object.name().equals(node.getType())))
+                                ||
+                                ((!TypeUtil.Type.Array.name().equals(node.getType()) && !TypeUtil.Type.Object.name().equals(node.getType())) &&
+                                    (!TypeUtil.Type.Array.name().equals(parent.getType()) || column != 0)
                         )
                         || (column == 0 && (parent != null && !parent.getType().equals(TypeUtil.Type.Array.name())))
+                        )
                         ;
             }
 
@@ -1223,18 +1406,31 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         changeFlag = true;
                     }
                     String newType = value.toString();
-                    if (TypeUtil.Type.Object.name().equals(oldType) && !TypeUtil.Type.Object.name().equals(newType) ||
-                            TypeUtil.Type.Array.name().equals(oldType) && !TypeUtil.Type.Array.name().equals(newType)) {
+
+                    if (TypeUtil.Type.Object.name().equals(oldType) && (!TypeUtil.Type.Object.name().equals(newType) && !TypeUtil.Type.Array.name().equals(newType)) ||
+                            TypeUtil.Type.Array.name().equals(oldType) && (!TypeUtil.Type.Object.name().equals(newType) && !TypeUtil.Type.Array.name().equals(newType))) {
                         node.removeAllChildren();
                         Object v = convertCellData(node.getValue(), newType);
                         node.setValue(v);
                     } else if (TypeUtil.Type.Object.name().equals(newType)) {
                         node.setValue(null);
+                        if(TypeUtil.Type.Array.name().equals(oldType)){
+                            for (Enumeration<TreeNode> e = node.children(); e.hasMoreElements(); ) {
+                                CustomNode n = (CustomNode) e.nextElement();
+                                n.setKey("");
+                            }
+                        }
                     } else if (TypeUtil.Type.Array.name().equals(newType)) {
-                        node.setKey("index 0");
                         node.setValue(null);
+                        if(TypeUtil.Type.Object.name().equals(oldType)){
+                            int idx = 0;
+                            for (Enumeration<TreeNode> e = node.children(); e.hasMoreElements(); ) {
+                                CustomNode n = (CustomNode) e.nextElement();
+                                n.setKey("index "+ idx++);
+                            }
+                        }
                     } else {
-                        Object v = convertCellData(node.getValue(), node.getType());
+                        Object v = convertCellData(node.getValue(), newType);
                         node.setValue(v);
                     }
                     node.setType(newType);
@@ -1246,7 +1442,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 }
                 if (changeFlag) {
                     CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
-                    refreshJsonParamTable(root);
+                    refreshJsonParamTable(root,false);
+                    TreeTableTree tree = jsonTreeTable.getTree();
+                    expandAll(tree,new TreePath(root),false);
+                    for (TreeNode treeNode : node.getPath()) {
+                        tree.expandPath(new TreePath(((CustomNode) treeNode).getPath()));
+                    }
                 }
             }
         };
@@ -1255,6 +1456,57 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return table;
     }
 
+    private TreeTableView createJsonResponseTable() {
+        //初始化为空
+        CustomNode root = new CustomNode("Root", "");
+        convertToNode(true,root, new LinkedHashMap<>());
+        ColumnInfo[] columnInfo = new ColumnInfo[]{
+                new TreeColumnInfo("Name") {
+                    @Override
+                    public int getWidth(JTable table) {
+                        return JSON_TABLE_COLUMN_NAME_WIDTH;
+                    }
+
+                },   // <-- This is important!
+                new ColumnInfo("Value") {
+                    @Nullable
+                    @Override
+                    public Object valueOf(Object o) {
+                        if (o instanceof CustomNode) {
+                            return ((CustomNode) o).getValue();
+                        } else return o;
+                    }
+                }
+        };
+
+        ListTreeTableModelOnColumns model = new ListTreeTableModelOnColumns(root, columnInfo);
+        TreeTableView table = new TreeTableView(model) {
+            @Override
+            public void setTreeCellRenderer(TreeCellRenderer renderer) {
+                super.setTreeCellRenderer(new Renderer());
+            }
+
+            @Override
+            public Object getValueAt(int row, int column) {
+                ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
+                CustomNode node = (CustomNode) myModel.getRowValue(row);
+                if (column == 0) {
+                    return node.getKey();
+                } else {
+                    return node.getValue();
+                }
+            }
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+
+        };
+        table.setRootVisible(true);
+        table.setVisible(true);
+        return table;
+    }
 
     /**
      * 解析数据,异常返回默认值
@@ -1284,7 +1536,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             } else if (TypeUtil.Type.Boolean.name().equals(type)) {
                 return Boolean.parseBoolean(toBeConvert.toString());
             } else {
-                return toBeConvert;
+                return String.valueOf(toBeConvert);
             }
         } catch (Exception e) {
             return defaultValue;
@@ -1345,7 +1597,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
                 JSONArray jsonArrayChildChild = new JSONArray();
                 jsonTableNodeToJsonArray(jsonArrayChildChild, node);
-                jsonArrayChild.addAll(jsonArrayChildChild);
+                jsonArrayChild.add(jsonArrayChildChild);
             } else {
                 jsonArrayChild.add(convertCellData(value,type));
             }
@@ -1453,30 +1705,53 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return columnInfo;
     }
 
-//    private CustomNode convertJsonObjectToNode(CustomNode node, JSONObject jsonObject) {
-//        LinkedHashMap<String, Object> linkedHashMap = JSON.parseObject(JSON.toJSONString(jsonObject), new TypeReference<LinkedHashMap<String, Object>>() {
-//        });
-//        Set<String> keys = linkedHashMap.keySet();
-//        keys.forEach(key -> {
-////            node.setKey(key);
-//            Object value = jsonObject.get(key);
-//            if (value instanceof JSONObject) {
-//                JSONObject valueJsonObject = (JSONObject) value;
-//                CustomNode customNode = new CustomNode(key, null);
-//                node.add(convertJsonObjectToNode(customNode, valueJsonObject));
-//            } else if (value instanceof JSONArray) {
-//                JSONArray jsonArray = (JSONArray) value;
-//                if (jsonArray.size() == 0) {
-//                    return;
-//                }
-//                convertJsonArrayToNode(key, jsonArray, node);
-//            } else {
-//                node.add(new CustomNode(key, value));
-//            }
-//        });
-//        return node;
-//    }
+    private CustomNode convertJsonObjectToNode(CustomNode node, JSONObject jsonObject) {
+        LinkedHashMap<String, Object> linkedHashMap = JSON.parseObject(JSON.toJSONString(jsonObject), new TypeReference<>() {
+        });
+        Set<String> keys = linkedHashMap.keySet();
+        keys.forEach(key -> {
+//            node.setKey(key);
+            Object value = jsonObject.get(key);
+            if (value instanceof JSONObject) {
+                JSONObject valueJsonObject = (JSONObject) value;
+                CustomNode customNode = new CustomNode(key, null);
+                node.add(convertJsonObjectToNode(customNode, valueJsonObject));
+            } else if (value instanceof JSONArray) {
+                JSONArray jsonArray = (JSONArray) value;
+                if (jsonArray.size() == 0) {
+                    return;
+                }
+                CustomNode nodeArray = new CustomNode(key, "");
+                convertJsonArrayToNode("index ", jsonArray, nodeArray);
+                node.add(nodeArray);
+            } else {
+                node.add(new CustomNode(key, value));
+            }
+        });
+        return node;
+    }
 
+    private void convertJsonArrayToNode(String key, JSONArray jsonArray, CustomNode node) {
+        AtomicInteger idx = new AtomicInteger();
+        jsonArray.forEach(json -> {
+            CustomNode nodeArray = new CustomNode(key + (idx.getAndIncrement()), null);
+            if (json instanceof JSONObject) {
+                JSONObject valueJsonObject = (JSONObject) json;
+                node.add(convertJsonObjectToNode(nodeArray, valueJsonObject));
+            } else if (json instanceof JSONArray) {
+                JSONArray tmpJsonArray = (JSONArray) json;
+                if (tmpJsonArray.size() == 0) {
+                    return;
+                }
+                CustomNode nodeArrayIn = new CustomNode(key, "");
+                convertJsonArrayToNode("index ", tmpJsonArray, nodeArrayIn);
+                nodeArray.add(nodeArrayIn);
+                node.add(nodeArray);
+            } else {
+                node.add(new CustomNode(key, json));
+            }
+        });
+    }
 
     /**
      * json数据转化为map用于text展示(递归遍历)
@@ -1554,24 +1829,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
 
-//    private void convertJsonArrayToNode(String key, JSONArray jsonArray, CustomNode node) {
-//        jsonArray.forEach(json -> {
-//            CustomNode nodeArray = new CustomNode(key, null);
-//            if (json instanceof JSONObject) {
-//                JSONObject valueJsonObject = (JSONObject) json;
-//                node.add(convertJsonObjectToNode(nodeArray, valueJsonObject));
-//            } else if (json instanceof JSONArray) {
-//                JSONArray tmpJsonArray = (JSONArray) json;
-//                if (tmpJsonArray.size() == 0) {
-//                    return;
-//                }
-//                convertJsonArrayToNode(key, tmpJsonArray, nodeArray);
-//                node.add(nodeArray);
-//            } else {
-//                node.add(new CustomNode(key, json));
-//            }
-//        });
-//    }
+
 
 
     private void convertToParamKeyValueList(String prefixKey, KV<String, ParamKeyValue> data, List<ParamKeyValue> list) {

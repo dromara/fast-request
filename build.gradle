@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '1.1.3'
+version '1.1.4'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
@@ -32,6 +32,16 @@ intellij {
 patchPluginXml {
     changeNotes """
 
+    <h3>v1.1.4</h3>
+    <ul>
+        <li>curl support(支持curl拷贝)</li>
+        <li>fix send request return error response parse error(修复发送消息异常情况下响应的解析)</li>
+        <li>remove domain from url(移除了url上的域名)</li>
+        <li>support add params to header from (支持了将参数从response添加到header)</li>
+        <li>optimize the interaction add/remove json params (优化了添加和删除json参数的交互)</li>
+        <li>fix some bugs(修复了一些bug)</li>
+    </ul>
+    
     <h3>v1.1.3</h3>
     <ul>
         <li>multipartFile support(文件上传支持)</li>
@@ -39,6 +49,7 @@ patchPluginXml {
         <li>fix generate array parameters(数组参数生成bug修复)</li>
         <li>controller url fixed variable can replace by config(控制器上的url支持变量替换)</li>
         <li>show tool window when click generate icon(点击图标弹出工具窗口)</li>
+        <li>beautify ui(美化ui)</li>
     </ul>
     
     <h3>v1.1.2</h3>
