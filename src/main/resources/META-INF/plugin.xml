@@ -21,16 +21,18 @@
     <br/>
     <em>For more information,Please goto <a href="https://github.com/kings1990/fast-request-doc">Github</a></em><br/>
 
-    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" /><br/>
+    <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/example.png" /><br/>
 
     <h3>v1.1.4</h3>
     <ul>
         <li>curl support(支持curl拷贝)</li>
         <li>fix send request return error response parse error(修复发送消息异常情况下响应的解析)</li>
         <li>remove domain from url(移除了url上的域名)</li>
-        <li>support add params to header from (支持了将参数从response添加到header)</li>
-        <li>optimize the interaction add/remove json params (优化了添加和删除json参数的交互)</li>
+        <li>support add params to header params(支持了将参数从response添加到header)</li>
+        <li>support pretty and raw response(响应支持美化和原文输出)</li>
+        <li>optimize the interaction add/remove json params(优化了添加和删除json参数的交互)</li>
         <li>add shortcut to modify config(增加快速跳转至配置页面)</li>
+        <li>support toggle request and response panel(支持伸缩请求和响应面板)</li>
         <li>fix some bugs(修复了一些bug)</li>
     </ul>
 

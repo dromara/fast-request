@@ -112,6 +112,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JButton cURLExportButton;
     private JPanel jsonResponsePanel;
     private JButton manageConfigButton;
+    private JScrollPane prettyJsonPanle;
+    private JTextArea prettyResponseTextArea;
+    private JButton requestToggleButton;
+    private JButton responseToggleButton;
+    private JPanel titlePanel;
     private JScrollPane responseBodyScrollPane;
 
     private JBTable urlParamsTable;
@@ -227,6 +232,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         renderingJsonResponsePanel();
 
         sendButton = new JButton(PluginIcons.ICON_SEND);
+        requestToggleButton = new JButton("Request",PluginIcons.ICON_INVISIBLE);
+        requestToggleButton.setToolTipText("Toggle request");
+        responseToggleButton = new JButton("Response",PluginIcons.ICON_INVISIBLE);
+        responseToggleButton.setToolTipText("Toggle response");
     }
 
     public FastRequestToolWindow(ToolWindow toolWindow) {
@@ -433,6 +442,20 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             Project project = dataContext.getData(LangDataKeys.PROJECT);
             ShowSettingsUtil.getInstance().showSettingsDialog(project,"Fast Request");
         });
+
+        requestToggleButton.addActionListener(e -> {
+            boolean visible = tabbedPane.isVisible();
+            tabbedPane.setVisible(!visible);
+            Icon icon = visible ? PluginIcons.ICON_VISIBLE : PluginIcons.ICON_INVISIBLE;
+            requestToggleButton.setIcon(icon);
+        });
+
+        responseToggleButton.addActionListener(e -> {
+            boolean visible = responseTabbedPanel.isVisible();
+            responseTabbedPanel.setVisible(!visible);
+            Icon icon = visible ? PluginIcons.ICON_VISIBLE : PluginIcons.ICON_INVISIBLE;
+            responseToggleButton.setIcon(icon);
+        });
     }
 
     private String getCurlDataAndCopy(){
@@ -560,7 +583,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     int status = response.getStatus();
                     String body = response.body();
                     if(JsonUtil.isJSON2(body)){
-                        responseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
+                        prettyResponseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
+                        responseTextArea.setText(body);
                         responseTabbedPanel.setSelectedIndex(0);
                         refreshResponseTable(body);
                     } else {
@@ -568,8 +592,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         if(body.length() > 32768){
                             subBody += "\n\ntext too large only show 32768 characters\n.............";
                         }
+                        prettyResponseTextArea.setText(subBody);
                         responseTextArea.setText(subBody);
-                        responseTabbedPanel.setSelectedIndex(1);
+                        responseTabbedPanel.setSelectedIndex(2);
                     }
                     String duration = String.valueOf(end - start);
 
@@ -596,7 +621,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     );
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
 
-                    responseTabbedPanel.setSelectedIndex(1);
+                    responseTabbedPanel.setSelectedIndex(2);
                 }
                 responseTabbedPanel.setSelectedIndex(0);
                 sendButton.setEnabled(true);
@@ -699,7 +724,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         } else if ("DELETE".equals(method)) {
             jbColor = new JBColor(new Color(220, 20, 60),new Color(178, 34, 34));
         } else if ("PUT".equals(method)) {
-            jbColor = new JBColor(new Color(255, 215, 0),new Color(255, 215, 100));
+            jbColor = new JBColor(new Color(218, 165, 32),new Color(202, 111, 30));
         } else if ("GET".equals(method)) {
             jbColor = new JBColor(new Color(0, 191, 255),new Color(70, 130, 180));
         }
