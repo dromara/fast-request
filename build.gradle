@@ -49,6 +49,7 @@ patchPluginXml {
         <li>fix generate array parameters(数组参数生成bug修复)</li>
         <li>controller url fixed variable can replace by config(控制器上的url支持变量替换)</li>
         <li>show tool window when click generate icon(点击图标弹出工具窗口)</li>
+        <li>add shortcut to modify config(增加快速跳转至配置页面)</li>
         <li>beautify ui(美化ui)</li>
     </ul>
     

@@ -17,6 +17,7 @@ import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.fileChooser.FileChooser;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
+import com.intellij.openapi.options.ShowSettingsUtil;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.ComboBox;
 import com.intellij.openapi.ui.Messages;
@@ -110,6 +111,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JPanel multipartTablePanel;
     private JButton cURLExportButton;
     private JPanel jsonResponsePanel;
+    private JButton manageConfigButton;
     private JScrollPane responseBodyScrollPane;
 
     private JBTable urlParamsTable;
@@ -423,6 +425,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         sendRequestAction();
 
         cURLExportAction();
+
+
+        manageConfigButton.setMultiClickThreshhold(2000);
+        manageConfigButton.addActionListener(e -> {
+            DataContext dataContext = DataManager.getInstance().getDataContext(panel);
+            Project project = dataContext.getData(LangDataKeys.PROJECT);
+            ShowSettingsUtil.getInstance().showSettingsDialog(project,"Fast Request");
+        });
     }
 
     private String getCurlDataAndCopy(){
@@ -467,28 +477,29 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         for (ParamKeyValue paramKeyValue : multipartKeyValueList) {
             if(!TypeUtil.Type.File.name().equals(paramKeyValue.getType())){
-                sb.append("-F \"").append(paramKeyValue.getKey()).append("=").append(paramKeyValue.getValue().toString()).append("\" \\\n");;
+                sb.append("-F \"").append(paramKeyValue.getKey()).append("=").append(paramKeyValue.getValue().toString()).append("\" \\\n");
             } else {
-                sb.append("-F \"").append(paramKeyValue.getKey()).append("=").append("\" \\\n");;
+                sb.append("-F \"").append(paramKeyValue.getKey()).append("=").append("\" \\\n");
             }
         }
         String result = sb.toString();
         ToolUtil.setClipboardString(result);
         return result;
-    };
+    }
 
     public void cURLExportAction(){
         cURLExportButton.setMultiClickThreshhold(2000);
         cURLExportButton.addActionListener(e -> {
-            sendButton.setEnabled(false);
+            cURLExportButton.setEnabled(false);
             getCurlDataAndCopy();
-            sendButton.setEnabled(true);
+            cURLExportButton.setEnabled(true);
         });
     }
 
     private void sendRequestAction(){
         //send request
         //2秒内不允许狂点
+        sendButton.setToolTipText("Send Request");
         sendButton.setMultiClickThreshhold(2000);
         sendButton.addActionListener(e -> {
             sendButton.setEnabled(false);

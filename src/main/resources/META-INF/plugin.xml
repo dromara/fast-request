@@ -30,6 +30,7 @@
         <li>remove domain from url(移除了url上的域名)</li>
         <li>support add params to header from (支持了将参数从response添加到header)</li>
         <li>optimize the interaction add/remove json params (优化了添加和删除json参数的交互)</li>
+        <li>add shortcut to modify config(增加快速跳转至配置页面)</li>
         <li>fix some bugs(修复了一些bug)</li>
     </ul>
 
