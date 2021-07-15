@@ -95,21 +95,13 @@
           </component>
           <component id="c9cfb" class="javax.swing.JTextField" binding="currentDomainTextField">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="4" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="2" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="4" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
             <properties>
               <editable value="false"/>
               <horizontalAlignment value="2"/>
-            </properties>
-          </component>
-          <component id="bb01b" class="javax.swing.JButton" binding="cURLExportButton" default-binding="true">
-            <constraints>
-              <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="copy as cURL"/>
             </properties>
           </component>
           <component id="27e19" class="javax.swing.JComboBox" binding="methodTypeComboBox">
@@ -174,6 +166,14 @@
             </constraints>
             <properties>
               <text value="Response"/>
+            </properties>
+          </component>
+          <component id="bb01b" class="javax.swing.JButton" binding="cURLExportButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="copy as cURL"/>
             </properties>
           </component>
         </children>
