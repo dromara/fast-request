@@ -20,4 +20,7 @@ public interface PluginIcons {
 
     Icon ICON_VISIBLE = IconLoader.getIcon("/icon/visible.svg", PluginIcons.class);
     Icon ICON_INVISIBLE = IconLoader.getIcon("/icon/invisible.svg", PluginIcons.class);
+
+    Icon ICON_EXPAND = IconLoader.getIcon("/icon/expand.svg", PluginIcons.class);
+    Icon ICON_COLLAPSE = IconLoader.getIcon("/icon/collapse.svg", PluginIcons.class);
 }

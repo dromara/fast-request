@@ -12,6 +12,7 @@ import com.alibaba.fastjson.TypeReference;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.intellij.ide.DataManager;
+import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.openapi.diagnostic.Logger;
@@ -26,10 +27,7 @@ import com.intellij.openapi.ui.TextFieldWithBrowseButton;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
-import com.intellij.ui.CollectionComboBoxModel;
-import com.intellij.ui.ColoredTreeCellRenderer;
-import com.intellij.ui.JBColor;
-import com.intellij.ui.ToolbarDecorator;
+import com.intellij.ui.*;
 import com.intellij.ui.dualView.TreeTableView;
 import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
@@ -621,6 +619,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     );
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
 
+                    CustomNode root = new CustomNode("Root","");
+                    ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
                     responseTabbedPanel.setSelectedIndex(2);
                 }
                 responseTabbedPanel.setSelectedIndex(0);
@@ -1022,6 +1022,25 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(jsonTreeTable);
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);
+
+        AnActionButton expandButton = new AnActionButton("Expand",PluginIcons.ICON_EXPAND) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
+                expandAll(jsonTreeTable.getTree(), new TreePath(root), true);
+            }
+        };
+        toolbarDecorator.addExtraAction(expandButton);
+        AnActionButton collapseButton = new AnActionButton("Collapse",PluginIcons.ICON_COLLAPSE) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
+                expandAll(jsonTreeTable.getTree(), new TreePath(root), false);
+            }
+
+        };
+        toolbarDecorator.addExtraAction(collapseButton);
+
         toolbarDecorator.setAddAction(anActionButton -> {
                     int selectedRow = jsonTreeTable.getSelectedRow();
                     CustomNode root = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(0);
@@ -1029,7 +1048,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     if (selectedRow == -1 || selectedRow == 0) {
                         if(TypeUtil.Type.Array.name().equals(root.getType())){
                             int childCount = root.getChildCount();
-                            addNode = new CustomNode("index "+ childCount, "", TypeUtil.Type.String.name());
+                            if(childCount > 0){
+                                CustomNode firstNode = (CustomNode) root.getChildAt(0);
+                                addNode = new CustomNode("index " + childCount, "", firstNode.getType());
+                            } else {
+                                addNode = new CustomNode("index " + childCount, "", TypeUtil.Type.String.name());
+                            }
                             root.insert(addNode, childCount);
                         } else {
                             addNode = new CustomNode("", "", TypeUtil.Type.String.name());
@@ -1037,18 +1061,27 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         }
                     } else {
                         CustomNode node = (CustomNode) ((ListTreeTableModelOnColumns) jsonTreeTable.getTableModel()).getRowValue(selectedRow);
-
                         if(TypeUtil.Type.Object.name().equals(node.getType())){
                             node.insert(addNode,0);
                         } else if(TypeUtil.Type.Array.name().equals(node.getType())){
                             int childCount = node.getChildCount();
-                            addNode = new CustomNode("index " + childCount,"",TypeUtil.Type.String.name());
+                            if(childCount > 0){
+                                CustomNode firstNode = (CustomNode) node.getChildAt(0);
+                                addNode = new CustomNode("index " + childCount, "", firstNode.getType());
+                            } else {
+                                addNode = new CustomNode("index " + childCount, "", TypeUtil.Type.String.name());
+                            }
                             node.insert(addNode, childCount);
                         }else {
                             CustomNode parentNode = (CustomNode) node.getParent();
                             if(TypeUtil.Type.Array.name().equals(parentNode.getType())){
                                 int childCount = parentNode.getChildCount();
-                                addNode = new CustomNode("index " + childCount,"",TypeUtil.Type.String.name());
+                                if(childCount > 0){
+                                    CustomNode firstNode = (CustomNode) parentNode.getChildAt(0);
+                                    addNode = new CustomNode("index " + childCount, "", firstNode.getType());
+                                } else {
+                                    addNode = new CustomNode("index " + childCount, "", TypeUtil.Type.String.name());
+                                }
                                 parentNode.insert(addNode, childCount);
                             } else {
                                 parentNode.insert(addNode, parentNode.getIndex(node) + 1);

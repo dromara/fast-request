@@ -40,6 +40,7 @@ patchPluginXml {
         <li>support add params to header from (支持了将参数从response添加到header)</li>
         <li>support pretty and raw response(响应支持美化和原文输出)</li>
         <li>optimize the interaction add/remove json params (优化了添加和删除json参数的交互)</li>
+        <li>support expand and collapse json params(支持json参数的展开和收缩)</li>
         <li>support toggle request and response panel(支持伸缩请求和响应面板)</li>
         <li>fix some bugs(修复了一些bug)</li>
     </ul>
