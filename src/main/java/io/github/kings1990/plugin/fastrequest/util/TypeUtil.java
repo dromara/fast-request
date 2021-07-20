@@ -41,12 +41,20 @@ public class TypeUtil {
 
     public static String calcTypeByValue(Object value) {
         String name = value.getClass().getName();
-        if ("java.lang.Boolean".equals(name)) {
-            return Type.Boolean.name();
-        } else if ("java.lang.Integer".equals(name)) {
-            return Type.Number.name();
-        } else {
-            return Type.String.name();
+        switch (name){
+            case "java.lang.Boolean":
+                return Type.Boolean.name();
+            case "java.lang.Byte":
+            case "java.lang.Short":
+            case "java.lang.Integer":
+            case "java.lang.Long":
+            case "java.lang.Float":
+            case "java.lang.Double":
+            case "java.lang.Character":
+            case "java.math.BigDecimal":
+                return Type.Number.name();
+            default:
+                return Type.String.name();
         }
     }
 
