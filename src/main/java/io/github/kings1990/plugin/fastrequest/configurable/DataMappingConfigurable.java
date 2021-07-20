@@ -6,6 +6,7 @@ import com.intellij.util.ui.ListTableModel;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
+import io.github.kings1990.plugin.fastrequest.util.KV;
 import io.github.kings1990.plugin.fastrequest.view.AbstractConfigurableView;
 import io.github.kings1990.plugin.fastrequest.view.sub.DataMappingConfigView;
 import org.jetbrains.annotations.Nullable;
@@ -37,9 +38,13 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
     public boolean isModified() {
         List<DataMapping> currentCustomDataMappingList = view.getViewCustomDataMappingList();
         List<DataMapping> customDataMappingList = config.getCustomDataMappingList();
+        List<DataMapping> currentDefaultDataMappingList = view.getViewDefaultDataMappingList();
+        List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
+
         Integer randomStringLength = config.getRandomStringLength();
         Integer viewRandomStringLength = Integer.parseInt(view.getRandomStringTextField().getText());
-        return !randomStringLength.equals(viewRandomStringLength) || !judgeEqual(currentCustomDataMappingList, customDataMappingList);
+        return !randomStringLength.equals(viewRandomStringLength) || !judgeEqual(currentCustomDataMappingList, customDataMappingList)
+                || !judgeEqual(currentDefaultDataMappingList, defaultDataMappingList);
     }
 
     @Override
@@ -47,6 +52,13 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
         List<DataMapping> viewCustomDataMappingList = view.getViewCustomDataMappingList();
         List<DataMapping> changeCustomDataMappingList = JSONArray.parseArray(JSON.toJSONString(viewCustomDataMappingList), DataMapping.class);
         config.setCustomDataMappingList(changeCustomDataMappingList);
+
+        List<DataMapping> viewDefaultDataMappingList = view.getViewDefaultDataMappingList();
+        List<DataMapping> changeDefaultDataMappingList = JSONArray.parseArray(JSON.toJSONString(viewDefaultDataMappingList), DataMapping.class);
+        config.setDefaultDataMappingList(changeDefaultDataMappingList);
+
+        KV.dealBasicTypeValue();
+
         int viewRandomStringLength = Integer.parseInt(view.getRandomStringTextField().getText());
         config.setRandomStringLength(viewRandomStringLength);
     }
@@ -56,9 +68,13 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
         super.reset();
         List<DataMapping> oldCustomDataMappingList = config.getCustomDataMappingList();
         List<DataMapping> oldCustomDataMappingListNew = JSONArray.parseArray(JSON.toJSONString(oldCustomDataMappingList), DataMapping.class);
+        List<DataMapping> oldDefaultDataMappingList = config.getDefaultDataMappingList();
+        List<DataMapping> oldDefaultDataMappingListNew = JSONArray.parseArray(JSON.toJSONString(oldDefaultDataMappingList), DataMapping.class);
         int randomStringLength = config.getRandomStringLength();
         view.setViewCustomDataMappingList(oldCustomDataMappingListNew);
+        view.setViewDefaultDataMappingList(oldDefaultDataMappingListNew);
         view.getCustomTable().setModel(new ListTableModel<>(view.getColumnInfo(), oldCustomDataMappingListNew));
+        view.getDefaultDataMappingTable().setModel(new ListTableModel<>(view.getColumnInfo(), oldDefaultDataMappingListNew));
         view.getRandomStringTextField().setText(randomStringLength + "");
     }
 

@@ -9,9 +9,11 @@ import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
 import com.intellij.psi.util.PsiUtil;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
+import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -22,7 +24,7 @@ import java.util.*;
 
 
 public class KV<K, V> extends LinkedHashMap<K, V> {
-    private static final Map<String, Object> normalTypes = new HashMap<>();
+    public static Map<String, Object> normalTypes = new HashMap<>();
     private static final int randomStringLength;
     private static final String pattern = "yyyy-MM-dd HH:mm:ss";
     private static final DateFormat df = new SimpleDateFormat(pattern);
@@ -30,19 +32,33 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     static {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
-        normalTypes.put("java.lang.Byte", 1);
-        normalTypes.put("java.lang.Short", 1);
-        normalTypes.put("java.lang.Integer", 1);
-        normalTypes.put("java.lang.Long", 1);
-        normalTypes.put("java.lang.Character", "\\u0000");
-        normalTypes.put("java.lang.Float", 1);
-        normalTypes.put("java.lang.Double", 1);
-        normalTypes.put("java.lang.Boolean", true);
-        normalTypes.put("java.math.BigDecimal", 1);
-
+        dealBasicTypeValue();
         randomStringLength = config.getRandomStringLength();
         normalTypes.put("java.lang.String", "");
 
+    }
+
+    public static void dealBasicTypeValue(){
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+        List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
+        normalTypes.put("byte", Byte.parseByte(defaultDataMappingList.get(0).getValue()));
+        normalTypes.put("java.lang.Byte", Byte.parseByte(defaultDataMappingList.get(1).getValue()));
+        normalTypes.put("short", Short.parseShort(defaultDataMappingList.get(2).getValue()));
+        normalTypes.put("java.lang.Short", Short.parseShort(defaultDataMappingList.get(3).getValue()));
+        normalTypes.put("int", Integer.parseInt(defaultDataMappingList.get(4).getValue()));
+        normalTypes.put("java.lang.Integer", Integer.parseInt(defaultDataMappingList.get(5).getValue()));
+        normalTypes.put("long", Long.parseLong(defaultDataMappingList.get(6).getValue()));
+        normalTypes.put("java.lang.Long", Long.parseLong(defaultDataMappingList.get(7).getValue()));
+        normalTypes.put("char", defaultDataMappingList.get(8).getValue());
+        normalTypes.put("java.lang.Character", defaultDataMappingList.get(9).getValue());
+        normalTypes.put("float", Float.parseFloat(defaultDataMappingList.get(10).getValue()));
+        normalTypes.put("java.lang.Float", Float.parseFloat(defaultDataMappingList.get(11).getValue()));
+        normalTypes.put("double", Double.parseDouble(defaultDataMappingList.get(12).getValue()));
+        normalTypes.put("java.lang.Double", Double.parseDouble(defaultDataMappingList.get(13).getValue()));
+        normalTypes.put("boolean", Boolean.parseBoolean(defaultDataMappingList.get(14).getValue()));
+        normalTypes.put("java.lang.Boolean", Boolean.parseBoolean(defaultDataMappingList.get(15).getValue()));
+        normalTypes.put("java.math.BigDecimal", new BigDecimal(defaultDataMappingList.get(16).getValue()));
     }
 
     public <K, V> KV() {
@@ -297,25 +313,6 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 
     public static Object getPrimitiveDefaultValue(PsiType type) {
         if (!(type instanceof PsiPrimitiveType)) return null;
-        switch (type.getCanonicalText()) {
-            case "boolean":
-                return true;
-            case "byte":
-                return (byte)1;
-            case "char":
-                return '\1';
-            case "short":
-                return (short)1;
-            case "int":
-                return 1;
-            case "long":
-                return 1L;
-            case "float":
-                return 1F;
-            case "double":
-                return 1D;
-            default:
-                return null;
-        }
+        return normalTypes.get(type.getCanonicalText());
     }
 }

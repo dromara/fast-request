@@ -16,8 +16,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DataMappingConfigView extends AbstractConfigurableView {
 
@@ -26,7 +29,9 @@ public class DataMappingConfigView extends AbstractConfigurableView {
     private JPanel customDataMappingPanel;
     private JTextField randomStringTextField;
     private List<DataMapping> viewCustomDataMappingList;
+    private List<DataMapping> viewDefaultDataMappingList;
     private JBTable customTable;
+    private JBTable defaultDataMappingTable;
     private FastRequestConfiguration configOld;
     private Integer viewRandomStringLength;
 
@@ -64,13 +69,19 @@ public class DataMappingConfigView extends AbstractConfigurableView {
      * @date 2021/05/24
      */
     private void renderingDefaultDataMappingPanel() {
-        JBTable table = createTable(config.getDefaultDataMappingList());
+        FastRequestConfiguration configOld = JSONObject.parseObject(JSONObject.toJSONString(config), FastRequestConfiguration.class);
+        viewDefaultDataMappingList = configOld.getDefaultDataMappingList();
+        if (viewDefaultDataMappingList == null) {
+            viewDefaultDataMappingList = new ArrayList<>();
+        }
+        JBTable table = createTable();
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);
         toolbarDecorator.setAddAction(null);
         toolbarDecorator.setRemoveAction(null);
         defaultDataMappingPanel = toolbarDecorator.createPanel();
+        setDefaultDataMappingTable(table);
     }
 
     /**
@@ -170,16 +181,16 @@ public class DataMappingConfigView extends AbstractConfigurableView {
         return table;
     }
 
-    public JBTable createTable(List<DataMapping> dataMappingList) {
+    public JBTable createTable() {
         ColumnInfo<Object, Object>[] columns = getColumnInfo();
-        ListTableModel<DataMapping> model = new ListTableModel<>(columns, dataMappingList);
+        ListTableModel<DataMapping> model = new ListTableModel<>(columns, viewDefaultDataMappingList);
         JBTable table = new JBTable(model) {
             @Override
             public Object getValueAt(int row, int column) {
-                if (dataMappingList.isEmpty()) {
+                if (viewDefaultDataMappingList.isEmpty()) {
                     return StringUtils.EMPTY;
                 }
-                DataMapping dataMapping = dataMappingList.get(row);
+                DataMapping dataMapping = viewDefaultDataMappingList.get(row);
                 if (dataMapping == null) {
                     return StringUtils.EMPTY;
                 }
@@ -187,6 +198,66 @@ public class DataMappingConfigView extends AbstractConfigurableView {
                     return dataMapping.getType();
                 } else {
                     return dataMapping.getValue();
+                }
+            }
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return column == 1;
+            }
+
+            @Override
+            public void setValueAt(Object newValue, int row, int column) {
+                DataMapping oldMapping = viewDefaultDataMappingList.get(row);
+                String oldValue = oldMapping.getValue();
+                String v = newValue.toString();
+                try {
+                    switch (row){
+                        case 0:
+                        case 1:
+                            Byte.parseByte(v);
+                            break;
+                        case 2:
+                        case 3:
+                            Short.parseShort(v);
+                            break;
+                        case 4:
+                        case 5:
+                            Integer.parseInt(v);
+                            break;
+                        case 6:
+                        case 7:
+                            Long.parseLong(v);
+                            break;
+                        case 8:
+                        case 9:
+                            String rex = "[\u0000-\uFFFF]";
+                            Pattern compile = Pattern.compile(rex);
+                            Matcher matcher = compile.matcher(v);
+                            if(!matcher.matches()){
+                                throw new Exception("value error");
+                            }
+                            break;
+                        case 10:
+                        case 11:
+                            Float.parseFloat(v);
+                        case 12:
+                        case 13:
+                            Double.parseDouble(v);
+                            break;
+                        case 14:
+                        case 15:
+                            if(!"true".equals(v) && !"false".equals(v)){
+                                throw new Exception("value error");
+                            }
+                            break;
+                        default:
+                            new BigDecimal(v);
+                            break;
+                    }
+                    oldMapping.setValue(v);
+                } catch (Exception e){
+                    oldMapping.setValue(oldValue);
                 }
             }
         };
@@ -208,6 +279,14 @@ public class DataMappingConfigView extends AbstractConfigurableView {
         this.viewCustomDataMappingList = viewCustomDataMappingList;
     }
 
+    public List<DataMapping> getViewDefaultDataMappingList() {
+        return viewDefaultDataMappingList;
+    }
+
+    public void setViewDefaultDataMappingList(List<DataMapping> viewDefaultDataMappingList) {
+        this.viewDefaultDataMappingList = viewDefaultDataMappingList;
+    }
+
     public FastRequestConfiguration getConfigOld() {
         return configOld;
     }
@@ -222,6 +301,14 @@ public class DataMappingConfigView extends AbstractConfigurableView {
 
     public void setCustomTable(JBTable customTable) {
         this.customTable = customTable;
+    }
+
+    public JBTable getDefaultDataMappingTable() {
+        return defaultDataMappingTable;
+    }
+
+    public void setDefaultDataMappingTable(JBTable defaultDataMappingTable) {
+        this.defaultDataMappingTable = defaultDataMappingTable;
     }
 
     public Integer getViewRandomStringLength() {

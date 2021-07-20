@@ -612,6 +612,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 } catch (Exception exception){
                     String errorMsg = exception.getMessage();
                     responseTextArea.setText(errorMsg);
+                    prettyResponseTextArea.setText("");
                     responseStatusComboBox.setSelectedItem(0);
                     responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60),new Color(178, 34, 34)));
                     responseInfoParamsKeyValueList = Lists.newArrayList(
@@ -623,7 +624,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
                     responseTabbedPanel.setSelectedIndex(2);
                 }
-                responseTabbedPanel.setSelectedIndex(0);
                 sendButton.setEnabled(true);
 
         });
