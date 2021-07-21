@@ -11,7 +11,7 @@
       <color color="-789517"/>
     </border>
     <children>
-      <grid id="d9863" binding="titlePanel" layout-manager="GridLayoutManager" row-count="5" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="d9863" binding="titlePanel" layout-manager="GridLayoutManager" row-count="7" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
@@ -37,7 +37,7 @@
           </component>
           <component id="e7a2e" class="javax.swing.JCheckBox" binding="enableProjectCheckBox" default-binding="true">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text resource-bundle="io/github/kings1990/fastrequest/18n/fr" key="enable"/>
@@ -45,49 +45,54 @@
           </component>
           <component id="c9219" class="javax.swing.JLabel">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="100" height="-1"/>
               </grid>
             </constraints>
             <properties>
               <text value="Current Env"/>
+              <toolTipText value="当前环境"/>
             </properties>
           </component>
           <component id="98f42" class="javax.swing.JComboBox" binding="envComboBox">
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <model/>
+              <toolTipText value="此项可以通过配置添加"/>
             </properties>
           </component>
           <component id="15a4f" class="javax.swing.JLabel">
             <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Current Project"/>
+              <toolTipText value="当前项目"/>
             </properties>
           </component>
           <component id="163a8" class="javax.swing.JComboBox" binding="projectComboBox">
             <constraints>
-              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <model/>
+              <toolTipText value="此项可以通过配置添加"/>
             </properties>
           </component>
           <component id="cfacc" class="javax.swing.JButton" binding="manageConfigButton" default-binding="true">
             <constraints>
-              <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Manage Config"/>
+              <toolTipText value="管理配置"/>
             </properties>
           </component>
           <component id="5ee79" class="javax.swing.JLabel">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Current Domain"/>
@@ -95,7 +100,7 @@
           </component>
           <component id="c9cfb" class="javax.swing.JTextField" binding="currentDomainTextField">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="4" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="4" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="4" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
@@ -106,7 +111,7 @@
           </component>
           <component id="27e19" class="javax.swing.JComboBox" binding="methodTypeComboBox">
             <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="120" height="-1"/>
               </grid>
             </constraints>
@@ -121,7 +126,7 @@
           </component>
           <component id="cc153" class="javax.swing.JTextField" binding="urlTextField">
             <constraints>
-              <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="5" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
@@ -132,7 +137,7 @@
           </component>
           <component id="9b936" class="javax.swing.JButton" binding="sendButton" custom-create="true" default-binding="true">
             <constraints>
-              <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="80" height="-1"/>
                 <maximum-size width="80" height="-1"/>
               </grid>
@@ -144,7 +149,7 @@
           </component>
           <component id="35110" class="javax.swing.JComboBox" binding="responseStatusComboBox">
             <constraints>
-              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <editable value="false"/>
@@ -154,7 +159,7 @@
           </component>
           <component id="aca35" class="javax.swing.JButton" binding="requestToggleButton" custom-create="true">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Request"/>
@@ -162,7 +167,7 @@
           </component>
           <component id="b43c3" class="javax.swing.JButton" binding="responseToggleButton" custom-create="true">
             <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Response"/>
@@ -170,10 +175,31 @@
           </component>
           <component id="bb01b" class="javax.swing.JButton" binding="cURLExportButton" default-binding="true">
             <constraints>
-              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="copy as cURL"/>
+            </properties>
+          </component>
+          <component id="3c21c" class="javax.swing.JLabel" binding="warnLabel1">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <enabled value="true"/>
+              <foreground color="-4501692"/>
+              <text value="1.Please add env add project, Then set target domain for it first!(Click Manager Config to config it)"/>
+              <toolTipText value="请优先添加项目名和环境名,并设置对应的域名,然后开启配置"/>
+            </properties>
+          </component>
+          <component id="8813f" class="javax.swing.JLabel" binding="warnLabel2">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-4501692"/>
+              <text value="2.Select env and project and enable config"/>
+              <toolTipText value="设置对应的域名,然后开启配置"/>
             </properties>
           </component>
         </children>

@@ -1,6 +1,5 @@
 package io.github.kings1990.plugin.fastrequest.parse;
 
-import cn.hutool.core.util.RandomUtil;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
@@ -8,6 +7,7 @@ import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
 import io.github.kings1990.plugin.fastrequest.model.ParamNameType;
 import io.github.kings1990.plugin.fastrequest.util.KV;
+import io.github.kings1990.plugin.fastrequest.util.StringUtils;
 import io.github.kings1990.plugin.fastrequest.util.TypeUtil;
 
 import java.util.LinkedHashMap;
@@ -24,6 +24,8 @@ public class RequestParamParse extends AbstractParamParse {
         List<ParamNameType> requestParamList = paramNameTypeList.stream().filter(q -> q.getParseType() == 2).collect(Collectors.toList());
         LinkedHashMap<String, Object> nameValueMap = new LinkedHashMap<>();
         int randomStringLength = config.getRandomStringLength();
+        String randomStringStrategy = config.getRandomStringStrategy();
+        String randomStringDelimiter = config.getRandomStringDelimiter();
         for (ParamNameType paramNameType : requestParamList) {
             String type = paramNameType.getType();
             boolean arrayFlag = type.contains("[]");
@@ -38,10 +40,10 @@ public class RequestParamParse extends AbstractParamParse {
             String name = paramNameType.getName();
             if ("java.lang.String".equals(type)) {
                 if(arrayFlag || listFlag){
-                    ParamKeyValue paramKeyValue = new ParamKeyValue(name+"[]", RandomUtil.randomString(randomStringLength), 2, TypeUtil.Type.String.name());
+                    ParamKeyValue paramKeyValue = new ParamKeyValue(name+"[]", StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, TypeUtil.Type.String.name());
                     nameValueMap.put(name,paramKeyValue);
                 } else {
-                    nameValueMap.put(name, new ParamKeyValue(name, RandomUtil.randomString(randomStringLength), 2, TypeUtil.Type.String.name()));
+                    nameValueMap.put(name, new ParamKeyValue(name, StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, TypeUtil.Type.String.name()));
                 }
                 continue;
             }
