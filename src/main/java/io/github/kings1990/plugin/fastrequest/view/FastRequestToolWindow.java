@@ -115,6 +115,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JButton requestToggleButton;
     private JButton responseToggleButton;
     private JPanel titlePanel;
+    private JLabel warnLabel1;
+    private JLabel warnLabel2;
     private JScrollPane responseBodyScrollPane;
 
     private JBTable urlParamsTable;
@@ -241,6 +243,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         this.setContent(panel);
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
+
+        warnLabel1.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
+        warnLabel2.setVisible(StringUtils.isBlank(currentDomainTextField.getText()));
         //star
         starButton.addActionListener(event -> {
             try {
@@ -669,6 +674,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
      * @date 2021/05/23
      */
     private void setDomain(FastRequestConfiguration config) {
+        warnLabel1.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
         if (!config.isEnableFlag()) {
             //没有开启开关则url默认返回空字符串
             config.setDomain(StringUtils.EMPTY);
@@ -693,6 +699,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         config.setDomain(domain);
         currentDomainTextField.setText(domain);
         changeUrl();
+
+
     }
 
     /**
@@ -704,6 +712,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     public void changeEnvAndProject() {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
+
+        warnLabel1.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
+        warnLabel2.setVisible(StringUtils.isBlank(currentDomainTextField.getText()));
 
         CollectionComboBoxModel<String> projectModel = new CollectionComboBoxModel<>(config.getProjectList());
         projectComboBox.setModel(projectModel);
@@ -887,6 +898,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         url = ((url.startsWith("/") || "".equals(url)) ? "" : "/") + url;
         urlTextField.setText(url);
         paramGroup.setUrl(url);
+
+        warnLabel2.setVisible(StringUtils.isBlank(currentDomainTextField.getText()));
     }
 
     private String buildPathParamUrl(String url) {

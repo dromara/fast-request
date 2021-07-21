@@ -1,6 +1,5 @@
 package io.github.kings1990.plugin.fastrequest.util;
 
-import cn.hutool.core.util.RandomUtil;
 import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -25,20 +24,25 @@ import java.util.*;
 
 public class KV<K, V> extends LinkedHashMap<K, V> {
     public static Map<String, Object> normalTypes = new HashMap<>();
-    private static final int randomStringLength;
+    private static int randomStringLength;
+    private static String randomStringStrategy;
+    private static String randomStringDelimiter;
     private static final String pattern = "yyyy-MM-dd HH:mm:ss";
     private static final DateFormat df = new SimpleDateFormat(pattern);
 
     static {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
-        dealBasicTypeValue();
+        changeConfig();
         randomStringLength = config.getRandomStringLength();
+        randomStringStrategy = config.getRandomStringStrategy();
+        randomStringDelimiter = config.getRandomStringDelimiter();
+
         normalTypes.put("java.lang.String", "");
 
     }
 
-    public static void dealBasicTypeValue(){
+    public static void changeConfig(){
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
         List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
@@ -59,6 +63,10 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
         normalTypes.put("boolean", Boolean.parseBoolean(defaultDataMappingList.get(14).getValue()));
         normalTypes.put("java.lang.Boolean", Boolean.parseBoolean(defaultDataMappingList.get(15).getValue()));
         normalTypes.put("java.math.BigDecimal", new BigDecimal(defaultDataMappingList.get(16).getValue()));
+
+        randomStringLength = config.getRandomStringLength();
+        randomStringStrategy = config.getRandomStringStrategy();
+        randomStringDelimiter = config.getRandomStringDelimiter();
     }
 
     public <K, V> KV() {
@@ -123,7 +131,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                     String fieldTypeName = type.getCanonicalText();
                     if (isNormalType(fieldTypeName)) {    //normal Type
                         if ("java.lang.String".equals(fieldTypeName)) {
-                            String v = randomStringLength < 1 ? "" : RandomUtil.randomString(randomStringLength);
+                            String v = StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy);
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name(), comment);
                             kv.set(name, paramKeyValue);
                         } else {
@@ -145,7 +153,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                             list.add(kvIn);
                         } else if (isNormalType(deepTypeName)) {
                             if ("java.lang.String".equals(deepTypeName)) {
-                                String v = randomStringLength < 1 ? "" : RandomUtil.randomString(randomStringLength);
+                                String v = StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy);
                                 ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name(), comment);
                                 KV kvIn = KV.create();
                                 kvIn.set(name,paramKeyValue);
@@ -178,7 +186,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         if (isNormalType(classTypeName)) {
                             ParamKeyValue paramKeyValue;
                             if ("java.lang.String".equals(classTypeName) || "String".equals(classTypeName)) {
-                                String v = randomStringLength < 1 ? "" : RandomUtil.randomString(randomStringLength);
+                                String v = StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy);
                                 paramKeyValue = new ParamKeyValue("", v, 2, TypeUtil.Type.String.name(), comment);
                                 list.add(paramKeyValue);
                             } else {

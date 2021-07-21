@@ -1,10 +1,10 @@
 package io.github.kings1990.plugin.fastrequest.parse;
 
-import cn.hutool.core.util.RandomUtil;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
 import io.github.kings1990.plugin.fastrequest.model.ParamNameType;
+import io.github.kings1990.plugin.fastrequest.util.StringUtils;
 import io.github.kings1990.plugin.fastrequest.util.TypeUtil;
 
 import java.util.LinkedHashMap;
@@ -19,12 +19,14 @@ public class PathValueParamParse extends AbstractParamParse {
         List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
         List<ParamNameType> pathParamList = paramNameTypeList.stream().filter(q -> q.getParseType() == 1).collect(Collectors.toList());
         int randomStringLength = config.getRandomStringLength();
+        String randomStringStrategy = config.getRandomStringStrategy();
+        String randomStringDelimiter = config.getRandomStringDelimiter();
         for (ParamNameType paramNameType : pathParamList) {
             String name = paramNameType.getName();
             String type = paramNameType.getType();
             //random String
             if ("java.lang.String".equals(type)) {
-                ParamKeyValue value = new ParamKeyValue(name, RandomUtil.randomString(randomStringLength), 2, TypeUtil.Type.String.name());
+                ParamKeyValue value = new ParamKeyValue(name, StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, TypeUtil.Type.String.name());
                 result.put(name, value);
                 continue;
             }
@@ -42,7 +44,7 @@ public class PathValueParamParse extends AbstractParamParse {
                 result.put(name, new ParamKeyValue(name, value, 2, calcType));
             } else {
                 //匹配不到默认匹配string
-                result.put(name, new ParamKeyValue(name, RandomUtil.randomString(randomStringLength), 2, TypeUtil.Type.String.name()));
+                result.put(name, new ParamKeyValue(name, StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, TypeUtil.Type.String.name()));
             }
         }
         return result;

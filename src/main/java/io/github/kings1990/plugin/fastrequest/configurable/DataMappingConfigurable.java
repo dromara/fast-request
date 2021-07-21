@@ -43,8 +43,18 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
 
         Integer randomStringLength = config.getRandomStringLength();
         Integer viewRandomStringLength = Integer.parseInt(view.getRandomStringTextField().getText());
-        return !randomStringLength.equals(viewRandomStringLength) || !judgeEqual(currentCustomDataMappingList, customDataMappingList)
-                || !judgeEqual(currentDefaultDataMappingList, defaultDataMappingList);
+
+        String randomStringStrategy = config.getRandomStringStrategy();
+        String viewRandomStringStrategy = (String) view.getRandomStringStrategyComboBox().getSelectedItem();
+
+        String randomStringDelimiter = config.getRandomStringDelimiter();
+        String viewRandomStringDelimiter = view.getRandomStringDelimiterTextField().getText();
+
+        return !randomStringDelimiter.equals(viewRandomStringDelimiter) ||
+               !randomStringStrategy.equals(viewRandomStringStrategy) ||
+               !randomStringLength.equals(viewRandomStringLength) ||
+               !judgeEqual(currentCustomDataMappingList, customDataMappingList) ||
+               !judgeEqual(currentDefaultDataMappingList, defaultDataMappingList);
     }
 
     @Override
@@ -57,10 +67,16 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
         List<DataMapping> changeDefaultDataMappingList = JSONArray.parseArray(JSON.toJSONString(viewDefaultDataMappingList), DataMapping.class);
         config.setDefaultDataMappingList(changeDefaultDataMappingList);
 
-        KV.dealBasicTypeValue();
-
         int viewRandomStringLength = Integer.parseInt(view.getRandomStringTextField().getText());
         config.setRandomStringLength(viewRandomStringLength);
+
+        String viewRandomStringStrategy = (String) view.getRandomStringStrategyComboBox().getSelectedItem();
+        config.setRandomStringStrategy(viewRandomStringStrategy);
+
+        String viewRandomStringDelimiter = view.getRandomStringDelimiterTextField().getText();
+        config.setRandomStringDelimiter(viewRandomStringDelimiter);
+
+        KV.changeConfig();
     }
 
     @Override
@@ -71,11 +87,15 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
         List<DataMapping> oldDefaultDataMappingList = config.getDefaultDataMappingList();
         List<DataMapping> oldDefaultDataMappingListNew = JSONArray.parseArray(JSON.toJSONString(oldDefaultDataMappingList), DataMapping.class);
         int randomStringLength = config.getRandomStringLength();
+        String randomStringStrategy = config.getRandomStringStrategy();
+        String randomStringDelimiter = config.getRandomStringDelimiter();
         view.setViewCustomDataMappingList(oldCustomDataMappingListNew);
         view.setViewDefaultDataMappingList(oldDefaultDataMappingListNew);
         view.getCustomTable().setModel(new ListTableModel<>(view.getColumnInfo(), oldCustomDataMappingListNew));
         view.getDefaultDataMappingTable().setModel(new ListTableModel<>(view.getColumnInfo(), oldDefaultDataMappingListNew));
         view.getRandomStringTextField().setText(randomStringLength + "");
+        view.getRandomStringStrategyComboBox().setSelectedItem(randomStringStrategy);
+        view.getRandomStringDelimiterTextField().setText(randomStringDelimiter);
     }
 
     public boolean judgeEqual(List<DataMapping> list1, List<DataMapping> list2) {

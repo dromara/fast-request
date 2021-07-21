@@ -28,25 +28,36 @@ public class DataMappingConfigView extends AbstractConfigurableView {
     private JPanel defaultDataMappingPanel;
     private JPanel customDataMappingPanel;
     private JTextField randomStringTextField;
+    private JComboBox<String> randomStringStrategyComboBox;
+    private JTextField randomStringDelimiterTextField;
     private List<DataMapping> viewCustomDataMappingList;
     private List<DataMapping> viewDefaultDataMappingList;
     private JBTable customTable;
     private JBTable defaultDataMappingTable;
     private FastRequestConfiguration configOld;
     private Integer viewRandomStringLength;
+    private String viewRandomStringStrategy;
+    private String viewRandomStringDelimiter;
 
     public DataMappingConfigView(FastRequestConfiguration config) {
         super(config);
 
         FastRequestConfiguration configOld = JSONObject.parseObject(JSONObject.toJSONString(config), FastRequestConfiguration.class);
         int randomStringLength = configOld.getRandomStringLength();
+        String randomStringStrategy = configOld.getRandomStringStrategy();
+        String randomStringDelimiter = configOld.getRandomStringDelimiter();
         randomStringTextField.setText(randomStringLength + "");
+        randomStringStrategyComboBox.setSelectedItem(randomStringStrategy);
+        randomStringDelimiterTextField.setText(randomStringDelimiter);
         randomStringTextField.setInputVerifier(new InputVerifier() {
             @Override
             public boolean verify(JComponent jComponent) {
                 String text = randomStringTextField.getText();
                 try {
                     viewRandomStringLength = Integer.parseInt(text);
+                    if(viewRandomStringLength < 0){
+                        throw new Exception("Positive integer required");
+                    }
                     return true;
                 } catch (Exception e) {
                     Messages.showMessageDialog("Positive integer required", "Error", Messages.getInformationIcon());
@@ -55,6 +66,25 @@ public class DataMappingConfigView extends AbstractConfigurableView {
                 }
             }
         });
+
+        randomStringDelimiterTextField.setInputVerifier(new InputVerifier() {
+            @Override
+            public boolean verify(JComponent jComponent) {
+                String text = randomStringDelimiterTextField.getText();
+                try {
+                    if("&".equals(text) || "?".equals(text)){
+                        throw new Exception("content error");
+                    }
+                    return true;
+                } catch (Exception e) {
+                    Messages.showMessageDialog("Character & or ? is not allowed", "Error", Messages.getInformationIcon());
+                    randomStringDelimiterTextField.setText(randomStringDelimiter);
+                    return false;
+                }
+            }
+        });
+
+
     }
 
     private void createUIComponents() {
@@ -315,13 +345,17 @@ public class DataMappingConfigView extends AbstractConfigurableView {
         return viewRandomStringLength;
     }
 
-    public void setViewRandomStringLength(Integer viewRandomStringLength) {
-        this.viewRandomStringLength = viewRandomStringLength;
-    }
 
     public JTextField getRandomStringTextField() {
         return randomStringTextField;
     }
 
+    public JComboBox<String> getRandomStringStrategyComboBox() {
+        return randomStringStrategyComboBox;
+    }
+
+    public JTextField getRandomStringDelimiterTextField() {
+        return randomStringDelimiterTextField;
+    }
 }
 

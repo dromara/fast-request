@@ -73,6 +73,19 @@ public class FastRequestConfiguration implements Serializable {
 
     private int randomStringLength = 3;
 
+    /**
+     * String生成策略
+     * name+random
+     * random
+     * none
+     */
+    private String randomStringStrategy = "name+random";
+
+    /**
+     * String生成器分隔符
+     */
+    private String randomStringDelimiter = "_";
+
     private List<DataMapping> headerList = new ArrayList<>();
 
     public List<String> getProjectList() {
@@ -177,5 +190,21 @@ public class FastRequestConfiguration implements Serializable {
 
     public void setUrlReplaceMappingList(List<DataMapping> urlReplaceMappingList) {
         this.urlReplaceMappingList = urlReplaceMappingList;
+    }
+
+    public String getRandomStringStrategy() {
+        return randomStringStrategy;
+    }
+
+    public void setRandomStringStrategy(String randomStringStrategy) {
+        this.randomStringStrategy = randomStringStrategy;
+    }
+
+    public String getRandomStringDelimiter() {
+        return randomStringDelimiter;
+    }
+
+    public void setRandomStringDelimiter(String randomStringDelimiter) {
+        this.randomStringDelimiter = randomStringDelimiter;
     }
 }

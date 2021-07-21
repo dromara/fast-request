@@ -23,6 +23,14 @@
 
     <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/example.png" /><br/>
 
+    <h3>v1.1.5</h3>
+    <ul>
+        <li>support modify basic type value(基础类型默认值支持修改)</li>
+        <li>fix response scroll issue(修复response滚动问题)</li>
+        <li>add three string generate strategy(新增了3中string类型参数生成策略)</li>
+        <li>optimal configuration guidance(优化配置引导)</li>
+    </ul>
+
     <h3>v1.1.4</h3>
     <ul>
         <li>curl support(支持curl拷贝)</li>
