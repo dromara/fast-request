@@ -5,6 +5,8 @@ import com.google.common.collect.ImmutableMap;
 import java.util.Map;
 
 public class Constant {
+    public static final String I18N_PATH = "io/github/kings1990/fastrequest/18n/fr";
+
     public enum SpringMappingConfig {
         GET_MAPPING("org.springframework.web.bind.annotation.GetMapping", "GET"),
         POST_MAPPING("org.springframework.web.bind.annotation.PostMapping", "POST"),

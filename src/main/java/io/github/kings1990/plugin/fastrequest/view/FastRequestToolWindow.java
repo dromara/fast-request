@@ -231,11 +231,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         renderingJsonResponsePanel();
 
-        sendButton = new JButton(PluginIcons.ICON_SEND);
+        sendButton = new JButton("Send Request",PluginIcons.ICON_SEND);
         requestToggleButton = new JButton("Request",PluginIcons.ICON_INVISIBLE);
-        requestToggleButton.setToolTipText("Toggle request");
         responseToggleButton = new JButton("Response",PluginIcons.ICON_INVISIBLE);
-        responseToggleButton.setToolTipText("Toggle response");
     }
 
     public FastRequestToolWindow(ToolWindow toolWindow) {

@@ -3,6 +3,7 @@ package io.github.kings1990.plugin.fastrequest.configurable;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.intellij.util.ui.ListTableModel;
+import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
@@ -13,6 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import java.util.List;
+import java.util.ResourceBundle;
 
 public class DataMappingConfigurable extends AbstractConfigConfigurable {
     protected FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
@@ -31,7 +33,7 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
 
     @Override
     public String getDisplayName() {
-        return "Date Type Config";
+        return ResourceBundle.getBundle(Constant.I18N_PATH).getString("DateTypeConfig");
     }
 
     @Override
