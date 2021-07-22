@@ -1,11 +1,12 @@
 # Fast Request
 
 [![Jetbrains Plugins][plugin-img]][plugin]
-![Version](http://phpstorm.espend.de/badge/16988/version)
-![Downloads](http://phpstorm.espend.de/badge/16988/downloads)
-![Downloads Last Month](http://phpstorm.espend.de/badge/16988/last-month)
+![Version](https://img.shields.io/jetbrains/plugin/v/16988)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/16988)
+[![QQ群](https://img.shields.io/badge/chat-QQ群-46BC99.svg?style=flat-square)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
+[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-red)](https://fastrequest.slack.com)
 
-**Fast Request**是一个基于springmvc的帮助你快速生成**url**和**参数**的插件.同时也是一个http client工具
+[**Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个基于springmvc的帮助你快速生成**url**和**参数**的插件.同时也是一个http client工具
 
 你只需要按一下快捷键,插件就会给你方法的url和参数,再点击发送请求即可完成http请求
 
@@ -21,7 +22,7 @@
 
 QQ 群:754131222
 
-## 1.安装
+## 0.安装
 
 **插件市场安装**
 
@@ -33,21 +34,34 @@ QQ 群:754131222
 - 下载[`lastest plugin zip`][latest-release] -> <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Install
   plugin from disk...</kbd>
 
+## 1.如何使用
+```
+Step1:点击配置添加项目名[如微信卡片]和环境名[如local、dev]
+Step2:设置对应项目及环境的域名
+Step3:打开工具窗口(右上角位置),选择当前项目想要启用的环境,并且点击开启复选框
+Step4:点击在方法左侧的fastRequest的图标(自动生成参数和url)
+Step5:点击发送请求按钮发送请求
+```
+
+![](./screenshot/howToUse.gif)
+
 ## 2.默认快捷键
 推荐用法:点击图标
 ![](./screenshot/methodIcon.png)
 
-也可通过IDEA快捷键设置修改
+[comment]: <> (也可通过IDEA快捷键设置修改)
 
-|快捷键|作用域|说明|
-| --- | --- | --- |
-| <kbd> ctrl \ </kbd> | 方法(光标放上面就行) | 生成当前方法的url和请求参数 |
+[comment]: <> (|快捷键|作用域|说明|)
 
-如果它不起作用，您可以在Keymap中搜索<kbd>Generate URL and Param</kbd>并更改快捷键
+[comment]: <> (| --- | --- | --- |)
 
-修改路径:<kbd>Preferences(Settings)</kbd> > <kbd>Keymap</kbd>
+[comment]: <> (| <kbd> ctrl \ </kbd> | 方法&#40;光标放上面就行&#41; | 生成当前方法的url和请求参数 |)
 
-另外的方法:<kbd>Code(Toolbar)</kbd> > <kbd>Generate</kbd> > <kbd>Generate URL and Param</kbd>
+[comment]: <> (如果它不起作用，您可以在Keymap中搜索<kbd>Generate URL and Param</kbd>并更改快捷键)
+
+[comment]: <> (修改路径:<kbd>Preferences&#40;Settings&#41;</kbd> > <kbd>Keymap</kbd>)
+
+[comment]: <> (另外的方法:<kbd>Code&#40;Toolbar&#41;</kbd> > <kbd>Generate</kbd> > <kbd>Generate URL and Param</kbd>)
 
 ## 3.配置及使用
 
