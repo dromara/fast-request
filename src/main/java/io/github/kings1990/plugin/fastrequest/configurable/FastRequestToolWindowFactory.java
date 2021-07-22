@@ -20,7 +20,7 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory {
 
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
         //displayName="" let content in first tab
-        Content content = contentFactory.createContent(window.getContent(), "", false);
+        Content content = contentFactory.createContent(window.getContent(), "", true);
         toolWindow.getContentManager().addContent(content);
 
         //change data

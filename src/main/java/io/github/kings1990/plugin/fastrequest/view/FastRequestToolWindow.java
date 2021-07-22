@@ -533,6 +533,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     String sendUrl = urlTextField.getText();
                     if(StringUtils.isEmpty(sendUrl) || !UrlUtil.isURL(sendUrl)){
                         responseTextArea.setText("Correct url required");
+                        responseTabbedPanel.setSelectedIndex(2);
                         sendButton.setEnabled(true);
                         return;
                     }

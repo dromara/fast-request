@@ -1,11 +1,11 @@
 # Fast Request
 
 [![Jetbrains Plugins][plugin-img]][plugin]
-![Version](http://phpstorm.espend.de/badge/16988/version)
-![Downloads](http://phpstorm.espend.de/badge/16988/downloads)
-![Downloads Last Month](http://phpstorm.espend.de/badge/16988/last-month)
+![Version](https://img.shields.io/jetbrains/plugin/v/16988)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/16988)
+[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-red)](https://fastrequest.slack.com)
 
-**Fast Request** is a plugin based on springmvc that help you quickly generate **url** and **params**.It is also a http client tool.
+[**Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a plugin based on springmvc that help you quickly generate **url** and **params**.It is also a http client tool.
 
 Just press the shortcut key, Plugin will give you the url and params, Then click Send Request button to complete the http request
 
@@ -21,28 +21,40 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 
 QQ group:754131222  
   
-## 1.Install
+## 0.Install
 **using IDE plugin system**
 - <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>find"Fast Request"</kbd> > <kbd>Install Plugin</kbd>
 
 **Manual:**
 - download[`lastest plugin zip`][latest-release] -> <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Install plugin from disk...</kbd>
 
+## 1.How to use
+```
+Step1:Click Manager config then add project name[example:wx card] and env[example:local、dev]
+Step2:set target domain
+Step3:open toolwindow(at the top-right corner),select project and env and then click enable checkbox
+Step4:click fastRequest icon on method left(generate url and param)
+Step5:click send button for sending request
+```
+
+![](./screenshot/howToUse.gif)
 
 ## 2.Default shortcut key
 recommend way:just click FastRequest icon
 ![](./screenshot/methodIcon.png)
 
 
-|key|scope|description|
-| --- | --- | --- |
-| <kbd> ctrl \ </kbd> | method(just put the cursor on method) | Generate the url and request parameters of the current method |
+[comment]: <> (|key|scope|description|)
 
-if it doesn't work,you can search <kbd>Generate URL and Param</kbd> in key map and change the key
+[comment]: <> (| --- | --- | --- |)
 
-modify key:<kbd>Preferences(Settings)</kbd> > <kbd>Keymap</kbd>
+[comment]: <> (| <kbd> ctrl \ </kbd> | method&#40;just put the cursor on method&#41; | Generate the url and request parameters of the current method |)
 
-other way:<kbd>Code(Toolbar)</kbd> > <kbd>Generate</kbd> > <kbd>Generate URL and Param</kbd>
+[comment]: <> (if it doesn't work,you can search <kbd>Generate URL and Param</kbd> in key map and change the key)
+
+[comment]: <> (modify key:<kbd>Preferences&#40;Settings&#41;</kbd> > <kbd>Keymap</kbd>)
+
+[comment]: <> (other way:<kbd>Code&#40;Toolbar&#41;</kbd> > <kbd>Generate</kbd> > <kbd>Generate URL and Param</kbd>)
 
 
 
