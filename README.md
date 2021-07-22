@@ -125,7 +125,16 @@ If you think the plug-in is great and saves you a lot of time, then invite the a
 | ![微信](./screenshot/pay/wechat.jpg) | ![支付宝](./screenshot/pay/alipay.png) |
 | --- | --- |
 
+## 6.FAQ
+>Question 1:About the console blocking the tool window  
+Answer:At present, when the tool window and console are visible at the same time, It does not support the display of tool windows prior to the console. So you can only adjust [view mode](https://www.jetbrains.com/help/idea/viewing-modes.html)
+to control the view,Or use shortcut keys to quickly hide and show the console(shortcut:look at view->toolWindow->run/debug) to make all the content in the tool window visible。Of course, you can click to hide the Request part to see the Response
 
+>Question 2:Why the plugin doesn't respond  
+Answer:Please configure the relevant configuration according to the steps introduced in the first chapter first, and then click the icon
+
+>Question 3:idea freezes after clicking the icon  
+>Answer:The entity class you designed is nested and recursive, the plugin does not support
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
 [plugin]: https://plugins.jetbrains.com/plugin/16988
