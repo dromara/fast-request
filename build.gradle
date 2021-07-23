@@ -41,6 +41,7 @@ patchPluginXml {
         <li>optimized the display of icons in dark and light themes(优化了暗色和淡色主题下图标的显示)</li>
         <li>18n support(国际化支持)</li>
         <li>optimal tool window layout(优化了工具窗口布局)</li>
+        <li>fix stuck when debug(修复调试时卡死问题)</li>
     </ul>
     
     <h3>v1.1.4</h3>

@@ -1,6 +1,7 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
@@ -59,6 +60,7 @@ import java.io.File;
 import java.net.URI;
 import java.util.List;
 import java.util.*;
+import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
@@ -578,41 +580,59 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     if(!multipartFormParam.isEmpty()){
                         request.form(multipartFormParam);
                     }
+                    Future<?> future = ThreadUtil.execAsync(() -> {
+                        try {
+                            long start = System.currentTimeMillis();
+                            HttpResponse response = request.execute();
+                            long end = System.currentTimeMillis();
+                            int status = response.getStatus();
+                            String body = response.body();
+                            if (JsonUtil.isJSON2(body)) {
+                                prettyResponseTextArea.setText(JSON.toJSONString(JSON.parse(body), true));
+                                responseTextArea.setText(body);
+                                responseTabbedPanel.setSelectedIndex(0);
+                                refreshResponseTable(body);
+                            } else {
+                                String subBody = body.substring(0, Math.min(body.length(), 32768));
+                                if (body.length() > 32768) {
+                                    subBody += "\n\ntext too large only show 32768 characters\n.............";
+                                }
+                                prettyResponseTextArea.setText(subBody);
+                                responseTextArea.setText(subBody);
+                                responseTabbedPanel.setSelectedIndex(2);
+                            }
+                            String duration = String.valueOf(end - start);
 
-                    long start = System.currentTimeMillis();
-                    HttpResponse response = request.execute();
-                    long end = System.currentTimeMillis();
-                    int status = response.getStatus();
-                    String body = response.body();
-                    if(JsonUtil.isJSON2(body)){
-                        prettyResponseTextArea.setText(JSON.toJSONString(JSON.parse(body),true));
-                        responseTextArea.setText(body);
-                        responseTabbedPanel.setSelectedIndex(0);
-                        refreshResponseTable(body);
-                    } else {
-                        String subBody = body.substring(0, Math.min(body.length(), 32768));
-                        if(body.length() > 32768){
-                            subBody += "\n\ntext too large only show 32768 characters\n.............";
+                            responseInfoParamsKeyValueList = Lists.newArrayList(
+                                    new ParamKeyValue("Cost", duration + " ms", 2, TypeUtil.Type.String.name()),
+                                    new ParamKeyValue("Response status", status + " " + Constant.HttpStatusDesc.STATUS_MAP.get(status)),
+                                    new ParamKeyValue("Date", DateUtil.formatDateTime(new Date()))
+                            );
+                            responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+                            responseStatusComboBox.setSelectedItem(status);
+
+                            JBColor green = new JBColor(new Color(0, 250, 154), new Color(60, 179, 113));
+                            JBColor red = new JBColor(new Color(220, 20, 60), new Color(178, 34, 34));
+                            responseStatusComboBox.setBackground((status >= 200 && status < 300) ? green : red);
+                        } catch (Exception ee){
+                            String errorMsg = ee.getMessage();
+                            responseTextArea.setText(errorMsg);
+                            prettyResponseTextArea.setText("");
+                            responseStatusComboBox.setSelectedItem(0);
+                            responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60),new Color(178, 34, 34)));
+                            responseInfoParamsKeyValueList = Lists.newArrayList(
+                                    new ParamKeyValue("Error", errorMsg)
+                            );
+                            responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+
+                            CustomNode root = new CustomNode("Root","");
+                            ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
+                            responseTabbedPanel.setSelectedIndex(2);
                         }
-                        prettyResponseTextArea.setText(subBody);
-                        responseTextArea.setText(subBody);
-                        responseTabbedPanel.setSelectedIndex(2);
+                    });
+                    if (future.isDone()){
+                        sendButton.setEnabled(true);
                     }
-                    String duration = String.valueOf(end - start);
-
-                    responseInfoParamsKeyValueList = Lists.newArrayList(
-                            new ParamKeyValue("Cost",duration + " ms",2,TypeUtil.Type.String.name()),
-                            new ParamKeyValue("Response status",status+" "+ Constant.HttpStatusDesc.STATUS_MAP.get(status)),
-                            new ParamKeyValue("Date", DateUtil.formatDateTime(new Date()))
-                    );
-                    responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
-                    responseStatusComboBox.setSelectedItem(status);
-
-                    JBColor green = new JBColor(new Color(0, 250, 154), new Color(60, 179, 113));
-                    JBColor red = new JBColor(new Color(220, 20, 60),new Color(178, 34, 34));
-
-                    responseStatusComboBox.setBackground((status >= 200 && status < 300) ? green : red);
-
                 } catch (Exception exception){
                     String errorMsg = exception.getMessage();
                     responseTextArea.setText(errorMsg);
