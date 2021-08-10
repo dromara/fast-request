@@ -2,6 +2,9 @@ package io.github.kings1990.plugin.fastrequest.generator.impl;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.psi.*;
+import com.intellij.psi.impl.source.PsiMethodImpl;
+import com.intellij.psi.javadoc.PsiDocComment;
+import com.intellij.psi.javadoc.PsiDocToken;
 import com.intellij.psi.util.PsiUtil;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
@@ -57,10 +60,17 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         //methodType
         String methodType = getMethodType(psiMethod);
 
+        String methodDescription = getMethodDescription(psiMethod);
+
         paramGroup.setPathParamMap(pathParamMap);
         paramGroup.setRequestParamMap(requestParamMap);
         paramGroup.setBodyParamMap(bodyParamMap);
         paramGroup.setMethodType(methodType);
+        paramGroup.setMethodDescription(methodDescription);
+
+        paramGroup.setClassName(((PsiMethodImpl) psiElement).getContainingClass().getQualifiedName());
+        paramGroup.setMethod(psiMethod.getName());
+
         return null;
     }
 
@@ -211,5 +221,29 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         return "GET";
     }
 
-
+    @Override
+    public String getMethodDescription(PsiMethod psiMethod) {
+        //有限获取swagger接口ApiOperation中的value，如果获取不到则获取javadoc
+        PsiAnnotation annotation = psiMethod.getAnnotation("io.swagger.annotations.ApiOperation");
+        if (annotation != null) {
+            PsiAnnotationMemberValue descValue = annotation.findDeclaredAttributeValue("value");
+            if (descValue != null) {
+                return descValue.getText().replace("\"","");
+            }
+        } else {
+            //javadoc中获取
+            PsiDocComment docComment = psiMethod.getDocComment();
+            StringBuilder commentStringBuilder = new StringBuilder();
+            if(docComment != null){
+                PsiElement[] descriptionElements = docComment.getDescriptionElements();
+                for (PsiElement descriptionElement : descriptionElements) {
+                    if(descriptionElement instanceof PsiDocToken){
+                        commentStringBuilder.append(descriptionElement.getText());
+                    }
+                }
+            }
+            return commentStringBuilder.toString().trim();
+        }
+        return null;
+    }
 }

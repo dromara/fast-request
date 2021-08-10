@@ -44,4 +44,15 @@ public abstract class FastUrlGenerator {
 
     public abstract List<ParamNameType> getMethodBodyParamList(PsiMethod psiMethod);
 
+
+    /**
+     * 获取方法描述
+     *
+     * @param psiMethod psi的方法
+     * @return {@link String }
+     * @author Kings
+     * @date 2021/07/27
+     */
+    public abstract String getMethodDescription(PsiMethod psiMethod);
+
 }

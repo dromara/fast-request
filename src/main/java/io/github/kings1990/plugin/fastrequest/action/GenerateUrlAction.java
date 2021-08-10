@@ -8,6 +8,7 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.psi.PsiElement;
+import com.intellij.ui.content.Content;
 import com.intellij.util.messages.MessageBus;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService;
@@ -33,6 +34,9 @@ public class GenerateUrlAction extends AnAction {
         ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(project).getToolWindow("Fast Request");
         if(fastRequestToolWindow != null && !fastRequestToolWindow.isActive()){
             fastRequestToolWindow.activate(null);
+            Content content = fastRequestToolWindow.getContentManager().getContent(0);
+            assert content != null;
+            fastRequestToolWindow.getContentManager().setSelectedContent(content);
         }
 
         //send message to change param

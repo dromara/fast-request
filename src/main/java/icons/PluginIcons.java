@@ -23,4 +23,14 @@ public interface PluginIcons {
 
     Icon ICON_EXPAND = IconLoader.getIcon("/icon/expand.svg", PluginIcons.class);
     Icon ICON_COLLAPSE = IconLoader.getIcon("/icon/collapse.svg", PluginIcons.class);
+
+    Icon ICON_NAVIGATE = IconLoader.getIcon("/icon/navigate.svg", PluginIcons.class);
+    Icon ICON_CONFIG = IconLoader.getIcon("/icon/config.svg", PluginIcons.class);
+
+    Icon ICON_SAVE = IconLoader.getIcon("/icon/save.svg", PluginIcons.class);
+    Icon ICON_CURL = IconLoader.getIcon("/icon/curl.svg", PluginIcons.class);
+    Icon ICON_DOC = IconLoader.getIcon("/icon/readme.svg", PluginIcons.class);
+    Icon ICON_COFFEE = IconLoader.getIcon("/icon/coffee.svg", PluginIcons.class);
+    Icon ICON_RETRY = IconLoader.getIcon("/icon/retry.svg", PluginIcons.class);
+    Icon ICON_FILTER = IconLoader.getIcon("/icon/filter.svg", PluginIcons.class);
 }

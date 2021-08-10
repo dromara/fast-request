@@ -37,7 +37,6 @@ public class CommonConfigView extends AbstractConfigurableView {
     private List<NameGroup> viewDataList;
     private String viewEnableEnv;
     private String viewEnableProject;
-    private Boolean viewEnableFlag;
 
 
     public CommonConfigView(FastRequestConfiguration config) {
@@ -94,7 +93,6 @@ public class CommonConfigView extends AbstractConfigurableView {
     private void renderingProjectPanel(FastRequestConfiguration configOld) {
         viewProjectList = configOld.getProjectList();
         viewEnableProject = configOld.getEnableProject();
-        viewEnableFlag = configOld.isEnableFlag();
         projectNameJbList = new JBList<>(new CollectionListModel<>(viewProjectList));
         projectNameJbList.setEmptyText("Please add project name");
         ToolbarDecorator toolbarDecoratorProject = ToolbarDecorator.createDecorator(projectNameJbList);
@@ -117,7 +115,6 @@ public class CommonConfigView extends AbstractConfigurableView {
             if (project.equals(enableProject)) {
 //                config.setEnableProject(null);
                 viewEnableProject = null;
-                viewEnableFlag = false;
             }
             refreshDataListWithProject(viewProjectList, project, true);
         });
@@ -133,7 +130,6 @@ public class CommonConfigView extends AbstractConfigurableView {
     private void renderingEnvPanel(FastRequestConfiguration configOld) {
         viewEnvList = configOld.getEnvList();
         viewEnableEnv = configOld.getEnableEnv();
-        viewEnableFlag = configOld.isEnableFlag();
         envJbList = new JBList<>(new CollectionListModel<>(viewEnvList));
         envJbList.setEmptyText("Please add env");
         ToolbarDecorator toolbarDecoratorEnv = ToolbarDecorator.createDecorator(envJbList);
@@ -163,7 +159,6 @@ public class CommonConfigView extends AbstractConfigurableView {
             if (env.equals(enableEnv)) {
 //                config.setEnableEnv(null);
                 viewEnableEnv = null;
-                viewEnableFlag = false;
             }
             refreshDataListWithEnv(viewEnvList, env, true);
         });
@@ -404,11 +399,4 @@ public class CommonConfigView extends AbstractConfigurableView {
         this.viewEnableProject = viewEnableProject;
     }
 
-    public Boolean getViewEnableFlag() {
-        return viewEnableFlag;
-    }
-
-    public void setViewEnableFlag(Boolean viewEnableFlag) {
-        this.viewEnableFlag = viewEnableFlag;
-    }
 }

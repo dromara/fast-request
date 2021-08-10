@@ -6,7 +6,7 @@ import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.generator.FastUrlGenerator;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamNameType;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
@@ -42,6 +42,11 @@ public class OtherUrlGenerator extends FastUrlGenerator {
 
     @Override
     public List<ParamNameType> getMethodBodyParamList(PsiMethod psiMethod) {
+        return null;
+    }
+
+    @Override
+    public String getMethodDescription(PsiMethod psiMethod) {
         return null;
     }
 }

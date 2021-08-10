@@ -10,6 +10,13 @@ import io.github.kings1990.plugin.fastrequest.util.KV;
 import io.github.kings1990.plugin.fastrequest.util.StringUtils;
 import io.github.kings1990.plugin.fastrequest.util.TypeUtil;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +27,7 @@ public class RequestParamParse extends AbstractParamParse {
     public LinkedHashMap<String, Object> parseParam(FastRequestConfiguration config, List<ParamNameType> paramNameTypeList) {
         List<DataMapping> customDataMappingList = config.getCustomDataMappingList();
         List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
-
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         List<ParamNameType> requestParamList = paramNameTypeList.stream().filter(q -> q.getParseType() == 2).collect(Collectors.toList());
         LinkedHashMap<String, Object> nameValueMap = new LinkedHashMap<>();
         int randomStringLength = config.getRandomStringLength();
@@ -28,6 +35,9 @@ public class RequestParamParse extends AbstractParamParse {
         String randomStringDelimiter = config.getRandomStringDelimiter();
         for (ParamNameType paramNameType : requestParamList) {
             String type = paramNameType.getType();
+            if("javax.servlet.http.HttpServletRequest".equals(type) || "javax.servlet.http.HttpServletResponse".equals(type)){
+                continue;
+            }
             boolean arrayFlag = type.contains("[]");
             if(arrayFlag){
                 type = type.substring(type.indexOf("[")+1,type.indexOf("]"));
@@ -79,6 +89,31 @@ public class RequestParamParse extends AbstractParamParse {
                 nameValueMap.put(name, new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name()));
                 continue;
             }
+            if("java.util.Date".equals(paramNameType.getType())){
+                nameValueMap.put(name, new ParamKeyValue(name, df.format(new Date()), 2, TypeUtil.Type.String.name()));
+                continue;
+            }
+            if("java.sql.Date".equals(paramNameType.getType())){
+                nameValueMap.put(name, new ParamKeyValue(name, df.format(new Date()), 2, TypeUtil.Type.String.name()));
+                continue;
+            }
+            if("java.sql.Timestamp".equals(paramNameType.getType())){
+                nameValueMap.put(name, new ParamKeyValue(name, System.currentTimeMillis(), 2, TypeUtil.Type.String.name()));
+                continue;
+            }
+            if("java.time.LocalDate".equals(paramNameType.getType())){
+                nameValueMap.put(name, new ParamKeyValue(name, LocalDate.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
+                continue;
+            }
+            if("java.time.LocalTime".equals(paramNameType.getType())){
+                nameValueMap.put(name, new ParamKeyValue(name, LocalTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
+                continue;
+            }
+            if("java.time.LocalDateTime".equals(paramNameType.getType())){
+                nameValueMap.put(name, new ParamKeyValue(name, LocalDateTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
+                continue;
+            }
+
             //json解析
             KV kv = KV.getFields(paramNameType.getPsiClass());
             String json = kv.toPrettyJson();

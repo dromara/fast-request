@@ -61,7 +61,6 @@ public class FastRequestConfiguration implements Serializable {
      */
     private List<DataMapping> urlReplaceMappingList = new ArrayList<>();
 
-    private boolean enableFlag;
 
     private String enableEnv;
 
@@ -110,14 +109,6 @@ public class FastRequestConfiguration implements Serializable {
 
     public void setDataList(List<NameGroup> dataList) {
         this.dataList = dataList;
-    }
-
-    public boolean isEnableFlag() {
-        return enableFlag;
-    }
-
-    public void setEnableFlag(boolean enableFlag) {
-        this.enableFlag = enableFlag;
     }
 
     public String getEnableEnv() {
