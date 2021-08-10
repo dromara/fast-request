@@ -11,6 +11,7 @@ import com.intellij.psi.PsiAnnotation;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiIdentifier;
 import com.intellij.psi.PsiMethod;
+import com.intellij.ui.content.Content;
 import com.intellij.util.messages.MessageBus;
 import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
@@ -40,6 +41,9 @@ public class FastRequestLineMarkerProvider implements LineMarkerProvider {
                         ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(project).getToolWindow("Fast Request");
                         if(fastRequestToolWindow != null && !fastRequestToolWindow.isActive()){
                             fastRequestToolWindow.activate(null);
+                            Content content = fastRequestToolWindow.getContentManager().getContent(0);
+                            assert content != null;
+                            fastRequestToolWindow.getContentManager().setSelectedContent(content);
                         }
                         //send message to change param
                         MessageBus messageBus = project.getMessageBus();

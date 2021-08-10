@@ -23,6 +23,13 @@
 
     <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/example.png" /><br/>
 
+    <h3>v2.0.0</h3>
+    <ul>
+        <li>support store request(支持请求的存储)</li>
+        <li>optimal iu(优化了UI)</li>
+        <li>fix some bugs(修复了一些bug)</li>
+    </ul>
+
     <h3>v1.1.5</h3>
     <ul>
         <li>support modify basic type value(基础类型默认值支持修改)</li>
@@ -98,6 +105,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestComponent" order="first"/>
+        <projectService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent"/>
         <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService"/>
         <applicationConfigurable id="p" displayName="Fast Request" instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
             <configurable parentId="p" instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>

@@ -7,7 +7,7 @@ import com.intellij.psi.PsiMethod;
 import io.github.kings1990.plugin.fastrequest.generator.FastUrlGenerator;
 import io.github.kings1990.plugin.fastrequest.generator.impl.OtherUrlGenerator;
 import io.github.kings1990.plugin.fastrequest.generator.impl.SpringMethodUrlGenerator;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;
 import java.util.Objects;

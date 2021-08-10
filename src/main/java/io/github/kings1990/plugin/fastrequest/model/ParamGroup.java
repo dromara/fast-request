@@ -10,6 +10,9 @@ public class ParamGroup {
     private LinkedHashMap<String, Object> pathParamMap = new LinkedHashMap<>();
     private LinkedHashMap<String, Object> requestParamMap = new LinkedHashMap<>();
     private LinkedHashMap<String, Object> bodyParamMap = new LinkedHashMap<>();
+    private String methodDescription;
+    private String className;
+    private String method;
 
     public String getOriginUrl() {
         return originUrl;
@@ -65,5 +68,29 @@ public class ParamGroup {
 
     public void setBodyParamMap(LinkedHashMap<String, Object> bodyParamMap) {
         this.bodyParamMap = bodyParamMap;
+    }
+
+    public String getMethodDescription() {
+        return methodDescription;
+    }
+
+    public void setMethodDescription(String methodDescription) {
+        this.methodDescription = methodDescription;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
     }
 }

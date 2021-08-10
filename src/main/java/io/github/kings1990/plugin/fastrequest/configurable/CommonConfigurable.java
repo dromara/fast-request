@@ -86,7 +86,6 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
 
         config.setEnableEnv(view.getViewEnableEnv());
         config.setEnableProject(view.getViewEnableProject());
-        config.setEnableFlag(view.getViewEnableFlag());
 
         //send message to change param
         DataContext dataContext = DataManager.getInstance().getDataContext(view.getComponent());
