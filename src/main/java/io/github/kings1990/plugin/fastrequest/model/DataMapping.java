@@ -3,6 +3,7 @@ package io.github.kings1990.plugin.fastrequest.model;
 public class DataMapping {
     private String type;
     private String value;
+    private Boolean enabled = true;
 
     public DataMapping() {
     }
@@ -26,5 +27,13 @@ public class DataMapping {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 }

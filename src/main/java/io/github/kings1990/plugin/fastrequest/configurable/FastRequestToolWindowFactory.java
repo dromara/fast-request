@@ -1,5 +1,6 @@
 package io.github.kings1990.plugin.fastrequest.configurable;
 
+import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
@@ -12,7 +13,7 @@ import io.github.kings1990.plugin.fastrequest.view.FastRequestCollectionToolWind
 import io.github.kings1990.plugin.fastrequest.view.FastRequestToolWindow;
 import org.jetbrains.annotations.NotNull;
 
-public class FastRequestToolWindowFactory implements ToolWindowFactory {
+public class FastRequestToolWindowFactory implements ToolWindowFactory , DumbAware {
 
     private FastRequestToolWindow window;
 

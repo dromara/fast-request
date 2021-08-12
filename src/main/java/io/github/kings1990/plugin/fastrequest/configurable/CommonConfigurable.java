@@ -61,10 +61,7 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
         List<NameGroup> viewDataList = view.getViewDataList();
         List<NameGroup> configDataList = config.getDataList();
         boolean dataEqualFlag = judgeDataEqual(viewDataList, configDataList);
-        if (!dataEqualFlag) {
-            return true;
-        }
-        return false;
+        return !dataEqualFlag;
     }
 
     @Override
