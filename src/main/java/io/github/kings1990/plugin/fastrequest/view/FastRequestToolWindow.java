@@ -539,7 +539,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         request.body(StringUtils.removeEnd(urlEncodedParam.toString(),"&"));
                     }
                     if(StringUtils.isNotEmpty(jsonParam) && !"{}".equals(jsonParam) && !"[]".equals(jsonParam)){
-                        request.body(jsonParam);
+                        request.body(JSON.toJSONString(JSON.parse(jsonParam)));
                     }
 
                     if(!formParam.isEmpty()){
@@ -754,12 +754,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         String bodyKeyValueListJson = paramGroup.getBodyKeyValueListJson();
         String urlEncodedKeyValueListJson = paramGroup.getUrlEncodedKeyValueListJson();
         String urlEncodedKeyValueListText = paramGroup.getUrlEncodedKeyValueListText();
+        String multipartKeyValueListJson = paramGroup.getMultipartKeyValueListJson();
         String domain = detail.getDomain();
         String url = paramGroup.getUrl();
 
         pathParamsKeyValueList = JSON.parseObject(pathParamsKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
         urlParamsKeyValueList = JSON.parseObject(urlParamsKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
         urlEncodedKeyValueList = JSON.parseObject(urlEncodedKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
+        multipartKeyValueList = JSON.parseObject(multipartKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
 
         String methodType = paramGroup.getMethodType();
 
@@ -793,14 +795,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
             } else {
-                boolean isMultipart = urlEncodedKeyValueList.stream().anyMatch(q -> TypeUtil.Type.File.name().equals(q.getType()));
+                boolean isMultipart = multipartKeyValueList.stream().anyMatch(q -> TypeUtil.Type.File.name().equals(q.getType()));
                 if(isMultipart){
                     if (urlParamsKeyValueListJson.isEmpty()) {
                         tabbedPane.setSelectedIndex(2);
                     } else {
                         tabbedPane.setSelectedIndex(5);
                     }
-                    multipartKeyValueList = new ArrayList<>(urlEncodedKeyValueList);
                     urlEncodedTextArea.setText("");
                     urlEncodedKeyValueList = new ArrayList<>();
                 } else {
@@ -1510,8 +1511,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
     private String bodyParamMapToJson() {
         LinkedHashMap<String, Object> map = new LinkedHashMap<>();
-        convertToMap(bodyParamMap, map,true);
-        return JSON.toJSONString(map, true);
+        convertToMap(bodyParamMap, map,false);
+        return JSON.toJSONString(map.get(map.keySet().stream().findFirst().get()), true);
     }
 
 
@@ -2281,8 +2282,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     String type = (String) getValueAt(row, column);
                     return new DefaultCellEditor(getNormalTypeAndFileComboBox(type));
                 }
-                if(column == 2){
-                    String type = (String) getValueAt(row, 0);
+                if(column == 3){
+                    String type = (String) getValueAt(row, 1);
                     String value = (String) getValueAt(row, 2);
                     if(TypeUtil.Type.File.name().equals(type)){
                         VirtualFile virtualFile = FileChooser.chooseFile(FileChooserDescriptorFactory.createSingleFileDescriptor(), myProject, LocalFileSystem.getInstance().findFileByIoFile(new File(value)));
@@ -2681,6 +2682,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             paramGroupCollection.setUrlEncodedKeyValueListJson(JSON.toJSONString(urlEncodedKeyValueList));
             paramGroupCollection.setUrlEncodedKeyValueListText(urlEncodedTextArea.getText());
             paramGroupCollection.setBodyKeyValueListJson(jsonParamsTextArea.getText());
+            paramGroupCollection.setMultipartKeyValueListJson(JSON.toJSONString(multipartKeyValueList));
             collectionDetail.setParamGroup(paramGroupCollection);
             collectionDetail.setHeaderList(config.getHeaderList());
             if(insertFlag){
