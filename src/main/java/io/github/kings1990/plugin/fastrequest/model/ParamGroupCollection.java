@@ -14,6 +14,7 @@ public class ParamGroupCollection implements Serializable {
     private String urlEncodedKeyValueListJson;
     private String urlEncodedKeyValueListText;
     private String bodyKeyValueListJson;
+    private String multipartKeyValueListJson;
 
 
     private String methodDescription;
@@ -124,5 +125,13 @@ public class ParamGroupCollection implements Serializable {
 
     public void setUrlEncodedKeyValueListText(String urlEncodedKeyValueListText) {
         this.urlEncodedKeyValueListText = urlEncodedKeyValueListText;
+    }
+
+    public String getMultipartKeyValueListJson() {
+        return multipartKeyValueListJson;
+    }
+
+    public void setMultipartKeyValueListJson(String multipartKeyValueListJson) {
+        this.multipartKeyValueListJson = multipartKeyValueListJson;
     }
 }
