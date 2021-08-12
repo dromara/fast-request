@@ -26,6 +26,7 @@
     <h3>v2.0.0</h3>
     <ul>
         <li>support store request(支持请求的存储)</li>
+        <li>support params optional(支持参数可选)</li>
         <li>optimal iu(优化了UI)</li>
         <li>fix some bugs(修复了一些bug)</li>
     </ul>

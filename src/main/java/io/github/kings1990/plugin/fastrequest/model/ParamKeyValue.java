@@ -14,6 +14,8 @@ public class ParamKeyValue {
 
     private String comment;
 
+    private Boolean enabled = true;
+
     public ParamKeyValue(String key, Object value) {
         this.key = key;
         this.value = value;
@@ -38,6 +40,15 @@ public class ParamKeyValue {
         this.customFlag = customFlag;
         this.type = type;
         this.comment = comment;
+    }
+
+    public ParamKeyValue(String key, Object value, Integer customFlag, String type, String comment, Boolean enabled) {
+        this.key = key;
+        this.value = value;
+        this.customFlag = customFlag;
+        this.type = type;
+        this.comment = comment;
+        this.enabled = enabled;
     }
 
     public String getKey() {
@@ -79,5 +90,13 @@ public class ParamKeyValue {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 }
