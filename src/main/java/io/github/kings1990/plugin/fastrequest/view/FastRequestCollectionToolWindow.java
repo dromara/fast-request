@@ -1,5 +1,6 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
+import com.intellij.ide.HelpTooltip;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.openapi.wm.ToolWindow;
@@ -9,6 +10,7 @@ import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.ui.ColoredTreeCellRenderer;
+import com.intellij.ui.GotItTooltip;
 import com.intellij.ui.ToolbarDecorator;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.dualView.TreeTableView;
@@ -22,6 +24,7 @@ import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
+import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.util.SwingUtil;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
 import io.github.kings1990.plugin.fastrequest.view.model.CollectionCustomNode;
@@ -58,6 +61,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     private JTextField searchTextField;
     private JPanel collectionPanel;
     private JLabel urlNameLabel;
+    private JLabel helpLabel;
     private TreeTableView collectionTable;
     private CollectionConfiguration.CollectionDetail rootDetail;
 
@@ -67,6 +71,9 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         this.setContent(panel);
         this.myProject = project;
         urlNameLabel.setIcon(PluginIcons.ICON_FILTER);
+
+        helpLabel.setIcon(PluginIcons.ICON_CONTEXT_HELP);
+        new HelpTooltip().setDescription(MyResourceBundleUtil.getKey("CollectionSearchHelp")).installOn(helpLabel);
 
         refresh();
 

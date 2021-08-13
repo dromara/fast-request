@@ -1,8 +1,9 @@
 package io.github.kings1990.plugin.fastrequest.model;
 
+import java.io.Serializable;
 import java.util.LinkedHashMap;
 
-public class ParamGroup {
+public class ParamGroup implements Serializable {
     private String originUrl;
     private String url;
     private String methodType;

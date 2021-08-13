@@ -1,8 +1,9 @@
 package io.github.kings1990.plugin.fastrequest.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class NameGroup {
+public class NameGroup implements Serializable {
     private String name;
     private List<HostGroup> hostGroup;
 
