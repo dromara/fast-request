@@ -98,7 +98,7 @@
     </description>
 
     <!--    2019.2-->
-    <idea-version since-build="192"/>
+    <idea-version since-build="203"/>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
@@ -115,6 +115,8 @@
         <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest" factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory" secondary="false"/>
 
         <codeInsight.lineMarkerProvider language="JAVA" implementationClass="io.github.kings1990.plugin.fastrequest.view.linemarker.FastRequestLineMarkerProvider"/>
+
+        <notificationGroup id="toolWindowNotificationGroup" displayType="TOOL_WINDOW" />
     </extensions>
 
     <actions >

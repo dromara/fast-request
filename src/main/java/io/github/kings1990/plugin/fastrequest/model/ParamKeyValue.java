@@ -1,6 +1,8 @@
 package io.github.kings1990.plugin.fastrequest.model;
 
-public class ParamKeyValue {
+import java.io.Serializable;
+
+public class ParamKeyValue implements Serializable {
     private String key;
     private Object value;
     /**

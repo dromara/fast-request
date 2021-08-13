@@ -12,6 +12,10 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
+import com.intellij.notification.NotificationDisplayType;
+import com.intellij.notification.NotificationGroup;
+import com.intellij.notification.NotificationGroupManager;
+import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.diagnostic.Logger;
@@ -19,13 +23,11 @@ import com.intellij.openapi.fileChooser.FileChooser;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
 import com.intellij.openapi.options.ShowSettingsUtil;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.ComboBox;
-import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.ui.SimpleToolWindowPanel;
-import com.intellij.openapi.ui.TextFieldWithBrowseButton;
+import com.intellij.openapi.ui.*;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
+import com.intellij.openapi.wm.ToolWindowBalloonShowOptions;
 import com.intellij.psi.JavaPsiFacade;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
@@ -1512,7 +1514,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private String bodyParamMapToJson() {
         LinkedHashMap<String, Object> map = new LinkedHashMap<>();
         convertToMap(bodyParamMap, map,false);
-        return JSON.toJSONString(map.get(map.keySet().stream().findFirst().get()), true);
+        return JSON.toJSONString(map.get(map.keySet().stream().findFirst().orElse("")), true);
     }
 
 
@@ -2697,6 +2699,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             messageBus.connect();
             ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.ADD_REQUEST_TOPIC);
             configChangeNotifier.configChanged(true);
+            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO).notify(myProject);
         }
     }
 
@@ -2708,6 +2711,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         @Override
         public void actionPerformed(@NotNull AnActionEvent e) {
             getCurlDataAndCopy();
+            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO).notify(myProject);
         }
     }
 

@@ -1,7 +1,9 @@
 package io.github.kings1990.plugin.fastrequest.model;
 
 
-public class HostGroup {
+import java.io.Serializable;
+
+public class HostGroup implements Serializable {
 
     private String env;
     private String url;

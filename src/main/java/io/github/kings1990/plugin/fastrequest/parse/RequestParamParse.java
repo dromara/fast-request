@@ -40,7 +40,7 @@ public class RequestParamParse extends AbstractParamParse {
             }
             boolean arrayFlag = type.contains("[]");
             if(arrayFlag){
-                type = type.substring(type.indexOf("[")+1,type.indexOf("]"));
+                type = type.substring(0,type.indexOf("["));
             }
             boolean listFlag = type.contains("List<");
             if(listFlag){
@@ -58,7 +58,7 @@ public class RequestParamParse extends AbstractParamParse {
                 continue;
             }
             String finalType = type;
-            DataMapping dataMapping = customDataMappingList.stream().filter(q -> finalType.equals(q.getType())).findFirst().orElse(null);
+            DataMapping dataMapping = customDataMappingList.stream().filter(q -> finalType.contains(q.getType())).findFirst().orElse(null);
             if (dataMapping != null) {
                 Object value = dataMapping.getValue();
                 if (JSONUtil.isJson(value.toString())) {

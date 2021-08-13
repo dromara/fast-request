@@ -33,4 +33,6 @@ public interface PluginIcons {
     Icon ICON_COFFEE = IconLoader.getIcon("/icon/coffee.svg", PluginIcons.class);
     Icon ICON_RETRY = IconLoader.getIcon("/icon/retry.svg", PluginIcons.class);
     Icon ICON_FILTER = IconLoader.getIcon("/icon/filter.svg", PluginIcons.class);
+
+    Icon ICON_CONTEXT_HELP = IconLoader.getIcon("/icon/contextHelp.svg", PluginIcons.class);
 }

@@ -1,6 +1,8 @@
 package io.github.kings1990.plugin.fastrequest.model;
 
-public class DataMapping {
+import java.io.Serializable;
+
+public class DataMapping implements Serializable {
     private String type;
     private String value;
     private Boolean enabled = true;
@@ -11,6 +13,12 @@ public class DataMapping {
     public DataMapping(String type, String value) {
         this.type = type;
         this.value = value;
+    }
+
+    public DataMapping(String type, String value, Boolean enabled) {
+        this.type = type;
+        this.value = value;
+        this.enabled = enabled;
     }
 
     public String getType() {

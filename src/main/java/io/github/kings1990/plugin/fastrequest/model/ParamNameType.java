@@ -2,7 +2,9 @@ package io.github.kings1990.plugin.fastrequest.model;
 
 import com.intellij.psi.PsiClass;
 
-public class ParamNameType {
+import java.io.Serializable;
+
+public class ParamNameType implements Serializable {
     private String name;
     private String type;
     private PsiClass psiClass;
