@@ -370,19 +370,23 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 String paramStr = conventDataToString(urlEncodedKeyValueList);
                 String currentUrlParamText = urlEncodedTextArea.getText();
                 if (!paramStr.equals(currentUrlParamText)) {
-                    String[] split = currentUrlParamText.split("&");
                     List<ParamKeyValue> currentUrlParamsKeyValueList = new ArrayList<>();
-                    for (String s : split) {
-                        String[] kvArray = s.split("=");
-                        if (kvArray.length <= 2) {
-                            String value = kvArray.length < 2 ? "" : kvArray[1].replace("\n", "");
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0], value, 2, TypeUtil.calcTypeByStringValue(value));
-                            currentUrlParamsKeyValueList.add(paramKeyValue);
+                    if(StringUtils.isNoneBlank(currentUrlParamText)) {
+                        String[] split = currentUrlParamText.split("&");
+                        if(split.length > 0) {
+                            for (String s : split) {
+                                String[] kvArray = s.split("=");
+                                if (kvArray.length <= 2) {
+                                    String value = kvArray.length < 2 ? "" : kvArray[1].replace("\n", "");
+                                    ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0], value, 2, TypeUtil.calcTypeByStringValue(value));
+                                    currentUrlParamsKeyValueList.add(paramKeyValue);
+                                }
+                            }
                         }
                     }
                     urlEncodedKeyValueList = currentUrlParamsKeyValueList;
-                    refreshTable(urlEncodedTable);
-                    //urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
+                    //refreshTable(urlEncodedTable);
+                    urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
                     resizeTable(urlEncodedTable);
                 }
             }
@@ -395,19 +399,21 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 String paramStr = conventDataToString(urlParamsKeyValueList);
                 String currentUrlParamText = urlParamsTextArea.getText();
                 if (!paramStr.equals(currentUrlParamText)) {
-                    String[] split = currentUrlParamText.split("&");
                     List<ParamKeyValue> currentUrlParamsKeyValueList = new ArrayList<>();
-                    for (String s : split) {
-                        String[] kvArray = s.split("=");
-                        if (kvArray.length <= 2) {
-                            String value = kvArray.length < 2 ? "" :kvArray[1].replace("\n", "");
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0], value, 2, TypeUtil.calcTypeByStringValue(value));
-                            currentUrlParamsKeyValueList.add(paramKeyValue);
+                    if(StringUtils.isNoneBlank(currentUrlParamText)){
+                        String[] split = currentUrlParamText.split("&");
+                        for (String s : split) {
+                            String[] kvArray = s.split("=");
+                            if (kvArray.length <= 2) {
+                                String value = kvArray.length < 2 ? "" :kvArray[1].replace("\n", "");
+                                ParamKeyValue paramKeyValue = new ParamKeyValue(kvArray[0], value, 2, TypeUtil.calcTypeByStringValue(value));
+                                currentUrlParamsKeyValueList.add(paramKeyValue);
+                            }
                         }
                     }
                     urlParamsKeyValueList = currentUrlParamsKeyValueList;
-                    refreshTable(urlParamsTable);
-                    //urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
+                    //refreshTable(urlParamsTable);
+                    urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
                     resizeTable(urlParamsTable);
                 }
             }
@@ -580,8 +586,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                                     new ParamKeyValue("Response status", status + " " + Constant.HttpStatusDesc.STATUS_MAP.get(status)),
                                     new ParamKeyValue("Date", DateUtil.formatDateTime(new Date()))
                             );
-                            refreshTable(responseInfoTable);
-//                            responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+                            //refreshTable(responseInfoTable);
+                            responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
                             responseStatusComboBox.setSelectedItem(status);
 
                             JBColor green = new JBColor(new Color(0, 250, 154), new Color(60, 179, 113));
@@ -597,8 +603,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                                     new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
                                     new ParamKeyValue("Error", errorMsg)
                             );
-                            refreshTable(responseInfoTable);
-//                            responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+                            //refreshTable(responseInfoTable);
+                            responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
 
                             CustomNode root = new CustomNode("Root","");
                             ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
@@ -618,8 +624,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Error", errorMsg)
                     );
-                    refreshTable(responseInfoTable);
-                    //responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+                    //refreshTable(responseInfoTable);
+                    responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
 
                     CustomNode root = new CustomNode("Root","");
                     ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
