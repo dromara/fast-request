@@ -96,6 +96,7 @@ public class CommonConfigView extends AbstractConfigurableView {
         projectNameJbList = new JBList<>(new CollectionListModel<>(viewProjectList));
         projectNameJbList.setEmptyText("Please add project name");
         ToolbarDecorator toolbarDecoratorProject = ToolbarDecorator.createDecorator(projectNameJbList);
+        toolbarDecoratorProject.setMoveUpAction(null).setMoveDownAction(null);
         toolbarDecoratorProject.setAddAction(button -> {
             //add界面
             EnvAddView envAddView = new EnvAddView("Add project", "Please add project");
@@ -133,6 +134,7 @@ public class CommonConfigView extends AbstractConfigurableView {
         envJbList = new JBList<>(new CollectionListModel<>(viewEnvList));
         envJbList.setEmptyText("Please add env");
         ToolbarDecorator toolbarDecoratorEnv = ToolbarDecorator.createDecorator(envJbList);
+        toolbarDecoratorEnv.setMoveUpAction(null).setMoveDownAction(null);
         toolbarDecoratorEnv.setAddAction(button -> {
             EnvAddView envAddView = new EnvAddView("Add env", "Please add env");
             if (envAddView.showAndGet()) {
