@@ -1695,7 +1695,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             } else if (TypeUtil.Type.Array.name().equals(type)) {
                 ArrayList<ParamKeyValue> dataList = (ArrayList<ParamKeyValue>) dataValue;
                 if (dataList.size() == 0) {
-                    return;
+                    continue;
                 }
                 LinkedHashMap<String, Object> arrayMap = new LinkedHashMap<>();
                 List<Object> list = convertArrayToMap(dataList, arrayMap);

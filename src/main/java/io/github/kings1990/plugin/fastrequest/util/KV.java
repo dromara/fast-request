@@ -147,33 +147,23 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         String deepTypeName = deepType.getCanonicalText();
                         if (deepType instanceof PsiPrimitiveType) {
                             Object defaultValue = getPrimitiveDefaultValue(deepType);
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue), comment);
-                            KV kvIn = KV.create();
-                            kvIn.set(name,paramKeyValue);
-                            list.add(kvIn);
+                            ParamKeyValue paramKeyValue = new ParamKeyValue("", defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue), comment);
+                            list.add(paramKeyValue);
                         } else if (isNormalType(deepTypeName)) {
                             if ("java.lang.String".equals(deepTypeName)) {
                                 String v = StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy);
                                 ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name(), comment);
-                                KV kvIn = KV.create();
-                                kvIn.set(name,paramKeyValue);
-                                list.add(kvIn);
+                                list.add(paramKeyValue);
                             } else {
                                 Object v = normalTypes.get(deepTypeName);
-                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.calcTypeByValue(v), comment);
-                                KV kvIn = KV.create();
-                                kvIn.set(name,paramKeyValue);
-                                list.add(kvIn);
+                                ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.Array.name(), comment);
+                                kv.set(name, paramKeyValue);
                             }
                         }  else if("org.springframework.web.multipart.MultipartFile".equals(deepTypeName)){
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
                             list.add(paramKeyValue);
                         } else {
-                            KV fields = getFields(PsiUtil.resolveClassInType(deepType));
-                            ParamKeyValue paramKeyValue = new ParamKeyValue(name, fields, 2, TypeUtil.Type.Object.name(), comment);
-                            KV kvIn = KV.create();
-                            kvIn.set(name,paramKeyValue);
-                            list.add(kvIn);
+                            list.add(getFields(PsiUtil.resolveClassInType(deepType)));
                         }
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment);
                         kv.set(name, paramKeyValue);
