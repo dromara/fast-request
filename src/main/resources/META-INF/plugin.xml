@@ -99,6 +99,7 @@
 
     <!--    2019.2-->
     <idea-version since-build="203"/>
+<!--    <idea-version since-build="192"/>-->
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
@@ -116,6 +117,7 @@
 
         <codeInsight.lineMarkerProvider language="JAVA" implementationClass="io.github.kings1990.plugin.fastrequest.view.linemarker.FastRequestLineMarkerProvider"/>
 
+        <!--兼容性处理code-->
         <notificationGroup id="toolWindowNotificationGroup" displayType="TOOL_WINDOW" />
     </extensions>
 

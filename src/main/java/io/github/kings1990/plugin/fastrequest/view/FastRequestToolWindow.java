@@ -12,10 +12,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
-import com.intellij.notification.NotificationDisplayType;
-import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.NotificationGroupManager;
-import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.diagnostic.Logger;
@@ -27,7 +24,6 @@ import com.intellij.openapi.ui.*;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
-import com.intellij.openapi.wm.ToolWindowBalloonShowOptions;
 import com.intellij.psi.JavaPsiFacade;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
@@ -35,7 +31,6 @@ import com.intellij.psi.PsiMethod;
 import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.ui.*;
 import com.intellij.ui.components.ActionLink;
-import com.intellij.ui.components.JBPanel;
 import com.intellij.ui.dualView.TreeTableView;
 import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
@@ -45,7 +40,6 @@ import com.intellij.util.messages.MessageBus;
 import com.intellij.util.ui.AbstractTableCellEditor;
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
-import com.intellij.util.ui.UI;
 import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.action.OpenConfigAction;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
@@ -238,6 +232,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         });
         managerConfigLink.setExternalLinkIcon();
         manageConfigButton = managerConfigLink;
+
+        //2020.3before
+//        manageConfigButton = new JButton();
+//        manageConfigButton.addActionListener(e->{
+//            ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Fast Request");
+//        });
     }
 
     public FastRequestToolWindow(ToolWindow toolWindow,Project project) {
@@ -2706,7 +2706,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             messageBus.connect();
             ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.ADD_REQUEST_TOPIC);
             configChangeNotifier.configChanged(true);
+            //兼容性处理code
             NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO).notify(myProject);
+            // 2020.3 before
+            //new NotificationGroup("toolWindowNotificationGroup", NotificationDisplayType.TOOL_WINDOW, true).createNotification("Success", NotificationType.INFORMATION).notify(myProject);
         }
     }
 
@@ -2718,7 +2721,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         @Override
         public void actionPerformed(@NotNull AnActionEvent e) {
             getCurlDataAndCopy();
+            //兼容性处理code
             NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO).notify(myProject);
+            // 2020.3 before
+            //new NotificationGroup("toolWindowNotificationGroup", NotificationDisplayType.TOOL_WINDOW, true).createNotification("Success", NotificationType.INFORMATION).notify(myProject);
         }
     }
 
