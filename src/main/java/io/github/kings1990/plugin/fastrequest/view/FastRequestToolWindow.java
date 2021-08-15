@@ -1129,7 +1129,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             convertJsonObjectToNode(root,JSONObject.parseObject(body));
             ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
         } else {
-            convertJsonObjectToNode(root,JSONObject.parseObject(body));
+            convertJsonArrayToNode("index ",JSONObject.parseArray(body),root);
             ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
         }
 
