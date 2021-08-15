@@ -1134,6 +1134,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         }
 
         expandAll(responseTable.getTree(), new TreePath(root), true);
+        responseTable.updateUI();
     }
 
     private void renderingPathParamsPanel() {
