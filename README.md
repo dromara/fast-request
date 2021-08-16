@@ -7,19 +7,21 @@
 
 [**Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a plugin based on springmvc that help you quickly generate **url** and **params**.It is also a http client tool.
 
-Just press the shortcut key, Plugin will give you the url and params, Then click Send Request button to complete the http request
+You only need to click the rocket icon on the left side of the method, the plugin will help you generate the method url and parameters and display in the tool, and then click Send Request to complete the API debugging in IDEA, and you can save the history request 
 
-The plugin UI references [Paw](https://paw.cloud/)
+Compared with the HTTP Client, Fast Request not only has the built-in functions of the HTTP Client, but also provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to debug the API. At the same time, various types of parameters also provide different customization methods to make it more flexible.
 
-If you think this plugin help you, please **🌟Star** project, and also welcome to provide excellent pull request
+>PURPOSE  
+>The purpose of the plug-in is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
+
+If you think this plugin help you, please **🌟Star** project, and also welcome to provide excellent recommendation
 
 ![example](./screenshot/example.gif)
 
 - document
     * [中文文档](README.zh_CN.md)
     * [English Document](README.md)
-
-QQ group:754131222  
+    
   
 ## 0.Install
 **using IDE plugin system**
