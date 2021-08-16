@@ -60,62 +60,6 @@ public class UrlReplaceTest {
     }
 
     @Test
-    public void test3() {
-        A a = new A();
-        a.setId(1);
-        B b = new B();
-        b.setName("b");
-        C c = new C();
-        c.setLevel("l1");
-        b.setcList(Lists.newArrayList(c));
-        a.setbList(Lists.newArrayList(b));
-
-        ImmutableMap<String, Object> m = ImmutableMap.<String, Object>builder().put("id", 1).put("a", JSON.toJSONString(a)).build();
-        String s = URLUtil.buildQuery(m, StandardCharsets.UTF_8);
-        System.out.println(s);
-    }
-
-    @Test
-    public void test4() {
-        JSONObject jsonObject = JSON.parseObject("{\n" +
-                "  \"dailyHoues\": {\n" +
-                "    \"day\": \"2021-06-03 22:25:34\",\n" +
-                "    \"name\": \"\",\n" +
-                "    \"id\": 0,\n" +
-                "    \"workHour\": 0.0,\n" +
-                "    \"workHourSubmit\": 0.0,\n" +
-                "    \"consumed\": 0.0,\n" +
-                "    \"exceptionFlag\": \"\",\n" +
-                "    \"type\": \"\",\n" +
-                "    \"exceptionIds\": \"\",\n" +
-                "    \"nmsMonitorList\": [\n" +
-                "      {\n" +
-                "        \"id\": 0,\n" +
-                "        \"password\": \"\",\n" +
-                "        \"sendDate\": \"\",\n" +
-                "        \"sendUrl\": \"\",\n" +
-                "        \"sendGaiyao\": \"\",\n" +
-                "        \"creation_date\": \"2021-06-03 22:25:34\",\n" +
-                "        \"created_by\": \"\",\n" +
-                "        \"last_update_date\": \"2021-06-03 22:25:34\",\n" +
-                "        \"last_update_by\": \"\",\n" +
-                "        \"a\": [\n" +
-                "          {\n" +
-                "            \"b\": 1,\n" +
-                "            \"c\": 2\n" +
-                "          }\n" +
-                "        ]\n" +
-                "      }\n" +
-                "    ]\n" +
-                "  }\n" +
-                "}");
-        CustomNode node1= new CustomNode("Root","Root");
-        node1.setAllowsChildren(true);
-        CustomNode node = convertJsonObjectToNode(node1,jsonObject);
-        System.out.println(node);
-    }
-
-    @Test
     public void test5() {
         System.out.println(RandomUtil.randomString(5));
         System.out.println(RandomUtil.randomString(0));
