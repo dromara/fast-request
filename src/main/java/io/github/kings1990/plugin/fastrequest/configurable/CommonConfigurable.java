@@ -26,7 +26,7 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
 
     @Override
     public String getDisplayName() {
-        return "Fast Request";
+        return "Restful Fast Request";
     }
 
     @Override
@@ -87,11 +87,12 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
         //send message to change param
         DataContext dataContext = DataManager.getInstance().getDataContext(view.getComponent());
         Project project = dataContext.getData(LangDataKeys.PROJECT);
-        assert project != null;
-        MessageBus messageBus = project.getMessageBus();
-        messageBus.connect();
-        ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.ENV_PROJECT_CHANGE_TOPIC);
-        configChangeNotifier.configChanged(true);
+        if (project != null) {
+            MessageBus messageBus = project.getMessageBus();
+            messageBus.connect();
+            ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.ENV_PROJECT_CHANGE_TOPIC);
+            configChangeNotifier.configChanged(true);
+        }
     }
 
     @Override
