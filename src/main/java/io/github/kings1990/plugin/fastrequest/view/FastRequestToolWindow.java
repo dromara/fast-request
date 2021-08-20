@@ -35,6 +35,7 @@ import com.intellij.ui.dualView.TreeTableView;
 import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
 import com.intellij.ui.treeStructure.treetable.TreeColumnInfo;
+import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.util.PsiNavigateUtil;
 import com.intellij.util.messages.MessageBus;
 import com.intellij.util.ui.AbstractTableCellEditor;
@@ -120,6 +121,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JPanel titlePanel;
     private JLabel warnLabel1;
     private JLabel warnLabel2;
+    private JTabbedPane bodyTabbedPane;
     private JScrollPane responseBodyScrollPane;
 
     private JBTable urlParamsTable;
@@ -506,7 +508,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     String sendUrl = urlTextField.getText();
                     if((StringUtils.isEmpty(sendUrl) && StringUtils.isEmpty(domain))|| !UrlUtil.isURL(sendUrl)){
                         responseTextArea.setText("Correct url required");
-                        tabbedPane.setSelectedIndex(6);
+                        tabbedPane.setSelectedIndex(4);
                         responseTabbedPanel.setSelectedIndex(2);
                         sendButton.setEnabled(true);
                         return;
@@ -561,7 +563,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             long start = System.currentTimeMillis();
                             HttpResponse response = request.execute();
                             long end = System.currentTimeMillis();
-                            tabbedPane.setSelectedIndex(6);
+                            tabbedPane.setSelectedIndex(4);
                             int status = response.getStatus();
                             String body = response.body();
                             if (JsonUtil.isJSON2(body)) {
@@ -598,7 +600,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             responseTextArea.setText(errorMsg);
                             prettyResponseTextArea.setText("");
                             responseStatusComboBox.setSelectedItem(0);
-                            responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60),new Color(178, 34, 34)));
+                            responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60), new Color(178, 34, 34)));
                             responseInfoParamsKeyValueList = Lists.newArrayList(
                                     new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
                                     new ParamKeyValue("Error", errorMsg)
@@ -606,9 +608,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             //refreshTable(responseInfoTable);
                             responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
 
-                            CustomNode root = new CustomNode("Root","");
-                            ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
-                            tabbedPane.setSelectedIndex(6);
+                            CustomNode root = new CustomNode("Root", "");
+                            ((DefaultTreeModel) responseTable.getTableModel()).setRoot(root);
+                            tabbedPane.setSelectedIndex(4);
                             responseTabbedPanel.setSelectedIndex(2);
                         }
                     });
@@ -620,16 +622,16 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     responseTextArea.setText(errorMsg);
                     prettyResponseTextArea.setText("");
                     responseStatusComboBox.setSelectedItem(0);
-                    responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60),new Color(178, 34, 34)));
+                    responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60), new Color(178, 34, 34)));
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Error", errorMsg)
                     );
                     //refreshTable(responseInfoTable);
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
 
-                    CustomNode root = new CustomNode("Root","");
-                    ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
-                    tabbedPane.setSelectedIndex(6);
+                    CustomNode root = new CustomNode("Root", "");
+                    ((DefaultTreeModel) responseTable.getTableModel()).setRoot(root);
+                    tabbedPane.setSelectedIndex(4);
                     responseTabbedPanel.setSelectedIndex(2);
                 }
                 sendButton.setEnabled(true);
@@ -800,27 +802,21 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 //json
                 jsonParamsTextArea.setText(bodyKeyValueListJson);
                 tabbedPane.setSelectedIndex(3);
+                bodyTabbedPane.setSelectedIndex(0);
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
             } else {
                 boolean isMultipart = multipartKeyValueList.stream().anyMatch(q -> TypeUtil.Type.File.name().equals(q.getType()));
-                if(isMultipart){
-                    if (urlParamsKeyValueListJson.isEmpty()) {
-                        tabbedPane.setSelectedIndex(2);
-                    } else {
-                        tabbedPane.setSelectedIndex(5);
-                    }
+                if(isMultipart) {
+                    tabbedPane.setSelectedIndex(3);
+                    bodyTabbedPane.setSelectedIndex(2);
                     urlEncodedTextArea.setText("");
                     urlEncodedKeyValueList = new ArrayList<>();
                 } else {
                     //urlencoded
                     urlEncodedTextArea.setText(urlEncodedKeyValueListText);
-                    if (urlParamsKeyValueListJson.isEmpty()) {
-                        tabbedPane.setSelectedIndex(2);
-                    } else {
-                        tabbedPane.setSelectedIndex(4);
-                    }
-                    urlEncodedTabbedPane.setSelectedIndex(0);
+                    tabbedPane.setSelectedIndex(3);
+                    bodyTabbedPane.setSelectedIndex(1);
                 }
                 //json设置为空
                 jsonParamsTextArea.setText("");
@@ -893,12 +889,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         if ("GET".equals(methodType)) {
             urlParamsTextArea.setText(requestParamStr);
-            if(pathParamsKeyValueList.isEmpty()){
+            if (pathParamsKeyValueList.isEmpty()) {
                 tabbedPane.setSelectedIndex(2);
+                urlParamsTabbedPane.setSelectedIndex(0);
             } else {
                 tabbedPane.setSelectedIndex(1);
             }
-            urlParamsTabbedPane.setSelectedIndex(0);
             //get请求urlencoded param参数为空
             urlEncodedKeyValueList = new ArrayList<>();
             urlEncodedTextArea.setText("");
@@ -908,31 +904,24 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             if (!bodyParamMap.isEmpty()) {
                 //json
                 tabbedPane.setSelectedIndex(3);
+                bodyTabbedPane.setSelectedIndex(0);
                 jsonParamsTextArea.setText(bodyParamMapToJson());
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
             } else {
                 urlEncodedKeyValueList = conventMapToList(requestParamMap);
                 boolean isMultipart = urlEncodedKeyValueList.stream().anyMatch(q -> TypeUtil.Type.File.name().equals(q.getType()));
-                if(isMultipart){
-                    if (requestParamStr.isEmpty()) {
-                        tabbedPane.setSelectedIndex(2);
-                    } else {
-                        tabbedPane.setSelectedIndex(5);
-                    }
+                if(isMultipart) {
+                    tabbedPane.setSelectedIndex(3);
+                    bodyTabbedPane.setSelectedIndex(2);
                     multipartKeyValueList = new ArrayList<>(urlEncodedKeyValueList);
                     urlEncodedTextArea.setText("");
                     urlEncodedKeyValueList = new ArrayList<>();
                 } else {
                     //urlencoded
                     urlEncodedTextArea.setText(requestParamStr);
-                    if(!pathParamsKeyValueList.isEmpty()){
-                        tabbedPane.setSelectedIndex(1);
-                    } else if (requestParamStr.isEmpty()) {
-                        tabbedPane.setSelectedIndex(2);
-                    } else {
-                        tabbedPane.setSelectedIndex(4);
-                    }
+                    tabbedPane.setSelectedIndex(3);
+                    bodyTabbedPane.setSelectedIndex(1);
                     urlEncodedTabbedPane.setSelectedIndex(0);
                     urlEncodedKeyValueList = conventMapToList(requestParamMap);
                 }

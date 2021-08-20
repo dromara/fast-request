@@ -9,7 +9,7 @@ import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.util.KV;
 import io.github.kings1990.plugin.fastrequest.view.AbstractConfigurableView;
-import io.github.kings1990.plugin.fastrequest.view.sub.DataMappingConfigView;
+import io.github.kings1990.plugin.fastrequest.view.sub.DataMappingConfigViewNew;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 
 public class DataMappingConfigurable extends AbstractConfigConfigurable {
     protected FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
-    private DataMappingConfigView view = new DataMappingConfigView(config);
+    private DataMappingConfigViewNew view;
 
     @Override
     public AbstractConfigurableView getView() {
@@ -28,6 +28,7 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
     @Override
     public @Nullable
     JComponent createComponent() {
+        view = new DataMappingConfigViewNew(config);
         return view.getComponent();
     }
 
