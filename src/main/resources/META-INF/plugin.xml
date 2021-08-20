@@ -115,9 +115,12 @@
         <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestComponent" order="first"/>
         <projectService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent"/>
         <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService"/>
-        <applicationConfigurable id="p" displayName="Fast Request" instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
-            <configurable parentId="p" instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>
-            <configurable parentId="p" instance="io.github.kings1990.plugin.fastrequest.configurable.OtherConfigConfigurable"/>
+        <applicationConfigurable id="p" displayName="Restful Fast Request"
+                                 instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
+            <configurable parentId="p"
+                          instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>
+            <configurable parentId="p"
+                          instance="io.github.kings1990.plugin.fastrequest.configurable.OtherConfigConfigurable"/>
         </applicationConfigurable>
         <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest" factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory" secondary="false"/>
 

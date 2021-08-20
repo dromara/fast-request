@@ -136,11 +136,11 @@ public class UrlReplaceTest {
         }
     }
 
-    private enum SearchTypeEnum{
+    private enum SearchTypeEnum {
         name,
         url;
 
-        public static SearchTypeEnum fromValue(String name){
+        public static SearchTypeEnum fromValue(String name) {
             for (SearchTypeEnum v : values()) {
                 if (v.name().equals(name)) {
                     return v;
@@ -150,25 +150,25 @@ public class UrlReplaceTest {
         }
     }
 
-    private static Map<String,String> getQuery(String search){
+    private static Map<String, String> getQuery(String search) {
         String[] split = search.split("\\|");
         StringBuilder rule = new StringBuilder();
         String query = "";
         for (String s : split) {
             s = s.trim();
-            if(SearchTypeEnum.fromValue(s) != null && search.indexOf("|",search.indexOf(s) + 1) != -1){
+            if (SearchTypeEnum.fromValue(s) != null && search.indexOf("|", search.indexOf(s) + 1) != -1) {
                 rule.append(s).append(",");
             } else {
                 query = s;
             }
         }
-        return ImmutableMap.<String,String>builder().put("query",query).put("rule",rule.toString()).build();
+        return ImmutableMap.<String, String>builder().put("query", query).put("rule", rule.toString()).build();
     }
 
     @Test
-    public void test6(){
+    public void test6() {
 
-            System.out.println(getQuery("name| a "));
+        System.out.println(getQuery("name| a "));
 
 
     }
