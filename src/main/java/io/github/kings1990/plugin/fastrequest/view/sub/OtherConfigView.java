@@ -5,40 +5,49 @@ import com.google.common.collect.Lists;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.ToolbarDecorator;
 import com.intellij.ui.table.JBTable;
-import com.intellij.util.ui.ColumnInfo;
-import com.intellij.util.ui.ListTableModel;
+import com.intellij.util.ui.*;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
+import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.view.AbstractConfigurableView;
 import io.github.kings1990.plugin.fastrequest.view.inner.UrlReplaceAddView;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class OtherConfigView extends AbstractConfigurableView {
-    private JPanel panel;
-    private JPanel urlReplacePanel;
+
     private List<DataMapping> viewUrlReplaceMappingList;
     private JBTable urlReplaceTable;
     private FastRequestConfiguration configOld;
 
+
     public OtherConfigView(FastRequestConfiguration config) {
         super(config);
+        setLayout(new BorderLayout());
+        add(createMainComponent());
     }
 
     @Override
     public JComponent getComponent() {
+        return this;
+    }
+
+    private JComponent createMainComponent() {
+        JPanel panel = new JPanel(new GridBagLayout());
+        GridBag gb = new GridBag()
+                .setDefaultInsets(JBUI.insets(0, 0, 4, 10))
+                .setDefaultWeightX(1)
+                .setDefaultFill(GridBagConstraints.HORIZONTAL);
+        panel.add(createMyTablePanel(), gb.nextLine().fillCell().weighty(1.0));
         return panel;
     }
 
-    private void createUIComponents() {
-        renderingUrlReplacePanel();
-    }
-
-    private void renderingUrlReplacePanel() {
+    private JPanel createMyTablePanel() {
         FastRequestConfiguration configOld = JSONObject.parseObject(JSONObject.toJSONString(config), FastRequestConfiguration.class);
         viewUrlReplaceMappingList = configOld.getUrlReplaceMappingList();
         if (viewUrlReplaceMappingList == null) {
@@ -47,7 +56,7 @@ public class OtherConfigView extends AbstractConfigurableView {
 
         JBTable table = createTable();
         table.getEmptyText().setText("Target:${api-module}  replacement:base");
-        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);
+        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table, null);
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);
 
@@ -69,8 +78,10 @@ public class OtherConfigView extends AbstractConfigurableView {
             table.setModel(new ListTableModel<>(getColumnInfo(), viewUrlReplaceMappingList));
             setUrlReplaceTable(table);
         });
-
-        urlReplacePanel = toolbarDecorator.createPanel();
+        JPanel tablePanel = toolbarDecorator.createPanel();
+        return JBUI.Panels.simplePanel(UI.PanelFactory.panel(tablePanel)
+                .withLabel(MyResourceBundleUtil.getKey("UrlReplaceConfig")).moveLabelOnTop()
+                .withComment(MyResourceBundleUtil.getKey("OtherConfigTitle1") + " " + MyResourceBundleUtil.getKey("OtherConfigTitle2"), false).resizeY(true).createPanel());
     }
 
     public JBTable createTable() {

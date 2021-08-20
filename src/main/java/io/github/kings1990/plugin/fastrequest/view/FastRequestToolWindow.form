@@ -29,7 +29,7 @@
               <toolTipText value=""/>
             </properties>
           </component>
-          <grid id="1b906" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="1b906" layout-manager="GridLayoutManager" row-count="1" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -46,21 +46,6 @@
                 <properties>
                   <hideActionText value="false"/>
                   <text value=""/>
-                </properties>
-              </component>
-              <component id="27e19" class="javax.swing.JComboBox" binding="methodTypeComboBox">
-                <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="70" height="-1"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <model>
-                    <item value="GET"/>
-                    <item value="POST"/>
-                    <item value="DELETE"/>
-                    <item value="PUT"/>
-                  </model>
                 </properties>
               </component>
               <component id="cc153" class="javax.swing.JTextField" binding="urlTextField">
@@ -84,9 +69,24 @@
                   <model/>
                 </properties>
               </component>
+              <component id="27e19" class="javax.swing.JComboBox" binding="methodTypeComboBox">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="70" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="GET"/>
+                    <item value="POST"/>
+                    <item value="DELETE"/>
+                    <item value="PUT"/>
+                  </model>
+                </properties>
+              </component>
             </children>
           </grid>
-          <grid id="3283c" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="3283c" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -246,66 +246,75 @@
               </scrollpane>
             </children>
           </tabbedpane>
-          <scrollpane id="32fc8">
+          <tabbedpane id="efb61" binding="bodyTabbedPane">
             <constraints>
-              <tabbedpane title="JSON"/>
+              <tabbedpane title="Body"/>
             </constraints>
             <properties/>
             <border type="none"/>
             <children>
-              <component id="58766" class="javax.swing.JTextArea" binding="jsonParamsTextArea">
-                <constraints/>
-                <properties/>
-              </component>
-            </children>
-          </scrollpane>
-          <tabbedpane id="9ade5" binding="urlEncodedTabbedPane">
-            <constraints>
-              <tabbedpane title="Form URL-Encoded"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children>
-              <grid id="ff779" binding="urlEncodedTablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
+              <scrollpane id="32fc8">
                 <constraints>
-                  <tabbedpane title="Table"/>
-                </constraints>
-                <properties/>
-                <border type="none"/>
-                <children/>
-              </grid>
-              <scrollpane id="a971a" binding="urlEncodedTextPanel">
-                <constraints>
-                  <tabbedpane title="Text"/>
+                  <tabbedpane title="JSON"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="928fa" class="javax.swing.JTextArea" binding="urlEncodedTextArea">
+                  <component id="58766" class="javax.swing.JTextArea" binding="jsonParamsTextArea">
                     <constraints/>
                     <properties/>
                   </component>
                 </children>
               </scrollpane>
-            </children>
-          </tabbedpane>
-          <tabbedpane id="c15cb" binding="multipartTabbedPane">
-            <constraints>
-              <tabbedpane title="Multipart"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children>
-              <grid id="53b4e" binding="multipartTablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
+              <tabbedpane id="9ade5" binding="urlEncodedTabbedPane">
                 <constraints>
-                  <tabbedpane title="Table"/>
+                  <tabbedpane title="Form URL-Encoded"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
-                <children/>
-              </grid>
+                <children>
+                  <grid id="ff779" binding="urlEncodedTablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <tabbedpane title="Table"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                  <scrollpane id="a971a" binding="urlEncodedTextPanel">
+                    <constraints>
+                      <tabbedpane title="Text"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="928fa" class="javax.swing.JTextArea" binding="urlEncodedTextArea">
+                        <constraints/>
+                        <properties/>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </tabbedpane>
+              <tabbedpane id="c15cb" binding="multipartTabbedPane">
+                <constraints>
+                  <tabbedpane title="Multipart"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="53b4e" binding="multipartTablePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <tabbedpane title="Table"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </tabbedpane>
             </children>
           </tabbedpane>
           <tabbedpane id="83e85" binding="responseTabbedPanel">

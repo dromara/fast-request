@@ -1,25 +1,38 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
+import com.google.common.collect.ImmutableMap;
+import com.intellij.icons.AllIcons;
+import com.intellij.ide.DataManager;
 import com.intellij.ide.HelpTooltip;
+import com.intellij.ide.plugins.newui.ListPluginComponent;
+import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
+import com.intellij.openapi.ui.popup.JBPopup;
+import com.intellij.openapi.ui.popup.JBPopupListener;
+import com.intellij.openapi.ui.popup.LightweightWindowEvent;
+import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.psi.JavaPsiFacade;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.search.GlobalSearchScope;
-import com.intellij.ui.ColoredTreeCellRenderer;
-import com.intellij.ui.GotItTooltip;
-import com.intellij.ui.ToolbarDecorator;
+import com.intellij.ui.*;
+import com.intellij.ui.components.JBTextField;
+import com.intellij.ui.components.fields.ExtendableTextComponent;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.dualView.TreeTableView;
+import com.intellij.ui.popup.PopupFactoryImpl;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
 import com.intellij.ui.treeStructure.treetable.TreeColumnInfo;
 import com.intellij.ui.treeStructure.treetable.TreeTableTree;
+import com.intellij.util.BooleanFunction;
 import com.intellij.util.PsiNavigateUtil;
 import com.intellij.util.messages.MessageBus;
 import com.intellij.util.ui.ColumnInfo;
+import com.intellij.util.ui.StatusText;
 import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
@@ -31,6 +44,7 @@ import io.github.kings1990.plugin.fastrequest.view.model.CollectionCustomNode;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.IteratorUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -40,6 +54,8 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeCellRenderer;
 import javax.swing.tree.TreeNode;
@@ -48,56 +64,122 @@ import java.awt.*;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.DnDConstants;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Consumer;
 
 public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
     private Project myProject;
     private JPanel panel;
-    private JTextField searchTextField;
     private JPanel collectionPanel;
-    private JLabel urlNameLabel;
     private JLabel helpLabel;
+    private JPanel searchPanel;
     private TreeTableView collectionTable;
     private CollectionConfiguration.CollectionDetail rootDetail;
-
+    private DefaultActionGroup myInstalledSearchGroup;
+    private Consumer<SearchOptionAction> mySearchCallback;
+    private SearchTextField jbSearchPanelText;
 
     public FastRequestCollectionToolWindow(Project project, ToolWindow toolWindow) {
         super(true, false);
         this.setContent(panel);
         this.myProject = project;
-        urlNameLabel.setIcon(PluginIcons.ICON_FILTER);
 
         helpLabel.setIcon(PluginIcons.ICON_CONTEXT_HELP);
         new HelpTooltip().setDescription(MyResourceBundleUtil.getKey("CollectionSearchHelp")).installOn(helpLabel);
 
         refresh();
 
-        searchTextField.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent documentEvent) {
-                filterRequest();
-            }
+        myInstalledSearchGroup = new DefaultActionGroup();
+        for (SearchTypeEnum option : SearchTypeEnum.values()) {
+            myInstalledSearchGroup.add(new SearchOptionAction(option));
+        }
 
-            @Override
-            public void removeUpdate(DocumentEvent documentEvent) {
-                filterRequest();
+        mySearchCallback = updateAction -> {
+            String query = jbSearchPanelText.getText();
+            String rule = "";
+            if (updateAction.myState) {
+                rule = updateAction.getQuery();
+            } else {
+                query = query.replace(updateAction.getQuery(), "");
             }
-
-            @Override
-            public void changedUpdate(DocumentEvent documentEvent) {
-                filterRequest();
-            }
-        });
-
+            jbSearchPanelText.setText(rule + query);
+            filterRequest();
+        };
     }
 
     private void createUIComponents() {
         renderingCollectionTablePanel();
+        searchPanel = new SearchTextField(true);
+        searchPanel.setFocusable(false);
+        jbSearchPanelText = (SearchTextField) this.searchPanel;
+        JBTextField searchTextField = jbSearchPanelText.getTextEditor();
+        searchTextField.putClientProperty("StatusVisibleFunction", (BooleanFunction<JBTextField>) field -> field.getText().isEmpty());
+        StatusText emptyText = searchTextField.getEmptyText();
+        emptyText.appendText("Search by name or url ->", new SimpleTextAttributes(SimpleTextAttributes.STYLE_PLAIN, ListPluginComponent.GRAY_COLOR));
+        searchTextField.putClientProperty("search.extension", ExtendableTextComponent.Extension
+                .create(AllIcons.Actions.More, AllIcons.Actions.More, "Search options",
+                        () -> showRightBottomPopup(searchTextField, "By", myInstalledSearchGroup)));
+        searchTextField.putClientProperty("JTextField.variant", null);
+        searchTextField.putClientProperty("JTextField.variant", "search");
+        searchTextField.getDocument().addDocumentListener(new DelayedDocumentListener());
+    }
+
+    private class DelayedDocumentListener implements DocumentListener {
+
+        private final Timer timer;
+
+        public DelayedDocumentListener() {
+            timer = new Timer(500, e -> filterRequest());
+            timer.setRepeats(false);
+        }
+
+        @Override
+        public void insertUpdate(DocumentEvent e) {
+            timer.restart();
+        }
+
+        @Override
+        public void removeUpdate(DocumentEvent e) {
+            timer.restart();
+        }
+
+        @Override
+        public void changedUpdate(DocumentEvent e) {
+            timer.restart();
+        }
+
+    }
+
+    private static class GroupByActionGroup extends DefaultActionGroup implements CheckedActionGroup {
+    }
+
+    private static void showRightBottomPopup(@NotNull Component component, @NotNull @Nls String title, @NotNull ActionGroup group) {
+        DefaultActionGroup actions = new GroupByActionGroup();
+        actions.addSeparator("  " + title);
+        actions.addAll(group);
+
+        DataContext context = DataManager.getInstance().getDataContext(component);
+
+        JBPopup popup = new PopupFactoryImpl.ActionGroupPopup(null, actions, context, false, false, false, true, null, -1, null, null);
+        popup.addListener(new JBPopupListener() {
+            @Override
+            public void beforeShown(@NotNull LightweightWindowEvent event) {
+                Point location = component.getLocationOnScreen();
+                Dimension size = popup.getSize();
+                popup.setLocation(new Point(location.x + component.getWidth() - size.width, location.y + component.getHeight()));
+            }
+        });
+        popup.show(component);
     }
 
     public void refresh() {
@@ -105,9 +187,9 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         assert config != null;
         rootDetail = config.getDetail();
         CollectionCustomNode root = convertToNode(rootDetail);
-        ((DefaultTreeModel)collectionTable.getTableModel()).setRoot(root);
+        ((DefaultTreeModel) collectionTable.getTableModel()).setRoot(root);
         TreeTableTree tree = collectionTable.getTree();
-        SwingUtil.expandAll(tree,new TreePath(root),true);
+        SwingUtil.expandAll(tree, new TreePath(root), true);
 
         TableColumnModel columnModel = collectionTable.getColumnModel();
 
@@ -115,46 +197,94 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         columnModel.getColumn(2).setPreferredWidth(80);
     }
 
-
-
-    private void filterRequest(){
+    private void filterRequest(String query, String rule) {
         CollectionConfiguration config = FastRequestCollectionComponent.getInstance(myProject).getState();
         assert config != null;
         CollectionConfiguration.CollectionDetail detail = config.getDetail();
-        String search = searchTextField.getText();
         CollectionCustomNode root = (CollectionCustomNode) collectionTable.getTableModel().getRoot();
-        if(StringUtils.isBlank(search)){
+
+
+        if (StringUtils.isBlank(query)) {
             root = convertToNode(rootDetail);
-            ((DefaultTreeModel)collectionTable.getTableModel()).setRoot(root);
+            ((DefaultTreeModel) collectionTable.getTableModel()).setRoot(root);
         } else {
-            CollectionCustomNode node = new CollectionCustomNode("0","Root",1);
-            convertToNode(node,rootDetail.getChildList());
-            filterNode(node,search);
-            ((DefaultTreeModel)collectionTable.getTableModel()).setRoot(node);
-            SwingUtil.expandAll(collectionTable.getTree(),new TreePath(node),true);
+            CollectionCustomNode node = new CollectionCustomNode("0", "Root", 1);
+            convertToNode(node, rootDetail.getChildList());
+            filterNode(node, query, rule);
+            ((DefaultTreeModel) collectionTable.getTableModel()).setRoot(node);
+            SwingUtil.expandAll(collectionTable.getTree(), new TreePath(node), true);
         }
-        SwingUtil.expandAll(collectionTable.getTree(),new TreePath(root),true);
+        SwingUtil.expandAll(collectionTable.getTree(), new TreePath(root), true);
     }
 
-    private boolean filterNode(CollectionCustomNode node,String search){
-        if(node.isRoot()){
+    private static Map<String, String> getQuery(String search) {
+        String[] split = search.split("\\|");
+        StringBuilder rule = new StringBuilder();
+        String query = "";
+        for (String s : split) {
+            s = s.trim();
+            if (SearchTypeEnum.fromValue(s) != null && search.indexOf("|", search.indexOf(s) + 1) != -1) {
+                rule.append(s).append(",");
+            } else {
+                query = s;
+            }
+        }
+        return ImmutableMap.<String, String>builder().put("query", query).put("rule", rule.toString()).build();
+    }
+
+    private void filterRequest() {
+        CollectionConfiguration config = FastRequestCollectionComponent.getInstance(myProject).getState();
+        assert config != null;
+        CollectionConfiguration.CollectionDetail detail = config.getDetail();
+        String search = ((SearchTextField) searchPanel).getText();
+        CollectionCustomNode root = (CollectionCustomNode) collectionTable.getTableModel().getRoot();
+        if (StringUtils.isBlank(search)) {
+            root = convertToNode(rootDetail);
+            ((DefaultTreeModel) collectionTable.getTableModel()).setRoot(root);
+        } else {
+            Map<String, String> queryMap = getQuery(search);
+            String query = queryMap.get("query");
+            String rule = queryMap.get("rule");
+            CollectionCustomNode node = new CollectionCustomNode("0", "Root", 1);
+            convertToNode(node, rootDetail.getChildList());
+            filterNode(node, query, rule);
+            ((DefaultTreeModel) collectionTable.getTableModel()).setRoot(node);
+            SwingUtil.expandAll(collectionTable.getTree(), new TreePath(node), true);
+        }
+        SwingUtil.expandAll(collectionTable.getTree(), new TreePath(root), true);
+    }
+
+    private boolean filterNode(CollectionCustomNode node, String search, String rule) {
+        if (node.isRoot()) {
             ArrayList<CollectionCustomNode> nodeList = (ArrayList<CollectionCustomNode>) IteratorUtils.toList(node.children().asIterator());
             for (CollectionCustomNode n : nodeList) {
-                filterNode(n,search);
+                filterNode(n, search, rule);
             }
         } else {
-            if(node.getChildCount() == 0){
-                if(!node.getSearchText().toLowerCase().contains(search.toLowerCase())){
+            if (node.getChildCount() == 0) {
+                String targetText = null;
+
+                if (rule.contains(SearchTypeEnum.name.name())) {
+                    targetText += node.getName();
+                }
+                if (rule.contains(SearchTypeEnum.url.name())) {
+                    targetText += node.getUrl();
+                }
+                if (rule.isBlank()) {
+                    targetText = node.getSearchText();
+                }
+                if (!targetText.toLowerCase().contains(search.toLowerCase())) {
                     node.removeFromParent();
                     return true;
                 } else {
                     return false;
                 }
+
             } else {
                 ArrayList<CollectionCustomNode> nodeList = (ArrayList<CollectionCustomNode>) IteratorUtils.toList(node.children().asIterator());
                 boolean removeGroup = true;
                 for (CollectionCustomNode n : nodeList) {
-                    removeGroup &= filterNode(n,search);
+                    removeGroup &= filterNode(n, search, rule);
                 }
                 if(removeGroup){
                     node.removeFromParent();
@@ -570,8 +700,47 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         }
     }
 
-    private void refreshTable(){
+    private void refreshTable() {
         SwingUtilities.invokeLater(() -> collectionTable.updateUI());
     }
 
+    private enum SearchTypeEnum {
+        name,
+        url;
+
+        public static SearchTypeEnum fromValue(String name) {
+            for (SearchTypeEnum v : values()) {
+                if (v.name().equals(name)) {
+                    return v;
+                }
+            }
+            return null;
+        }
+    }
+
+    private final class SearchOptionAction extends ToggleAction implements DumbAware {
+        private final SearchTypeEnum myOption;
+        private boolean myState;
+
+        private SearchOptionAction(@NotNull SearchTypeEnum option) {
+            super(option.name());
+            myOption = option;
+        }
+
+        @Override
+        public boolean isSelected(@NotNull AnActionEvent e) {
+            return myState;
+        }
+
+        @Override
+        public void setSelected(@NotNull AnActionEvent e, boolean state) {
+            myState = state;
+            mySearchCallback.accept(this);
+        }
+
+        @NotNull
+        public String getQuery() {
+            return StringUtil.decapitalize(myOption.name() + "|");
+        }
+    }
 }

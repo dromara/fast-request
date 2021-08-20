@@ -13,7 +13,7 @@ public abstract class AbstractConfigConfigurable implements Configurable {
 
     @Override
     public @Nullable JComponent createComponent() {
-        return getView().getComponent();
+        return getView();
     }
 
     public abstract AbstractConfigurableView getView();

@@ -4,8 +4,9 @@ import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 
 import javax.swing.*;
 
-public abstract class AbstractConfigurableView {
+public abstract class AbstractConfigurableView extends JPanel {
     protected FastRequestConfiguration config;
+
     public abstract JComponent getComponent();
 
     public AbstractConfigurableView(FastRequestConfiguration config) {
