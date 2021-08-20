@@ -1,18 +1,15 @@
 package test;
 
 import cn.hutool.core.util.RandomUtil;
-import cn.hutool.core.util.URLUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.swing.tree.DefaultMutableTreeNode;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.HashMap;
@@ -137,6 +134,43 @@ public class UrlReplaceTest {
         public void setValue(Object value) {
             this.value = value;
         }
+    }
+
+    private enum SearchTypeEnum{
+        name,
+        url;
+
+        public static SearchTypeEnum fromValue(String name){
+            for (SearchTypeEnum v : values()) {
+                if (v.name().equals(name)) {
+                    return v;
+                }
+            }
+            return null;
+        }
+    }
+
+    private static Map<String,String> getQuery(String search){
+        String[] split = search.split("\\|");
+        StringBuilder rule = new StringBuilder();
+        String query = "";
+        for (String s : split) {
+            s = s.trim();
+            if(SearchTypeEnum.fromValue(s) != null && search.indexOf("|",search.indexOf(s) + 1) != -1){
+                rule.append(s).append(",");
+            } else {
+                query = s;
+            }
+        }
+        return ImmutableMap.<String,String>builder().put("query",query).put("rule",rule.toString()).build();
+    }
+
+    @Test
+    public void test6(){
+
+            System.out.println(getQuery("name| a "));
+
+
     }
 
 
