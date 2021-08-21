@@ -31,6 +31,7 @@ public class TypeUtil {
             case "java.time.LocalDate":
             case "java.time.LocalTime":
             case "java.time.LocalDateTime":
+            case "java.time.YearMonth":
                 return Type.String.name();
             case "List":
                 return Type.Array.name();
