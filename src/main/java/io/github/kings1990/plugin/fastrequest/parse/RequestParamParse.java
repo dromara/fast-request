@@ -12,10 +12,7 @@ import io.github.kings1990.plugin.fastrequest.util.TypeUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
+import java.time.*;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -23,11 +20,12 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class RequestParamParse extends AbstractParamParse {
+    DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     @Override
     public LinkedHashMap<String, Object> parseParam(FastRequestConfiguration config, List<ParamNameType> paramNameTypeList) {
         List<DataMapping> customDataMappingList = config.getCustomDataMappingList();
         List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         List<ParamNameType> requestParamList = paramNameTypeList.stream().filter(q -> q.getParseType() == 2).collect(Collectors.toList());
         LinkedHashMap<String, Object> nameValueMap = new LinkedHashMap<>();
         int randomStringLength = config.getRandomStringLength();
@@ -77,52 +75,63 @@ public class RequestParamParse extends AbstractParamParse {
             if (dataMapping != null) {
                 Object value = dataMapping.getValue();
                 String calcType = TypeUtil.calcType(type);
-                if(arrayFlag || listFlag){
-                    ParamKeyValue paramKeyValue = new ParamKeyValue(name+"[]", value, 2, calcType);
-                    nameValueMap.put(name,paramKeyValue);
+                if (arrayFlag || listFlag) {
+                    ParamKeyValue paramKeyValue = new ParamKeyValue(name + "[]", value, 2, calcType);
+                    nameValueMap.put(name, paramKeyValue);
                 } else {
                     nameValueMap.put(name, new ParamKeyValue(name, value, 2, calcType));
                 }
                 continue;
             }
-            if("org.springframework.web.multipart.MultipartFile".equals(paramNameType.getType())){
-                nameValueMap.put(name, new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name()));
-                continue;
-            }
-            if("java.util.Date".equals(paramNameType.getType())){
-                nameValueMap.put(name, new ParamKeyValue(name, df.format(new Date()), 2, TypeUtil.Type.String.name()));
-                continue;
-            }
-            if("java.sql.Date".equals(paramNameType.getType())){
-                nameValueMap.put(name, new ParamKeyValue(name, df.format(new Date()), 2, TypeUtil.Type.String.name()));
-                continue;
-            }
-            if("java.sql.Timestamp".equals(paramNameType.getType())){
-                nameValueMap.put(name, new ParamKeyValue(name, System.currentTimeMillis(), 2, TypeUtil.Type.String.name()));
-                continue;
-            }
-            if("java.time.LocalDate".equals(paramNameType.getType())){
-                nameValueMap.put(name, new ParamKeyValue(name, LocalDate.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
-                continue;
-            }
-            if("java.time.LocalTime".equals(paramNameType.getType())){
-                nameValueMap.put(name, new ParamKeyValue(name, LocalTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
-                continue;
-            }
-            if("java.time.LocalDateTime".equals(paramNameType.getType())){
-                nameValueMap.put(name, new ParamKeyValue(name, LocalDateTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
-                continue;
-            }
+            //特殊参数处理
+            if (dealTypeParams(nameValueMap, paramNameType, name)) continue;
 
             //json解析
             KV kv = KV.getFields(paramNameType.getPsiClass());
-            String json = kv.toPrettyJson();
-            Map parse = JSON.parseObject(json, Map.class);
+            //    String json = kv.toPrettyJson();
+            //   Map parse = JSON.parseObject(json, Map.class);
 //            String queryParam = URLUtil.buildQuery(parse, null);
-            nameValueMap.put(name, new ParamKeyValue(name, kv, 1,TypeUtil.Type.Object.name()));
-
+            nameValueMap.put(name, new ParamKeyValue(name, kv, 1, TypeUtil.Type.Object.name()));
         }
 
         return nameValueMap;
+    }
+
+    private boolean dealTypeParams(LinkedHashMap<String, Object> nameValueMap, ParamNameType paramNameType, String name) {
+        if ("org.springframework.web.multipart.MultipartFile".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name()));
+            return true;
+        }
+        if ("java.util.Date".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, df.format(new Date()), 2, TypeUtil.Type.String.name()));
+            return true;
+        }
+        if ("java.sql.Date".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, df.format(new Date()), 2, TypeUtil.Type.String.name()));
+            return true;
+        }
+        if ("java.sql.Timestamp".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, System.currentTimeMillis(), 2, TypeUtil.Type.String.name()));
+            return true;
+        }
+        if ("java.time.LocalDate".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, LocalDate.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
+            return true;
+        }
+        if ("java.time.LocalTime".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, LocalTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
+            return true;
+        }
+        if ("java.time.LocalDateTime".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, LocalDateTime.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
+            return true;
+        }
+
+        if ("java.time.YearMonth".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, YearMonth.now(ZoneId.of(JSON.defaultTimeZone.getID())).toString(), 2, TypeUtil.Type.String.name()));
+            return true;
+        }
+
+        return false;
     }
 }
