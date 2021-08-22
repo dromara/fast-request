@@ -1,4 +1,4 @@
-# Fast Request
+# Restful Fast Request
 
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988)
@@ -6,7 +6,8 @@
 [![QQ群](https://img.shields.io/badge/chat-QQ群-46BC99.svg?style=flat-square)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-red)](https://fastrequest.slack.com)
 
-[**Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个基于springmvc的帮助你快速生成**url**和**参数**的IDEA 插件。同时也是一个http client工具，你只需要按一下方法左侧的小图标(小火箭),插件就会帮你生成方法的url和参数显示在工具内，再点击发送请求即可在IDEA内完成API调试，并且可以保存历史请求，方便再次使用调试
+[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个基于springmvc的帮助你快速生成**url**和**参数**
+的IDEA 插件。同时也是一个http client工具，你只需要按一下方法左侧的小图标(小火箭),插件就会帮你生成方法的url和参数显示在工具内，再点击发送请求即可在IDEA内完成API调试，并且可以保存历史请求，方便再次使用调试
 
 对比与HTTP Client，Fast Request不仅拥有HTTP Client内置的功能，还提供了友好易懂直观的界面，让使用者调试API的时候能够更加方便、简捷，同时各种类型参数也提供了不同的定制方式，更加灵活。
 
@@ -27,7 +28,7 @@ QQ 群:754131222
 
 **插件市场安装**
 
-- <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>输入"Fast
+- 推荐 <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>输入"Fast
   Request"</kbd> > <kbd>点击Install</kbd>
 
 **手动安装:**
@@ -39,7 +40,7 @@ QQ 群:754131222
 ```
 Step1:点击配置添加项目名[如微信卡片]和环境名[如local、dev]
 Step2:设置对应项目及环境的域名
-Step3:打开工具窗口(右上角位置),选择当前项目想要启用的环境,并且点击开启复选框
+Step3:打开工具窗口(右上角位置),选择当前项目想要启用的环境
 Step4:点击在方法左侧的fastRequest的图标(自动生成参数和url)
 Step5:点击发送请求按钮发送请求
 ```
