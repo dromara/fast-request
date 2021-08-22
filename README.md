@@ -1,40 +1,51 @@
-# Fast Request
+# Restful Fast Request
 
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988)
 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-red)](https://fastrequest.slack.com)
 
-[**Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a plugin based on springmvc that help you quickly generate **url** and **params**.It is also a http client tool.
+[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a plugin based on springmvc that
+help you quickly generate **url** and **params**.It is also a http client tool.
 
-You only need to click the rocket icon on the left side of the method, the plugin will help you generate the method url and parameters and display in the tool, and then click Send Request to complete the API debugging in IDEA, and you can save the history request 
+You only need to click the rocket icon on the left side of the method, the plugin will help you generate the method url
+and parameters and display in the tool, and then click Send Request to complete the API debugging in IDEA, and you can
+save the history request
 
-Compared with the HTTP Client, Fast Request not only has the built-in functions of the HTTP Client, but also provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to debug the API. At the same time, various types of parameters also provide different customization methods to make it more flexible.
+Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client, but also
+provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to
+debug the API. At the same time, various types of parameters also provide different customization methods to make it
+more flexible.
 
->PURPOSE  
->The purpose of the plug-in is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
+> PURPOSE  
+> The purpose of the plug-in is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
 
 If you think this plugin help you, please **🌟Star** project, and also welcome to provide excellent recommendation
 
 ![example](./screenshot/example.gif)
 
 - document
-    * [中文文档](README.zh_CN.md)
-    * [English Document](README.md)
-    
-  
+  * [中文文档](README.zh_CN.md)
+  * [English Document](README.md)
+
 ## 0.Install
+
 **using IDE plugin system**
-- <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>find"Fast Request"</kbd> > <kbd>Install Plugin</kbd>
+
+- recommended <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>find"
+  Restful Fast Request"</kbd> > <kbd>Install Plugin</kbd>
 
 **Manual:**
-- download[`lastest plugin zip`][latest-release] -> <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Install plugin from disk...</kbd>
+
+- download[`lastest plugin zip`][latest-release] -> <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Install
+  plugin from disk...</kbd>
 
 ## 1.How to use
+
 ```
 Step1:Click Manager config then add project name[example:wx card] and env[example:local、dev]
 Step2:set target domain
-Step3:open toolwindow(at the top-right corner),select project and env and then click enable checkbox
+Step3:open toolwindow(at the top-right corner),select project and env
 Step4:click fastRequest icon on method left(generate url and param)
 Step5:click send button for sending request
 ```

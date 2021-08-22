@@ -19,7 +19,10 @@ import com.intellij.psi.JavaPsiFacade;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.search.GlobalSearchScope;
-import com.intellij.ui.*;
+import com.intellij.ui.ColoredTreeCellRenderer;
+import com.intellij.ui.SearchTextField;
+import com.intellij.ui.SimpleTextAttributes;
+import com.intellij.ui.ToolbarDecorator;
 import com.intellij.ui.components.JBTextField;
 import com.intellij.ui.components.fields.ExtendableTextComponent;
 import com.intellij.ui.content.Content;
@@ -54,8 +57,6 @@ import javax.swing.event.DocumentListener;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Document;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeCellRenderer;
 import javax.swing.tree.TreeNode;
@@ -64,10 +65,6 @@ import java.awt.*;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.DnDConstants;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -621,6 +618,22 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             //解决TreeTable key加上>
             CollectionCustomNode node = (CollectionCustomNode) value;
             append(node.getName());
+            if (node.getType() == 2) {
+                setIcon(getIconByMethodType(node.getDetail().getParamGroup().getMethodType()));
+            }
+        }
+    }
+
+    private Icon getIconByMethodType(String methodType) {
+        switch (methodType) {
+            case "POST":
+                return PluginIcons.ICON_POST;
+            case "PUT":
+                return PluginIcons.ICON_PUT;
+            case "DELETE":
+                return PluginIcons.ICON_DELETE;
+            default:
+                return PluginIcons.ICON_GET;
         }
     }
 
@@ -631,7 +644,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         node.setSearchText("<" + detail.getName() + detail.getDescription() + detail.getParamGroup().getUrl() + ">");
         node.setDetail(detail);
         List<CollectionConfiguration.CollectionDetail> child = detail.getChildList();
-        if(CollectionUtils.isNotEmpty(child)){
+        if (CollectionUtils.isNotEmpty(child)) {
             for (CollectionConfiguration.CollectionDetail d : child) {
                 CollectionCustomNode nodeIn = convertToNode(d);
                 node.add(nodeIn);

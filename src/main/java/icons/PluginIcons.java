@@ -15,8 +15,6 @@ public interface PluginIcons {
     Icon ICON_FILE = IconLoader.getIcon("/icon/file.svg", PluginIcons.class);
 
     Icon ICON_SEND = IconLoader.getIcon("/icon/send.svg", PluginIcons.class);
-    Icon ICON_ADD = IconLoader.getIcon("/icon/add.svg", PluginIcons.class);
-    Icon ICON_DELETE = IconLoader.getIcon("/icon/delete.svg", PluginIcons.class);
 
     Icon ICON_VISIBLE = IconLoader.getIcon("/icon/visible.svg", PluginIcons.class);
     Icon ICON_INVISIBLE = IconLoader.getIcon("/icon/invisible.svg", PluginIcons.class);
@@ -35,4 +33,10 @@ public interface PluginIcons {
     Icon ICON_FILTER = IconLoader.getIcon("/icon/filter.svg", PluginIcons.class);
 
     Icon ICON_CONTEXT_HELP = IconLoader.getIcon("/icon/contextHelp.svg", PluginIcons.class);
+
+
+    Icon ICON_GET = IconLoader.getIcon("/icon/get.svg", PluginIcons.class);
+    Icon ICON_POST = IconLoader.getIcon("/icon/post.svg", PluginIcons.class);
+    Icon ICON_PUT = IconLoader.getIcon("/icon/put.svg", PluginIcons.class);
+    Icon ICON_DELETE = IconLoader.getIcon("/icon/delete.svg", PluginIcons.class);
 }
