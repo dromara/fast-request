@@ -22,7 +22,8 @@
     * [中文文档](README.zh_CN.md)
     * [English Document](README.md)
 
-QQ 群:754131222
+# QQ 群:754131222
+有问题也可以在群里交流
 
 ## 0.安装
 
