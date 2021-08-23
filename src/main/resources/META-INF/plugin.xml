@@ -4,22 +4,24 @@
     <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
 
     <description><![CDATA[
-    Restful Fast Request is a powerful restful api toolkit plugin help you quickly generate url and params by exist method.Restful Fast Request = API debug tool + API manager tool<br/>
+    Restful Fast Request is a powerful restful api toolkit plugin help you quickly generate url and params by exist method.Plugin = API debug tool + API manager tool<br/>
     It has a beautiful interface to compose requests,inspect server responses,store your api request and export api request<br/>
     Plugin help you debug request just in Intellij frame<br/>
     support Spring framework (Spring MVC / Spring Boot)<br/>
     <br/>
 
     中文:<br/>
-    Restful Fast Request 是一个强大的restful api 工具包插件，可以根据已有的方法帮助您快速生成url和params。Restful Fast Request = API调试工具+API管理工具。它有一个漂亮的界面来完成请求、检查服务器响应、存储你的 api 请求和导出 api 请求<br/>
-    Fast Request帮助你在IDEA界面内更快更高效得调试你的API<br/>
+    Restful Fast Request 是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。<br/>
+    Restful Fast Request = API调试工具+API管理工具。<br/>
+    它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求<br/>
+    插件帮助你在IDEA界面内更快更高效得调试你的API<br/>
     支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
     QQ群:754131222
     <br/><br/>
 
 
-    <em>Support Springmvc/SpringBoot</em><br/>
     <em>Support send http request</em><br/>
+    <em>Support save request</em><br/>
     <br/>
     <em>For more information,Please goto <a href="https://github.com/kings1990/fast-request-doc">Github</a></em><br/>
 
@@ -28,7 +30,6 @@
     <h3>v2.0.1</h3>
     <ul>
         <li>rename from Fast Request to Restful Fast Request</li>
-        <li>supports separate search by name and url(搜索支持name和url分开搜索)</li>
         <li>merge Json、Form URL-Encoded、Multipart to Body Tab to reduce the tool window width(Json、Form URL-Encoded、Multipart Tab合并减小工具窗口宽度)</li>
         <li>fix bug when modify config in global mode(修复全局配置下修改配置报错)</li>
         <li>add get、post、delete、put icon to saved request(将get、post、delete、put图标添加到保存的请求)</li>

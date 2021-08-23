@@ -36,7 +36,6 @@ patchPluginXml {
     <h3>v2.0.1</h3>
     <ul>
         <li>rename from Fast Request to Restful Fast Request</li>
-        <li>supports separate search by name and url(搜索支持name和url分开搜索)</li>
         <li>merge Json、Form URL-Encoded、Multipart to Body Tab to reduce the tool window width(Json、Form URL-Encoded、Multipart Tab合并减小工具窗口宽度)</li>
         <li>fix bug when modify config in global mode(修复全局配置下修改配置报错)</li>
         <li>add get、post、delete、put icon to saved request(将get、post、delete、put图标添加到保存的请求)</li>
