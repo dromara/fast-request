@@ -98,7 +98,11 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
         myInstalledSearchGroup = new DefaultActionGroup();
         for (SearchTypeEnum option : SearchTypeEnum.values()) {
-            myInstalledSearchGroup.add(new SearchOptionAction(option));
+            if (option.name().startsWith("separator")) {
+                myInstalledSearchGroup.addSeparator("  " + option.name().split("_")[1]);
+            } else {
+                myInstalledSearchGroup.add(new SearchOptionAction(option));
+            }
         }
 
         mySearchCallback = updateAction -> {
@@ -162,7 +166,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
     private static void showRightBottomPopup(@NotNull Component component, @NotNull @Nls String title, @NotNull ActionGroup group) {
         DefaultActionGroup actions = new GroupByActionGroup();
-        actions.addSeparator("  " + title);
+        actions.addSeparator(title);
         actions.addAll(group);
 
         DataContext context = DataManager.getInstance().getDataContext(component);
@@ -256,6 +260,9 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     private void checkRule(String rule) {
         AnAction[] children = myInstalledSearchGroup.getChildren(null);
         for (AnAction anAction : children) {
+            if (anAction instanceof Separator) {
+                continue;
+            }
             SearchOptionAction child = (SearchOptionAction) anAction;
             if (rule.contains(child.myOption.name())) {
                 child.myState = true;
@@ -753,6 +760,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     private enum SearchTypeEnum {
         name,
         url,
+        separator_Method,
         get,
         post,
         put,
