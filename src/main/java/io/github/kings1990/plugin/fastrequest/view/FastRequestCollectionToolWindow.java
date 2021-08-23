@@ -5,9 +5,11 @@ import com.intellij.icons.AllIcons;
 import com.intellij.ide.DataManager;
 import com.intellij.ide.HelpTooltip;
 import com.intellij.ide.plugins.newui.ListPluginComponent;
+import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.MessageType;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.openapi.ui.popup.JBPopup;
 import com.intellij.openapi.ui.popup.JBPopupListener;
@@ -40,6 +42,7 @@ import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
+import io.github.kings1990.plugin.fastrequest.model.ParamGroupCollection;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.util.SwingUtil;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
@@ -232,16 +235,18 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     private void filterRequest() {
         CollectionConfiguration config = FastRequestCollectionComponent.getInstance(myProject).getState();
         assert config != null;
-        CollectionConfiguration.CollectionDetail detail = config.getDetail();
         String search = ((SearchTextField) searchPanel).getText();
         CollectionCustomNode root = (CollectionCustomNode) collectionTable.getTableModel().getRoot();
         if (StringUtils.isBlank(search)) {
             root = convertToNode(rootDetail);
+            checkRule("");
             ((DefaultTreeModel) collectionTable.getTableModel()).setRoot(root);
         } else {
             Map<String, String> queryMap = getQuery(search);
             String query = queryMap.get("query");
             String rule = queryMap.get("rule");
+            //选择或去除rule
+            checkRule(rule);
             CollectionCustomNode node = new CollectionCustomNode("0", "Root", 1);
             convertToNode(node, rootDetail.getChildList());
             filterNode(node, query, rule);
@@ -249,6 +254,18 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             SwingUtil.expandAll(collectionTable.getTree(), new TreePath(node), true);
         }
         SwingUtil.expandAll(collectionTable.getTree(), new TreePath(root), true);
+    }
+
+    private void checkRule(String rule) {
+        AnAction[] children = myInstalledSearchGroup.getChildren(null);
+        for (AnAction anAction : children) {
+            SearchOptionAction child = (SearchOptionAction) anAction;
+            if (rule.contains(child.myOption.name())) {
+                child.myState = true;
+            } else {
+                child.myState = false;
+            }
+        }
     }
 
     private boolean filterNode(CollectionCustomNode node, String search, String rule) {
@@ -259,15 +276,27 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             }
         } else {
             if (node.getChildCount() == 0) {
-                String targetText = null;
+                boolean methodTypeSearchFlag = rule.contains(SearchTypeEnum.get.name()) || rule.contains(SearchTypeEnum.post.name()) ||
+                        rule.contains(SearchTypeEnum.put.name()) || rule.contains(SearchTypeEnum.delete.name());
+
+                String targetText = "";
 
                 if (rule.contains(SearchTypeEnum.name.name())) {
-                    targetText += node.getName();
+                    String name = node.getName();
+                    targetText += name == null ? "" : name;
                 }
                 if (rule.contains(SearchTypeEnum.url.name())) {
-                    targetText += node.getUrl();
+                    String url = node.getUrl();
+                    targetText += url == null ? "" : url;
                 }
-                if (rule.isBlank()) {
+                if (methodTypeSearchFlag) {
+                    String methodType = node.getDetail().getParamGroup().getMethodType();
+                    if (methodType == null || !rule.contains(methodType.toLowerCase())) {
+                        node.removeFromParent();
+                        return true;
+                    }
+                }
+                if (rule.isBlank() || (targetText.isBlank() && methodTypeSearchFlag)) {
                     targetText = node.getSearchText();
                 }
                 if (!targetText.toLowerCase().contains(search.toLowerCase())) {
@@ -678,28 +707,34 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         to.getChildList().add(position,from);
     }
 
-    private void load(CollectionCustomNode node){
+    private void load(CollectionCustomNode node) {
         boolean flag = false;
         //定位方法
         CollectionConfiguration collectionConfiguration = FastRequestCollectionComponent.getInstance(myProject).getState();
         assert collectionConfiguration != null;
         CollectionConfiguration.CollectionDetail detail = filterById(node.getId(), collectionConfiguration.getDetail());
-        if(detail == null){
+        if (detail == null) {
             return;
         }
-        String className = detail.getParamGroup().getClassName();
-        String methodName = detail.getParamGroup().getMethod();
+        ParamGroupCollection paramGroup = detail.getParamGroup();
+        String className = paramGroup.getClassName();
+        String methodName = paramGroup.getMethod();
         PsiClass psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
-        if(psiClass != null){
-            PsiElement[] findUserPages = psiClass.findMethodsByName(methodName,true);
-            if(findUserPages.length > 0){
-                PsiNavigateUtil.navigate(findUserPages[0]);
+        if (psiClass != null) {
+            PsiElement[] psiClassMethodsByName = psiClass.findMethodsByName(methodName, true);
+            if (psiClassMethodsByName.length > 0) {
+                PsiNavigateUtil.navigate(psiClassMethodsByName[0]);
                 flag = true;
+            } else {
+                NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Method not found", MessageType.INFO).notify(myProject);
             }
         }
+        loadAncChangeTab(flag, detail);
+    }
 
+    private void loadAncChangeTab(boolean flag, CollectionConfiguration.CollectionDetail detail) {
         //切换tab
-        if(flag){
+        if (flag) {
             //change data
             ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(myProject).getToolWindow("Fast Request");
             Content content = fastRequestToolWindow.getContentManager().getContent(0);
@@ -719,7 +754,12 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
     private enum SearchTypeEnum {
         name,
-        url;
+        url,
+        get,
+        post,
+        put,
+        delete,
+        ;
 
         public static SearchTypeEnum fromValue(String name) {
             for (SearchTypeEnum v : values()) {

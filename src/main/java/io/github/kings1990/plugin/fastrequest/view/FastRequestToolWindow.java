@@ -35,7 +35,6 @@ import com.intellij.ui.dualView.TreeTableView;
 import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
 import com.intellij.ui.treeStructure.treetable.TreeColumnInfo;
-import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.util.PsiNavigateUtil;
 import com.intellij.util.messages.MessageBus;
 import com.intellij.util.ui.AbstractTableCellEditor;
@@ -294,7 +293,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 }
             }
         });
-        methodTypeComboBox.setBackground(new JBColor(new Color(52, 152, 219),new Color(70, 130, 180)));
+        methodTypeComboBox.setBackground(MyColor.blue);
 
         //responseStatus ComboBox
         List<Integer> values = new ArrayList<>(Constant.HttpStatusDesc.STATUS_MAP.keySet());
@@ -592,15 +591,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
                             responseStatusComboBox.setSelectedItem(status);
 
-                            JBColor green = new JBColor(new Color(0, 250, 154), new Color(60, 179, 113));
-                            JBColor red = new JBColor(new Color(220, 20, 60), new Color(178, 34, 34));
-                            responseStatusComboBox.setBackground((status >= 200 && status < 300) ? green : red);
+
+                            responseStatusComboBox.setBackground((status >= 200 && status < 300) ? MyColor.green : MyColor.red);
                         } catch (Exception ee){
                             String errorMsg = ee.getMessage();
                             responseTextArea.setText(errorMsg);
                             prettyResponseTextArea.setText("");
                             responseStatusComboBox.setSelectedItem(0);
-                            responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60), new Color(178, 34, 34)));
+                            responseStatusComboBox.setBackground(MyColor.red);
                             responseInfoParamsKeyValueList = Lists.newArrayList(
                                     new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
                                     new ParamKeyValue("Error", errorMsg)
@@ -622,7 +620,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     responseTextArea.setText(errorMsg);
                     prettyResponseTextArea.setText("");
                     responseStatusComboBox.setSelectedItem(0);
-                    responseStatusComboBox.setBackground(new JBColor(new Color(220, 20, 60), new Color(178, 34, 34)));
+                    responseStatusComboBox.setBackground(MyColor.red);
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Error", errorMsg)
                     );
@@ -734,13 +732,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JBColor buildMethodColor(String method) {
         JBColor jbColor = JBColor.darkGray;
         if ("POST".equals(method)) {
-            jbColor = new JBColor(new Color(0, 250, 154), new Color(60, 179, 113));
+            jbColor = MyColor.green;
         } else if ("DELETE".equals(method)) {
-            jbColor = new JBColor(new Color(220, 20, 60),new Color(178, 34, 34));
+            jbColor = MyColor.red;
         } else if ("PUT".equals(method)) {
-            jbColor = new JBColor(new Color(218, 165, 32),new Color(202, 111, 30));
+            jbColor = MyColor.yellow;
         } else if ("GET".equals(method)) {
-            jbColor = new JBColor(new Color(52, 152, 219),new Color(70, 130, 180));
+            jbColor = MyColor.blue;
         }
         return jbColor;
     }
