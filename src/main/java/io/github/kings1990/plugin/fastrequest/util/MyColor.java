@@ -4,6 +4,13 @@ import com.intellij.ui.JBColor;
 
 import java.awt.*;
 
+/**
+ * color
+ * https://jetbrains.design/intellij/principles/icons/#noun-icons
+ *
+ * @author Kings
+ * @date 2021/08/23
+ */
 public class MyColor {
     public static final JBColor green = new JBColor(new Color(89, 168, 105), new Color(73, 156, 84));
     public static final JBColor red = new JBColor(new Color(219, 88, 96), new Color(199, 84, 80));
