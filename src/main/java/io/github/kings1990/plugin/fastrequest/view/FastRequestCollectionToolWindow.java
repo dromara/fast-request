@@ -21,10 +21,7 @@ import com.intellij.psi.JavaPsiFacade;
 import com.intellij.psi.PsiClass;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.search.GlobalSearchScope;
-import com.intellij.ui.ColoredTreeCellRenderer;
-import com.intellij.ui.SearchTextField;
-import com.intellij.ui.SimpleTextAttributes;
-import com.intellij.ui.ToolbarDecorator;
+import com.intellij.ui.*;
 import com.intellij.ui.components.JBTextField;
 import com.intellij.ui.components.fields.ExtendableTextComponent;
 import com.intellij.ui.content.Content;
@@ -537,6 +534,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         public Component getTableCellRendererComponent(JTable table, Object value,
                                                        boolean isSelected, boolean hasFocus, int row, int column) {
             setIcon(PluginIcons.ICON_NAVIGATE);
+            setBackground(new JBColor(JBColor.WHITE, new Color(60, 63, 65)));
             return this;
         }
 
