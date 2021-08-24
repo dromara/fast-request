@@ -41,6 +41,7 @@ patchPluginXml {
         <li>add get、post、delete、put icon to saved request(将get、post、delete、put图标添加到保存的请求)</li>
         <li>saved request support more search strategy(保存的请求支持更多搜索策略)</li>
         <li>rename tab name from collection to APIs(tab重命名collection->APIs)</li>
+        <li>support parse java.time.YearMonth(YearMonth解析支持)</li>
     </ul>
     
     <h3>v2.0.0</h3>
