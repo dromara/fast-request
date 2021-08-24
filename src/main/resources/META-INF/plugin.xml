@@ -16,14 +16,15 @@
     它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求<br/>
     插件帮助你在IDEA界面内更快更高效得调试你的API<br/>
     支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
-    QQ群:754131222
     <br/><br/>
 
 
     <em>Support send http request</em><br/>
     <em>Support save request</em><br/>
     <br/>
-    <em>For more information,Please goto <a href="https://github.com/kings1990/fast-request-doc">Github</a></em><br/>
+    <a href="https://github.com/kings1990/fast-request-doc">详细文档</a> | <a href="https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO">QQ群:754131222</a><br/>
+    <a href="https://github.com/kings1990/fast-request-doc">Documentation</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
+
     <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/example.png" />
     <h2>API manager</h2>
     <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/apis.png" /><br/>
