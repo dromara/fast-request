@@ -39,4 +39,5 @@ public interface PluginIcons {
     Icon ICON_POST = IconLoader.getIcon("/icon/post.svg", PluginIcons.class);
     Icon ICON_PUT = IconLoader.getIcon("/icon/put.svg", PluginIcons.class);
     Icon ICON_DELETE = IconLoader.getIcon("/icon/delete.svg", PluginIcons.class);
+    Icon ICON_CODE = IconLoader.getIcon("/icon/code.svg", PluginIcons.class);
 }
