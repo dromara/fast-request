@@ -5,6 +5,7 @@ import com.intellij.openapi.util.IconLoader;
 import javax.swing.*;
 
 public interface PluginIcons {
+    //light:#515151 dark:#BFBFBF
     Icon fastRequest = IconLoader.getIcon("/fastRequest.svg", PluginIcons.class);
 
     Icon ICON_ARRAY = IconLoader.getIcon("/icon/array.svg", PluginIcons.class);
