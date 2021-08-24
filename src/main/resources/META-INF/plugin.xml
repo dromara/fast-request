@@ -34,6 +34,7 @@
         <li>fix bug when modify config in global mode(修复全局配置下修改配置报错)</li>
         <li>add get、post、delete、put icon to saved request(将get、post、delete、put图标添加到保存的请求)</li>
         <li>saved request support more search strategy(保存的请求支持更多搜索策略)</li>
+        <li>rename tab name from collection to APIs(tab重命名collection->APIs)</li>
     </ul>
 
     <h3>v2.0.0</h3>
