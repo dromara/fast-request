@@ -228,7 +228,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         sendButton = new JButton("Send Request",PluginIcons.ICON_SEND);
         ActionLink managerConfigLink = new ActionLink("config", e -> {
-            ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Fast Request");
+            ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Restful Fast Request");
         });
         managerConfigLink.setExternalLinkIcon();
         manageConfigButton = managerConfigLink;
