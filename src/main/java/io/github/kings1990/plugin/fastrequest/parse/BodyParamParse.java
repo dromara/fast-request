@@ -29,11 +29,11 @@ public class BodyParamParse extends AbstractParamParse {
             String type = paramNameType.getType();
             boolean arrayFlag = type.contains("[]");
             if(arrayFlag){
-                type = type.substring(type.indexOf("[")+1,type.indexOf("]"));
+                type = type.substring(0, type.indexOf("["));
             }
             boolean listFlag = type.contains("List<");
             if(listFlag){
-                type = type.substring(type.indexOf("<")+1,type.indexOf(">"));
+                type = type.substring(type.indexOf("<") + 1, type.indexOf(">"));
             }
             String name = paramNameType.getName();
             if ("java.lang.String".equals(type)) {

@@ -14,7 +14,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
-import com.intellij.openapi.components.ServiceManager;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.fileChooser.FileChooser;
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
@@ -84,7 +84,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     public static final int JSON_TABLE_COLUMN_NAME_WIDTH = 200;
     public static final int JSON_TABLE_COLUMN_TYPE_WIDTH = 80;
 
-    private final GeneratorUrlService generatorUrlService = ServiceManager.getService(GeneratorUrlService.class);
     private final Project myProject;
     private JPanel panel;
     private JComboBox<String> envComboBox;
@@ -259,6 +258,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         Border border = IdeBorderFactory.createBorder(SideBorder.BOTTOM);
         actionToolbar.getComponent().setBorder(border);
         setToolbar(toolbarComponent);
+
 
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
@@ -1681,13 +1681,21 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     }
                 }
             } else if (TypeUtil.Type.Array.name().equals(type)) {
-                ArrayList<ParamKeyValue> dataList = (ArrayList<ParamKeyValue>) dataValue;
-                if (dataList.size() == 0) {
-                    continue;
+                if (dataValue instanceof KV) {
+                    List<Object> list = new ArrayList<>();
+                    LinkedHashMap<String, Object> arrayMap = new LinkedHashMap<>();
+                    convertToMap((LinkedHashMap<String, Object>) dataValue, arrayMap, false);
+                    list.add(arrayMap);
+                    result.put(key, list);
+                } else {
+                    ArrayList<ParamKeyValue> dataList = (ArrayList<ParamKeyValue>) dataValue;
+                    if (dataList.size() == 0) {
+                        continue;
+                    }
+                    LinkedHashMap<String, Object> arrayMap = new LinkedHashMap<>();
+                    List<Object> list = convertArrayToMap(dataList, arrayMap);
+                    result.put(key, list);
                 }
-                LinkedHashMap<String, Object> arrayMap = new LinkedHashMap<>();
-                List<Object> list = convertArrayToMap(dataList, arrayMap);
-                result.put(key, list);
             } else {
                 result.put(key, dataValue);
             }
@@ -2692,7 +2700,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             MessageBus messageBus = myProject.getMessageBus();
             messageBus.connect();
             ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.ADD_REQUEST_TOPIC);
-            configChangeNotifier.configChanged(true);
+            configChangeNotifier.configChanged(true, myProject.getName());
             //兼容性处理code
             NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO).notify(myProject);
             // 2020.3 before
@@ -2763,6 +2771,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 if(elementArray.length > 0){
                     PsiMethod psiMethod = (PsiMethod) elementArray[0];
                     PsiNavigateUtil.navigate(psiMethod);
+                    GeneratorUrlService generatorUrlService = ApplicationManager.getApplication().getService(GeneratorUrlService.class);
                     generatorUrlService.generate(psiMethod);
                     refresh(true);
                 }

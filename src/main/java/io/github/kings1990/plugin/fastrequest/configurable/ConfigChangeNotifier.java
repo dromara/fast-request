@@ -12,7 +12,7 @@ public interface ConfigChangeNotifier {
 
     Topic<ConfigChangeNotifier> LOAD_REQUEST = Topic.create("load request", ConfigChangeNotifier.class);
 
-    void configChanged(boolean active);
+    void configChanged(boolean active, String projectName);
 
-    void loadRequest(CollectionConfiguration.CollectionDetail detail);
+    void loadRequest(CollectionConfiguration.CollectionDetail detail, String projectName);
 }

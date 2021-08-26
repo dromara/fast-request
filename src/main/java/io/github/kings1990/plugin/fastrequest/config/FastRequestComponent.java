@@ -1,7 +1,7 @@
 package io.github.kings1990.plugin.fastrequest.config;
 
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
-import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.util.xmlb.XmlSerializerUtil;
@@ -37,7 +37,7 @@ public class FastRequestComponent implements PersistentStateComponent<FastReques
     }
 
     public static FastRequestComponent getInstance() {
-        return ServiceManager.getService(FastRequestComponent.class);
+        return ApplicationManager.getApplication().getService(FastRequestComponent.class);
     }
 
     @Override

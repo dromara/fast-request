@@ -1,0 +1,5 @@
+doc:https://plugins.jetbrains.com/docs/intellij/persisting-state-of-components.html
+插件地址:https://plugins.jetbrains.com/plugin/16988-restful-fast-request
+UI:https://jetbrains.design/intellij/
+版本号:https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html?q=table%20#intellij-platform-based-products-of-recent-ide-versions
+项目图标库:https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=2601581

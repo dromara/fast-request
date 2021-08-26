@@ -749,7 +749,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             MessageBus messageBus = myProject.getMessageBus();
             messageBus.connect();
             ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.LOAD_REQUEST);
-            configChangeNotifier.loadRequest(detail);
+            configChangeNotifier.loadRequest(detail, myProject.getName());
         }
     }
 

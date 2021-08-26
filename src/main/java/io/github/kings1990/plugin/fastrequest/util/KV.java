@@ -28,6 +28,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     private static final DateFormat df = new SimpleDateFormat(pattern);
 
     static {
+
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
         changeConfig();
