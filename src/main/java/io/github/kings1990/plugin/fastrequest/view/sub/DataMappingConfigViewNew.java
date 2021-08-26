@@ -32,7 +32,6 @@ import java.util.regex.Pattern;
 
 public class DataMappingConfigViewNew extends AbstractConfigurableView {
     private static final Logger LOGGER = Logger.getInstance(DataMappingConfigView.class);
-    private JPanel panel;
     private JPanel defaultDataMappingPanel;
     private JPanel customDataMappingPanel;
     private JTextField randomStringTextField;
@@ -96,7 +95,7 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
     }
 
     private JComponent createMainComponent(){
-        panel = new JPanel(new GridBagLayout());
+        JPanel panel = new JPanel(new GridBagLayout());
         GridBag gb = new GridBag()
                 .setDefaultInsets(JBUI.insets(0, 0, 4, 10))
                 .setDefaultWeightX(1)
@@ -111,10 +110,10 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
         BorderLayoutPanel inlineDefaultDataMappingPanel = JBUI.Panels.simplePanel().addToTop(UI.PanelFactory.panel(defaultDataMappingPanel).withLabel(MyResourceBundleUtil.getKey("DefaultDataMapping")).moveLabelOnTop().createPanel());
 
 
-        this.panel.add(stringGeneratorConfigPanel,gb.nextLine().next().fillCell());
-        this.panel.add(inlineCustomerDataMapping,gb.nextLine().next().weighty(0.4).fillCell());
-        this.panel.add(inlineDefaultDataMappingPanel,gb.nextLine().next().weighty(0.4).fillCell());
-        return this.panel;
+        panel.add(stringGeneratorConfigPanel, gb.nextLine().next().fillCell());
+        panel.add(inlineCustomerDataMapping, gb.nextLine().next().weighty(0.4).fillCell());
+        panel.add(inlineDefaultDataMappingPanel, gb.nextLine().next().weighty(0.4).fillCell());
+        return panel;
     }
 
     private JPanel createStringGeneratorConfigPanel(){

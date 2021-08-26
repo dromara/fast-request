@@ -11,10 +11,11 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.List;
 
 public class OtherUrlGenerator extends FastUrlGenerator {
-    private FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
 
     @Override
     public String generate(PsiElement psiElement) {
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
         String domain = config.getDomain();
         if (!(psiElement instanceof PsiMethod)) {
             return StringUtils.EMPTY;

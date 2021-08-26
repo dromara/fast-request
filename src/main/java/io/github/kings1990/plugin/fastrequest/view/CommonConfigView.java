@@ -9,7 +9,6 @@ import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.TreeTableModel;
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
-import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.HostGroup;
 import io.github.kings1990.plugin.fastrequest.model.NameGroup;
@@ -27,7 +26,6 @@ public class CommonConfigView extends AbstractConfigurableView {
     private JPanel tablePanel;
     private JPanel envListPanel;
     private JPanel projectNameListPanel;
-    private FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
     private JBList<String> envJbList;
     private JBList<String> projectNameJbList;
     private JBTable table;
@@ -55,8 +53,6 @@ public class CommonConfigView extends AbstractConfigurableView {
      * @date 2021/05/21
      */
     private void createUIComponents() {
-        config = FastRequestComponent.getInstance().getState();
-        assert config != null;
         FastRequestConfiguration configOld = JSONObject.parseObject(JSONObject.toJSONString(config), FastRequestConfiguration.class);
         viewDataList = configOld.getDataList();
 

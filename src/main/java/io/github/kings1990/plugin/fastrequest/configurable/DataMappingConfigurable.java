@@ -17,8 +17,13 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class DataMappingConfigurable extends AbstractConfigConfigurable {
-    protected FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
-    private DataMappingConfigViewNew view;
+    protected FastRequestConfiguration config;
+    private final DataMappingConfigViewNew view;
+
+    public DataMappingConfigurable() {
+        config = FastRequestComponent.getInstance().getState();
+        view = new DataMappingConfigViewNew(config);
+    }
 
     @Override
     public AbstractConfigurableView getView() {
@@ -28,7 +33,6 @@ public class DataMappingConfigurable extends AbstractConfigConfigurable {
     @Override
     public @Nullable
     JComponent createComponent() {
-        view = new DataMappingConfigViewNew(config);
         return view.getComponent();
     }
 
