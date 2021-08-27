@@ -52,7 +52,7 @@
     <h2>API manager</h2>
     <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/apis.png" /><br/>
 
-    <h3>Recent Changes</h3>
+    <h3>Last Changes</h3>
     <ul>
         <li>Fix that the A request is displayed to the B project in the case of multiple open projects(修复项目多开情况下A请求显示到B项目)</li>
         <li>Fix array and list param parse error decorate by @ResponseBody(修复@ResponseBody修饰的数组与集合解析问题)</li>
