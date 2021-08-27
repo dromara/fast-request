@@ -25,7 +25,7 @@
     Features:
     <ul>
         <li>generate url and parameters in one click</li>
-        <li>Send request to debug API</li>
+        <li>Send request to debug API(support to modify the generated parameters)</li>
         <li>domain customization and switching</li>
         <li>custom parameter parse</li>
         <li>string generation strategy</li>
@@ -38,7 +38,7 @@
     功能:
     <ul>
         <li>一键生成url和参数</li>
-        <li>发送请求调试API</li>
+        <li>发送请求调试API(支持修改生成的参数)</li>
         <li>域名定制及切换</li>
         <li>自定义参数解析</li>
         <li>字符串生成策略化</li>
