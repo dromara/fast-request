@@ -2717,7 +2717,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         public void actionPerformed(@NotNull AnActionEvent e) {
             getCurlDataAndCopy();
             //兼容性处理code
-            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO).notify(myProject);
+            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Copy success", MessageType.INFO).notify(myProject);
             // 2020.3 before
             //new NotificationGroup("toolWindowNotificationGroup", NotificationDisplayType.TOOL_WINDOW, true).createNotification("Success", NotificationType.INFORMATION).notify(myProject);
         }
