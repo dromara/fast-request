@@ -2733,10 +2733,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             try {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
-                    dp.browse(URI.create("https://github.com/kings1990/fast-request-doc"));
+                    dp.browse(URI.create("https://github.com/kings1990/fast-request"));
                 }
             } catch (Exception e) {
-                LOGGER.error("open url fail:https://github.com/kings1990/fast-request-doc", e);
+                LOGGER.error("open url fail:https://github.com/kings1990/fast-request", e);
             }
         }
     }
