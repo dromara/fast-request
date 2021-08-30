@@ -22,6 +22,18 @@ more flexible.
 
 If you think this plugin help you, please **🌟Star** project, and also welcome to provide excellent recommendation
 
+## Features
+
+* generate url and parameters in one click
+* Send request to debug API(support to modify the generated parameters)
+* domain customization and switching
+* custom parameter parse
+* string generation strategy
+* save api
+* Management API (search filter, modify API name)
+* one click location history save api to method
+* api to curl
+
 ![example](./screenshot/example.gif)
 
 - document

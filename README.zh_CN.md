@@ -11,18 +11,31 @@
 
 对比与HTTP Client，Fast Request不仅拥有HTTP Client内置的功能，还提供了友好易懂直观的界面，让使用者调试API的时候能够更加方便、简捷，同时各种类型参数也提供了不同的定制方式，更加灵活。
 
->宗旨  
->插件的宗旨是为简化开发、提高效率而生，我们的愿景是成为 IDEA 最好的搭档，就像魂斗罗中的 1P、2P，基友搭配，效率翻倍。
+> 宗旨  
+> 插件的宗旨是为简化开发、提高效率而生，我们的愿景是成为 IDEA 最好的搭档，就像魂斗罗中的 1P、2P，基友搭配，效率翻倍。
 
 如果你觉得本插件不错,请给个🌟Star吧,也欢迎提供宝贵的建议
+
+## 功能
+
+* 一键生成url和参数
+* 发送请求调试API(支持修改生成的参数)
+* 域名定制及切换
+* 自定义参数解析
+* 字符串生成策略化
+* 保存API
+* 管理API(搜索过滤、修改API名称)
+* 一键定位历史保存的API到方法
+* API转curl
 
 ![example](./screenshot/example.gif)
 
 - document
-    * [中文文档](README.zh_CN.md)
-    * [English Document](README.md)
+  * [中文文档](README.zh_CN.md)
+  * [English Document](README.md)
 
 # QQ 群:754131222
+
 有问题也可以在群里交流
 
 ## 0.安装
