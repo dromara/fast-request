@@ -529,8 +529,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
             String methodType = (String) methodTypeComboBox.getSelectedItem();
             HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), domain + sendUrl);
-            request.setConnectionTimeout(15 * 1000);
-            request.setReadTimeout(15 * 1000);
             headerParamsKeyValueList = headerParamsKeyValueList == null ? new ArrayList<>() : headerParamsKeyValueList;
             Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().filter(DataMapping::getEnabled).collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue())));
             request.header(headerMap);
