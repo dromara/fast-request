@@ -29,6 +29,7 @@
 * API转curl
 
 ![example](./screenshot/example.gif)
+![example_download](./screenshot/downloadFile.gif)
 
 - document
   * [中文文档](README.zh_CN.md)
