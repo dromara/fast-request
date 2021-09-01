@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionConfiguration implements Serializable {
-    private CollectionConfiguration.CollectionDetail detail;
+    private CollectionDetail detail;
 
     public CollectionDetail getDetail() {
         return detail;
