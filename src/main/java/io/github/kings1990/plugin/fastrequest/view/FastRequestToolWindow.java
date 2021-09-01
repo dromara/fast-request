@@ -241,7 +241,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         ArrayList<Action> sendRequestActionList = Lists.newArrayList(saveRequestAction);
         action.setOptions(sendRequestActionList);
         sendButton = new JBOptionButton(action, action.getOptions());
-//        sendButton = new JButton("Send Request", PluginIcons.ICON_SEND);
+        sendButton.setToolTipText("Send Request");
+        sendButton.setMultiClickThreshhold(2000);
         ActionLink managerConfigLink = new ActionLink("config", e -> {
             ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Restful Fast Request");
         });
@@ -444,9 +445,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 //        sendRequestEvent();
         //send request
         //2秒内不允许狂点
-        sendButton.setToolTipText("Send Request");
-        sendButton.setMultiClickThreshhold(2000);
-
         requestProgressBar.setIndeterminate(true);
         requestProgressBar.setVisible(false);
     }
@@ -677,7 +675,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             tabbedPane.setSelectedIndex(4);
             responseTabbedPanel.setSelectedIndex(2);
         }
-                sendButton.setEnabled(true);
+        sendButton.setEnabled(true);
     }
 
 
@@ -2790,7 +2788,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         private Action @NotNull [] myOptions = new Action[0];
 
         public SendRequestAction() {
-            super("", PluginIcons.ICON_SEND);
+            super("Send", PluginIcons.ICON_SEND);
         }
 
         @Override
@@ -2811,7 +2809,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private class SendAndSaveRequestAction extends AbstractAction implements OptionAction {
 
         public SendAndSaveRequestAction() {
-            super("Send and download", PluginIcons.ICON_CODE);
+            super("Send and download");
         }
 
         @Override
