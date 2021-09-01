@@ -635,6 +635,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     responseStatusComboBox.setSelectedItem(status);
                     responseStatusComboBox.setBackground((status >= 200 && status < 300) ? MyColor.green : MyColor.red);
                 } catch (Exception ee) {
+                    requestProgressBar.setVisible(false);
                     tabbedPane.setSelectedIndex(4);
                     responseTabbedPanel.setSelectedIndex(2);
                     responseStatusComboBox.setSelectedItem(0);
@@ -658,6 +659,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 sendButton.setEnabled(true);
             }
         } catch (Exception exception) {
+            requestProgressBar.setVisible(false);
             String errorMsg = exception.getMessage();
             responseTextArea.setText(errorMsg);
             prettyResponseTextArea.setText("");
