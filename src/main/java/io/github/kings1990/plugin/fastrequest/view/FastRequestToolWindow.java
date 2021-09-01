@@ -602,6 +602,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                                             .addAction(new GotoFile(file))
                                             .notify(myProject);
                                 }
+                                finalFile.delete();
                             }
                         };
                         ProgressManager.getInstance().runProcessWithProgressAsynchronously(task, new BackgroundableProcessIndicator(task));
