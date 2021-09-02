@@ -30,6 +30,7 @@
 
 ![example](./screenshot/example.gif)
 ![example_download](./screenshot/downloadFile.gif)
+![example_download](./screenshot/apis_hd.png)
 
 - document
   * [中文文档](README.zh_CN.md)
