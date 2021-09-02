@@ -169,6 +169,10 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         kv.set(name, paramKeyValue);
                     } else if (fieldTypeName.contains("List")) {   //list type
                         PsiType iterableType = PsiUtil.extractIterableTypeParameter(type, false);
+                        //无泛型指定
+                        if (iterableType == null) {
+                            continue;
+                        }
                         PsiClass iterableClass = PsiUtil.resolveClassInClassTypeOnly(iterableType);
                         ArrayList list = new ArrayList<>();
                         String classTypeName = iterableClass.getQualifiedName();
@@ -176,7 +180,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         if (isNormalType(classTypeName)) {
                             ParamKeyValue paramKeyValue;
                             if ("java.lang.String".equals(classTypeName) || "String".equals(classTypeName)) {
-                                String v = StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy);
+                                String v = StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy);
                                 paramKeyValue = new ParamKeyValue("", v, 2, TypeUtil.Type.String.name(), comment);
                                 list.add(paramKeyValue);
                             } else {
