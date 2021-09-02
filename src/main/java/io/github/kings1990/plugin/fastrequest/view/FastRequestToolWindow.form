@@ -108,7 +108,9 @@
               </component>
               <component id="15a4f" class="javax.swing.JLabel">
                 <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="88" height="-1"/>
+                  </grid>
                 </constraints>
                 <properties>
                   <text resource-bundle="io/github/kings1990/fastrequest/18n/fr" key="CurrentEnv"/>
