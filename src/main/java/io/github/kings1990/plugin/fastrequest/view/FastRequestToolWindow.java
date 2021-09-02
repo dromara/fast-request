@@ -592,7 +592,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     if (fileMode && status >= 200 && status < 300) {
                         prettyResponseTextArea.setText("");
                         responseTextArea.setText("");
-                        Task.Backgroundable task = new Task.Backgroundable(myProject, "Saving file") {
+                        Task.Backgroundable task = new Task.Backgroundable(myProject, "Saving file...") {
                             @Override
                             public void run(@NotNull ProgressIndicator indicator) {
                                 File f = new File(myProject.getBasePath());
