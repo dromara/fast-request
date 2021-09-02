@@ -514,6 +514,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     private void sendRequestEvent(boolean fileMode) {
+        boolean enabled = sendButton.isEnabled();
+        if (!enabled) {
+            return;
+        }
         sendButton.setEnabled(false);
         try {
             FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
@@ -635,6 +639,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     responseStatusComboBox.setSelectedItem(status);
                     responseStatusComboBox.setBackground((status >= 200 && status < 300) ? MyColor.green : MyColor.red);
                 } catch (Exception ee) {
+                    sendButton.setEnabled(true);
                     requestProgressBar.setVisible(false);
                     tabbedPane.setSelectedIndex(4);
                     responseTabbedPanel.setSelectedIndex(2);
@@ -654,11 +659,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     CustomNode root = new CustomNode("Root", "");
                     ((DefaultTreeModel) responseTable.getTableModel()).setRoot(root);
                 }
-            });
-            if (future.isDone()) {
                 sendButton.setEnabled(true);
-            }
+            });
         } catch (Exception exception) {
+            sendButton.setEnabled(true);
             requestProgressBar.setVisible(false);
             String errorMsg = exception.getMessage();
             responseTextArea.setText(errorMsg);
@@ -676,7 +680,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             tabbedPane.setSelectedIndex(4);
             responseTabbedPanel.setSelectedIndex(2);
         }
-        sendButton.setEnabled(true);
+
     }
 
 
