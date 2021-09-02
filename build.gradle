@@ -37,6 +37,7 @@ patchPluginXml {
     <ul>
         <li>Fix that the A request is displayed to the B project in the case of multiple open projects(修复项目多开情况下A请求显示到B项目)</li>
         <li>Fix array and list param parse error decorate by @ResponseBody(修复@ResponseBody修饰的数组与集合解析问题)</li>
+        <li>Fix List without generic parse error(修复List参数无泛型解析问题)</li>
         <li>Add support for send and download(添加对文件下载的支持)</li>
         <li>Show progressbar while sending request(发送请求时展示进度条)</li>
         <li>Some optimization(一些优化)</li>
