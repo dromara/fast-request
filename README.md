@@ -9,8 +9,8 @@
 help you quickly generate **url** and **params**.It is also a http client tool.
 
 You only need to click the rocket icon on the left side of the method, the plugin will help you generate the method url
-and parameters and display in the tool, and then click Send Request to complete the API debugging in IDEA, and you can
-save the history request
+and parameters and display in the tool window, and then click Send Request to complete the API debugging in IDEA, and
+you can save the history request
 
 Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client, but also
 provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to
