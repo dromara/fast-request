@@ -39,8 +39,8 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 ![example_download](./screenshot/apis_hd.png)
 
 - document
-  * [中文文档](README.zh_CN.md)
-  * [English Document](README.md)
+  * [中文文档](https://kings1990.github.io/restful-fast-request-doc/)
+  * [English Document](https://kings1990.github.io/restful-fast-request-doc/en/)
 
 ## 0.Install
 
