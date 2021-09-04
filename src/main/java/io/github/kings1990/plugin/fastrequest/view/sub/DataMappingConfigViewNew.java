@@ -166,10 +166,14 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
             try {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
-                    dp.browse(URI.create("https://github.com/kings1990/fast-request-doc#32-data-mapping"));
+                    if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
+                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/guide/getstarted.html#自定义类型映射"));
+                    } else {
+                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted.html#custom-type-mapping"));
+                    }
                 }
             } catch (Exception exception) {
-                LOGGER.error("open url fail:https://github.com/kings1990/fast-request-doc#32-data-mapping", exception);
+                LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted.html#custom-type-mapping", exception);
             }
         });
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);

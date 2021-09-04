@@ -62,6 +62,7 @@
         <li>Fix List without generic parse error(修复List参数无泛型解析问题)</li>
         <li>Add support for send and download(添加对文件下载的支持)</li>
         <li>Show progressbar while sending request(发送请求时展示进度条)</li>
+        <li>Brand new document(全新的document)</li>
         <li>Some optimization(一些优化)</li>
     </ul>
     ]]>

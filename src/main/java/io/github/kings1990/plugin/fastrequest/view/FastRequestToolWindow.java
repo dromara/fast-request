@@ -2780,10 +2780,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             try {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
-                    dp.browse(URI.create("https://github.com/kings1990/fast-request"));
+                    if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
+                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/"));
+                    } else {
+                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/"));
+                    }
                 }
             } catch (Exception e) {
-                LOGGER.error("open url fail:https://github.com/kings1990/fast-request", e);
+                LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/", e);
             }
         }
     }
