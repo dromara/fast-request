@@ -158,4 +158,4 @@ public class XxxController(){
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
 [plugin]: https://plugins.jetbrains.com/plugin/16988
-[plugin-img]: https://img.shields.io/badge/plugin-FastRequest-x.svg
+[plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg
