@@ -16,8 +16,13 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class OtherConfigConfigurable extends AbstractConfigConfigurable {
-    protected FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
-    private OtherConfigView view = new OtherConfigView(config);
+    protected FastRequestConfiguration config;
+    private final OtherConfigView view;
+
+    public OtherConfigConfigurable() {
+        config = FastRequestComponent.getInstance().getState();
+        view = new OtherConfigView(config);
+    }
 
     @Override
     public AbstractConfigurableView getView() {

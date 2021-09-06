@@ -21,8 +21,13 @@ import javax.swing.*;
 import java.util.List;
 
 public class CommonConfigurable extends AbstractConfigConfigurable {
-    protected FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
-    private CommonConfigView view = new CommonConfigView(config);
+    protected FastRequestConfiguration config;
+    private final CommonConfigView view;
+
+    public CommonConfigurable() {
+        config = FastRequestComponent.getInstance().getState();
+        view = new CommonConfigView(config);
+    }
 
     @Override
     public String getDisplayName() {
@@ -91,7 +96,7 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
             MessageBus messageBus = project.getMessageBus();
             messageBus.connect();
             ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.ENV_PROJECT_CHANGE_TOPIC);
-            configChangeNotifier.configChanged(true);
+            configChangeNotifier.configChanged(true, project.getName());
         }
     }
 

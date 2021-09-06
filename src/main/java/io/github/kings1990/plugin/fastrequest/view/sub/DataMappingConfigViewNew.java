@@ -32,7 +32,6 @@ import java.util.regex.Pattern;
 
 public class DataMappingConfigViewNew extends AbstractConfigurableView {
     private static final Logger LOGGER = Logger.getInstance(DataMappingConfigView.class);
-    private JPanel panel;
     private JPanel defaultDataMappingPanel;
     private JPanel customDataMappingPanel;
     private JTextField randomStringTextField;
@@ -96,7 +95,7 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
     }
 
     private JComponent createMainComponent(){
-        panel = new JPanel(new GridBagLayout());
+        JPanel panel = new JPanel(new GridBagLayout());
         GridBag gb = new GridBag()
                 .setDefaultInsets(JBUI.insets(0, 0, 4, 10))
                 .setDefaultWeightX(1)
@@ -111,10 +110,10 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
         BorderLayoutPanel inlineDefaultDataMappingPanel = JBUI.Panels.simplePanel().addToTop(UI.PanelFactory.panel(defaultDataMappingPanel).withLabel(MyResourceBundleUtil.getKey("DefaultDataMapping")).moveLabelOnTop().createPanel());
 
 
-        this.panel.add(stringGeneratorConfigPanel,gb.nextLine().next().fillCell());
-        this.panel.add(inlineCustomerDataMapping,gb.nextLine().next().weighty(0.4).fillCell());
-        this.panel.add(inlineDefaultDataMappingPanel,gb.nextLine().next().weighty(0.4).fillCell());
-        return this.panel;
+        panel.add(stringGeneratorConfigPanel, gb.nextLine().next().fillCell());
+        panel.add(inlineCustomerDataMapping, gb.nextLine().next().weighty(0.4).fillCell());
+        panel.add(inlineDefaultDataMappingPanel, gb.nextLine().next().weighty(0.4).fillCell());
+        return panel;
     }
 
     private JPanel createStringGeneratorConfigPanel(){
@@ -167,10 +166,14 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
             try {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
-                    dp.browse(URI.create("https://github.com/kings1990/fast-request-doc#32-data-mapping"));
+                    if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
+                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/guide/getstarted.html#自定义类型映射"));
+                    } else {
+                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted.html#custom-type-mapping"));
+                    }
                 }
             } catch (Exception exception) {
-                LOGGER.error("open url fail:https://github.com/kings1990/fast-request-doc#32-data-mapping", exception);
+                LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted.html#custom-type-mapping", exception);
             }
         });
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);
