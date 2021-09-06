@@ -63,6 +63,8 @@
         <li>Add support for send and download(添加对文件下载的支持)</li>
         <li>Show progressbar while sending request(发送请求时展示进度条)</li>
         <li>Brand new document(全新的document)</li>
+        <li>fix url not generated decorate by @PostMapping that url in path attribute(修复url在@PostMapping中的path属性中获取失败)</li>
+        <li>fix duplicate key error in headers(修复headers中有重复key报错)</li>
         <li>Some optimization(一些优化)</li>
     </ul>
     ]]>
