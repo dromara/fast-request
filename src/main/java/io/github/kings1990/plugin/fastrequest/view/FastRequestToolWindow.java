@@ -534,7 +534,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             String methodType = (String) methodTypeComboBox.getSelectedItem();
             HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), domain + sendUrl);
             headerParamsKeyValueList = headerParamsKeyValueList == null ? new ArrayList<>() : headerParamsKeyValueList;
-            Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().filter(DataMapping::getEnabled).collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue())));
+            Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().filter(DataMapping::getEnabled).collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue()), (existing, replacement) -> existing));
             request.header(headerMap);
             Map<String, Object> multipartFormParam = multipartKeyValueList.stream().filter(ParamKeyValue::getEnabled)
                     .collect(HashMap::new, (m, v) -> {
@@ -551,7 +551,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         }
                     }, HashMap::putAll);
 
-            Map<String, Object> formParam = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue));
+            Map<String, Object> formParam = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue, (existing, replacement) -> existing));
             String jsonParam = jsonParamsTextArea.getText();
             StringBuilder urlEncodedParam = new StringBuilder("");
             urlEncodedKeyValueList.stream().filter(ParamKeyValue::getEnabled).forEach(q -> {
@@ -1037,7 +1037,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);
         toolbarDecorator.setAddAction(anActionButton -> {
-                    if(headerParamsKeyValueList == null){
+                    if (headerParamsKeyValueList == null) {
                         headerParamsKeyValueList = new ArrayList<>();
                     }
                     int selectedRow = headerTable.getSelectedRow();
@@ -1047,16 +1047,18 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     } else {
                         headerParamsKeyValueList.add(selectedRow + 1, new DataMapping("", ""));
                     }
-                    refreshTable(headerTable);
-//                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
+                    //refreshTable(headerTable);
+                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("", "Header Name", "Header Value")), headerParamsKeyValueList));
+                    headerTable.getColumnModel().getColumn(0).setMaxWidth(30);
                 }
         ).setRemoveAction(anActionButton -> {
             int[] selectedIndices = headerTable.getSelectionModel().getSelectedIndices();
-            List<Integer> indexes= Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-            indexes.removeIf(q->q > headerParamsKeyValueList.size() - 1);
+            List<Integer> indexes = Arrays.stream(selectedIndices).boxed().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+            indexes.removeIf(q -> q > headerParamsKeyValueList.size() - 1);
             indexes.stream().mapToInt(i -> i).forEach(headerParamsKeyValueList::remove);
-//            headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
-            refreshTable(headerTable);
+            headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("", "Header Name", "Header Value")), headerParamsKeyValueList));
+            headerTable.getColumnModel().getColumn(0).setMaxWidth(30);
+//            refreshTable(headerTable);
         });
         headerPanel = toolbarDecorator.createPanel();
     }
@@ -1083,8 +1085,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     String key = node.getKey();
                     Object value = node.getValue();
                     DataMapping dataMapping = headerParamsKeyValueList.stream().filter(q -> q.getType().equals(key)).findFirst().orElse(null);
-                    if(dataMapping == null){
-                        DataMapping addOne = new DataMapping(key,value.toString());
+                    if (dataMapping == null) {
+                        DataMapping addOne = new DataMapping(key, value.toString());
                         headerParamsKeyValueList.add(addOne);
                     } else {
                         dataMapping.setValue(value.toString());
@@ -1092,8 +1094,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
                     assert config != null;
                     config.setHeaderList(headerParamsKeyValueList);
-                    refreshTable(headerTable);
-                    //headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name","Header Value")), headerParamsKeyValueList));
+                    //refreshTable(headerTable);
+                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name", "Header Value")), headerParamsKeyValueList));
                     tabbedPane.setSelectedIndex(0);
                 }
         );
