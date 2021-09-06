@@ -1,7 +1,9 @@
 package io.github.kings1990.plugin.fastrequest.config;
 
 import com.google.common.collect.Lists;
-import com.intellij.openapi.components.*;
+import com.intellij.openapi.components.PersistentStateComponent;
+import com.intellij.openapi.components.State;
+import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.project.Project;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
@@ -45,6 +47,6 @@ public class FastRequestCollectionComponent implements PersistentStateComponent<
     }
 
     public static FastRequestCollectionComponent getInstance(Project project) {
-        return ServiceManager.getService(project,FastRequestCollectionComponent.class);
+        return project.getService(FastRequestCollectionComponent.class);
     }
 }

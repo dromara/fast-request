@@ -2,6 +2,7 @@ package io.github.kings1990.plugin.fastrequest.generator.impl;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.psi.*;
+import com.intellij.psi.impl.source.PsiClassReferenceType;
 import com.intellij.psi.impl.source.PsiMethodImpl;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
@@ -150,10 +151,19 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         PsiParameterList parameterList = psiMethod.getParameterList();
         PsiParameter[] parameters = parameterList.getParameters();
         for (PsiParameter param : parameters) {
-            PsiClass psiClass = PsiUtil.resolveClassInType(param.getType());
+            String canonicalText = param.getType().getCanonicalText();
+            PsiClass psiClass = null;
+            if (canonicalText.contains("List")) {
+                PsiClassReferenceType t = (PsiClassReferenceType) PsiUtil.extractIterableTypeParameter(param.getType(), false);
+                if (t != null) {
+                    psiClass = t.resolve();
+                }
+            } else {
+                psiClass = PsiUtil.resolveClassInType(param.getType());
+            }
             PsiAnnotation annotation = param.getAnnotation(Constant.SpringUrlParamConfig.REQUEST_BODY.getCode());
-            if (annotation != null) {
-                ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass, Constant.SpringUrlParamConfig.REQUEST_BODY.getParseType());
+            if (annotation != null && psiClass != null) {
+                ParamNameType paramNameType = new ParamNameType(param.getName(), canonicalText, psiClass, Constant.SpringUrlParamConfig.REQUEST_BODY.getParseType());
                 result.add(paramNameType);
             }
         }

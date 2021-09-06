@@ -1,4 +1,4 @@
-<idea-plugin require-restart="true">
+<idea-plugin>
     <id>io.github.kings1990.FastRequest</id>
     <name>Restful Fast Request</name>
     <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
@@ -16,100 +16,54 @@
     它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求<br/>
     插件帮助你在IDEA界面内更快更高效得调试你的API<br/>
     支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
-    <br/><br/>
-
-
-    <em>Support send http request</em><br/>
-    <em>Support save request</em><br/>
     <br/>
-    <a href="https://github.com/kings1990/fast-request-doc">详细文档</a> | <a href="https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO">QQ群:754131222</a><br/>
-    <a href="https://github.com/kings1990/fast-request-doc">Documentation</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
+    <a href="https://github.com/kings1990/fast-request">Github</a> | <a href="https://gitee.com/kings/fast-request">Gitee</a> Welcome to star(欢迎star)
+    <br/><br/>
+    <a href="https://kings1990.github.io/restful-fast-request-doc/">详细文档</a> | <a href="https://github.com/kings1990/fast-request-doc/issues">问题反馈</a> | <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/change-log">历史变更</a> | <a href="https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO">QQ群:754131222</a><br/>
+    <a href="https://kings1990.github.io/restful-fast-request-doc/en/">Documentation</a> | <a href="https://github.com/kings1990/fast-request-doc/issues">Issues Tracker</a> | <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/change-log">change log</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
+    <br/>
 
-    <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/example.png" />
+    Features:
+    <ul>
+        <li>generate url and parameters in one click</li>
+        <li>Send request to debug API(support to modify the generated parameters)</li>
+        <li>Send request and download</li>
+        <li>domain customization and switching</li>
+        <li>custom parameter parse</li>
+        <li>string generation strategy</li>
+        <li>save api</li>
+        <li>Management API (search filter, modify API name)</li>
+        <li>one click location history save api to method</li>
+        <li>api to curl</li>
+    </ul>
+
+    功能:
+    <ul>
+        <li>一键生成url和参数</li>
+        <li>发送请求调试API(支持修改生成的参数)</li>
+        <li>发送请求并下载文件</li>
+        <li>域名定制及切换</li>
+        <li>自定义参数解析</li>
+        <li>字符串生成策略化</li>
+        <li>保存API</li>
+        <li>管理API(搜索过滤、修改API名称)</li>
+        <li>一键定位历史保存的API到方法</li>
+        <li>API转curl</li>
+    </ul>
+    <br/>
+    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" />
     <h2>API manager</h2>
-    <img src="https://raw.githubusercontent.com/kings1990/fast-request-doc/master/screenshot/apis.png" /><br/>
+    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/apis.png" /><br/>
 
-    <h3>v2.0.1</h3>
+    <h3>Latest changes</h3>
     <ul>
-        <li>rename from Fast Request to Restful Fast Request</li>
-        <li>merge Json、Form URL-Encoded、Multipart to Body Tab to reduce the tool window width(Json、Form URL-Encoded、Multipart Tab合并减小工具窗口宽度)</li>
-        <li>fix bug when modify config in global mode(修复全局配置下修改配置报错)</li>
-        <li>add get、post、delete、put icon to saved request(将get、post、delete、put图标添加到保存的请求)</li>
-        <li>saved request support more search strategy(保存的请求支持更多搜索策略)</li>
-        <li>rename tab name from collection to APIs(tab重命名collection->APIs)</li>
-        <li>support parse java.time.YearMonth(YearMonth解析支持)</li>
-    </ul>
-
-    <h3>v2.0.0</h3>
-    <ul>
-        <li>support store request(支持请求的存储)</li>
-        <li>support params optional(支持参数可选)</li>
-        <li>optimal iu(优化了UI)</li>
-        <li>fix some bugs(修复了一些bug)</li>
-    </ul>
-
-    <h3>v1.1.5</h3>
-    <ul>
-        <li>support modify basic type value(基础类型默认值支持修改)</li>
-        <li>fix response scroll issue(修复response滚动问题)</li>
-        <li>add three string generate strategy(新增了3中string类型参数生成策略)</li>
-        <li>optimal configuration guidance(优化配置引导)</li>
-        <li>optimized the display of icons in dark and light themes(优化了暗色和淡色主题下图标的显示)</li>
-        <li>18n support(国际化支持)</li>
-        <li>optimal tool window layout(优化了工具窗口布局)</li>
-    </ul>
-
-    <h3>v1.1.4</h3>
-    <ul>
-        <li>curl support(支持curl拷贝)</li>
-        <li>fix send request return error response parse error(修复发送消息异常情况下响应的解析)</li>
-        <li>remove domain from url(移除了url上的域名)</li>
-        <li>support add params to header params(支持了将参数从response添加到header)</li>
-        <li>support pretty and raw response(响应支持美化和原文输出)</li>
-        <li>optimize the interaction add/remove json params(优化了添加和删除json参数的交互)</li>
-        <li>support expand and collapse json params(支持json参数的展开和收缩)</li>
-        <li>add shortcut to modify config(增加快速跳转至配置页面)</li>
-        <li>support toggle request and response panel(支持伸缩请求和响应面板)</li>
-        <li>fix some bugs(修复了一些bug)</li>
-        <li>fix stuck when debug(修复调试时卡死问题)</li>
-    </ul>
-
-    <h3>v1.1.3</h3>
-    <ul>
-        <li>multipartFile support(文件上传支持)</li>
-        <li>fix parameters alias bug(参数别名bug修复)</li>
-        <li>fix generate array parameters(数组参数生成bug修复)</li>
-        <li>controller url fixed variable can replace by config(控制器上的url支持变量替换)</li>
-        <li>show tool window when click generate icon(点击图标弹出工具窗口)</li>
-        <li>beautify ui(美化ui)</li>
-    </ul>
-
-    <h3>v1.1.2</h3>
-    <ul>
-        <li>add line icon for method</li>
-        <li>limit send button click frequency</li>
-        <li>optimize response show large text</li>
-    </ul>
-
-    <h3>v1.1.1</h3>
-    <ul>
-        <li>fix some bugs</li>
-        <li>params can delete batch</li>
-    </ul>
-
-    <h3>v1.1.0</h3>
-    <ul>
-        <li>support http request</li>
-        <li>support modify and add params</li>
-        <li>beautify ui</li>
-        <li>fix some bugs</li>
-    </ul>
-
-    <h3>v1.0.0</h3>
-    <ul>
-        <li>support Springmvc/SpringBoot</li>
-        <li>support custom domain</li>
-        <li>support custom params</li>
+        <li>Fix that the A request is displayed to the B project in the case of multiple open projects(修复项目多开情况下A请求显示到B项目)</li>
+        <li>Fix array and list param parse error decorate by @ResponseBody(修复@ResponseBody修饰的数组与集合解析问题)</li>
+        <li>Fix List without generic parse error(修复List参数无泛型解析问题)</li>
+        <li>Add support for send and download(添加对文件下载的支持)</li>
+        <li>Show progressbar while sending request(发送请求时展示进度条)</li>
+        <li>Brand new document(全新的document)</li>
+        <li>Some optimization(一些优化)</li>
     </ul>
     ]]>
     </description>

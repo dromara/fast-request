@@ -12,11 +12,11 @@ import java.awt.*;
  * @date 2021/08/23
  */
 public class MyColor {
-    public static final JBColor green = new JBColor(new Color(89, 168, 105), new Color(60, 179, 113));
-    public static final JBColor red = new JBColor(new Color(219, 88, 96), new Color(199, 84, 80));
+    public static final JBColor green = new JBColor(new Color(0x59A869), new Color(0x3CB371));
+    public static final JBColor red = new JBColor(new Color(0xDB5860), new Color(0xC75450));
     //new JBColor(new Color(56, 159, 214), new Color(240, 167, 50));
-    public static final JBColor yellow = new JBColor(new Color(237, 162, 0), new Color(202, 111, 30));
+    public static final JBColor yellow = new JBColor(new Color(0xEDA200), new Color(0xCA6F1E));
     //idea new JBColor(new Color(56, 159, 214), new Color(53, 146, 196));
-    public static final JBColor blue = new JBColor(new Color(56, 159, 214), new Color(70, 130, 180));
+    public static final JBColor blue = new JBColor(new Color(0x389FD6), new Color(0x4682B4));
 
 }

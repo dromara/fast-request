@@ -2,7 +2,7 @@ package io.github.kings1990.plugin.fastrequest.view.linemarker;
 
 import com.intellij.codeInsight.daemon.LineMarkerInfo;
 import com.intellij.codeInsight.daemon.LineMarkerProvider;
-import com.intellij.openapi.components.ServiceManager;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.markup.GutterIconRenderer;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
@@ -21,25 +21,25 @@ import org.jetbrains.annotations.NotNull;
 
 public class FastRequestLineMarkerProvider implements LineMarkerProvider {
 
-    private GeneratorUrlService generatorUrlService = ServiceManager.getService(GeneratorUrlService.class);
-
     public LineMarkerInfo<PsiElement> getLineMarkerInfo(@NotNull PsiElement element) {
+
         LineMarkerInfo<PsiElement> lineMarkerInfo;
 
         if (element instanceof PsiIdentifier && element.getParent() instanceof PsiMethod) {
             if (!judgeMethod(element)) {
                 return null;
             }
-            PsiMethod methodElement = (PsiMethod)element.getParent();
+            PsiMethod methodElement = (PsiMethod) element.getParent();
             lineMarkerInfo = new LineMarkerInfo<>(element, element.getTextRange(), PluginIcons.fastRequest,
                     new FunctionTooltip(methodElement),
                     (e, elt) -> {
                         Project project = elt.getProject();
+                        GeneratorUrlService generatorUrlService = ApplicationManager.getApplication().getService(GeneratorUrlService.class);
                         generatorUrlService.generate(methodElement);
 
                         //打开工具窗口
                         ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(project).getToolWindow("Fast Request");
-                        if(fastRequestToolWindow != null && !fastRequestToolWindow.isActive()){
+                        if (fastRequestToolWindow != null && !fastRequestToolWindow.isActive()) {
                             fastRequestToolWindow.activate(null);
                             Content content = fastRequestToolWindow.getContentManager().getContent(0);
                             assert content != null;
@@ -49,9 +49,9 @@ public class FastRequestLineMarkerProvider implements LineMarkerProvider {
                         MessageBus messageBus = project.getMessageBus();
                         messageBus.connect();
                         ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.PARAM_CHANGE_TOPIC);
-                        configChangeNotifier.configChanged(true);
+                        configChangeNotifier.configChanged(true, project.getName());
                     },
-                    GutterIconRenderer.Alignment.LEFT);
+                    GutterIconRenderer.Alignment.LEFT, () -> "fastRequest");
             lineMarkerInfo.createGutterRenderer();
             return lineMarkerInfo;
         }

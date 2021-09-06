@@ -14,16 +14,24 @@ import io.github.kings1990.plugin.fastrequest.view.FastRequestCollectionToolWind
 import io.github.kings1990.plugin.fastrequest.view.FastRequestToolWindow;
 import org.jetbrains.annotations.NotNull;
 
-public class FastRequestToolWindowFactory implements ToolWindowFactory , DumbAware {
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class FastRequestToolWindowFactory implements ToolWindowFactory, DumbAware {
 
     private FastRequestToolWindow window;
 
     private FastRequestCollectionToolWindow collectionToolWindow;
 
+    private final Map<String, FastRequestToolWindow> windowMap = new ConcurrentHashMap<>();
+    private final Map<String, FastRequestCollectionToolWindow> apiWindowMap = new ConcurrentHashMap<>();
+
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         window = new FastRequestToolWindow(toolWindow, project);
         collectionToolWindow = new FastRequestCollectionToolWindow(project, toolWindow);
+        windowMap.put(project.getName(), window);
+        apiWindowMap.put(project.getName(), collectionToolWindow);
 
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
         window.getComponent().add(window.getContent());
@@ -40,24 +48,28 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory , DumbAwa
         MessageBusConnection connect = messageBus.connect();
         connect.subscribe(ConfigChangeNotifier.PARAM_CHANGE_TOPIC, new ConfigChangeNotifier() {
             @Override
-            public void configChanged(boolean active) {
-                window.refresh(false);
+            public void configChanged(boolean active, String projectName) {
+                windowMap.get(projectName).refresh(false);
             }
 
             @Override
-            public void loadRequest(CollectionConfiguration.CollectionDetail detail) {
+            public void loadRequest(CollectionConfiguration.CollectionDetail detail, String projectName) {
             }
         });
 
         connect.subscribe(ConfigChangeNotifier.ENV_PROJECT_CHANGE_TOPIC,
             new ConfigChangeNotifier() {
                 @Override
-                public void configChanged(boolean active) {
-                    window.changeEnvAndProject();
+                public void configChanged(boolean active, String projectName) {
+                    //有可能在全局配置下点击,
+                    FastRequestToolWindow window = windowMap.get(projectName);
+                    if (window != null) {
+                        window.changeEnvAndProject();
+                    }
                 }
 
                 @Override
-                public void loadRequest(CollectionConfiguration.CollectionDetail detail) {
+                public void loadRequest(CollectionConfiguration.CollectionDetail detail, String projectName) {
 
                 }
         });
@@ -65,25 +77,27 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory , DumbAwa
         connect.subscribe(ConfigChangeNotifier.ADD_REQUEST_TOPIC,
                 new ConfigChangeNotifier() {
                     @Override
-                    public void configChanged(boolean active) {
-                        collectionToolWindow.refresh();
+                    public void configChanged(boolean active, String projectName) {
+                        apiWindowMap.get(projectName).refresh();
+//                        collectionToolWindow.refresh();
                     }
 
                     @Override
-                    public void loadRequest(CollectionConfiguration.CollectionDetail detail) {
+                    public void loadRequest(CollectionConfiguration.CollectionDetail detail, String projectName) {
                     }
                 });
 
         connect.subscribe(ConfigChangeNotifier.LOAD_REQUEST,
             new ConfigChangeNotifier() {
                 @Override
-                public void configChanged(boolean active) {
+                public void configChanged(boolean active, String projectName) {
 
                 }
 
                 @Override
-                public void loadRequest(CollectionConfiguration.CollectionDetail detail) {
-                    window.refreshByCollection(detail);
+                public void loadRequest(CollectionConfiguration.CollectionDetail detail, String projectName) {
+                    windowMap.get(projectName).refreshByCollection(detail);
+//                    window.refreshByCollection(detail);
                 }
         });
     }
