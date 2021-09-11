@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '2.0.2'
+version '2.0.3'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
@@ -33,6 +33,13 @@ intellij {
 patchPluginXml {
     changeNotes """
 
+    <h3>v2.0.3</h3>
+    <ul>
+        <li>Add confirmation when deleting api(删除API的时候增加了确认)</li>
+        <li>Fix param parse for java.util.Set(修复java.util.Set参数解析问题)</li>
+        <li>Fix parse like 【@RequestParam(value="address[]") Set<String> address】(修复诸如【@RequestParam(value="address[]") Set<String> address】的参数解析)</li>
+    </ul>
+    
     <h3>v2.0.2</h3>
     <ul>
         <li>Fix that the A request is displayed to the B project in the case of multiple open projects(修复项目多开情况下A请求显示到B项目)</li>

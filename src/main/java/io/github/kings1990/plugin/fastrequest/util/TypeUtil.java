@@ -34,6 +34,7 @@ public class TypeUtil {
             case "java.time.YearMonth":
                 return Type.String.name();
             case "List":
+            case "Set":
                 return Type.Array.name();
             default:
                 return Type.Object.name();

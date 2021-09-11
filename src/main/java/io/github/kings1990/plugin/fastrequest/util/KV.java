@@ -7,6 +7,7 @@ import com.intellij.psi.*;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
 import com.intellij.psi.util.PsiUtil;
+import com.siyeh.ig.psiutils.CollectionUtils;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
@@ -151,7 +152,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                             list.add(paramKeyValue);
                         } else if (isNormalType(deepTypeName)) {
                             if ("java.lang.String".equals(deepTypeName)) {
-                                String v = StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy);
+                                String v = StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy);
                                 ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.String.name(), comment);
                                 list.add(paramKeyValue);
                             } else {
@@ -159,7 +160,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                                 ParamKeyValue paramKeyValue = new ParamKeyValue(name, v, 2, TypeUtil.Type.Array.name(), comment);
                                 kv.set(name, paramKeyValue);
                             }
-                        }  else if("org.springframework.web.multipart.MultipartFile".equals(deepTypeName)){
+                        } else if ("org.springframework.web.multipart.MultipartFile".equals(deepTypeName)) {
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
                             list.add(paramKeyValue);
                         } else {
@@ -167,7 +168,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         }
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment);
                         kv.set(name, paramKeyValue);
-                    } else if (fieldTypeName.contains("List")) {   //list type
+                    } else if (CollectionUtils.isCollectionClassOrInterface(type)) {   //list type
                         PsiType iterableType = PsiUtil.extractIterableTypeParameter(type, false);
                         //无泛型指定
                         if (iterableType == null) {
