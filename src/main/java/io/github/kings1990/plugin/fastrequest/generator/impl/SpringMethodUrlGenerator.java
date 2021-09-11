@@ -7,6 +7,7 @@ import com.intellij.psi.impl.source.PsiMethodImpl;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
 import com.intellij.psi.util.PsiUtil;
+import com.siyeh.ig.psiutils.CollectionUtils;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.generator.FastUrlGenerator;
@@ -155,7 +156,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         for (PsiParameter param : parameters) {
             String canonicalText = param.getType().getCanonicalText();
             PsiClass psiClass = null;
-            if (canonicalText.contains("List")) {
+            if (CollectionUtils.isCollectionClassOrInterface(param.getType())) {
                 PsiClassReferenceType t = (PsiClassReferenceType) PsiUtil.extractIterableTypeParameter(param.getType(), false);
                 if (t != null) {
                     psiClass = t.resolve();
@@ -165,7 +166,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
             }
             PsiAnnotation annotation = param.getAnnotation(Constant.SpringUrlParamConfig.REQUEST_BODY.getCode());
             if (annotation != null && psiClass != null) {
-                ParamNameType paramNameType = new ParamNameType(param.getName(), canonicalText, psiClass, Constant.SpringUrlParamConfig.REQUEST_BODY.getParseType());
+                ParamNameType paramNameType = new ParamNameType(param.getName(), canonicalText, psiClass, Constant.SpringUrlParamConfig.REQUEST_BODY.getParseType(), param.getType());
                 result.add(paramNameType);
             }
         }
@@ -189,8 +190,8 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
                     Integer parseType = config.getParseType();
                     if (parseType == 1 || parseType == 2) {
                         PsiAnnotationMemberValue value = annotation.findDeclaredAttributeValue("value");
-                        String name = value== null?param.getName():value.getText().replace("\"","");
-                        ParamNameType paramNameType = new ParamNameType(name, param.getType().getCanonicalText(), psiClass, parseType);
+                        String name = value == null ? param.getName() : value.getText().replace("\"", "");
+                        ParamNameType paramNameType = new ParamNameType(name, param.getType().getCanonicalText(), psiClass, parseType, param.getType());
                         result.add(paramNameType);
                         parseFlag = true;
                         break;
@@ -200,7 +201,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
             }
             if (!parseFlag) {
                 //默认无注解传参 requestParam
-                ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass, 2);
+                ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass, 2, param.getType());
                 result.add(paramNameType);
             }
         }
