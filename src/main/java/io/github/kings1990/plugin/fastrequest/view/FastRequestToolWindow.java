@@ -1118,8 +1118,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     assert config != null;
                     config.setHeaderList(headerParamsKeyValueList);
                     //refreshTable(headerTable);
-                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name", "Header Value")), headerParamsKeyValueList));
-                    tabbedPane.setSelectedIndex(0);
+                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("", "Header Name", "Header Value")), headerParamsKeyValueList));
+            tabbedPane.setSelectedIndex(0);
+            headerTable.getColumnModel().getColumn(0).setMaxWidth(30);
                 }
         );
         toolbarDecorator.setRemoveAction(null);
