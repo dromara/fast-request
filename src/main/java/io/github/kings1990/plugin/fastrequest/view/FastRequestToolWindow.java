@@ -625,7 +625,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         String body = response.body();
                         if (JsonUtil.isJSON2(body)) {
                             responseTabbedPanel.setSelectedIndex(0);
-                            prettyResponseTextArea.setText(JSON.toJSONString(JSON.parse(body), true));
+                            prettyResponseTextArea.setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
                             responseTextArea.setText(body);
                             refreshResponseTable(body);
                         } else {
@@ -1181,10 +1181,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     public void refreshResponseTable(String body){
+        CustomNode root = new CustomNode("Root", "");
         if(StringUtils.isBlank(body)){
+            ((DefaultTreeModel) responseTable.getTableModel()).setRoot(root);
             return;
         }
-        CustomNode root = new CustomNode("Root","");
+
         if(body.startsWith("{")){
             convertJsonObjectToNode(root,JSONObject.parseObject(body));
             ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
