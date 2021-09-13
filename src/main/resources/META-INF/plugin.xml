@@ -58,6 +58,7 @@
     <h3>Latest changes</h3>
     <ul>
         <li>Add confirmation when deleting api(删除API的时候增加了确认)</li>
+        <li>Added the support of selecting all parameters and inverting selection(添加了参数全选反选的功能)</li>
         <li>Fix param parse for java.util.Set(修复java.util.Set参数解析问题)</li>
         <li>Fix parse like 【@RequestParam(value="address[]") Set<String> address】(修复诸如【@RequestParam(value="address[]") Set<String> address】的参数解析)</li>
         <li>Fix the confusion of the quick add header interface(修复快速添加headers界面错乱)</li>
