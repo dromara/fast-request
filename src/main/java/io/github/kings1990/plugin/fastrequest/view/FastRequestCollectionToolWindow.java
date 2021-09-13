@@ -8,6 +8,7 @@ import com.intellij.ide.plugins.newui.ListPluginComponent;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.project.DumbAware;
+import com.intellij.openapi.project.IndexNotReadyException;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.MessageType;
 import com.intellij.openapi.ui.Messages;
@@ -728,7 +729,12 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         ParamGroupCollection paramGroup = detail.getParamGroup();
         String className = paramGroup.getClassName();
         String methodName = paramGroup.getMethod();
-        PsiClass psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
+        PsiClass psiClass = null;
+        try {
+            psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
+        } catch (IndexNotReadyException e) {
+            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Index should be ready first", MessageType.INFO).notify(myProject);
+        }
         if (psiClass != null) {
             PsiElement[] psiClassMethodsByName = psiClass.findMethodsByName(methodName, true);
             if (psiClassMethodsByName.length > 0) {
