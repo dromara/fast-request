@@ -13,7 +13,6 @@ public class MyParamCheckItemListener implements ItemListener {
     @Override
     public void itemStateChanged(ItemEvent e) {
         boolean checked = e.getStateChange() == ItemEvent.SELECTED;
-        System.out.println(checked);
         for (int x = 0, y = table.getRowCount(); x < y; x++) {
             table.setValueAt(checked, x, 0);
         }
