@@ -1706,7 +1706,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private void convertJsonArrayToNode(String key, JSONArray jsonArray, CustomNode node) {
         AtomicInteger idx = new AtomicInteger();
         jsonArray.forEach(json -> {
-            CustomNode nodeArray = new CustomNode(key + (idx.getAndIncrement()), null);
+            idx.getAndIncrement();
+            CustomNode nodeArray = new CustomNode(key + (idx.get()), null);
             if (json instanceof JSONObject) {
                 JSONObject valueJsonObject = (JSONObject) json;
                 node.add(convertJsonObjectToNode(nodeArray, valueJsonObject));
@@ -1720,7 +1721,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 nodeArray.add(nodeArrayIn);
                 node.add(nodeArray);
             } else {
-                node.add(new CustomNode(key, json));
+                node.add(new CustomNode(key + (idx.get()), json));
             }
         });
     }
