@@ -57,6 +57,8 @@ import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.*;
 import io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService;
 import io.github.kings1990.plugin.fastrequest.util.*;
+import io.github.kings1990.plugin.fastrequest.view.component.CheckBoxHeader;
+import io.github.kings1990.plugin.fastrequest.view.component.MyParamCheckItemListener;
 import io.github.kings1990.plugin.fastrequest.view.inner.SupportView;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -66,6 +68,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 import javax.swing.tree.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -136,6 +139,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JBTable urlEncodedTable;
     private JBTable multipartTable;
     private JBTable pathParamsTable;
+
+    private CheckBoxHeader urlParamsCheckBoxHeader;
+    private CheckBoxHeader urlEncodedCheckBoxHeader;
+    private CheckBoxHeader multipartCheckBoxHeader;
+    private CheckBoxHeader pathParamsCheckBoxHeader;
+
+
     private JBTable responseInfoTable;
     private TreeTableView responseTable;
     private JBTable headerTable;
@@ -615,7 +625,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         String body = response.body();
                         if (JsonUtil.isJSON2(body)) {
                             responseTabbedPanel.setSelectedIndex(0);
-                            prettyResponseTextArea.setText(JSON.toJSONString(JSON.parse(body), true));
+                            prettyResponseTextArea.setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
                             responseTextArea.setText(body);
                             refreshResponseTable(body);
                         } else {
@@ -874,17 +884,26 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //刷新table
         pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
         resizeTable(pathParamsTable);
+        setCheckBoxHeader(pathParamsTable, pathParamsCheckBoxHeader);
 
         urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
         resizeTable(urlParamsTable);
+        setCheckBoxHeader(urlParamsTable, urlParamsCheckBoxHeader);
 
         urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
         resizeTable(urlEncodedTable);
+        setCheckBoxHeader(urlEncodedTable, urlEncodedCheckBoxHeader);
 
         multipartTable.setModel(new ListTableModel<>(getPathColumnInfo(), multipartKeyValueList));
         resizeTable(multipartTable);
+        setCheckBoxHeader(multipartTable, multipartCheckBoxHeader);
 
         urlTextField.setText(url);
+    }
+
+    private void setCheckBoxHeader(JTable table, CheckBoxHeader header) {
+        TableColumn checkBoxColumn = table.getColumnModel().getColumn(0);
+        checkBoxColumn.setHeaderRenderer(header);
     }
 
     /**
@@ -980,15 +999,19 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //刷新table
         pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
         resizeTable(pathParamsTable);
+        setCheckBoxHeader(pathParamsTable, pathParamsCheckBoxHeader);
 
         urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
         resizeTable(urlParamsTable);
+        setCheckBoxHeader(urlParamsTable, urlParamsCheckBoxHeader);
 
         urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
         resizeTable(urlEncodedTable);
+        setCheckBoxHeader(urlEncodedTable, urlEncodedCheckBoxHeader);
 
         multipartTable.setModel(new ListTableModel<>(getPathColumnInfo(), multipartKeyValueList));
         resizeTable(multipartTable);
+        setCheckBoxHeader(multipartTable, multipartCheckBoxHeader);
 
         setDomain(config);
     }
@@ -1095,8 +1118,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     assert config != null;
                     config.setHeaderList(headerParamsKeyValueList);
                     //refreshTable(headerTable);
-                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Header Name", "Header Value")), headerParamsKeyValueList));
-                    tabbedPane.setSelectedIndex(0);
+                    headerTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("", "Header Name", "Header Value")), headerParamsKeyValueList));
+            tabbedPane.setSelectedIndex(0);
+            headerTable.getColumnModel().getColumn(0).setMaxWidth(30);
                 }
         );
         toolbarDecorator.setRemoveAction(null);
@@ -1157,10 +1181,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     public void refreshResponseTable(String body){
+        CustomNode root = new CustomNode("Root", "");
         if(StringUtils.isBlank(body)){
+            ((DefaultTreeModel) responseTable.getTableModel()).setRoot(root);
             return;
         }
-        CustomNode root = new CustomNode("Root","");
+
         if(body.startsWith("{")){
             convertJsonObjectToNode(root,JSONObject.parseObject(body));
             ((DefaultTreeModel)responseTable.getTableModel()).setRoot(root);
@@ -1682,7 +1708,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private void convertJsonArrayToNode(String key, JSONArray jsonArray, CustomNode node) {
         AtomicInteger idx = new AtomicInteger();
         jsonArray.forEach(json -> {
-            CustomNode nodeArray = new CustomNode(key + (idx.getAndIncrement()), null);
+            idx.getAndIncrement();
+            CustomNode nodeArray = new CustomNode(key + (idx.get()), null);
             if (json instanceof JSONObject) {
                 JSONObject valueJsonObject = (JSONObject) json;
                 node.add(convertJsonObjectToNode(nodeArray, valueJsonObject));
@@ -1696,7 +1723,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 nodeArray.add(nodeArrayIn);
                 node.add(nodeArray);
             } else {
-                node.add(new CustomNode(key, json));
+                node.add(new CustomNode(key + (idx.get()), json));
             }
         });
     }
@@ -2186,8 +2213,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
         };
         table.setVisible(true);
-        table.getColumnModel().getColumn(0).setMaxWidth(30);
+        TableColumn checkBoxColumn = table.getColumnModel().getColumn(0);
+        checkBoxColumn.setMaxWidth(30);
         table.getColumnModel().getColumn(1).setMaxWidth(70);
+        pathParamsCheckBoxHeader = new CheckBoxHeader(new MyParamCheckItemListener(table));
         return table;
     }
 
@@ -2296,6 +2325,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         table.getColumnModel().getColumn(0).setMaxWidth(30);
         table.getColumnModel().getColumn(1).setMaxWidth(70);
         table.setVisible(true);
+        urlEncodedCheckBoxHeader = new CheckBoxHeader(new MyParamCheckItemListener(table));
         return table;
     }
 
@@ -2429,6 +2459,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         table.getColumnModel().getColumn(0).setMaxWidth(30);
         table.getColumnModel().getColumn(1).setMaxWidth(70);
         table.setVisible(true);
+        multipartCheckBoxHeader = new CheckBoxHeader(new MyParamCheckItemListener(table));
         return table;
     }
 
@@ -2658,6 +2689,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         table.getColumnModel().getColumn(0).setMaxWidth(30);
         table.getColumnModel().getColumn(1).setMaxWidth(70);
         table.setVisible(true);
+        urlParamsCheckBoxHeader = new CheckBoxHeader(new MyParamCheckItemListener(table));
         return table;
     }
 

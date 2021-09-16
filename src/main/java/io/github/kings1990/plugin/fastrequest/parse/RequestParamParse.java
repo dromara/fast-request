@@ -2,6 +2,7 @@ package io.github.kings1990.plugin.fastrequest.parse;
 
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
+import com.siyeh.ig.psiutils.CollectionUtils;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
@@ -40,18 +41,20 @@ public class RequestParamParse extends AbstractParamParse {
             if(arrayFlag){
                 type = type.substring(0,type.indexOf("["));
             }
-            boolean listFlag = type.contains("List<");
+            boolean listFlag = CollectionUtils.isCollectionClassOrInterface(paramNameType.getPsiType());
             if(listFlag){
                 type = type.substring(type.indexOf("<")+1,type.indexOf(">"));
             }
 
             String name = paramNameType.getName();
             if ("java.lang.String".equals(type)) {
-                if(arrayFlag || listFlag){
-                    ParamKeyValue paramKeyValue = new ParamKeyValue(name+"[]", StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, TypeUtil.Type.String.name());
-                    nameValueMap.put(name,paramKeyValue);
+                if (arrayFlag || listFlag) {
+                    String key = name.contains("[]") ? name : name + "[]";
+                    name = name.replace("[]", "[0]");
+                    ParamKeyValue paramKeyValue = new ParamKeyValue(key, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, TypeUtil.Type.String.name());
+                    nameValueMap.put(name, paramKeyValue);
                 } else {
-                    nameValueMap.put(name, new ParamKeyValue(name, StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, TypeUtil.Type.String.name()));
+                    nameValueMap.put(name, new ParamKeyValue(name, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, TypeUtil.Type.String.name()));
                 }
                 continue;
             }

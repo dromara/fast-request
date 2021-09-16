@@ -57,15 +57,11 @@
 
     <h3>Latest changes</h3>
     <ul>
-        <li>Fix that the A request is displayed to the B project in the case of multiple open projects(修复项目多开情况下A请求显示到B项目)</li>
-        <li>Fix array and list param parse error decorate by @ResponseBody(修复@ResponseBody修饰的数组与集合解析问题)</li>
-        <li>Fix List without generic parse error(修复List参数无泛型解析问题)</li>
-        <li>Add support for send and download(添加对文件下载的支持)</li>
-        <li>Show progressbar while sending request(发送请求时展示进度条)</li>
-        <li>Brand new document(全新的document)</li>
-        <li>fix url not generated decorate by @PostMapping that url in path attribute(修复url在@PostMapping中的path属性中获取失败)</li>
-        <li>fix duplicate key error in headers(修复headers中有重复key报错)</li>
-        <li>Some optimization(一些优化)</li>
+        <li>Add confirmation when deleting api(删除API的时候增加了确认)</li>
+        <li>Added the support of selecting all parameters and inverting selection(添加了参数全选反选的功能)</li>
+        <li>Fix param parse for java.util.Set(修复java.util.Set参数解析问题)</li>
+        <li>Fix parse like 【@RequestParam(value="address[]") Set<String> address】(修复诸如【@RequestParam(value="address[]") Set<String> address】的参数解析)</li>
+        <li>Fix the confusion of the quick add header interface(修复快速添加headers界面错乱)</li>
     </ul>
     ]]>
     </description>
