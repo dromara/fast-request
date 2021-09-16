@@ -8,8 +8,10 @@ import com.intellij.ide.plugins.newui.ListPluginComponent;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.project.DumbAware;
+import com.intellij.openapi.project.IndexNotReadyException;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.MessageType;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.openapi.ui.popup.JBPopup;
 import com.intellij.openapi.ui.popup.JBPopupListener;
@@ -404,21 +406,24 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                     }
                 }
             }
-            int row =selectedRow == -1?0:selectedRow;
-            collectionTable.setRowSelectionInterval(row,row);
+            int row = selectedRow == -1 ? 0 : selectedRow;
+            collectionTable.setRowSelectionInterval(row, row);
             refreshTable();
 
         });
-        toolbarDecorator.setRemoveAction(e->{
-            CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(0);
-            int selectedRow = collectionTable.getSelectedRow();
-            CollectionCustomNode node = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(selectedRow);
-            CollectionCustomNode parent = (CollectionCustomNode) node.getParent();
-            parent.remove(node);
-            collectionTable.setRowSelectionInterval(selectedRow-1,selectedRow-1);
-            refreshTable();
-            CollectionConfiguration.CollectionDetail parentDetail = filterById(parent.getId(),rootDetail);
-            parentDetail.getChildList().removeIf(q -> q.getId().equals(node.getId()));
+        toolbarDecorator.setRemoveAction(e -> {
+            int i = Messages.showOkCancelDialog("Delete it?", "Delete", "Delete", "Cancel", Messages.getInformationIcon());
+            if (i == 0) {
+                CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(0);
+                int selectedRow = collectionTable.getSelectedRow();
+                CollectionCustomNode node = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(selectedRow);
+                CollectionCustomNode parent = (CollectionCustomNode) node.getParent();
+                parent.remove(node);
+                collectionTable.setRowSelectionInterval(selectedRow - 1, selectedRow - 1);
+                refreshTable();
+                CollectionConfiguration.CollectionDetail parentDetail = filterById(parent.getId(), rootDetail);
+                parentDetail.getChildList().removeIf(q -> q.getId().equals(node.getId()));
+            }
         });
         collectionPanel = toolbarDecorator.createPanel();
     }
@@ -724,7 +729,12 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         ParamGroupCollection paramGroup = detail.getParamGroup();
         String className = paramGroup.getClassName();
         String methodName = paramGroup.getMethod();
-        PsiClass psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
+        PsiClass psiClass = null;
+        try {
+            psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
+        } catch (IndexNotReadyException e) {
+            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Index should be ready first", MessageType.INFO).notify(myProject);
+        }
         if (psiClass != null) {
             PsiElement[] psiClassMethodsByName = psiClass.findMethodsByName(methodName, true);
             if (psiClassMethodsByName.length > 0) {

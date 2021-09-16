@@ -1,6 +1,7 @@
 package io.github.kings1990.plugin.fastrequest.parse;
 
 import com.google.common.collect.Lists;
+import com.siyeh.ig.psiutils.CollectionUtils;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
@@ -31,7 +32,7 @@ public class BodyParamParse extends AbstractParamParse {
             if(arrayFlag){
                 type = type.substring(0, type.indexOf("["));
             }
-            boolean listFlag = type.contains("List<");
+            boolean listFlag = CollectionUtils.isCollectionClassOrInterface(paramNameType.getPsiType());
             if(listFlag){
                 type = type.substring(type.indexOf("<") + 1, type.indexOf(">"));
             }
