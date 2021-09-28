@@ -30,7 +30,7 @@ public class FastRequestLineMarkerProvider implements LineMarkerProvider {
                 return null;
             }
             PsiMethod methodElement = (PsiMethod) element.getParent();
-            lineMarkerInfo = new LineMarkerInfo<>(element, element.getTextRange(), PluginIcons.fastRequest,
+            lineMarkerInfo = new LineMarkerInfo<>(element, element.getTextRange(), PluginIcons.fastRequest_editor,
                     new FunctionTooltip(methodElement),
                     (e, elt) -> {
                         Project project = elt.getProject();

@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '2.0.3'
+version '2.0.4'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
@@ -33,6 +33,13 @@ intellij {
 patchPluginXml {
     changeNotes """
 
+    <h3>v2.0.4</h3>
+    <ul>
+        <li>Fix the interface confusion caused by the response content aisle(修复因response内容过道导致的界面错乱问题)</li>
+        <li>Optimized icon size(优化图标尺寸)</li>
+        <li>Migrate Chinese documents to Gitee(中文文档迁移至gitee)</li>
+    </ul>
+    
     <h3>v2.0.3</h3>
     <ul>
         <li>Add confirmation when deleting api(删除API的时候增加了确认)</li>

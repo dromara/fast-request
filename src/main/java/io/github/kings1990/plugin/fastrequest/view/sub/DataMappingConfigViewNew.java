@@ -167,7 +167,7 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                     if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/guide/getstarted.html#自定义类型映射"));
+                        dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/guide/getstarted.html#自定义类型映射"));
                     } else {
                         dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted.html#custom-type-mapping"));
                     }

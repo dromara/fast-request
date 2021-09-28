@@ -19,7 +19,7 @@
     <br/>
     <a href="https://github.com/kings1990/fast-request">Github</a> | <a href="https://gitee.com/kings/fast-request">Gitee</a> Welcome to star(欢迎star)
     <br/><br/>
-    <a href="https://kings1990.github.io/restful-fast-request-doc/">详细文档</a> | <a href="https://github.com/kings1990/fast-request-doc/issues">问题反馈</a> | <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/change-log">历史变更</a> | <a href="https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO">QQ群:754131222</a><br/>
+    <a href="https://kings.gitee.io/restful-fast-request-doc/">详细文档</a> | <a href="https://github.com/kings1990/fast-request-doc/issues">问题反馈</a> | <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/change-log">历史变更</a> | <a href="https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO">QQ群:754131222</a><br/>
     <a href="https://kings1990.github.io/restful-fast-request-doc/en/">Documentation</a> | <a href="https://github.com/kings1990/fast-request-doc/issues">Issues Tracker</a> | <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/change-log">change log</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
     <br/>
 
@@ -57,11 +57,10 @@
 
     <h3>Latest changes</h3>
     <ul>
-        <li>Add confirmation when deleting api(删除API的时候增加了确认)</li>
-        <li>Added the support of selecting all parameters and inverting selection(添加了参数全选反选的功能)</li>
-        <li>Fix param parse for java.util.Set(修复java.util.Set参数解析问题)</li>
-        <li>Fix parse like 【@RequestParam(value="address[]") Set<String> address】(修复诸如【@RequestParam(value="address[]") Set<String> address】的参数解析)</li>
-        <li>Fix the confusion of the quick add header interface(修复快速添加headers界面错乱)</li>
+        <li>Fix the interface confusion caused by the response content aisle(修复因response内容过道导致的界面错乱问题)</li>
+        <li>Optimized icon size(优化图标尺寸)</li>
+        <li>Optimization of response JSON ultra long display(Response json超长显示优化)</li>
+        <li>Migrate Chinese documents to Gitee(中文文档迁移至gitee)</li>
     </ul>
     ]]>
     </description>
@@ -75,8 +74,10 @@
     <depends>com.intellij.java</depends>
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestComponent" order="first"/>
-        <projectService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent"/>
+        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestComponent"
+                            order="first"/>
+        <projectService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent"/>
         <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService"/>
         <applicationConfigurable id="p" displayName="Restful Fast Request"
                                  instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
@@ -85,12 +86,15 @@
             <configurable parentId="p"
                           instance="io.github.kings1990.plugin.fastrequest.configurable.OtherConfigConfigurable"/>
         </applicationConfigurable>
-        <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest" factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory" secondary="false"/>
+        <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest_toolwindow"
+                    factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory"
+                    secondary="false"/>
 
-        <codeInsight.lineMarkerProvider language="JAVA" implementationClass="io.github.kings1990.plugin.fastrequest.view.linemarker.FastRequestLineMarkerProvider"/>
+        <codeInsight.lineMarkerProvider language="JAVA"
+                                        implementationClass="io.github.kings1990.plugin.fastrequest.view.linemarker.FastRequestLineMarkerProvider"/>
 
         <!--兼容性处理code-->
-        <notificationGroup id="toolWindowNotificationGroup" displayType="TOOL_WINDOW" />
+        <notificationGroup id="toolWindowNotificationGroup" displayType="TOOL_WINDOW"/>
     </extensions>
 
     <actions >

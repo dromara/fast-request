@@ -7,6 +7,7 @@ import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.http.Method;
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -59,6 +60,8 @@ import io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService;
 import io.github.kings1990.plugin.fastrequest.util.*;
 import io.github.kings1990.plugin.fastrequest.view.component.CheckBoxHeader;
 import io.github.kings1990.plugin.fastrequest.view.component.MyParamCheckItemListener;
+import io.github.kings1990.plugin.fastrequest.view.component.MyWrapCellEditor;
+import io.github.kings1990.plugin.fastrequest.view.component.MyWrapCellRenderer;
 import io.github.kings1990.plugin.fastrequest.view.inner.SupportView;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -623,8 +626,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     }
                     if (!fileMode) {
                         String body = response.body();
-                        if (JsonUtil.isJSON2(body)) {
-                            responseTabbedPanel.setSelectedIndex(0);
+                        if (JSONUtil.isJson(body)) {
+                            responseTabbedPanel.setSelectedIndex(1);
                             prettyResponseTextArea.setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
                             responseTextArea.setText(body);
                             refreshResponseTable(body);
@@ -636,6 +639,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             }
                             prettyResponseTextArea.setText(subBody);
                             responseTextArea.setText(subBody);
+                            refreshResponseTable("");
                         }
                     }
                     responseInfoParamsKeyValueList = Lists.newArrayList(
@@ -646,6 +650,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     );
                     //refreshTable(responseInfoTable);
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+                    responseInfoTable.getColumnModel().getColumn(0).setPreferredWidth(150);
+                    responseInfoTable.getColumnModel().getColumn(0).setMaxWidth(150);
                     responseStatusComboBox.setSelectedItem(status);
                     responseStatusComboBox.setBackground((status >= 200 && status < 300) ? MyColor.green : MyColor.red);
                 } catch (Exception ee) {
@@ -665,7 +671,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     );
                     //refreshTable(responseInfoTable);
                     responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
-
+                    responseInfoTable.getColumnModel().getColumn(0).setPreferredWidth(150);
+                    responseInfoTable.getColumnModel().getColumn(0).setMaxWidth(150);
                     CustomNode root = new CustomNode("Root", "");
                     ((DefaultTreeModel) responseTable.getTableModel()).setRoot(root);
                 }
@@ -684,7 +691,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             );
             //refreshTable(responseInfoTable);
             responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
-
+            responseInfoTable.getColumnModel().getColumn(0).setPreferredWidth(150);
+            responseInfoTable.getColumnModel().getColumn(0).setMaxWidth(150);
             CustomNode root = new CustomNode("Root", "");
             ((DefaultTreeModel) responseTable.getTableModel()).setRoot(root);
             tabbedPane.setSelectedIndex(4);
@@ -1461,6 +1469,23 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
 
             @Override
+            public TableCellRenderer getCellRenderer(int row, int column) {
+                if (row != 0 && column == 1) {
+                    return new MyWrapCellRenderer();
+                }
+                return super.getCellRenderer(row, column);
+            }
+
+
+            @Override
+            public TableCellEditor getCellEditor(int row, int column) {
+                if (row != 0 && column == 1) {
+                    return new MyWrapCellEditor();
+                }
+                return super.getCellEditor(row, column);
+            }
+
+            @Override
             public Object getValueAt(int row, int column) {
                 ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
                 CustomNode node = (CustomNode) myModel.getRowValue(row);
@@ -1473,7 +1498,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public boolean isCellEditable(int row, int column) {
-                return false;
+                return column == 1;
             }
 
         };
@@ -2815,7 +2840,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                     if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/"));
+                        dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/"));
                     } else {
                         dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/"));
                     }
