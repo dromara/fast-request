@@ -7,6 +7,8 @@ import javax.swing.*;
 public interface PluginIcons {
     //light:#515151 dark:#BFBFBF
     Icon fastRequest = IconLoader.getIcon("/fastRequest.svg", PluginIcons.class);
+    Icon fastRequest_editor = IconLoader.getIcon("/icon/fastRequest_editor.svg", PluginIcons.class);
+    Icon fastRequest_toolwindow = IconLoader.getIcon("/icon/fastRequest_toolwindow.svg", PluginIcons.class);
 
     Icon ICON_ARRAY = IconLoader.getIcon("/icon/array.svg", PluginIcons.class);
     Icon ICON_BOOLEAN = IconLoader.getIcon("/icon/boolean.svg", PluginIcons.class);
