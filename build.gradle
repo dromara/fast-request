@@ -36,6 +36,7 @@ patchPluginXml {
     <h3>v2.0.4</h3>
     <ul>
         <li>Fix the interface confusion caused by the response content aisle(修复因response内容过道导致的界面错乱问题)</li>
+        <li>Optimization of response JSON ultra long display(Response json超长显示优化)</li>
         <li>Optimized icon size(优化图标尺寸)</li>
         <li>Migrate Chinese documents to Gitee(中文文档迁移至gitee)</li>
     </ul>
