@@ -18,6 +18,7 @@ import com.intellij.ide.actions.RevealFileAction;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.application.ModalityState;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.fileChooser.*;
 import com.intellij.openapi.options.ShowSettingsUtil;
@@ -58,10 +59,7 @@ import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.*;
 import io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService;
 import io.github.kings1990.plugin.fastrequest.util.*;
-import io.github.kings1990.plugin.fastrequest.view.component.CheckBoxHeader;
-import io.github.kings1990.plugin.fastrequest.view.component.MyParamCheckItemListener;
-import io.github.kings1990.plugin.fastrequest.view.component.MyWrapCellEditor;
-import io.github.kings1990.plugin.fastrequest.view.component.MyWrapCellRenderer;
+import io.github.kings1990.plugin.fastrequest.view.component.*;
 import io.github.kings1990.plugin.fastrequest.view.inner.SupportView;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -107,7 +105,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JTextField urlTextField;
     private JComboBox<String> methodTypeComboBox;
     private JTextArea urlParamsTextArea;
-    private JTextArea jsonParamsTextArea;
+    private JPanel jsonParamsTextArea;
     private JTextArea urlEncodedTextArea;
     private JTabbedPane urlEncodedTabbedPane;
     private JTabbedPane urlParamsTabbedPane;
@@ -129,14 +127,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JPanel multipartTablePanel;
     private JPanel jsonResponsePanel;
     private JButton manageConfigButton;
-    private JScrollPane prettyJsonPanle;
-    private JTextArea prettyResponseTextArea;
     private JPanel titlePanel;
     private JLabel warnLabel1;
     private JLabel warnLabel2;
     private JTabbedPane bodyTabbedPane;
     private JProgressBar requestProgressBar;
-    private JScrollPane responseBodyScrollPane;
+    private JPanel prettyJsonEditorPanel;
+
+    private JsonLanguageTextField prettyJsonLanguageTextField;
+    private JsonLanguageTextField jsonParamsLanguageTextField;
 
     private JBTable urlParamsTable;
     private JBTable urlEncodedTable;
@@ -261,6 +260,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         });
         managerConfigLink.setExternalLinkIcon();
         manageConfigButton = managerConfigLink;
+        prettyJsonLanguageTextField = new JsonLanguageTextField();
+        jsonParamsLanguageTextField = new JsonLanguageTextField();
+        prettyJsonEditorPanel = prettyJsonLanguageTextField.get();
+        jsonParamsTextArea = jsonParamsLanguageTextField.get();
 
         //2020.3before
 //        manageConfigButton = new JButton();
@@ -269,9 +272,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 //        });
     }
 
-    public FastRequestToolWindow(ToolWindow toolWindow,Project project) {
+    public FastRequestToolWindow(ToolWindow toolWindow, Project project) {
         super(true, false);
         this.myProject = project;
+        prettyJsonLanguageTextField.setMyProject(myProject);
+        jsonParamsLanguageTextField.setMyProject(myProject);
+
         DefaultActionGroup group = new DefaultActionGroup();
         group.add(new OpenConfigAction());
         group.addSeparator("  |  ");
@@ -482,7 +488,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         String sendUrl = urlTextField.getText();
         List<DataMapping> headerList = config.getHeaderList();
         String urlParam = urlParamsTextArea.getText();
-        String jsonParam = jsonParamsTextArea.getText();
+        String jsonParam = ((LanguageTextField) jsonParamsTextArea).getText();
         String urlEncodedParam = urlEncodedTextArea.getText();
 
         if(StringUtils.isEmpty(sendUrl)){
@@ -565,7 +571,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     }, HashMap::putAll);
 
             Map<String, Object> formParam = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue, (existing, replacement) -> existing));
-            String jsonParam = jsonParamsTextArea.getText();
+            String jsonParam = ((LanguageTextField) jsonParamsTextArea).getText();
             StringBuilder urlEncodedParam = new StringBuilder("");
             urlEncodedKeyValueList.stream().filter(ParamKeyValue::getEnabled).forEach(q -> {
                 urlEncodedParam.append(q.getKey()).append("=").append(q.getValue()).append("&");
@@ -592,68 +598,80 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             FileSaverDialog finalFd = fd;
             Future<?> future = ThreadUtil.execAsync(() -> {
                 try {
-                    tabbedPane.setSelectedIndex(4);
-                    requestProgressBar.setVisible(true);
-                    requestProgressBar.setForeground(ColorProgressBar.GREEN);
                     long start = System.currentTimeMillis();
                     HttpResponse response = request.execute();
                     long end = System.currentTimeMillis();
-                    String duration = String.valueOf(end - start);
-                    requestProgressBar.setVisible(false);
-                    int status = response.getStatus();
-                    //download file
-                    if (fileMode && status >= 200 && status < 300) {
-                        prettyResponseTextArea.setText("");
-                        responseTextArea.setText("");
-                        Task.Backgroundable task = new Task.Backgroundable(myProject, "Saving file...") {
-                            @Override
-                            public void run(@NotNull ProgressIndicator indicator) {
-                                File f = new File(myProject.getBasePath());
-                                File finalFile = response.completeFileNameFromHeader(f);
-                                response.writeBody(finalFile);
-                                VirtualFileWrapper fileWrapper = finalFd.save(finalFile.getName());
-                                if (fileWrapper != null) {
-                                    File file = fileWrapper.getFile();
-                                    FileUtil.move(finalFile, file, true);
-                                    NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO)
-                                            .addAction(new GotoFile(file))
-                                            .notify(myProject);
+
+                    ApplicationManager.getApplication().invokeLater(() -> {
+                        tabbedPane.setSelectedIndex(4);
+                        requestProgressBar.setVisible(true);
+                        requestProgressBar.setForeground(ColorProgressBar.GREEN);
+                        String duration = String.valueOf(end - start);
+                        requestProgressBar.setVisible(false);
+                        int status = response.getStatus();
+                        //download file
+                        if (fileMode && status >= 200 && status < 300) {
+                            ApplicationManager.getApplication().runWriteAction(() -> {
+                                ((LanguageTextField) prettyJsonEditorPanel).setText("");
+                            });
+                            responseTextArea.setText("");
+                            Task.Backgroundable task = new Task.Backgroundable(myProject, "Saving file...") {
+                                @Override
+                                public void run(@NotNull ProgressIndicator indicator) {
+                                    File f = new File(myProject.getBasePath());
+                                    File finalFile = response.completeFileNameFromHeader(f);
+                                    response.writeBody(finalFile);
+                                    VirtualFileWrapper fileWrapper = finalFd.save(finalFile.getName());
+                                    if (fileWrapper != null) {
+                                        File file = fileWrapper.getFile();
+                                        FileUtil.move(finalFile, file, true);
+                                        NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO)
+                                                .addAction(new GotoFile(file))
+                                                .notify(myProject);
+                                    }
+                                    finalFile.delete();
                                 }
-                                finalFile.delete();
-                            }
-                        };
-                        ProgressManager.getInstance().runProcessWithProgressAsynchronously(task, new BackgroundableProcessIndicator(task));
-                    }
-                    if (!fileMode) {
-                        String body = response.body();
-                        if (JSONUtil.isJson(body)) {
-                            responseTabbedPanel.setSelectedIndex(1);
-                            prettyResponseTextArea.setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
-                            responseTextArea.setText(body);
-                            refreshResponseTable(body);
-                        } else {
-                            responseTabbedPanel.setSelectedIndex(2);
-                            String subBody = body.substring(0, Math.min(body.length(), 32768));
-                            if (body.length() > 32768) {
-                                subBody += "\n\ntext too large only show 32768 characters\n.............";
-                            }
-                            prettyResponseTextArea.setText(subBody);
-                            responseTextArea.setText(subBody);
-                            refreshResponseTable("");
+                            };
+                            ProgressManager.getInstance().runProcessWithProgressAsynchronously(task, new BackgroundableProcessIndicator(task));
                         }
-                    }
-                    responseInfoParamsKeyValueList = Lists.newArrayList(
-                            new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
-                            new ParamKeyValue("Cost", duration + " ms", 2, TypeUtil.Type.String.name()),
-                            new ParamKeyValue("Response status", status + " " + Constant.HttpStatusDesc.STATUS_MAP.get(status)),
-                            new ParamKeyValue("Date", DateUtil.formatDateTime(new Date()))
-                    );
-                    //refreshTable(responseInfoTable);
-                    responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
-                    responseInfoTable.getColumnModel().getColumn(0).setPreferredWidth(150);
-                    responseInfoTable.getColumnModel().getColumn(0).setMaxWidth(150);
-                    responseStatusComboBox.setSelectedItem(status);
-                    responseStatusComboBox.setBackground((status >= 200 && status < 300) ? MyColor.green : MyColor.red);
+                        if (!fileMode) {
+                            String body = response.body();
+                            if (JSONUtil.isJson(body)) {
+                                responseTabbedPanel.setSelectedIndex(1);
+
+                                ApplicationManager.getApplication().runWriteAction(() -> {
+                                    ((LanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
+                                });
+
+                                responseTextArea.setText(body);
+                                refreshResponseTable(body);
+                            } else {
+                                responseTabbedPanel.setSelectedIndex(2);
+                                String subBody = body.substring(0, Math.min(body.length(), 32768));
+                                if (body.length() > 32768) {
+                                    subBody += "\n\ntext too large only show 32768 characters\n.............";
+                                }
+                                String finalSubBody = subBody;
+                                ApplicationManager.getApplication().runWriteAction(() -> {
+                                    ((LanguageTextField) prettyJsonEditorPanel).setText(finalSubBody);
+                                });
+                                responseTextArea.setText(subBody);
+                                refreshResponseTable("");
+                            }
+                        }
+                        responseInfoParamsKeyValueList = Lists.newArrayList(
+                                new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
+                                new ParamKeyValue("Cost", duration + " ms", 2, TypeUtil.Type.String.name()),
+                                new ParamKeyValue("Response status", status + " " + Constant.HttpStatusDesc.STATUS_MAP.get(status)),
+                                new ParamKeyValue("Date", DateUtil.formatDateTime(new Date()))
+                        );
+                        //refreshTable(responseInfoTable);
+                        responseInfoTable.setModel(new ListTableModel<>(getColumns(Lists.newArrayList("Name", "Value")), responseInfoParamsKeyValueList));
+                        responseInfoTable.getColumnModel().getColumn(0).setPreferredWidth(150);
+                        responseInfoTable.getColumnModel().getColumn(0).setMaxWidth(150);
+                        responseStatusComboBox.setSelectedItem(status);
+                        responseStatusComboBox.setBackground((status >= 200 && status < 300) ? MyColor.green : MyColor.red);
+                    }, ModalityState.NON_MODAL);
                 } catch (Exception ee) {
                     sendButton.setEnabled(true);
                     requestProgressBar.setVisible(false);
@@ -663,7 +681,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
                     String errorMsg = ee.getMessage();
                     responseTextArea.setText(errorMsg);
-                    prettyResponseTextArea.setText("");
+                    ApplicationManager.getApplication().runWriteAction(() -> {
+                        ((LanguageTextField) prettyJsonEditorPanel).setText("");
+                    });
                     responseStatusComboBox.setBackground(MyColor.red);
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
@@ -683,7 +703,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             requestProgressBar.setVisible(false);
             String errorMsg = exception.getMessage();
             responseTextArea.setText(errorMsg);
-            prettyResponseTextArea.setText("");
+            ApplicationManager.getApplication().runWriteAction(() -> {
+                ((LanguageTextField) prettyJsonEditorPanel).setText("");
+            });
             responseStatusComboBox.setSelectedItem(0);
             responseStatusComboBox.setBackground(MyColor.red);
             responseInfoParamsKeyValueList = Lists.newArrayList(
@@ -812,7 +834,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         multipartKeyValueList = new ArrayList<>();
         urlParamsTextArea.setText("");
-        jsonParamsTextArea.setText("");
+        ((LanguageTextField) jsonParamsTextArea).setText("");
         urlEncodedTextArea.setText("");
         ParamGroupCollection paramGroup = detail.getParamGroup();
         assert config != null;
@@ -858,12 +880,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //get请求urlencoded param参数为空
             urlEncodedKeyValueList = new ArrayList<>();
             urlEncodedTextArea.setText("");
-            jsonParamsTextArea.setText("");
+            ((LanguageTextField) jsonParamsTextArea).setText("");
         } else {
             //body param
             if (!bodyKeyValueListJson.isBlank()) {
                 //json
-                jsonParamsTextArea.setText(bodyKeyValueListJson);
+                ((LanguageTextField) jsonParamsTextArea).setText(bodyKeyValueListJson);
                 tabbedPane.setSelectedIndex(3);
                 bodyTabbedPane.setSelectedIndex(0);
                 urlEncodedTextArea.setText("");
@@ -882,7 +904,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     bodyTabbedPane.setSelectedIndex(1);
                 }
                 //json设置为空
-                jsonParamsTextArea.setText("");
+                ((LanguageTextField) jsonParamsTextArea).setText("");
                 //如果是非get请求则request Param为空转到url Encoded参数下
                 urlParamsKeyValueList = new ArrayList<>();
                 urlParamsTextArea.setText("");
@@ -937,7 +959,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //reset value
         multipartKeyValueList = new ArrayList<>();
         urlParamsTextArea.setText("");
-        jsonParamsTextArea.setText("");
+        ((LanguageTextField) jsonParamsTextArea).setText("");
         urlEncodedTextArea.setText("");
 
 
@@ -970,14 +992,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //get请求urlencoded param参数为空
             urlEncodedKeyValueList = new ArrayList<>();
             urlEncodedTextArea.setText("");
-            jsonParamsTextArea.setText("");
+            ((LanguageTextField) jsonParamsTextArea).setText("");
         } else {
             //body param
             if (!bodyParamMap.isEmpty()) {
                 //json
                 tabbedPane.setSelectedIndex(3);
                 bodyTabbedPane.setSelectedIndex(0);
-                jsonParamsTextArea.setText(bodyParamMapToJson());
+                ((LanguageTextField) jsonParamsTextArea).setText(bodyParamMapToJson());
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
             } else {
@@ -998,7 +1020,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     urlEncodedKeyValueList = conventMapToList(requestParamMap);
                 }
                 //json设置为空
-                jsonParamsTextArea.setText("");
+                ((LanguageTextField) jsonParamsTextArea).setText("");
                 //如果是非get请求则request Param为空转到url Encoded参数下
                 urlParamsKeyValueList = new ArrayList<>();
                 urlParamsTextArea.setText("");
@@ -2791,7 +2813,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             paramGroupCollection.setUrlParamsKeyValueListText(urlParamsTextArea.getText());
             paramGroupCollection.setUrlEncodedKeyValueListJson(JSON.toJSONString(urlEncodedKeyValueList));
             paramGroupCollection.setUrlEncodedKeyValueListText(urlEncodedTextArea.getText());
-            paramGroupCollection.setBodyKeyValueListJson(jsonParamsTextArea.getText());
+            paramGroupCollection.setBodyKeyValueListJson(((LanguageTextField) jsonParamsTextArea).getText());
             paramGroupCollection.setMultipartKeyValueListJson(JSON.toJSONString(multipartKeyValueList));
             collectionDetail.setParamGroup(paramGroupCollection);
             collectionDetail.setHeaderList(config.getHeaderList());

@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="1139" height="911"/>
+      <xy x="20" y="20" width="1149" height="911"/>
     </constraints>
     <properties/>
     <border type="none">
@@ -267,13 +267,13 @@
                 <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="58766" class="javax.swing.JTextArea" binding="jsonParamsTextArea">
+                  <grid id="d0e74" binding="jsonParamsTextArea" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints/>
-                    <properties>
-                      <lineWrap value="true"/>
-                      <wrapStyleWord value="true"/>
-                    </properties>
-                  </component>
+                    <properties/>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
                 </children>
               </scrollpane>
               <tabbedpane id="9ade5" binding="urlEncodedTabbedPane">
@@ -346,23 +346,20 @@
                 <border type="none"/>
                 <children/>
               </grid>
-              <scrollpane id="4ac49" binding="prettyJsonPanle">
+              <scrollpane id="951f">
                 <constraints>
                   <tabbedpane title="Pretty"/>
                 </constraints>
-                <properties>
-                  <verticalScrollBarPolicy value="22"/>
-                </properties>
+                <properties/>
                 <border type="none"/>
                 <children>
-                  <component id="8509d" class="javax.swing.JTextArea" binding="prettyResponseTextArea">
+                  <grid id="c5d39" binding="prettyJsonEditorPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints/>
-                    <properties>
-                      <lineWrap value="true"/>
-                      <text value=""/>
-                      <wrapStyleWord value="true"/>
-                    </properties>
-                  </component>
+                    <properties/>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
                 </children>
               </scrollpane>
               <scrollpane id="fcfdc" binding="responseBodyScrollPanel">
