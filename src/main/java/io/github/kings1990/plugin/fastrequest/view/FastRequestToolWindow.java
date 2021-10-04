@@ -424,6 +424,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     //refreshTable(urlEncodedTable);
                     urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
                     resizeTable(urlEncodedTable);
+                    setCheckBoxHeader(urlEncodedTable, urlEncodedCheckBoxHeader);
                 }
             }
         });
@@ -451,6 +452,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     //refreshTable(urlParamsTable);
                     urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
                     resizeTable(urlParamsTable);
+                    setCheckBoxHeader(urlParamsTable, urlParamsCheckBoxHeader);
                 }
             }
         });
@@ -865,9 +867,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //method
         methodTypeComboBox.setSelectedItem(methodType);
 
-
-        //默认urlParam是允许的即使是post json形式
-        headerParamsKeyValueList = detail.getHeaderList() == null?new ArrayList<>():detail.getHeaderList();
+        //headers默认取最新的
+        headerParamsKeyValueList = config.getHeaderList() == null ? new ArrayList<>() : config.getHeaderList();
 
         if ("GET".equals(methodType)) {
             urlParamsTextArea.setText(urlParamsKeyValueListText);

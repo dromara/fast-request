@@ -21,7 +21,6 @@ dependencies {
     compile 'org.springframework:spring-web:5.3.9'
     compile 'com.alibaba:fastjson:1.2.78'
     compile 'cn.hutool:hutool-all:5.7.9'
-    compile 'com.fifesoft:rsyntaxtextarea:2.6.0'
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
@@ -37,6 +36,8 @@ patchPluginXml {
     <h3>v2.0.5</h3>
     <ul>
         <li>JSON built-in editor support(JSON内置编辑器支持)</li>
+        <li>Fix checkbox hidden when change param by text(修复全选参数框隐藏问题)</li>
+        <li>Fix headers param show error when reshow the api(修复API回显Headers参数异常)</li>
     </ul>
     
     <h3>v2.0.4</h3>
