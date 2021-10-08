@@ -1,10 +1,13 @@
 # Restful Fast Request
 
+<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" />
+<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" />
+
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988)
-![Downloads](https://img.shields.io/jetbrains/plugin/d/16988)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
 [![QQ群](https://img.shields.io/badge/chat-QQ群-46BC99.svg?style=flat-square)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
-[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-red)](https://fastrequest.slack.com)
+[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265)](https://fastrequest.slack.com)
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个基于springmvc的帮助你快速生成**url**和**参数**
 的IDEA 插件。同时也是一个http client工具，你只需要按一下方法左侧的小图标(小火箭),插件就会帮你生成方法的url和参数显示在工具窗口，再点击发送请求即可在IDEA内完成API调试，并且可以保存历史请求，方便再次使用调试
@@ -49,7 +52,6 @@
   Request"</kbd> > <kbd>点击Install</kbd>
 
 ![](./screenshot/download.png)
-
 
 ## 支持作者
 如果觉得插件很赞，为你节约了不少时间，那么就请作者喝杯咖啡吧~☕☕☕,非常感谢.您的支持是鼓励我们前行的动力,无论金额多少都足够表达您这份心意。
