@@ -1,9 +1,12 @@
 # Restful Fast Request
 
+<a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
+<a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
+
 [![Jetbrains Plugins][plugin-img]][plugin]
-![Version](https://img.shields.io/jetbrains/plugin/v/16988)
-![Downloads](https://img.shields.io/jetbrains/plugin/d/16988)
-[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-red)](https://fastrequest.slack.com)
+![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
+[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265)](https://fastrequest.slack.com)
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a plugin based on springmvc that
 help you quickly generate **url** and **params**.It is also a http client tool.
@@ -53,6 +56,7 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 ![](./screenshot/download.png)
 
 [latest-release]: https://github.com/kings1990/fast-request/releases/latest
+
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 
-[plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg
+[plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA
