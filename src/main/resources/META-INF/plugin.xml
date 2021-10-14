@@ -4,7 +4,7 @@
     <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
 
     <description><![CDATA[
-    Restful Fast Request is a powerful restful api toolkit plugin help you quickly generate url and params by exist method.Plugin = API debug tool + API manager tool<br/>
+    Restful Fast Request is a powerful restful api toolkit plugin(http client) help you quickly generate url and params by exist method.Plugin = API debug tool + API manager tool<br/>
     It has a beautiful interface to compose requests,inspect server responses,store your api request and export api request<br/>
     Plugin help you debug request just in Intellij frame<br/>
     support Spring framework (Spring MVC / Spring Boot)<br/>

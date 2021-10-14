@@ -598,6 +598,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 fd = FileChooserFactory.getInstance().createSaveFileDialog(new FileSaverDescriptor("Save As", ""), myProject);
             }
             FileSaverDialog finalFd = fd;
+            requestProgressBar.setVisible(true);
+            requestProgressBar.setForeground(ColorProgressBar.GREEN);
             Future<?> future = ThreadUtil.execAsync(() -> {
                 try {
                     long start = System.currentTimeMillis();
@@ -606,8 +608,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
                     ApplicationManager.getApplication().invokeLater(() -> {
                         tabbedPane.setSelectedIndex(4);
-                        requestProgressBar.setVisible(true);
-                        requestProgressBar.setForeground(ColorProgressBar.GREEN);
                         String duration = String.valueOf(end - start);
                         requestProgressBar.setVisible(false);
                         int status = response.getStatus();
