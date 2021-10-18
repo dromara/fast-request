@@ -30,11 +30,13 @@ public class JsonLanguageTextField extends LanguageTextField {
             @Override
             protected @NotNull EditorEx createEditor() {
                 editor = super.createEditor();
-//                editor.setVerticalScrollbarVisible(true);
-//                editor.setHorizontalScrollbarVisible(true);
+                editor.offsetToVisualPosition(100);
+                editor.offsetToLogicalPosition(100);
+                editor.setHorizontalScrollbarVisible(true);
+                editor.setShowPlaceholderWhenFocused(true);
+                editor.setVerticalScrollbarVisible(true);
                 editor.setCaretEnabled(true);
                 editor.setEmbeddedIntoDialogWrapper(true);
-//                editor.getFoldingModel().setFoldingEnabled(true);
                 editor.getDocument().addDocumentListener(new DocumentListener() {
                     @Override
                     public void documentChanged(@NotNull DocumentEvent event) {
@@ -44,6 +46,8 @@ public class JsonLanguageTextField extends LanguageTextField {
                     }
                 });
                 EditorSettings settings = editor.getSettings();
+                settings.setLeadingWhitespaceShown(true);
+                settings.setTrailingWhitespaceShown(true);
                 settings.setGutterIconsShown(true);
                 settings.setSmartHome(true);
                 settings.setLineNumbersShown(true);
