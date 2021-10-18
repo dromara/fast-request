@@ -264,6 +264,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         jsonParamsLanguageTextField = new JsonLanguageTextField();
         prettyJsonEditorPanel = prettyJsonLanguageTextField.get();
         jsonParamsTextArea = jsonParamsLanguageTextField.get();
+        //设置高度固定搜索框
+        prettyJsonEditorPanel.setMinimumSize(new Dimension(-1, 120));
+        prettyJsonEditorPanel.setPreferredSize(new Dimension(-1, 120));
+        prettyJsonEditorPanel.setMaximumSize(new Dimension(-1, 1000));
+        jsonParamsTextArea.setMinimumSize(new Dimension(-1, 120));
+        jsonParamsTextArea.setPreferredSize(new Dimension(-1, 120));
+        jsonParamsTextArea.setMaximumSize(new Dimension(-1, 1000));
 
         //2020.3before
 //        manageConfigButton = new JButton();

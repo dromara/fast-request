@@ -60,6 +60,7 @@
         <li>JSON built-in editor support(JSON内置编辑器支持)</li>
         <li>Fix checkbox hidden when change param by text(修复全选参数框隐藏问题)</li>
         <li>Fix headers param show error when reshow the api(修复API回显Headers参数异常)</li>
+        <li>Optimized the request progress bar display(优化了请求进度条显示)</li>
     </ul>
     ]]>
     </description>
