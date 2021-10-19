@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '2.0.5'
+version '2.0.6'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
@@ -33,6 +33,11 @@ intellij {
 patchPluginXml {
     changeNotes """
 
+    <h3>v2.0.6</h3>
+    <ul>
+        <li>Fix "Light files should have PSI only in one project"</li>
+    </ul>
+    
     <h3>v2.0.5</h3>
     <ul>
         <li>JSON built-in editor support(JSON内置编辑器支持)</li>

@@ -15,6 +15,8 @@ import com.alibaba.fastjson.TypeReference;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.intellij.ide.actions.RevealFileAction;
+import com.intellij.json.JsonFileType;
+import com.intellij.json.JsonLanguage;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
@@ -134,8 +136,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JProgressBar requestProgressBar;
     private JPanel prettyJsonEditorPanel;
 
-    private JsonLanguageTextField prettyJsonLanguageTextField;
-    private JsonLanguageTextField jsonParamsLanguageTextField;
+    private MyLanguageTextField prettyJsonLanguageTextField;
+    private MyLanguageTextField jsonParamsLanguageTextField;
 
     private JBTable urlParamsTable;
     private JBTable urlEncodedTable;
@@ -260,10 +262,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         });
         managerConfigLink.setExternalLinkIcon();
         manageConfigButton = managerConfigLink;
-        prettyJsonLanguageTextField = new JsonLanguageTextField();
-        jsonParamsLanguageTextField = new JsonLanguageTextField();
-        prettyJsonEditorPanel = prettyJsonLanguageTextField.get();
-        jsonParamsTextArea = jsonParamsLanguageTextField.get();
+        prettyJsonEditorPanel = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
+        jsonParamsTextArea = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
         //设置高度固定搜索框
         prettyJsonEditorPanel.setMinimumSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setPreferredSize(new Dimension(-1, 120));
@@ -279,11 +279,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 //        });
     }
 
+    private void $$$setupUI$$$() {
+        createUIComponents();
+        System.out.println(myProject);
+    }
+
     public FastRequestToolWindow(ToolWindow toolWindow, Project project) {
         super(true, false);
         this.myProject = project;
-        prettyJsonLanguageTextField.setMyProject(myProject);
-        jsonParamsLanguageTextField.setMyProject(myProject);
+        this.$$$setupUI$$$();
 
         DefaultActionGroup group = new DefaultActionGroup();
         group.add(new OpenConfigAction());
@@ -620,9 +624,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         int status = response.getStatus();
                         //download file
                         if (fileMode && status >= 200 && status < 300) {
-                            ApplicationManager.getApplication().runWriteAction(() -> {
-                                ((LanguageTextField) prettyJsonEditorPanel).setText("");
-                            });
+                            ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
                             responseTextArea.setText("");
                             Task.Backgroundable task = new Task.Backgroundable(myProject, "Saving file...") {
                                 @Override
@@ -647,11 +649,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             String body = response.body();
                             if (JSONUtil.isJson(body)) {
                                 responseTabbedPanel.setSelectedIndex(1);
-
-                                ApplicationManager.getApplication().runWriteAction(() -> {
-                                    ((LanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
-                                });
-
+                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
                                 responseTextArea.setText(body);
                                 refreshResponseTable(body);
                             } else {
@@ -661,9 +659,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                                     subBody += "\n\ntext too large only show 32768 characters\n.............";
                                 }
                                 String finalSubBody = subBody;
-                                ApplicationManager.getApplication().runWriteAction(() -> {
-                                    ((LanguageTextField) prettyJsonEditorPanel).setText(finalSubBody);
-                                });
+                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(finalSubBody);
                                 responseTextArea.setText(subBody);
                                 refreshResponseTable("");
                             }
@@ -690,9 +686,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
                     String errorMsg = ee.getMessage();
                     responseTextArea.setText(errorMsg);
-                    ApplicationManager.getApplication().runWriteAction(() -> {
-                        ((LanguageTextField) prettyJsonEditorPanel).setText("");
-                    });
+                    ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
                     responseStatusComboBox.setBackground(MyColor.red);
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
@@ -712,9 +706,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             requestProgressBar.setVisible(false);
             String errorMsg = exception.getMessage();
             responseTextArea.setText(errorMsg);
-            ApplicationManager.getApplication().runWriteAction(() -> {
-                ((LanguageTextField) prettyJsonEditorPanel).setText("");
-            });
+            ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
             responseStatusComboBox.setSelectedItem(0);
             responseStatusComboBox.setBackground(MyColor.red);
             responseInfoParamsKeyValueList = Lists.newArrayList(
