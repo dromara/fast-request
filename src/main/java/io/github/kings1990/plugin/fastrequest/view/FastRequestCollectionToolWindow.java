@@ -283,7 +283,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         } else {
             if (node.getChildCount() == 0) {
                 boolean methodTypeSearchFlag = rule.contains(SearchTypeEnum.get.name()) || rule.contains(SearchTypeEnum.post.name()) ||
-                        rule.contains(SearchTypeEnum.put.name()) || rule.contains(SearchTypeEnum.delete.name());
+                        rule.contains(SearchTypeEnum.put.name()) || rule.contains(SearchTypeEnum.delete.name()) || rule.contains(SearchTypeEnum.patch.name());
 
                 String targetText = "";
 
@@ -671,6 +671,8 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 return PluginIcons.ICON_PUT;
             case "DELETE":
                 return PluginIcons.ICON_DELETE;
+            case "PATCH":
+                return PluginIcons.ICON_PATCH;
             default:
                 return PluginIcons.ICON_GET;
         }
@@ -775,6 +777,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         post,
         put,
         delete,
+        patch
         ;
 
         public static SearchTypeEnum fromValue(String name) {

@@ -827,6 +827,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             jbColor = MyColor.yellow;
         } else if ("GET".equals(method)) {
             jbColor = MyColor.blue;
+        } else if ("PATCH".equals(method)) {
+            jbColor = MyColor.purple;
         }
         return jbColor;
     }

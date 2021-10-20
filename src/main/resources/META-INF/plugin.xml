@@ -58,6 +58,7 @@
     <h3>Latest changes</h3>
     <ul>
         <li>Fix "Light files should have PSI only in one project"</li>
+        <li>Add support for PATCH method(添加对PATCH的支持)</li>
     </ul>
     ]]>
     </description>

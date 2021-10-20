@@ -19,4 +19,5 @@ public class MyColor {
     //idea new JBColor(new Color(56, 159, 214), new Color(53, 146, 196));
     public static final JBColor blue = new JBColor(new Color(0x389FD6), new Color(0x4682B4));
 
+    public static final JBColor purple = new JBColor(new Color(0x6A5ACD), new Color(0x9370DB));
 }
