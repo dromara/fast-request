@@ -10,6 +10,7 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiDocumentManager;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.codeStyle.CodeStyleManager;
+import com.intellij.ui.ErrorStripeEditorCustomization;
 import com.intellij.ui.LanguageTextField;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -73,6 +74,8 @@ public class MyLanguageTextField extends LanguageTextField {
         settings.setCaretRowShown(true);
         settings.setLineMarkerAreaShown(true);
         settings.setDndEnabled(true);
+        //开启右侧的错误条纹
+        ErrorStripeEditorCustomization.ENABLED.customize(editor);
         return editor;
     }
 
