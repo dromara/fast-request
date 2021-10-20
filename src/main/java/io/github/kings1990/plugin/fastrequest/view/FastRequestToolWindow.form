@@ -82,6 +82,7 @@
                     <item value="POST"/>
                     <item value="DELETE"/>
                     <item value="PUT"/>
+                    <item value="PATCH"/>
                   </model>
                 </properties>
               </component>
