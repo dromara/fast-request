@@ -447,12 +447,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public boolean isEnabled() {
-                int selectedRow = collectionTable.getSelectedRow();
-                if (selectedRow == -1) {
-                    return false;
-                }
-                CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(selectedRow);
-                return "0".equals(root.getId());
+                return true;
             }
         });
         collectionPanel = toolbarDecorator.createPanel();
