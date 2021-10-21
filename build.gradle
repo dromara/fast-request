@@ -36,7 +36,9 @@ patchPluginXml {
     <h3>v2.0.6</h3>
     <ul>
         <li>Fix "Light files should have PSI only in one project"</li>
+        <li>Add support for json syntax check(添加对json的语法支持)</li>
         <li>Add support for PATCH method(添加对PATCH的支持)</li>
+        <li>Added support for saving the API to the corresponding module group(添加API保存时候存入对应的模块分组的支持)</li>
     </ul>
     
     <h3>v2.0.5</h3>

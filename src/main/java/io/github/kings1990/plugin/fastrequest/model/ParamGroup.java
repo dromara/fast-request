@@ -14,6 +14,7 @@ public class ParamGroup implements Serializable {
     private String methodDescription;
     private String className;
     private String method;
+    private String module;
 
     public String getOriginUrl() {
         return originUrl;
@@ -93,5 +94,13 @@ public class ParamGroup implements Serializable {
 
     public void setMethod(String method) {
         this.method = method;
+    }
+
+    public String getModule() {
+        return module;
+    }
+
+    public void setModule(String module) {
+        this.module = module;
     }
 }

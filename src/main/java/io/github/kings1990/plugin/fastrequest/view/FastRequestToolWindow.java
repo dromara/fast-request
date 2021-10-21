@@ -12,6 +12,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.intellij.ide.actions.RevealFileAction;
@@ -281,7 +282,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
     private void $$$setupUI$$$() {
         createUIComponents();
-        System.out.println(myProject);
     }
 
     public FastRequestToolWindow(ToolWindow toolWindow, Project project) {
@@ -594,7 +594,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             if (StringUtils.isNotEmpty(urlEncodedParam)) {
                 request.body(StringUtils.removeEnd(urlEncodedParam.toString(), "&"));
             }
-            if (StringUtils.isNotEmpty(jsonParam) && !"{}".equals(jsonParam) && !"[]".equals(jsonParam)) {
+            if (StringUtils.isNotEmpty(jsonParam)) {
                 request.body(JSON.toJSONString(JSON.parse(jsonParam)));
             }
 
@@ -649,7 +649,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             String body = response.body();
                             if (JSONUtil.isJson(body)) {
                                 responseTabbedPanel.setSelectedIndex(1);
-                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), true));
+                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : JSON.toJSONString(JSON.parse(body), SerializerFeature.PrettyFormat, SerializerFeature.WriteMapNullValue));
                                 responseTextArea.setText(body);
                                 refreshResponseTable(body);
                             } else {
@@ -2801,7 +2801,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             collectionDetail.setEnableEnv(config.getEnableEnv());
             collectionDetail.setEnableProject(config.getEnableProject());
             collectionDetail.setDomain(config.getDomain());
-
             collectionDetail.setName(StringUtils.isBlank(paramGroup.getMethodDescription())? "New Request" : paramGroup.getMethodDescription());
             collectionDetail.setType(2);
             paramGroupCollection.setOriginUrl(paramGroup.getOriginUrl());
@@ -2819,11 +2818,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             paramGroupCollection.setMultipartKeyValueListJson(JSON.toJSONString(multipartKeyValueList));
             collectionDetail.setParamGroup(paramGroupCollection);
             collectionDetail.setHeaderList(config.getHeaderList());
-            if(insertFlag){
-                CollectionConfiguration.CollectionDetail defaultGroup = collectionConfiguration.getDetail().getChildList().get(0);
-                List<CollectionConfiguration.CollectionDetail> childList = defaultGroup.getChildList();
+            if (insertFlag) {
+                String module = paramGroup.getModule();
+                CollectionConfiguration.CollectionDetail root = collectionConfiguration.getDetail();
+                List<CollectionConfiguration.CollectionDetail> rootChildren = root.getChildList();
+                CollectionConfiguration.CollectionDetail defaultGroup = rootChildren.get(0);
+                CollectionConfiguration.CollectionDetail group = rootChildren.stream().filter(q -> module.equals(q.getName())).findFirst().orElse(defaultGroup);
+                List<CollectionConfiguration.CollectionDetail> childList = group.getChildList();
                 childList.add(collectionDetail);
-                defaultGroup.setChildList(childList);
+                group.setChildList(childList);
             }
 
             //send message to change param
