@@ -45,6 +45,7 @@ import io.github.kings1990.plugin.fastrequest.model.ParamGroupCollection;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.util.SwingUtil;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
+import io.github.kings1990.plugin.fastrequest.view.inner.ListAndSelectModule;
 import io.github.kings1990.plugin.fastrequest.view.model.CollectionCustomNode;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.IteratorUtils;
@@ -74,6 +75,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
@@ -425,12 +427,40 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 parentDetail.getChildList().removeIf(q -> q.getId().equals(node.getId()));
             }
         });
+        toolbarDecorator.addExtraAction(new ToolbarDecorator.ElementActionButton(MyResourceBundleUtil.getKey("button.addModuleGroup"), AllIcons.Nodes.ModuleGroup) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(0);
+                ArrayList<CollectionCustomNode> nodeList = (ArrayList<CollectionCustomNode>) IteratorUtils.toList(root.children().asIterator());
+                List<String> existList = nodeList.stream().map(CollectionCustomNode::getName).collect(Collectors.toList());
+                ListAndSelectModule dialog = new ListAndSelectModule(myProject, existList);
+                if (dialog.showAndGet()) {
+                    String moduleName = dialog.getValue();
+                    String id = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date());
+                    CollectionCustomNode addNode = new CollectionCustomNode(id, moduleName, 1);
+                    CollectionConfiguration.CollectionDetail detail = new CollectionConfiguration.CollectionDetail(id, moduleName, 1);
+                    root.insert(addNode, 1);
+                    rootDetail.getChildList().add(detail);
+                    refreshTable();
+                }
+            }
+
+            @Override
+            public boolean isEnabled() {
+                int selectedRow = collectionTable.getSelectedRow();
+                if (selectedRow == -1) {
+                    return false;
+                }
+                CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(selectedRow);
+                return "0".equals(root.getId());
+            }
+        });
         collectionPanel = toolbarDecorator.createPanel();
     }
 
     private TreeTableView createCollectionTable() {
         //初始化为空
-        CollectionCustomNode root = new CollectionCustomNode("0","Root", 1);
+        CollectionCustomNode root = new CollectionCustomNode("0", "Root", 1);
         convertToNode(root, new ArrayList<>());
         ColumnInfo[] columnInfo = new ColumnInfo[]{
                 new TreeColumnInfo("Name") {

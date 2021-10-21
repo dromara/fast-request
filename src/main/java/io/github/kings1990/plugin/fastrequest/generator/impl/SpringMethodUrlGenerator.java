@@ -1,6 +1,8 @@
 package io.github.kings1990.plugin.fastrequest.generator.impl;
 
 import com.intellij.openapi.diagnostic.Logger;
+import com.intellij.openapi.module.Module;
+import com.intellij.openapi.module.ModuleUtil;
 import com.intellij.psi.*;
 import com.intellij.psi.impl.source.PsiClassReferenceType;
 import com.intellij.psi.impl.source.PsiMethodImpl;
@@ -72,6 +74,12 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
 
         paramGroup.setClassName(((PsiMethodImpl) psiElement).getContainingClass().getQualifiedName());
         paramGroup.setMethod(psiMethod.getName());
+
+        Module moduleForFile = ModuleUtil.findModuleForPsiElement(psiElement);
+        if (moduleForFile != null) {
+            String name = moduleForFile.getName();
+            paramGroup.setModule(name);
+        }
 
         return null;
     }
