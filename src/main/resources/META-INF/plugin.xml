@@ -35,6 +35,8 @@
         <li>Management API (search filter, modify API name)</li>
         <li>one click location history save api to method</li>
         <li>api to curl</li>
+        <li>Automatically associate APIs to module groups</li>
+        <li>Built-in Json parameter editor</li>
     </ul>
 
     功能:
@@ -49,6 +51,8 @@
         <li>管理API(搜索过滤、修改API名称)</li>
         <li>一键定位历史保存的API到方法</li>
         <li>API转curl</li>
+        <li>自动将API关联到模块分组</li>
+        <li>内置Json参数编辑器</li>
     </ul>
     <br/>
     <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" />
