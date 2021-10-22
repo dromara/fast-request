@@ -51,7 +51,7 @@ public class MyLanguageTextField extends LanguageTextField {
         }
     }
 
-    private EditorEx setUpEditor(EditorEx editor) {
+    private void setUpEditor(EditorEx editor) {
         editor.offsetToVisualPosition(100);
         editor.offsetToLogicalPosition(100);
         editor.setHorizontalScrollbarVisible(true);
@@ -76,7 +76,6 @@ public class MyLanguageTextField extends LanguageTextField {
         settings.setDndEnabled(true);
         //开启右侧的错误条纹
         ErrorStripeEditorCustomization.ENABLED.customize(editor);
-        return editor;
     }
 
     public void setMyProject(Project myProject) {
