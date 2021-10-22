@@ -1522,7 +1522,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public boolean isCellEditable(int row, int column) {
-                return column == 1;
+                ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
+                CustomNode node = (CustomNode) myModel.getRowValue(row);
+                return row != 0 && column == 1 && (!TypeUtil.Type.Object.name().equals(node.getType()) && !TypeUtil.Type.Array.name().equals(node.getType()));
             }
 
         };
@@ -1729,7 +1731,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     private CustomNode convertJsonObjectToNode(CustomNode node, JSONObject jsonObject) {
-        LinkedHashMap<String, Object> linkedHashMap = JSON.parseObject(JSON.toJSONString(jsonObject), new TypeReference<>() {
+        LinkedHashMap<String, Object> linkedHashMap = JSON.parseObject(JSON.toJSONString(jsonObject, SerializerFeature.WriteMapNullValue), new TypeReference<>() {
         });
         Set<String> keys = linkedHashMap.keySet();
         keys.forEach(key -> {
@@ -1737,18 +1739,18 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             Object value = jsonObject.get(key);
             if (value instanceof JSONObject) {
                 JSONObject valueJsonObject = (JSONObject) value;
-                CustomNode customNode = new CustomNode(key, null);
+                CustomNode customNode = new CustomNode(key, null, TypeUtil.Type.Object.name());
                 node.add(convertJsonObjectToNode(customNode, valueJsonObject));
             } else if (value instanceof JSONArray) {
                 JSONArray jsonArray = (JSONArray) value;
                 if (jsonArray.size() == 0) {
                     return;
                 }
-                CustomNode nodeArray = new CustomNode(key, "");
+                CustomNode nodeArray = new CustomNode(key, "", TypeUtil.Type.Array.name());
                 convertJsonArrayToNode("index ", jsonArray, nodeArray);
                 node.add(nodeArray);
             } else {
-                node.add(new CustomNode(key, value));
+                node.add(new CustomNode(key, value == null ? "null" : value));
             }
         });
         return node;
@@ -1757,10 +1759,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private void convertJsonArrayToNode(String key, JSONArray jsonArray, CustomNode node) {
         AtomicInteger idx = new AtomicInteger();
         jsonArray.forEach(json -> {
-            idx.getAndIncrement();
             CustomNode nodeArray = new CustomNode(key + (idx.get()), null);
             if (json instanceof JSONObject) {
                 JSONObject valueJsonObject = (JSONObject) json;
+                nodeArray.setType(TypeUtil.Type.Object.name());
                 node.add(convertJsonObjectToNode(nodeArray, valueJsonObject));
             } else if (json instanceof JSONArray) {
                 JSONArray tmpJsonArray = (JSONArray) json;
@@ -1769,11 +1771,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 }
                 CustomNode nodeArrayIn = new CustomNode(key, "");
                 convertJsonArrayToNode("index ", tmpJsonArray, nodeArrayIn);
+                nodeArray.setType(TypeUtil.Type.Array.name());
                 nodeArray.add(nodeArrayIn);
                 node.add(nodeArray);
             } else {
                 node.add(new CustomNode(key + (idx.get()), json));
             }
+            idx.getAndIncrement();
         });
     }
 

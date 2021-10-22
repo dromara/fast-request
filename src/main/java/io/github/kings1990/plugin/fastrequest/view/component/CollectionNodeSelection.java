@@ -3,7 +3,9 @@ package io.github.kings1990.plugin.fastrequest.view.component;
 import io.github.kings1990.plugin.fastrequest.view.model.CollectionCustomNode;
 import org.jetbrains.annotations.NotNull;
 
-import java.awt.datatransfer.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 
 public class CollectionNodeSelection implements Transferable {
