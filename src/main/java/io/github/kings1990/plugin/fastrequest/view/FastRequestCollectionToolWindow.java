@@ -520,7 +520,6 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             public TableCellEditor getCellEditor(int row, int column) {
                 if(column == 0){
                     ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
-                    CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
                     String name = (String) getValueAt(row, column);
                     return new DefaultCellEditor(new JTextField(name));
                 } else if(column == 2){
@@ -529,7 +528,6 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                     if(node.getType() != 1){
                         return new ButtonEditor(new JCheckBox());
                     }
-
                 }
                 return super.getCellEditor(row, column);
             }
@@ -540,7 +538,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                     ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
                     CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
                     CollectionConfiguration.CollectionDetail detail = filterById(node.getId(), rootDetail);
-                    if(detail != null){
+                    if (detail != null && !v.toString().isBlank()) {
                         detail.setName(v.toString());
                         node.setName(v.toString());
                         refreshTable();
@@ -549,7 +547,6 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                     super.setValueAt(v, row, column);
                 }
             }
-
         };
 
         table.setDragEnabled(true);

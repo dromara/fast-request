@@ -33,7 +33,9 @@ public class MyWrapCellEditor extends AbstractCellEditor implements TableCellEdi
                                                  boolean isSelected, int row, int column) {
         this.table = table;
         this.row = row;
-        comp.setText(table.getValueAt(row, column).toString());
+        Object valueAt = table.getValueAt(row, column);
+        String v = valueAt == null ? "null" : valueAt.toString();
+        comp.setText(v);
         comp.setFont(table.getFont());
         return comp;
     }
