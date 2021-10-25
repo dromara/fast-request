@@ -561,6 +561,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 tabbedPane.setSelectedIndex(4);
                 responseTabbedPanel.setSelectedIndex(2);
                 sendButton.setEnabled(true);
+                ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
                 return;
             }
             String methodType = (String) methodTypeComboBox.getSelectedItem();

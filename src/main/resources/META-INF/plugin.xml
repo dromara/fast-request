@@ -8,6 +8,7 @@
     It has a beautiful interface to compose requests,inspect server responses,store your api request and export api request<br/>
     Plugin help you debug request just in Intellij frame<br/>
     support Spring framework (Spring MVC / Spring Boot)<br/>
+    support JAX-RS<br/>
     <br/>
 
     中文:<br/>
@@ -16,6 +17,7 @@
     它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求<br/>
     插件帮助你在IDEA界面内更快更高效得调试你的API<br/>
     支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
+    支持 JAX-RS 体系<br/>
     <br/>
     <a href="https://github.com/kings1990/fast-request">Github</a> | <a href="https://gitee.com/kings/fast-request">Gitee</a> Welcome to star(欢迎star)
     <br/><br/>
@@ -66,6 +68,7 @@
         <li>Add support for PATCH method(添加对PATCH的支持)</li>
         <li>Added support for saving the API to the corresponding module group(添加API保存时候存入对应的模块分组的支持)</li>
         <li>Fix null value in response not output(修复响应中null值不输出的问题)</li>
+        <li>Add support for JAX-RS(添加对JAX-RS的支持)</li>
     </ul>
     ]]>
     </description>

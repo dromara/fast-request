@@ -105,6 +105,14 @@ public class RequestParamParse extends AbstractParamParse {
             nameValueMap.put(name, new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name()));
             return true;
         }
+        if ("java.io.InputStream".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name()));
+            return true;
+        }
+        if ("java.io.File".equals(paramNameType.getType())) {
+            nameValueMap.put(name, new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name()));
+            return true;
+        }
         if ("java.util.Date".equals(paramNameType.getType())) {
             nameValueMap.put(name, new ParamKeyValue(name, df.format(new Date()), 2, TypeUtil.Type.String.name()));
             return true;

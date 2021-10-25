@@ -20,6 +20,7 @@ public class MyLanguageTextField extends LanguageTextField {
     private Project myProject;
     private FileType fileType;
     private Language language;
+    private EditorEx editorEx;
 
     public MyLanguageTextField(Project myProject, Language language, FileType fileType) {
         super(language, myProject, "", false);
@@ -89,5 +90,10 @@ public class MyLanguageTextField extends LanguageTextField {
 
     public void setLanguage(Language language) {
         this.language = language;
+    }
+
+    @Override
+    public @Nullable EditorEx getEditor() {
+        return editorEx;
     }
 }

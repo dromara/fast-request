@@ -1,34 +1,30 @@
 package io.github.kings1990.plugin.fastrequest.service;
 
-import com.google.common.collect.ImmutableMap;
-import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiAnnotation;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiMethod;
+import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.generator.FastUrlGenerator;
-import io.github.kings1990.plugin.fastrequest.generator.impl.OtherUrlGenerator;
+import io.github.kings1990.plugin.fastrequest.generator.impl.JaxRsGenerator;
 import io.github.kings1990.plugin.fastrequest.generator.impl.SpringMethodUrlGenerator;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.Map;
-import java.util.Objects;
-
 public class GeneratorUrlService {
-    private Map<Class<? extends PsiElement>, FastUrlGenerator> fastUrlGeneratorMap
-            = ImmutableMap.<Class<? extends PsiElement>, FastUrlGenerator>builder()
-            .put(PsiClass.class, new OtherUrlGenerator())
-            .put(PsiMethod.class, new SpringMethodUrlGenerator())
-            .build();
+    SpringMethodUrlGenerator springMethodUrlGenerator = new SpringMethodUrlGenerator();
+    JaxRsGenerator jaxRsGenerator = new JaxRsGenerator();
 
     public String generate(PsiElement psiElement) {
-        FastUrlGenerator fastUrlGenerator = null;
-        for (Map.Entry<Class<? extends PsiElement>, FastUrlGenerator> entry : fastUrlGeneratorMap.entrySet()) {
-            if (entry.getKey().isAssignableFrom(psiElement.getClass())) {
-                fastUrlGenerator = entry.getValue();
-                break;
-            }
-        }
-        if (Objects.isNull(fastUrlGenerator)) {
+        FastUrlGenerator fastUrlGenerator;
+        if (!(psiElement instanceof PsiMethod)) {
             return StringUtils.EMPTY;
+        }
+        PsiMethod psiMethod = (PsiMethod) psiElement;
+        String jaxPathAnnotation = Constant.JaxRsMappingConfig.PATH.getCode();
+        PsiAnnotation annotation = psiMethod.getAnnotation(jaxPathAnnotation);
+        if (annotation != null) {
+            fastUrlGenerator = jaxRsGenerator;
+        } else {
+            fastUrlGenerator = springMethodUrlGenerator;
         }
         return fastUrlGenerator.generate(psiElement);
     }

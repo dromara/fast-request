@@ -7,6 +7,47 @@ import java.util.Map;
 public class Constant {
     public static final String I18N_PATH = "io/github/kings1990/fastrequest/18n/fr";
 
+    public enum JaxRsMappingConfig {
+        PATH("javax.ws.rs.Path", "");
+        private final String code;
+        private final String methodType;
+
+        public String getCode() {
+            return code;
+        }
+
+        public String getMethodType() {
+            return methodType;
+        }
+
+        JaxRsMappingConfig(String code, String methodType) {
+            this.code = code;
+            this.methodType = methodType;
+        }
+    }
+
+    public enum JaxRsMappingMethodConfig {
+        GET("javax.ws.rs.GET", "GET"),
+        POST("javax.ws.rs.POST", "POST"),
+        DELETE("javax.ws.rs.DELETE", "DELETE"),
+        PUT("javax.ws.rs.PUT", "PUT");
+        private final String code;
+        private final String methodType;
+
+        public String getCode() {
+            return code;
+        }
+
+        public String getMethodType() {
+            return methodType;
+        }
+
+        JaxRsMappingMethodConfig(String code, String methodType) {
+            this.code = code;
+            this.methodType = methodType;
+        }
+    }
+
     public enum SpringMappingConfig {
         GET_MAPPING("org.springframework.web.bind.annotation.GetMapping", "GET"),
         POST_MAPPING("org.springframework.web.bind.annotation.PostMapping", "POST"),
@@ -42,6 +83,37 @@ public class Constant {
 
         SpringControllerConfig(String code) {
             this.code = code;
+        }
+    }
+
+    public enum JaxRsUrlParamConfig {
+        PATH_PARAM("javax.ws.rs.PathParam", 1),
+        QUERY_PARAM("javax.ws.rs.QueryParam", 2),
+        FORM_PARAM("javax.ws.rs.FormParam", 2),
+        BEAN_PARAM("javax.ws.rs.BeanParam", 2),
+        HEADER_PARAM("javax.ws.rs.HeaderParam", 0),
+        COOKIE_PARAM("javax.ws.rs.CookieParam", 0),
+        MATRIX_PARAM("javax.ws.rs.MatrixParam", 0),
+        ;
+        private final String code;
+
+        /**
+         * 1- path url参数  2-url参数&拼接 3-body参数 0-不参与
+         */
+
+        private final Integer parseType;
+
+        public String getCode() {
+            return code;
+        }
+
+        public Integer getParseType() {
+            return parseType;
+        }
+
+        JaxRsUrlParamConfig(String code, Integer parseType) {
+            this.code = code;
+            this.parseType = parseType;
         }
     }
 

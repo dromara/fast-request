@@ -61,17 +61,27 @@ public class FastRequestLineMarkerProvider implements LineMarkerProvider {
 
 
     private boolean judgeMethod(@NotNull PsiElement psiElement) {
-            PsiMethod psiMethod = (PsiMethod) psiElement.getParent();
-            Constant.SpringMappingConfig[] mappingConfigArray = Constant.SpringMappingConfig.values();
-            PsiAnnotation annotationRequestMapping = null;
-            for (Constant.SpringMappingConfig mappingConfig : mappingConfigArray) {
+        PsiMethod psiMethod = (PsiMethod) psiElement.getParent();
+        Constant.SpringMappingConfig[] mappingConfigArray = Constant.SpringMappingConfig.values();
+        PsiAnnotation annotationRequestMapping = null;
+        for (Constant.SpringMappingConfig mappingConfig : mappingConfigArray) {
+            String code = mappingConfig.getCode();
+            annotationRequestMapping = psiMethod.getAnnotation(code);
+            if (annotationRequestMapping != null) {
+                break;
+            }
+        }
+        if (annotationRequestMapping == null) {
+            Constant.JaxRsMappingMethodConfig[] jaxRsMappingConfigArray = Constant.JaxRsMappingMethodConfig.values();
+            for (Constant.JaxRsMappingMethodConfig mappingConfig : jaxRsMappingConfigArray) {
                 String code = mappingConfig.getCode();
                 annotationRequestMapping = psiMethod.getAnnotation(code);
                 if (annotationRequestMapping != null) {
                     break;
                 }
             }
-            return annotationRequestMapping != null;
+        }
+        return annotationRequestMapping != null;
     }
 
 }
