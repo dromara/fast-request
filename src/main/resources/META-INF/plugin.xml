@@ -103,15 +103,18 @@
 
         <!--兼容性处理code-->
         <notificationGroup id="toolWindowNotificationGroup" displayType="TOOL_WINDOW"/>
+
+        <postStartupActivity implementation="io.github.kings1990.plugin.fastrequest.update.WhatsNewActivity"/>
     </extensions>
 
-    <actions >
+    <actions>
         <!-- Add your actions here -->
         <group id="generateUrlAndParam" text="FastRequest" description="FastRequest" popup="true">
             <separator/>
             <group id="generateSubGroup"/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <action id="fastRequest.generator" class="io.github.kings1990.plugin.fastrequest.action.GenerateUrlAction" text="Generate URL and Param"
+            <action id="fastRequest.generator" class="io.github.kings1990.plugin.fastrequest.action.GenerateUrlAction"
+                    text="Generate URL and Param"
                     description="Generate URL and Param">
                 <add-to-group group-id="JavaGenerateGroup1" anchor="before" relative-to-action="GenerateEquals"/>
                 <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl BACK_SLASH"/>
