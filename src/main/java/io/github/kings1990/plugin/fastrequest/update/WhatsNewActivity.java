@@ -14,7 +14,7 @@ public class WhatsNewActivity implements StartupActivity {
 
     @Override
     public void runActivity(@NotNull Project project) {
-        String GITHUB_DOC_URL = "https://kings1990.github.io/restful-fast-request-doc/guide/whatsnew/";
+        String GITHUB_DOC_URL = "https://kings1990.github.io/restful-fast-request-doc/en/guide/whatsnew/";
         String GITEE_DOC_URL = "https://kings.gitee.io/restful-fast-request-doc/guide/whatsnew/";
         String lastVersion = PluginManagerCore.getPlugin(PluginId.getId("io.github.kings1990.FastRequest")).getVersion();
 
