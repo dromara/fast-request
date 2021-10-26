@@ -39,7 +39,9 @@ patchPluginXml {
         <li>Add support for json syntax check(添加对json的语法支持)</li>
         <li>Add support for PATCH method(添加对PATCH的支持)</li>
         <li>Add support for saving the API to the corresponding module group(添加API保存时候存入对应的模块分组的支持)</li>
-        <li>Add support for JAX-RS</li>
+        <li>Fix null value in response not output(修复响应中null值不输出的问题)</li>
+        <li>Add support for JAX-RS(添加对JAX-RS的支持)</li>
+        <li>Show what's new(展示最新功能)</li>
     </ul>
     
     <h3>v2.0.5</h3>
