@@ -34,6 +34,8 @@
 * 管理API(搜索过滤、修改API名称)
 * 一键定位历史保存的API到方法
 * API转curl
+* 自动将API关联到模块分组
+* 内置Json参数编辑器
 
 ![example](./screenshot/example.gif)
 ![example_download](./screenshot/downloadFile.gif)

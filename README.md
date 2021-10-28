@@ -42,6 +42,8 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 * Management API (search filter, modify API name)
 * one click location history save api to method
 * api to curl
+* Automatically associate APIs to module groups
+* Built-in Json parameter editor
 
 ![example](./screenshot/example.gif)
 ![example_download](./screenshot/downloadFile.gif)
