@@ -107,13 +107,16 @@ public class CommonConfigView extends AbstractConfigurableView {
             }
         });
         toolbarDecoratorProject.setRemoveAction(anActionButton -> {
-            String project = projectNameJbList.getSelectedValue();
-            String enableProject = config.getEnableProject();
-            if (project.equals(enableProject)) {
-//                config.setEnableProject(null);
-                viewEnableProject = null;
+            int i = Messages.showOkCancelDialog("Danger operation: Delete it?", "Delete", "Delete", "Cancel", Messages.getInformationIcon());
+            if (i == 0) {
+                String project = projectNameJbList.getSelectedValue();
+                String enableProject = config.getEnableProject();
+                if (project.equals(enableProject)) {
+                    //                config.setEnableProject(null);
+                    viewEnableProject = null;
+                }
+                refreshDataListWithProject(viewProjectList, project, true);
             }
-            refreshDataListWithProject(viewProjectList, project, true);
         });
         projectNameListPanel = toolbarDecoratorProject.createPanel();
     }
@@ -150,15 +153,18 @@ public class CommonConfigView extends AbstractConfigurableView {
             }
         });
         toolbarDecoratorEnv.setRemoveAction(anActionButton -> {
-            String env = envJbList.getSelectedValue();
-            table.removeColumn(table.getColumnModel().getColumn(viewEnvList.indexOf(env) + 1));
+            int i = Messages.showOkCancelDialog("Danger operation: Delete it?", "Delete", "Delete", "Cancel", Messages.getInformationIcon());
+            if (i == 0) {
+                String env = envJbList.getSelectedValue();
+                table.removeColumn(table.getColumnModel().getColumn(viewEnvList.indexOf(env) + 1));
 
-            String enableEnv = config.getEnableEnv();
-            if (env.equals(enableEnv)) {
+                String enableEnv = config.getEnableEnv();
+                if (env.equals(enableEnv)) {
 //                config.setEnableEnv(null);
-                viewEnableEnv = null;
+                    viewEnableEnv = null;
+                }
+                refreshDataListWithEnv(viewEnvList, env, true);
             }
-            refreshDataListWithEnv(viewEnvList, env, true);
         });
         envListPanel = toolbarDecoratorEnv.createPanel();
     }
