@@ -33,6 +33,15 @@ intellij {
 patchPluginXml {
     changeNotes """
 
+    <h3>v2.0.7</h3>
+    <ul>
+        <li>Add support for automatic switching of Headers with project and environment switching(添加Headers随项目和环境切换自动切换的支持)</li>
+        <li>Optimized windows system. In some cases, downloading files cannot pop up the directory(优化windows系统某些情况下下载文件无法弹出目录)</li>
+        <li>Optimize the parameter parse of @RequestParam(优化@RequestParam的参数解析)</li>
+        <li>Add confirm operation when delete Delete project and env config(删除project和env配置增加确认操作)</li>
+        <li>Fix the order of json field output is disrupted(修复json字段输出循序被打乱)</li>
+    </ul>
+    
     <h3>v2.0.6</h3>
     <ul>
         <li>Fix "Light files should have PSI only in one project"</li>

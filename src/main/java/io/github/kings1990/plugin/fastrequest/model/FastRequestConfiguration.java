@@ -87,6 +87,8 @@ public class FastRequestConfiguration implements Serializable {
 
     private List<DataMapping> headerList = new ArrayList<>();
 
+    private List<HeaderGroup> headerGroupList = new ArrayList<>();
+
     public List<String> getProjectList() {
         return projectList;
     }
@@ -197,5 +199,13 @@ public class FastRequestConfiguration implements Serializable {
 
     public void setRandomStringDelimiter(String randomStringDelimiter) {
         this.randomStringDelimiter = randomStringDelimiter;
+    }
+
+    public List<HeaderGroup> getHeaderGroupList() {
+        return headerGroupList;
+    }
+
+    public void setHeaderGroupList(List<HeaderGroup> headerGroupList) {
+        this.headerGroupList = headerGroupList;
     }
 }

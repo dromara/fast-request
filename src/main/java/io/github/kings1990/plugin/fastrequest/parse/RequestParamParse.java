@@ -48,14 +48,14 @@ public class RequestParamParse extends AbstractParamParse {
 
             String name = paramNameType.getName();
             if ("java.lang.String".equals(type)) {
-                if (arrayFlag || listFlag) {
-                    String key = name.contains("[]") ? name : name + "[]";
-                    name = name.replace("[]", "[0]");
-                    ParamKeyValue paramKeyValue = new ParamKeyValue(key, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, TypeUtil.Type.String.name());
-                    nameValueMap.put(name, paramKeyValue);
-                } else {
-                    nameValueMap.put(name, new ParamKeyValue(name, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, TypeUtil.Type.String.name()));
-                }
+//                if (arrayFlag || listFlag) {
+//                    String key = name.contains("[]") ? name : name + "[]";
+//                    name = name.replace("[]", "[0]");
+//                    ParamKeyValue paramKeyValue = new ParamKeyValue(key, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, TypeUtil.Type.String.name());
+//                    nameValueMap.put(name, paramKeyValue);
+//                } else {
+                nameValueMap.put(name, new ParamKeyValue(name, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, TypeUtil.Type.String.name()));
+//                }
                 continue;
             }
             String finalType = type;
@@ -78,12 +78,12 @@ public class RequestParamParse extends AbstractParamParse {
             if (dataMapping != null) {
                 Object value = dataMapping.getValue();
                 String calcType = TypeUtil.calcType(type);
-                if (arrayFlag || listFlag) {
-                    ParamKeyValue paramKeyValue = new ParamKeyValue(name + "[]", value, 2, calcType);
-                    nameValueMap.put(name, paramKeyValue);
-                } else {
-                    nameValueMap.put(name, new ParamKeyValue(name, value, 2, calcType));
-                }
+//                if (arrayFlag || listFlag) {
+//                    ParamKeyValue paramKeyValue = new ParamKeyValue(name + "[]", value, 2, calcType);
+//                    nameValueMap.put(name, paramKeyValue);
+//                } else {
+                nameValueMap.put(name, new ParamKeyValue(name, value, 2, calcType));
+//                }
                 continue;
             }
             //特殊参数处理
