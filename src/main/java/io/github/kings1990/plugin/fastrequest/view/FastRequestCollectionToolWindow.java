@@ -42,6 +42,7 @@ import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionCompon
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamGroupCollection;
+import io.github.kings1990.plugin.fastrequest.util.FrIconUtil;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.util.SwingUtil;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
@@ -320,7 +321,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 for (CollectionCustomNode n : nodeList) {
                     removeGroup &= filterNode(n, search, rule);
                 }
-                if(removeGroup){
+                if (removeGroup) {
                     node.removeFromParent();
                 }
             }
@@ -328,28 +329,28 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         return false;
     }
 
-    private CollectionConfiguration.CollectionDetail filterById(String id,CollectionConfiguration.CollectionDetail detail){
-        if(detail.getId().equals(id) ){
+    private CollectionConfiguration.CollectionDetail filterById(String id, CollectionConfiguration.CollectionDetail detail) {
+        if (detail.getId().equals(id)) {
             return detail;
         }
         for (CollectionConfiguration.CollectionDetail d : detail.getChildList()) {
             CollectionConfiguration.CollectionDetail filterResult = filterById(id, d);
-            if(filterResult != null){
+            if (filterResult != null) {
                 return filterResult;
             }
         }
         return null;
     }
 
-    private CollectionConfiguration.CollectionDetail filterById(String id,List<CollectionConfiguration.CollectionDetail> collectionDetailList){
+    private CollectionConfiguration.CollectionDetail filterById(String id, List<CollectionConfiguration.CollectionDetail> collectionDetailList) {
         for (CollectionConfiguration.CollectionDetail detail : collectionDetailList) {
-            if(detail.getId().equals(id) ){
+            if (detail.getId().equals(id)) {
                 return detail;
             }
             List<CollectionConfiguration.CollectionDetail> childList = detail.getChildList();
-            if(!childList.isEmpty()){
-                CollectionConfiguration.CollectionDetail detail1 = filterById(id,childList);
-                if(detail1 != null){
+            if (!childList.isEmpty()) {
+                CollectionConfiguration.CollectionDetail detail1 = filterById(id, childList);
+                if (detail1 != null) {
                     return detail1;
                 }
             }
@@ -365,43 +366,43 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         toolbarDecorator.setRemoveActionUpdater(e -> {
             int selectedRow = collectionTable.getSelectedRow();
             CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(selectedRow);
-            return !"0".equals(root.getId()) && !"1".equals(root.getId()) ;
+            return !"0".equals(root.getId()) && !"1".equals(root.getId());
         });
-        toolbarDecorator.setAddActionName("Add Group").setAddAction(e->{
+        toolbarDecorator.setAddActionName("Add Group").setAddAction(e -> {
             int selectedRow = collectionTable.getSelectedRow();
             CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(0);
             String id = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date());
             CollectionCustomNode addNode = null;
             CollectionConfiguration.CollectionDetail detail = null;
             if (selectedRow == -1 || selectedRow == 0) {
-                addNode = new CollectionCustomNode(id,"Group "+root.getChildCount() , 1);
-                detail = new CollectionConfiguration.CollectionDetail(id,"Group "+ root.getChildCount(), 1);
+                addNode = new CollectionCustomNode(id, "Group " + root.getChildCount(), 1);
+                detail = new CollectionConfiguration.CollectionDetail(id, "Group " + root.getChildCount(), 1);
                 root.insert(addNode, 1);
                 rootDetail.getChildList().add(detail);
             } else {
                 CollectionCustomNode node = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(selectedRow);
-                if(node.getType() == 1){
+                if (node.getType() == 1) {
                     String idGroup = node.getId();
-                    CollectionConfiguration.CollectionDetail detailGroup = filterById(idGroup,rootDetail);
-                    if(detailGroup != null){
+                    CollectionConfiguration.CollectionDetail detailGroup = filterById(idGroup, rootDetail);
+                    if (detailGroup != null) {
                         List<CollectionConfiguration.CollectionDetail> childList = detailGroup.getChildList();
                         long count = childList.stream().filter(q -> q.getType() == 1).count();
-                        addNode = new CollectionCustomNode(id,"Group "+ (count + 1), 1);
-                        detail = new CollectionConfiguration.CollectionDetail(id,"Group "+ (count + 1), 1);
+                        addNode = new CollectionCustomNode(id, "Group " + (count + 1), 1);
+                        detail = new CollectionConfiguration.CollectionDetail(id, "Group " + (count + 1), 1);
                         childList.add(detail);
                         detailGroup.setChildList(childList);
-                        node.insert(addNode,0);
+                        node.insert(addNode, 0);
                     }
                 } else {
 
                     CollectionCustomNode parent = (CollectionCustomNode) node.getParent();
                     String idParent = parent.getId();
-                    CollectionConfiguration.CollectionDetail detailGroup = filterById(idParent,rootDetail);
-                    if(detailGroup != null){
+                    CollectionConfiguration.CollectionDetail detailGroup = filterById(idParent, rootDetail);
+                    if (detailGroup != null) {
                         List<CollectionConfiguration.CollectionDetail> childList = detailGroup.getChildList();
                         long count = childList.stream().filter(q -> q.getType() == 1).count();
-                        addNode = new CollectionCustomNode(id,"Group "+ (count + 1), 1);
-                        detail = new CollectionConfiguration.CollectionDetail(id,"Group "+ (count + 1), 1);
+                        addNode = new CollectionCustomNode(id, "Group " + (count + 1), 1);
+                        detail = new CollectionConfiguration.CollectionDetail(id, "Group " + (count + 1), 1);
                         childList.add(detail);
                         detailGroup.setChildList(childList);
                         parent.insert(addNode, 0);
@@ -492,7 +493,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
                 if (column == 0) {
                     return node.getName();
-                } else if(column == 1){
+                } else if (column == 1) {
                     return node.getUrl();
                 } else {
                     return null;
@@ -503,7 +504,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
                 ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
                 CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
-                if(node.getType() != 1 && column == 2){
+                if (node.getType() != 1 && column == 2) {
                     renderer = new ButtonRenderer();
                 }
                 return super.prepareRenderer(renderer, row, column);
@@ -518,14 +519,14 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public TableCellEditor getCellEditor(int row, int column) {
-                if(column == 0){
+                if (column == 0) {
                     ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
                     String name = (String) getValueAt(row, column);
                     return new DefaultCellEditor(new JTextField(name));
-                } else if(column == 2){
+                } else if (column == 2) {
                     ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
                     CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
-                    if(node.getType() != 1){
+                    if (node.getType() != 1) {
                         return new ButtonEditor(new JCheckBox());
                     }
                 }
@@ -534,7 +535,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public void setValueAt(Object v, int row, int column) {
-                if(column == 0){
+                if (column == 0) {
                     ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) getTableModel();
                     CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
                     CollectionConfiguration.CollectionDetail detail = filterById(node.getId(), rootDetail);
@@ -619,8 +620,8 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             JTable.DropLocation dl = (JTable.DropLocation) support.getDropLocation();
             Point dp = dl.getDropPoint();
             int row = table.rowAtPoint(dp);
-            int offset = row == -1?0:dl.getRow()-row;
-            if(row == -1){
+            int offset = row == -1 ? 0 : dl.getRow() - row;
+            if (row == -1) {
                 row = dl.getRow() - 1;
             }
             Transferable t = support.getTransferable();
@@ -636,18 +637,18 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 CollectionCustomNode toAdd = (CollectionCustomNode) myModel.getRowValue(row);
                 String targetId;
                 int position = 0;
-                if(toAdd.getType() == 1){
+                if (toAdd.getType() == 1) {
                     old.removeFromParent();
                     targetId = toAdd.getId();
-                    toAdd.insert(add,0);
+                    toAdd.insert(add, 0);
                 } else {
-                    CollectionCustomNode parent = (CollectionCustomNode)toAdd.getParent();
+                    CollectionCustomNode parent = (CollectionCustomNode) toAdd.getParent();
                     position = parent.getIndex(toAdd);
 
-                    if(sourceParentId.equals(parent.getId())){
-                        if(position == oldIndex){
+                    if (sourceParentId.equals(parent.getId())) {
+                        if (position == oldIndex) {
                             return false;
-                        } else if(position > oldIndex){
+                        } else if (position > oldIndex) {
                             old.removeFromParent();
                         } else {
                             old.removeFromParent();
@@ -658,7 +659,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                         position += offset;
                     }
 
-                    parent.insert(add,position);
+                    parent.insert(add, position);
                     targetId = parent.getId();
                 }
                 TreeTableTree tree = collectionTable.getTree();
@@ -666,13 +667,14 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                     tree.expandPath(new TreePath(((CollectionCustomNode) treeNode).getPath()));
                 }
                 refreshTable();
-                moveData(sourceParentId,add.getId(),targetId,position);
+                moveData(sourceParentId, add.getId(), targetId, position);
             } catch (UnsupportedFlavorException | IOException e) {
                 e.printStackTrace();
             }
             return true;
         }
     }
+
     class Renderer extends ColoredTreeCellRenderer {
         @Override
         public void customizeCellRenderer(@NotNull JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
@@ -680,23 +682,8 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             CollectionCustomNode node = (CollectionCustomNode) value;
             append(node.getName());
             if (node.getType() == 2) {
-                setIcon(getIconByMethodType(node.getDetail().getParamGroup().getMethodType()));
+                setIcon(FrIconUtil.getIconByMethodType(node.getDetail().getParamGroup().getMethodType()));
             }
-        }
-    }
-
-    private Icon getIconByMethodType(String methodType) {
-        switch (methodType) {
-            case "POST":
-                return PluginIcons.ICON_POST;
-            case "PUT":
-                return PluginIcons.ICON_PUT;
-            case "DELETE":
-                return PluginIcons.ICON_DELETE;
-            case "PATCH":
-                return PluginIcons.ICON_PATCH;
-            default:
-                return PluginIcons.ICON_GET;
         }
     }
 
@@ -724,21 +711,21 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             nodeObject.setId(c.getId());
             nodeObject.setDetail(c);
             List<CollectionConfiguration.CollectionDetail> childList = c.getChildList();
-            if(CollectionUtils.isNotEmpty(childList)){
-                convertToNode(nodeObject,childList);
+            if (CollectionUtils.isNotEmpty(childList)) {
+                convertToNode(nodeObject, childList);
             }
             nodeObject.setSearchText("<" + c.getName() + c.getDescription() + c.getParamGroup().getUrl() + ">");
             node.add(nodeObject);
         }
     }
 
-    private void moveData(String sourceParentId,String sourceId,String targetId,Integer position){
+    private void moveData(String sourceParentId, String sourceId, String targetId, Integer position) {
         CollectionConfiguration.CollectionDetail sourceParent = filterById(sourceParentId, rootDetail);
         CollectionConfiguration.CollectionDetail from = filterById(sourceId, rootDetail);
         CollectionConfiguration.CollectionDetail to = filterById(targetId, rootDetail);
 
         sourceParent.getChildList().remove(from);
-        to.getChildList().add(position,from);
+        to.getChildList().add(position, from);
     }
 
     private void load(CollectionCustomNode node) {
@@ -799,8 +786,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         post,
         put,
         delete,
-        patch
-        ;
+        patch;
 
         public static SearchTypeEnum fromValue(String name) {
             for (SearchTypeEnum v : values()) {

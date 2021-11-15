@@ -82,7 +82,7 @@ public class JaxRsGenerator extends FastUrlGenerator {
         return null;
     }
 
-    private String getMethodType(PsiMethod psiMethod) {
+    public String getMethodType(PsiMethod psiMethod) {
         Constant.JaxRsMappingMethodConfig[] mappingConfigs = Constant.JaxRsMappingMethodConfig.values();
         for (Constant.JaxRsMappingMethodConfig mappingConfig : mappingConfigs) {
             String code = mappingConfig.getCode();
@@ -194,7 +194,14 @@ public class JaxRsGenerator extends FastUrlGenerator {
         List<ParamNameType> result = new ArrayList<>();
         PsiParameterList parameterList = psiMethod.getParameterList();
         PsiParameter[] parameters = parameterList.getParameters();
+        OUT:
         for (PsiParameter param : parameters) {
+            Constant.JaxRsUrlParamConfig[] urlParamConfigArray = Constant.JaxRsUrlParamConfig.values();
+            for (Constant.JaxRsUrlParamConfig config : urlParamConfigArray) {
+                if (param.getAnnotation(config.getCode()) != null) {
+                    break OUT;
+                }
+            }
             String canonicalText = param.getType().getCanonicalText();
             PsiClass psiClass = null;
             if (CollectionUtils.isCollectionClassOrInterface(param.getType())) {

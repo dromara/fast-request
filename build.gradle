@@ -35,6 +35,7 @@ patchPluginXml {
 
     <h3>v2.0.7</h3>
     <ul>
+        <li>Add support for api navigate tree(添加API导航树)</li>
         <li>Add support for automatic switching of Headers with project and environment switching(添加Headers随项目和环境切换自动切换的支持)</li>
         <li>Optimized windows system. In some cases, downloading files cannot pop up the directory(优化windows系统某些情况下下载文件无法弹出目录)</li>
         <li>Optimize the parameter parse of @RequestParam(优化@RequestParam的参数解析)</li>

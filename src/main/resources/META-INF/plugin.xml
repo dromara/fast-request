@@ -27,6 +27,7 @@
 
     Features:
     <ul>
+        <li>API navigate tree</li>
         <li>generate url and parameters in one click</li>
         <li>Send request to debug API(support to modify the generated parameters)</li>
         <li>Send request and download</li>
@@ -43,6 +44,7 @@
 
     功能:
     <ul>
+        <li>API导航树</li>
         <li>一键生成url和参数</li>
         <li>发送请求调试API(支持修改生成的参数)</li>
         <li>发送请求并下载文件</li>
@@ -60,9 +62,12 @@
     <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" />
     <h2>API manager</h2>
     <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/apis.png" /><br/>
+    <h2>API navigate</h2>
+    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/apiNavigate.png" /><br/>
 
     <h3>Latest changes</h3>
     <ul>
+        <li>Add support for api navigate tree(添加API导航树)</li>
         <li>Add support for automatic switching of Headers with project and environment switching(添加Headers随项目和环境切换自动切换的支持)</li>
         <li>Optimized windows system. In some cases, downloading files cannot pop up the directory(优化windows系统某些情况下下载文件无法弹出目录)</li>
         <li>Optimize the parameter parse of @RequestParam(优化@RequestParam的参数解析)</li>
@@ -86,6 +91,10 @@
         <projectService
                 serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent"/>
         <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService"/>
+        <applicationService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.generator.impl.JaxRsGenerator"/>
+        <applicationService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.generator.impl.SpringMethodUrlGenerator"/>
         <applicationConfigurable id="p" displayName="Restful Fast Request"
                                  instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
             <configurable parentId="p"
