@@ -7,6 +7,11 @@ import java.util.Map;
 public class Constant {
     public static final String I18N_PATH = "io/github/kings1990/fastrequest/18n/fr";
 
+    public enum FrameworkType {
+        SPRING,
+        JAX_RS;
+    }
+
     public enum JaxRsMappingConfig {
         PATH("javax.ws.rs.Path", "");
         private final String code;

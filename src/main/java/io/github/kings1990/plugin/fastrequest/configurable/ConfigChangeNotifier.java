@@ -3,6 +3,8 @@ package io.github.kings1990.plugin.fastrequest.configurable;
 import com.intellij.util.messages.Topic;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
 
+import java.util.List;
+
 public interface ConfigChangeNotifier {
 
     Topic<ConfigChangeNotifier> PARAM_CHANGE_TOPIC = Topic.create("param change", ConfigChangeNotifier.class);
@@ -12,7 +14,17 @@ public interface ConfigChangeNotifier {
 
     Topic<ConfigChangeNotifier> LOAD_REQUEST = Topic.create("load request", ConfigChangeNotifier.class);
 
-    void configChanged(boolean active, String projectName);
+    Topic<ConfigChangeNotifier> FILTER_MODULE = Topic.create("filter module", ConfigChangeNotifier.class);
 
-    void loadRequest(CollectionConfiguration.CollectionDetail detail, String projectName);
+    default void configChanged(boolean active, String projectName) {
+
+    }
+
+    default void loadRequest(CollectionConfiguration.CollectionDetail detail, String projectName) {
+
+    }
+
+    default void filterModule(List<String> selectModule, String projectName) {
+
+    }
 }

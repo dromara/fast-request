@@ -216,7 +216,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         return result;
     }
 
-    private String getMethodType(PsiMethod psiMethod) {
+    public String getMethodType(PsiMethod psiMethod) {
         Constant.SpringMappingConfig[] mappingConfigs = Constant.SpringMappingConfig.values();
         for (Constant.SpringMappingConfig mappingConfig : mappingConfigs) {
             String code = mappingConfig.getCode();
