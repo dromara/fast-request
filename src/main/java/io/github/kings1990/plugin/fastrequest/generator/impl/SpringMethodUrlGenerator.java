@@ -122,7 +122,13 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         if (value == null) {
             return StringUtils.EMPTY;
         }
-        return value.getText().replace("\"", "");
+
+        String url = value.getText();
+        List<DataMapping> urlReplaceMappingList = config.getUrlReplaceMappingList();
+        for (DataMapping dataMapping : urlReplaceMappingList) {
+            url = url.replace(dataMapping.getType(), dataMapping.getValue());
+        }
+        return url.replace("\"", "");
     }
 
     /**
