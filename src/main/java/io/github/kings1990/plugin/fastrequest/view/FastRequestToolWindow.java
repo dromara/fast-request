@@ -20,6 +20,8 @@ import com.intellij.icons.AllIcons;
 import com.intellij.ide.actions.RevealFileAction;
 import com.intellij.json.JsonFileType;
 import com.intellij.json.JsonLanguage;
+import com.intellij.notification.Notification;
+import com.intellij.notification.NotificationAction;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
@@ -83,6 +85,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 import java.util.List;
 import java.util.*;
@@ -2890,9 +2893,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         @Override
         public void actionPerformed(@NotNull AnActionEvent e) {
-            getCurlDataAndCopy();
+            String curlData = getCurlDataAndCopy();
             //兼容性处理code
-            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Copy success", MessageType.INFO).notify(myProject);
+            if (StringUtils.isNoneBlank(curlData)) {
+                NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Copy success", MessageType.INFO).notify(myProject);
+            }
             // 2020.3 before
             //new NotificationGroup("toolWindowNotificationGroup", NotificationDisplayType.TOOL_WINDOW, true).createNotification("Success", NotificationType.INFORMATION).notify(myProject);
         }
@@ -2975,7 +2980,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
     private class RetryAction extends AnAction {
         public RetryAction() {
-            super(MyResourceBundleUtil.getKey("regenerate"), MyResourceBundleUtil.getKey("regenerate"), PluginIcons.ICON_RETRY);
+            super(MyResourceBundleUtil.getKey("regenerate"), MyResourceBundleUtil.getKey("regenerate"), AllIcons.Actions.Redo);
         }
 
         @Override
@@ -2985,9 +2990,31 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             ParamGroup paramGroup = config.getParamGroup();
             String className = paramGroup.getClassName();
             String methodName = paramGroup.getMethod();
+            if (StringUtils.isBlank(className)) {
+                NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("You should generate first", MessageType.ERROR)
+                        .addAction(new NotificationAction("Document") {
+                            @Override
+                            public void actionPerformed(@NotNull AnActionEvent e, @NotNull Notification notification) {
+                                Desktop dp = Desktop.getDesktop();
+                                if (dp.isSupported(Desktop.Action.BROWSE)) {
+                                    try {
+                                        if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
+                                            dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/guide/feature/#%E9%87%8D%E6%96%B0%E7%94%9F%E5%AD%98%E8%AF%B7%E6%B1%82"));
+                                        } else {
+                                            dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#regenetate"));
+                                        }
+                                    } catch (IOException ex) {
+                                        LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#regenetate", ex);
+                                    }
+                                }
+                            }
+                        })
+                        .notify(myProject);
+                return;
+            }
             PsiClass psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
-            if(psiClass != null){
-                PsiElement[] elementArray = psiClass.findMethodsByName(methodName,true);
+            if (psiClass != null) {
+                PsiElement[] elementArray = psiClass.findMethodsByName(methodName, true);
                 if (elementArray.length > 0) {
                     PsiMethod psiMethod = (PsiMethod) elementArray[0];
                     PsiNavigateUtil.navigate(psiMethod);
