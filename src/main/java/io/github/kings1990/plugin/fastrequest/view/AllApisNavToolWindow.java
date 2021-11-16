@@ -192,8 +192,8 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
     private void initActionBar() {
         DefaultActionGroup group = new DefaultActionGroup();
         group.add(new HelpAction());
-        group.add(new RefreshApiAction());
         group.addSeparator();
+        group.add(new RefreshApiAction());
         group.add(CommonActionsManager.getInstance().createExpandAllAction(apiTree, apiTree));
         group.add(CommonActionsManager.getInstance().createCollapseAllAction(apiTree, apiTree));
         group.add(new ModuleFilterAction());

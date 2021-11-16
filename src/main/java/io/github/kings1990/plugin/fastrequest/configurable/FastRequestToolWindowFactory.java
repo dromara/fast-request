@@ -44,6 +44,8 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory, DumbAwar
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
         window.getComponent().add(window.getContent());
         Content content = contentFactory.createContent(window, "Request", true);
+        content.setIcon(AllIcons.General.RunWithCoverage);
+        content.putUserData(ToolWindow.SHOW_CONTENT_ICON, Boolean.TRUE);
         toolWindow.getContentManager().addContent(content);
 
         Content contentCollection = contentFactory.createContent(collectionToolWindow.getContent(), "APIs", true);
@@ -52,7 +54,7 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory, DumbAwar
         toolWindow.getContentManager().addContent(contentCollection);
 
         allApisNavToolWindow.getComponent().add(allApisNavToolWindow.getContent());
-        Content allApis = contentFactory.createContent(allApisNavToolWindow, "Api Navigate", true);
+        Content allApis = contentFactory.createContent(allApisNavToolWindow, "API Navigate", true);
         allApis.setIcon(AllIcons.Ide.LocalScopeAction);
         allApis.putUserData(ToolWindow.SHOW_CONTENT_ICON, Boolean.TRUE);
         toolWindow.getContentManager().addContent(allApis);

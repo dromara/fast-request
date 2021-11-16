@@ -2813,7 +2813,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
     private final class SaveRequestAction extends AnAction{
         public SaveRequestAction() {
-            super(MyResourceBundleUtil.getKey("SaveRequest"), MyResourceBundleUtil.getKey("SaveRequest"), PluginIcons.ICON_SAVE);
+            super(MyResourceBundleUtil.getKey("SaveRequest"), MyResourceBundleUtil.getKey("SaveRequest"), AllIcons.Actions.MenuSaveall);
         }
         @Override
         public void actionPerformed(@NotNull AnActionEvent e) {
@@ -2968,7 +2968,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
     private static final class CoffeeMeAction extends AnAction {
         public CoffeeMeAction() {
-            super(MyResourceBundleUtil.getKey("CoffeeMe"), MyResourceBundleUtil.getKey("CoffeeMe"), PluginIcons.ICON_COFFEE);
+            super(MyResourceBundleUtil.getKey("CoffeeMe"), MyResourceBundleUtil.getKey("CoffeeMe"), AllIcons.Ide.Gift);
         }
 
         @Override
