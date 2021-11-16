@@ -27,10 +27,7 @@ import com.intellij.util.Query;
 import io.github.kings1990.plugin.fastrequest.model.ApiService;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.view.component.ModuleFilterPopup;
-import io.github.kings1990.plugin.fastrequest.view.component.tree.ApiTree;
-import io.github.kings1990.plugin.fastrequest.view.component.tree.BaseNode;
-import io.github.kings1990.plugin.fastrequest.view.component.tree.MethodNode;
-import io.github.kings1990.plugin.fastrequest.view.component.tree.NodeUtil;
+import io.github.kings1990.plugin.fastrequest.view.component.tree.*;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -115,7 +112,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                         List<ApiService> filterList = allApiList.stream().filter(q -> selectModule.contains(q.getModuleName())).collect(Collectors.toList());
                         indicator.setText("Rendering");
                         long count = filterList.stream().mapToInt(q -> q.getApiMethodList().size()).sum();
-                        BaseNode root = new BaseNode<>(count + " apis") {
+                        RootNode root = new RootNode(count + " apis") {
                         };
                         NodeUtil.convertToRoot(root, NodeUtil.convertToMap(filterList));
                         apiTree.setModel(new DefaultTreeModel(root));
@@ -179,8 +176,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                     allApiList = NodeUtil.getAllApiList(controller);
                     indicator.setText("Rendering");
                     long count = allApiList.stream().mapToInt(q -> q.getApiMethodList().size()).sum();
-                    BaseNode root = new BaseNode<>(count + " apis") {
-                    };
+                    RootNode root = new RootNode(count + " apis");
                     NodeUtil.convertToRoot(root, NodeUtil.convertToMap(allApiList));
                     apiTree.setModel(new DefaultTreeModel(root));
                 });
