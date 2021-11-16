@@ -43,13 +43,14 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Disposable {
     private final Project myProject;
     private JPanel panel;
     private ApiTree apiTree;
-    SimpleColoredComponent textChunks = new SimpleColoredComponent();
     private ToolWindow toolWindow;
+    private List<ApiService> allApiList;
 
     public AllApisNavToolWindow(Project project, ToolWindow toolWindow) {
         super(false, false);
@@ -105,7 +106,24 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
     }
 
     public void refreshFilterModule(List<String> selectModule) {
-        DumbService.getInstance(myProject).smartInvokeLater(() -> rendingTree(selectModule));
+        DumbService.getInstance(myProject).smartInvokeLater(() -> {
+            Task.Backgroundable task = new Task.Backgroundable(myProject, "Reload apis...") {
+                @Override
+                public void run(@NotNull ProgressIndicator indicator) {
+                    indicator.setIndeterminate(false);
+                    ApplicationManager.getApplication().runReadAction(() -> {
+                        List<ApiService> filterList = allApiList.stream().filter(q -> selectModule.contains(q.getModuleName())).collect(Collectors.toList());
+                        indicator.setText("Rendering");
+                        long count = filterList.stream().mapToInt(q -> q.getApiMethodList().size()).sum();
+                        BaseNode root = new BaseNode<>(count + " apis") {
+                        };
+                        NodeUtil.convertToRoot(root, NodeUtil.convertToMap(filterList));
+                        apiTree.setModel(new DefaultTreeModel(root));
+                    });
+                }
+            };
+            ProgressManager.getInstance().runProcessWithProgressAsynchronously(task, new BackgroundableProcessIndicator(task));
+        });
     }
 
     private static class MyCellRenderer extends ColoredTreeCellRenderer {
@@ -158,7 +176,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                             )
                             .allowParallelProcessing()
                             .findAll();
-                    List<ApiService> allApiList = NodeUtil.getAllApiList(controller);
+                    allApiList = NodeUtil.getAllApiList(controller);
                     indicator.setText("Rendering");
                     long count = allApiList.stream().mapToInt(q -> q.getApiMethodList().size()).sum();
                     BaseNode root = new BaseNode<>(count + " apis") {
