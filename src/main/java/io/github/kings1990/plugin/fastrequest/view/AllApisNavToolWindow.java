@@ -2,6 +2,7 @@ package io.github.kings1990.plugin.fastrequest.view;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.CommonActionsManager;
+import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
@@ -13,6 +14,7 @@ import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.progress.impl.BackgroundableProcessIndicator;
 import com.intellij.openapi.project.DumbService;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.MessageType;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.openapi.util.Disposer;
 import com.intellij.openapi.wm.ToolWindow;
@@ -25,7 +27,6 @@ import com.intellij.ui.speedSearch.SpeedSearchUtil;
 import com.intellij.util.PsiNavigateUtil;
 import com.intellij.util.Query;
 import io.github.kings1990.plugin.fastrequest.model.ApiService;
-import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.view.component.ModuleFilterPopup;
 import io.github.kings1990.plugin.fastrequest.view.component.tree.*;
 import org.jetbrains.annotations.NotNull;
@@ -38,7 +39,6 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -60,17 +60,6 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         setLayout(new BorderLayout());
         apiTree = new ApiTree();
         initActionBar();
-        try {
-            String url = "https://kings1990.github.io/restful-fast-request-doc/guide/feature.html/#api-navigate-tree";
-            if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                url = "https://kings.gitee.io/restful-fast-request-doc/guide/feature.html#api%E5%AF%BC%E8%88%AA%E6%A0%91";
-            }
-            new GotItTooltip("2.0.7", MyResourceBundleUtil.getKey("type.to.search"), myProject)
-                    .withBrowserLink("Learn more", new URL(url))
-                    .show(panel, GotItTooltip.BOTTOM_MIDDLE);
-
-        } catch (Exception ignored) {
-        }
 
         apiTree.setCellRenderer(new MyCellRenderer());
         apiTree.addKeyListener(new KeyAdapter() {
@@ -191,6 +180,8 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                     RootNode root = new RootNode(count + " apis");
                     NodeUtil.convertToRoot(root, NodeUtil.convertToMap(allApiList));
                     apiTree.setModel(new DefaultTreeModel(root));
+                    NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Reload apis complete", MessageType.INFO)
+                            .notify(myProject);
                 });
             }
         };
@@ -224,7 +215,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
     }
 
     private final class ModuleFilterAction extends AnAction {
-        private ModuleFilterPopup moduleFilterPopup;
+        private final ModuleFilterPopup moduleFilterPopup;
 
         public ModuleFilterAction() {
             super("Filter Module", "Filter module", AllIcons.Actions.GroupByModule);
@@ -235,8 +226,6 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         public void actionPerformed(@NotNull AnActionEvent e) {
             moduleFilterPopup.show(toolWindow.getComponent(), 0, moduleFilterPopup.getY());
         }
-
-
     }
 
     @Override
