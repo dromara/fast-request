@@ -38,6 +38,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -59,6 +60,17 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         setLayout(new BorderLayout());
         apiTree = new ApiTree();
         initActionBar();
+        try {
+            String url = "https://kings1990.github.io/restful-fast-request-doc/guide/feature.html/#api-navigate-tree";
+            if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
+                url = "https://kings.gitee.io/restful-fast-request-doc/guide/feature.html#api%E5%AF%BC%E8%88%AA%E6%A0%91";
+            }
+            new GotItTooltip("2.0.7", MyResourceBundleUtil.getKey("type.to.search"), myProject)
+                    .withBrowserLink("Learn more", new URL(url))
+                    .show(panel, GotItTooltip.BOTTOM_MIDDLE);
+
+        } catch (Exception ignored) {
+        }
 
         apiTree.setCellRenderer(new MyCellRenderer());
         apiTree.addKeyListener(new KeyAdapter() {
@@ -187,8 +199,6 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
 
     private void initActionBar() {
         DefaultActionGroup group = new DefaultActionGroup();
-        group.add(new HelpAction());
-        group.addSeparator();
         group.add(new RefreshApiAction());
         group.add(CommonActionsManager.getInstance().createExpandAllAction(apiTree, apiTree));
         group.add(CommonActionsManager.getInstance().createCollapseAllAction(apiTree, apiTree));
@@ -210,17 +220,6 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         @Override
         public void actionPerformed(@NotNull AnActionEvent e) {
             renderData(myProject);
-        }
-    }
-
-    private final class HelpAction extends AnAction {
-        public HelpAction() {
-            super(MyResourceBundleUtil.getKey("type.to.search"), MyResourceBundleUtil.getKey("type.to.search"), AllIcons.Actions.Help);
-        }
-
-        @Override
-        public void actionPerformed(@NotNull AnActionEvent e) {
-
         }
     }
 
