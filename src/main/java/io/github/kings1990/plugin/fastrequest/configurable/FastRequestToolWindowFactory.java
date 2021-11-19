@@ -9,7 +9,6 @@ import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import com.intellij.util.messages.MessageBus;
 import com.intellij.util.messages.MessageBusConnection;
-import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
 import io.github.kings1990.plugin.fastrequest.view.AllApisNavToolWindow;
 import io.github.kings1990.plugin.fastrequest.view.FastRequestCollectionToolWindow;
@@ -49,7 +48,7 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory, DumbAwar
         toolWindow.getContentManager().addContent(content);
 
         Content contentCollection = contentFactory.createContent(collectionToolWindow.getContent(), "APIs", true);
-        contentCollection.setIcon(PluginIcons.ICON_CODE);
+        contentCollection.setIcon(AllIcons.Nodes.PpLib);
         contentCollection.putUserData(ToolWindow.SHOW_CONTENT_ICON, Boolean.TRUE);
         toolWindow.getContentManager().addContent(contentCollection);
 
