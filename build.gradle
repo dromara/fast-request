@@ -39,10 +39,12 @@ patchPluginXml {
         <li>Add support for automatic switching of Headers with project and environment switching(添加Headers随项目和环境切换自动切换的支持)</li>
         <li>Optimized windows system. In some cases, downloading files cannot pop up the directory(优化windows系统某些情况下下载文件无法弹出目录)</li>
         <li>Optimize the parameter parse of @RequestParam(优化@RequestParam的参数解析)</li>
+        <li>Optimize tool window project and env drop-down components and layout(优化工具窗口project和env下拉组件及布局)</li>
         <li>Optimize the prompt message of curl copy(curl拷贝提示优化)</li>
         <li>Optimize the prompt message of curl regenerate(regenerate提示优化)</li>
         <li>Add confirm operation when delete Delete project and env config(删除project和env配置增加确认操作)</li>
         <li>Fix the order of json field output is disrupted(修复json字段输出循序被打乱)</li>
+        <li>Move send button to toolbar and support keyboard shortcut(将发送请求按钮至工具栏同时支持快捷键)</li>
     </ul>
     
     <h3>v2.0.6</h3>
