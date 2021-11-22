@@ -49,6 +49,7 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 ![example](./screenshot/example.gif)
 ![example_download](./screenshot/downloadFile.gif)
 ![example_download](./screenshot/apis_hd.png)
+![apinav](./screenshot/apinav.gif)
 
 # Document
 

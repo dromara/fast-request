@@ -41,7 +41,7 @@
 ![example](./screenshot/example.gif)
 ![example_download](./screenshot/downloadFile.gif)
 ![example_download](./screenshot/apis_hd.png)
-
+![apinav](./screenshot/apinav.gif)
 # Document
 
 * [中文文档](http://kings.gitee.io/restful-fast-request-doc/)
