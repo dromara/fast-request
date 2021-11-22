@@ -34,6 +34,7 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 
 ## Features
 
+* API navigate tree
 * generate url and parameters in one click
 * Send request to debug API(support to modify the generated parameters)
 * domain customization and switching
