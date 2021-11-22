@@ -38,10 +38,18 @@
 * 自动将API关联到模块分组
 * 内置Json参数编辑器
 
+> 发送请求
 ![example](./screenshot/example.gif)
+
+> 下载文件
 ![example_download](./screenshot/downloadFile.gif)
-![example_download](./screenshot/apis_hd.png)
+
+> api管理
+![api manage](./screenshot/apis_hd.png)
+
+> api导航
 ![apinav](./screenshot/apinav.gif)
+
 # Document
 
 * [中文文档](http://kings.gitee.io/restful-fast-request-doc/)

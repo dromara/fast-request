@@ -46,9 +46,16 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 * Automatically associate APIs to module groups
 * Built-in Json parameter editor
 
+> send request 
 ![example](./screenshot/example.gif)
+
+> send and download
 ![example_download](./screenshot/downloadFile.gif)
-![example_download](./screenshot/apis_hd.png)
+
+> api manage
+![api manage](./screenshot/apis_hd.png)
+
+> api navigate 
 ![apinav](./screenshot/apinav.gif)
 
 # Document
