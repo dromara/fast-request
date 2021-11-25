@@ -6,9 +6,11 @@ import com.google.common.collect.Lists;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.ui.ComboBox;
 import com.intellij.openapi.ui.Messages;
+import com.intellij.ui.CollectionListModel;
 import com.intellij.ui.IdeBorderFactory;
 import com.intellij.ui.SimpleTextAttributes;
 import com.intellij.ui.ToolbarDecorator;
+import com.intellij.ui.components.JBList;
 import com.intellij.ui.table.JBTable;
 import com.intellij.util.ui.*;
 import com.intellij.util.ui.components.BorderLayoutPanel;
@@ -17,6 +19,7 @@ import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import io.github.kings1990.plugin.fastrequest.view.AbstractConfigurableView;
 import io.github.kings1990.plugin.fastrequest.view.inner.DataMappingAddView;
+import io.github.kings1990.plugin.fastrequest.view.inner.IgnoreDataMappingAddView;
 import org.apache.commons.lang3.StringUtils;
 import org.jdesktop.swingx.combobox.ListComboBoxModel;
 import org.jetbrains.annotations.Nullable;
@@ -35,7 +38,7 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
     private JPanel defaultDataMappingPanel;
     private JPanel customDataMappingPanel;
     private JTextField randomStringTextField;
-    private JComboBox<String> randomStringStrategyComboBox = new ComboBox<>(new ListComboBoxModel<>(Lists.newArrayList("name+random","random","none")));
+    private JComboBox<String> randomStringStrategyComboBox = new ComboBox<>(new ListComboBoxModel<>(Lists.newArrayList("name+random", "random", "none")));
     private JTextField randomStringDelimiterTextField;
     private List<DataMapping> viewCustomDataMappingList;
     private List<DataMapping> viewDefaultDataMappingList;
@@ -43,6 +46,8 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
     private JBTable defaultDataMappingTable;
     private FastRequestConfiguration configOld;
     private Integer viewRandomStringLength;
+    private JBList<String> ignoreDateMappingJbList;
+    private List<String> viewIgnoreDateMappingList;
 
 
     public DataMappingConfigViewNew(FastRequestConfiguration config) {
@@ -105,16 +110,43 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
         renderingCustomDataMappingPanel();
         renderingDefaultDataMappingPanel();
 
+        FastRequestConfiguration configOld = JSONObject.parseObject(JSONObject.toJSONString(config), FastRequestConfiguration.class);
+        viewIgnoreDateMappingList = configOld.getIgnoreDataMappingList();
+
+        CollectionListModel<String> ignoreDataMappingModel = new CollectionListModel<>(viewIgnoreDateMappingList);
+        ignoreDateMappingJbList = new JBList<>(ignoreDataMappingModel);
+        ToolbarDecorator ignoreDataMappingDecorator = ToolbarDecorator.createDecorator(ignoreDateMappingJbList);
+        ignoreDataMappingDecorator.setMoveUpAction(null).setMoveDownAction(null).setAddAction(e -> {
+            IgnoreDataMappingAddView ignoreDataMappingAddView = new IgnoreDataMappingAddView();
+            if (ignoreDataMappingAddView.showAndGet()) {
+                String value = ignoreDataMappingAddView.getValue();
+                if (viewIgnoreDateMappingList.contains(value)) {
+                    Messages.showMessageDialog("Ignore class already exist", "Error", Messages.getInformationIcon());
+                    return;
+                }
+                viewIgnoreDateMappingList.add(value);
+                ignoreDateMappingJbList.setModel(new CollectionListModel<>(viewIgnoreDateMappingList));
+            }
+        }).setRemoveAction(e -> {
+            viewIgnoreDateMappingList.remove(ignoreDateMappingJbList.getSelectedIndex());
+            ignoreDateMappingJbList.setModel(new CollectionListModel<>(viewIgnoreDateMappingList));
+        }).setRemoveActionUpdater(e -> {
+            int selectedIndex = ignoreDateMappingJbList.getSelectedIndex();
+            return selectedIndex > 2;
+        });
+
 
         BorderLayoutPanel inlineCustomerDataMapping = JBUI.Panels.simplePanel().addToTop(UI.PanelFactory.panel(customDataMappingPanel).withLabel(MyResourceBundleUtil.getKey("CustomerDataMapping")).moveLabelOnTop().createPanel());
         BorderLayoutPanel inlineDefaultDataMappingPanel = JBUI.Panels.simplePanel().addToTop(UI.PanelFactory.panel(defaultDataMappingPanel).withLabel(MyResourceBundleUtil.getKey("DefaultDataMapping")).moveLabelOnTop().createPanel());
-
+        BorderLayoutPanel inlineIgnoreDataMappingPanel = JBUI.Panels.simplePanel().addToTop(UI.PanelFactory.panel(ignoreDataMappingDecorator.createPanel()).withComment(MyResourceBundleUtil.getKey("IgnoreDataMappingDesc")).withLabel(MyResourceBundleUtil.getKey("IgnoreDataMapping")).moveLabelOnTop().createPanel());
 
         panel.add(stringGeneratorConfigPanel, gb.nextLine().next().fillCell());
-        panel.add(inlineCustomerDataMapping, gb.nextLine().next().weighty(0.4).fillCell());
+        panel.add(inlineCustomerDataMapping, gb.nextLine().next().weighty(0.3).fillCell());
+        panel.add(inlineIgnoreDataMappingPanel, gb.nextLine().next().weighty(0.3).fillCell());
         panel.add(inlineDefaultDataMappingPanel, gb.nextLine().next().weighty(0.4).fillCell());
         return panel;
     }
+
 
     private JPanel createStringGeneratorConfigPanel(){
         JPanel stringGeneratorConfigPanel = UI.PanelFactory.grid().splitColumns()
@@ -404,6 +436,18 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
 
     public JTextField getRandomStringDelimiterTextField() {
         return randomStringDelimiterTextField;
+    }
+
+    public void setViewIgnoreDateMappingList(List<String> viewIgnoreDateMappingList) {
+        this.viewIgnoreDateMappingList = viewIgnoreDateMappingList;
+    }
+
+    public List<String> getViewIgnoreDateMappingList() {
+        return viewIgnoreDateMappingList;
+    }
+
+    public JBList<String> getIgnoreDateMappingJbList() {
+        return ignoreDateMappingJbList;
     }
 }
 

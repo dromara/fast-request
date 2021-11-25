@@ -916,8 +916,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         CollectionComboBoxModel<String> envModel = new CollectionComboBoxModel<>(envListClone);
         envComboBox.setModel(envModel);
 
-        int idxProject = config.getProjectList().indexOf(config.getEnableProject());
-        int idxEnv = config.getEnableEnv().indexOf(config.getEnableEnv());
+        int idxProject = config.getEnableProject() == null ? -1 : config.getProjectList().indexOf(config.getEnableProject());
+        int idxEnv = config.getEnableEnv() == null ? -1 : config.getEnableEnv().indexOf(config.getEnableEnv());
         projectComboBox.setSelectedIndex(Math.max(0, idxProject + 1));
         envComboBox.setSelectedIndex(Math.max(0, idxEnv + 1));
         setDomain(config);
