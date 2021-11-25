@@ -1,7 +1,9 @@
 package io.github.kings1990.plugin.fastrequest.config;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Lists;
 
+import java.util.List;
 import java.util.Map;
 
 public class Constant {
@@ -217,6 +219,12 @@ public class Constant {
                 .put(505,"HTTP Version Not Supported")
                 .build();
     }
+
+    public static List<String> IGNORE_PARAM_PARSE_LIST = Lists.newArrayList(
+            "javax.servlet.http.HttpServletRequest",
+            "javax.servlet.http.HttpServletResponse",
+            "org.springframework.ui.ModelMap"
+    );
 
 
 }

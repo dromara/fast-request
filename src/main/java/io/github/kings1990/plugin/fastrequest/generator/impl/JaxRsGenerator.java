@@ -155,6 +155,10 @@ public class JaxRsGenerator extends FastUrlGenerator {
         for (PsiParameter param : parameters) {
             boolean parseFlag = false;
             PsiClass psiClass = PsiUtil.resolveClassInType(param.getType());
+            if (judgeIgnore(config.getIgnoreDataMappingList(), param.getType().getCanonicalText())) {
+                // 不需要解析的请求参数类型。
+                continue;
+            }
             for (Constant.JaxRsUrlParamConfig config : urlParamConfigArray) {
                 PsiAnnotation annotation = param.getAnnotation(config.getCode());
                 if (annotation != null) {
@@ -187,7 +191,8 @@ public class JaxRsGenerator extends FastUrlGenerator {
                     }
                 }
                 //默认无注解传参 requestParam
-                ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass, 2, param.getType());
+                ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass,
+                        Constant.SpringUrlParamConfig.REQUEST_PARAM.getParseType(), param.getType());
                 result.add(paramNameType);
             }
         }
@@ -201,6 +206,10 @@ public class JaxRsGenerator extends FastUrlGenerator {
         PsiParameter[] parameters = parameterList.getParameters();
         OUT:
         for (PsiParameter param : parameters) {
+            if (judgeIgnore(config.getIgnoreDataMappingList(), param.getType().getCanonicalText())) {
+                // 不需要解析的请求参数类型。
+                continue;
+            }
             Constant.JaxRsUrlParamConfig[] urlParamConfigArray = Constant.JaxRsUrlParamConfig.values();
             for (Constant.JaxRsUrlParamConfig config : urlParamConfigArray) {
                 if (param.getAnnotation(config.getCode()) != null) {
