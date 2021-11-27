@@ -141,9 +141,9 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
         BorderLayoutPanel inlineIgnoreDataMappingPanel = JBUI.Panels.simplePanel().addToTop(UI.PanelFactory.panel(ignoreDataMappingDecorator.createPanel()).withComment(MyResourceBundleUtil.getKey("IgnoreDataMappingDesc")).withLabel(MyResourceBundleUtil.getKey("IgnoreDataMapping")).moveLabelOnTop().createPanel());
 
         panel.add(stringGeneratorConfigPanel, gb.nextLine().next().fillCell());
-        panel.add(inlineCustomerDataMapping, gb.nextLine().next().weighty(0.3).fillCell());
-        panel.add(inlineIgnoreDataMappingPanel, gb.nextLine().next().weighty(0.3).fillCell());
-        panel.add(inlineDefaultDataMappingPanel, gb.nextLine().next().weighty(0.4).fillCell());
+        panel.add(inlineCustomerDataMapping, gb.nextLine().next().weighty(0.3).pady(10).fillCell());
+        panel.add(inlineIgnoreDataMappingPanel, gb.nextLine().next().weighty(0.3).pady(10).fillCell());
+        panel.add(inlineDefaultDataMappingPanel, gb.nextLine().next().weighty(0.4).pady(10).fillCell());
         return panel;
     }
 

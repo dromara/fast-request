@@ -2,11 +2,14 @@ package io.github.kings1990.plugin.fastrequest.view;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.CommonActionsManager;
+import com.intellij.ide.actions.searcheverywhere.PersistentSearchEverywhereContributorFilter;
+import com.intellij.ide.util.gotoByName.SearchEverywhereConfiguration;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.module.Module;
+import com.intellij.openapi.module.ModuleManager;
 import com.intellij.openapi.module.ModuleUtil;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
@@ -26,8 +29,10 @@ import com.intellij.ui.*;
 import com.intellij.ui.speedSearch.SpeedSearchUtil;
 import com.intellij.util.PsiNavigateUtil;
 import com.intellij.util.Query;
+import io.github.kings1990.plugin.fastrequest.action.CheckBoxFilterAction;
+import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.model.ApiService;
-import io.github.kings1990.plugin.fastrequest.view.component.ModuleFilterPopup;
+import io.github.kings1990.plugin.fastrequest.model.MethodType;
 import io.github.kings1990.plugin.fastrequest.view.component.tree.*;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,8 +44,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.Collection;
 import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Disposable {
@@ -49,6 +54,10 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
     private ApiTree apiTree;
     private ToolWindow toolWindow;
     private List<ApiService> allApiList;
+    private List<String> mySelectModule;
+    //    PersistentSearchEverywhereContributorFilter<String> methodTypeFilter = createMethodTypeFilter();
+    private CheckBoxFilterAction.Filter<String> moduleFilter;
+    private CheckBoxFilterAction.Filter<String> methodTypeFilter;
 
     public AllApisNavToolWindow(Project project, ToolWindow toolWindow) {
         super(false, false);
@@ -103,19 +112,25 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         PsiNavigateUtil.navigate(psiMethod);
     }
 
-    public void refreshFilterModule(List<String> selectModule) {
+    public void refreshFilterModule(List<String> selectModule, List<String> selectMethodType) {
         DumbService.getInstance(myProject).smartInvokeLater(() -> {
             Task.Backgroundable task = new Task.Backgroundable(myProject, "Reload apis...") {
                 @Override
                 public void run(@NotNull ProgressIndicator indicator) {
                     indicator.setIndeterminate(false);
                     ApplicationManager.getApplication().runReadAction(() -> {
+                        if (allApiList == null) {
+                            return;
+                        }
                         List<ApiService> filterList = allApiList.stream().filter(q -> selectModule.contains(q.getModuleName())).collect(Collectors.toList());
                         indicator.setText("Rendering");
-                        long count = filterList.stream().mapToInt(q -> q.getApiMethodList().size()).sum();
+                        List<ApiService.ApiMethod> filterMethodList = new ArrayList<>();
+                        filterList.stream().map(ApiService::getApiMethodList).forEach(filterMethodList::addAll);
+                        long count = filterMethodList.stream().filter(q -> selectMethodType.contains(q.getMethodType())).count();
                         RootNode root = new RootNode(count + " apis") {
                         };
-                        NodeUtil.convertToRoot(root, NodeUtil.convertToMap(filterList));
+
+                        NodeUtil.convertToRoot(root, NodeUtil.convertToMap(filterList), selectMethodType);
                         apiTree.setModel(new DefaultTreeModel(root));
                     });
                 }
@@ -149,6 +164,15 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         DumbService.getInstance(project).smartInvokeLater(() -> rendingTree(null));
     }
 
+    public static PersistentSearchEverywhereContributorFilter<String> createMethodTypeFilter() {
+        List<String> methodNameList = Constant.METHOD_TYPE_LIST.stream().map(MethodType::getName).collect(Collectors.toList());
+        Map<String, Icon> iconMap = Constant.METHOD_TYPE_LIST.stream().collect(Collectors.toMap(MethodType::getName, MethodType::getIcon));
+        return new PersistentSearchEverywhereContributorFilter<>(
+                methodNameList,
+                SearchEverywhereConfiguration.getInstance(),
+                methodName -> methodName, iconMap::get);
+    }
+
     private void rendingTree(List<String> moduleNameList) {
         Task.Backgroundable task = new Task.Backgroundable(myProject, "Reload apis...") {
             @Override
@@ -176,9 +200,12 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                             .findAll();
                     allApiList = NodeUtil.getAllApiList(controller);
                     indicator.setText("Rendering");
-                    long count = allApiList.stream().mapToInt(q -> q.getApiMethodList().size()).sum();
+                    List<String> selectMethodType = methodTypeFilter.getSelectedElementList();
+                    List<ApiService.ApiMethod> filterMethodList = new ArrayList<>();
+                    allApiList.stream().map(ApiService::getApiMethodList).forEach(filterMethodList::addAll);
+                    long count = filterMethodList.stream().filter(q -> selectMethodType.contains(q.getMethodType())).count();
                     RootNode root = new RootNode(count + " apis");
-                    NodeUtil.convertToRoot(root, NodeUtil.convertToMap(allApiList));
+                    NodeUtil.convertToRoot(root, NodeUtil.convertToMap(allApiList), methodTypeFilter.getSelectedElementList());
                     apiTree.setModel(new DefaultTreeModel(root));
                     NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Reload apis complete", MessageType.INFO)
                             .notify(myProject);
@@ -193,7 +220,18 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         group.add(new RefreshApiAction());
         group.add(CommonActionsManager.getInstance().createExpandAllAction(apiTree, apiTree));
         group.add(CommonActionsManager.getInstance().createCollapseAllAction(apiTree, apiTree));
-        group.add(new ModuleFilterAction());
+
+        Module[] modules = ModuleManager.getInstance(myProject).getModules();
+        List<String> moduleList = Arrays.stream(modules).map(Module::getName).sorted().collect(Collectors.toList());
+        moduleFilter = new CheckBoxFilterAction.Filter<>(moduleList, module -> module, module -> null, SearchEverywhereConfiguration.getInstance());
+        group.add(new CheckBoxFilterAction<>("Filter Module", "Filter module", AllIcons.Actions.GroupByModule, moduleFilter, this::refresh));
+
+
+        List<String> methodNameList = Constant.METHOD_TYPE_LIST.stream().map(MethodType::getName).collect(Collectors.toList());
+        Map<String, Icon> iconMap = Constant.METHOD_TYPE_LIST.stream().collect(Collectors.toMap(MethodType::getName, MethodType::getIcon));
+        methodTypeFilter = new CheckBoxFilterAction.Filter<>(methodNameList, methodName -> methodName, iconMap::get, SearchEverywhereConfiguration.getInstance());
+        group.add(new CheckBoxFilterAction<>("Filter Method", "Filter Method", AllIcons.Actions.GroupByMethod, methodTypeFilter, this::refresh));
+
 
         ActionToolbar actionToolbar = ActionManager.getInstance().createActionToolbar(ActionPlaces.TOOLWINDOW_CONTENT, group, false);
         actionToolbar.setTargetComponent(panel);
@@ -203,6 +241,13 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         setToolbar(toolbarComponent);
     }
 
+    private void refresh() {
+        List<String> moduleList = moduleFilter.getSelectedElementList();
+        List<String> methodList = methodTypeFilter.getSelectedElementList();
+        refreshFilterModule(moduleList, methodList);
+    }
+
+
     private final class RefreshApiAction extends AnAction {
         public RefreshApiAction() {
             super("Refresh", "Refresh", AllIcons.Actions.Refresh);
@@ -211,20 +256,6 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         @Override
         public void actionPerformed(@NotNull AnActionEvent e) {
             renderData(myProject);
-        }
-    }
-
-    private final class ModuleFilterAction extends AnAction {
-        private final ModuleFilterPopup moduleFilterPopup;
-
-        public ModuleFilterAction() {
-            super("Filter Module", "Filter module", AllIcons.Actions.GroupByModule);
-            moduleFilterPopup = new ModuleFilterPopup(myProject);
-        }
-
-        @Override
-        public void actionPerformed(@NotNull AnActionEvent e) {
-            moduleFilterPopup.show(toolWindow.getComponent(), 0, moduleFilterPopup.getY());
         }
     }
 

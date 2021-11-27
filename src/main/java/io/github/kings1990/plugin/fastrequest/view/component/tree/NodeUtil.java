@@ -106,7 +106,7 @@ public class NodeUtil {
         return children;
     }
 
-    public static void convertToRoot(DefaultMutableTreeNode root, LinkedHashMap<String, LinkedHashMap<String, LinkedHashMap<String, List<ApiService>>>> dataMap) {
+    public static void convertToRoot(DefaultMutableTreeNode root, LinkedHashMap<String, LinkedHashMap<String, LinkedHashMap<String, List<ApiService>>>> dataMap, List<String> selectMethodType) {
         List<ModuleNode> moduleNodeList = new ArrayList<>();
         for (Map.Entry<String, LinkedHashMap<String, LinkedHashMap<String, List<ApiService>>>> moduleEntry : dataMap.entrySet()) {
             String moduleName = moduleEntry.getKey();
@@ -120,9 +120,9 @@ public class NodeUtil {
                     String className = classEntry.getKey();
                     ClassNode classNode = new ClassNode(className);
                     for (ApiService apiService : classEntry.getValue()) {
-                        for (ApiService.ApiMethod apiMethod : apiService.getApiMethodList()) {
-                            classNode.add(new MethodNode(apiMethod));
-                        }
+                        List<ApiService.ApiMethod> apiMethodList = apiService.getApiMethodList();
+                        List<ApiService.ApiMethod> filterMethodList = apiMethodList.stream().filter(q -> selectMethodType.contains(q.getMethodType())).collect(Collectors.toList());
+                        filterMethodList.forEach(apiMethod -> classNode.add(new MethodNode(apiMethod)));
                     }
                     customPending(packageNodeMap, packageName).add(classNode);
                 }

@@ -15,7 +15,6 @@ import io.github.kings1990.plugin.fastrequest.view.FastRequestCollectionToolWind
 import io.github.kings1990.plugin.fastrequest.view.FastRequestToolWindow;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -98,16 +97,6 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory, DumbAwar
                     }
                 });
 
-        connect.subscribe(ConfigChangeNotifier.FILTER_MODULE,
-                new ConfigChangeNotifier() {
-                    @Override
-                    public void filterModule(List<String> selectModule, String projectName) {
-                        //有可能在全局配置下点击,
-                        AllApisNavToolWindow window = allApisNavToolWindowMap.get(projectName);
-                        if (window != null) {
-                            window.refreshFilterModule(selectModule);
-                        }
-                    }
-                });
+
     }
 }
