@@ -3,6 +3,7 @@ package io.github.kings1990.plugin.fastrequest.view;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.thread.ThreadUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
@@ -28,6 +29,8 @@ import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.ModalityState;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.fileChooser.*;
+import com.intellij.openapi.fileTypes.PlainTextFileType;
+import com.intellij.openapi.fileTypes.PlainTextLanguage;
 import com.intellij.openapi.options.ShowSettingsUtil;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
@@ -85,6 +88,7 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.*;
 import java.util.concurrent.Future;
@@ -105,6 +109,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     public static final int JSON_TABLE_COLUMN_TYPE_WIDTH = 80;
     public static final String NO_ENV = "<No Env>";
     public static final String NO_PROJECT = "<No Project>";
+    public static final int MAX_DATA_LENGTH = 5 * 1024 * 1024;
 
     private final Project myProject;
     private JPanel panel;
@@ -128,7 +133,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JScrollPane responseBodyScrollPanel;
     private JScrollPane responseInfoScrollPanel;
     private JComboBox<Integer> responseStatusComboBox;
-    private JTextArea responseTextArea;
     private JPanel responseInfoPanel;
     private JTabbedPane multipartTabbedPane;
     private JPanel multipartTablePanel;
@@ -140,6 +144,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JTabbedPane bodyTabbedPane;
     private JProgressBar requestProgressBar;
     private JPanel prettyJsonEditorPanel;
+    private JPanel responseTextAreaPanel;
+
 
     private MyLanguageTextField prettyJsonLanguageTextField;
     private MyLanguageTextField jsonParamsLanguageTextField;
@@ -268,11 +274,16 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         managerConfigLink.setExternalLinkIcon();
         manageConfigButton = managerConfigLink;
         prettyJsonEditorPanel = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
+        responseTextAreaPanel = new MyLanguageTextField(myProject, PlainTextLanguage.INSTANCE, PlainTextFileType.INSTANCE);
         jsonParamsTextArea = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
         //设置高度固定搜索框
         prettyJsonEditorPanel.setMinimumSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setPreferredSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setMaximumSize(new Dimension(-1, 1000));
+        responseTextAreaPanel.setMinimumSize(new Dimension(-1, 120));
+        responseTextAreaPanel.setPreferredSize(new Dimension(-1, 120));
+        responseTextAreaPanel.setMaximumSize(new Dimension(-1, 1000));
+
         jsonParamsTextArea.setMinimumSize(new Dimension(-1, 120));
         jsonParamsTextArea.setPreferredSize(new Dimension(-1, 120));
         jsonParamsTextArea.setMaximumSize(new Dimension(-1, 1000));
@@ -643,7 +654,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             String domain = config.getDomain();
             String sendUrl = urlTextField.getText();
             if (StringUtils.isBlank(domain) || !UrlUtil.isURL(domain + sendUrl)) {
-                responseTextArea.setText("Correct url required");
+                ApplicationManager.getApplication().invokeLater(() -> {
+                    ((MyLanguageTextField) responseTextAreaPanel).setText("Correct url required");
+                });
                 tabbedPane.setSelectedIndex(4);
                 responseTabbedPanel.setSelectedIndex(2);
                 sendButtonFlag = true;
@@ -712,7 +725,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         //download file
                         if (fileMode && status >= 200 && status < 300) {
                             ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
-                            responseTextArea.setText("");
+                            ((MyLanguageTextField) responseTextAreaPanel).setText("");
                             Task.Backgroundable task = new Task.Backgroundable(myProject, "Saving file...") {
                                 @Override
                                 public void run(@NotNull ProgressIndicator indicator) {
@@ -741,21 +754,28 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         }
                         if (!fileMode) {
                             String body = response.body();
-                            if (JSONUtil.isJson(body)) {
-                                responseTabbedPanel.setSelectedIndex(1);
-                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : body);
-                                responseTextArea.setText(body);
-                                refreshResponseTable(body);
-                            } else {
-                                responseTabbedPanel.setSelectedIndex(2);
-                                String subBody = body.substring(0, Math.min(body.length(), 32768));
-                                if (body.length() > 32768) {
-                                    subBody += "\n\ntext too large only show 32768 characters\n.............";
-                                }
-                                String finalSubBody = subBody;
-                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(finalSubBody);
-                                responseTextArea.setText(subBody);
+                            int bodyLength = StrUtil.byteLength(body, StandardCharsets.UTF_8);
+                            if (bodyLength > MAX_DATA_LENGTH) {
+                                ((MyLanguageTextField) responseTextAreaPanel).setText(body);
+                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(body);
                                 refreshResponseTable("");
+                            } else {
+                                if (JSONUtil.isJson(body)) {
+                                    responseTabbedPanel.setSelectedIndex(1);
+                                    ((MyLanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : body);
+                                    ((MyLanguageTextField) responseTextAreaPanel).setText(body);
+                                    refreshResponseTable(body);
+                                } else {
+                                    responseTabbedPanel.setSelectedIndex(2);
+                                    String subBody = body.substring(0, Math.min(body.length(), 32768));
+                                    if (body.length() > 32768) {
+                                        subBody += "\n\ntext too large only show 32768 characters\n.............";
+                                    }
+                                    String finalSubBody = subBody;
+                                    ((MyLanguageTextField) prettyJsonEditorPanel).setText(finalSubBody);
+                                    ((MyLanguageTextField) responseTextAreaPanel).setText(subBody);
+                                    refreshResponseTable("");
+                                }
                             }
                         }
                         responseInfoParamsKeyValueList = Lists.newArrayList(
@@ -777,10 +797,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     tabbedPane.setSelectedIndex(4);
                     responseTabbedPanel.setSelectedIndex(2);
                     responseStatusComboBox.setSelectedItem(0);
-
                     String errorMsg = ee.getMessage();
-                    responseTextArea.setText(errorMsg);
-                    ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+                    ApplicationManager.getApplication().invokeLater(() -> {
+                        ((MyLanguageTextField) responseTextAreaPanel).setText(errorMsg);
+                        ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+                    });
                     responseStatusComboBox.setBackground(MyColor.red);
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
@@ -799,8 +820,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             sendButtonFlag = true;
             requestProgressBar.setVisible(false);
             String errorMsg = exception.getMessage();
-            responseTextArea.setText(errorMsg);
-            ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+            ApplicationManager.getApplication().invokeLater(() -> {
+                ((MyLanguageTextField) responseTextAreaPanel).setText(errorMsg);
+                ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+            });
             responseStatusComboBox.setSelectedItem(0);
             responseStatusComboBox.setBackground(MyColor.red);
             responseInfoParamsKeyValueList = Lists.newArrayList(
