@@ -1,7 +1,6 @@
 const { config } = require("vuepress-theme-hope");
 module.exports = config({
     plugins: ['@vuepress/nprogress',["add-this",{ pubid: "ra-617a48e0d1826cc4" }]],
-    base : '/restful-fast-request-doc/',
     title: 'Restful Fast Request',
     description: 'Intellij Restful Fast Request',
     head: [
@@ -27,7 +26,6 @@ module.exports = config({
         }
     },
     themeConfig: {
-        hostname: "http://fast-request.sheng90.wang",
         breadcrumb: false,
         mdEnhance: {
           align: true
