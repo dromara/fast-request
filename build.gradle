@@ -33,6 +33,14 @@ intellij {
 patchPluginXml {
     changeNotes """
 
+    <h3>v2.0.8</h3>
+    <ul>
+        <li>Fix npe when first add project/env(修复初次添加项目或环境npe)</li>
+        <li>json tree response character rendering maximum limit(json树响应字符渲染最大限制)</li>
+        <li>Add support for filter by methodType in Api navigate(添加Api navigate对methodType的支持)</li>
+        <li>Add support for ignoring parameter parsing(添加对忽略参数解析的支持)</li>
+    </ul>
+    
     <h3>v2.0.7</h3>
     <ul>
         <li>Add support for api navigate tree(添加API导航树)</li>

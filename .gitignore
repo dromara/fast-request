@@ -41,3 +41,6 @@ gradle-app.setting
 
 .idea
 PluginInfoUtil.java
+
+node_modules/
+dist
