@@ -27,7 +27,7 @@ module.exports = config({
         }
     },
     themeConfig: {
-        hostname: "fast-request.sheng90.wang",
+        hostname: "http://fast-request.sheng90.wang",
         breadcrumb: false,
         mdEnhance: {
           align: true
