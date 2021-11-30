@@ -3031,13 +3031,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                     if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                        dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/"));
+                        dp.browse(URI.create(Constant.CN_DOC_DOMAIN));
                     } else {
-                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/"));
+                        dp.browse(URI.create(Constant.EN_DOC_DOMAIN));
                     }
                 }
             } catch (Exception e) {
-                LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/", e);
+                LOGGER.error("open url fail:%s", e, Constant.EN_DOC_DOMAIN);
             }
         }
     }
@@ -3171,12 +3171,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                                     try {
                                         if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                                            dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/guide/feature/#%E9%87%8D%E6%96%B0%E7%94%9F%E5%AD%98%E8%AF%B7%E6%B1%82"));
+                                            dp.browse(URI.create(Constant.CN_DOC_DOMAIN + "/guide/feature/#%E9%87%8D%E6%96%B0%E7%94%9F%E5%AD%98%E8%AF%B7%E6%B1%82"));
                                         } else {
-                                            dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#regenetate"));
+                                            dp.browse(URI.create(String.format("%s/guide/getstarted/#regenetate", Constant.EN_DOC_DOMAIN)));
                                         }
                                     } catch (IOException ex) {
-                                        LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#regenetate", ex);
+                                        LOGGER.error("open url fail:%s/guide/getstarted/#regenetate", ex, Constant.EN_DOC_DOMAIN);
                                     }
                                 }
                             }

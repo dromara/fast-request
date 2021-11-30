@@ -8,6 +8,7 @@ import com.intellij.openapi.extensions.PluginId;
 import com.intellij.openapi.fileEditor.impl.HTMLEditorProvider;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.startup.StartupActivity;
+import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
 import org.jetbrains.annotations.NotNull;
 
@@ -15,8 +16,8 @@ public class WhatsNewActivity implements StartupActivity {
 
     @Override
     public void runActivity(@NotNull Project project) {
-        String GITHUB_DOC_URL = "https://kings1990.github.io/restful-fast-request-doc/en/guide/whatsnew/";
-        String GITEE_DOC_URL = "https://kings.gitee.io/restful-fast-request-doc/guide/whatsnew/";
+        String GITHUB_DOC_URL = String.format("%s/restful-fast-request-doc/en/guide/whatsnew/", Constant.EN_DOC_DOMAIN);
+        String GITEE_DOC_URL = String.format("%s/restful-fast-request-doc/guide/whatsnew/", Constant.CN_DOC_DOMAIN);
         IdeaPluginDescriptor plugin = PluginManagerCore.getPlugin(PluginId.getId("io.github.kings1990.FastRequest"));
         if (plugin != null) {
             String lastVersion = plugin.getVersion();

@@ -14,6 +14,7 @@ import com.intellij.ui.components.JBList;
 import com.intellij.ui.table.JBTable;
 import com.intellij.util.ui.*;
 import com.intellij.util.ui.components.BorderLayoutPanel;
+import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
@@ -199,13 +200,13 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                     if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                        dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/guide/getstarted/#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84"));
+                        dp.browse(URI.create(Constant.CN_DOC_DOMAIN + "/guide/getstarted/#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84"));
                     } else {
-                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#custom-type-mapping"));
+                        dp.browse(URI.create(Constant.EN_DOC_DOMAIN + "/guide/getstarted/#custom-type-mapping"));
                     }
                 }
             } catch (Exception exception) {
-                LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#custom-type-mapping", exception);
+                LOGGER.error("open url fail:" + Constant.EN_DOC_DOMAIN + "/guide/getstarted/#custom-type-mapping", exception);
             }
         });
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);
