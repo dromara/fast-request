@@ -49,9 +49,9 @@ public class ListAndSelectModule extends DialogWrapper {
         scrollPane.setPreferredSize(new Dimension(400, 400));
         String comment;
         if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-            comment = "<p>帮助将api移动到控制器所在的模块.<a href =\"" + Constant.CN_DOC_DOMAIN + "/guide/feature.html#api%E5%88%86%E7%BB%84%E8%87%AA%E5%8A%A8%E5%85%B3%E8%81%94\">查看技巧</a></p>";
+            comment = "<p>帮助将api移动到控制器所在的模块.<a href =\"" + Constant.CN_DOC_DOMAIN + "/guide/feature#api%E5%88%86%E7%BB%84%E8%87%AA%E5%8A%A8%E5%85%B3%E8%81%94\">查看技巧</a></p>";
         } else {
-            comment = "<p>Help move the API to the module for the controller.<a href =\"" + Constant.EN_DOC_DOMAIN + "/guide/feature.html#api-group-automatic-association\">see knowledge</a></p>";
+            comment = "<p>Help move the API to the module for the controller.<a href =\"" + Constant.EN_DOC_DOMAIN + "/guide/feature#api-group-automatic-association\">see knowledge</a></p>";
         }
 
         return UI.PanelFactory.panel(scrollPane).
