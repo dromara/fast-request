@@ -61,7 +61,7 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 
 # Document
 
-* [中文文档](https://fast-request.sheng90.wang)
+* [中文文档](https://plugins.sheng90.wang/fast-request)
 * [English Document](https://kings1990.github.io/fast-request/en)
 
 ## Install

@@ -16,8 +16,8 @@ public class WhatsNewActivity implements StartupActivity {
 
     @Override
     public void runActivity(@NotNull Project project) {
-        String GITHUB_DOC_URL = String.format("%s/restful-fast-request-doc/en/guide/whatsnew/", Constant.EN_DOC_DOMAIN);
-        String GITEE_DOC_URL = String.format("%s/restful-fast-request-doc/guide/whatsnew/", Constant.CN_DOC_DOMAIN);
+        String GITHUB_DOC_URL = String.format("%s/guide/whatsnew", Constant.EN_DOC_DOMAIN);
+        String GITEE_DOC_URL = String.format("%s/guide/whatsnew", Constant.CN_DOC_DOMAIN);
         IdeaPluginDescriptor plugin = PluginManagerCore.getPlugin(PluginId.getId("io.github.kings1990.FastRequest"));
         if (plugin != null) {
             String lastVersion = plugin.getVersion();
