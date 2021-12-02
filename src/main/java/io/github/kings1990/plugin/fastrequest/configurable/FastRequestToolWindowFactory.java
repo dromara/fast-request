@@ -97,6 +97,5 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory, DumbAwar
                     }
                 });
 
-
     }
 }
