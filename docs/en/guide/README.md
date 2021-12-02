@@ -24,19 +24,22 @@ The purpose of the plug-in is to simplify development and improve efficiency. Ou
 
 
 ## Supported framework
+```
 Spring framework (Spring MVC / Spring Boot)
+JAX-RS
+```
 
-
-## Code hosting
+## Code
 > [Github](https://github.com/kings1990/fast-request) | [Gitee](https://gitee.com/kings/fast-request)
 
 ## Recommendation
 If a new version comes out, please update to the latest version as soon as possible(Plugins will always add new features or fix bugs you didn't find during the upgrade process)
 
-## Participate in contribution
+## Contribution
 all heroes are welcome to join in and improve Restful Fast Request，We look forward to your PR！
+
 * contribute code： [Restful Fast Request](https://github.com/kings1990/fast-request)
-* maintain documentation： [Document](https://github.com/kings1990/restful-fast-request-doc)
+* maintain documentation： [Document](https://github.com/kings1990/fast-request/docs)
 
 ## Platform support
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
