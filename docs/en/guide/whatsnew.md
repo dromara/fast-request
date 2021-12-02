@@ -1,6 +1,33 @@
 # What's new
 
+## v2.0.8
+
+* Fix npe when first add project/env
+* Json tree response character rendering maximum limit
+* Add support for filter by methodType in Api navigate
+* Add support for ignoring parameter parsing
+* Fix some EDT problem
+* Send/sendDownload button support for custom shortcut keys
+* Fix response text not show in 2021.3
+
+:::tip send/sendDownload button support for custom shortcut keys
+
+```
+send request: ctrl alt =
+send and download: ctrl alt -
+
+shortcut is available anywhere to trigger the event,No longer need to focus on the tool window
+```
+
+![shortcutSendAndDownload](../../.vuepress/public/img/shortcutSendAndDownload.png)
+:::
+
+:::tip Add support for filter by methodType in Api navigate
+![shortcutSendAndDownload](../../.vuepress/public/img/methodFilter.png)
+:::
+
 ## v2.0.7
+
 * Add support for api navigate tree
 * Add support for automatic switching of Headers with project and environment switching
 * Optimized Windows system. In some cases, downloading files cannot pop up the directory
