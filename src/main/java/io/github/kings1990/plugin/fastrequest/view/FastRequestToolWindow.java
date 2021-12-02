@@ -37,10 +37,8 @@ import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.progress.impl.BackgroundableProcessIndicator;
 import com.intellij.openapi.progress.util.ColorProgressBar;
-import com.intellij.openapi.project.DumbAwareAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.*;
-import com.intellij.openapi.util.NlsActions;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.vfs.VirtualFileWrapper;
@@ -63,6 +61,8 @@ import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
 import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.action.OpenConfigAction;
+import io.github.kings1990.plugin.fastrequest.action.ToolbarSendAndDownloadRequestAction;
+import io.github.kings1990.plugin.fastrequest.action.ToolbarSendRequestAction;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
@@ -84,7 +84,9 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.tree.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
@@ -184,7 +186,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private ComboBox<String> typeJComboBox;
     private ComboBox<String> normalTypeJComboBox;
 
-    private boolean sendButtonFlag = true;
+    public boolean sendButtonFlag = true;
 
 
     private JTextField getKeyTextField(String text) {
@@ -263,10 +265,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         renderingResponseInfoPanel();
         renderingJsonResponsePanel();
 
-        SendRequestAction action = new SendRequestAction();
-        SendAndSaveRequestAction saveRequestAction = new SendAndSaveRequestAction();
-        ArrayList<Action> sendRequestActionList = Lists.newArrayList(saveRequestAction);
-        action.setOptions(sendRequestActionList);
 
         ActionLink managerConfigLink = new ActionLink("config", e -> {
             ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Restful Fast Request");
@@ -307,10 +305,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         DefaultActionGroup group = new DefaultActionGroup();
         group.add(new OpenConfigAction());
         group.addSeparator("  |  ");
-        ToolbarSendRequestAction toolbarSendRequestAction = new ToolbarSendRequestAction();
-        toolbarSendRequestAction.registerCustomShortcutSet(toolbarSendRequestAction.getShortcutSet(), panel);
-        ToolbarSendAndDownloadRequestAction sendAndDownloadRequestAction = new ToolbarSendAndDownloadRequestAction();
-        sendAndDownloadRequestAction.registerCustomShortcutSet(sendAndDownloadRequestAction.getShortcutSet(), panel);
+        ToolbarSendRequestAction toolbarSendRequestAction = (ToolbarSendRequestAction) ActionManager.getInstance().getAction("fastRequest.sendAction");
+        ToolbarSendAndDownloadRequestAction sendAndDownloadRequestAction = (ToolbarSendAndDownloadRequestAction) ActionManager.getInstance().getAction("fastRequest.sendDownloadAction");
 
 // todo idea暂时有bug
 //        DefaultActionGroup sendGroup = DefaultActionGroup.createPopupGroupWithEmptyText();
@@ -643,7 +639,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return result;
     }
 
-    private void sendRequestEvent(boolean fileMode) {
+    public boolean getSendButtonFlag() {
+        return sendButtonFlag;
+    }
+
+    public void sendRequestEvent(boolean fileMode) {
         if (!sendButtonFlag) {
             return;
         }
@@ -651,7 +651,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         try {
             FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
             assert config != null;
-            String domain = config.getDomain();
+            NameGroup defaultNameGroup = new NameGroup(StringUtils.EMPTY, new ArrayList<>());
+            HostGroup defaultHostGroup = new HostGroup(StringUtils.EMPTY, StringUtils.EMPTY);
+            String domain = config.getDataList().stream().filter(n -> n.getName().equals(projectComboBox.getSelectedItem())).findFirst().orElse(defaultNameGroup)
+                    .getHostGroup().stream().filter(h -> h.getEnv().equals(envComboBox.getSelectedItem())).findFirst().orElse(defaultHostGroup).getUrl();
+
             String sendUrl = urlTextField.getText();
             if (StringUtils.isBlank(domain) || !UrlUtil.isURL(domain + sendUrl)) {
                 ApplicationManager.getApplication().invokeLater(() -> {
@@ -3048,99 +3052,60 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
 
-    public class ToolbarSendRequestAction extends DumbAwareAction {
-
-        public ToolbarSendRequestAction() {
-            super(() -> "Send", PluginIcons.ICON_SEND);
-        }
-
-        @Override
-        public void actionPerformed(@NotNull AnActionEvent e) {
-            sendRequestEvent(false);
-        }
-
-        @Override
-        public void update(@NotNull AnActionEvent e) {
-            e.getPresentation().setEnabled(sendButtonFlag);
-        }
-
-        @Override
-        public @Nullable @NlsActions.ActionText String getTemplateText() {
-            return "Fast Request Send";
-        }
-
-        @Override
-        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
-            CustomShortcutSet altPlus = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_EQUALS, InputEvent.ALT_DOWN_MASK));
-            super.setShortcutSet(altPlus);
-        }
-
-
-    }
-
-    public class ToolbarSendAndDownloadRequestAction extends DumbAwareAction {
-
-        public ToolbarSendAndDownloadRequestAction() {
-            super(() -> "Send and Download", PluginIcons.ICON_SEND_DOWNLOAD);
-        }
-
-        @Override
-        public void actionPerformed(@NotNull AnActionEvent e) {
-            sendRequestEvent(true);
-        }
-
-        @Override
-        public void update(@NotNull AnActionEvent e) {
-            e.getPresentation().setEnabled(sendButtonFlag);
-        }
-
-        @Override
-        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
-            CustomShortcutSet altMinue = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_MINUS, InputEvent.ALT_DOWN_MASK));
-            super.setShortcutSet(altMinue);
-        }
-
-
-    }
-
-    private class SendRequestAction extends AbstractAction implements OptionAction {
-        private Action @NotNull [] myOptions = new Action[0];
-
-        public SendRequestAction() {
-            super("Send", PluginIcons.ICON_SEND);
-        }
-
-        @Override
-        public Action @NotNull [] getOptions() {
-            return myOptions;
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent actionEvent) {
-            sendRequestEvent(false);
-        }
-
-        public void setOptions(@NotNull List<? extends Action> actions) {
-            myOptions = actions.toArray(new Action[0]);
-        }
-    }
-
-    private class SendAndSaveRequestAction extends AbstractAction implements OptionAction {
-
-        public SendAndSaveRequestAction() {
-            super("Send and download");
-        }
-
-        @Override
-        public Action @NotNull [] getOptions() {
-            return new Action[0];
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent actionEvent) {
-            sendRequestEvent(true);
-        }
-    }
+//    public class ToolbarSendRequestAction extends DumbAwareAction {
+//
+//        public ToolbarSendRequestAction() {
+//            super(() -> "Send", PluginIcons.ICON_SEND);
+//        }
+//
+//
+//        @Override
+//        public void actionPerformed(@NotNull AnActionEvent e) {
+//            sendRequestEvent(e,false);
+//        }
+//
+//        @Override
+//        public void update(@NotNull AnActionEvent e) {
+//            e.getPresentation().setEnabled(sendButtonFlag);
+//        }
+//
+//        @Override
+//        public @Nullable @NlsActions.ActionText String getTemplateText() {
+//            return "Fast Request Send";
+//        }
+//
+//        @Override
+//        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
+//            CustomShortcutSet altPlus = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_EQUALS, InputEvent.ALT_DOWN_MASK | InputEvent.CTRL_DOWN_MASK));
+//            super.setShortcutSet(altPlus);
+//        }
+//
+//
+//    }
+//
+//    public class ToolbarSendAndDownloadRequestAction extends DumbAwareAction {
+//
+//        public ToolbarSendAndDownloadRequestAction() {
+//            super(() -> "Send and Download", PluginIcons.ICON_SEND_DOWNLOAD);
+//        }
+//
+//        @Override
+//        public void actionPerformed(@NotNull AnActionEvent e) {
+//            sendRequestEvent(e,true);
+//        }
+//
+//        @Override
+//        public void update(@NotNull AnActionEvent e) {
+//            e.getPresentation().setEnabled(sendButtonFlag);
+//        }
+//
+//        @Override
+//        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
+//            CustomShortcutSet altMinue = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_MINUS, InputEvent.ALT_DOWN_MASK | InputEvent.CTRL_DOWN_MASK));
+//            super.setShortcutSet(altMinue);
+//        }
+//
+//    }
 
 
     private static final class CoffeeMeAction extends AnAction {
