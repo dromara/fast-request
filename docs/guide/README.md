@@ -22,16 +22,19 @@
 
 
 ## 支持的框架
+```
 Spring 体系 (Spring MVC / Spring Boot)
-
+JAX-RS
+```
 
 ## 代码托管
 > [Github](https://github.com/kings1990/fast-request) | [Gitee](https://gitee.com/kings/fast-request)
 
 ## 参与贡献
 欢迎各路好汉一起来参与完善 Restful Fast Request，我们期待你的 PR！
+
 * 贡献代码：代码地址 [Restful Fast Request](https://github.com/kings1990/fast-request)，欢迎提交 Issue 或者 Pull Requests
-* 维护文档：文档地址 [Document](https://github.com/kings1990/restful-fast-request-doc)，欢迎参与翻译和修订
+* 维护文档：文档地址 [Document](https://github.com/kings1990/fast-request/docs)，欢迎参与翻译和修订
 
 ## 建议
 如果有新版本出来，请尽快更新到最新的版本。(插件往往在升级过程中会加入新的功能或者修复你未发现的bug)

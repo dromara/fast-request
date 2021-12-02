@@ -2985,7 +2985,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 CollectionConfiguration.CollectionDetail root = collectionConfiguration.getDetail();
                 List<CollectionConfiguration.CollectionDetail> rootChildren = root.getChildList();
                 CollectionConfiguration.CollectionDetail defaultGroup = rootChildren.get(0);
-                CollectionConfiguration.CollectionDetail group = rootChildren.stream().filter(q -> module.equals(q.getName())).findFirst().orElse(defaultGroup);
+                CollectionConfiguration.CollectionDetail group;
+                if (module == null) {
+                    group = defaultGroup;
+                } else {
+                    group = rootChildren.stream().filter(q -> module.equals(q.getName())).findFirst().orElse(defaultGroup);
+                }
                 List<CollectionConfiguration.CollectionDetail> childList = group.getChildList();
                 childList.add(collectionDetail);
                 group.setChildList(childList);
