@@ -1,6 +1,34 @@
 # 最新变化
 
+## v2.0.8
+
+* 修复初次添加项目或环境npe
+* json树响应字符渲染最大限制
+* 添加Api navigate对methodType的支持
+* 添加对忽略参数解析的支持
+* 线程导致的EDT问题
+* send/sendDownload支持自定义快捷键
+* 修复2021.3响应不显示
+
+:::tip send/sendDownload支持自定义快捷键
+
+```
+send request: ctrl alt =
+send and download: ctrl alt -
+
+快捷键在任意位置点击均可触发,不再需要聚焦到工具窗口
+```
+
+![shortcutSendAndDownload](../.vuepress/public/img/shortcutSendAndDownload.png)
+:::
+
+:::tip 添加Api navigate对methodType的支持
+
+![shortcutSendAndDownload](../.vuepress/public/img/methodFilter.png)
+:::
+
 ## v2.0.7
+
 * 添加API导航树
 * 添加Headers随项目和环境切换自动切换的支持
 * 优化windows系统某些情况下下载文件无法弹出目录
