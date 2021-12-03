@@ -13,9 +13,6 @@
 :::tip send/sendDownload支持自定义快捷键
 
 ```
-send request: ctrl alt =
-send and download: ctrl alt -
-
 快捷键在任意位置点击均可触发,不再需要聚焦到工具窗口
 ```
 
