@@ -134,12 +134,12 @@
 
             <action id="fastRequest.sendAction"
                     class="io.github.kings1990.plugin.fastrequest.action.ToolbarSendRequestAction">
-                <keyboard-shortcut keymap="$default" first-keystroke="control alt EQUALS"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="alt EQUALS"/>
             </action>
 
             <action id="fastRequest.sendDownloadAction"
                     class="io.github.kings1990.plugin.fastrequest.action.ToolbarSendAndDownloadRequestAction">
-                <keyboard-shortcut keymap="$default" first-keystroke="control alt MINUS"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="alt MINUS"/>
             </action>
         </group>
     </actions>
