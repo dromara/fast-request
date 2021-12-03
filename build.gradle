@@ -36,11 +36,11 @@ patchPluginXml {
     <h3>v2.0.8</h3>
     <ul>
         <li>Fix npe when first add project/env(修复初次添加项目或环境npe)</li>
-        <li>json tree response character rendering maximum limit(json树响应字符渲染最大限制)</li>
+        <li>Json tree response character rendering maximum limit(json树响应字符渲染最大限制)</li>
         <li>Add support for filter by methodType in Api navigate(添加Api navigate对methodType的支持)</li>
         <li>Add support for ignoring parameter parsing(添加对忽略参数解析的支持)</li>
         <li>Fix some EDT problem(线程导致的EDT问题)</li>
-        <li>send/sendDownload button support for custom shortcut keys(send/sendDownload支持自定义快捷键)</li>
+        <li>Send/sendDownload button support for custom shortcut keys(send/sendDownload支持自定义快捷键)</li>
         <li>fix response text not show in 2021.3(修复2021.3响应不显示)</li>
     </ul>
     
