@@ -13,9 +13,6 @@
 :::tip send/sendDownload button support for custom shortcut keys
 
 ```
-send request: ctrl alt =
-send and download: ctrl alt -
-
 shortcut is available anywhere to trigger the event,No longer need to focus on the tool window
 ```
 
