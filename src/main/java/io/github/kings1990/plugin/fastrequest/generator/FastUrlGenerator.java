@@ -1,10 +1,12 @@
 package io.github.kings1990.plugin.fastrequest.generator;
 
+import com.google.common.base.Splitter;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiMethod;
 import io.github.kings1990.plugin.fastrequest.model.ParamNameType;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 public abstract class FastUrlGenerator {
     public abstract String generate(PsiElement psiElement);
@@ -55,4 +57,8 @@ public abstract class FastUrlGenerator {
      */
     public abstract String getMethodDescription(PsiMethod psiMethod);
 
+    public boolean judgeIgnore(List<String> ignoreList, String canonicalText) {
+        List<String> allTypeList = Splitter.on(Pattern.compile("<|>|[|]")).trimResults().omitEmptyStrings().splitToList(canonicalText);
+        return allTypeList.stream().anyMatch(ignoreList::contains);
+    }
 }

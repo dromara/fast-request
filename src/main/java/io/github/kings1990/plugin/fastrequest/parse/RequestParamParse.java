@@ -34,16 +34,13 @@ public class RequestParamParse extends AbstractParamParse {
         String randomStringDelimiter = config.getRandomStringDelimiter();
         for (ParamNameType paramNameType : requestParamList) {
             String type = paramNameType.getType();
-            if("javax.servlet.http.HttpServletRequest".equals(type) || "javax.servlet.http.HttpServletResponse".equals(type)){
-                continue;
-            }
             boolean arrayFlag = type.contains("[]");
-            if(arrayFlag){
-                type = type.substring(0,type.indexOf("["));
+            if (arrayFlag) {
+                type = type.substring(0, type.indexOf("["));
             }
             boolean listFlag = CollectionUtils.isCollectionClassOrInterface(paramNameType.getPsiType());
-            if(listFlag){
-                type = type.substring(type.indexOf("<")+1,type.indexOf(">"));
+            if (listFlag) {
+                type = type.substring(type.indexOf("<") + 1, type.indexOf(">"));
             }
 
             String name = paramNameType.getName();

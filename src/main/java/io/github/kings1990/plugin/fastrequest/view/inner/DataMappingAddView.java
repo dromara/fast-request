@@ -16,6 +16,7 @@ public class DataMappingAddView extends DialogWrapper {
     public DataMappingAddView() {
         super(false);
         init();
+        setSize(500, 100);
         setTitle("Add DataMapping");
     }
 

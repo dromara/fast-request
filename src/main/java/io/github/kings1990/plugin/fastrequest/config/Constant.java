@@ -1,7 +1,11 @@
 package io.github.kings1990.plugin.fastrequest.config;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Lists;
+import icons.PluginIcons;
+import io.github.kings1990.plugin.fastrequest.model.MethodType;
 
+import java.util.List;
 import java.util.Map;
 
 public class Constant {
@@ -172,51 +176,67 @@ public class Constant {
     }
 
     public static class HttpStatusDesc {
-        public static Map<Integer,String> STATUS_MAP
-                = ImmutableMap.<Integer,String>builder()
-                .put(0,"")
-                .put(200,"OK")
-                .put(201,"Created")
-                .put(202,"Accepted")
-                .put(203,"Non-Authoritative Information")
-                .put(204,"No Content.")
-                .put(205,"Reset Content")
-                .put(206,"Partial Content")
+        public static Map<Integer, String> STATUS_MAP
+                = ImmutableMap.<Integer, String>builder()
+                .put(0, "")
+                .put(200, "OK")
+                .put(201, "Created")
+                .put(202, "Accepted")
+                .put(203, "Non-Authoritative Information")
+                .put(204, "No Content.")
+                .put(205, "Reset Content")
+                .put(206, "Partial Content")
 
-                .put(300,"Multiple Choices")
-                .put(301,"Moved Permanently")
-                .put(302,"Temporary Redirect")
-                .put(303,"See Other")
-                .put(304,"Not Modified")
-                .put(305,"Use Proxy")
-                .put(307,"Temporary Redirect")
-                .put(308,"Permanent Redirect")
+                .put(300, "Multiple Choices")
+                .put(301, "Moved Permanently")
+                .put(302, "Temporary Redirect")
+                .put(303, "See Other")
+                .put(304, "Not Modified")
+                .put(305, "Use Proxy")
+                .put(307, "Temporary Redirect")
+                .put(308, "Permanent Redirect")
 
-                .put(400,"Bad Request")
-                .put(401,"Unauthorized")
-                .put(402,"Payment Required")
-                .put(403,"Forbidden")
-                .put(404,"Not Found")
-                .put(405,"Method Not Allowed")
-                .put(406,"Not Acceptable")
-                .put(407,"Proxy Authentication Required")
-                .put(408,"Request Time-Out")
-                .put(409,"Conflict")
-                .put(410,"Gone")
-                .put(411,"Length Required")
-                .put(412,"Precondition Failed")
-                .put(413,"Request Entity Too Large")
-                .put(414,"Request-URI Too Large")
-                .put(415,"Unsupported Media Type")
+                .put(400, "Bad Request")
+                .put(401, "Unauthorized")
+                .put(402, "Payment Required")
+                .put(403, "Forbidden")
+                .put(404, "Not Found")
+                .put(405, "Method Not Allowed")
+                .put(406, "Not Acceptable")
+                .put(407, "Proxy Authentication Required")
+                .put(408, "Request Time-Out")
+                .put(409, "Conflict")
+                .put(410, "Gone")
+                .put(411, "Length Required")
+                .put(412, "Precondition Failed")
+                .put(413, "Request Entity Too Large")
+                .put(414, "Request-URI Too Large")
+                .put(415, "Unsupported Media Type")
 
-                .put(500,"Internal Server Error")
-                .put(501,"Not Implemented")
-                .put(502,"Bad Gateway")
-                .put(503,"Service Unavailable")
-                .put(504,"Gateway Timeout")
-                .put(505,"HTTP Version Not Supported")
+                .put(500, "Internal Server Error")
+                .put(501, "Not Implemented")
+                .put(502, "Bad Gateway")
+                .put(503, "Service Unavailable")
+                .put(504, "Gateway Timeout")
+                .put(505, "HTTP Version Not Supported")
                 .build();
     }
 
+    public static List<String> IGNORE_PARAM_PARSE_LIST = Lists.newArrayList(
+            "javax.servlet.http.HttpServletRequest",
+            "javax.servlet.http.HttpServletResponse",
+            "org.springframework.ui.ModelMap"
+    );
 
+
+    public static List<MethodType> METHOD_TYPE_LIST = Lists.newArrayList(
+            new MethodType("GET", PluginIcons.ICON_GET),
+            new MethodType("POST", PluginIcons.ICON_POST),
+            new MethodType("PUT", PluginIcons.ICON_PUT),
+            new MethodType("DELETE", PluginIcons.ICON_DELETE),
+            new MethodType("PATCH", PluginIcons.ICON_PATCH)
+    );
+
+    public static final String CN_DOC_DOMAIN = "https://plugins.sheng90.wang/fast-request";
+    public static final String EN_DOC_DOMAIN = "https://kings1990.github.io/fast-request/en";
 }
