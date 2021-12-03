@@ -1,6 +1,7 @@
 package io.github.kings1990.plugin.fastrequest.model;
 
 import com.google.common.collect.Lists;
+import io.github.kings1990.plugin.fastrequest.config.Constant;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -32,6 +33,8 @@ public class FastRequestConfiguration implements Serializable {
      * 自定义数据映射
      */
     private List<DataMapping> customDataMappingList = new ArrayList<>();
+
+    private List<String> ignoreDataMappingList = Constant.IGNORE_PARAM_PARSE_LIST;
 
     /**
      * 默认的数据映射
@@ -208,4 +211,14 @@ public class FastRequestConfiguration implements Serializable {
     public void setHeaderGroupList(List<HeaderGroup> headerGroupList) {
         this.headerGroupList = headerGroupList;
     }
+
+    public List<String> getIgnoreDataMappingList() {
+        return ignoreDataMappingList;
+    }
+
+    public void setIgnoreDataMappingList(List<String> ignoreDataMappingList) {
+        this.ignoreDataMappingList = ignoreDataMappingList;
+    }
+
+
 }

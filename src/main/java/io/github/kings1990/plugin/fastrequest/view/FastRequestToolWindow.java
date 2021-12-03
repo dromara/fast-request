@@ -3,6 +3,7 @@ package io.github.kings1990.plugin.fastrequest.view;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.thread.ThreadUtil;
+import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
@@ -28,16 +29,16 @@ import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.ModalityState;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.fileChooser.*;
+import com.intellij.openapi.fileTypes.PlainTextFileType;
+import com.intellij.openapi.fileTypes.PlainTextLanguage;
 import com.intellij.openapi.options.ShowSettingsUtil;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.progress.impl.BackgroundableProcessIndicator;
 import com.intellij.openapi.progress.util.ColorProgressBar;
-import com.intellij.openapi.project.DumbAwareAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.*;
-import com.intellij.openapi.util.NlsActions;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.vfs.VirtualFileWrapper;
@@ -60,6 +61,8 @@ import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
 import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.action.OpenConfigAction;
+import io.github.kings1990.plugin.fastrequest.action.ToolbarSendAndDownloadRequestAction;
+import io.github.kings1990.plugin.fastrequest.action.ToolbarSendRequestAction;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
@@ -81,10 +84,13 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.tree.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.*;
 import java.util.concurrent.Future;
@@ -105,6 +111,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     public static final int JSON_TABLE_COLUMN_TYPE_WIDTH = 80;
     public static final String NO_ENV = "<No Env>";
     public static final String NO_PROJECT = "<No Project>";
+    public static final int MAX_DATA_LENGTH = 5 * 1024 * 1024;
 
     private final Project myProject;
     private JPanel panel;
@@ -128,7 +135,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JScrollPane responseBodyScrollPanel;
     private JScrollPane responseInfoScrollPanel;
     private JComboBox<Integer> responseStatusComboBox;
-    private JTextArea responseTextArea;
     private JPanel responseInfoPanel;
     private JTabbedPane multipartTabbedPane;
     private JPanel multipartTablePanel;
@@ -140,6 +146,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JTabbedPane bodyTabbedPane;
     private JProgressBar requestProgressBar;
     private JPanel prettyJsonEditorPanel;
+    private JPanel responseTextAreaPanel;
+
 
     private MyLanguageTextField prettyJsonLanguageTextField;
     private MyLanguageTextField jsonParamsLanguageTextField;
@@ -178,7 +186,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private ComboBox<String> typeJComboBox;
     private ComboBox<String> normalTypeJComboBox;
 
-    private boolean sendButtonFlag = true;
+    public boolean sendButtonFlag = true;
 
 
     private JTextField getKeyTextField(String text) {
@@ -257,10 +265,6 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         renderingResponseInfoPanel();
         renderingJsonResponsePanel();
 
-        SendRequestAction action = new SendRequestAction();
-        SendAndSaveRequestAction saveRequestAction = new SendAndSaveRequestAction();
-        ArrayList<Action> sendRequestActionList = Lists.newArrayList(saveRequestAction);
-        action.setOptions(sendRequestActionList);
 
         ActionLink managerConfigLink = new ActionLink("config", e -> {
             ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Restful Fast Request");
@@ -268,11 +272,16 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         managerConfigLink.setExternalLinkIcon();
         manageConfigButton = managerConfigLink;
         prettyJsonEditorPanel = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
+        responseTextAreaPanel = new MyLanguageTextField(myProject, PlainTextLanguage.INSTANCE, PlainTextFileType.INSTANCE);
         jsonParamsTextArea = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
         //设置高度固定搜索框
         prettyJsonEditorPanel.setMinimumSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setPreferredSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setMaximumSize(new Dimension(-1, 1000));
+        responseTextAreaPanel.setMinimumSize(new Dimension(-1, 120));
+        responseTextAreaPanel.setPreferredSize(new Dimension(-1, 120));
+        responseTextAreaPanel.setMaximumSize(new Dimension(-1, 1000));
+
         jsonParamsTextArea.setMinimumSize(new Dimension(-1, 120));
         jsonParamsTextArea.setPreferredSize(new Dimension(-1, 120));
         jsonParamsTextArea.setMaximumSize(new Dimension(-1, 1000));
@@ -296,10 +305,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         DefaultActionGroup group = new DefaultActionGroup();
         group.add(new OpenConfigAction());
         group.addSeparator("  |  ");
-        ToolbarSendRequestAction toolbarSendRequestAction = new ToolbarSendRequestAction();
-        toolbarSendRequestAction.registerCustomShortcutSet(toolbarSendRequestAction.getShortcutSet(), panel);
-        ToolbarSendAndDownloadRequestAction sendAndDownloadRequestAction = new ToolbarSendAndDownloadRequestAction();
-        sendAndDownloadRequestAction.registerCustomShortcutSet(sendAndDownloadRequestAction.getShortcutSet(), panel);
+        ToolbarSendRequestAction toolbarSendRequestAction = (ToolbarSendRequestAction) ActionManager.getInstance().getAction("fastRequest.sendAction");
+        ToolbarSendAndDownloadRequestAction sendAndDownloadRequestAction = (ToolbarSendAndDownloadRequestAction) ActionManager.getInstance().getAction("fastRequest.sendDownloadAction");
 
 // todo idea暂时有bug
 //        DefaultActionGroup sendGroup = DefaultActionGroup.createPopupGroupWithEmptyText();
@@ -632,7 +639,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return result;
     }
 
-    private void sendRequestEvent(boolean fileMode) {
+    public boolean getSendButtonFlag() {
+        return sendButtonFlag;
+    }
+
+    public void sendRequestEvent(boolean fileMode) {
         if (!sendButtonFlag) {
             return;
         }
@@ -640,10 +651,16 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         try {
             FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
             assert config != null;
-            String domain = config.getDomain();
+            NameGroup defaultNameGroup = new NameGroup(StringUtils.EMPTY, new ArrayList<>());
+            HostGroup defaultHostGroup = new HostGroup(StringUtils.EMPTY, StringUtils.EMPTY);
+            String domain = config.getDataList().stream().filter(n -> n.getName().equals(projectComboBox.getSelectedItem())).findFirst().orElse(defaultNameGroup)
+                    .getHostGroup().stream().filter(h -> h.getEnv().equals(envComboBox.getSelectedItem())).findFirst().orElse(defaultHostGroup).getUrl();
+
             String sendUrl = urlTextField.getText();
             if (StringUtils.isBlank(domain) || !UrlUtil.isURL(domain + sendUrl)) {
-                responseTextArea.setText("Correct url required");
+                ApplicationManager.getApplication().invokeLater(() -> {
+                    ((MyLanguageTextField) responseTextAreaPanel).setText("Correct url required");
+                });
                 tabbedPane.setSelectedIndex(4);
                 responseTabbedPanel.setSelectedIndex(2);
                 sendButtonFlag = true;
@@ -712,7 +729,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         //download file
                         if (fileMode && status >= 200 && status < 300) {
                             ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
-                            responseTextArea.setText("");
+                            ((MyLanguageTextField) responseTextAreaPanel).setText("");
                             Task.Backgroundable task = new Task.Backgroundable(myProject, "Saving file...") {
                                 @Override
                                 public void run(@NotNull ProgressIndicator indicator) {
@@ -741,21 +758,28 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         }
                         if (!fileMode) {
                             String body = response.body();
-                            if (JSONUtil.isJson(body)) {
-                                responseTabbedPanel.setSelectedIndex(1);
-                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : body);
-                                responseTextArea.setText(body);
-                                refreshResponseTable(body);
-                            } else {
-                                responseTabbedPanel.setSelectedIndex(2);
-                                String subBody = body.substring(0, Math.min(body.length(), 32768));
-                                if (body.length() > 32768) {
-                                    subBody += "\n\ntext too large only show 32768 characters\n.............";
-                                }
-                                String finalSubBody = subBody;
-                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(finalSubBody);
-                                responseTextArea.setText(subBody);
+                            int bodyLength = StrUtil.byteLength(body, StandardCharsets.UTF_8);
+                            if (bodyLength > MAX_DATA_LENGTH) {
+                                ((MyLanguageTextField) responseTextAreaPanel).setText(body);
+                                ((MyLanguageTextField) prettyJsonEditorPanel).setText(body);
                                 refreshResponseTable("");
+                            } else {
+                                if (JSONUtil.isJson(body)) {
+                                    responseTabbedPanel.setSelectedIndex(1);
+                                    ((MyLanguageTextField) prettyJsonEditorPanel).setText(body.isBlank() ? "" : body);
+                                    ((MyLanguageTextField) responseTextAreaPanel).setText(body);
+                                    refreshResponseTable(body);
+                                } else {
+                                    responseTabbedPanel.setSelectedIndex(2);
+                                    String subBody = body.substring(0, Math.min(body.length(), 32768));
+                                    if (body.length() > 32768) {
+                                        subBody += "\n\ntext too large only show 32768 characters\n.............";
+                                    }
+                                    String finalSubBody = subBody;
+                                    ((MyLanguageTextField) prettyJsonEditorPanel).setText(finalSubBody);
+                                    ((MyLanguageTextField) responseTextAreaPanel).setText(subBody);
+                                    refreshResponseTable("");
+                                }
                             }
                         }
                         responseInfoParamsKeyValueList = Lists.newArrayList(
@@ -777,10 +801,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     tabbedPane.setSelectedIndex(4);
                     responseTabbedPanel.setSelectedIndex(2);
                     responseStatusComboBox.setSelectedItem(0);
-
                     String errorMsg = ee.getMessage();
-                    responseTextArea.setText(errorMsg);
-                    ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+                    ApplicationManager.getApplication().invokeLater(() -> {
+                        ((MyLanguageTextField) responseTextAreaPanel).setText(errorMsg);
+                        ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+                    });
                     responseStatusComboBox.setBackground(MyColor.red);
                     responseInfoParamsKeyValueList = Lists.newArrayList(
                             new ParamKeyValue("Url", request.getUrl(), 2, TypeUtil.Type.String.name()),
@@ -799,8 +824,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             sendButtonFlag = true;
             requestProgressBar.setVisible(false);
             String errorMsg = exception.getMessage();
-            responseTextArea.setText(errorMsg);
-            ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+            ApplicationManager.getApplication().invokeLater(() -> {
+                ((MyLanguageTextField) responseTextAreaPanel).setText(errorMsg);
+                ((MyLanguageTextField) prettyJsonEditorPanel).setText("");
+            });
             responseStatusComboBox.setSelectedItem(0);
             responseStatusComboBox.setBackground(MyColor.red);
             responseInfoParamsKeyValueList = Lists.newArrayList(
@@ -916,8 +943,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         CollectionComboBoxModel<String> envModel = new CollectionComboBoxModel<>(envListClone);
         envComboBox.setModel(envModel);
 
-        int idxProject = config.getProjectList().indexOf(config.getEnableProject());
-        int idxEnv = config.getEnableEnv().indexOf(config.getEnableEnv());
+        int idxProject = config.getEnableProject() == null ? -1 : config.getProjectList().indexOf(config.getEnableProject());
+        int idxEnv = config.getEnableEnv() == null ? -1 : config.getEnableEnv().indexOf(config.getEnableEnv());
         projectComboBox.setSelectedIndex(Math.max(0, idxProject + 1));
         envComboBox.setSelectedIndex(Math.max(0, idxEnv + 1));
         setDomain(config);
@@ -2962,7 +2989,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 CollectionConfiguration.CollectionDetail root = collectionConfiguration.getDetail();
                 List<CollectionConfiguration.CollectionDetail> rootChildren = root.getChildList();
                 CollectionConfiguration.CollectionDetail defaultGroup = rootChildren.get(0);
-                CollectionConfiguration.CollectionDetail group = rootChildren.stream().filter(q -> module.equals(q.getName())).findFirst().orElse(defaultGroup);
+                CollectionConfiguration.CollectionDetail group;
+                if (module == null) {
+                    group = defaultGroup;
+                } else {
+                    group = rootChildren.stream().filter(q -> module.equals(q.getName())).findFirst().orElse(defaultGroup);
+                }
                 List<CollectionConfiguration.CollectionDetail> childList = group.getChildList();
                 childList.add(collectionDetail);
                 group.setChildList(childList);
@@ -3008,111 +3040,72 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                     if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                        dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/"));
+                        dp.browse(URI.create(Constant.CN_DOC_DOMAIN));
                     } else {
-                        dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/"));
+                        dp.browse(URI.create(Constant.EN_DOC_DOMAIN));
                     }
                 }
             } catch (Exception e) {
-                LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/", e);
+                LOGGER.error("open url fail:%s", e, Constant.EN_DOC_DOMAIN);
             }
         }
     }
 
 
-    public class ToolbarSendRequestAction extends DumbAwareAction {
-
-        public ToolbarSendRequestAction() {
-            super(() -> "Send", PluginIcons.ICON_SEND);
-        }
-
-        @Override
-        public void actionPerformed(@NotNull AnActionEvent e) {
-            sendRequestEvent(false);
-        }
-
-        @Override
-        public void update(@NotNull AnActionEvent e) {
-            e.getPresentation().setEnabled(sendButtonFlag);
-        }
-
-        @Override
-        public @Nullable @NlsActions.ActionText String getTemplateText() {
-            return "Fast Request Send";
-        }
-
-        @Override
-        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
-            CustomShortcutSet altPlus = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_EQUALS, InputEvent.ALT_DOWN_MASK));
-            super.setShortcutSet(altPlus);
-        }
-
-
-    }
-
-    public class ToolbarSendAndDownloadRequestAction extends DumbAwareAction {
-
-        public ToolbarSendAndDownloadRequestAction() {
-            super(() -> "Send and Download", PluginIcons.ICON_SEND_DOWNLOAD);
-        }
-
-        @Override
-        public void actionPerformed(@NotNull AnActionEvent e) {
-            sendRequestEvent(true);
-        }
-
-        @Override
-        public void update(@NotNull AnActionEvent e) {
-            e.getPresentation().setEnabled(sendButtonFlag);
-        }
-
-        @Override
-        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
-            CustomShortcutSet altMinue = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_MINUS, InputEvent.ALT_DOWN_MASK));
-            super.setShortcutSet(altMinue);
-        }
-
-
-    }
-
-    private class SendRequestAction extends AbstractAction implements OptionAction {
-        private Action @NotNull [] myOptions = new Action[0];
-
-        public SendRequestAction() {
-            super("Send", PluginIcons.ICON_SEND);
-        }
-
-        @Override
-        public Action @NotNull [] getOptions() {
-            return myOptions;
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent actionEvent) {
-            sendRequestEvent(false);
-        }
-
-        public void setOptions(@NotNull List<? extends Action> actions) {
-            myOptions = actions.toArray(new Action[0]);
-        }
-    }
-
-    private class SendAndSaveRequestAction extends AbstractAction implements OptionAction {
-
-        public SendAndSaveRequestAction() {
-            super("Send and download");
-        }
-
-        @Override
-        public Action @NotNull [] getOptions() {
-            return new Action[0];
-        }
-
-        @Override
-        public void actionPerformed(ActionEvent actionEvent) {
-            sendRequestEvent(true);
-        }
-    }
+//    public class ToolbarSendRequestAction extends DumbAwareAction {
+//
+//        public ToolbarSendRequestAction() {
+//            super(() -> "Send", PluginIcons.ICON_SEND);
+//        }
+//
+//
+//        @Override
+//        public void actionPerformed(@NotNull AnActionEvent e) {
+//            sendRequestEvent(e,false);
+//        }
+//
+//        @Override
+//        public void update(@NotNull AnActionEvent e) {
+//            e.getPresentation().setEnabled(sendButtonFlag);
+//        }
+//
+//        @Override
+//        public @Nullable @NlsActions.ActionText String getTemplateText() {
+//            return "Fast Request Send";
+//        }
+//
+//        @Override
+//        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
+//            CustomShortcutSet altPlus = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_EQUALS, InputEvent.ALT_DOWN_MASK | InputEvent.CTRL_DOWN_MASK));
+//            super.setShortcutSet(altPlus);
+//        }
+//
+//
+//    }
+//
+//    public class ToolbarSendAndDownloadRequestAction extends DumbAwareAction {
+//
+//        public ToolbarSendAndDownloadRequestAction() {
+//            super(() -> "Send and Download", PluginIcons.ICON_SEND_DOWNLOAD);
+//        }
+//
+//        @Override
+//        public void actionPerformed(@NotNull AnActionEvent e) {
+//            sendRequestEvent(e,true);
+//        }
+//
+//        @Override
+//        public void update(@NotNull AnActionEvent e) {
+//            e.getPresentation().setEnabled(sendButtonFlag);
+//        }
+//
+//        @Override
+//        protected void setShortcutSet(@NotNull ShortcutSet shortcutSet) {
+//            CustomShortcutSet altMinue = new CustomShortcutSet(KeyStroke.getKeyStroke(KeyEvent.VK_MINUS, InputEvent.ALT_DOWN_MASK | InputEvent.CTRL_DOWN_MASK));
+//            super.setShortcutSet(altMinue);
+//        }
+//
+//    }
 
 
     private static final class CoffeeMeAction extends AnAction {
@@ -3148,12 +3141,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                                     try {
                                         if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                                            dp.browse(URI.create("https://kings.gitee.io/restful-fast-request-doc/guide/feature/#%E9%87%8D%E6%96%B0%E7%94%9F%E5%AD%98%E8%AF%B7%E6%B1%82"));
+                                            dp.browse(URI.create(Constant.CN_DOC_DOMAIN + "/guide/feature/#%E9%87%8D%E6%96%B0%E7%94%9F%E5%AD%98%E8%AF%B7%E6%B1%82"));
                                         } else {
-                                            dp.browse(URI.create("https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#regenetate"));
+                                            dp.browse(URI.create(String.format("%s/guide/getstarted/#regenetate", Constant.EN_DOC_DOMAIN)));
                                         }
                                     } catch (IOException ex) {
-                                        LOGGER.error("open url fail:https://kings1990.github.io/restful-fast-request-doc/en/guide/getstarted/#regenetate", ex);
+                                        LOGGER.error("open url fail:%s/guide/getstarted/#regenetate", ex, Constant.EN_DOC_DOMAIN);
                                     }
                                 }
                             }

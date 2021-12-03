@@ -169,6 +169,10 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         PsiParameter[] parameters = parameterList.getParameters();
         for (PsiParameter param : parameters) {
             String canonicalText = param.getType().getCanonicalText();
+            if (judgeIgnore(config.getIgnoreDataMappingList(), canonicalText)) {
+                // 不需要解析的请求参数类型
+                continue;
+            }
             PsiClass psiClass = null;
             if (CollectionUtils.isCollectionClassOrInterface(param.getType())) {
                 PsiClassReferenceType t = (PsiClassReferenceType) PsiUtil.extractIterableTypeParameter(param.getType(), false);
@@ -195,6 +199,10 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         PsiParameter[] parameters = parameterList.getParameters();
 
         for (PsiParameter param : parameters) {
+            if (judgeIgnore(config.getIgnoreDataMappingList(), param.getType().getCanonicalText())) {
+                // 不需要解析的请求参数类型。
+                continue;
+            }
             boolean parseFlag = false;
             PsiClass psiClass = PsiUtil.resolveClassInType(param.getType());
             for (Constant.SpringUrlParamConfig config : urlParamConfigArray) {
@@ -215,7 +223,8 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
             }
             if (!parseFlag) {
                 //默认无注解传参 requestParam
-                ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass, 2, param.getType());
+                ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass,
+                        Constant.SpringUrlParamConfig.REQUEST_PARAM.getParseType(), param.getType());
                 result.add(paramNameType);
             }
         }
