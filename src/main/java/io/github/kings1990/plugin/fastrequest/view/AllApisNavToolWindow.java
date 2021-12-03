@@ -3,7 +3,6 @@ package io.github.kings1990.plugin.fastrequest.view;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.CommonActionsManager;
 import com.intellij.ide.actions.searcheverywhere.PersistentSearchEverywhereContributorFilter;
-import com.intellij.ide.util.gotoByName.SearchEverywhereConfiguration;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.actionSystem.*;
@@ -31,6 +30,7 @@ import com.intellij.util.PsiNavigateUtil;
 import com.intellij.util.Query;
 import io.github.kings1990.plugin.fastrequest.action.CheckBoxFilterAction;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
+import io.github.kings1990.plugin.fastrequest.configurable.MySearchEverywhereConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ApiService;
 import io.github.kings1990.plugin.fastrequest.model.MethodType;
 import io.github.kings1990.plugin.fastrequest.view.component.tree.*;
@@ -169,7 +169,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         Map<String, Icon> iconMap = Constant.METHOD_TYPE_LIST.stream().collect(Collectors.toMap(MethodType::getName, MethodType::getIcon));
         return new PersistentSearchEverywhereContributorFilter<>(
                 methodNameList,
-                SearchEverywhereConfiguration.getInstance(),
+                MySearchEverywhereConfiguration.getInstance(),
                 methodName -> methodName, iconMap::get);
     }
 
@@ -223,13 +223,13 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
 
         Module[] modules = ModuleManager.getInstance(myProject).getModules();
         List<String> moduleList = Arrays.stream(modules).map(Module::getName).sorted().collect(Collectors.toList());
-        moduleFilter = new CheckBoxFilterAction.Filter<>(moduleList, module -> module, module -> null, SearchEverywhereConfiguration.getInstance());
+        moduleFilter = new CheckBoxFilterAction.Filter<>(moduleList, module -> module, module -> null, MySearchEverywhereConfiguration.getInstance());
         group.add(new CheckBoxFilterAction<>("Filter Module", "Filter module", AllIcons.Actions.GroupByModule, moduleFilter, this::refresh));
 
 
         List<String> methodNameList = Constant.METHOD_TYPE_LIST.stream().map(MethodType::getName).collect(Collectors.toList());
         Map<String, Icon> iconMap = Constant.METHOD_TYPE_LIST.stream().collect(Collectors.toMap(MethodType::getName, MethodType::getIcon));
-        methodTypeFilter = new CheckBoxFilterAction.Filter<>(methodNameList, methodName -> methodName, iconMap::get, SearchEverywhereConfiguration.getInstance());
+        methodTypeFilter = new CheckBoxFilterAction.Filter<>(methodNameList, methodName -> methodName, iconMap::get, MySearchEverywhereConfiguration.getInstance());
         group.add(new CheckBoxFilterAction<>("Filter Method", "Filter Method", AllIcons.Actions.GroupByMethod, methodTypeFilter, this::refresh));
 
 
