@@ -1,6 +1,7 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
 import com.alibaba.fastjson.JSONObject;
+import com.intellij.openapi.actionSystem.ActionToolbarPosition;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.CollectionListModel;
 import com.intellij.ui.ToolbarDecorator;
@@ -117,7 +118,7 @@ public class CommonConfigView extends AbstractConfigurableView {
                 }
                 refreshDataListWithProject(viewProjectList, project, true);
             }
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         projectNameListPanel = toolbarDecoratorProject.createPanel();
     }
 
@@ -165,7 +166,7 @@ public class CommonConfigView extends AbstractConfigurableView {
                 }
                 refreshDataListWithEnv(viewEnvList, env, true);
             }
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         envListPanel = toolbarDecoratorEnv.createPanel();
     }
 

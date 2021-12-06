@@ -1253,7 +1253,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             saveAndChangeHeader();
             switchHeaderParam();
 //            refreshTable(headerTable);
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         toolbarDecorator.addExtraAction(new ToolbarDecorator.ElementActionButton(MyResourceBundleUtil.getKey("header.group.manage"), AllIcons.Actions.ListChanges) {
             @Override
             public void actionPerformed(@NotNull AnActionEvent e) {
@@ -1374,7 +1374,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //urlParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlParamsKeyValueList));
             resizeTable(urlParamsTable);
             changeUrlParamsText();
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         urlParamsTablePanel = toolbarDecorator.createPanel();
     }
 
@@ -1426,7 +1426,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
             resizeTable(pathParamsTable);
             changeUrl();
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         pathParamsPanel = toolbarDecorator.createPanel();
     }
 
@@ -1480,7 +1480,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //urlEncodedTable.setModel(new ListTableModel<>(getPathColumnInfo(), urlEncodedKeyValueList));
             resizeTable(urlEncodedTable);
             changeUrlEncodedParamsText();
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         urlEncodedTablePanel = toolbarDecorator.createPanel();
     }
 
@@ -1527,7 +1527,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             refreshTable(multipartTable);
             //multipartTable.setModel(new ListTableModel<>(getPathColumnInfo(), multipartKeyValueList));
             resizeTable(multipartTable);
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         multipartTablePanel = toolbarDecorator.createPanel();
     }
 

@@ -3,6 +3,7 @@ package io.github.kings1990.plugin.fastrequest.view.sub;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
+import com.intellij.openapi.actionSystem.ActionToolbarPosition;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.ToolbarDecorator;
@@ -174,6 +175,7 @@ public class DataMappingConfigView extends AbstractConfigurableView {
             table.setModel(new ListTableModel<>(getColumnInfo(), viewCustomDataMappingList));
             setCustomTable(table);
         });
+        toolbarDecorator.setToolbarPosition(ActionToolbarPosition.TOP);
         customDataMappingPanel = toolbarDecorator.createPanel();
         setCustomTable(table);
     }

@@ -451,6 +451,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 return true;
             }
         });
+        toolbarDecorator.setToolbarPosition(ActionToolbarPosition.TOP);
         collectionPanel = toolbarDecorator.createPanel();
     }
 
