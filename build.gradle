@@ -26,13 +26,19 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     plugins = ['java', "com.intellij.properties", "com.intellij.java-i18n"]
-    version '2020.3.4'//2021.3、2021.1、2020.3.4
+    version '2021.3'//2021.3、2021.1、2020.3.4
     updateSinceUntilBuild false
     downloadSources true
 }
 patchPluginXml {
     changeNotes """
 
+    <h3>v2.0.8.1</h3>
+    <ul>
+        <li>Fix conflicting error when searchEveryWhere(修复searchEveryWhere冲突警告)</li>
+        <li>Adjust position of toolbar action button(调整低版本idea工具栏操作按钮至工具栏顶部位置)</li>
+    </ul>
+    
     <h3>v2.0.8</h3>
     <ul>
         <li>Fix npe when first add project/env(修复初次添加项目或环境npe)</li>
