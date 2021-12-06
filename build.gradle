@@ -15,10 +15,8 @@ repositories {
 }
 
 dependencies {
-    compile 'org.projectlombok:lombok:1.18.20'
     compile 'com.google.guava:guava:30.1.1-jre'
     compile 'commons-beanutils:commons-beanutils:20030211.134440'
-    compile 'org.springframework:spring-web:5.3.9'
     compile 'com.alibaba:fastjson:1.2.78'
     compile 'cn.hutool:hutool-all:5.7.9'
 }
