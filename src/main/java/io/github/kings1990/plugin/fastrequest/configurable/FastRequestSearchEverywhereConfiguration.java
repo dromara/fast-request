@@ -8,11 +8,11 @@ import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.components.StoragePathMacros;
 
 @Service
-@State(name = "SearchEverywhereConfiguration", storages = @Storage(StoragePathMacros.CACHE_FILE))
-public final class MySearchEverywhereConfiguration extends ChooseByNameFilterConfiguration<String> {
+@State(name = "FastRequestSearchEverywhereConfiguration", storages = @Storage(StoragePathMacros.CACHE_FILE))
+public final class FastRequestSearchEverywhereConfiguration extends ChooseByNameFilterConfiguration<String> {
 
-    public static MySearchEverywhereConfiguration getInstance() {
-        return ApplicationManager.getApplication().getService(MySearchEverywhereConfiguration.class);
+    public static FastRequestSearchEverywhereConfiguration getInstance() {
+        return ApplicationManager.getApplication().getService(FastRequestSearchEverywhereConfiguration.class);
     }
 
     @Override

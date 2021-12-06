@@ -3,6 +3,7 @@ package io.github.kings1990.plugin.fastrequest.view.sub;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
+import com.intellij.openapi.actionSystem.ActionToolbarPosition;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.ui.ComboBox;
 import com.intellij.openapi.ui.Messages;
@@ -134,7 +135,7 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
         }).setRemoveActionUpdater(e -> {
             int selectedIndex = ignoreDateMappingJbList.getSelectedIndex();
             return selectedIndex > 2;
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
 
 
         BorderLayoutPanel inlineCustomerDataMapping = JBUI.Panels.simplePanel().addToTop(UI.PanelFactory.panel(customDataMappingPanel).withLabel(MyResourceBundleUtil.getKey("CustomerDataMapping")).moveLabelOnTop().createPanel());
@@ -235,7 +236,8 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
             table.setModel(new ListTableModel<>(getColumnInfo(), viewCustomDataMappingList));
             setCustomTable(table);
         });
-        toolbarDecorator.setPreferredSize(new Dimension(-1,150));
+        toolbarDecorator.setToolbarPosition(ActionToolbarPosition.TOP);
+        toolbarDecorator.setPreferredSize(new Dimension(-1, 150));
         customDataMappingPanel = toolbarDecorator.createPanel();
         setCustomTable(table);
     }

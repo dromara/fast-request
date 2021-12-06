@@ -2,6 +2,7 @@ package io.github.kings1990.plugin.fastrequest.view.sub;
 
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
+import com.intellij.openapi.actionSystem.ActionToolbarPosition;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.ToolbarDecorator;
 import com.intellij.ui.table.JBTable;
@@ -77,7 +78,7 @@ public class OtherConfigView extends AbstractConfigurableView {
             viewUrlReplaceMappingList.remove(selectedRow);
             table.setModel(new ListTableModel<>(getColumnInfo(), viewUrlReplaceMappingList));
             setUrlReplaceTable(table);
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         JPanel tablePanel = toolbarDecorator.createPanel();
         return JBUI.Panels.simplePanel(UI.PanelFactory.panel(tablePanel)
                 .withLabel(MyResourceBundleUtil.getKey("UrlReplaceConfig")).moveLabelOnTop()
