@@ -35,6 +35,7 @@ patchPluginXml {
     <ul>
         <li>Fix conflicting error when searchEveryWhere(修复searchEveryWhere冲突警告)</li>
         <li>Adjust position of toolbar action button(调整低版本idea工具栏操作按钮至工具栏顶部位置)</li>
+        <li>remove unnecessary dependence,size 11.1M->5.9M(移除多余依赖,插件从11.1M降至5.9M)</li>
     </ul>
     
     <h3>v2.0.8</h3>

@@ -1,5 +1,10 @@
 # What's new
 
+## v2.0.8.1
+* Fix conflicting error when searchEveryWhere
+* Adjust position of toolbar action button
+* remove unnecessary dependence,size 11.1M->5.9M
+
 ## v2.0.8
 
 * Fix npe when first add project/env
