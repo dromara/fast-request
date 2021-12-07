@@ -1,6 +1,6 @@
 const { config } = require("vuepress-theme-hope");
 module.exports = config({
-    plugins: ['@vuepress/nprogress',["add-this",{ pubid: "ra-617a48e0d1826cc4" }]],
+    plugins: ['@vuepress/nprogress'],
     base : '/fast-request/',
     title: 'Restful Fast Request',
     description: 'Intellij Restful Fast Request',
