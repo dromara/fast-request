@@ -1344,7 +1344,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) responseTable.getTableModel();
             CustomNode node = (CustomNode) myModel.getRowValue(selectedRow);
             return node != null && node.isLeaf() && selectedRow != 0;
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         jsonResponsePanel = toolbarDecorator.createPanel();
     }
 
@@ -2724,7 +2724,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
-                if (column == 0) {
+                if (column == 0 && !headerParamsKeyValueList.isEmpty()) {
                     DataMapping dataMapping = headerParamsKeyValueList.get(row);
                     boolean enabled = dataMapping.getEnabled();
                     return new JCheckBox("", enabled);
@@ -2734,7 +2734,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public TableCellEditor getCellEditor(int row, int column) {
-                if (column == 0) {
+                if (column == 0 && !headerParamsKeyValueList.isEmpty()) {
                     boolean enable = (boolean) getValueAt(row, column);
                     return new DefaultCellEditor(new JCheckBox("", enable));
                 }
@@ -3262,12 +3262,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             LinkedHashMap<String, LinkedHashMap<String, String>> envMap = Maps.newLinkedHashMap();
             envMap.put(enableEnv, keyValueMap);
             headerGroupList.add(new HeaderGroup(enableProject, envMap));
+            config.setHeaderGroupList(headerGroupList);
             return;
         }
         if ((headerGroup = headerGroupList.stream().filter(q -> enableProject.equals(q.getProjectName())).findFirst().orElse(null)) == null) {
             LinkedHashMap<String, LinkedHashMap<String, String>> envMap = Maps.newLinkedHashMap();
             envMap.put(enableEnv, keyValueMap);
             headerGroupList.add(new HeaderGroup(enableProject, envMap));
+            config.setHeaderGroupList(headerGroupList);
             return;
         }
         Map<String, LinkedHashMap<String, String>> envMap = headerGroup.getEnvMap();
