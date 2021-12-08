@@ -1,6 +1,14 @@
 # 最新变化
 
+::: tip 2021年度OSC中国最佳开源项目评选  
+《2021年度OSC中国最佳开源项目评选》投票开始了，希望大家可以为Restful Fast Request投上一票，在此非常感谢！ ❤️❤️❤️
+
+地址：[https://www.oschina.net/project/top_cn_2021/?id=589](https://www.oschina.net/project/top_cn_2021/?id=589)
+
+:::
+
 ## v2.0.8.1
+
 * 修复searchEveryWhere冲突警告
 * 调整低版本idea工具栏操作按钮至工具栏顶部位置
 * 移除多余依赖,插件从11.1M降至5.9M
