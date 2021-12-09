@@ -46,7 +46,9 @@ JAX-RS
 
 快速加入钉钉群:**31690894**(推荐)
 
-[![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
+![](../.vuepress/public/img/dingding.jpg)
+
+[comment]: <> ([![QQ群]&#40;https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ&#41;]&#40;https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO&#41;)
 
 ## 支持
 
