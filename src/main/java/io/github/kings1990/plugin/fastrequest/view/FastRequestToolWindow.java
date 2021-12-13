@@ -82,6 +82,7 @@ import io.github.kings1990.plugin.fastrequest.action.ToolbarSendRequestAction;
 import io.github.kings1990.plugin.fastrequest.config.Constant;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
+import io.github.kings1990.plugin.fastrequest.config.FastRequestCurrentProjectConfigComponent;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.*;
 import io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService;
@@ -348,12 +349,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
+        FastRequestCurrentProjectConfiguration projectConfig = FastRequestCurrentProjectConfigComponent.getInstance(project).getState();
+        assert projectConfig != null;
 
         warnLabel1.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
         manageConfigButton.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
-        warnLabel2.setVisible(StringUtils.isBlank(config.getDomain()));
-
-
+        warnLabel2.setVisible(StringUtils.isBlank(getActiveDomain()));
 
 
         //method 颜色渲染
@@ -384,6 +385,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         CollectionComboBoxModel<Integer> responseStatusComboBoxModel = new CollectionComboBoxModel<>(values);
         responseStatusComboBox.setModel(responseStatusComboBoxModel);
 
+        String activeEnv = getActiveEnv();
+        String activeProject = getActiveProject();
 
         //env下拉列表
         ArrayList<String> envListClone = Lists.newArrayList(NO_ENV);
@@ -415,7 +418,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     return;
                 }
                 if ("Add Env".equals(envComboBox.getSelectedItem())) {
-                    int idx = config.getEnvList().indexOf(config.getEnableEnv());
+                    int idx = config.getEnvList().indexOf(activeEnv);
                     envComboBox.setSelectedIndex(Math.max(0, idx + 1));
                     envComboBox.hidePopup();
                     ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Restful Fast Request");
@@ -429,26 +432,31 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     if (envList.isEmpty()) {
                         //env被删除完了 补全域名开关自动关闭
                         config.setEnableEnv(null);
+                        projectConfig.setEnableEnv(null);
                         config.setDomain(StringUtils.EMPTY);
+                        projectConfig.setDomain(StringUtils.EMPTY);
                         envModel.setSelectedItem(NO_ENV);
                     } else {
                         if (NO_ENV.equals(env)) {
                             config.setEnableEnv(null);
+                            projectConfig.setEnableEnv(null);
                             envModel.setSelectedItem(NO_ENV);
                         } else {
                             config.setEnableEnv(envList.get(0));
-                            envModel.setSelectedItem(config.getEnableEnv());
+                            projectConfig.setEnableEnv(envList.get(0));
+                            envModel.setSelectedItem(activeEnv);
                         }
                     }
                 } else {
                     config.setEnableEnv(env);
+                    projectConfig.setEnableEnv(env);
                 }
                 switchHeaderParam();
                 //根据当前的env和project设置url
                 setDomain(config);
             }
         });
-        envModel.setSelectedItem(config.getEnableEnv() == null ? NO_ENV : config.getEnableEnv());
+        envModel.setSelectedItem(StringUtils.isBlank(activeEnv) ? NO_ENV : activeEnv);
 
         //project下拉列表
         ArrayList<String> projectListClone = Lists.newArrayList(NO_PROJECT);
@@ -480,7 +488,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     return;
                 }
                 if ("Add Project".equals(projectComboBox.getSelectedItem())) {
-                    int idx = config.getProjectList().indexOf(config.getEnableProject());
+                    int idx = config.getProjectList().indexOf(activeProject);
                     projectComboBox.setSelectedIndex(Math.max(0, idx + 1));
                     projectComboBox.hidePopup();
                     ShowSettingsUtil.getInstance().showSettingsDialog(myProject, "Restful Fast Request");
@@ -493,26 +501,31 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     if (projectList.isEmpty()) {
                         //project被删除完了 补全域名开关自动关闭
                         config.setEnableProject(null);
+                        projectConfig.setEnableProject(null);
                         config.setDomain(StringUtils.EMPTY);
+                        projectConfig.setDomain(null);
                         projectModel.setSelectedItem(NO_PROJECT);
                     } else {
                         if (NO_PROJECT.equals(projectSelect)) {
                             config.setEnableProject(null);
+                            projectConfig.setEnableProject(null);
                             projectModel.setSelectedItem(NO_PROJECT);
                         } else {
                             config.setEnableProject(projectList.get(0));
-                            projectModel.setSelectedItem(config.getEnableProject());
+                            projectConfig.setEnableProject(projectList.get(0));
+                            projectModel.setSelectedItem(activeProject);
                         }
                     }
                 } else {
                     config.setEnableProject(projectSelect);
+                    projectConfig.setEnableProject(projectSelect);
                 }
                 switchHeaderParam();
                 //根据当前的env和project设置url
                 setDomain(config);
             }
         });
-        projectModel.setSelectedItem(config.getEnableProject() == null ? NO_PROJECT : config.getEnableProject());
+        projectModel.setSelectedItem(StringUtils.isBlank(activeProject) ? NO_PROJECT : activeProject);
 
 
         //更新域名
@@ -607,7 +620,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
         String methodType = (String) methodTypeComboBox.getSelectedItem();
-        String domain = config.getDomain();
+        String domain = getActiveDomain();
         String sendUrl = urlTextField.getText();
         List<DataMapping> headerList = headerParamsKeyValueList;
         String urlParam = urlParamsTextArea.getText();
@@ -909,15 +922,20 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         warnLabel1.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
         manageConfigButton.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
 
-        String activeEnv = config.getEnableEnv();
-        String activeProject = config.getEnableProject();
+        FastRequestCurrentProjectConfiguration projectConfig = FastRequestCurrentProjectConfigComponent.getInstance(myProject).getState();
+        assert projectConfig != null;
+
+        String activeEnv = getActiveEnv();
+        String activeProject = getActiveProject();
         if (StringUtils.isEmpty(activeEnv)) {
             config.setDomain(StringUtils.EMPTY);
+            projectConfig.setDomain(StringUtils.EMPTY);
             warnLabel2.setVisible(true);
             return;
         }
         if (StringUtils.isEmpty(activeProject)) {
             config.setDomain(StringUtils.EMPTY);
+            projectConfig.setDomain(StringUtils.EMPTY);
             warnLabel2.setVisible(true);
             return;
         }
@@ -926,10 +944,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         String domain = config.getDataList().stream().filter(n -> activeProject.equals(n.getName())).findFirst().orElse(defaultNameGroup)
                 .getHostGroup().stream().filter(h -> activeEnv.equals(h.getEnv())).findFirst().orElse(defaultHostGroup).getUrl();
         config.setDomain(domain);
+        projectConfig.setDomain(domain);
         changeUrl();
 
 
     }
+
 
     /**
      * message事件:修改env和project动态修改ToolWindow中的内容
@@ -941,9 +961,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
 
+        String activeEnv = getActiveEnv();
+        String activeProject = getActiveProject();
+
         warnLabel1.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
         manageConfigButton.setVisible(config.getEnvList().isEmpty() || config.getProjectList().isEmpty());
-        warnLabel2.setVisible(StringUtils.isBlank(config.getDomain()));
+        warnLabel2.setVisible(StringUtils.isBlank(getActiveDomain()));
 
 
         ArrayList<String> projectListClone = Lists.newArrayList(NO_PROJECT);
@@ -959,8 +982,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         CollectionComboBoxModel<String> envModel = new CollectionComboBoxModel<>(envListClone);
         envComboBox.setModel(envModel);
 
-        int idxProject = config.getEnableProject() == null ? -1 : config.getProjectList().indexOf(config.getEnableProject());
-        int idxEnv = config.getEnableEnv() == null ? -1 : config.getEnableEnv().indexOf(config.getEnableEnv());
+        int idxProject = StringUtils.isBlank(activeProject) ? -1 : config.getProjectList().indexOf(activeProject);
+        int idxEnv = StringUtils.isBlank(activeEnv) ? -1 : config.getEnvList().indexOf(activeEnv);
         projectComboBox.setSelectedIndex(Math.max(0, idxProject + 1));
         envComboBox.setSelectedIndex(Math.max(0, idxEnv + 1));
         setDomain(config);
@@ -1218,7 +1241,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         url = ((url.startsWith("/") || "".equals(url)) ? "" : "/") + url;
         urlTextField.setText(url);
         paramGroup.setUrl(url);
-        warnLabel2.setVisible(StringUtils.isBlank(config.getDomain()));
+        warnLabel2.setVisible(StringUtils.isBlank(getActiveDomain()));
     }
 
     private String buildPathParamUrl(String url) {
@@ -1275,11 +1298,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             public void actionPerformed(@NotNull AnActionEvent e) {
                 int idx = -1;
                 List<HeaderGroup> headerGroupList = config.getHeaderGroupList();
-                HeaderGroup currentHeaderGroup = headerGroupList.stream().filter(q -> config.getEnableProject().equals(q.getProjectName())).findFirst().orElse(null);
+                HeaderGroup currentHeaderGroup = headerGroupList.stream().filter(q -> getActiveProject().equals(q.getProjectName())).findFirst().orElse(null);
                 if (currentHeaderGroup != null) {
                     idx = headerGroupList.indexOf(currentHeaderGroup);
                 }
-                HeaderGroupView dialog = new HeaderGroupView(myProject, currentHeaderGroup, config.getEnableProject(), config.getEnableEnv(), config.getEnvList());
+                HeaderGroupView dialog = new HeaderGroupView(myProject, currentHeaderGroup, getActiveProject(), getActiveEnv(), config.getEnvList());
                 if (dialog.showAndGet()) {
                     HeaderGroup viewHeaderGroup = dialog.changeAndGet();
                     if (idx == -1) {
@@ -1344,7 +1367,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) responseTable.getTableModel();
             CustomNode node = (CustomNode) myModel.getRowValue(selectedRow);
             return node != null && node.isLeaf() && selectedRow != 0;
-        });
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
         jsonResponsePanel = toolbarDecorator.createPanel();
     }
 
@@ -2724,7 +2747,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public @NotNull Component prepareRenderer(@NotNull TableCellRenderer renderer, int row, int column) {
-                if (column == 0) {
+                if (column == 0 && !headerParamsKeyValueList.isEmpty()) {
                     DataMapping dataMapping = headerParamsKeyValueList.get(row);
                     boolean enabled = dataMapping.getEnabled();
                     return new JCheckBox("", enabled);
@@ -2734,7 +2757,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public TableCellEditor getCellEditor(int row, int column) {
-                if (column == 0) {
+                if (column == 0 && !headerParamsKeyValueList.isEmpty()) {
                     boolean enable = (boolean) getValueAt(row, column);
                     return new DefaultCellEditor(new JCheckBox("", enable));
                 }
@@ -2957,7 +2980,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
             assert config != null;
             ParamGroup paramGroup = config.getParamGroup();
-            if (config.getDomain().isBlank()) {
+            if (getActiveDomain().isBlank()) {
                 Messages.showMessageDialog(MyResourceBundleUtil.getKey("msg_currentDomain_null"), "Error", Messages.getInformationIcon());
                 return;
             }
@@ -2980,9 +3003,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 collectionDetail.setId(mid);
             }
             ParamGroupCollection paramGroupCollection = new ParamGroupCollection();
-            collectionDetail.setEnableEnv(config.getEnableEnv());
-            collectionDetail.setEnableProject(config.getEnableProject());
-            collectionDetail.setDomain(config.getDomain());
+            collectionDetail.setEnableEnv(getActiveEnv());
+            collectionDetail.setEnableProject(getActiveProject());
+            collectionDetail.setDomain(getActiveDomain());
             collectionDetail.setName(StringUtils.isBlank(paramGroup.getMethodDescription()) ? "New Request" : paramGroup.getMethodDescription());
             collectionDetail.setType(2);
             paramGroupCollection.setOriginUrl(paramGroup.getOriginUrl());
@@ -3206,8 +3229,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             headerParamsKeyValueList = new ArrayList<>();
             return;
         }
-        String enableEnv = config.getEnableEnv();
-        String enableProject = config.getEnableProject();
+        String enableEnv = getActiveEnv();
+        String enableProject = getActiveProject();
         if (StringUtils.isBlank(enableEnv) || StringUtils.isBlank(enableProject)) {
             headerParamsKeyValueList = new ArrayList<>();
             return;
@@ -3244,11 +3267,47 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         headerTable.getColumnModel().getColumn(0).setMaxWidth(30);
     }
 
+    private String getActiveEnv() {
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+
+        FastRequestCurrentProjectConfiguration projectConfig = FastRequestCurrentProjectConfigComponent.getInstance(myProject).getState();
+        assert projectConfig != null;
+
+        String projectEnableEnv = projectConfig.getEnableEnv();
+        String globalEnableEnv = config.getEnableEnv();
+        return StringUtils.isNoneBlank(projectEnableEnv) ? projectEnableEnv : globalEnableEnv;
+    }
+
+    private String getActiveDomain() {
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+
+        FastRequestCurrentProjectConfiguration projectConfig = FastRequestCurrentProjectConfigComponent.getInstance(myProject).getState();
+        assert projectConfig != null;
+
+        String projectEnableDomain = projectConfig.getDomain();
+        String globalEnableDomain = config.getDomain();
+        return StringUtils.isNoneBlank(projectEnableDomain) ? projectEnableDomain : globalEnableDomain;
+    }
+
+    private String getActiveProject() {
+        FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+        assert config != null;
+
+        FastRequestCurrentProjectConfiguration projectConfig = FastRequestCurrentProjectConfigComponent.getInstance(myProject).getState();
+        assert projectConfig != null;
+
+        String projectEnableProject = projectConfig.getEnableProject();
+        String globalEnableProject = config.getEnableProject();
+        return StringUtils.isNoneBlank(projectEnableProject) ? projectEnableProject : globalEnableProject;
+    }
+
     private void saveAndChangeHeader() {
         FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
         assert config != null;
-        String enableEnv = config.getEnableEnv();
-        String enableProject = config.getEnableProject();
+        String enableEnv = getActiveEnv();
+        String enableProject = getActiveProject();
         if (StringUtils.isBlank(enableEnv) || StringUtils.isBlank(enableProject)) {
             return;
         }
@@ -3262,12 +3321,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             LinkedHashMap<String, LinkedHashMap<String, String>> envMap = Maps.newLinkedHashMap();
             envMap.put(enableEnv, keyValueMap);
             headerGroupList.add(new HeaderGroup(enableProject, envMap));
+            config.setHeaderGroupList(headerGroupList);
             return;
         }
         if ((headerGroup = headerGroupList.stream().filter(q -> enableProject.equals(q.getProjectName())).findFirst().orElse(null)) == null) {
             LinkedHashMap<String, LinkedHashMap<String, String>> envMap = Maps.newLinkedHashMap();
             envMap.put(enableEnv, keyValueMap);
             headerGroupList.add(new HeaderGroup(enableProject, envMap));
+            config.setHeaderGroupList(headerGroupList);
             return;
         }
         Map<String, LinkedHashMap<String, String>> envMap = headerGroup.getEnvMap();
