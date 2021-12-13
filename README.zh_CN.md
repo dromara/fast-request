@@ -63,9 +63,15 @@
 * [中文文档](https://plugins.sheng90.wang/fast-request)
 * [English Document](https://kings1990.github.io/fast-request/en/)
 
-# QQ 群:754131222
+# 钉钉群:31690894
 
-有问题也可以在群里交流
+更快速得回复问题,可以加入钉钉群聊,同时也可以一起探讨研究技术问题
+
+快速加入钉钉群:**31690894**(推荐)
+
+![](./screenshot/dingding.jpg)
+
+[comment]: <> ([![QQ群]&#40;https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ&#41;]&#40;https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO&#41;)
 
 ## 安装
 

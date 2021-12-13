@@ -1,6 +1,27 @@
 # What's new
 
+## v2.0.9
+
+* Fix "Slow operations are prohibited on EDT" for 2021.3+
+* Fix add headers from response
+* Add project-level configuration,env and project will not change while switch project
+* Add format action icon to textEditor
+
+:::tip Add headers from response
+
+```
+if your api need token in header,you can do like this to add params to header from response
+```
+
+![format](../../.vuepress/public/img/quickAddHeaders.gif)
+:::
+
+:::tip Add format action icon to textEditor
+![format](../../.vuepress/public/img/format.gif)
+:::
+
 ## v2.0.8.1
+
 * Fix conflicting error when searchEveryWhere
 * Adjust position of toolbar action button
 * remove unnecessary dependence,size 11.1M->5.9M
