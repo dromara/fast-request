@@ -17,7 +17,6 @@
 package io.github.kings1990.plugin.fastrequest.editor;
 
 import com.intellij.openapi.Disposable;
-import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.editor.toolbar.floating.AbstractFloatingToolbarProvider;
 import com.intellij.openapi.editor.toolbar.floating.FloatingToolbarComponent;
 import org.jetbrains.annotations.NotNull;
@@ -28,15 +27,19 @@ public class FastRequestFloatingToolbarProvider extends AbstractFloatingToolbarP
         super("fastRequest.editor.floatGroup");
     }
 
+    public int getPriority() {
+        return 0;
+    }
+
 
     @Override
-    public void register(@NotNull DataContext dataContext, @NotNull FloatingToolbarComponent component, @NotNull Disposable parentDisposable) {
-        super.register(dataContext, component, parentDisposable);
-        component.scheduleShow();
+    public void register(@NotNull FloatingToolbarComponent toolbar, @NotNull Disposable parentDisposable) {
+        super.register(toolbar, parentDisposable);
+        toolbar.scheduleShow();
     }
 
     @Override
     public boolean getAutoHideable() {
-        return false;
+        return true;
     }
 }
