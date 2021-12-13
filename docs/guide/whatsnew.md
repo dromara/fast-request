@@ -1,6 +1,27 @@
 # 最新变化
 
+# v2.0.9
+
+* 2021.3+版本修复"Slow operations are prohibited on EDT"
+* 修复快速从response添加Headers
+* 添加项目级别的配置,切换项目env和project不受变化
+* 文本编辑器添加了快捷格式化按钮
+
+:::tip 从response添加Headers
+
+```
+如果你的api需要再header里面塞入token,你可以像这样子从响应里面快速加参数塞入headers
+```
+
+![format](../.vuepress/public/img/quickAddHeaders.gif)
+:::
+
+:::tip 文本编辑器添加了快捷格式化按钮
+![format](../.vuepress/public/img/format.gif)
+:::
+
 ## v2.0.8.1
+
 * 修复searchEveryWhere冲突警告
 * 调整低版本idea工具栏操作按钮至工具栏顶部位置
 * 移除多余依赖,插件从11.1M降至5.9M

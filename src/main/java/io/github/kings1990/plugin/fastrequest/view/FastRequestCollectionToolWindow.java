@@ -23,6 +23,7 @@ import com.intellij.ide.HelpTooltip;
 import com.intellij.ide.plugins.newui.ListPluginComponent;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.IndexNotReadyException;
 import com.intellij.openapi.project.Project;
@@ -433,7 +434,6 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         toolbarDecorator.setRemoveAction(e -> {
             int i = Messages.showOkCancelDialog("Delete it?", "Delete", "Delete", "Cancel", Messages.getInformationIcon());
             if (i == 0) {
-                CollectionCustomNode root = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(0);
                 int selectedRow = collectionTable.getSelectedRow();
                 CollectionCustomNode node = (CollectionCustomNode) ((ListTreeTableModelOnColumns) collectionTable.getTableModel()).getRowValue(selectedRow);
                 CollectionCustomNode parent = (CollectionCustomNode) node.getParent();
@@ -746,48 +746,67 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     }
 
     private void load(CollectionCustomNode node) {
-        boolean flag = false;
-        //定位方法
-        CollectionConfiguration collectionConfiguration = FastRequestCollectionComponent.getInstance(myProject).getState();
-        assert collectionConfiguration != null;
-        CollectionConfiguration.CollectionDetail detail = filterById(node.getId(), collectionConfiguration.getDetail());
-        if (detail == null) {
-            return;
-        }
-        ParamGroupCollection paramGroup = detail.getParamGroup();
-        String className = paramGroup.getClassName();
-        String methodName = paramGroup.getMethod();
-        PsiClass psiClass = null;
-        try {
-            psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
-        } catch (IndexNotReadyException e) {
-            NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Index should be ready first", MessageType.INFO).notify(myProject);
-        }
-        if (psiClass != null) {
-            PsiElement[] psiClassMethodsByName = psiClass.findMethodsByName(methodName, true);
-            if (psiClassMethodsByName.length > 0) {
-                PsiNavigateUtil.navigate(psiClassMethodsByName[0]);
-                flag = true;
-            } else {
-                NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Method not found", MessageType.INFO).notify(myProject);
-            }
-        }
-        loadAncChangeTab(flag, detail);
+        ApplicationManager.getApplication().executeOnPooledThread(() -> {
+            ApplicationManager.getApplication().runReadAction(() -> {
+                boolean flag = false;
+                //定位方法
+                CollectionConfiguration collectionConfiguration = FastRequestCollectionComponent.getInstance(myProject).getState();
+                assert collectionConfiguration != null;
+                CollectionConfiguration.CollectionDetail detail = filterById(node.getId(), collectionConfiguration.getDetail());
+                if (detail == null) {
+                    return;
+                }
+                ParamGroupCollection paramGroup = detail.getParamGroup();
+                String className = paramGroup.getClassName();
+                String methodName = paramGroup.getMethod();
+                PsiClass psiClass = null;
+                try {
+                    psiClass = JavaPsiFacade.getInstance(myProject).findClass(className, GlobalSearchScope.projectScope(myProject));
+                } catch (IndexNotReadyException e) {
+                    NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Index should be ready first", MessageType.INFO).notify(myProject);
+                }
+                //used to navigate
+                if (psiClass != null) {
+                    PsiElement[] psiClassMethodsByName = psiClass.findMethodsByName(methodName, true);
+                    if (psiClassMethodsByName.length > 0) {
+                        ApplicationManager.getApplication().invokeLater(() -> {
+                            PsiNavigateUtil.navigate(psiClassMethodsByName[0]);
+                        });
+                        flag = true;
+                    } else {
+                        NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Method not found", MessageType.INFO).notify(myProject);
+                    }
+                }
+                loadAncChangeTab(flag, detail);
+            });
+        });
+
+//
+//        Task.Backgroundable task = new Task.Backgroundable(myProject, "") {
+//≤
+//            @Override
+//            public void run(@NotNull ProgressIndicator indicator) {
+//
+//            }
+//        };
+//        ProgressManager.getInstance().runProcessWithProgressAsynchronously(task, new BackgroundableProcessIndicator(task));
     }
 
     private void loadAncChangeTab(boolean flag, CollectionConfiguration.CollectionDetail detail) {
         //切换tab
         if (flag) {
             //change data
-            ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(myProject).getToolWindow("Fast Request");
-            Content content = fastRequestToolWindow.getContentManager().getContent(0);
-            assert content != null;
-            fastRequestToolWindow.getContentManager().setSelectedContent(content);
+            ApplicationManager.getApplication().invokeLater(() -> {
+                ToolWindow fastRequestToolWindow = ToolWindowManager.getInstance(myProject).getToolWindow("Fast Request");
+                Content content = fastRequestToolWindow.getContentManager().getContent(0);
+                assert content != null;
+                fastRequestToolWindow.getContentManager().setSelectedContent(content);
 
-            MessageBus messageBus = myProject.getMessageBus();
-            messageBus.connect();
-            ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.LOAD_REQUEST);
-            configChangeNotifier.loadRequest(detail, myProject.getName());
+                MessageBus messageBus = myProject.getMessageBus();
+                messageBus.connect();
+                ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.LOAD_REQUEST);
+                configChangeNotifier.loadRequest(detail, myProject.getName());
+            });
         }
     }
 
