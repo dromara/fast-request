@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class FormatAction extends AnAction {
     public FormatAction() {
-        super("Format", "Format", AllIcons.Nodes.BookmarkGroup);
+        super("Format", "Format", AllIcons.Actions.PrettyPrint);
     }
 
 
