@@ -18,6 +18,7 @@ package io.github.kings1990.plugin.fastrequest.view;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.net.url.UrlQuery;
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.HttpRequest;
@@ -716,25 +717,32 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                         }
                     }, HashMap::putAll);
 
-            Map<String, Object> formParam = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue, (existing, replacement) -> existing));
+            Map<String, Object> urlParam = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue, (existing, replacement) -> existing));
             String jsonParam = ((LanguageTextField) jsonParamsTextArea).getText();
             StringBuilder urlEncodedParam = new StringBuilder("");
             urlEncodedKeyValueList.stream().filter(ParamKeyValue::getEnabled).forEach(q -> {
                 urlEncodedParam.append(q.getKey()).append("=").append(q.getValue()).append("&");
             });
 
+            boolean formFlag = true;
             //json优先
             if (StringUtils.isNotEmpty(urlEncodedParam)) {
                 request.body(StringUtils.removeEnd(urlEncodedParam.toString(), "&"));
+                formFlag = false;
             }
             if (StringUtils.isNotEmpty(jsonParam)) {
                 request.body(JSON.toJSONString(JSON.parse(jsonParam)));
+                formFlag = false;
             }
 
-            if (!formParam.isEmpty()) {
-                request.form(formParam);
+            if (!urlParam.isEmpty()) {
+                if (!"GET".equals(methodType)) {
+                    //解决非get请求hutool不会拼装url params(参考HttpRequest.execute()方法中的urlWithParamIfGet)
+                    String queryParam = UrlQuery.of(urlParam).toString();
+                    request.setUrl(request.getUrl() + "?" + queryParam);
+                }
             }
-            if (!multipartFormParam.isEmpty()) {
+            if (!multipartFormParam.isEmpty() && formFlag) {
                 request.form(multipartFormParam);
             }
             FileSaverDialog fd = null;
@@ -1172,12 +1180,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             urlEncodedTextArea.setText("");
             ((LanguageTextField) jsonParamsTextArea).setText("");
         } else {
-            //body param
+            //body param(form和body只能存在其一)
             if (!bodyParamMap.isEmpty()) {
                 //json
                 tabbedPane.setSelectedIndex(3);
                 bodyTabbedPane.setSelectedIndex(0);
                 ((LanguageTextField) jsonParamsTextArea).setText(bodyParamMapToJson());
+                //body去除form参数
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
             } else {
@@ -1197,7 +1206,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     urlEncodedTabbedPane.setSelectedIndex(0);
                     urlEncodedKeyValueList = conventMapToList(requestParamMap);
                 }
-                //json设置为空
+                //json设置为空(form去除body参数)
                 ((LanguageTextField) jsonParamsTextArea).setText("");
                 //如果是非get请求则request Param为空转到url Encoded参数下
                 urlParamsKeyValueList = new ArrayList<>();

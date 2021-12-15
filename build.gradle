@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'io.github.kings1990'
-version '2.0.9'
+version '2.1.0'
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
@@ -31,6 +31,12 @@ intellij {
 patchPluginXml {
     changeNotes """
 
+    <h3>v2.1.0</h3>
+    <ul>
+        <li>Fix post api parse error when using @RequestBody and @RequestParam(修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常)</li>
+       
+    </ul>
+    
     <h3>v2.0.9</h3>
     <ul>
         <li>Fix "Slow operations are prohibited on EDT" for 2021.3+(2021.3+版本修复"Slow operations are prohibited on EDT")</li>

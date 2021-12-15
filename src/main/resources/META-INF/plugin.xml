@@ -67,10 +67,8 @@
 
     <h3>Latest changes</h3>
     <ul>
-        <li>Fix "Slow operations are prohibited on EDT" for 2021.3+(2021.3+版本修复"Slow operations are prohibited on EDT")</li>
-        <li>Fix add headers from response(修复快速从response添加Headers)</li>
-        <li>Add project-level configuration,env and project will not change while switch project(添加项目级别的配置,切换项目env和project不受变化)</li>
-        <li>Add format action icon to textEditor(文本编辑器添加了快捷格式化按钮)</li>
+        <li>Fix post api parse error when using @RequestBody and @RequestParam(修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常)</li>
+
     </ul>
     ]]>
     </description>
