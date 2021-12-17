@@ -1,6 +1,25 @@
 const { config } = require("vuepress-theme-hope");
 module.exports = config({
-    plugins: ['@vuepress/nprogress'],
+    plugins: ['@vuepress/nprogress',
+        ["@vuepress-yard/vuepress-plugin-window",
+            {
+              title: "投票支持",  //vuepress公告插件 先安装在配置 npm install @vuepress-yard/vuepress-plugin-window --save
+              contentInfo: {
+                  title: "投票支持🎉🎉🎉",
+//                needImg: true,
+//                imgUrl: "https://reinness.com/avatar.png",
+                content: "《2021年度OSC中国最佳开源项目评选》第一轮投票开始了，希望大家可以为Restful Fast Request投上一票，在此非常感谢！ ❤️❤️❤️",
+                contentStyle: {"font-size":"13px"}
+              },
+              windowStyle:{right: '10px',top: '300px',width: '210px'},
+              bottomInfo: {
+                btnText: '投票',
+                linkTo: 'https://www.oschina.net/project/top_cn_2021/?id=589'
+              },
+              hideRouteList:["en"],
+              closeOnce: false
+            }]
+    ],
     base : '/fast-request/',
     title: 'Restful Fast Request',
     description: 'Intellij Restful Fast Request',
