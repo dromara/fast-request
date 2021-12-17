@@ -16,12 +16,14 @@
 
 package io.github.kings1990.plugin.fastrequest.util;
 
+import cn.hutool.core.lang.tree.Tree;
 import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.intellij.psi.*;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
+import com.intellij.psi.util.PsiTypesUtil;
 import com.intellij.psi.util.PsiUtil;
 import com.siyeh.ig.psiutils.CollectionUtils;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
@@ -43,6 +45,17 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     private static String randomStringDelimiter;
     private static final String pattern = "yyyy-MM-dd HH:mm:ss";
     private static final DateFormat df = new SimpleDateFormat(pattern);
+    public static Tree<String> root = new Tree<>();
+    public static Map<String, Integer> parseCount = new HashMap<>();
+    public static Map<String, Integer> parseListEntityCount = new HashMap<>();
+    public static Map<String, Integer> parseArrayEntityCount = new HashMap<>();
+
+    public static void reset() {
+        root = new Tree<>();
+        parseCount = new HashMap<>();
+        parseListEntityCount = new HashMap<>();
+        parseArrayEntityCount = new HashMap<>();
+    }
 
     static {
 
@@ -112,16 +125,26 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
         KV kv = KV.create();
 //        KV commentKV = KV.create();
 
+
         if (psiClass != null) {
+            String psiClassType = PsiTypesUtil.getClassType(psiClass).getCanonicalText();
+            Tree<String> parent = new Tree<>();
+            parent.setId(psiClassType);
+            parent.setName(psiClassType);
+//            if (root.getNode(psiClassType) == null) {
+//                root.addChildren(parent);
+//            }
+
+
             for (PsiField field : psiClass.getAllFields()) {
                 PsiType type = field.getType();
                 String name = field.getName();
                 PsiDocComment docComment = field.getDocComment();
                 StringBuilder commentStringBuilder = new StringBuilder();
-                if(docComment != null){
+                if (docComment != null) {
                     PsiElement[] descriptionElements = docComment.getDescriptionElements();
                     for (PsiElement descriptionElement : descriptionElements) {
-                        if(descriptionElement instanceof PsiDocToken){
+                        if (descriptionElement instanceof PsiDocToken) {
                             commentStringBuilder.append(descriptionElement.getText());
                         }
                     }
@@ -180,7 +203,18 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
                             list.add(paramKeyValue);
                         } else {
-                            list.add(getFields(PsiUtil.resolveClassInType(deepType)));
+                            PsiClass psiClassInArray = PsiUtil.resolveClassInType(deepType);
+                            String canonicalText = PsiTypesUtil.getClassType(psiClassInArray).getCanonicalText();
+                            String key = canonicalText + ":" + name;
+                            if (parseArrayEntityCount.get(key) == null) {
+                                parseArrayEntityCount.put(key, 1);
+                            } else {
+                                parseArrayEntityCount.put(key, 2);
+                            }
+                            if (parseArrayEntityCount.get(key) > 1) {
+                                continue;
+                            }
+                            list.add(getFields(psiClassInArray));
                         }
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment);
                         kv.set(name, paramKeyValue);
@@ -211,6 +245,16 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                             list.add(paramKeyValue);
                             kv.set(name, new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment));
                         } else {
+                            String canonicalText = PsiTypesUtil.getClassType(iterableClass).getCanonicalText();
+                            String key = canonicalText + ":" + name;
+                            if (parseListEntityCount.get(key) == null) {
+                                parseListEntityCount.put(key, 1);
+                            } else {
+                                parseListEntityCount.put(key, 2);
+                            }
+                            if (parseListEntityCount.get(key) > 1) {
+                                continue;
+                            }
                             list.add(getFields(iterableClass));
                             ParamKeyValue paramKeyValue = new ParamKeyValue(name, list, 2, TypeUtil.Type.Array.name(), comment);
                             kv.set(name, paramKeyValue);
@@ -232,6 +276,40 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, namelist, 2, TypeUtil.Type.Array.name(), comment);
                         kv.set(name, paramKeyValue);
                     } else {    //class type
+                        String canonicalText = type.getCanonicalText();
+                        Tree<String> child = new Tree<>();
+                        child.setId(canonicalText);
+                        child.setName(canonicalText);
+                        child.setParentId(psiClassType);
+                        if (canonicalText.equals(psiClassType)) {
+                            Integer count = parseCount.get(canonicalText + ":" + name);
+                            if (count == null) {
+                                parseCount.put(canonicalText + ":" + name, 1);
+                            } else {
+                                parseCount.put(canonicalText + ":" + name, 2);
+                            }
+                        } else {
+                            Tree<String> calcParent = root.getNode(psiClassType);
+                            if (calcParent != null) {
+                                parent = calcParent;
+                            }
+                            if (parent.getNode(canonicalText) == null) {
+                                parent.addChildren(child);
+                            }
+                            List<CharSequence> parentsName = parent.getParentsName(canonicalText, false);
+                            if (parentsName.contains(canonicalText) || canonicalText.equals(parent.getParentId())) {
+                                continue;
+                            }
+                        }
+
+                        if (canonicalText.equals(psiClassType)) {
+                            if (parseCount.get(canonicalText + ":" + name) > 1) {
+                                continue;
+                            }
+                        }
+                        if (root.getNode(psiClassType) == null) {
+                            root.addChildren(parent);
+                        }
                         KV fields = getFields(PsiUtil.resolveClassInType(type));
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, fields, 2, TypeUtil.Type.Object.name(), comment);
                         kv.set(name, paramKeyValue);

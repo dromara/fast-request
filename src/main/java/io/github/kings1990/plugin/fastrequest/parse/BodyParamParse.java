@@ -34,6 +34,9 @@ import java.util.stream.Collectors;
 public class BodyParamParse extends AbstractParamParse {
     @Override
     public LinkedHashMap<String, Object> parseParam(FastRequestConfiguration config, List<ParamNameType> paramNameTypeList) {
+        //每次解析重置解析的类
+        KV.reset();
+
         List<DataMapping> customDataMappingList = config.getCustomDataMappingList();
         List<DataMapping> defaultDataMappingList = config.getDefaultDataMappingList();
 

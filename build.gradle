@@ -34,7 +34,7 @@ patchPluginXml {
     <h3>v2.1.0</h3>
     <ul>
         <li>Fix post api parse error when using @RequestBody and @RequestParam(修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常)</li>
-       
+        <li>Parsing support for nested classes(对嵌套类的解析支持)</li>
     </ul>
     
     <h3>v2.0.9</h3>
