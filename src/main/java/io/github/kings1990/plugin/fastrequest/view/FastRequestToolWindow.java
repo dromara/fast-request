@@ -1164,11 +1164,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         //默认urlParam是允许的即使是post json形式
         urlParamsKeyValueList = conventMapToList(requestParamMap);
+        urlParamsTextArea.setText(requestParamStr);
         pathParamsKeyValueList = conventMapToList(pathParamMap);
         calcHeaderList();
 
         if ("GET".equals(methodType)) {
-            urlParamsTextArea.setText(requestParamStr);
             if (pathParamsKeyValueList.isEmpty()) {
                 tabbedPane.setSelectedIndex(2);
                 urlParamsTabbedPane.setSelectedIndex(0);

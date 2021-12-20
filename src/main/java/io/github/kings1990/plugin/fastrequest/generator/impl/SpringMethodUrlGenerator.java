@@ -168,6 +168,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
             return StringUtils.EMPTY;
         }
         PsiAnnotationMemberValue value = annotationMapping.findDeclaredAttributeValue("value");
+        value = value != null ? value : annotationMapping.findDeclaredAttributeValue("path");
         if (value == null) {
             return StringUtils.EMPTY;
         }

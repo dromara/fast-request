@@ -198,6 +198,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                     Query<PsiClass> query = AllClassesSearch.search(ProjectScope.getContentScope(myProject), myProject);
                     Collection<PsiClass> controller = query.filtering(cls -> cls.getAnnotation("org.springframework.web.bind.annotation.RestController") != null ||
                                     cls.getAnnotation("org.springframework.stereotype.Controller") != null
+                                    || cls.getAnnotation("org.springframework.web.bind.annotation.RequestMapping") != null
                                     || cls.getAnnotation("javax.ws.rs.Path") != null
                             )
                             .filtering(
