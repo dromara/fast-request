@@ -3,12 +3,10 @@ module.exports = config({
     plugins: ['@vuepress/nprogress',
         ["@vuepress-yard/vuepress-plugin-window",
             {
-              title: "投票支持",  //vuepress公告插件 先安装在配置 npm install @vuepress-yard/vuepress-plugin-window --save
+              title: "二轮投票支持",  //vuepress公告插件 先安装在配置 npm install @vuepress-yard/vuepress-plugin-window --save
               contentInfo: {
                   title: "投票支持🎉🎉🎉",
-//                needImg: true,
-//                imgUrl: "https://reinness.com/avatar.png",
-                content: "《2021年度OSC中国最佳开源项目评选》第一轮投票开始了，希望大家可以为Restful Fast Request投上一票，在此非常感谢！ ❤️❤️❤️",
+                content: "《2021年度OSC中国最佳开源项目评选》已成功晋级TOP50进入下一轮，希望大家再次为Restful Fast Request投上一票，在此非常感谢各位 ❤️❤️❤️ 二轮投票有效时间：2021.12.20~2021.12.26 ",
                 contentStyle: {"font-size":"13px"}
               },
               windowStyle:{right: '10px',top: '300px',width: '210px'},
