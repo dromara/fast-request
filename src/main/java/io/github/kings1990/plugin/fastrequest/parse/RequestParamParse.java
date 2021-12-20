@@ -103,6 +103,7 @@ public class RequestParamParse extends AbstractParamParse {
             if (dealTypeParams(nameValueMap, paramNameType, name)) continue;
 
             //json解析
+            KV.reset();
             KV kv = KV.getFields(paramNameType.getPsiClass());
             //    String json = kv.toPrettyJson();
             //   Map parse = JSON.parseObject(json, Map.class);

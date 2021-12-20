@@ -1,5 +1,12 @@
 # What's new
 
+## v2.1.0
+
+* Fix post api parse error when using @RequestBody and @RequestParam
+* Parsing support for nested classes
+* Add support for url parse from the path property of the @RequestMapping in controller class level
+* Added support for Api Tree scanning with @RequestMapping class
+
 ## v2.0.9
 
 * Fix "Slow operations are prohibited on EDT" for 2021.3+
