@@ -4,12 +4,19 @@ sidebarDepth: 4
 
 # 最新变化
 
-::: tip 2021年度OSC中国最佳开源项目评选  
-《2021年度OSC中国最佳开源项目评选》投票开始了，你们的每一票都对我非常重要，希望大家可以为Restful Fast Request投上一票，在此非常感谢！ ❤️❤️❤️
+::: danger 2021年度OSC中国最佳开源项目评选  
+《2021年度OSC中国最佳开源项目评选》已成功晋级TOP50进入下一轮，希望大家**再次**为Restful Fast Request投上一票，在此非常感谢各位 ❤️❤️❤️ 二轮投票有效时间：2021.12.20~2021.12.26
 
-地址：[https://www.oschina.net/project/top_cn_2021/?id=589](https://www.oschina.net/project/top_cn_2021/?id=589)
+投票地址：[**https://www.oschina.net/project/top_cn_2021/?id=589**](https://www.oschina.net/project/top_cn_2021/?id=589)
 
 :::
+
+# v2.1.0
+
+* 修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常
+* 对嵌套类的解析支持
+* 增加支持对控制器类级别@RequestMapping(path="/xxx")path的解析
+* Api tree针对带@RequestMapping类的扫描支持
 
 # v2.0.9
 
