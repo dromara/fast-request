@@ -1,5 +1,9 @@
 # What's new
 
+## 2.1.0.1
+
+* Fix get param error
+
 ## v2.1.0
 
 * Fix post api parse error when using @RequestBody and @RequestParam
