@@ -11,6 +11,10 @@ sidebarDepth: 4
 
 :::
 
+# v2.1.0.1
+
+* 修复Get参数错误
+
 # v2.1.0
 
 * 修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常
