@@ -736,11 +736,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
 
             if (!urlParam.isEmpty()) {
-                if (!"GET".equals(methodType)) {
-                    //解决非get请求hutool不会拼装url params(参考HttpRequest.execute()方法中的urlWithParamIfGet)
-                    String queryParam = UrlQuery.of(urlParam).toString();
-                    request.setUrl(request.getUrl() + "?" + queryParam);
-                }
+                String queryParam = UrlQuery.of(urlParam).toString();
+                request.setUrl(request.getUrl() + "?" + queryParam);
             }
             if (!multipartFormParam.isEmpty() && formFlag) {
                 request.form(multipartFormParam);

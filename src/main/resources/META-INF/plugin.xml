@@ -67,6 +67,7 @@
 
     <h3>Latest changes</h3>
     <ul>
+        <li>Fix get param error(修复Get参数错误)</li>
         <li>Fix post api parse error when using @RequestBody and @RequestParam(修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常)</li>
         <li>Parsing support for nested classes(对嵌套类的简单解析支持)</li>
         <li>Add support for url parse from the path property of the @RequestMapping in controller class level (增加支持对控制器类级别@RequestMapping(path="/xxx")path的解析</li>
