@@ -4,7 +4,7 @@ npm run docs:dev
 部署
 sudo sh ./deploy.sh
 
-替换
+替换,
 中:\*(.*)\(
 
 英:\(.*\)
