@@ -1,5 +1,20 @@
 # What's new
 
+# v2.1.0.2
+
+* Joined the organization [**Dromara**](https://dromara.org/zh/)(An organization dedicated to native solutions for the
+  microservice cloud)
+
+:::danger Project and document address change
+
+github: [https://github.com/dromara/fast-request](https://github.com/dromara/fast-request)
+
+gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-request)
+
+document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request/en/)
+
+:::
+
 ## 2.1.0.1
 
 * Fix get param error

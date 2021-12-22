@@ -29,13 +29,13 @@ meta:
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
 <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
 
-[![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/kings1990/fast-request)
-[![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/kings/fast-request)
+[![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
+[![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
 ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)
-![GitHub](https://img.shields.io/github/license/kings1990/fast-request?color=087CFA)
+![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
 [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
 
@@ -48,7 +48,7 @@ meta:
 ```
 
 ::: tip 注意  
-请确保你的 IDEA版本 版本 >= 2020.3+  
+请确保你的 IDEA版本 版本 >= 2020.3+
 
 当然请如果插件有更新，请确保更新成最新版本
 :::
@@ -57,5 +57,82 @@ meta:
 <br/>
 <iframe frameborder="none" width="384px" height="330px" src="https://plugins.jetbrains.com/embeddable/card/16988"></iframe>
 
+### 特别鸣谢
+
+为Restful Fast Request提供宣传、托管等服务
+
+[![](./.vuepress/public/img/org/gitee.svg)](https://gitee.com)
+[![](./.vuepress/public/img/org/OSChina.svg)](https://www.oschina.net)
+
+### Dromara成员项目
+
+> [**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
+
+<div>
+    <div style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">
+        <a target="_blank" href="https://hutool.cn/">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/hutool.svg"></a>
+    </div>
+    <div style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">
+        <a target="_blank" href="http://forest.dtflyx.com/">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/forest.png"></a>
+    </div>
+    <div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://gitee.com/dromara/hmily">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/hmily.png"></a>
+    </div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://tlog.yomahub.com/">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/tlog.png">
+    </a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://gitee.com/dromara/myth">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/myth.png">
+    </a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://gitee.com/dromara/Raincat">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/raincat.png">
+    </a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://liteflow.yomahub.com/">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/liteflow.png">
+    </a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://maxkey.top/">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/maxkey.png">
+    </a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://sa-token.dev33.cn/">
+        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/sa-token.png">
+    </a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block;">
+    <a target="_blank" href="https://gitee.com/dromara/koalas-rpc" style="display:inline-block;vertical-align: middle;"><img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/koalas-rpc.png">
+<span>koalas-rpc</span></a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://su.usthe.com/"><img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/sureness.png"></a>
+</div>
+
+<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
+    <a target="_blank" href="https://gitee.com/Apache-ShenYu/incubator-shenyu"><img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/shenyu.png"></a>
+</div>
+</div>
+
+
 [plugin]: https://plugins.jetbrains.com/plugin/16988
+
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA

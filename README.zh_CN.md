@@ -9,15 +9,15 @@
 
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
 <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
-<a href='https://gitee.com/kings/fast-request'><img src='https://gitee.com/kings/fast-request/widgets/widget_3.svg' width = "15%" alt='Fork me on Gitee'></img></a>
+<a href='https://gitee.com/dromara/fast-request'><img src='https://gitee.com/dromara/fast-request/widgets/widget_3.svg' width = "15%" alt='Fork me on Gitee'></img></a>
 
-[![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/kings1990/fast-request)
-[![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/kings/fast-request)
+[![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
+[![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
-![GitHub](https://img.shields.io/github/license/kings1990/fast-request?color=087CFA)
-![GitHub](https://img.shields.io/github/license/kings1990/fast-request?color=087CFA)
+![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
+![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
 [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
 
@@ -61,7 +61,7 @@
 # Document
 
 * [中文文档](https://plugins.sheng90.wang/fast-request)
-* [English Document](https://kings1990.github.io/fast-request/en/)
+* [English Document](https://dromara.github.io/fast-request/en/)
 
 # 钉钉群:31690894
 
@@ -89,8 +89,21 @@
 | ![微信](./screenshot/pay/wechat.jpg) | ![支付宝](./screenshot/pay/alipay.png) |
 | --- | --- |
 
-[latest-release]: https://github.com/kings1990/fast-request/releases/latest
+[latest-release]: https://github.com/dromara/fast-request/releases/latest
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA
+
+## 特别鸣谢
+
+为Restful Fast Request提供宣传、托管等服务
+
+[![](./screenshot/org/gitee.svg)](https://gitee.com)
+[![](./screenshot/org/OSChina.svg)](https://www.oschina.net)
+
+[comment]: <> (## Dromara成员项目)
+
+[comment]: <> ([![]&#40;./screenshot/org/hutool.svg&#41;]&#40;https://hutool.cn&#41;)
+
+

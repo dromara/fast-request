@@ -19,10 +19,10 @@
     支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
     支持 JAX-RS 体系<br/>
     <br/>
-    <a href="https://github.com/kings1990/fast-request">Github</a> | <a href="https://gitee.com/kings/fast-request">Gitee</a> Welcome to star(欢迎star)
+    <a href="https://github.com/dromara/fast-request">Github</a> | <a href="https://gitee.com/dromara/fast-request">Gitee</a> Welcome to star(欢迎star)
     <br/><br/>
-    <a href="https://plugins.sheng90.wang/fast-request">详细文档</a> | <a href="https://github.com/kings1990/fast-request/issues">问题反馈</a> | <a href="https://fast-request.sheng90.wang/fast-request/guide/whatsnew/">历史变更</a> | 钉钉群:31690894<br/>
-    <a href="https://kings1990.github.io/fast-request/en">Documentation</a> | <a href="https://github.com/kings1990/fast-request/issues">Issues Tracker</a> | <a href="https://kings1990.github.io/fast-request/en/guide/whatsnew/">change log</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
+    <a href="https://plugins.sheng90.wang/fast-request">详细文档</a> | <a href="https://github.com/dromara/fast-request/issues">问题反馈</a> | <a href="https://fast-request.sheng90.wang/fast-request/guide/whatsnew/">历史变更</a> | 钉钉群:31690894<br/>
+    <a href="https://dromara.github.io/fast-request/en">Documentation</a> | <a href="https://github.com/dromara/fast-request/issues">Issues Tracker</a> | <a href="https://dromara.github.io/fast-request/en/guide/whatsnew/">change log</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
     <br/>
 
     Features:
@@ -59,14 +59,15 @@
         <li>内置Json参数编辑器</li>
     </ul>
     <br/>
-    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/example.png" />
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/example.png" />
     <h2>API manager</h2>
-    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/apis.png" /><br/>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apis.png" /><br/>
     <h2>API navigate</h2>
-    <img src="https://raw.githubusercontent.com/kings1990/fast-request/master/screenshot/apiNavigate.png" /><br/>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apiNavigate.png" /><br/>
 
     <h3>Latest changes</h3>
     <ul>
+        <li>Url link to organization(url调整至组织)</li>
         <li>Fix get param error(修复Get参数错误)</li>
         <li>Fix post api parse error when using @RequestBody and @RequestParam(修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常)</li>
         <li>Parsing support for nested classes(对嵌套类的简单解析支持)</li>
