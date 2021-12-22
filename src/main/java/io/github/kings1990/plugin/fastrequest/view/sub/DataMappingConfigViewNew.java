@@ -52,7 +52,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class DataMappingConfigViewNew extends AbstractConfigurableView {
-    private static final Logger LOGGER = Logger.getInstance(DataMappingConfigView.class);
+    private static final Logger LOGGER = Logger.getInstance(DataMappingConfigViewNew.class);
     private JPanel defaultDataMappingPanel;
     private JPanel customDataMappingPanel;
     private JTextField randomStringTextField;

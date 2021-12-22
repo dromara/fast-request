@@ -61,7 +61,7 @@ module.exports = config({
         lastUpdated: 'Last Updated',
       // 以下为可选的编辑链接选项
       // 假如你的文档仓库和项目本身不在一个仓库：
-      docsRepo: 'kings1990/restful-fast-request-doc',
+//      docsRepo: 'kings1990/restful-fast-request-doc',
       // 假如文档不是放在仓库的根目录下：
       docsDir: 'docs',
       // 假如文档放在一个特定的分支下：
@@ -84,11 +84,11 @@ module.exports = config({
                         items: [
                             {
                                 text: 'Github',
-                                link: 'https://github.com/kings1990/fast-request'
+                                link: 'https://github.com/dromara/fast-request'
                             },
                             {
                                 text: 'Gitee',
-                                link: 'https://gitee.com/kings/fast-request'
+                                link: 'https://gitee.com/dromara/fast-request'
                             }
                         ],
                         icon: "code"
@@ -127,11 +127,11 @@ module.exports = config({
                         items: [
                             {
                                 text: 'Github',
-                                link: 'https://github.com/kings1990/fast-request'
+                                link: 'https://github.com/dromara/fast-request'
                             },
                             {
                                 text: 'Gitee',
-                                link: 'https://gitee.com/kings/fast-request'
+                                link: 'https://gitee.com/dromara/fast-request'
                             }
                         ],
                         icon: "code"
