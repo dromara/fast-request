@@ -264,16 +264,17 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
                         kv.set(name, paramKeyValue);
                     } else if (PsiUtil.resolveClassInClassTypeOnly(type).isEnum()) { //enum
-                        ArrayList namelist = new ArrayList<String>();
+                        String value = null;
                         PsiField[] fieldList = PsiUtil.resolveClassInClassTypeOnly(type).getFields();
-                        if (fieldList != null) {
+                        if (fieldList != null && fieldList.length > 0) {
                             for (PsiField f : fieldList) {
                                 if (f instanceof PsiEnumConstant) {
-                                    namelist.add(f.getName());
+                                    value = f.getName();
+                                    break;
                                 }
                             }
                         }
-                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, namelist, 2, TypeUtil.Type.Array.name(), comment);
+                        ParamKeyValue paramKeyValue = new ParamKeyValue(name, value, 2, TypeUtil.Type.String.name(), comment);
                         kv.set(name, paramKeyValue);
                     } else {    //class type
                         String canonicalText = type.getCanonicalText();
