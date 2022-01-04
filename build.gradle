@@ -33,8 +33,9 @@ patchPluginXml {
     <h3>v2.1.1</h3>
     <ul>
         <li>SearchEveryWhere support(SearchEveryWhere支持)</li>
-        <li>Add a whatsnew button to view the latest version at any time(增加一个whatsnew按钮可以随时查看最新版本)</li>
+        <li>Add a what's new button to view the latest version at any time(增加一个最新变化按钮可以随时查看最新版本)</li>
         <li>Optimize the parsing of enum(优化枚举的解析)</li>
+        <li>Add support for http redirect(增加对http重定向的支持)</li>
     </ul>
     
     <h3>v2.1.0.2</h3>

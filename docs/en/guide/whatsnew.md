@@ -15,8 +15,9 @@ document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request
 ## v2.1.1
 
 * SearchEveryWhere support
-* Add a whatsnew button to view the latest version at any time
+* Add a what's new button to view the latest version at any time
 * Optimize the parsing of enum
+* Add support for http redirect
 
 :::tip SearchEveryWhere support
 
