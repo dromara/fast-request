@@ -5,7 +5,8 @@ sidebarDepth: 4
 # 最新变化
 
 ::: danger 加入了组织Dromara
-[**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
+
+[**Dromara**](https://dromara.org/zh/) (致力于微服务云原生解决方案的组织)
 
 github: [https://github.com/dromara/fast-request](https://github.com/dromara/fast-request)
 

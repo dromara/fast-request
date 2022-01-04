@@ -2,7 +2,7 @@
 
 :::danger Project and document address change
 
-[**Dromara**](https://dromara.org/zh/)(An organization dedicated to native solutions for the microservice cloud)
+[**Dromara**](https://dromara.org/) (An organization dedicated to native solutions for the microservice cloud)
 
 github: [https://github.com/dromara/fast-request](https://github.com/dromara/fast-request)
 
