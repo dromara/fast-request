@@ -73,6 +73,8 @@ public abstract class FastUrlGenerator {
      */
     public abstract String getMethodDescription(PsiMethod psiMethod);
 
+    public abstract String getMethodType(PsiMethod psiMethod);
+
     public boolean judgeIgnore(List<String> ignoreList, String canonicalText) {
         List<String> allTypeList = Splitter.on(Pattern.compile("<|>|[|]")).trimResults().omitEmptyStrings().splitToList(canonicalText);
         return allTypeList.stream().anyMatch(ignoreList::contains);

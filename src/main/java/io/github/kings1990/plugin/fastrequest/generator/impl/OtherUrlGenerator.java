@@ -66,4 +66,9 @@ public class OtherUrlGenerator extends FastUrlGenerator {
     public String getMethodDescription(PsiMethod psiMethod) {
         return null;
     }
+
+    @Override
+    public String getMethodType(PsiMethod psiMethod) {
+        return null;
+    }
 }
