@@ -28,6 +28,7 @@
     Features:
     <ul>
         <li>API navigate tree</li>
+        <li>SearchEveryWhere support</li>
         <li>generate url and parameters in one click</li>
         <li>Send request to debug API(support to modify the generated parameters)</li>
         <li>Send request and download</li>
@@ -45,6 +46,7 @@
     功能:
     <ul>
         <li>API导航树</li>
+        <li>SearchEveryWhere支持</li>
         <li>一键生成url和参数</li>
         <li>发送请求调试API(支持修改生成的参数)</li>
         <li>发送请求并下载文件</li>
@@ -67,12 +69,9 @@
 
     <h3>Latest changes</h3>
     <ul>
-        <li>Url link to organization(url调整至组织)</li>
-        <li>Fix get param error(修复Get参数错误)</li>
-        <li>Fix post api parse error when using @RequestBody and @RequestParam(修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常)</li>
-        <li>Parsing support for nested classes(对嵌套类的简单解析支持)</li>
-        <li>Add support for url parse from the path property of the @RequestMapping in controller class level (增加支持对控制器类级别@RequestMapping(path="/xxx")path的解析</li>
-        <li>Added support for Api Tree scanning with @RequestMapping class(Api tree针对带@RequestMapping类的扫描支持)</li>
+        <li>SearchEveryWhere support(SearchEveryWhere支持)</li>
+        <li>Add a whatsnew button to view the latest version at any time(增加一个whatsnew按钮可以随时查看最新版本)</li>
+        <li>Optimize the parsing of enum(优化枚举的解析)</li>
     </ul>
     ]]>
     </description>
@@ -155,5 +154,31 @@
         <group id="fastRequest.editor.floatGroup">
             <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction"/>
         </group>
+
+        <action id="fastRequest.gotoFastRequest"
+                class="io.github.kings1990.plugin.fastrequest.action.GotoFastRequestAction">
+            <keyboard-shortcut first-keystroke="alt F" keymap="$default"/>
+        </action>
+
     </actions>
+
+    <extensionPoints>
+        <extensionPoint name="requestMappingContributor" interface="com.intellij.navigation.ChooseByNameContributor"
+                        dynamic="true"/>
+    </extensionPoints>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <searchEverywhereContributor
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.FastRequestGotoContributor$Factory"/>
+        <searchEverywhereResultsEqualityProvider
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.FastRequestEqualityProvider"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="io.github.kings1990.FastRequest">
+        <requestMappingContributor
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.JavaRequestMappingContributor"/>
+
+    </extensions>
+
+
 </idea-plugin>

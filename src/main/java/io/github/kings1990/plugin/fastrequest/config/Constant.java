@@ -244,6 +244,10 @@ public class Constant {
             "org.springframework.ui.ModelMap"
     );
 
+    public static List<String> SUPPORTED_ANNOTATIONS = Lists.newArrayList(
+            "GetMapping", "PostMapping", "RequestMapping", "DeleteMapping", "PutMapping", "PatchMapping",
+            "GET", "POST", "DELETE", "PUT"
+    );
 
     public static List<MethodType> METHOD_TYPE_LIST = Lists.newArrayList(
             new MethodType("GET", PluginIcons.ICON_GET),

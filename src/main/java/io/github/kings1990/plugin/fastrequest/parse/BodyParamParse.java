@@ -101,12 +101,12 @@ public class BodyParamParse extends AbstractParamParse {
                 Object value = dataMapping.getValue();
                 String defaultType = dataMapping.getType();
                 String targetType =  ("boolean".equals(defaultType) ||"java.lang.Boolean".equals(defaultType))?TypeUtil.Type.Boolean.name():TypeUtil.Type.Number.name();
-                if(arrayFlag || listFlag){
+                if (arrayFlag || listFlag) {
                     ParamKeyValue paramKeyValue = new ParamKeyValue("", value, 2, targetType);
-                    ParamKeyValue p = new ParamKeyValue("",Lists.newArrayList(paramKeyValue),2,"Array");
-                    nameValueMap.put(name,p);
+                    ParamKeyValue p = new ParamKeyValue("", Lists.newArrayList(paramKeyValue), 2, "Array");
+                    nameValueMap.put(name, p);
                 } else {
-                    nameValueMap.put(name, new ParamKeyValue(name, StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, targetType));
+                    nameValueMap.put(name, new ParamKeyValue(name, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, targetType));
                 }
                 continue;
             }
@@ -117,10 +117,10 @@ public class BodyParamParse extends AbstractParamParse {
 //            Map parse = JSON.parseObject(json, Map.class);
 //            String queryParam = URLUtil.buildQuery(parse, null);
             String key = (String) kv.keySet().stream().findFirst().orElse(null);
-            if(key != null){
+            if (key != null) {
                 Object firstValue = kv.get(key);
                 String targetType = TypeUtil.Type.Object.name();
-                if(firstValue instanceof ArrayList || arrayFlag || listFlag){
+                if (firstValue instanceof ArrayList || arrayFlag || listFlag) {
                     targetType = TypeUtil.Type.Array.name();
                 }
                 nameValueMap.put(name, new ParamKeyValue(name, kv, 2, targetType));

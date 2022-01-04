@@ -77,6 +77,7 @@ import com.intellij.util.ui.AbstractTableCellEditor;
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
 import icons.PluginIcons;
+import io.github.kings1990.plugin.fastrequest.action.GotoFastRequestAction;
 import io.github.kings1990.plugin.fastrequest.action.OpenConfigAction;
 import io.github.kings1990.plugin.fastrequest.action.ToolbarSendAndDownloadRequestAction;
 import io.github.kings1990.plugin.fastrequest.action.ToolbarSendRequestAction;
@@ -322,6 +323,8 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
         DefaultActionGroup group = new DefaultActionGroup();
         group.add(new OpenConfigAction());
+        GotoFastRequestAction gotoFastRequestAction = (GotoFastRequestAction) ActionManager.getInstance().getAction("fastRequest.gotoFastRequest");
+        group.add(gotoFastRequestAction);
         group.addSeparator("  |  ");
         ToolbarSendRequestAction toolbarSendRequestAction = (ToolbarSendRequestAction) ActionManager.getInstance().getAction("fastRequest.sendAction");
         ToolbarSendAndDownloadRequestAction sendAndDownloadRequestAction = (ToolbarSendAndDownloadRequestAction) ActionManager.getInstance().getAction("fastRequest.sendDownloadAction");
@@ -339,6 +342,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         group.add(new CopyCurlAction());
         group.addSeparator("  |  ");
         group.add(new DocAction());
+        group.add(new WhatsNewAction());
         group.add(new CoffeeMeAction());
         ActionToolbar actionToolbar = ActionManager.getInstance().createActionToolbar(ActionPlaces.TOOLWINDOW_CONTENT, group, true);
         actionToolbar.setTargetComponent(panel);
@@ -3092,6 +3096,28 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 }
             } catch (Exception e) {
                 LOGGER.error("open url fail:%s", e, Constant.EN_DOC_DOMAIN);
+            }
+        }
+    }
+
+    private static final class WhatsNewAction extends AnAction {
+        public WhatsNewAction() {
+            super(MyResourceBundleUtil.getKey("whatsnew"), MyResourceBundleUtil.getKey("whatsnew"), PluginIcons.NOTIFICATIONS_NEW);
+        }
+
+        @Override
+        public void actionPerformed(@NotNull AnActionEvent event) {
+            try {
+                Desktop dp = Desktop.getDesktop();
+                if (dp.isSupported(Desktop.Action.BROWSE)) {
+                    if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
+                        dp.browse(URI.create(String.format("%s%s", Constant.CN_DOC_DOMAIN, "/guide/whatsnew")));
+                    } else {
+                        dp.browse(URI.create(String.format("%s%s", Constant.EN_DOC_DOMAIN, "guide/whatsnew")));
+                    }
+                }
+            } catch (Exception e) {
+                LOGGER.error("open url fail:%s", e, String.format("%s%s", Constant.EN_DOC_DOMAIN, "guide/whatsnew"));
             }
         }
     }

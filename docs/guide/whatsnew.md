@@ -4,18 +4,8 @@ sidebarDepth: 4
 
 # 最新变化
 
-::: danger 2021年度OSC中国最佳开源项目评选  
-《2021年度OSC中国最佳开源项目评选》已成功晋级TOP50进入下一轮，希望大家**再次**为Restful Fast Request投上一票，在此非常感谢各位 ❤️❤️❤️ 二轮投票有效时间：2021.12.20~2021.12.26
-
-投票地址：[**https://www.oschina.net/project/top_cn_2021/?id=589**](https://www.oschina.net/project/top_cn_2021/?id=589)
-
-:::
-
-# v2.1.0.2
-
-* 加入了组织[**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
-
-:::danger 项目、文档地址变更
+::: danger 加入了组织Dromara
+[**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
 
 github: [https://github.com/dromara/fast-request](https://github.com/dromara/fast-request)
 
@@ -23,7 +13,34 @@ gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-r
 
 中文文档:[https://plugins.sheng90.wang/fast-request/](https://plugins.sheng90.wang/fast-request)
 或者[https://dromara.org/fast-request/](https://dromara.org/fast-request/)
+
 :::
+
+# v2.1.1
+
+* SearchEveryWhere支持
+* 增加一个whatsnew按钮可以随时查看最新版本
+* 优化枚举的解析
+
+:::tip SearchEveryWhere support
+
+```
+输入案例
+/url              (查询指定url)
+get /list         (指定get方式指定url)
+post /save        (指定post方式指定url)
+```
+
+![searchEveryWhere](../.vuepress/public/img/searchEveryWhere.gif)
+:::
+
+:::tip 最新版本快速查看
+![whatsnewNotifcation](../.vuepress/public/img/whatsnewNotifcation.png)
+:::
+
+# v2.1.0.2
+
+* 加入了组织[**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
 
 # v2.1.0.1
 
