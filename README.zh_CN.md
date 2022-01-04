@@ -1,12 +1,5 @@
 # Restful Fast Request
 
----
-
-## 《2021年度OSC中国最佳开源项目评选》投票开始了，你们的每一票都对我非常重要，希望大家可以为Restful Fast Request投上一票，在此非常感谢！ ❤️❤️❤️
-### 投票地址：[https://www.oschina.net/project/top_cn_2021/?id=589](https://www.oschina.net/project/top_cn_2021/?id=589)
-
----
-
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
 <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
 <a href='https://gitee.com/dromara/fast-request'><img src='https://gitee.com/dromara/fast-request/widgets/widget_3.svg' width = "15%" alt='Fork me on Gitee'></img></a>

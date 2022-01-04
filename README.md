@@ -1,12 +1,5 @@
 # Restful Fast Request
 
----
-
-## 《2021年度OSC中国最佳开源项目评选》已成功晋级TOP50进入下一轮，希望大家再次为Restful Fast Request投上一票，在此非常感谢各位 ❤️❤️❤️ 二轮投票有效时间：2021.12.20~2021.12.26
-### 投票地址：[https://www.oschina.net/project/top_cn_2021/?id=589](https://www.oschina.net/project/top_cn_2021/?id=589)
-
----
-
 * [简体中文](./README.zh_CN.md)
 
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
