@@ -1,16 +1,16 @@
 # Features
 
-* generate url and parameters in one click
+* Generate url and parameters in one click
 * SearchEveryWhere support<Badge text="new" />
 * Send request to debug API(support to modify the generated parameters)
 * Send request and download
-* domain customization and switching
-* custom parameter parse
-* string generation strategy
-* save api
+* Domain customization and switching
+* Custom parameter parse
+* String generation strategy
+* Save api
 * Management API (search filter, modify API name)
-* one click location history save api to method
-* api to curl
+* One click location history save api to method
+* Api to curl
 * Built-in Json parameter editor
 * Automatically associate APIs to module groups
 * API navigate tree

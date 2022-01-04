@@ -27,6 +27,7 @@
 ## 功能
 
 * API导航树
+* SearchEveryWhere搜索API
 * 一键生成url和参数
 * 发送请求调试API(支持修改生成的参数)
 * 域名定制及切换
@@ -41,6 +42,9 @@
 
 > 发送请求
 ![example](./screenshot/example.gif)
+
+> SearchEveryWhere搜索API
+![example](./docs/.vuepress/public/img/searchEveryWhere.gif)
 
 > 下载文件
 ![example_download](./screenshot/downloadFile.gif)
