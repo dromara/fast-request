@@ -19,8 +19,9 @@ gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-r
 # v2.1.1
 
 * SearchEveryWhere支持
-* 增加一个whatsnew按钮可以随时查看最新版本
+* 增加一个最新按钮可以随时查看最新版本
 * 优化枚举的解析
+* 增加对http重定向的支持
 
 :::tip SearchEveryWhere support
 
