@@ -1,12 +1,5 @@
 # Restful Fast Request
 
----
-
-## 《2021年度OSC中国最佳开源项目评选》已成功晋级TOP50进入下一轮，希望大家再次为Restful Fast Request投上一票，在此非常感谢各位 ❤️❤️❤️ 二轮投票有效时间：2021.12.20~2021.12.26
-### 投票地址：[https://www.oschina.net/project/top_cn_2021/?id=589](https://www.oschina.net/project/top_cn_2021/?id=589)
-
----
-
 * [简体中文](./README.zh_CN.md)
 
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
@@ -42,28 +35,32 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 ## Features
 
 * API navigate tree
-* generate url and parameters in one click
+* SearchEveryWhere for api
+* Generate url and parameters in one click
 * Send request to debug API(support to modify the generated parameters)
-* domain customization and switching
-* custom parameter parse
-* string generation strategy
-* save api
+* Domain customization and switching
+* Custom parameter parse
+* String generation strategy
+* Save api
 * Management API (search filter, modify API name)
-* one click location history save api to method
-* api to curl
+* One click location history save api to method
+* Api to curl
 * Automatically associate APIs to module groups
 * Built-in Json parameter editor
 
-> send request 
+> Send request
 ![example](./screenshot/example.gif)
 
-> send and download
+> SearchEveryWhere for api
+![example](./docs/.vuepress/public/img/searchEveryWhere.gif)
+
+> Send and download
 ![example_download](./screenshot/downloadFile.gif)
 
-> api manage
+> Api manage
 ![api manage](./screenshot/apis_hd.png)
 
-> api navigate 
+> Api navigate
 ![apinav](./screenshot/apinav.gif)
 
 # Document

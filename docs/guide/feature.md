@@ -1,5 +1,6 @@
 # 功能
 * 一键生成url和参数
+* SearchEveryWhere支持<Badge text="new" />
 * 发送请求调试API(支持修改生成的参数)
 * 发送请求并下载文件
 * 域名定制及切换
@@ -11,13 +12,26 @@
 * API转curl
 * 自动将API关联到模块分组
 * 内置Json参数编辑器
-* API导航树<Badge text="new" />
-* Headers分组<Badge text="new" />
+* API导航树
+* Headers分组
 
 ## 调试API发送请求<Badge text="2.0.0"/>
+
 ![example](../.vuepress/public/img/example.gif)
 
+## SearchEveryWhere支持
+
+```
+输入案例
+/url              (查询指定url)
+get /list         (指定get方式指定url)
+post /save        (指定post方式指定url)
+```
+
+![searchEveryWhere](../.vuepress/public/img/searchEveryWhere.gif)
+
 ## 针对响应是文件的API<Badge text="2.0.2" type="error"/>
+
 点击Send and download
 
 ![example_download](../.vuepress/public/img/downloadFile.gif)
@@ -25,8 +39,9 @@
 ## API列表<Badge text="2.0.1" type="warning"/>
 
 ::: tip API列表name取值:
-1. 如果方法使用了swagger的@io.swagger.annotations.ApiOperation,则取该注解的value值  
-2. 如果没有swagger直接修饰,则取方法的javaDoc描述  
+
+1. 如果方法使用了swagger的@io.swagger.annotations.ApiOperation,则取该注解的value值
+2. 如果没有swagger直接修饰,则取方法的javaDoc描述
 3. 如果意思都没有则返回New Request
 
 API的name值支持修改
@@ -36,6 +51,7 @@ API的name值支持修改
 ![apiManager](../.vuepress/public/img/apiManager.png)
 
 ## 保存请求<Badge text="2.0.0"/>
+
 :::tip 特别说明
 1.保存的请求默认会放入*Default Group*中,支持拉拽放入别的组,当然最好是加入module分组,请查看api分组自动关联
 

@@ -16,10 +16,14 @@
 
 package io.github.kings1990.plugin.fastrequest.parse;
 
+import com.intellij.psi.PsiClass;
+import com.intellij.psi.util.PsiTypesUtil;
+import com.intellij.psi.util.PsiUtil;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamKeyValue;
 import io.github.kings1990.plugin.fastrequest.model.ParamNameType;
+import io.github.kings1990.plugin.fastrequest.util.KV;
 import io.github.kings1990.plugin.fastrequest.util.StringUtils;
 import io.github.kings1990.plugin.fastrequest.util.TypeUtil;
 
@@ -60,7 +64,20 @@ public class PathValueParamParse extends AbstractParamParse {
                 result.put(name, new ParamKeyValue(name, value, 2, calcType));
             } else {
                 //匹配不到默认匹配string
-                result.put(name, new ParamKeyValue(name, StringUtils.randomString(name,randomStringDelimiter,randomStringLength,randomStringStrategy), 2, TypeUtil.Type.String.name()));
+
+                PsiClass psiClass = PsiUtil.resolveClassInClassTypeOnly(PsiTypesUtil.getClassType(paramNameType.getPsiClass()).getDeepComponentType());
+                boolean isEnum = psiClass != null && psiClass.isEnum();
+                if (isEnum) {
+
+                    KV kv = KV.getFields(paramNameType.getPsiClass());
+                    Object enumParamKeyValue = kv.values().stream().findFirst().orElse(null);
+                    if (enumParamKeyValue != null) {
+                        result.put(name, new ParamKeyValue(name, ((ParamKeyValue) enumParamKeyValue).getValue(), 2, TypeUtil.Type.String.name()));
+                    }
+                    continue;
+                }
+
+                result.put(name, new ParamKeyValue(name, StringUtils.randomString(name, randomStringDelimiter, randomStringLength, randomStringStrategy), 2, TypeUtil.Type.String.name()));
             }
         }
         return result;

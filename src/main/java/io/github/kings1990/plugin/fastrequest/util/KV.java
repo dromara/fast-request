@@ -274,8 +274,14 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                                 }
                             }
                         }
+                        PsiClass psiClassDeep = PsiUtil.resolveClassInClassTypeOnly(PsiTypesUtil.getClassType(psiClass).getDeepComponentType());
+                        boolean outIsEnum = psiClassDeep != null && psiClassDeep.isEnum();
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, value, 2, TypeUtil.Type.String.name(), comment);
                         kv.set(name, paramKeyValue);
+                        if (outIsEnum) {
+                            //最外层参数直接是enum
+                            break;
+                        }
                     } else {    //class type
                         String canonicalText = type.getCanonicalText();
                         Tree<String> child = new Tree<>();

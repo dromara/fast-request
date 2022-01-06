@@ -341,43 +341,74 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
                 String oldValue = oldMapping.getValue();
                 String v = newValue.toString();
                 try {
-                    switch (row){
+                    switch (row) {
                         case 0:
-                        case 1:
                             Byte.parseByte(v);
                             break;
+                        case 1:
+                            if (!v.isBlank()) {
+                                Byte.parseByte(v);
+                            }
+                            break;
                         case 2:
-                        case 3:
                             Short.parseShort(v);
                             break;
+                        case 3:
+                            if (!v.isBlank()) {
+                                Short.parseShort(v);
+                            }
+                            break;
                         case 4:
-                        case 5:
                             Integer.parseInt(v);
                             break;
+                        case 5:
+                            if (!v.isBlank()) {
+                                Integer.parseInt(v);
+                            }
+                            break;
                         case 6:
-                        case 7:
                             Long.parseLong(v);
+                            break;
+                        case 7:
+                            if (!v.isBlank()) {
+                                Long.parseLong(v);
+                            }
                             break;
                         case 8:
                         case 9:
                             String rex = "[\u0000-\uFFFF]";
                             Pattern compile = Pattern.compile(rex);
                             Matcher matcher = compile.matcher(v);
-                            if(!matcher.matches()){
+                            if (!matcher.matches()) {
                                 throw new Exception("value error");
                             }
                             break;
                         case 10:
-                        case 11:
                             Float.parseFloat(v);
+                            break;
+                        case 11:
+                            if (!v.isBlank()) {
+                                Float.parseFloat(v);
+                            }
+                            break;
                         case 12:
-                        case 13:
                             Double.parseDouble(v);
                             break;
+                        case 13:
+                            if (!v.isBlank()) {
+                                Double.parseDouble(v);
+                            }
+                            break;
                         case 14:
-                        case 15:
-                            if(!"true".equals(v) && !"false".equals(v)){
+                            if (!"true".equals(v) && !"false".equals(v)) {
                                 throw new Exception("value error");
+                            }
+                            break;
+                        case 15:
+                            if (!v.isBlank()) {
+                                if (!"true".equals(v) && !"false".equals(v)) {
+                                    throw new Exception("value error");
+                                }
                             }
                             break;
                         default:

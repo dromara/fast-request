@@ -61,4 +61,6 @@ public interface PluginIcons {
     Icon ICON_DELETE = IconLoader.getIcon("/icon/delete.svg", PluginIcons.class);
     Icon ICON_PATCH = IconLoader.getIcon("/icon/patch.svg", PluginIcons.class);
     Icon ICON_CODE = IconLoader.getIcon("/icon/code.svg", PluginIcons.class);
+
+    Icon NOTIFICATIONS_NEW = IconLoader.getIcon("/icon/notificationsNew.svg", PluginIcons.class);
 }
