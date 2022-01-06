@@ -1,33 +1,47 @@
 # Features
 
-* generate url and parameters in one click
+* Generate url and parameters in one click
+* SearchEveryWhere support<Badge text="new" />
 * Send request to debug API(support to modify the generated parameters)
 * Send request and download
-* domain customization and switching
-* custom parameter parse
-* string generation strategy
-* save api
+* Domain customization and switching
+* Custom parameter parse
+* String generation strategy
+* Save api
 * Management API (search filter, modify API name)
-* one click location history save api to method
-* api to curl
+* One click location history save api to method
+* Api to curl
 * Built-in Json parameter editor
 * Automatically associate APIs to module groups
-* API navigate tree<Badge text="new" />
-* Headers group<Badge text="new" />
-
+* API navigate tree
+* Headers group
 
 ## Debug API & send request<Badge text="2.0.0"/>
+
 ![example](../../.vuepress/public/img/example_en.gif)
 
+## SearchEveryWhere support
+
+```
+example
+/url              (search by url)
+get /list         (search by get method and url)
+post /save        (search by post method and url)
+```
+
+![searchEveryWhere](../../.vuepress/public/img/searchEveryWhere.gif)
+
 ## Send and download<Badge text="2.0.2" type="error"/>
+
 ![example_download](../../.vuepress/public/img/downloadFile.gif)
 
 ## API List<Badge text="2.0.1" type="warning"/>
 
-::: tip API name value calculate:  
-1. If the method uses swagger annotation **@io.swagger.annotations.ApiOperation**,Then take the value of the annotation  
-2. If there is no swagger annotation,Then take the java Doc description of the method  
-3. If two above not matched, return **New Request**  
+::: tip API name value calculate:
+
+1. If the method uses swagger annotation **@io.swagger.annotations.ApiOperation**,Then take the value of the annotation
+2. If there is no swagger annotation,Then take the java Doc description of the method
+3. If two above not matched, return **New Request**
 
 API name value supports modification  
 :::
@@ -35,8 +49,8 @@ API name value supports modification
 ![apis](../../.vuepress/public/img/apis_hd.png)
 ![apiManager](../../.vuepress/public/img/apiManager_en.png)
 
-
 ## Save Request<Badge text="2.0.0"/>
+
 :::tip Special Note  
 1.The saved request will be put in *Default Group* by default, support drag and drop into other groups,Of course, it is best to join the module group, please see `API group automatic association`
 

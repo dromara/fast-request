@@ -18,6 +18,9 @@ package io.github.kings1990.plugin.fastrequest.parse;
 
 import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
+import com.intellij.psi.PsiClass;
+import com.intellij.psi.util.PsiTypesUtil;
+import com.intellij.psi.util.PsiUtil;
 import com.siyeh.ig.psiutils.CollectionUtils;
 import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
@@ -105,10 +108,22 @@ public class RequestParamParse extends AbstractParamParse {
             //json解析
             KV.reset();
             KV kv = KV.getFields(paramNameType.getPsiClass());
+
+            PsiClass psiClass = PsiUtil.resolveClassInClassTypeOnly(PsiTypesUtil.getClassType(paramNameType.getPsiClass()).getDeepComponentType());
+            boolean isEnum = psiClass != null && psiClass.isEnum();
+            if (isEnum) {
+                Object enumParamKeyValue = kv.values().stream().findFirst().orElse(null);
+                if (enumParamKeyValue != null) {
+                    ParamKeyValue result = (ParamKeyValue) enumParamKeyValue;
+                    nameValueMap.put(name, new ParamKeyValue(name, result.getValue(), 2, TypeUtil.Type.String.name()));
+                }
+
+            } else {
+                nameValueMap.put(name, new ParamKeyValue(name, kv, 1, TypeUtil.Type.Object.name()));
+            }
             //    String json = kv.toPrettyJson();
             //   Map parse = JSON.parseObject(json, Map.class);
 //            String queryParam = URLUtil.buildQuery(parse, null);
-            nameValueMap.put(name, new ParamKeyValue(name, kv, 1, TypeUtil.Type.Object.name()));
         }
 
         return nameValueMap;

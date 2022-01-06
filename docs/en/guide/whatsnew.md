@@ -1,11 +1,8 @@
 # What's new
 
-# v2.1.0.2
-
-* Joined the organization [**Dromara**](https://dromara.org/zh/)(An organization dedicated to native solutions for the
-  microservice cloud)
-
 :::danger Project and document address change
+
+[**Dromara**](https://dromara.org/) (An organization dedicated to native solutions for the microservice cloud)
 
 github: [https://github.com/dromara/fast-request](https://github.com/dromara/fast-request)
 
@@ -15,7 +12,35 @@ document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request
 
 :::
 
-## 2.1.0.1
+## v2.1.1
+
+* SearchEveryWhere support
+* Add a what's new button to view the latest version at any time
+* Optimize the parsing of enum
+* Add support for http redirect
+
+:::tip SearchEveryWhere support
+
+```
+example
+/url  
+get /list         (used for search get method)
+post /save        (used for search post method)
+```
+
+![searchEveryWhere](../../.vuepress/public/img/searchEveryWhere.gif)
+:::
+
+:::tip Quick view of the latest version
+![whatsnewNotifcation](../../.vuepress/public/img/whatsnewNotifcation.png)
+:::
+
+## v2.1.0.2
+
+* Joined the organization [**Dromara**](https://dromara.org/zh/)(An organization dedicated to native solutions for the
+  microservice cloud)
+
+## v2.1.0.1
 
 * Fix get param error
 
