@@ -16,17 +16,21 @@
 
 package io.github.kings1990.plugin.fastrequest.view;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.collect.ImmutableMap;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.DataManager;
+import com.intellij.ide.ExporterToTextFile;
 import com.intellij.ide.HelpTooltip;
 import com.intellij.ide.plugins.newui.ListPluginComponent;
+import com.intellij.ide.util.ExportToFileUtil;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.project.IndexNotReadyException;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectUtil;
 import com.intellij.openapi.ui.MessageType;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
@@ -34,6 +38,7 @@ import com.intellij.openapi.ui.popup.JBPopup;
 import com.intellij.openapi.ui.popup.JBPopupListener;
 import com.intellij.openapi.ui.popup.LightweightWindowEvent;
 import com.intellij.openapi.util.text.StringUtil;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.psi.JavaPsiFacade;
@@ -59,8 +64,10 @@ import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionCompon
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.ParamGroupCollection;
+import io.github.kings1990.plugin.fastrequest.model.PostmanCollection;
 import io.github.kings1990.plugin.fastrequest.util.FrIconUtil;
 import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
+import io.github.kings1990.plugin.fastrequest.util.PostmanExportUtil;
 import io.github.kings1990.plugin.fastrequest.util.SwingUtil;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
 import io.github.kings1990.plugin.fastrequest.view.inner.ListAndSelectModule;
@@ -86,6 +93,7 @@ import java.awt.*;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.DnDConstants;
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -460,6 +468,46 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                     rootDetail.getChildList().add(detail);
                     refreshTable();
                 }
+            }
+
+            @Override
+            public boolean isEnabled() {
+                return true;
+            }
+        });
+
+        toolbarDecorator.addExtraAction(new ToolbarDecorator.ElementActionButton(MyResourceBundleUtil.getKey("button.exportToPostman"), PluginIcons.ICON_POSTMAN) {
+
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                List<PostmanCollection.Item> item = PostmanExportUtil.toPostman(rootDetail,new ArrayList<>());
+                PostmanCollection postmanCollection = new PostmanCollection();
+                postmanCollection.setItem(item);
+                postmanCollection.setInfo(new PostmanCollection.Info());
+                System.out.println(JSON.toJSONString(item));
+
+                ExporterToTextFile exporterToTextFile = new ExporterToTextFile(){
+
+                    @Override
+                    public @NotNull String getReportText() {
+                        return JSON.toJSONString(postmanCollection);
+                    }
+
+                    @Override
+                    public @NotNull String getDefaultFilePath() {
+                        VirtualFile virtualFile = ProjectUtil.guessProjectDir(myProject);
+                        if(virtualFile != null){
+                            return virtualFile.getPath() + File.separator + "FastRequest.postman_collection_v21.json";
+                        }
+                        return "";
+                    }
+
+                    @Override
+                    public boolean canExport() {
+                        return true;
+                    }
+                };
+                ExportToFileUtil.chooseFileAndExport(myProject,exporterToTextFile);
             }
 
             @Override
