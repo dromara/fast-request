@@ -69,10 +69,8 @@
 
     <h3>Latest changes</h3>
     <ul>
-        <li>SearchEveryWhere support(SearchEveryWhere支持)</li>
-        <li>Add a what's new button to view the latest version at any time(增加一个最新变化按钮可以随时查看最新版本)</li>
-        <li>Optimize the parsing of enum(优化枚举的解析)</li>
-        <li>Add support for http redirect(增加对http重定向的支持)</li>
+        <li>Open the idea lazy loading API Navigate tree for the first time(首次打开idea懒加载API Navigate树)</li>
+        <li>SearchEveryWhere show module(SearchEveryWhere module标识)</li>
     </ul>
     ]]>
     </description>
@@ -84,6 +82,7 @@
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.java</depends>
+    <depends>org.intellij.plugins.markdown</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -123,6 +122,9 @@
         <!--                order="after DefaultFloatingToolbarProvider"-->
         <!--                implementation="io.github.kings1990.plugin.fastrequest.editor.FastRequestFloatingToolbarProvider"-->
         <!--                id="fastRequestEditorFloatingToolbarProvider"/>-->
+
+        <errorHandler
+                implementation="io.github.kings1990.plugin.fastrequest.diagnostic.FastRequestErrorReportSubmitter"/>
     </extensions>
 
     <actions>
@@ -153,7 +155,10 @@
         </group>
 
         <group id="fastRequest.editor.floatGroup">
-            <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction"/>
+            <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction">
+                <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            </action>
+
         </group>
 
         <action id="fastRequest.gotoFastRequest"

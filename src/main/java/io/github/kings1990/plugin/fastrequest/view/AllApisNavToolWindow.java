@@ -111,7 +111,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
         }, true);
         JScrollPane scrollPane = ScrollPaneFactory.createScrollPane(treeSpeedSearch.getComponent());
         panel.add(scrollPane);
-        renderData(myProject);
+//        renderData(myProject);
         Disposer.register(myProject, this);
     }
 

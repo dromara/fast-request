@@ -20,6 +20,7 @@ import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
+import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
@@ -29,8 +30,9 @@ import com.intellij.psi.codeStyle.CodeStyleManager;
 import org.jetbrains.annotations.NotNull;
 
 public class FormatAction extends AnAction {
+
     public FormatAction() {
-        super("Format", "Format", AllIcons.Actions.PrettyPrint);
+        super("Format", "Format", AllIcons.Diff.MagicResolve);
     }
 
 
@@ -52,6 +54,23 @@ public class FormatAction extends AnAction {
                         CodeStyleManager.getInstance(project).reformat(psiFile);
                     }
             );
+        }
+    }
+
+    @Override
+    public void update(@NotNull AnActionEvent e) {
+        super.update(e);
+        Presentation presentation = e.getPresentation();
+        if (presentation.isEnabled()) {
+            Editor editor = e.getData(CommonDataKeys.EDITOR);
+            if (editor != null && e.getProject() != null) {
+                PsiFile file = PsiDocumentManager.getInstance(e.getProject()).getPsiFile(editor.getDocument());
+                if (file.getVirtualFile() != null) {
+                    e.getPresentation().setEnabledAndVisible(file.getName().startsWith("Dummy."));
+                }
+            } else {
+                e.getPresentation().setEnabledAndVisible(false);
+            }
         }
     }
 }
