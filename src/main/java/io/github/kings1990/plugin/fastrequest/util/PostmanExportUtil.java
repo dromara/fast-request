@@ -28,7 +28,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PostmanExportUtil {
-    public static List<PostmanCollection.Item> toPostman(CollectionConfiguration.CollectionDetail node, List<PostmanCollection.Item> itemList){
+    public static PostmanCollection getPostmanCollection(CollectionConfiguration.CollectionDetail rootDetail,String projectName){
+        List<PostmanCollection.Item> item = PostmanExportUtil.getItem(rootDetail,new ArrayList<>());
+        PostmanCollection postmanCollection = new PostmanCollection();
+        postmanCollection.setItem(item);
+        PostmanCollection.Info info = new PostmanCollection.Info();
+        info.setName("FastRequest("+projectName+")");
+        postmanCollection.setInfo(info);
+        return postmanCollection;
+    }
+
+    public static List<PostmanCollection.Item> getItem(CollectionConfiguration.CollectionDetail node, List<PostmanCollection.Item> itemList){
         Integer type = node.getType();
         if(type == 2 ){
             parseRequest(node,itemList);
@@ -38,27 +48,12 @@ public class PostmanExportUtil {
             List<PostmanCollection.Item> childItem = new ArrayList<>();
             List<CollectionConfiguration.CollectionDetail> childList = node.getChildList();
             for (CollectionConfiguration.CollectionDetail childNode : childList) {
-                toPostman(childNode,childItem);
+                getItem(childNode,childItem);
             }
             item.setItem(childItem);
             itemList.add(item);
         }
         return itemList;
-    }
-
-    public static PostmanCollection.Item dealFold(CollectionConfiguration.CollectionDetail node, PostmanCollection.Item item,List<PostmanCollection.Item> itemList){
-        Integer type = node.getType();
-        if(type == 2 ){
-            parseRequest(node,itemList);
-        } else {
-            item.setName(node.getName());
-            List<CollectionConfiguration.CollectionDetail> childList = node.getChildList();
-            for (CollectionConfiguration.CollectionDetail childNode : childList) {
-                toPostman(childNode,itemList);
-            }
-            item.setItem(itemList);
-        }
-        return item;
     }
 
     private static List<PostmanCollection.Item> parseRequest(CollectionConfiguration.CollectionDetail node,List<PostmanCollection.Item> itemList){
