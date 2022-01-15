@@ -480,12 +480,8 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
             @Override
             public void actionPerformed(@NotNull AnActionEvent e) {
-                List<PostmanCollection.Item> item = PostmanExportUtil.toPostman(rootDetail,new ArrayList<>());
-                PostmanCollection postmanCollection = new PostmanCollection();
-                postmanCollection.setItem(item);
-                postmanCollection.setInfo(new PostmanCollection.Info());
-                System.out.println(JSON.toJSONString(item));
 
+                PostmanCollection postmanCollection = PostmanExportUtil.getPostmanCollection(rootDetail,myProject.getName());
                 ExporterToTextFile exporterToTextFile = new ExporterToTextFile(){
 
                     @Override

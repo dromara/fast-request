@@ -28,7 +28,7 @@ public class PostmanCollection implements Serializable {
 
 
     public static class Info {
-        private String name = "FastRequest";
+        private String name;
         private String schema = "https://schema.getpostman.com/json/collection/v2.1.0/collection.json";
 
         public String getName() {
