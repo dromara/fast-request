@@ -28,13 +28,25 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class PostmanExportUtil {
+    static List<String> hostList = new ArrayList<>();
+
     public static PostmanCollection getPostmanCollection(CollectionConfiguration.CollectionDetail rootDetail,String projectName){
-        List<PostmanCollection.Item> item = PostmanExportUtil.getItem(rootDetail,new ArrayList<>());
+        List<PostmanCollection.Item> item = getItem(rootDetail,new ArrayList<>());
         PostmanCollection postmanCollection = new PostmanCollection();
         postmanCollection.setItem(item);
         PostmanCollection.Info info = new PostmanCollection.Info();
         info.setName("FastRequest("+projectName+")");
         postmanCollection.setInfo(info);
+
+        List<PostmanCollection.Variable> variableList = new ArrayList<>();
+        for (int i = 0; i < hostList.size(); i++) {
+            PostmanCollection.Variable variable = new PostmanCollection.Variable();
+            variable.setKey("host" + (i == 0? "" : i));
+            variable.setValue(hostList.get(i));
+            variableList.add(variable);
+        }
+        postmanCollection.setVariable(variableList);
+        hostList = new ArrayList<>();
         return postmanCollection;
     }
 
@@ -124,14 +136,18 @@ public class PostmanExportUtil {
     private static PostmanCollection.Url convertToUrl(String domain,String rawUrl,List<ParamKeyValue> urlParamsKeyValueList){
         PostmanCollection.Url result = new PostmanCollection.Url();
         String completeUrl = domain + rawUrl;
-        result.setRaw(completeUrl);
+
         URL url = URLUtil.url(completeUrl);
-        result.setProtocol(url.getProtocol());
-        result.setHost(Arrays.asList(url.getHost().split("\\.")));
-        result.setPort(url.getPort() == -1 ?null : url.getPort() + "");
-
+//        result.setProtocol(url.getProtocol());
+        if(!hostList.contains(domain)){
+            hostList.add(domain);
+        }
+        int idx = hostList.indexOf(domain);
+        String host = idx == 0 ? "{{host}}" : "{{host"+idx+"}}";
+        result.setHost(List.of(host));
+        result.setPort(null);
         result.setPath(Arrays.asList(url.getPath().split("/")));
-
+        result.setRaw(host + rawUrl);
         List<PostmanCollection.Query> queryList = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).map(q -> {
             PostmanCollection.Query query = new PostmanCollection.Query();
             query.setKey(q.getKey());
