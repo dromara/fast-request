@@ -25,6 +25,7 @@ import java.util.Map;
 public class PostmanCollection implements Serializable {
     private Info info;
     private List<Item> item;
+    private List<Variable> variable;
 
 
     public static class Info {
@@ -46,6 +47,10 @@ public class PostmanCollection implements Serializable {
         public void setSchema(String schema) {
             this.schema = schema;
         }
+    }
+
+    public static class Variable extends KeyValue{
+
     }
 
     public static void main(String[] args) {
@@ -348,5 +353,13 @@ public class PostmanCollection implements Serializable {
 
     public void setItem(List<Item> item) {
         this.item = item;
+    }
+
+    public List<Variable> getVariable() {
+        return variable;
+    }
+
+    public void setVariable(List<Variable> variable) {
+        this.variable = variable;
     }
 }

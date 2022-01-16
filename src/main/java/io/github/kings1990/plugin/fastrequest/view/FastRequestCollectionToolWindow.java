@@ -17,6 +17,7 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.collect.ImmutableMap;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.DataManager;
@@ -486,7 +487,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
                     @Override
                     public @NotNull String getReportText() {
-                        return JSON.toJSONString(postmanCollection);
+                        return JSON.toJSONString(postmanCollection, SerializerFeature.DisableCircularReferenceDetect);
                     }
 
                     @Override
