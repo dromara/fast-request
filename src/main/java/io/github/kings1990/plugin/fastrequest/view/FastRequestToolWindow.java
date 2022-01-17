@@ -3375,4 +3375,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         headerGroup.setEnvMap(envMap);
     }
 
+    public List<DataMapping> getHeaderParamsKeyValueList() {
+        return headerParamsKeyValueList;
+    }
 }
