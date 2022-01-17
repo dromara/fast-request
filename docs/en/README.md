@@ -42,13 +42,14 @@ meta:
 ### Features :100:
 > * [x] Generate url and parameters in one click
 > * [x] SearchEveryWhere support
-> * [x] Send request to debug API(support to modify the generated parameters)
+> * [x] APIs export to Postman
+> * [x] Send request to debug API
 > * [x] Send request and download
 > * [x] Domain customization and switching
 > * [x] Custom parameter parse
 > * [x] String generation strategy
 > * [x] Save api
-> * [x] Management API (search filter, modify API name)
+> * [x] Management API
 > * [x] One click location history save api to method
 > * [x] Api to curl
 > * [x] Built-in Json parameter editor
