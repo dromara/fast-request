@@ -2,6 +2,7 @@
 
 * Generate url and parameters in one click
 * SearchEveryWhere support<Badge text="new" />
+* APIs export to Postman<Badge text="new" />
 * Send request to debug API(support to modify the generated parameters)
 * Send request and download
 * Domain customization and switching
@@ -20,7 +21,7 @@
 
 ![example](../../.vuepress/public/img/example_en.gif)
 
-## SearchEveryWhere support
+## SearchEveryWhere support<Badge text="2.1.1" />
 
 ```
 example
@@ -34,6 +35,9 @@ post /save        (search by post method and url)
 ## Send and download<Badge text="2.0.2" type="error"/>
 
 ![example_download](../../.vuepress/public/img/downloadFile.gif)
+
+## APIs export to Postman<Badge text="2.1.2" type="error"/>
+![export2postman](../../.vuepress/public/img/export2postman.gif)
 
 ## API List<Badge text="2.0.1" type="warning"/>
 

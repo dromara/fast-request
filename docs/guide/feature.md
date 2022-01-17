@@ -1,6 +1,7 @@
 # 功能
 * 一键生成url和参数
 * SearchEveryWhere支持<Badge text="new" />
+* API导出到Postman<Badge text="new" />
 * 发送请求调试API(支持修改生成的参数)
 * 发送请求并下载文件
 * 域名定制及切换
@@ -19,7 +20,7 @@
 
 ![example](../.vuepress/public/img/example.gif)
 
-## SearchEveryWhere支持
+## SearchEveryWhere支持<Badge text="2.1.1" />
 
 ```
 输入案例
@@ -35,6 +36,9 @@ post /save        (指定post方式指定url)
 点击Send and download
 
 ![example_download](../.vuepress/public/img/downloadFile.gif)
+
+## API导出到Postman<Badge text="2.1.2" type="error"/>
+![export2postman](../.vuepress/public/img/export2postman.gif)
 
 ## API列表<Badge text="2.0.1" type="warning"/>
 

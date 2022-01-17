@@ -29,6 +29,7 @@
     <ul>
         <li>API navigate tree</li>
         <li>SearchEveryWhere for api</li>
+        <li>APIs export to Postman</li>
         <li>Generate url and parameters in one click</li>
         <li>Send request to debug API(support to modify the generated parameters)</li>
         <li>Send request and download</li>
@@ -47,6 +48,7 @@
     <ul>
         <li>API导航树</li>
         <li>SearchEveryWhere搜索API</li>
+        <li>API导出到Postman</li>
         <li>一键生成url和参数</li>
         <li>发送请求调试API(支持修改生成的参数)</li>
         <li>发送请求并下载文件</li>
