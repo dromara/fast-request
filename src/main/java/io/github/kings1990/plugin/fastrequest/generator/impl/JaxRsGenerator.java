@@ -22,6 +22,7 @@ import com.intellij.openapi.module.ModuleUtil;
 import com.intellij.psi.*;
 import com.intellij.psi.impl.source.PsiClassReferenceType;
 import com.intellij.psi.impl.source.PsiMethodImpl;
+import com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
 import com.intellij.psi.util.PsiUtil;
@@ -130,7 +131,13 @@ public class JaxRsGenerator extends FastUrlGenerator {
         if (value == null) {
             return StringUtils.EMPTY;
         }
-        String url = value.getText();
+        String url;
+        if(value instanceof PsiReferenceExpression){
+            PsiField psiField = (PsiField) ((PsiReferenceExpressionImpl)value).resolve();
+            url = psiField == null ? "" : psiField.getInitializer() == null? "" : psiField.getInitializer().getText();
+        } else {
+            url = value.getText();
+        }
         List<DataMapping> urlReplaceMappingList = config.getUrlReplaceMappingList();
         for (DataMapping dataMapping : urlReplaceMappingList) {
             url = url.replace(dataMapping.getType(), dataMapping.getValue());
@@ -153,7 +160,14 @@ public class JaxRsGenerator extends FastUrlGenerator {
         if (value == null) {
             return StringUtils.EMPTY;
         }
-        String classUrl = value.getText();
+        String classUrl;
+        if(value instanceof PsiReferenceExpression){
+            PsiField psiField = (PsiField) ((PsiReferenceExpressionImpl)value).resolve();
+            classUrl = psiField == null ? "" : psiField.getInitializer() == null? "" : psiField.getInitializer().getText();
+        } else {
+            classUrl = value.getText();
+        }
+
         List<DataMapping> urlReplaceMappingList = config.getUrlReplaceMappingList();
         for (DataMapping dataMapping : urlReplaceMappingList) {
             classUrl = classUrl.replace(dataMapping.getType(), dataMapping.getValue());
