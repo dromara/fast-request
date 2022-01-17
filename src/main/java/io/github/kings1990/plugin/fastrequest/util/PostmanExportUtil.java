@@ -24,43 +24,56 @@ import io.github.kings1990.plugin.fastrequest.model.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class PostmanExportUtil {
     static List<String> hostList = new ArrayList<>();
+    static LinkedHashMap<String, String> headerMap = new LinkedHashMap<>();
+    static List<DataMapping> globalHeaderParamsKeyValueList;
 
-    public static PostmanCollection getPostmanCollection(CollectionConfiguration.CollectionDetail rootDetail,String projectName){
-        List<PostmanCollection.Item> item = getItem(rootDetail,new ArrayList<>());
+    public static PostmanCollection getPostmanCollection(List<DataMapping> headerParamsKeyValueList, CollectionConfiguration.CollectionDetail rootDetail, String projectName) {
+        globalHeaderParamsKeyValueList = headerParamsKeyValueList;
+        List<PostmanCollection.Item> item = getItem(rootDetail, new ArrayList<>());
         PostmanCollection postmanCollection = new PostmanCollection();
         postmanCollection.setItem(item);
         PostmanCollection.Info info = new PostmanCollection.Info();
-        info.setName("FastRequest("+projectName+")");
+        info.setName("FastRequest(" + projectName + ")");
         postmanCollection.setInfo(info);
 
         List<PostmanCollection.Variable> variableList = new ArrayList<>();
         for (int i = 0; i < hostList.size(); i++) {
             PostmanCollection.Variable variable = new PostmanCollection.Variable();
-            variable.setKey("host" + (i == 0? "" : i));
+            variable.setKey("host" + (i == 0 ? "" : i));
             variable.setValue(hostList.get(i));
             variableList.add(variable);
         }
+        headerMap.forEach((k, v) -> {
+            PostmanCollection.Variable variable = new PostmanCollection.Variable();
+            variable.setKey(k);
+            variable.setValue(v);
+            variableList.add(variable);
+        });
+
         postmanCollection.setVariable(variableList);
         hostList = new ArrayList<>();
+        headerMap = new LinkedHashMap<>();
+        globalHeaderParamsKeyValueList = new ArrayList<>();
         return postmanCollection;
     }
 
-    public static List<PostmanCollection.Item> getItem(CollectionConfiguration.CollectionDetail node, List<PostmanCollection.Item> itemList){
+    public static List<PostmanCollection.Item> getItem(CollectionConfiguration.CollectionDetail node, List<PostmanCollection.Item> itemList) {
         Integer type = node.getType();
-        if(type == 2 ){
-            parseRequest(node,itemList);
+        if (type == 2) {
+            parseRequest(node, itemList);
         } else {
             PostmanCollection.Item item = new PostmanCollection.Item();
             item.setName(node.getName());
             List<PostmanCollection.Item> childItem = new ArrayList<>();
             List<CollectionConfiguration.CollectionDetail> childList = node.getChildList();
             for (CollectionConfiguration.CollectionDetail childNode : childList) {
-                getItem(childNode,childItem);
+                getItem(childNode, childItem);
             }
             item.setItem(childItem);
             itemList.add(item);
@@ -68,7 +81,7 @@ public class PostmanExportUtil {
         return itemList;
     }
 
-    private static List<PostmanCollection.Item> parseRequest(CollectionConfiguration.CollectionDetail node,List<PostmanCollection.Item> itemList){
+    private static List<PostmanCollection.Item> parseRequest(CollectionConfiguration.CollectionDetail node, List<PostmanCollection.Item> itemList) {
         PostmanCollection.Item item = new PostmanCollection.Item();
         PostmanCollection.Request request = new PostmanCollection.Request();
         item.setName(node.getName());
@@ -76,35 +89,35 @@ public class PostmanExportUtil {
         ParamGroupCollection paramGroup = node.getParamGroup();
         List<DataMapping> headerListMapping = node.getHeaderList();
 
-        String pathParamsKeyValueListJson = paramGroup.getPathParamsKeyValueListJson();
         String urlParamsKeyValueListJson = paramGroup.getUrlParamsKeyValueListJson();
         String urlEncodedKeyValueListJson = paramGroup.getUrlEncodedKeyValueListJson();
         String multipartKeyValueListJson = paramGroup.getMultipartKeyValueListJson();
         String bodyKeyValueListJson = paramGroup.getBodyKeyValueListJson();
-        List<ParamKeyValue> pathParamsKeyValueList = JSON.parseObject(pathParamsKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
-        List<ParamKeyValue> urlParamsKeyValueList = JSON.parseObject(urlParamsKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
-        List<ParamKeyValue> urlEncodedKeyValueList = JSON.parseObject(urlEncodedKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
-        List<ParamKeyValue> multipartKeyValueList = JSON.parseObject(multipartKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {});
+        List<ParamKeyValue> urlParamsKeyValueList = JSON.parseObject(urlParamsKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {
+        });
+        List<ParamKeyValue> urlEncodedKeyValueList = JSON.parseObject(urlEncodedKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {
+        });
+        List<ParamKeyValue> multipartKeyValueList = JSON.parseObject(multipartKeyValueListJson, new TypeReference<List<ParamKeyValue>>() {
+        });
 
         request.setMethod(paramGroup.getMethodType());
-        request.setHeader(convertToHeader(headerListMapping));
-        request.setUrl(convertToUrl(node.getDomain(),paramGroup.getUrl(), urlParamsKeyValueList));
-        request.setBody(convertToBody(urlEncodedKeyValueList,multipartKeyValueList,bodyKeyValueListJson));
+        request.setHeader(convertToHeader(globalHeaderParamsKeyValueList));
+        request.setUrl(convertToUrl(node.getDomain(), paramGroup.getUrl(), urlParamsKeyValueList));
+        request.setBody(convertToBody(urlEncodedKeyValueList, multipartKeyValueList, bodyKeyValueListJson));
         item.setRequest(request);
         itemList.add(item);
         return itemList;
     }
 
 
-
-    private static PostmanCollection.Body convertToBody(List<ParamKeyValue> urlEncodedKeyValueList,List<ParamKeyValue> multipartKeyValueList,String bodyKeyValueListJson){
+    private static PostmanCollection.Body convertToBody(List<ParamKeyValue> urlEncodedKeyValueList, List<ParamKeyValue> multipartKeyValueList, String bodyKeyValueListJson) {
         PostmanCollection.Body result = new PostmanCollection.Body();
         if (!bodyKeyValueListJson.isBlank()) {
             //json
             result.setMode("raw");
             result.setRaw(bodyKeyValueListJson);
             result.setOptions(PostmanCollection.options);
-        } else if(!urlEncodedKeyValueList.isEmpty()){
+        } else if (!urlEncodedKeyValueList.isEmpty()) {
             result.setMode("urlencoded");
             List<PostmanCollection.Urlencoded> urlencodedList = urlEncodedKeyValueList.stream().map(q -> {
                 PostmanCollection.Urlencoded urlencoded = new PostmanCollection.Urlencoded();
@@ -114,12 +127,12 @@ public class PostmanExportUtil {
                 return urlencoded;
             }).collect(Collectors.toList());
             result.setUrlencoded(urlencodedList);
-        } else if(!multipartKeyValueList.isEmpty()){
+        } else if (!multipartKeyValueList.isEmpty()) {
             result.setMode("formdata");
             List<PostmanCollection.Formdata> formdataList = multipartKeyValueList.stream().map(q -> {
                 PostmanCollection.Formdata formdata = new PostmanCollection.Formdata();
                 formdata.setKey(q.getKey());
-                if(TypeUtil.Type.File.name().equals(q.getType())){
+                if (TypeUtil.Type.File.name().equals(q.getType())) {
                     formdata.setSrc(q.getValue().toString());
                     formdata.setType("file");
                 } else {
@@ -133,17 +146,17 @@ public class PostmanExportUtil {
         return result;
     }
 
-    private static PostmanCollection.Url convertToUrl(String domain,String rawUrl,List<ParamKeyValue> urlParamsKeyValueList){
+    private static PostmanCollection.Url convertToUrl(String domain, String rawUrl, List<ParamKeyValue> urlParamsKeyValueList) {
         PostmanCollection.Url result = new PostmanCollection.Url();
         String completeUrl = domain + rawUrl;
 
         URL url = URLUtil.url(completeUrl);
 //        result.setProtocol(url.getProtocol());
-        if(!hostList.contains(domain)){
+        if (!hostList.contains(domain)) {
             hostList.add(domain);
         }
         int idx = hostList.indexOf(domain);
-        String host = idx == 0 ? "{{host}}" : "{{host"+idx+"}}";
+        String host = idx == 0 ? "{{host}}" : "{{host" + idx + "}}";
         result.setHost(List.of(host));
         result.setPort(null);
         result.setPath(Arrays.asList(url.getPath().split("/")));
@@ -158,15 +171,16 @@ public class PostmanExportUtil {
         return result;
     }
 
-    private static List<PostmanCollection.Header> convertToHeader(List<DataMapping> headerListMapping){
-        if(headerListMapping.isEmpty()){
+    private static List<PostmanCollection.Header> convertToHeader(List<DataMapping> headerListMapping) {
+        if (headerListMapping.isEmpty()) {
             return new ArrayList<>();
         }
-        return headerListMapping.stream().map(q->{
+        return headerListMapping.stream().map(q -> {
             PostmanCollection.Header header = new PostmanCollection.Header();
             header.setKey(q.getType());
-            header.setValue(q.getValue());
+            header.setValue("{{" + q.getType() + "}}");
             header.setDisabled(!q.getEnabled());
+            headerMap.put(q.getType(), q.getType());
             return header;
         }).collect(Collectors.toList());
     }

@@ -64,12 +64,10 @@ import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
+import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.ParamGroupCollection;
 import io.github.kings1990.plugin.fastrequest.model.PostmanCollection;
-import io.github.kings1990.plugin.fastrequest.util.FrIconUtil;
-import io.github.kings1990.plugin.fastrequest.util.MyResourceBundleUtil;
-import io.github.kings1990.plugin.fastrequest.util.PostmanExportUtil;
-import io.github.kings1990.plugin.fastrequest.util.SwingUtil;
+import io.github.kings1990.plugin.fastrequest.util.*;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
 import io.github.kings1990.plugin.fastrequest.view.inner.ListAndSelectModule;
 import io.github.kings1990.plugin.fastrequest.view.model.CollectionCustomNode;
@@ -482,7 +480,14 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             @Override
             public void actionPerformed(@NotNull AnActionEvent e) {
 
-                PostmanCollection postmanCollection = PostmanExportUtil.getPostmanCollection(rootDetail,myProject.getName());
+                List<DataMapping> headerParamsKeyValueList;
+                FastRequestToolWindow fastRequestToolWindow = ToolWindowUtil.getFastRequestToolWindow(myProject);
+                if(fastRequestToolWindow == null){
+                    headerParamsKeyValueList = new ArrayList<>();
+                } else {
+                    headerParamsKeyValueList = fastRequestToolWindow.getHeaderParamsKeyValueList();
+                }
+                PostmanCollection postmanCollection = PostmanExportUtil.getPostmanCollection(headerParamsKeyValueList,rootDetail,myProject.getName());
                 ExporterToTextFile exporterToTextFile = new ExporterToTextFile(){
 
                     @Override
@@ -494,7 +499,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                     public @NotNull String getDefaultFilePath() {
                         VirtualFile virtualFile = ProjectUtil.guessProjectDir(myProject);
                         if(virtualFile != null){
-                            return virtualFile.getPath() + File.separator + "FastRequest.postman_collection_v21.json";
+                            return virtualFile.getPath() + File.separator + "FastRequest("+myProject.getName()+").postman_collection_v21.json";
                         }
                         return "";
                     }
