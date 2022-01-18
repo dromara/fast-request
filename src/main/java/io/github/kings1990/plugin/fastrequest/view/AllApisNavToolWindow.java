@@ -16,6 +16,7 @@
 
 package io.github.kings1990.plugin.fastrequest.view;
 
+import cn.hutool.core.collection.CollectionUtil;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.CommonActionsManager;
 import com.intellij.ide.actions.searcheverywhere.PersistentSearchEverywhereContributorFilter;
@@ -141,7 +142,7 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                         List<ApiService> filterList = allApiList.stream().filter(q -> selectModule.contains(q.getModuleName())).collect(Collectors.toList());
                         indicator.setText("Rendering");
                         List<ApiService.ApiMethod> filterMethodList = new ArrayList<>();
-                        filterList.stream().map(ApiService::getApiMethodList).forEach(filterMethodList::addAll);
+                        filterList.stream().map(ApiService::getApiMethodList).filter(CollectionUtil::isNotEmpty).forEach(filterMethodList::addAll);
                         long count = filterMethodList.stream().filter(q -> selectMethodType.contains(q.getMethodType())).count();
                         RootNode root = new RootNode(count + " apis") {
                         };
@@ -222,7 +223,9 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                     allApiList.stream().map(ApiService::getApiMethodList).forEach(filterMethodList::addAll);
                     long count = filterMethodList.stream().filter(q -> selectMethodType.contains(q.getMethodType())).count();
                     RootNode root = new RootNode(count + " apis");
-                    NodeUtil.convertToRoot(root, NodeUtil.convertToMap(allApiList), methodTypeFilter.getSelectedElementList());
+                    NodeUtil.convertToRoot(root, NodeUtil.convertToMap(
+                            allApiList.stream().filter(q->CollectionUtil.isNotEmpty(q.getApiMethodList())).collect(Collectors.toList())
+                    ), methodTypeFilter.getSelectedElementList());
                     apiTree.setModel(new DefaultTreeModel(root));
                     NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Reload apis complete", MessageType.INFO)
                             .notify(myProject);

@@ -74,7 +74,8 @@
         <li>Add support for export api to Postman(添加对导出api到Postman的支持)</li>
         <li>Open the idea lazy loading API Navigate tree for the first time(首次打开idea懒加载API Navigate树)</li>
         <li>SearchEveryWhere show module(SearchEveryWhere module标识)</li>
-        <li>Add parsing support for url being a class constant reference(添加对url是类常量引用的解析支持)</li>
+        <li>Optimize URL parsing(Url解析优化)</li>
+        <li>Optimize the display of api navigate tree(API navigate tree展示优化)</li>
     </ul>
     ]]>
     </description>

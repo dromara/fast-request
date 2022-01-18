@@ -18,23 +18,25 @@ gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-r
 * 添加对导出api到Postman的支持
 * 首次打开idea懒加载API Navigate树
 * SearchEveryWhere module标识
-* 添加对url是类常量引用的解析支持
+* Url解析优化
+* API navigate tree展示优化
 
-:::tip  添加对导出api到Postman的支持
+:::tip 添加对导出api到Postman的支持
 ![export2postman](../.vuepress/public/img/export2postman.gif)
 :::
 
-:::tip  SearchEveryWhere module标识
+:::tip SearchEveryWhere module标识
 
 ![searchEveryWhereModule](../.vuepress/public/img/searchEveryWhereModule.png)
 :::
 
-:::tip  添加对url是类常量引用的解析支持
+:::tip Url解析优化
 
 ```
 支持以下example的解析
 不再需要单独配置url replace config
 
+场景1:url是类常量引用
 @RequestMapping(Url1.URL_TEST)
 @RestController
 public class UrlTestController {
@@ -45,6 +47,12 @@ public class UrlTestController {
         return 1;
     }
 }
+
+场景2:value是一个数组
+@RequestMapping(
+    value = {"/v1/save"},
+    method = {RequestMethod.POST}
+)
 ```
 :::
 
