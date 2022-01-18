@@ -142,8 +142,21 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
 
         String url;
         if(value instanceof PsiReferenceExpression){
-            PsiField psiField = (PsiField) ((PsiReferenceExpressionImpl)value).resolve();
+            PsiField psiField = (PsiField) ((PsiReferenceExpression)value).resolve();
             url = psiField == null ? "" : psiField.getInitializer() == null? "" : psiField.getInitializer().getText();
+        } else if(value instanceof PsiArrayInitializerMemberValue){
+            PsiAnnotationMemberValue[] initializers = ((PsiArrayInitializerMemberValue) value).getInitializers();
+            if(initializers.length > 0){
+                PsiAnnotationMemberValue initializer = ((PsiArrayInitializerMemberValue) value).getInitializers()[0];
+                if(initializer instanceof PsiReferenceExpression){
+                    PsiField psiField = (PsiField) ((PsiReferenceExpression)initializer).resolve();
+                    url = psiField == null ? "" : psiField.getInitializer() == null? "" : psiField.getInitializer().getText();
+                } else {
+                    url = initializer.getText();
+                }
+            } else {
+                url = "";
+            }
         } else {
             url = value.getText();
         }
@@ -278,7 +291,17 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
                         //默认返回GET
                         return "GET";
                     }
-                    String methodText = method.getText();
+                    String methodText;
+                    if(method instanceof  PsiArrayInitializerMemberValue){
+                        PsiAnnotationMemberValue[] initializers = ((PsiArrayInitializerMemberValue) method).getInitializers();
+                        if(initializers.length > 0){
+                            methodText = ((PsiArrayInitializerMemberValue)method).getInitializers()[0].getText();
+                        } else {
+                            methodText = "";
+                        }
+                    } else {
+                        methodText = method.getText();
+                    }
                     String method0 = methodText.split(",")[0];
                     return method0.substring(method0.lastIndexOf(".") + 1);
                 }

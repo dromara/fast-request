@@ -17,23 +17,25 @@ document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request
 * Add support for export api to Postman
 * Open the idea lazy loading API Navigate tree for the first time
 * SearchEveryWhere show module
-* Add parsing support for url being a class constant reference
+* Optimize URL parsing
+* Optimize the display of api navigate tree
 
-:::tip  Add support for export api to Postman
+:::tip Add support for export api to Postman
 ![export2postman](../../.vuepress/public/img/export2postman.gif)
 :::
 
-:::tip  SearchEveryWhere show module
+:::tip SearchEveryWhere show module
 
 ![searchEveryWhereModule](../../.vuepress/public/img/searchEveryWhereModule.png)
 :::
 
-:::tip  Add parsing support for url being a class constant reference
+:::tip Optimize URL parsing
 
 ```
 support parse like following example
 no longer need to configure the URL Replace Config separately
 
+Scene 1: URLS are class constant references
 @RequestMapping(Url1.URL_TEST)
 @RestController
 public class UrlTestController {
@@ -44,6 +46,12 @@ public class UrlTestController {
         return 1;
     }
 }
+
+Scene 2: value is an array
+@RequestMapping(
+    value = {"/v1/save"},
+    method = {RequestMethod.POST}
+)
 ```
 :::
 
