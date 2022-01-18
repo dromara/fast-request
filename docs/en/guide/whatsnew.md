@@ -21,6 +21,7 @@ document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request
 * Optimize the display of api navigate tree
 
 :::tip Add support for export api to Postman
+
 ![export2postman](../../.vuepress/public/img/export2postman.gif)
 :::
 

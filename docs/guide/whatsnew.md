@@ -22,6 +22,7 @@ gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-r
 * API navigate tree展示优化
 
 :::tip 添加对导出api到Postman的支持
+
 ![export2postman](../.vuepress/public/img/export2postman.gif)
 :::
 
