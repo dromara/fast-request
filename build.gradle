@@ -37,6 +37,8 @@ patchPluginXml {
         <li>SearchEveryWhere show module(SearchEveryWhere module标识)</li>
         <li>Optimize URL parsing(Url解析优化)</li>
         <li>Optimize the display of api navigate tree(API navigate tree展示优化)</li>
+        <li>Optimize the group when save api(API保存分组优化)</li>
+        <li>Global header params support(全局请求头支持)</li>
     </ul>
     
     <h3>v2.1.1</h3>

@@ -108,6 +108,8 @@ public class FastRequestConfiguration implements Serializable {
 
     private List<HeaderGroup> headerGroupList = new ArrayList<>();
 
+    private List<DataMapping> globalHeaderList = new ArrayList<>();
+
     public List<String> getProjectList() {
         return projectList;
     }
@@ -236,5 +238,11 @@ public class FastRequestConfiguration implements Serializable {
         this.ignoreDataMappingList = ignoreDataMappingList;
     }
 
+    public List<DataMapping> getGlobalHeaderList() {
+        return globalHeaderList;
+    }
 
+    public void setGlobalHeaderList(List<DataMapping> globalHeaderList) {
+        this.globalHeaderList = globalHeaderList;
+    }
 }

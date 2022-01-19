@@ -110,6 +110,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.*;
 import java.util.concurrent.Future;
@@ -705,8 +706,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             HttpRequest request = HttpUtil.createRequest(Method.valueOf(methodType), domain + sendUrl);
             request.setMaxRedirectCount(10);
             headerParamsKeyValueList = headerParamsKeyValueList == null ? new ArrayList<>() : headerParamsKeyValueList;
+            List<DataMapping> globalHeaderList = config.getGlobalHeaderList();
+            globalHeaderList = globalHeaderList == null ? new ArrayList<>() : globalHeaderList;
+            Map<String, List<String>> globalHeaderMap = globalHeaderList.stream().filter(DataMapping::getEnabled).collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue()), (existing, replacement) -> existing));
             Map<String, List<String>> headerMap = headerParamsKeyValueList.stream().filter(DataMapping::getEnabled).collect(Collectors.toMap(DataMapping::getType, p -> Lists.newArrayList(p.getValue()), (existing, replacement) -> existing));
-            request.header(headerMap);
+            globalHeaderMap.putAll(headerMap);
+            request.header(globalHeaderMap);
             Map<String, Object> multipartFormParam = multipartKeyValueList.stream().filter(ParamKeyValue::getEnabled)
                     .collect(HashMap::new, (m, v) -> {
                         Object value = v.getValue();
@@ -2981,6 +2986,19 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         return null;
     }
 
+    private CollectionConfiguration.CollectionDetail filterClassGroupByName(String name, CollectionConfiguration.CollectionDetail detail) {
+        if (detail.getName().equals(name) && detail.getType() == 1) {
+            return detail;
+        }
+        for (CollectionConfiguration.CollectionDetail d : detail.getChildList()) {
+            CollectionConfiguration.CollectionDetail filterResult = filterClassGroupByName(name, d);
+            if (filterResult != null) {
+                return filterResult;
+            }
+        }
+        return null;
+    }
+
     private final class SaveRequestAction extends AnAction {
         public SaveRequestAction() {
             super(MyResourceBundleUtil.getKey("SaveRequest"), MyResourceBundleUtil.getKey("SaveRequest"), AllIcons.Actions.MenuSaveall);
@@ -3034,6 +3052,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             paramGroupCollection.setMultipartKeyValueListJson(JSON.toJSONString(multipartKeyValueList));
             collectionDetail.setParamGroup(paramGroupCollection);
             collectionDetail.setHeaderList(headerParamsKeyValueList);
+
+            String apiClassName = paramGroup.getClassName().substring(paramGroup.getClassName().lastIndexOf(".") + 1);
+            CollectionConfiguration.CollectionDetail classNameGroup = filterClassGroupByName(apiClassName, collectionConfiguration.getDetail());
+
             if (insertFlag) {
                 String module = paramGroup.getModule();
                 CollectionConfiguration.CollectionDetail root = collectionConfiguration.getDetail();
@@ -3043,11 +3065,30 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 if (module == null) {
                     group = defaultGroup;
                 } else {
-                    group = rootChildren.stream().filter(q -> module.equals(q.getName())).findFirst().orElse(defaultGroup);
+                    group = rootChildren.stream().filter(q -> module.equals(q.getName())).findFirst().orElse(null);
+                    if(group == null){
+                        group = new CollectionConfiguration.CollectionDetail();
+                        group.setId(new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()));
+                        group.setName(module);
+                        group.setType(1);
+                        rootChildren.add(group);
+                    }
                 }
-                List<CollectionConfiguration.CollectionDetail> childList = group.getChildList();
-                childList.add(collectionDetail);
-                group.setChildList(childList);
+
+
+                //classGroup
+                if(classNameGroup == null){
+                    CollectionConfiguration.CollectionDetail groupDetail = new CollectionConfiguration.CollectionDetail();
+                    groupDetail.setId(new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()));
+                    groupDetail.setName(apiClassName);
+                    groupDetail.setType(1);
+                    groupDetail.setChildList(Lists.newArrayList(collectionDetail));
+                    List<CollectionConfiguration.CollectionDetail> childList = group.getChildList();
+                    childList.add(groupDetail);
+                    group.setChildList(childList);
+                } else {
+                    classNameGroup.getChildList().add(collectionDetail);
+                }
             }
 
             //send message to change param

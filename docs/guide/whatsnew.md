@@ -20,6 +20,8 @@ gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-r
 * SearchEveryWhere module标识
 * Url解析优化
 * API navigate tree展示优化
+* API保存分组优化
+* 全局请求头支持
 
 :::tip 添加对导出api到Postman的支持
 
@@ -55,6 +57,20 @@ public class UrlTestController {
     method = {RequestMethod.POST}
 )
 ```
+:::
+
+:::tip API保存分组优化
+
+```
+保存api的时候,api将会保存到对应的请求指定到控制器名所在的分组(更加直观)
+```
+
+![save2ControllerGroup](../.vuepress/public/img/save2ControllerGroup.png)
+:::
+
+:::tip 全局请求头支持
+
+![globalRequestHeader](../.vuepress/public/img/globalRequestHeader.png)
 :::
 
 ## v2.1.1
