@@ -180,7 +180,7 @@ public class PostmanExportUtil {
             header.setKey(q.getType());
             header.setValue("{{" + q.getType() + "}}");
             header.setDisabled(!q.getEnabled());
-            headerMap.put(q.getType(), q.getType());
+            headerMap.put(q.getType(), q.getValue());
             return header;
         }).collect(Collectors.toList());
     }

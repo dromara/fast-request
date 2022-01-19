@@ -19,6 +19,8 @@ document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request
 * SearchEveryWhere show module
 * Optimize URL parsing
 * Optimize the display of api navigate tree
+* Optimize the group when save api
+* Global header params support
 
 :::tip Add support for export api to Postman
 
@@ -54,6 +56,21 @@ Scene 2: value is an array
     method = {RequestMethod.POST}
 )
 ```
+:::
+
+:::tip Optimize the group when save api
+
+```
+when saving the api,it will save to a group named controller's name
+
+```
+
+![save2ControllerGroup](../../.vuepress/public/img/save2ControllerGroup.png)
+:::
+
+:::tip Global header params support
+
+![globalRequestHeader](../../.vuepress/public/img/globalRequestHeader.png)
 :::
 
 ## v2.1.1

@@ -17,6 +17,7 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.collect.ImmutableMap;
 import com.intellij.icons.AllIcons;
@@ -62,11 +63,9 @@ import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.StatusText;
 import icons.PluginIcons;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent;
+import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
 import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
-import io.github.kings1990.plugin.fastrequest.model.CollectionConfiguration;
-import io.github.kings1990.plugin.fastrequest.model.DataMapping;
-import io.github.kings1990.plugin.fastrequest.model.ParamGroupCollection;
-import io.github.kings1990.plugin.fastrequest.model.PostmanCollection;
+import io.github.kings1990.plugin.fastrequest.model.*;
 import io.github.kings1990.plugin.fastrequest.util.*;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
 import io.github.kings1990.plugin.fastrequest.view.inner.ListAndSelectModule;
@@ -487,6 +486,13 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 } else {
                     headerParamsKeyValueList = fastRequestToolWindow.getHeaderParamsKeyValueList();
                 }
+                FastRequestConfiguration config = FastRequestComponent.getInstance().getState();
+                assert config != null;
+                List<DataMapping> globalHeaderList = config.getGlobalHeaderList();
+                List<DataMapping> globalHeaderListNew = JSONArray.parseArray(JSON.toJSONString(globalHeaderList), DataMapping.class);
+                globalHeaderListNew.removeIf(q->headerParamsKeyValueList.stream().anyMatch(p->p.getType().equals(q.getType())));
+                headerParamsKeyValueList.addAll(globalHeaderListNew);
+
                 PostmanCollection postmanCollection = PostmanExportUtil.getPostmanCollection(headerParamsKeyValueList,rootDetail,myProject.getName());
                 ExporterToTextFile exporterToTextFile = new ExporterToTextFile(){
 
