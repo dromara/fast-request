@@ -53,6 +53,7 @@ import com.intellij.ui.components.fields.ExtendableTextComponent;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.dualView.TreeTableView;
 import com.intellij.ui.popup.PopupFactoryImpl;
+import com.intellij.ui.treeStructure.Tree;
 import com.intellij.ui.treeStructure.treetable.ListTreeTableModelOnColumns;
 import com.intellij.ui.treeStructure.treetable.TreeColumnInfo;
 import com.intellij.ui.treeStructure.treetable.TreeTableTree;
@@ -68,7 +69,6 @@ import io.github.kings1990.plugin.fastrequest.configurable.ConfigChangeNotifier;
 import io.github.kings1990.plugin.fastrequest.model.*;
 import io.github.kings1990.plugin.fastrequest.util.*;
 import io.github.kings1990.plugin.fastrequest.view.component.CollectionNodeSelection;
-import io.github.kings1990.plugin.fastrequest.view.inner.ListAndSelectModule;
 import io.github.kings1990.plugin.fastrequest.view.model.CollectionCustomNode;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.IteratorUtils;
@@ -99,7 +99,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
@@ -113,6 +112,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     private DefaultActionGroup myInstalledSearchGroup;
     private Consumer<SearchOptionAction> mySearchCallback;
     private SearchTextField jbSearchPanelText;
+    private Tree tree;
 
     public FastRequestCollectionToolWindow(Project project, ToolWindow toolWindow) {
         super(true, false);
@@ -217,7 +217,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         rootDetail = config.getDetail();
         CollectionCustomNode root = convertToNode(rootDetail);
         ((DefaultTreeModel) collectionTable.getTableModel()).setRoot(root);
-        TreeTableTree tree = collectionTable.getTree();
+        tree = collectionTable.getTree();
         SwingUtil.expandAll(tree, new TreePath(root), true);
 
         TableColumnModel columnModel = collectionTable.getColumnModel();
@@ -450,6 +450,8 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 parentDetail.getChildList().removeIf(q -> q.getId().equals(node.getId()));
             }
         });
+
+        /**
         toolbarDecorator.addExtraAction(new ToolbarDecorator.ElementActionButton(MyResourceBundleUtil.getKey("button.addModuleGroup"), AllIcons.Nodes.ModuleGroup) {
             @Override
             public void actionPerformed(@NotNull AnActionEvent e) {
@@ -473,7 +475,32 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 return true;
             }
         });
+         */
+        toolbarDecorator.addExtraAction(new ToolbarDecorator.ElementActionButton("Expand All", AllIcons.Actions.Expandall) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                CollectionCustomNode node = new CollectionCustomNode("0", "Root", 1);
+                SwingUtil.expandAll(tree,new TreePath(tree.getModel().getRoot()),true);
+            }
 
+            @Override
+            public boolean isEnabled() {
+                return true;
+            }
+        });
+
+        toolbarDecorator.addExtraAction(new ToolbarDecorator.ElementActionButton("Collapse All", AllIcons.Actions.Collapseall) {
+            @Override
+            public void actionPerformed(@NotNull AnActionEvent e) {
+                CollectionCustomNode node = new CollectionCustomNode("0", "Root", 1);
+                SwingUtil.expandAll(tree,new TreePath(tree.getModel().getRoot()),false);
+            }
+
+            @Override
+            public boolean isEnabled() {
+                return true;
+            }
+        });
         toolbarDecorator.addExtraAction(new ToolbarDecorator.ElementActionButton(MyResourceBundleUtil.getKey("button.exportToPostman"), PluginIcons.ICON_POSTMAN) {
 
             @Override
