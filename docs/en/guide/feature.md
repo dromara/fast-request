@@ -92,6 +92,8 @@ If your request requires a token and the token can be obtained through a login i
 ## API group automatic association<Badge text="2.0.6" type="warning"/>
 The API group is to save the saved apis into different groups to distinguish different apis,When in a multi-module project,plugin support scan modules in projects,and quickly add the module name to the group, this way will add the group to the root group
 
+**v2.1.2 will automatically create module group**
+
 ![apiGroup](../../.vuepress/public/img/apiGroup_en.gif)
 
 :::tip Special Note
