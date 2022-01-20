@@ -91,6 +91,8 @@ import java.awt.*;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.DnDConstants;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -657,6 +659,19 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         table.setTransferHandler(new TransferHelper());
         table.setRootVisible(true);
         table.setVisible(true);
+        table.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent event) {
+                if (event.getClickCount() == 2 && event.getButton() == MouseEvent.BUTTON1) {
+                    int row = table.getSelectedRow();
+                    ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) collectionTable.getTableModel();
+                    CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
+                    if(node.getType() == 2){
+                        load(node);
+                    }
+                }
+            }
+        });
         return table;
     }
 
@@ -668,7 +683,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
         public Component getTableCellRendererComponent(JTable table, Object value,
                                                        boolean isSelected, boolean hasFocus, int row, int column) {
-            setIcon(PluginIcons.ICON_NAVIGATE);
+            setIcon(PluginIcons.ICON_LOCAL_SCOPE);
             setBackground(new JBColor(JBColor.WHITE, new Color(60, 63, 65)));
             return this;
         }
@@ -690,7 +705,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
                 CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
                 load(node);
             }
-            jButton.setIcon(PluginIcons.ICON_NAVIGATE);
+            jButton.setIcon(PluginIcons.ICON_LOCAL_SCOPE);
             return jButton;
         }
     }
