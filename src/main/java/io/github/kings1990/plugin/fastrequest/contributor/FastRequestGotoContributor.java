@@ -17,7 +17,6 @@
 package io.github.kings1990.plugin.fastrequest.contributor;
 
 import com.intellij.icons.AllIcons;
-import com.intellij.ide.actions.SearchEverywherePsiRenderer;
 import com.intellij.ide.actions.searcheverywhere.AbstractGotoSEContributor;
 import com.intellij.ide.actions.searcheverywhere.SearchEverywhereContributor;
 import com.intellij.ide.actions.searcheverywhere.SearchEverywhereContributorFactory;
@@ -29,7 +28,7 @@ import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleUtil;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
-import com.intellij.util.TextWithIcon;
+import io.github.kings1990.plugin.fastrequest.idea.SearchEverywherePsiRenderer;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -50,7 +49,32 @@ public class FastRequestGotoContributor extends AbstractGotoSEContributor  {
     @Override
     public @NotNull ListCellRenderer<Object> getElementsRenderer() {
         return new SearchEverywherePsiRenderer(this){
-            @Override
+
+            protected DefaultListCellRenderer getRightCellRenderer(final Object value) {
+                if(value instanceof RequestMappingItem){
+                    RequestMappingItem item = (RequestMappingItem) value;
+                    PsiElement psiElement = item.getPsiElement();
+                    Module module = ModuleUtil.findModuleForPsiElement(psiElement);
+                    if(module == null){
+                        return super.getRightCellRenderer(value);
+                    }
+
+                    return new DefaultListCellRenderer(){
+                        @Override
+                        public Icon getIcon() {
+                            return AllIcons.Nodes.Module;
+                        }
+
+                        @Override
+                        public String getText() {
+                            return module.getName();
+                        }
+                    };
+                }
+                return super.getRightCellRenderer(value);
+            }
+
+            /**
             protected @Nullable TextWithIcon getItemLocation(Object value) {
                 if(value instanceof RequestMappingItem){
                     RequestMappingItem item = (RequestMappingItem) value;
@@ -63,6 +87,7 @@ public class FastRequestGotoContributor extends AbstractGotoSEContributor  {
                 }
                 return super.getItemLocation(value);
             }
+             */
         };
     }
 
