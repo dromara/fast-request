@@ -220,10 +220,13 @@ public class CommonConfigView extends AbstractConfigurableView {
                 setGlobalHeaderTable(table);
             }
         }).setRemoveAction(event -> {
-            int selectedRow = table.getSelectedRow();
-            globalHeaderList.remove(selectedRow);
-            table.setModel(new ListTableModel<>(getGlobalColumnInfo(), globalHeaderList));
-            setGlobalHeaderTable(table);
+            int i = Messages.showOkCancelDialog("Delete it?", "Delete", "Delete", "Cancel", Messages.getInformationIcon());
+            if (i == 0) {
+                int selectedRow = table.getSelectedRow();
+                globalHeaderList.remove(selectedRow);
+                table.setModel(new ListTableModel<>(getGlobalColumnInfo(), globalHeaderList));
+                setGlobalHeaderTable(table);
+            }
         }).setToolbarPosition(ActionToolbarPosition.TOP);
         setGlobalHeaderTable(table);
         globalRequestHeaderPanel = toolbarDecorator.createPanel();
