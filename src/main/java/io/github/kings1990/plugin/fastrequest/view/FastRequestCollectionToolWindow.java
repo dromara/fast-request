@@ -91,6 +91,8 @@ import java.awt.*;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.dnd.DnDConstants;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -663,16 +665,31 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             @Override
             public void mouseClicked(MouseEvent event) {
                 if (event.getClickCount() == 2 && event.getButton() == MouseEvent.BUTTON1) {
-                    int row = table.getSelectedRow();
-                    ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) collectionTable.getTableModel();
-                    CollectionCustomNode node = (CollectionCustomNode) myModel.getRowValue(row);
-                    if(node.getType() == 2){
-                        load(node);
-                    }
+                    navigate(table);
                 }
             }
         });
+        table.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    navigate(table);
+                }
+            }
+        });
+
         return table;
+    }
+
+    private void navigate(TreeTableView table){
+        int row = table.getSelectedRow();
+        ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) collectionTable.getTableModel();
+        Object rowValue = myModel.getRowValue(row);
+        CollectionCustomNode node;
+        if(rowValue !=null && (node = (CollectionCustomNode) rowValue).getType() == 2){
+            load(node);
+        }
     }
 
     class ButtonRenderer extends JButton implements TableCellRenderer {
