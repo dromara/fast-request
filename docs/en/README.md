@@ -37,14 +37,26 @@ meta:
 [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
 
+<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
 
-### Use plugins instead of manual :100:
-```
-1.No longer write method parameters by hand anymore
-2.No longer need to pay attention to how to pass parameters
-3.No longer need to jump out of IDEA debugging interface
-4.The API and the code are linked, so there is no need to look around
-```
+### Features :100:
+> * [x] Generate url and parameters in one click
+> * [x] SearchEveryWhere support
+> * [x] APIs export to Postman
+> * [x] Send request to debug API
+> * [x] Send request and download
+> * [x] Domain customization and switching
+> * [x] Custom parameter parse
+> * [x] String generation strategy
+> * [x] Save api
+> * [x] Management API
+> * [x] One click location history save api to method
+> * [x] Api to curl
+> * [x] Built-in Json parameter editor
+> * [x] Automatically associate APIs to module groups
+> * [x] API navigate tree
+> * [x] Headers group
+
 
 ::: tip Notice  
 Make sure your IDEA version >= 2020.3+  
@@ -52,9 +64,11 @@ Make sure your IDEA version >= 2020.3+
 Of course, if there are any updates to the plugin, please make sure to update it to the latest version
 :::
 
-<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
-<br/>
-<iframe frameborder="none" width="384px" height="330px" src="https://plugins.jetbrains.com/embeddable/card/16988"></iframe>
+[comment]: <> (<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>)
+
+[comment]: <> (<br/>)
+
+[comment]: <> (<iframe frameborder="none" width="384px" height="330px" src="https://plugins.jetbrains.com/embeddable/card/16988"></iframe>)
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-FastRequest-x.svg?logo=IntelliJ%20IDEA

@@ -26,6 +26,7 @@ import com.intellij.ui.CollectionListModel;
 import com.intellij.util.messages.MessageBus;
 import com.intellij.util.ui.ListTableModel;
 import io.github.kings1990.plugin.fastrequest.config.FastRequestComponent;
+import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.HostGroup;
 import io.github.kings1990.plugin.fastrequest.model.NameGroup;
@@ -78,6 +79,14 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
             return true;
         }
 
+        //globalHeader
+        List<DataMapping> viewGlobalHeaderList = view.getGlobalHeaderList();
+        List<DataMapping> configGlobalHeaderList = config.getGlobalHeaderList();
+        boolean globalHeaderEqualFlag = judgeDataMappingEqual(viewGlobalHeaderList, configGlobalHeaderList);
+        if (!globalHeaderEqualFlag) {
+            return true;
+        }
+
         //table
         List<NameGroup> viewDataList = view.getViewDataList();
         List<NameGroup> configDataList = config.getDataList();
@@ -104,6 +113,12 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
 
         config.setEnableEnv(view.getViewEnableEnv());
         config.setEnableProject(view.getViewEnableProject());
+
+
+        //globalHeaderList
+        List<DataMapping> viewGlobalHeaderList = view.getGlobalHeaderList();
+        List<DataMapping> changeGlobalHeaderList = JSONArray.parseArray(JSON.toJSONString(viewGlobalHeaderList), DataMapping.class);
+        config.setGlobalHeaderList(changeGlobalHeaderList);
 
         //send message to change param
         DataContext dataContext = DataManager.getInstance().getDataContext(view.getComponent());
@@ -136,6 +151,29 @@ public class CommonConfigurable extends AbstractConfigConfigurable {
         view.setViewDataList(oldDataListNew);
         view.getTable().setModel(new ListTableModel<>(view.getColumnInfo(), oldDataListNew));
 
+
+        //globalHeaderList
+        List<DataMapping> oldGlobalHeaderList = config.getGlobalHeaderList();
+        List<DataMapping> oldGlobalHeaderListNew = JSONArray.parseArray(JSON.toJSONString(oldGlobalHeaderList), DataMapping.class);
+        if(view.getGlobalHeaderTable() != null){
+            view.setGlobalHeaderList(oldGlobalHeaderListNew);
+            view.getGlobalHeaderTable().setModel(new ListTableModel<>(view.getGlobalColumnInfo(), oldGlobalHeaderListNew));
+        }
+
+    }
+
+    public boolean judgeDataMappingEqual(List<DataMapping> list1, List<DataMapping> list2) {
+        if (list1.size() != list2.size()) {
+            return false;
+        }
+        for (int i = 0; i < list1.size(); i++) {
+            DataMapping dataMapping1 = list1.get(i);
+            DataMapping dataMapping2 = list2.get(i);
+            if (!dataMapping1.getType().equals(dataMapping2.getType()) || !dataMapping1.getValue().equals(dataMapping2.getValue())) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private boolean judgeEqual(List<String> list1, List<String> list2) {

@@ -29,8 +29,9 @@
     <ul>
         <li>API navigate tree</li>
         <li>SearchEveryWhere for api</li>
+        <li>APIs export to Postman</li>
         <li>Generate url and parameters in one click</li>
-        <li>Send request to debug API(support to modify the generated parameters)</li>
+        <li>Send request to debug API</li>
         <li>Send request and download</li>
         <li>Domain customization and switching</li>
         <li>Custom parameter parse</li>
@@ -47,8 +48,9 @@
     <ul>
         <li>API导航树</li>
         <li>SearchEveryWhere搜索API</li>
+        <li>API导出到Postman</li>
         <li>一键生成url和参数</li>
-        <li>发送请求调试API(支持修改生成的参数)</li>
+        <li>发送请求调试API</li>
         <li>发送请求并下载文件</li>
         <li>域名定制及切换</li>
         <li>自定义参数解析</li>
@@ -62,6 +64,8 @@
     </ul>
     <br/>
     <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/example.png" />
+    <h2>SearchEveryWhere for API</h2>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/searchEveryWhere.png" /><br/>
     <h2>API manager</h2>
     <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apis.png" /><br/>
     <h2>API navigate</h2>
@@ -69,10 +73,13 @@
 
     <h3>Latest changes</h3>
     <ul>
-        <li>SearchEveryWhere support(SearchEveryWhere支持)</li>
-        <li>Add a what's new button to view the latest version at any time(增加一个最新变化按钮可以随时查看最新版本)</li>
-        <li>Optimize the parsing of enum(优化枚举的解析)</li>
-        <li>Add support for http redirect(增加对http重定向的支持)</li>
+        <li>Add support for export api to Postman(添加对导出api到Postman的支持)</li>
+        <li>Open the idea lazy loading API Navigate tree for the first time(首次打开idea懒加载API Navigate树)</li>
+        <li>SearchEveryWhere show module(SearchEveryWhere module标识)</li>
+        <li>Optimize URL parsing(Url解析优化)</li>
+        <li>Optimize the display of api navigate tree(API navigate tree展示优化)</li>
+        <li>Optimize the group when save api(API保存分组优化)</li>
+        <li>Global header params support(全局请求头支持)</li>
     </ul>
     ]]>
     </description>
@@ -84,6 +91,7 @@
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
     <depends>com.intellij.java</depends>
+    <depends>org.intellij.plugins.markdown</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -123,6 +131,9 @@
         <!--                order="after DefaultFloatingToolbarProvider"-->
         <!--                implementation="io.github.kings1990.plugin.fastrequest.editor.FastRequestFloatingToolbarProvider"-->
         <!--                id="fastRequestEditorFloatingToolbarProvider"/>-->
+
+        <errorHandler
+                implementation="io.github.kings1990.plugin.fastrequest.diagnostic.FastRequestErrorReportSubmitter"/>
     </extensions>
 
     <actions>
@@ -153,7 +164,10 @@
         </group>
 
         <group id="fastRequest.editor.floatGroup">
-            <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction"/>
+            <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction">
+                <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            </action>
+
         </group>
 
         <action id="fastRequest.gotoFastRequest"

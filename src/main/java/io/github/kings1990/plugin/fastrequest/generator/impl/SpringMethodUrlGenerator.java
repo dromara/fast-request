@@ -22,6 +22,7 @@ import com.intellij.openapi.module.ModuleUtil;
 import com.intellij.psi.*;
 import com.intellij.psi.impl.source.PsiClassReferenceType;
 import com.intellij.psi.impl.source.PsiMethodImpl;
+import com.intellij.psi.impl.source.tree.java.PsiReferenceExpressionImpl;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.javadoc.PsiDocToken;
 import com.intellij.psi.util.PsiUtil;
@@ -139,7 +140,26 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
             return StringUtils.EMPTY;
         }
 
-        String url = value.getText();
+        String url;
+        if(value instanceof PsiReferenceExpression){
+            PsiField psiField = (PsiField) ((PsiReferenceExpression)value).resolve();
+            url = psiField == null ? "" : psiField.getInitializer() == null? "" : psiField.getInitializer().getText();
+        } else if(value instanceof PsiArrayInitializerMemberValue){
+            PsiAnnotationMemberValue[] initializers = ((PsiArrayInitializerMemberValue) value).getInitializers();
+            if(initializers.length > 0){
+                PsiAnnotationMemberValue initializer = ((PsiArrayInitializerMemberValue) value).getInitializers()[0];
+                if(initializer instanceof PsiReferenceExpression){
+                    PsiField psiField = (PsiField) ((PsiReferenceExpression)initializer).resolve();
+                    url = psiField == null ? "" : psiField.getInitializer() == null? "" : psiField.getInitializer().getText();
+                } else {
+                    url = initializer.getText();
+                }
+            } else {
+                url = "";
+            }
+        } else {
+            url = value.getText();
+        }
         List<DataMapping> urlReplaceMappingList = config.getUrlReplaceMappingList();
         for (DataMapping dataMapping : urlReplaceMappingList) {
             url = url.replace(dataMapping.getType(), dataMapping.getValue());
@@ -172,7 +192,14 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         if (value == null) {
             return StringUtils.EMPTY;
         }
-        String classUrl = value.getText();
+        String classUrl;
+        if(value instanceof PsiReferenceExpression){
+            PsiField psiField = (PsiField) ((PsiReferenceExpressionImpl)value).resolve();
+            classUrl = psiField == null ? "" : psiField.getInitializer() == null? "" : psiField.getInitializer().getText();
+        } else {
+            classUrl = value.getText();
+        }
+
         List<DataMapping> urlReplaceMappingList = config.getUrlReplaceMappingList();
         for (DataMapping dataMapping : urlReplaceMappingList) {
             classUrl = classUrl.replace(dataMapping.getType(),dataMapping.getValue());
@@ -264,7 +291,17 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
                         //默认返回GET
                         return "GET";
                     }
-                    String methodText = method.getText();
+                    String methodText;
+                    if(method instanceof  PsiArrayInitializerMemberValue){
+                        PsiAnnotationMemberValue[] initializers = ((PsiArrayInitializerMemberValue) method).getInitializers();
+                        if(initializers.length > 0){
+                            methodText = ((PsiArrayInitializerMemberValue)method).getInitializers()[0].getText();
+                        } else {
+                            methodText = "";
+                        }
+                    } else {
+                        methodText = method.getText();
+                    }
                     String method0 = methodText.split(",")[0];
                     return method0.substring(method0.lastIndexOf(".") + 1);
                 }

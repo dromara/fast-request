@@ -39,23 +39,39 @@ meta:
 [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
 
-### 用插件代替手工 :100:
-```
-1.再也不用手写方法参数了
-2.再也不用关注如何传参了
-3.再也不用在跳出IDEA调试接口了
-4.API和代码关联起来了,不用到处找了
-```
+<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
+
+### 功能  :100:
+
+* [x] 一键生成url和参数
+* [x] SearchEveryWhere支持
+* [x] API导出到Postman
+* [x] 发送请求调试API(支持修改生成的参数)
+* [x] 发送请求并下载文件
+* [x] 域名定制及切换
+* [x] 自定义参数解析
+* [x] 字符串生成策略化
+* [x] 保存API
+* [x] 管理API(搜索过滤、修改API名称)
+* [x] 一键定位历史保存的API到方法
+* [x] API转curl
+* [x] 自动将API关联到模块分组
+* [x] 内置Json参数编辑器
+* [x] API导航树
+* [x] Headers分组
+
+
+[comment]: <> (<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>)
+
+[comment]: <> (<br/>)
+
+[comment]: <> (<iframe frameborder="none" width="384px" height="330px" src="https://plugins.jetbrains.com/embeddable/card/16988"></iframe>)
 
 ::: tip 注意  
 请确保你的 IDEA版本 版本 >= 2020.3+
 
 当然请如果插件有更新，请确保更新成最新版本
 :::
-
-<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
-<br/>
-<iframe frameborder="none" width="384px" height="330px" src="https://plugins.jetbrains.com/embeddable/card/16988"></iframe>
 
 ### 特别鸣谢
 

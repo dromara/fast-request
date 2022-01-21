@@ -17,6 +17,7 @@
 package io.github.kings1990.plugin.fastrequest.view;
 
 import com.alibaba.fastjson.JSONObject;
+import com.google.common.collect.Lists;
 import com.intellij.openapi.actionSystem.ActionToolbarPosition;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.ui.CollectionListModel;
@@ -26,11 +27,14 @@ import com.intellij.ui.table.JBTable;
 import com.intellij.ui.treeStructure.treetable.TreeTableModel;
 import com.intellij.util.ui.ColumnInfo;
 import com.intellij.util.ui.ListTableModel;
+import io.github.kings1990.plugin.fastrequest.model.DataMapping;
 import io.github.kings1990.plugin.fastrequest.model.FastRequestConfiguration;
 import io.github.kings1990.plugin.fastrequest.model.HostGroup;
 import io.github.kings1990.plugin.fastrequest.model.NameGroup;
 import io.github.kings1990.plugin.fastrequest.view.inner.EnvAddView;
+import io.github.kings1990.plugin.fastrequest.view.inner.GlobalHeaderAddView;
 import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import javax.swing.table.TableColumn;
@@ -43,6 +47,7 @@ public class CommonConfigView extends AbstractConfigurableView {
     private JPanel tablePanel;
     private JPanel envListPanel;
     private JPanel projectNameListPanel;
+    private JPanel globalRequestHeaderPanel;
     private JBList<String> envJbList;
     private JBList<String> projectNameJbList;
     private JBTable table;
@@ -52,6 +57,10 @@ public class CommonConfigView extends AbstractConfigurableView {
     private List<NameGroup> viewDataList;
     private String viewEnableEnv;
     private String viewEnableProject;
+
+    private List<DataMapping> globalHeaderList;
+    private JBTable globalHeaderTable;
+
 
 
     public CommonConfigView(FastRequestConfiguration config) {
@@ -76,6 +85,7 @@ public class CommonConfigView extends AbstractConfigurableView {
         renderingEnvPanel(configOld);
         renderingProjectPanel(configOld);
         renderingTablePanel();
+        renderingGlobalRequestHeaderPanel(configOld);
     }
 
     /**
@@ -186,6 +196,98 @@ public class CommonConfigView extends AbstractConfigurableView {
         envListPanel = toolbarDecoratorEnv.createPanel();
     }
 
+    private void renderingGlobalRequestHeaderPanel(FastRequestConfiguration configOld){
+        globalHeaderList = configOld.getGlobalHeaderList();
+        if(globalHeaderList == null){
+            globalHeaderList = new ArrayList<>();
+        }
+        JBTable table = createGlobalRequestHeaderTable();
+        table.getEmptyText().setText("Key:token  Value:xxx");
+        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table, null);
+        toolbarDecorator.setMoveDownAction(null);
+        toolbarDecorator.setMoveUpAction(null);
+
+        toolbarDecorator.setAddAction(event -> {
+            GlobalHeaderAddView dataMappingAddView = new GlobalHeaderAddView();
+            if (dataMappingAddView.showAndGet()) {
+                DataMapping dataMapping = dataMappingAddView.getValue();
+                if (globalHeaderList.stream().anyMatch(q -> dataMapping.getType().equals(q.getType()))) {
+                    Messages.showMessageDialog("Key already exist", "Error", Messages.getInformationIcon());
+                    return;
+                }
+                globalHeaderList.add(dataMapping);
+                table.setModel(new ListTableModel<>(getGlobalColumnInfo(), globalHeaderList));
+                setGlobalHeaderTable(table);
+            }
+        }).setRemoveAction(event -> {
+            int i = Messages.showOkCancelDialog("Delete it?", "Delete", "Delete", "Cancel", Messages.getInformationIcon());
+            if (i == 0) {
+                int selectedRow = table.getSelectedRow();
+                globalHeaderList.remove(selectedRow);
+                table.setModel(new ListTableModel<>(getGlobalColumnInfo(), globalHeaderList));
+                setGlobalHeaderTable(table);
+            }
+        }).setToolbarPosition(ActionToolbarPosition.TOP);
+        setGlobalHeaderTable(table);
+        globalRequestHeaderPanel = toolbarDecorator.createPanel();
+    }
+
+    public JBTable createGlobalRequestHeaderTable() {
+        ColumnInfo<Object, Object>[] columns = getGlobalColumnInfo();
+        ListTableModel<DataMapping> model = new ListTableModel<>(columns, globalHeaderList);
+        JBTable table = new JBTable(model) {
+            @Override
+            public Object getValueAt(int row, int column) {
+                if (globalHeaderList.isEmpty()) {
+                    return StringUtils.EMPTY;
+                }
+                DataMapping dataMapping = globalHeaderList.get(row);
+                if (dataMapping == null) {
+                    return StringUtils.EMPTY;
+                }
+                if (column == 0) {
+                    return dataMapping.getType();
+                } else {
+                    return dataMapping.getValue();
+                }
+            }
+
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return true;
+            }
+
+            @Override
+            public void setValueAt(Object aValue, int row, int column) {
+                DataMapping dataMapping = globalHeaderList.get(row);
+                if (column == 0) {
+                    dataMapping.setType(aValue.toString());
+                } else {
+                    dataMapping.setValue(aValue.toString());
+                }
+            }
+
+        };
+        table.setVisible(true);
+        return table;
+    }
+
+    public ColumnInfo<Object, Object>[] getGlobalColumnInfo() {
+        ArrayList<String> columnListName = Lists.newArrayList("Key", "Value");
+        ColumnInfo<Object, Object>[] columnArray = new ColumnInfo[columnListName.size()];
+        for (int i = 0; i < columnListName.size(); i++) {
+            ColumnInfo<Object, Object> envColumn = new ColumnInfo<>(columnListName.get(i)) {
+                @Override
+                public @Nullable Object valueOf(Object o) {
+                    return o;
+                }
+            };
+            columnArray[i] = envColumn;
+        }
+        return columnArray;
+    }
+
+    
     /**
      * 修改Env->刷新数据列表
      *
@@ -420,4 +522,19 @@ public class CommonConfigView extends AbstractConfigurableView {
         this.viewEnableProject = viewEnableProject;
     }
 
+    public List<DataMapping> getGlobalHeaderList() {
+        return globalHeaderList;
+    }
+
+    public void setGlobalHeaderList(List<DataMapping> globalHeaderList) {
+        this.globalHeaderList = globalHeaderList;
+    }
+
+    public JBTable getGlobalHeaderTable() {
+        return globalHeaderTable;
+    }
+
+    public void setGlobalHeaderTable(JBTable globalHeaderTable) {
+        this.globalHeaderTable = globalHeaderTable;
+    }
 }
