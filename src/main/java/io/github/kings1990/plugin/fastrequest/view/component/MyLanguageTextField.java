@@ -17,6 +17,7 @@
 package io.github.kings1990.plugin.fastrequest.view.component;
 
 import com.intellij.lang.Language;
+import com.intellij.openapi.application.ReadAction;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.EditorSettings;
@@ -54,7 +55,7 @@ public class MyLanguageTextField extends LanguageTextField {
     @Override
     public void setText(@Nullable String text) {
         super.setFileType(fileType);
-//        ReadAction.nonBlocking(() -> {
+        ReadAction.nonBlocking(() -> {
         Document document = createDocument(text, language, myProject, new SimpleDocumentCreator());
         setDocument(document);
         PsiFile psiFile = PsiDocumentManager.getInstance(myProject).getPsiFile(document);
@@ -66,7 +67,7 @@ public class MyLanguageTextField extends LanguageTextField {
                     }
             );
         }
-//        }).executeSynchronously();
+        }).executeSynchronously();
     }
 
     private void setUpEditor(EditorEx editor) {

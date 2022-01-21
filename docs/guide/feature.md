@@ -1,6 +1,7 @@
 # 功能
 * 一键生成url和参数
 * SearchEveryWhere支持<Badge text="new" />
+* API导出到Postman<Badge text="new" />
 * 发送请求调试API(支持修改生成的参数)
 * 发送请求并下载文件
 * 域名定制及切换
@@ -19,7 +20,7 @@
 
 ![example](../.vuepress/public/img/example.gif)
 
-## SearchEveryWhere支持
+## SearchEveryWhere支持<Badge text="2.1.1" />
 
 ```
 输入案例
@@ -35,6 +36,9 @@ post /save        (指定post方式指定url)
 点击Send and download
 
 ![example_download](../.vuepress/public/img/downloadFile.gif)
+
+## API导出到Postman<Badge text="2.1.2" type="error"/>
+![export2postman](../.vuepress/public/img/export2postman.gif)
 
 ## API列表<Badge text="2.0.1" type="warning"/>
 
@@ -86,6 +90,8 @@ else
 
 ## API分组自动关联<Badge text="2.0.6" type="warning"/>
 api分组是为了将保存的api保存到不同分组以便区分不同的api,当处于多模块的项目情况下,支持扫秒项目中的module,并且快速得将module添加到分组中,这种方式会将分组添加到root下
+
+**v2.1.2保存api的时候自动创建module group**
 
 ![apiGroup](../.vuepress/public/img/apiGroup.gif)
 

@@ -49,11 +49,14 @@
 > 下载文件
 ![example_download](./screenshot/downloadFile.gif)
 
-> api管理
+> Api管理
 ![api manage](./screenshot/apis_hd.png)
 
-> api导航
+> Api导航
 ![apinav](./screenshot/apinav.gif)
+
+> Api导出到postman
+![export2postman](./docs/.vuepress/public/img/export2postman.gif)
 
 # Document
 

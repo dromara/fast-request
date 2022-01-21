@@ -12,6 +12,67 @@ document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request
 
 :::
 
+## v2.1.2
+
+* Add support for export api to Postman
+* Open the idea lazy loading API Navigate tree for the first time
+* SearchEveryWhere show module
+* Optimize URL parsing
+* Optimize the display of api navigate tree
+* Optimize the group when save api
+* Global header params support
+
+:::tip Add support for export api to Postman
+
+![export2postman](../../.vuepress/public/img/export2postman.gif)
+:::
+
+:::tip SearchEveryWhere show module
+
+![searchEveryWhereModule](../../.vuepress/public/img/searchEveryWhereModule.png)
+:::
+
+:::tip Optimize URL parsing
+
+```
+support parse like following example
+no longer need to configure the URL Replace Config separately
+
+Scene 1: URLS are class constant references
+@RequestMapping(Url1.URL_TEST)
+@RestController
+public class UrlTestController {
+    private static final String URL= "xxx";
+
+    @GetMapping(value = URL)
+    public Integer testUrl(){
+        return 1;
+    }
+}
+
+Scene 2: value is an array
+@RequestMapping(
+    value = {"/v1/save"},
+    method = {RequestMethod.POST}
+)
+```
+:::
+
+:::tip Optimize the group when save api
+
+```
+when saving the api,it will save to a group named controller's name
+
+```
+
+![save2ControllerGroup](../../.vuepress/public/img/save2ControllerGroup.png)
+:::
+
+:::tip Global header params support
+
+![globalRequestHeader](../../.vuepress/public/img/globalRequestHeader.png)
+:::
+
 ## v2.1.1
 
 * SearchEveryWhere support

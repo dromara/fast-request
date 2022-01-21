@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 
 
-public final class RequestMappingItem implements NavigationItem {
+public  class RequestMappingItem implements NavigationItem {
    private final Navigatable navigationElement;
    @NotNull
    private final PsiElement psiElement;
