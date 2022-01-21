@@ -28,6 +28,7 @@
 
 * API导航树
 * SearchEveryWhere搜索API
+* API导出到Postman
 * 一键生成url和参数
 * 发送请求调试API(支持修改生成的参数)
 * 域名定制及切换

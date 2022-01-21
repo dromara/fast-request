@@ -36,6 +36,7 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 
 * API navigate tree
 * SearchEveryWhere for api
+* APIs export to Postman
 * Generate url and parameters in one click
 * Send request to debug API(support to modify the generated parameters)
 * Domain customization and switching
