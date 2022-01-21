@@ -40,6 +40,7 @@ meta:
 <iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
 
 ### Features :100:
+
 > * [x] Generate url and parameters in one click
 > * [x] SearchEveryWhere support
 > * [x] APIs export to Postman
@@ -64,11 +65,6 @@ Make sure your IDEA version >= 2020.3+
 Of course, if there are any updates to the plugin, please make sure to update it to the latest version
 :::
 
-[comment]: <> (<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>)
-
-[comment]: <> (<br/>)
-
-[comment]: <> (<iframe frameborder="none" width="384px" height="330px" src="https://plugins.jetbrains.com/embeddable/card/16988"></iframe>)
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-FastRequest-x.svg?logo=IntelliJ%20IDEA
