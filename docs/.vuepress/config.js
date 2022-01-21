@@ -48,6 +48,7 @@ module.exports = config({
         mdEnhance: {
           align: true,
           tasklist: true,
+          container: true,
         },
         themeColor: {
               blue: "#087CFA",
