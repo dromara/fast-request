@@ -15,7 +15,7 @@ features:
 - title: Efficiency comes first
   details: Only need simple configuration to generate method api request, thus saving a lot of time
 - title: Rich features
-  details: Generate url and parameters in one click、send API request、download file、Store history request、Custom parameter parse、API to curl...
+  details: Generate url and parameters、SearchEveryWhere support、API export to postman、send/download request、Store request、Custom parameter parse、API to curl...
 footer: Apache License 2.0 | Copyright © 2021-present Kings 
 meta:
   - name: keywords

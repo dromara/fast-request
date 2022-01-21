@@ -15,7 +15,7 @@ features:
 - title: 效率至上
   details: 只需要简单配置即可生成方法的api请求，从而节省大量时间
 - title: 功能丰富
-  details: 一键生成url和参数、发送API请求、下载文件、存储历史请求、域名定制及切换、字符串生成策略化、自定义参数解析、API转curl等
+  details: 一键生成url和参数、SearchEveryWhere搜索、api导出到postman、发送API请求、下载文件、存储历史请求、域名定制及切换、字符串生成策略化、自定义参数解析、API转curl等
 footer: Apache License 2.0 | Copyright © 2021-present Kings
 
 meta:
