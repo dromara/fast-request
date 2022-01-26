@@ -23,16 +23,6 @@ gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-r
 * API保存分组优化
 * 全局请求头支持
 
-:::tip 添加对导出api到Postman的支持
-
-![export2postman](../.vuepress/public/img/export2postman.gif)
-:::
-
-:::tip SearchEveryWhere module标识
-
-![searchEveryWhereModule](../.vuepress/public/img/searchEveryWhereModule.png)
-:::
-
 :::tip Url解析优化
 
 ```
@@ -57,6 +47,16 @@ public class UrlTestController {
     method = {RequestMethod.POST}
 )
 ```
+:::
+
+:::tip 添加对导出api到Postman的支持
+
+![export2postman](../.vuepress/public/img/export2postman.gif)
+:::
+
+:::tip SearchEveryWhere module标识
+
+![searchEveryWhereModule](../.vuepress/public/img/searchEveryWhereModule.png)
 :::
 
 :::tip API保存分组优化
