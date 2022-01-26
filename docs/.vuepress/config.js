@@ -70,6 +70,10 @@ module.exports = config({
       docsBranch: 'master',
       // 默认是 false, 设置为 true 来启用
       editLinks: true,
+      footer: {
+            display: true,
+            content: "Apache License 2.0 | Copyright © 2021-present Kings",
+      },
       locales: {
             '/en/': {
 
