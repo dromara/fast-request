@@ -22,15 +22,6 @@ document:[https://dromara.org/fast-request/en/](https://dromara.org/fast-request
 * Optimize the group when save api
 * Global header params support
 
-:::tip Add support for export api to Postman
-
-![export2postman](../../.vuepress/public/img/export2postman.gif)
-:::
-
-:::tip SearchEveryWhere show module
-
-![searchEveryWhereModule](../../.vuepress/public/img/searchEveryWhereModule.png)
-:::
 
 :::tip Optimize URL parsing
 
@@ -56,6 +47,16 @@ Scene 2: value is an array
     method = {RequestMethod.POST}
 )
 ```
+:::
+
+:::tip Add support for export api to Postman
+
+![export2postman](../../.vuepress/public/img/export2postman.gif)
+:::
+
+:::tip SearchEveryWhere show module
+
+![searchEveryWhereModule](../../.vuepress/public/img/searchEveryWhereModule.png)
 :::
 
 :::tip Optimize the group when save api
