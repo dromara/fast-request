@@ -146,8 +146,11 @@ public class AllApisNavToolWindow extends SimpleToolWindowPanel implements Dispo
                         long count = filterMethodList.stream().filter(q -> selectMethodType.contains(q.getMethodType())).count();
                         RootNode root = new RootNode(count + " apis") {
                         };
-
-                        NodeUtil.convertToRoot(root, NodeUtil.convertToMap(filterList), selectMethodType);
+                        NodeUtil.convertToRoot(root, NodeUtil.convertToMap(
+                                filterList.stream().filter(q->CollectionUtil.isNotEmpty(q.getApiMethodList()))
+                                        .filter(q->q.getApiMethodList().stream().anyMatch(p->selectMethodType.contains(p.getMethodType())))
+                                        .collect(Collectors.toList())
+                        ), selectMethodType);
                         apiTree.setModel(new DefaultTreeModel(root));
                     });
                 }
