@@ -73,14 +73,20 @@
 
     <h3>Latest changes</h3>
     <ul>
-        <li>Add support for export api to Postman(添加对导出api到Postman的支持)</li>
-        <li>Open the idea lazy loading API Navigate tree for the first time(首次打开idea懒加载API Navigate树)</li>
-        <li>SearchEveryWhere show module(SearchEveryWhere module标识)</li>
-        <li>Optimize URL parsing(Url解析优化)</li>
-        <li>Optimize the display of api navigate tree(API navigate tree展示优化)</li>
-        <li>Optimize the group when save api(API保存分组优化)</li>
-        <li>Global header params support(全局请求头支持)</li>
+        <li>English
+            <ul>
+                <li>Add encode support for special symbol in parameter</li>
+            </ul>
+        </li>
+        <li>中文
+            <ul>
+                <li>参数特殊符号编码支持</li>
+            </ul>
+        </li>
     </ul>
+
+
+
     ]]>
     </description>
 

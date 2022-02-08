@@ -729,15 +729,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             Map<String, Object> urlParam = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue, (existing, replacement) -> existing));
             String jsonParam = ((LanguageTextField) jsonParamsTextArea).getText();
-            StringBuilder urlEncodedParam = new StringBuilder("");
+            Map<String, Object> formMap = new HashMap<>();
             urlEncodedKeyValueList.stream().filter(ParamKeyValue::getEnabled).forEach(q -> {
-                urlEncodedParam.append(q.getKey()).append("=").append(q.getValue()).append("&");
+                formMap.put(q.getKey(),q.getValue());
             });
 
             boolean formFlag = true;
             //json优先
-            if (StringUtils.isNotEmpty(urlEncodedParam)) {
-                request.body(StringUtils.removeEnd(urlEncodedParam.toString(), "&"));
+            if (!formMap.isEmpty()) {
+                request.form(formMap);
                 formFlag = false;
             }
             if (StringUtils.isNotEmpty(jsonParam)) {
@@ -746,7 +746,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
 
             if (!urlParam.isEmpty()) {
-                String queryParam = UrlQuery.of(urlParam).toString();
+                String queryParam = UrlQuery.of(urlParam).build(StandardCharsets.UTF_8);
                 request.setUrl(request.getUrl() + "?" + queryParam);
             }
             if (!multipartFormParam.isEmpty() && formFlag) {
