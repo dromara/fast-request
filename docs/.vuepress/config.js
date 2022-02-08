@@ -110,6 +110,7 @@ module.exports = config({
                             'getstarted',
                             'feature',
                             'whatsnew',
+                            'history',
                             'faq'
                         ]
                     }]
@@ -153,6 +154,7 @@ module.exports = config({
                             'getstarted',
                             'feature',
                             'whatsnew',
+                            'history',
                             'faq',
                             'donate'
                         ]
