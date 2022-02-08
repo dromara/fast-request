@@ -649,6 +649,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         for (DataMapping header : headerList) {
             sb.append("-H '").append(header.getType()).append(": ").append(header.getValue()).append("' \\\n");
         }
+        config.getGlobalHeaderList().stream().filter(DataMapping::getEnabled).forEach(globalHeader->
+            sb.append("-H '").append(globalHeader.getType()).append(": ").append(globalHeader.getValue()).append("' \\\n")
+        );
         if (StringUtils.isNotEmpty(jsonParam) && !"{}".equals(jsonParam) && !"[]".equals(jsonParam)) {
             sb.append("-H '").append("Content-Type: application/json").append("' \\\n");
         }
