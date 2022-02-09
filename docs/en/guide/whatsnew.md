@@ -1,4 +1,7 @@
-# What's new
+---
+title: What's new
+icon: whats-new
+---
 
 :::danger Project and document address change
 

@@ -1,4 +1,7 @@
-# History changes
+---
+title: History changes
+icon: changelog
+---
 
 ## v2.1.2
 
