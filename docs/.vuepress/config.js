@@ -81,7 +81,7 @@ module.exports = config({
                 nav: [
                     {
                         text: 'Guide',
-                        link: '/en/guide/',
+                        link: '/en/guide/introduce',
                         icon: "config"
                     },
                     {
@@ -135,7 +135,7 @@ module.exports = config({
                 nav: [
                     {
                         text: '指南',
-                        link: '/guide/',
+                        link: '/guide/introduce',
                         icon: "config"
                     },
                     {
