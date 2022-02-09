@@ -1,4 +1,7 @@
-# 最新变化
+---
+title: 最新变化
+icon: whats-new
+---
 
 ::: danger 加入了组织Dromara
 

@@ -1,4 +1,7 @@
-# Features
+---
+title: Features
+icon: tools
+---
 
 * Generate url and parameters in one click
 * SearchEveryWhere support<Badge text="new" />

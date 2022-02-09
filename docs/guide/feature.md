@@ -1,4 +1,8 @@
-# 功能
+---
+title: 功能
+icon: tools
+---
+
 * 一键生成url和参数
 * SearchEveryWhere支持<Badge text="new" />
 * API导出到Postman<Badge text="new" />
