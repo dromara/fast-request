@@ -11,7 +11,7 @@ action:
         link: /guide/feature
 features:
 - title: 基于原生
-  details: 集成IDEA工具，开源免费
+  details: 集成IDEA工具
 - title: 效率至上
   details: 只需要简单配置即可生成方法的api请求，从而节省大量时间
 - title: 功能丰富
@@ -66,82 +66,6 @@ meta:
 
 当然请如果插件有更新，请确保更新成最新版本
 :::
-
-### 特别鸣谢
-
-为Restful Fast Request提供宣传、托管等服务
-
-[![](./.vuepress/public/img/org/gitee.svg)](https://gitee.com)
-[![](./.vuepress/public/img/org/OSChina.svg)](https://www.oschina.net)
-
-### Dromara成员项目
-
-> [**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
-
-<div>
-    <div style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">
-        <a target="_blank" href="https://hutool.cn/">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/hutool.svg"></a>
-    </div>
-    <div style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">
-        <a target="_blank" href="http://forest.dtflyx.com/">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/forest.png"></a>
-    </div>
-    <div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://gitee.com/dromara/hmily">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/hmily.png"></a>
-    </div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://tlog.yomahub.com/">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/tlog.png">
-    </a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://gitee.com/dromara/myth">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/myth.png">
-    </a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://gitee.com/dromara/Raincat">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/raincat.png">
-    </a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://liteflow.yomahub.com/">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/liteflow.png">
-    </a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://maxkey.top/">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/maxkey.png">
-    </a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://sa-token.dev33.cn/">
-        <img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/sa-token.png">
-    </a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block;">
-    <a target="_blank" href="https://gitee.com/dromara/koalas-rpc" style="display:inline-block;vertical-align: middle;"><img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/koalas-rpc.png">
-<span>koalas-rpc</span></a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://su.usthe.com/"><img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/sureness.png"></a>
-</div>
-
-<div style="width:16%; padding:15px 15px 15px 15px; display:inline-block">
-    <a target="_blank" href="https://gitee.com/Apache-ShenYu/incubator-shenyu"><img height="36px" src="https://cdn.jsdelivr.net/gh/looly/hutool-site/images/friends/shenyu.png"></a>
-</div>
-</div>
-
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 
