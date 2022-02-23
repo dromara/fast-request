@@ -2,7 +2,7 @@
 title: String generation strategy
 icon: string
 ---
-## 
+
 ```
 strategy
 * name+random(field name + random string)
