@@ -2,7 +2,7 @@
 title: String生成策略
 icon: string
 ---
-## 
+
 ```
 策略
 * name+random(字段名加随机字符串)
