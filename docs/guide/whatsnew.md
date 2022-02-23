@@ -3,19 +3,16 @@ title: 最新变化
 icon: whats-new
 ---
 
-::: danger 加入了组织Dromara
+::: danger 关于v2.1.4开始将开始步入收费的预告
 
-[**Dromara**](https://dromara.org/zh/) (致力于微服务云原生解决方案的组织)
-
-github: [https://github.com/dromara/fast-request](https://github.com/dromara/fast-request)
-
-gitee: [https://gitee.com/dromara/fast-request](https://gitee.com/dromara/fast-request)
-
-中文文档:[https://plugins.sheng90.wang/fast-request/](https://plugins.sheng90.wang/fast-request)
-或者[https://dromara.org/fast-request/](https://dromara.org/fast-request/)
+1. v2.1.3将是最后的一个免费版本, 为了提供更好更细致化的功能,从v2.1.4开始将开启pro模式,届时会加入更多、更强大的功能,以及对细节的优化
+2. 不劳则无获,尊重知识,文明方可进步.白嫖到最后就是烂尾的结局,无一例外,项目会一直良好得发展
+3. 插件也会制定合理亲民的价格,让每一个开发者依然可以锁心所欲得用插件
+4. 届时也将召集10名活跃的内测用户,分发免费的license,帮忙测试,提合理化建议
 
 :::
 
 ## v2.1.3
 
 * 参数特殊符号编码支持
+* curl加入global headers

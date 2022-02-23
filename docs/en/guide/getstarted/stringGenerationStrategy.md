@@ -4,12 +4,12 @@ icon: string
 ---
 ## 
 ```
-策略
-* name+random(字段名加随机字符串)
-* random(随机字符串)
-* none(不生成)
+strategy
+* name+random(field name + random string)
+* random(random string)
+* none(not generate)
 ```
 
 ::: tip example
-![](../../../.vuepress/public/img/stringGenerate.png)
+![](../../../.vuepress/public/img/stringGenerate_en.png)
 :::

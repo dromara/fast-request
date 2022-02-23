@@ -11,7 +11,7 @@ action:
     link: /en/guide/feature
 features:
 - title: Based on native
-  details: integrated idea tool, open source and free
+  details: integrated idea tool
 - title: Efficiency comes first
   details: Only need simple configuration to generate method api request, thus saving a lot of time
 - title: Rich features

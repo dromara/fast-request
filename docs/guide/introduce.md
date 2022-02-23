@@ -31,17 +31,6 @@ Spring 体系 (Spring MVC / Spring Boot)
 JAX-RS
 ```
 
-## 代码托管
-
-> [Github](https://github.com/dromara/fast-request) | [Gitee](https://gitee.com/dromara/fast-request)
-
-## 参与贡献
-
-欢迎各路好汉一起来参与完善 Restful Fast Request，我们期待你的 PR！
-
-* 贡献代码：代码地址 [Restful Fast Request](https://github.com/dromara/fast-request)，欢迎提交 Issue 或者 Pull Requests
-* 维护文档：文档地址 [Document](https://github.com/dromara/fast-request/docs)，欢迎参与翻译和修订
-
 ## 建议
 
 如果有新版本出来，请尽快更新到最新的版本。(插件往往在升级过程中会加入新的功能或者修复你未发现的bug)
@@ -60,11 +49,8 @@ JAX-RS
 
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
 <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
-<a href='https://gitee.com/dromara/fast-request'><img src='https://gitee.com/dromara/fast-request/widgets/widget_3.svg' width = "15%" alt='Fork me on Gitee'></img></a>
 
-## 组织
 
-[**Dromara**](https://dromara.org/zh/) **致力于微服务云原生解决方案**
 
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
