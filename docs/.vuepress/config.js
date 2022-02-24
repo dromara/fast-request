@@ -44,7 +44,6 @@ module.exports = config({
         }
     },
     themeConfig: {
-        breadcrumb: false,
         mdEnhance: {
           align: true,
           tasklist: true,
@@ -82,7 +81,7 @@ module.exports = config({
                 nav: [
                     {
                         text: 'Guide',
-                        link: '/en/guide/',
+                        link: '/en/guide/introduce',
                         icon: "config"
                     },
                     {
@@ -101,18 +100,29 @@ module.exports = config({
                     }
                 ],
                 sidebar: {
-                    '/en/guide/': [{
-                        title: 'Getting started',
-                        collapsable: false,
-                        children: [
-                            '',
-                            'install',
-                            'getstarted',
-                            'feature',
-                            'whatsnew',
-                            'faq'
-                        ]
-                    }]
+                    '/en/guide/': [
+                        "introduce",
+                        {
+                                  title: "Getting started",
+                                  icon: "creativefill",
+                                  prefix: "getstarted/",
+                                  collapsable: false,
+                                  children: [
+                                      "start",
+                                      "dataMapping",
+                                      "icon",
+                                      "otherConfig",
+                                      "projectEnv",
+                                      "README",
+                                      "stringGenerationStrategy"
+                                  ],
+                        },
+                        "install",
+                        "feature",
+                        "whatsnew",
+                        "history",
+                        "faq",
+                    ]
                 }
             },
             '/': {
@@ -125,7 +135,7 @@ module.exports = config({
                 nav: [
                     {
                         text: '指南',
-                        link: '/guide/',
+                        link: '/guide/introduce',
                         icon: "config"
                     },
                     {
@@ -144,19 +154,30 @@ module.exports = config({
                     }
                 ],
                 sidebar: {
-                    '/guide/': [{
-                        title: '快速入门',
-                        collapsable: false,
-                        children: [
-                            '',
-                            'install',
-                            'getstarted',
-                            'feature',
-                            'whatsnew',
-                            'faq',
-                            'donate'
-                        ]
-                    }]
+                    '/guide/': [
+                        "introduce",
+                        {
+                                  title: "快速上手",
+                                  icon: "creativefill",
+                                  prefix: "getstarted/",
+                                  collapsable: false,
+                                  children: [
+                                      "start",
+                                      "dataMapping",
+                                      "icon",
+                                      "otherConfig",
+                                      "projectEnv",
+                                      "README",
+                                      "stringGenerationStrategy"
+                                  ],
+                        },
+                        "install",
+                        "feature",
+                        "whatsnew",
+                        "history",
+                        "faq",
+                        "donate"
+                    ],
                 }
             }
         }

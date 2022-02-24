@@ -5,7 +5,7 @@ heroText: Restful Fast Request
 tagline: 为简化开发而生
 action:
       - text: 快速上手 💡
-        link: /guide/
+        link: /guide/getstarted/start
         type: primary
       - text: 功能 🚀
         link: /guide/feature

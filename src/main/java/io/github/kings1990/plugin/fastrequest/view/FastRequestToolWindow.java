@@ -649,6 +649,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         for (DataMapping header : headerList) {
             sb.append("-H '").append(header.getType()).append(": ").append(header.getValue()).append("' \\\n");
         }
+        config.getGlobalHeaderList().stream().filter(DataMapping::getEnabled).forEach(globalHeader->
+            sb.append("-H '").append(globalHeader.getType()).append(": ").append(globalHeader.getValue()).append("' \\\n")
+        );
         if (StringUtils.isNotEmpty(jsonParam) && !"{}".equals(jsonParam) && !"[]".equals(jsonParam)) {
             sb.append("-H '").append("Content-Type: application/json").append("' \\\n");
         }
@@ -729,15 +732,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
             Map<String, Object> urlParam = urlParamsKeyValueList.stream().filter(ParamKeyValue::getEnabled).collect(Collectors.toMap(ParamKeyValue::getKey, ParamKeyValue::getValue, (existing, replacement) -> existing));
             String jsonParam = ((LanguageTextField) jsonParamsTextArea).getText();
-            StringBuilder urlEncodedParam = new StringBuilder("");
+            Map<String, Object> formMap = new HashMap<>();
             urlEncodedKeyValueList.stream().filter(ParamKeyValue::getEnabled).forEach(q -> {
-                urlEncodedParam.append(q.getKey()).append("=").append(q.getValue()).append("&");
+                formMap.put(q.getKey(),q.getValue());
             });
 
             boolean formFlag = true;
             //json优先
-            if (StringUtils.isNotEmpty(urlEncodedParam)) {
-                request.body(StringUtils.removeEnd(urlEncodedParam.toString(), "&"));
+            if (!formMap.isEmpty()) {
+                request.form(formMap);
                 formFlag = false;
             }
             if (StringUtils.isNotEmpty(jsonParam)) {
@@ -746,7 +749,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
 
             if (!urlParam.isEmpty()) {
-                String queryParam = UrlQuery.of(urlParam).toString();
+                String queryParam = UrlQuery.of(urlParam).build(StandardCharsets.UTF_8);
                 request.setUrl(request.getUrl() + "?" + queryParam);
             }
             if (!multipartFormParam.isEmpty() && formFlag) {
@@ -3256,10 +3259,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                                         if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
                                             dp.browse(URI.create(Constant.CN_DOC_DOMAIN + "/guide/feature/#%E9%87%8D%E6%96%B0%E7%94%9F%E5%AD%98%E8%AF%B7%E6%B1%82"));
                                         } else {
-                                            dp.browse(URI.create(String.format("%s/guide/getstarted/#regenetate", Constant.EN_DOC_DOMAIN)));
+                                            dp.browse(URI.create(String.format("%s/guide/feature/#regenetate", Constant.EN_DOC_DOMAIN)));
                                         }
                                     } catch (IOException ex) {
-                                        LOGGER.error("open url fail:%s/guide/getstarted/#regenetate", ex, Constant.EN_DOC_DOMAIN);
+                                        LOGGER.error("open url fail:%s/guide/feature/#regenetate", ex, Constant.EN_DOC_DOMAIN);
                                     }
                                 }
                             }
