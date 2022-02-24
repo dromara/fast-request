@@ -34,30 +34,19 @@ Spring framework (Spring MVC / Spring Boot)
 JAX-RS
 ```
 
-## Code
-
-> [Github](https://github.com/dromara/fast-request) | [Gitee](https://gitee.com/dromara/fast-request)
 
 ## Recommendation
 
 If a new version comes out, please update to the latest version as soon as possible(Plugins will always add new features
 or fix bugs you didn't find during the upgrade process)
 
-## Contribution
-
-all heroes are welcome to join in and improve Restful Fast Request，We look forward to your PR！
-
-* contribute code： [Restful Fast Request](https://github.com/dromara/fast-request)
-* maintain documentation： [Document](https://github.com/dromara/fast-request/docs)
 
 ## Platform support
 
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
 <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
 
-## Organization
 
-[**Dromara**](https://dromara.org/zh/) **An organization dedicated to native solutions for the microservice cloud**
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 
