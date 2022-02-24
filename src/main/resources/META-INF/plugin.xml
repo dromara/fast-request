@@ -72,15 +72,18 @@
     <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apiNavigate.png" /><br/>
 
     <h3>Latest changes</h3>
+    <h3>v2.1.3</h3>
     <ul>
         <li>English
             <ul>
                 <li>Add encode support for special symbol in parameter</li>
+                <li>Add global headers to curl</li>
             </ul>
         </li>
         <li>中文
             <ul>
                 <li>参数特殊符号编码支持</li>
+                <li>curl加入global headers</li>
             </ul>
         </li>
     </ul>

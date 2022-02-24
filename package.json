@@ -8,8 +8,8 @@
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-nprogress": "^1.8.2",
-    "vuepress": "^1.8.2",
-    "vuepress-theme-hope": "^1.20.3"
+    "vuepress": "^2.0.0-beta.35",
+    "vuepress-theme-hope": "^2.0.0-alpha.33"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

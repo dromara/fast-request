@@ -1,5 +1,7 @@
-const { config } = require("vuepress-theme-hope");
-module.exports = config({
+const { defineHopeConfig,defineThemeConfig } = require("vuepress-theme-hope");
+
+
+module.exports = defineHopeConfig({
     plugins: ['@vuepress/nprogress',
 //        ["@vuepress-yard/vuepress-plugin-window",
 //            {
@@ -44,10 +46,13 @@ module.exports = config({
         }
     },
     themeConfig: {
-        mdEnhance: {
-          align: true,
-          tasklist: true,
-          container: true,
+        plugins: {
+              mdEnhance: {
+                  align: true,
+                  tasklist: true,
+                  container: true,
+                  lazyLoad: true
+              }
         },
         themeColor: {
               blue: "#087CFA",
@@ -57,7 +62,7 @@ module.exports = config({
               pink :"#FF318C",
               lightBlue:"#07C3F2"
         },
-        iconPrefix:'icon-',
+        iconPrefix:'iconfont icon-',
         logo:'/img/fastRequest.svg',
         lastUpdated: 'Last Updated',
       // 以下为可选的编辑链接选项
@@ -78,44 +83,43 @@ module.exports = config({
 
                 selectText: 'Languages',
                 label: 'English',
-                nav: [
-                    {
-                        text: 'Guide',
-                        link: '/en/guide/introduce',
-                        icon: "config"
-                    },
-                    {
-                        text: 'Code',
-                        items: [
-                            {
-                                text: 'Github',
-                                link: 'https://github.com/dromara/fast-request'
-                            },
-                            {
-                                text: 'Gitee',
-                                link: 'https://gitee.com/dromara/fast-request'
-                            }
-                        ],
-                        icon: "code"
-                    }
-                ],
+//                navbar: [
+//                    {
+//                        text: 'Guide',
+//                        link: '/en/guide/introduce',
+//                        icon: "config"
+//                    },
+//                    {
+//                        text: 'Code',
+//                        children: [
+//                            {
+//                                text: 'Github',
+//                                link: 'https://github.com/dromara/fast-request'
+//                            },
+//                            {
+//                                text: 'Gitee',
+//                                link: 'https://gitee.com/dromara/fast-request'
+//                            }
+//                        ],
+//                        icon: "code"
+//                    }
+//                ],
                 sidebar: {
                     '/en/guide/': [
                         "introduce",
                         {
-                                  title: "Getting started",
-                                  icon: "creativefill",
-                                  prefix: "getstarted/",
-                                  collapsable: false,
-                                  children: [
-                                      "start",
-                                      "dataMapping",
-                                      "icon",
-                                      "otherConfig",
-                                      "projectEnv",
-                                      "README",
-                                      "stringGenerationStrategy"
-                                  ],
+                            text: "Getting started",
+                            icon: "creativefill",
+                            prefix: "getstarted/",
+                            collapsable: false,
+                            children: [
+                              "start",
+                              "projectEnv",
+                              "dataMapping",
+                              "stringGenerationStrategy",
+                              "icon",
+                              "otherConfig",
+                            ],
                         },
                         "install",
                         "feature",
@@ -132,44 +136,43 @@ module.exports = config({
                 label: '简体中文',
                 // 当前 locale 的 algolia docsearch 选项
                 algolia: {},
-                nav: [
-                    {
-                        text: '指南',
-                        link: '/guide/introduce',
-                        icon: "config"
-                    },
-                    {
-                        text: '代码',
-                        items: [
-                            {
-                                text: 'Github',
-                                link: 'https://github.com/dromara/fast-request'
-                            },
-                            {
-                                text: 'Gitee',
-                                link: 'https://gitee.com/dromara/fast-request'
-                            }
-                        ],
-                        icon: "code"
-                    }
-                ],
+//                navbar: [
+//                    {
+//                        text: '指南',
+//                        link: '/guide/introduce',
+//                        icon: "config"
+//                    },
+//                    {
+//                        text: '代码',
+//                        children: [
+//                            {
+//                                text: 'Github',
+//                                link: 'https://github.com/dromara/fast-request'
+//                            },
+//                            {
+//                                text: 'Gitee',
+//                                link: 'https://gitee.com/dromara/fast-request'
+//                            }
+//                        ],
+//                        icon: "code"
+//                    }
+//                ],
                 sidebar: {
                     '/guide/': [
                         "introduce",
                         {
-                                  title: "快速上手",
-                                  icon: "creativefill",
-                                  prefix: "getstarted/",
-                                  collapsable: false,
-                                  children: [
-                                      "start",
-                                      "dataMapping",
-                                      "icon",
-                                      "otherConfig",
-                                      "projectEnv",
-                                      "README",
-                                      "stringGenerationStrategy"
-                                  ],
+                            text: "快速上手",
+                            icon: "creativefill",
+                            prefix: "getstarted/",
+                            collapsable: false,
+                            children: [
+                              "start",
+                              "projectEnv",
+                              "dataMapping",
+                              "stringGenerationStrategy",
+                              "icon",
+                              "otherConfig",
+                            ],
                         },
                         "install",
                         "feature",
