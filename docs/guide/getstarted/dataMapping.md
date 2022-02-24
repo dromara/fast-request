@@ -19,12 +19,14 @@ com.baomidou.mybatisplus.extension.plugins.pagination.Page
 {"size":10,"current":1}
 ```
 
-::: tip example
 ![](../../.vuepress/public/img/customDataMapping.png)
-:::
 
 ## 默认类型映射
 该配置决定java基础类型解析成对应的值，支持修改
-::: tip example
+
 ![](../../.vuepress/public/img/defaultDataMapping.png)
-:::
+
+## 忽略类型映射
+该配置决定对应的类是否解析,需要配置全路径(packageName+className)
+
+![](../../.vuepress/public/img/ignoreDataMapping.png)
