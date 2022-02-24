@@ -10,6 +10,4 @@ strategy
 * none(not generate)
 ```
 
-::: tip example
 ![](../../../.vuepress/public/img/stringGenerate_en.png)
-:::

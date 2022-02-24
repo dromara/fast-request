@@ -1,21 +1,24 @@
 ---
 home: true
+title: home
 heroImage: /img/fastRequest.svg
 heroText: Restful Fast Request
 tagline: Born To Simplify Development
-action:
+actions:
   - text: Get Started 💡
     link: /en/guide/getstarted/start
     type: primary
-  - text: Features 🚀
+  - text: Features 🛠
     link: /en/guide/feature
 features:
-- title: Based on native
-  details: integrated idea tool
-- title: Efficiency comes first
-  details: Only need simple configuration to generate method api request, thus saving a lot of time
-- title: Rich features
-  details: Generate url and parameters、SearchEveryWhere support、API export to postman、send/download request、Store request、Custom parameter parse、API to curl...
+  - title: Based on native
+    details: integrated idea tool
+  - title: Efficiency comes first
+    details: Only need simple configuration to generate method api request, thus saving a lot of time
+  - title: Rich features
+    details: Generate url and parameters、API export to postman、SearchEveryWhere support、send/download request、Store request...
+  - title: User-friendly interface
+    details: Provides a very intuitive interface
 footer: Apache License 2.0 | Copyright © 2021-present Kings 
 meta:
   - name: keywords
