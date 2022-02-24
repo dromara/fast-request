@@ -217,13 +217,13 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
                 Desktop dp = Desktop.getDesktop();
                 if (dp.isSupported(Desktop.Action.BROWSE)) {
                     if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                        dp.browse(URI.create(Constant.CN_DOC_DOMAIN + "/guide/getstarted/#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84"));
+                        dp.browse(URI.create(Constant.CN_DOC_DOMAIN + "/guide/getstarted/dataMapping"));
                     } else {
-                        dp.browse(URI.create(Constant.EN_DOC_DOMAIN + "/guide/getstarted/#custom-type-mapping"));
+                        dp.browse(URI.create(Constant.EN_DOC_DOMAIN + "/guide/getstarted/dataMapping"));
                     }
                 }
             } catch (Exception exception) {
-                LOGGER.error("open url fail:" + Constant.EN_DOC_DOMAIN + "/guide/getstarted/#custom-type-mapping", exception);
+                LOGGER.error("open url fail:" + Constant.EN_DOC_DOMAIN + "/guide/getstarted/dataMapping", exception);
             }
         });
         ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(table);

@@ -1,4 +1,7 @@
-# FAQ
+---
+title: FAQ
+icon: faq
+---
 
 [[toc]]
 

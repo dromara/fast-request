@@ -5,7 +5,7 @@ heroText: Restful Fast Request
 tagline: Born To Simplify Development
 action:
   - text: Get Started 💡
-    link: /en/guide/
+    link: /en/guide/getstarted/start
     type: primary
   - text: Features 🚀
     link: /en/guide/feature
