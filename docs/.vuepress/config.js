@@ -109,12 +109,11 @@ module.exports = config({
                                   collapsable: false,
                                   children: [
                                       "start",
+                                      "projectEnv",
                                       "dataMapping",
+                                      "stringGenerationStrategy",
                                       "icon",
                                       "otherConfig",
-                                      "projectEnv",
-                                      "README",
-                                      "stringGenerationStrategy"
                                   ],
                         },
                         "install",
@@ -163,12 +162,11 @@ module.exports = config({
                                   collapsable: false,
                                   children: [
                                       "start",
+                                      "projectEnv",
                                       "dataMapping",
+                                      "stringGenerationStrategy",
                                       "icon",
                                       "otherConfig",
-                                      "projectEnv",
-                                      "README",
-                                      "stringGenerationStrategy"
                                   ],
                         },
                         "install",
