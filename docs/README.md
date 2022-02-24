@@ -1,21 +1,28 @@
 ---
 home: true
+title: 主页
 heroImage: /img/fastRequest.svg
 heroText: Restful Fast Request
 tagline: 为简化开发而生
-action:
+actions:
       - text: 快速上手 💡
         link: /guide/getstarted/start
         type: primary
-      - text: 功能 🚀
+      - text: 功能 🛠
         link: /guide/feature
 features:
 - title: 基于原生
+  icon: origin
   details: 集成IDEA工具
 - title: 效率至上
+  icon: effective
   details: 只需要简单配置即可生成方法的api请求，从而节省大量时间
 - title: 功能丰富
-  details: 一键生成url和参数、SearchEveryWhere搜索、api导出到postman、发送API请求、下载文件、存储历史请求、域名定制及切换、字符串生成策略化、自定义参数解析、API转curl等
+  icon: feature
+  details: 一键生成url和参数、api导出到postman、SearchEveryWhere搜索、发送API请求、下载文件、存储历史请求,各种功能一应俱全
+- title: 界面友好
+  icon: interface
+  details: 提供一个非常直观的界面,好操作易上手
 footer: Apache License 2.0 | Copyright © 2021-present Kings
 
 meta:

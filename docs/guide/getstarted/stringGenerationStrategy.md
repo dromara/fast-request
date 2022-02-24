@@ -10,6 +10,4 @@ icon: string
 * none(不生成)
 ```
 
-::: tip example
 ![](../../.vuepress/public/img/stringGenerate.png)
-:::
