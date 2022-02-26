@@ -19,6 +19,19 @@ module.exports = defineHopeConfig({
 //              hideRouteList:["en"],
 //              closeOnce: false
 //            }]
+               [
+                     '@vuepress/plugin-search',
+                     {
+                       locales: {
+                         '/en': {
+                           placeholder: 'Search',
+                         },
+                         '/': {
+                           placeholder: '搜索',
+                         },
+                       },
+                     },
+                   ],
     ],
     base : '/fast-request/',
     title: 'Restful Fast Request',
@@ -46,6 +59,8 @@ module.exports = defineHopeConfig({
         }
     },
     themeConfig: {
+        repo: "https://github.com/dromara/fast-request",
+        repoLabel: "GitHub",
         plugins: {
               mdEnhance: {
                   align: true,
@@ -178,8 +193,7 @@ module.exports = defineHopeConfig({
                         "feature",
                         "whatsnew",
                         "history",
-                        "faq",
-                        "donate"
+                        "faq"
                     ],
                 }
             }
