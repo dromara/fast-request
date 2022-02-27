@@ -1,6 +1,7 @@
 ---
 title: 最新变化
 icon: whats-new
+headingDepth: 0
 ---
 
 ::: danger 关于v2.1.4开始将开始步入收费的预告
@@ -12,7 +13,7 @@ icon: whats-new
 
 :::
 
-## v2.1.3
+# v2.1.3
 
 * 参数特殊符号编码支持
 * curl加入global headers

@@ -28,6 +28,7 @@ import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleUtil;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
+import com.intellij.util.TextWithIcon;
 import io.github.kings1990.plugin.fastrequest.idea.SearchEverywherePsiRenderer;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
@@ -74,7 +75,7 @@ public class FastRequestGotoContributor extends AbstractGotoSEContributor  {
                 return super.getRightCellRenderer(value);
             }
 
-            /**
+
             protected @Nullable TextWithIcon getItemLocation(Object value) {
                 if(value instanceof RequestMappingItem){
                     RequestMappingItem item = (RequestMappingItem) value;
@@ -87,7 +88,7 @@ public class FastRequestGotoContributor extends AbstractGotoSEContributor  {
                 }
                 return super.getItemLocation(value);
             }
-             */
+
         };
     }
 

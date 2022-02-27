@@ -9,7 +9,7 @@ icon: whats-new
 3. The plug-in will also set a reasonable and affordable price, so that every developer can still use the plug-in
 :::
 
-## v2.1.3
+# v2.1.3
 
 * Add encode support for special symbol in parameter
 * Add global headers to curl
