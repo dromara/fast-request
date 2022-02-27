@@ -194,8 +194,6 @@
     <extensions defaultExtensionNs="com.intellij">
         <searchEverywhereContributor
                 implementation="io.github.kings1990.plugin.fastrequest.contributor.FastRequestGotoContributor$Factory"/>
-        <searchEverywhereResultsEqualityProvider
-                implementation="io.github.kings1990.plugin.fastrequest.contributor.FastRequestEqualityProvider"/>
     </extensions>
 
     <extensions defaultExtensionNs="io.github.kings1990.FastRequest">
