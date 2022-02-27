@@ -14,12 +14,15 @@ features:
   - title: Based on native
     icon: origin
     details: integrated idea tool
+    link: /en/guide/introduce.html
   - title: Efficiency comes first
     icon: effective
     details: Only need simple configuration to generate method api request, thus saving a lot of time
+    link: /en/guide/getstarted/start.html
   - title: Rich features
     icon: feature
     details: Generate url and parameters、API export to postman、SearchEveryWhere support、send/download request、Store request...
+    link: /en/guide/feature.html
   - title: User-friendly interface
     icon: interface
     details: Provides a very intuitive interface
