@@ -48,7 +48,7 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: 'icon',
-                href: '/img/fastRequest.svg'
+                href: '/fast-request/img/fastRequest.svg'
             }
         ],
 
