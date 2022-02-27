@@ -40,10 +40,18 @@ module.exports = defineHopeConfig({
         [
             'link',
             {
+                rel: "stylesheet",
+                href: "//at.alicdn.com/t/font_2601581_giouw7mz8fk.css",
+            },
+        ],
+        [
+            'link',
+            {
                 rel: 'icon',
                 href: '/img/fastRequest.svg'
             }
-        ]
+        ],
+
     ],
     markdown: {
         lineNumbers: true
