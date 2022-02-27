@@ -132,7 +132,7 @@ module.exports = defineHopeConfig({
                         "introduce",
                         {
                             text: "Getting started",
-                            icon: "creativefill",
+                            icon: "leibie",
                             prefix: "getstarted/",
                             collapsable: false,
                             children: [
