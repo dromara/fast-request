@@ -1,4 +1,5 @@
-const { defineHopeConfig,defineThemeConfig } = require("vuepress-theme-hope");
+const { defineHopeConfig } = require("vuepress-theme-hope");
+const { comment } = require("vuepress-plugin-comment2");
 
 
 module.exports = defineHopeConfig({
@@ -75,6 +76,10 @@ module.exports = defineHopeConfig({
                   tasklist: true,
                   container: true,
                   lazyLoad: true
+              },
+              comment: {
+                   type: 'waline',
+                   serverURL: "https://fast-request-vercel-kg5c15vmq-kings1990.vercel.app/"
               }
         },
         themeColor: {
