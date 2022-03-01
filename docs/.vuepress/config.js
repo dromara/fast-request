@@ -79,7 +79,7 @@ module.exports = defineHopeConfig({
               },
               comment: {
                    type: 'waline',
-                   serverURL: "https://fast-request-vercel-kg5c15vmq-kings1990.vercel.app/"
+                   serverURL: "https://fast-request-vercel.vercel.app"
               }
         },
         themeColor: {
