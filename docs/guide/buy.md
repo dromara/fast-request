@@ -4,8 +4,8 @@ icon: buy
 ---
 
 **购买分为2种方式**
-* 方式1: 注册jetbrains账号购买(推荐)
-* 方式2: 直接使用email邮箱接收license
+* 账号模式: 注册jetbrains账号购买(推荐)
+* 邮件模式: 直接使用email邮箱接收license
 
 **注册jetbrains账号购买方式可以方便后续找license,且不容易丢失**
 ## Step0: 前往插件激活页面
@@ -16,7 +16,10 @@ icon: buy
 ## Step1: 点击Buy license
 ![](../.vuepress/public/img/buy/step1.png)
 
-## Step2: 选择一个套餐点击Buy(推荐按年订阅)
+## Step2: 选择一个套餐点击Buy
+* 套餐1:按月计费订阅
+* 套餐2:按年计费订阅(推荐)
+
 ![](../.vuepress/public/img/buy/step2.png)
 
 ## Step3: 邮箱确认(非jetbrains账号方式购买)
