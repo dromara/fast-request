@@ -76,8 +76,7 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 
 **using IDE plugin system**
 
-- recommended <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>find"
-  Restful Fast Request"</kbd> > <kbd>Install Plugin</kbd>
+- recommended <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>Browse repositories...</kbd> > <kbd>type in"Restful Fast Request"</kbd> > <kbd>Install Plugin</kbd>
 
 ![](./screenshot/download.png)
 

@@ -1,6 +1,6 @@
 ---
 title: 其他配置
-icon: others
+icon: others1
 ---
 
 

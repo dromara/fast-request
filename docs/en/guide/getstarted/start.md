@@ -1,6 +1,6 @@
 ---
 title: Get started
-icon: start
+icon: start1
 ---
 
 

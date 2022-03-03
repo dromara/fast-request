@@ -1,6 +1,6 @@
 ---
 title: Project/Env/Domain
-icon: config
+icon: config2
 ---
 Set up the mapping relationship,Configure the URL prefix address of the corresponding environment under the corresponding project
 
