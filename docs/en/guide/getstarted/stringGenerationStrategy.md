@@ -1,6 +1,6 @@
 ---
 title: String generation strategy
-icon: string
+icon: codestring
 ---
 
 ```

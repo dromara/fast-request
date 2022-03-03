@@ -42,7 +42,7 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: "stylesheet",
-                href: "//at.alicdn.com/t/font_2601581_giouw7mz8fk.css",
+                href: "//at.alicdn.com/t/font_2601581_gqy67p0jb5.css",
             },
         ],
         [
@@ -75,7 +75,8 @@ module.exports = defineHopeConfig({
                   align: true,
                   tasklist: true,
                   container: true,
-                  lazyLoad: true
+                  lazyLoad: true,
+                  codegroup: true,
               },
               comment: {
                    type: 'waline',
@@ -153,6 +154,7 @@ module.exports = defineHopeConfig({
                         "feature",
                         "whatsnew",
                         "history",
+                        "buy",
                         "faq",
                     ]
                 }
@@ -206,6 +208,7 @@ module.exports = defineHopeConfig({
                         "feature",
                         "whatsnew",
                         "history",
+                        "buy",
                         "faq"
                     ],
                 }
