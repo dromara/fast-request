@@ -26,8 +26,6 @@ features:
 - title: 界面友好
   icon: interface
   details: 提供一个非常直观的界面,好操作易上手
-footer: Apache License 2.0 | Copyright © 2021-present Kings
-
 meta:
   - name: keywords
     content: Restful Fast Request,idea插件,http client,Restful API

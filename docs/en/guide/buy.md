@@ -38,7 +38,7 @@ Click **help->Register Plugins...->Add New License**
 
 **Please keep your activation code information properly**
 
-![](../../.vuepress/public/img/buy/step1.png)
+![](../../.vuepress/public/img/buy/step5.png)
 
 
 **If you don't understand something, please join the slack and contact me**
