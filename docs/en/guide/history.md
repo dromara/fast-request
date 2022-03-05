@@ -2,6 +2,21 @@
 title: History changes
 icon: changelog
 ---
+## 2022.1.4 <Badge text="收费" type="warn"/>
+* SearchEveryWhere highlight optimization
+* Add support for import and export APIs
+* Add support for run APIs
+* Add timeout for api request
+* Merged Send and Send and Download buttons
+* APIs user interface optimization
+* API Navigate rename to Navigate in tab
+* Optimize the user guide of features
+* Compatible with idea 2022.1
+* Make it optional for automatically generate parameters
+
+## v2.1.3
+* Add encode support for special symbol in parameter
+* Add global headers to curl
 
 ## v2.1.2
 

@@ -2,8 +2,8 @@
 name: Bug report(提报bug)
 about: Create a report to help us improve
 title: ''
-labels: ''
-assignees: ''
+labels: 'bug'
+assignees: 'kings1990'
 
 ---
 

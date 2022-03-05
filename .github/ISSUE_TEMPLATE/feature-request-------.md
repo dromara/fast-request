@@ -2,8 +2,8 @@
 name: Feature request(合理性建议)
 about: Suggest an idea for this project
 title: ''
-labels: ''
-assignees: ''
+labels: 'enhancement'
+assignees: 'kings1990'
 
 ---
 

@@ -26,7 +26,6 @@ features:
   - title: User-friendly interface
     icon: interface
     details: Provides a very intuitive interface
-footer: Apache License 2.0 | Copyright © 2021-present Kings 
 meta:
   - name: keywords
     content: Restful Fast Request,idea plugin,http client,Restful API

@@ -3,13 +3,23 @@ title: What's new
 icon: whats-new
 ---
 
-:::danger Announcement about charging for v2.1.4+
-1. v2.1.3 will be the last free version. In order to provide better and more detailed functions, the pro mode will be enabled from v2.1.4, and more and more powerful functions ,optimization of details will be added at that time
-2. No work, no gain, respect for knowledge then civilization will progress
-3. The plug-in will also set a reasonable and affordable price, so that every developer can still use the plug-in
+::: danger Buy plugin
+
+**2022.1.4** starts to charge,Please refer to the purchase process in [Buy plugin](./buy.md)
+
 :::
 
-# v2.1.3
+# v2022.1.4
 
-* Add encode support for special symbol in parameter
-* Add global headers to curl
+* SearchEveryWhere highlight optimization
+* Add support for import and export APIs
+* Add support for run APIs
+* Add timeout for api request
+* Merged Send and Send and Download buttons
+* APIs user interface optimization
+* API Navigate rename to Navigate in tab
+* Optimize the user guide of features
+* Compatible with idea 2022.1
+* Make it optional for automatically generate parameters
+
+[More detail...](./history.md)

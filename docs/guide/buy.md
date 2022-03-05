@@ -40,7 +40,7 @@ icon: buy
 
 **请妥善保存好您的激活码信息**
 
-![](../.vuepress/public/img/buy/step1.png)
+![](../.vuepress/public/img/buy/step5.png)
 
 **如果您有不懂或者不明白的地方,请加入群里联系我**
 
