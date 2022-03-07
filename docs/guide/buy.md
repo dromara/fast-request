@@ -4,7 +4,7 @@ icon: buy
 ---
 
 **购买分为2种方式**
-* 账号模式: 注册jetbrains账号购买(推荐)
+* 账号模式: 注册[jetbrains账号](https://account.jetbrains.com/licenses)购买(推荐)
 * 邮件模式: 直接使用email邮箱接收license
 
 **注册jetbrains账号购买方式可以方便后续找license,且不容易丢失**
