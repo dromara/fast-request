@@ -3,7 +3,7 @@ title: Buy Plugin
 icon: buy
 ---
 **Tow ways to buy**
-* Account pattern: Register jetbrains account to buy(Recommend)
+* Account pattern: Management via [JetBrains Account](https://account.jetbrains.com/licenses)(Recommend)
 * Email pattern: Receive the license directly by email
 
 **Registering a jetbrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose**
