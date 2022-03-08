@@ -8,11 +8,12 @@ icon: changelog
 * Add support for run APIs
 * Add timeout for api request
 * Merged Send and Send and Download buttons
+* Compatible with idea 2022.1
+* Make it optional for automatically generate parameters
+* Swagger annotation default value parameter parsing support
 * APIs user interface optimization
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features
-* Compatible with idea 2022.1
-* Make it optional for automatically generate parameters
 
 ## v2.1.3
 * Add encode support for special symbol in parameter
