@@ -9,7 +9,9 @@ icon: buy
 
 **注册jetbrains账号购买方式可以方便后续找license,且不容易丢失**
 ## Step0: 前往插件激活页面
-点击 **help->Register Plugins...->Add New License**
+* Ultimate: 点击 **help->Register Plugins...->Add New License**
+* Community: 点击 **help->Register...->Add New License**
+
 
 ![](../.vuepress/public/img/buy/step0.png)
 

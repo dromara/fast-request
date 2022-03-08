@@ -9,7 +9,8 @@ icon: buy
 **Registering a jetbrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose**
 
 ## Step0: Go to the plugin activation page
-Click **help->Register Plugins...->Add New License**
+* Ultimate: Click **help->Register...->Add New License**
+* Community: Click **help->Register Plugins...->Add New License**
 
 ![](../../.vuepress/public/img/buy/step0.png)
 
