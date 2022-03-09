@@ -20,11 +20,11 @@ features:
   details: 只需要简单配置即可生成方法的api请求，从而节省大量时间
   link: /guide/getstarted/start.html
 - title: 功能丰富
-  icon: feature
+  icon: features
   details: 一键生成url和参数、api导出到postman、SearchEveryWhere搜索、发送API请求、下载文件、存储历史请求,各种功能一应俱全
   link: /guide/feature.html
 - title: 界面友好
-  icon: interface
+  icon: code-box-fill
   details: 提供一个非常直观的界面,好操作易上手
 meta:
   - name: keywords

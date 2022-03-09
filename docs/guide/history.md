@@ -3,6 +3,7 @@ title: 历史变更
 icon: changelog
 ---
 ## 2022.1.4 <Badge text="收费" type="warn"/>
+==idea版本2021.3+==
 * SearchEveryWhere高亮优化
 * APIs导入导出支持
 * APIs支持直接运行
@@ -14,6 +15,58 @@ icon: changelog
 * APIs界面优化
 * Tab页API Navigate重命名Navigate
 * 使用引导上的细节优化
+
+::: info SearchEveryWhere高亮优化
+高亮展示搜索关键字,加快真实想要查找的API的查找速度,同时展示api对应的javadoc
+![help](../.vuepress/public/img/searchEveryWhereHighlight.png)
+:::
+
+::: tip APIs导入导出支持
+增加对APIs的导入导出支持,利用改功能,你可以非常方便得将自己已有的APIs分享给别的开发者,或者导入到其他设备上的IDEA
+
+![exportImportApis](../.vuepress/public/img/exportImportApis.gif)
+
+更多详情请看 **[功能](./feature.md)->APIs导入导出**
+::: 
+
+::: warning APIs支持直接运行
+你可以在APIs tab页直接运行你保存的请求
+
+![runInApiManagement](../.vuepress/public/img/runInApiManagement.png)
+:::
+
+:::danger 对Send和Send and Download按钮进行了合并
+对按钮进行了合并,因为常见的操作都是非下载操作,减少了工具栏按钮个数,看上去更加简捷
+![mergeRunAndDownload](../.vuepress/public/img/mergeRunAndDownload.png)
+:::
+
+:::note 自动生成参数可选化
+![generateSwitch](../.vuepress/public/img/generateSwitch.png)
+:::
+
+::: info swagger注解默认值参数解析支持
+增加了swagger注解默认值的解析,该功能对于入参的传递更加人性化
+* @ApiParam(swagger2)
+* @ApiImplicitParam(swagger2)
+* @ApiModelProperty(swagger2)
+* @Parameter(swagger3)
+* @Schema(swagger3)
+
+更多详情请看 **[功能](./feature.md)->Swagger默认值解析支持**
+:::
+
+
+::: tip Tab页API Navigate重命名Navigate  
+在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
+:::
+
+::: warning 使用引导上的细节优化
+我们在不同的操作窗口,增加?选项用来展示一些注意事项及操作指引,对于初次使用的用户,操作门槛更低
+
+![help](../.vuepress/public/img/help.png)
+:::
+
+
 
 ## v2.1.3
 * 参数特殊符号编码支持
@@ -29,13 +82,19 @@ icon: changelog
 * API保存分组优化
 * 全局请求头支持
 
-:::tip Url解析优化
-
-```
+::: tip Url解析优化
 支持以下example的解析
-不再需要单独配置url replace config
 
-场景1:url是类常量引用
+不再需要单独配置url replace config
+:::
+
+
+
+:::: code-group
+
+::: code-group-item 场景1:url是类常量引用
+
+```java
 @RequestMapping(Url1.URL_TEST)
 @RestController
 public class UrlTestController {
@@ -46,14 +105,22 @@ public class UrlTestController {
         return 1;
     }
 }
+```
 
-场景2:value是一个数组
+:::
+
+::: code-group-item 场景2:value是一个数组
+
+```java
 @RequestMapping(
     value = {"/v1/save"},
     method = {RequestMethod.POST}
 )
 ```
+
 :::
+
+::::
 
 :::tip 添加对导出api到Postman的支持
 
