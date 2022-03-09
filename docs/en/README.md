@@ -20,11 +20,11 @@ features:
     details: Only need simple configuration to generate method api request, thus saving a lot of time
     link: /en/guide/getstarted/start.html
   - title: Rich features
-    icon: feature
+    icon: features
     details: Generate url and parameters、API export to postman、SearchEveryWhere support、send/download request、Store request...
     link: /en/guide/feature.html
   - title: User-friendly interface
-    icon: interface
+    icon: code-box-fill
     details: Provides a very intuitive interface
 meta:
   - name: keywords

@@ -3,6 +3,7 @@ title: History changes
 icon: changelog
 ---
 ## 2022.1.4 <Badge text="收费" type="warn"/>
+==require idea 2021.3+==
 * SearchEveryWhere highlight optimization
 * Add support for import and export APIs
 * Add support for run APIs
@@ -14,6 +15,56 @@ icon: changelog
 * APIs user interface optimization
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features
+
+::: info SearchEveryWhere highlight optimization
+Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
+
+![help](../../.vuepress/public/img/searchEveryWhereHighlight.png)
+:::
+
+::: tip Add support for import and export APIs
+Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
+![exportImportApis](../../.vuepress/public/img/exportImportApis.gif)
+
+More info **[Features](./feature.md)->APIs import and export**
+:::
+
+::: warning Add support for run APIs
+You can run your saved requests directly in the APIs tab
+
+![runInApiManagement](../../.vuepress/public/img/runInApiManagement.png)
+:::
+
+:::danger Merged Send and Send and Download buttons
+The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
+![mergeRunAndDownload](../../.vuepress/public/img/mergeRunAndDownload.png)
+:::
+
+:::note Automatically generate parameter optionals
+![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
+:::
+
+::: info Swagger default value parsing support
+Added the parsing of the default value of swagger annotations, which is more user-friendly of input parameters
+* @ApiParam(swagger2)
+* @ApiImplicitParam(swagger2)
+* @ApiModelProperty(swagger2)
+* @Parameter(swagger3)
+* @Schema(swagger3)
+
+More info **[Features](./feature.md)->Swagger default value parsing support**
+:::
+
+
+::: tip API Navigate rename to Navigate in tab  
+In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
+:::
+
+::: warning Optimize the user guide of features
+We have added a ? option in different windows to display some guidelines. For first-time users, it's easier to operate
+
+![help](../../.vuepress/public/img/help.png)
+:::
 
 ## v2.1.3
 * Add encode support for special symbol in parameter
@@ -31,12 +82,17 @@ icon: changelog
 
 
 :::tip Optimize URL parsing
-
-```
 support parse like following example
-no longer need to configure the URL Replace Config separately
 
-Scene 1: URLS are class constant references
+no longer need to configure the URL Replace Config separately
+:::
+
+
+:::: code-group
+
+::: code-group-item Scene 1: URLS are class constant references
+
+```java
 @RequestMapping(Url1.URL_TEST)
 @RestController
 public class UrlTestController {
@@ -47,14 +103,23 @@ public class UrlTestController {
         return 1;
     }
 }
+```
 
-Scene 2: value is an array
+:::
+
+::: code-group-item Scene 2: value is an array
+
+```java
 @RequestMapping(
     value = {"/v1/save"},
     method = {RequestMethod.POST}
 )
 ```
+
 :::
+
+::::
+
 
 :::tip Add support for export api to Postman
 

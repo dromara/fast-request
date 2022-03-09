@@ -156,8 +156,12 @@ API Navigate树默认是懒加载的,需要点击刷新按钮,同样每次新增
 ## Swagger默认值解析支持<Badge text="2022.1.4" />
 已下是一些example
 
-* @ApiParam
+:::: code-group
+
+::: code-group-item swagger2
 ```
+* @ApiParam
+
 @GetMapping(value="/test/{id}")
 public String test3(@ApiParam(name = "id",example="2") @PathVariable("id") Integer id) {
     return "";
@@ -167,10 +171,10 @@ public String test3(@ApiParam(name = "id",example="2") @PathVariable("id") Integ
 public String test3(@ApiParam(name = "id",defaultValue="2") @PathVariable("id") Integer id) {
     return "";
 }
-```
+
 
 * @ApiImplicitParam
-```
+
 @ApiImplicitParams({
     @ApiImplicitParam(paramType="query",name="pageNo",dataType="String",required=true,value="pageNo",defaultValue="1"),
     @ApiImplicitParam(paramType="query",name="pageSize",dataType="String",required=true,value="pageSize",defaultValue="10")
@@ -180,31 +184,33 @@ public String testPage(@RequestParam("pageNo") Integer pageNo, @RequestParam("pa
     return "";
 }
 
-```
 
 * @ApiModelProperty
-```
 @Data
 public class UserDto {
     @ApiModelProperty(example = "Bob")
     private String userName;
 }
 ```
+:::
 
-* @Parameter(swagger3)
+::: code-group-item swagger3
 ```
+* @Parameter
 
 @GetMapping(value="/test/{id}")
 public String test3(@Parameter(name = "id",example="2") @PathVariable("id") Integer id) {
-    return "";
+return "";
 }
-```
 
 * @Schema(swagger3)
-```
+
 @Data
 public class UserDto {
-    @Schema(example = "Bob")
-    private String userName;
+@Schema(example = "Bob")
+private String userName;
 }
 ```
+:::
+
+::::
