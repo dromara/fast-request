@@ -14,7 +14,7 @@
 ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)
 ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
 [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
-[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
+[![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a plugin based on springmvc that
 help you quickly generate **url** and **params**.It is also a http client tool.
