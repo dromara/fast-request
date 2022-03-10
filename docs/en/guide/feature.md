@@ -160,6 +160,7 @@ If it is imported by mistake, it can be restored by importing it
 ## Swagger default value parsing support<Badge text="2022.1.4" />
 Below are some examples
 
+Priority: swagger default value > config default value
 :::: code-group
 
 ::: code-group-item swagger2

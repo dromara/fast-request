@@ -15,7 +15,6 @@ icon: whats-new
 * APIs导入导出支持
 * APIs支持直接运行
 * API请求增加超时设置
-* 对Send和Send and Download按钮进行了合并
 * 兼容idea 2022.1
 * 自动生成参数可选化
 * swagger注解默认值参数解析支持

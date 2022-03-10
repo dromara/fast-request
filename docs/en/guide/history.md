@@ -8,7 +8,6 @@ icon: changelog
 * Add support for import and export APIs
 * Add support for run APIs
 * Add timeout for api request
-* Merged Send and Send and Download buttons
 * Compatible with idea 2022.1
 * Make it optional for automatically generate parameters
 * Swagger annotation default value parameter parsing support
@@ -35,10 +34,6 @@ You can run your saved requests directly in the APIs tab
 ![runInApiManagement](../../.vuepress/public/img/runInApiManagement.png)
 :::
 
-:::danger Merged Send and Send and Download buttons
-The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
-![mergeRunAndDownload](../../.vuepress/public/img/mergeRunAndDownload.png)
-:::
 
 :::note Automatically generate parameter optionals
 ![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
@@ -62,6 +57,8 @@ In the case where the tool window is relatively small, the API Navigate will be 
 
 ::: warning Optimize the user guide of features
 We have added a ? option in different windows to display some guidelines. For first-time users, it's easier to operate
+
+And with the iteration of the version, more prompt operation guidelines may be added in the future
 
 ![help](../../.vuepress/public/img/help.png)
 :::
