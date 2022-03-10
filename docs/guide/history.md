@@ -8,7 +8,6 @@ icon: changelog
 * APIs导入导出支持
 * APIs支持直接运行
 * API请求增加超时设置
-* 对Send和Send and Download按钮进行了合并
 * 兼容idea 2022.1
 * 自动生成参数可选化
 * swagger注解默认值参数解析支持
@@ -35,10 +34,6 @@ icon: changelog
 ![runInApiManagement](../.vuepress/public/img/runInApiManagement.png)
 :::
 
-:::danger 对Send和Send and Download按钮进行了合并
-对按钮进行了合并,因为常见的操作都是非下载操作,减少了工具栏按钮个数,看上去更加简捷
-![mergeRunAndDownload](../.vuepress/public/img/mergeRunAndDownload.png)
-:::
 
 :::note 自动生成参数可选化
 ![generateSwitch](../.vuepress/public/img/generateSwitch.png)
@@ -62,6 +57,8 @@ icon: changelog
 
 ::: warning 使用引导上的细节优化
 我们在不同的操作窗口,增加?选项用来展示一些注意事项及操作指引,对于初次使用的用户,操作门槛更低
+
+并且随着版本的迭代,后续可能会加入更多的提示操作指引
 
 ![help](../.vuepress/public/img/help.png)
 :::

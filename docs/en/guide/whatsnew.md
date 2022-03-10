@@ -19,7 +19,6 @@ Gitter room have been created! Welcome to share your question in this community
 * Add support for import and export APIs
 * Add support for run APIs
 * Add timeout for api request
-* Merged Send and Send and Download buttons
 * Compatible with idea 2022.1
 * Make it optional for automatically generate parameters
 * Swagger annotation default value parameter parsing support

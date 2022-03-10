@@ -156,6 +156,8 @@ API Navigate树默认是懒加载的,需要点击刷新按钮,同样每次新增
 ## Swagger默认值解析支持<Badge text="2022.1.4" />
 已下是一些example
 
+优先级: swagger配置的值 > 配置默认值
+
 :::: code-group
 
 ::: code-group-item swagger2
