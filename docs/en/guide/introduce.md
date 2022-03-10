@@ -5,7 +5,7 @@ icon: restfulFastRequest
 
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
-[![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA) [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
+[![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA) [![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a powerful restful api toolkit
 plugin help you quickly generate url and params by exist method.

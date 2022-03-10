@@ -7,6 +7,10 @@ icon: whats-new
 
 **2022.1.4** starts to charge,Please refer to the purchase process in [Buy plugin](./buy.md)
 
+Gitter room have been created! Welcome to share your question in this community
+
+[![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 :::
 
 # v2022.1.4
