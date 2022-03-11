@@ -25,5 +25,6 @@ Gitter room have been created! Welcome to share your question in this community
 * APIs user interface optimization
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features
+* Fix some bugs
 
 [More detail...](./history.md)

@@ -39,7 +39,7 @@ icon: changelog
 ![generateSwitch](../.vuepress/public/img/generateSwitch.png)
 :::
 
-::: info swagger注解默认值参数解析支持
+::: danger swagger注解默认值参数解析支持
 增加了swagger注解默认值的解析,该功能对于入参的传递更加人性化
 * @ApiParam(swagger2)
 * @ApiImplicitParam(swagger2)
@@ -50,17 +50,16 @@ icon: changelog
 更多详情请看 **[功能](./feature.md)->Swagger默认值解析支持**
 :::
 
-
-::: tip Tab页API Navigate重命名Navigate  
-在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
-:::
-
-::: warning 使用引导上的细节优化
+::: info 使用引导上的细节优化
 我们在不同的操作窗口,增加?选项用来展示一些注意事项及操作指引,对于初次使用的用户,操作门槛更低
 
 并且随着版本的迭代,后续可能会加入更多的提示操作指引
 
 ![help](../.vuepress/public/img/help.png)
+:::
+
+::: tip Tab页API Navigate重命名Navigate  
+在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
 :::
 
 
