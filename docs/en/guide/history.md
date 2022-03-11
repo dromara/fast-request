@@ -39,7 +39,7 @@ You can run your saved requests directly in the APIs tab
 ![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
 :::
 
-::: info Swagger default value parsing support
+::: danger Swagger default value parsing support
 Added the parsing of the default value of swagger annotations, which is more user-friendly of input parameters
 * @ApiParam(swagger2)
 * @ApiImplicitParam(swagger2)
@@ -50,17 +50,16 @@ Added the parsing of the default value of swagger annotations, which is more use
 More info **[Features](./feature.md)->Swagger default value parsing support**
 :::
 
-
-::: tip API Navigate rename to Navigate in tab  
-In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
-:::
-
-::: warning Optimize the user guide of features
+::: info Optimize the user guide of features
 We have added a ? option in different windows to display some guidelines. For first-time users, it's easier to operate
 
 And with the iteration of the version, more prompt operation guidelines may be added in the future
 
 ![help](../../.vuepress/public/img/help.png)
+:::
+
+::: tip API Navigate rename to Navigate in tab  
+In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
 :::
 
 ## v2.1.3
