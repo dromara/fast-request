@@ -15,6 +15,7 @@ icon: changelog
 * APIs界面优化
 * Tab页API Navigate重命名Navigate
 * 使用引导上的细节优化
+* url生成优化之多url随机生成
 
 ::: info SearchEveryWhere高亮优化
 高亮展示搜索关键字,加快真实想要查找的API的查找速度,同时展示api对应的javadoc
@@ -56,7 +57,7 @@ icon: changelog
 ![mergeRunAndDownload](../.vuepress/public/img/mergeRunAndDownload.png)
 :::
 
-::: info 使用引导上的细节优化
+::: tip 使用引导上的细节优化
 我们在不同的操作窗口,增加?选项用来展示一些注意事项及操作指引,对于初次使用的用户,操作门槛更低
 
 并且随着版本的迭代,后续可能会加入更多的提示操作指引
@@ -64,10 +65,24 @@ icon: changelog
 ![help](../.vuepress/public/img/help.png)
 :::
 
-::: tip Tab页API Navigate重命名Navigate  
+::: info Tab页API Navigate重命名Navigate  
 在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
 :::
 
+::: note url生成优化之多url随机生成
+
+以下方法url将随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+```java
+@RequestMapping({"url1","url2"})
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = {"test1","test2"})
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+:::
 
 
 ## v2.1.3

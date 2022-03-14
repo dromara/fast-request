@@ -15,6 +15,7 @@ icon: changelog
 * APIs user interface optimization
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features
+* Url generation optimization
 
 ::: info SearchEveryWhere highlight optimization
 Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
@@ -56,7 +57,7 @@ Added the parsing of the default value of swagger annotations, which is more use
 More info **[Features](./feature.md)->Swagger default value parsing support**
 :::
 
-::: info Optimize the user guide of features
+::: tip Optimize the user guide of features
 We have added a ? option in different windows to display some guidelines. For first-time users, it's easier to operate
 
 And with the iteration of the version, more prompt operation guidelines may be added in the future
@@ -64,8 +65,22 @@ And with the iteration of the version, more prompt operation guidelines may be a
 ![help](../../.vuepress/public/img/help.png)
 :::
 
-::: tip API Navigate rename to Navigate in tab  
+::: info API Navigate rename to Navigate in tab  
 In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
+:::
+
+::: note Url generation optimization
+The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+```java
+@RequestMapping({"url1","url2"})
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = {"test1","test2"})
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
 :::
 
 ## v2.1.3
