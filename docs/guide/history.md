@@ -11,6 +11,7 @@ icon: changelog
 * 兼容idea 2022.1
 * 自动生成参数可选化
 * swagger注解默认值参数解析支持
+* 对Send和Send and Download按钮进行了合并
 * APIs界面优化
 * Tab页API Navigate重命名Navigate
 * 使用引导上的细节优化
@@ -48,6 +49,11 @@ icon: changelog
 * @Schema(swagger3)
 
 更多详情请看 **[功能](./feature.md)->Swagger默认值解析支持**
+:::
+
+:::info 对Send和Send and Download按钮进行了合并
+对按钮进行了合并,因为常见的操作都是非下载操作,减少了工具栏按钮个数,看上去更加简捷
+![mergeRunAndDownload](../.vuepress/public/img/mergeRunAndDownload.png)
 :::
 
 ::: info 使用引导上的细节优化

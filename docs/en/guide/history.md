@@ -11,6 +11,7 @@ icon: changelog
 * Compatible with idea 2022.1
 * Make it optional for automatically generate parameters
 * Swagger annotation default value parameter parsing support
+* Merged Send and Send and Download buttons
 * APIs user interface optimization
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features
@@ -37,6 +38,11 @@ You can run your saved requests directly in the APIs tab
 
 :::note Automatically generate parameter optionals
 ![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
+:::
+
+:::info Merged Send and Send and Download buttons
+The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
+![mergeRunAndDownload](../../.vuepress/public/img/mergeRunAndDownload.png)
 :::
 
 ::: danger Swagger default value parsing support
