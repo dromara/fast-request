@@ -22,6 +22,7 @@ Gitter room have been created! Welcome to share your question in this community
 * Compatible with idea 2022.1
 * Make it optional for automatically generate parameters
 * Swagger annotation default value parameter parsing support
+* Merged Send and Send and Download buttons
 * APIs user interface optimization
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features

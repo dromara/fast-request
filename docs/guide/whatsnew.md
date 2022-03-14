@@ -18,6 +18,7 @@ icon: whats-new
 * 兼容idea 2022.1
 * 自动生成参数可选化
 * swagger注解默认值参数解析支持
+* 对Send和Send and Download按钮进行了合并
 * APIs界面优化
 * Tab页API Navigate重命名Navigate
 * 使用引导上的细节优化
