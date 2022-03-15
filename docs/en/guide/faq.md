@@ -35,3 +35,16 @@ public class A{
 Designed to reset generated parameters,it will clear the parameters of the previous API,but does not include the save action.  
 If your API has been saved and you want to change the parameters again, then you can click the regenerate button and remember to save again, otherwise the original parameters will be retained.  
 (It is equivalent to operating a file, emptying the content of the file but not saving it, then you will still see the original file before modification)
+
+## Nothing show<Badge text="2022.1.4+" type="danger"/>
+![](../../.vuepress/public/img/buy/none.png)
+
+step1:Click **help->Register...->Add New License**
+
+* Way 1: Log in to your jetbrains account(Make sure you have buy the license)
+* Way 2: Enter the activation code in Activation code
+* Way 3: Click start trial
+
+![](../../.vuepress/public/img/buy/step5.png)
+
+step2: restart idea

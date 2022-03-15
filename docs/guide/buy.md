@@ -6,6 +6,7 @@ icon: buy
 **购买分为2种方式**
 * 账号模式: 注册[jetbrains账号](https://account.jetbrains.com/licenses)购买(推荐)
 * 邮件模式: 直接使用email邮箱接收license
+* License server模式: 不支持
 
 **注册jetbrains账号购买方式可以方便后续找license,且不容易丢失**
 ## Step0: 前往插件激活页面
@@ -36,14 +37,20 @@ icon: buy
 
 ## Step5: 填写license信息激活插件
 
-
+点击 **help->Register Plugins...->Add New License**
 * 方式1: 登录jetbrains账号
 * 方式2: 在Activation code中输入激活码
 
-**请妥善保存好您的激活码信息**
-
 ![](../.vuepress/public/img/buy/step5.png)
 
-**如果您有不懂或者不明白的地方,请加入群里联系我**
+
+## 谨记
+:::danger License信息
+
+**请妥善保存好您的激活码信息,不要贪图==小便宜==,如果是引用==第三方==库造成的证书信息泄露,本插件制作方概不负责**
+![](../.vuepress/public/img/buy/accountLicense.png)
+:::
+
+**如果您有不懂或者不明白的地方,请加入群聊联系我**
 
 ![](../.vuepress/public/img/dingding.jpg)

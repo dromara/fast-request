@@ -7,9 +7,8 @@ icon: restfulFastRequest
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA) [![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is a powerful restful api toolkit
-plugin help you quickly generate url and params by exist method.
-`Plugin = API debug tool + API manager tool`. It has a beautiful interface to compose requests,inspect server
+[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) Restful Fast Request is the IDEA version of Postman, it is a powerful restful api toolkit plugin which help you quickly generate url and params by exist method.
+`Restful Fast Request = API debug tool + API manager tool + API search tool`. It has a beautiful interface to compose requests,inspect server
 responses,store your api request and export api request Plugin help you debug request just in Intellij frame
 
 Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client, but also

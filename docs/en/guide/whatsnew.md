@@ -9,7 +9,7 @@ icon: whats-new
 
 Gitter room have been created! Welcome to share your question in this community
 
-[![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badg查看变更详情e&utm_campaign=pr-badge)
 
 :::
 
@@ -29,4 +29,4 @@ Gitter room have been created! Welcome to share your question in this community
 * Url generation optimization
 * Fix some bugs
 
-[More detail...](./history.md)
+[More detail ----->](./history.md)
