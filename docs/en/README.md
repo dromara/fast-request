@@ -64,7 +64,7 @@ meta:
 > * [x] ......
 
 
-::: [tip]() Notice  
+::: tip Notice  
 Make sure your IDEA version >= 2020.3+
 
 Plugin version| IDEA version requirements

@@ -36,7 +36,7 @@ public class A{
 
 相当于你操作一个文件,清空文件内容但未保存,那么看到的将还是原来修改前的文件  
 
-## 工具窗口空白<Badge text="2022.1.4+" type="danger"/>
+## Nothing to show<Badge text="2022.1.4+" type="danger"/>
 
 ![](../.vuepress/public/img/buy/none.png)
 
@@ -47,4 +47,6 @@ step1: 点击 **help->Register...->Add New License**
 
 ![](../.vuepress/public/img/buy/step5.png)
 
-step:重启idea
+step2:重启idea
+
+<Badge text="如果按照以上方式还是不行,也许是license有问题" type="danger" vertical="middle"/>

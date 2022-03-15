@@ -2,10 +2,13 @@
 title: Buy Plugin
 icon: buy
 ---
+
+<Badge text="Thanks for support original, support official edition" type="tip" vertical="middle"/>
+
 **Tow ways to buy**
 * Account mode: Management via [JetBrains Account](https://account.jetbrains.com/licenses)(Recommend)
 * Email mode: Receive the license directly by email
-* License server mode: Not support
+* License server mode: <Badge text="Not support" type="danger" vertical="middle"/>
 
 **Registering a jetbrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose**
 
@@ -43,10 +46,8 @@ Click **help->Register Plugins...->Add New License**
 ## Bear in mind
 :::danger License info
 
-**Please properly save your activation code information, do not covet small bargains, if it is a reference to a third-party database caused by the leakage of certificate information, the producer of this plug-in will not be responsible for it**
+**Please properly save your activation code information,and purchase licenses through formal channels, do not covet small bargains, if it is a reference to a ==third-party== lib caused by the leakage of license information, we will not be responsible for it**
 ![](../../.vuepress/public/img/buy/accountLicense.png)
 :::
 
-**If you don't understand something, please join the slack and contact me**
-
-[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
+**If you don't understand something, please join the gitter and contact me** on [![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badg查看变更详情e&utm_campaign=pr-badge)
