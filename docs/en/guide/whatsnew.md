@@ -5,9 +5,9 @@ icon: whats-new
 
 ::: danger Buy plugin
 
-**2022.1.4** starts to charge,Please refer to the purchase process in [Buy plugin](./buy.md)
+**2022.1.4** starts to charge,Please refer to the purchase license process in [Buy plugin](./buy.md)
 
-Gitter room have been created! Welcome to share your question in this community
+Gitter room have been created! Welcome to share your question in this community ↓↓↓
 
 [![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badg查看变更详情e&utm_campaign=pr-badge)
 

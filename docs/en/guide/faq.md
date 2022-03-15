@@ -36,7 +36,7 @@ Designed to reset generated parameters,it will clear the parameters of the previ
 If your API has been saved and you want to change the parameters again, then you can click the regenerate button and remember to save again, otherwise the original parameters will be retained.  
 (It is equivalent to operating a file, emptying the content of the file but not saving it, then you will still see the original file before modification)
 
-## Nothing show<Badge text="2022.1.4+" type="danger"/>
+## Nothing to show<Badge text="2022.1.4+" type="danger"/>
 ![](../../.vuepress/public/img/buy/none.png)
 
 step1:Click **help->Register...->Add New License**
@@ -48,3 +48,6 @@ step1:Click **help->Register...->Add New License**
 ![](../../.vuepress/public/img/buy/step5.png)
 
 step2: restart idea
+
+
+<Badge text="If it doesn't work in the way above, there may be a problem with your license" type="danger" vertical="middle"/>
