@@ -25,4 +25,4 @@ icon: whats-new
 * url生成优化之多url随机生成
 * 修复了一些bug
 
-[查看变更详情...](./history.md)
+[查看变更详情----->](./history.md)
