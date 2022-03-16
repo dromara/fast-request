@@ -164,7 +164,7 @@ Priority: swagger default value > config default value
 :::: code-group
 
 ::: code-group-item swagger2
-```
+```java
 * @ApiParam
 
 @GetMapping(value="/test/{id}")
@@ -200,20 +200,20 @@ public class UserDto {
 :::
 
 ::: code-group-item swagger3
-```
+```java
 * @Parameter
 
 @GetMapping(value="/test/{id}")
 public String test3(@Parameter(name = "id",example="2") @PathVariable("id") Integer id) {
-return "";
+    return "";
 }
 
 * @Schema(swagger3)
 
 @Data
 public class UserDto {
-@Schema(example = "Bob")
-private String userName;
+    @Schema(example = "Bob")
+    private String userName;
 }
 ```
 :::

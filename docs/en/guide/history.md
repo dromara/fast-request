@@ -27,7 +27,7 @@ Highlight search keywords to speed up the search for the API you really want to 
 Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
 ![exportImportApis](../../.vuepress/public/img/exportImportApis.gif)
 
-More info **[Features](./feature.md)->APIs import and export**
+More info **[Features->APIs import and export](./feature.md#apis-import-and-export)**
 :::
 
 ::: warning Add support for run APIs
@@ -54,7 +54,7 @@ Added the parsing of the default value of swagger annotations, which is more use
 * @Parameter(swagger3)
 * @Schema(swagger3)
 
-More info **[Features](./feature.md)->Swagger default value parsing support**
+More info **[Features->swagger default value parsing support](./feature.md#swagger-default-value-parsing-support)**
 :::
 
 ::: tip Optimize the user guide of features
@@ -65,12 +65,10 @@ And with the iteration of the version, more prompt operation guidelines may be a
 ![help](../../.vuepress/public/img/help.png)
 :::
 
-::: info API Navigate rename to Navigate in tab  
-In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
-:::
+::: info Url generation optimization
+Historical logic will only take the first url, that is, test1, considering that in actual use, it is possible that you need another url, so random support has been added.
 
-::: note Url generation optimization
-The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click <i class="icon iconfont icon-restfulFastRequest"></i>
 ```java
 @RequestMapping({"url1","url2"})
 @RestController
@@ -81,6 +79,25 @@ public class MultiUrlController {
     }
 }
 ```
+
+Expression support. The following demo url will be generated to **/public/test1**
+```java
+public class Constant {
+  public static final String PUBLIC_URL = "/public";
+}
+@RequestMapping("url1")
+@RestController
+public class MultiUrlController {
+  @GetMapping(value = Constant.PUBLIC_URL + "/test1")
+  public Integer testUrl(){
+    return 1;
+  }
+}
+```
+:::
+
+::: note API Navigate rename to Navigate in tab  
+In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
 :::
 
 ## v2.1.3

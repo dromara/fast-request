@@ -22,7 +22,7 @@ icon: whats-new
 * APIs界面优化
 * Tab页API Navigate重命名Navigate
 * 使用引导上的细节优化
-* url生成优化之多url随机生成
+* url解析优化
 * 修复了一些bug
 
 [查看变更详情----->](./history.md)

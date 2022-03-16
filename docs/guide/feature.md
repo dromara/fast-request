@@ -153,7 +153,7 @@ API Navigate树默认是懒加载的,需要点击刷新按钮,同样每次新增
 
 ![headerSwitch](../.vuepress/public/img/exportImportApis.gif)
 
-## Swagger默认值解析支持<Badge text="2022.1.4" />
+## swagger默认值解析支持<Badge text="2022.1.4" />
 已下是一些example
 
 优先级: swagger配置的值 > 配置默认值
@@ -161,7 +161,7 @@ API Navigate树默认是懒加载的,需要点击刷新按钮,同样每次新增
 :::: code-group
 
 ::: code-group-item swagger2
-```
+```java
 * @ApiParam
 
 @GetMapping(value="/test/{id}")
@@ -197,20 +197,20 @@ public class UserDto {
 :::
 
 ::: code-group-item swagger3
-```
+```java
 * @Parameter
 
 @GetMapping(value="/test/{id}")
 public String test3(@Parameter(name = "id",example="2") @PathVariable("id") Integer id) {
-return "";
+    return "";
 }
 
 * @Schema(swagger3)
 
 @Data
 public class UserDto {
-@Schema(example = "Bob")
-private String userName;
+    @Schema(example = "Bob")
+    private String userName;
 }
 ```
 :::

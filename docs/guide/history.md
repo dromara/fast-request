@@ -27,7 +27,7 @@ icon: changelog
 
 ![exportImportApis](../.vuepress/public/img/exportImportApis.gif)
 
-更多详情请看 **[功能](./feature.md)->APIs导入导出**
+更多详情请看 **[功能->APIs导入导出](./feature.md#apis导入导出)**
 ::: 
 
 ::: warning APIs支持直接运行
@@ -49,7 +49,9 @@ icon: changelog
 * @Parameter(swagger3)
 * @Schema(swagger3)
 
-更多详情请看 **[功能](./feature.md)->Swagger默认值解析支持**
+
+
+更多详情请看 **[功能->swagger默认值解析支持](./feature.md#swagger默认值解析支持)**
 :::
 
 :::info 对Send和Send and Download按钮进行了合并
@@ -65,13 +67,12 @@ icon: changelog
 ![help](../.vuepress/public/img/help.png)
 :::
 
-::: info Tab页API Navigate重命名Navigate  
-在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
-:::
 
-::: note url生成优化之多url随机生成
+::: info url解析优化
 
-以下方法url将随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+历史逻辑只会取第一个url即test1,考虑到实际使用中,有可能你需要的是另外一个url,所以添加了随机支持
+
+以下demo,url将随着点击<i class="icon iconfont icon-restfulFastRequest"></i>随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
 ```java
 @RequestMapping({"url1","url2"})
 @RestController
@@ -82,6 +83,25 @@ public class MultiUrlController {
     }
 }
 ```
+
+支持变量计算,以下demo将生成 **/public/test1**
+```java
+public class Constant {
+    public static final String PUBLIC_URL = "/public";
+}
+@RequestMapping("url1")
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = Constant.PUBLIC_URL + "/test1")
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+:::
+
+::: note Tab页API Navigate重命名Navigate  
+在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
 :::
 
 
