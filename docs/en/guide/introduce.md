@@ -9,7 +9,7 @@ icon: restfulFastRequest
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) Restful Fast Request is the IDEA version of Postman, it is a powerful restful api toolkit plugin which help you quickly generate url and params by exist method.
 `Restful Fast Request = API debug tool + API manager tool + API search tool`. It has a beautiful interface to compose requests,inspect server
-responses,store your api request and export api request Plugin help you debug request just in Intellij frame
+responses,store your api request and export api request.Plugin help you debug request just in Intellij frame
 
 Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client, but also
 provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to

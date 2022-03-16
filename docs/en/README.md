@@ -10,6 +10,8 @@ actions:
     type: primary
   - text: Features 🛠
     link: /en/guide/feature
+  - text: History changes 🔍
+    link: /en/guide/history
 features:
   - title: Based on native
     icon: origin
@@ -45,6 +47,7 @@ meta:
 
 ### Features :100:
 
+> * [x] Postman-like user interface
 > * [x] Generate url and parameters in one click
 > * [x] SearchEveryWhere support
 > * [x] APIs export to Postman
@@ -55,12 +58,13 @@ meta:
 > * [x] String generation strategy
 > * [x] Save api
 > * [x] Management API
-> * [x] One click location history save api to method
+> * [x] One click navigate or run history save api to method
 > * [x] Api to curl
 > * [x] Built-in Json parameter editor
 > * [x] Automatically associate APIs to module groups
 > * [x] API navigate tree
 > * [x] Headers group
+> * [x] Swagger Parameter parsing support
 > * [x] ......
 
 
