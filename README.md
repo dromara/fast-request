@@ -23,7 +23,7 @@ It has a beautiful interface to compose requests,inspect server responses,store 
 Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client, but also
 provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to
 debug the API. At the same time, various types of parameters also provide different customization methods to make it
-more flexible.
+more flexible.And it integrates additional features such as search, Postman integration, Swagger support and so on.
 
 > Supported framework
 >>Spring framework (Spring MVC / Spring Boot)  
