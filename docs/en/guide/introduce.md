@@ -14,7 +14,7 @@ responses,store your api request and export api request.Plugin help you debug re
 Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client, but also
 provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to
 debug the API. At the same time, various types of parameters also provide different customization methods to make it
-more flexible.
+more flexible.And it integrates additional features such as search, Postman integration, Swagger support and so on.
 
 ::: tip PURPOSE  
 The purpose of the plug-in is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
