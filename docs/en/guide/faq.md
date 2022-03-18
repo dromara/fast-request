@@ -6,11 +6,11 @@ icon: faq
 [[toc]]
  
 
-## Why the plugin doesn't respond
-Answer:Please configure the relevant configuration according to the steps introduced in the first chapter first, and then click the icon.  
+## Q: Why the plugin doesn't respond
+**A:** Please configure the relevant configuration according to the steps introduced in the first chapter first, and then click the icon.  
 
-## Idea freezes after clicking the fastRequest icon
-Answer:The entity class you designed is nested and recursive, the plugin does not support.
+## Q: Idea freezes after clicking the fastRequest icon
+**A:** :The entity class you designed is nested and recursive, the plugin does not support.
 ``` java
 public class A{
     private B b;
@@ -31,13 +31,15 @@ public class A{
 }
 ```
 
-## Regeneration function
-Designed to reset generated parameters,it will clear the parameters of the previous API,but does not include the save action.  
+## Q: Regeneration function
+**A:** Designed to reset generated parameters,it will clear the parameters of the previous API,but does not include the save action.  
 If your API has been saved and you want to change the parameters again, then you can click the regenerate button and remember to save again, otherwise the original parameters will be retained.  
 (It is equivalent to operating a file, emptying the content of the file but not saving it, then you will still see the original file before modification)
 
-## Nothing to show<Badge text="2022.1.4+" type="danger"/>
+## Q: Nothing to show<Badge text="2022.1.4+" type="danger"/>
 ![](../../.vuepress/public/img/buy/none.png)
+
+<Badge text="Follow these steps to register for licenses" type="danger" vertical="middle"/>
 
 step1:Click **help->Register...->Add New License**
 
@@ -50,4 +52,3 @@ step1:Click **help->Register...->Add New License**
 step2: restart idea
 
 
-<Badge text="If it doesn't work in the way above, there may be a problem with your license" type="danger" vertical="middle"/>

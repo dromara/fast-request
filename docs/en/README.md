@@ -25,9 +25,9 @@ features:
     icon: features
     details: Generate url and parameters、API export to postman、SearchEveryWhere support、send/download request、Store request...
     link: /en/guide/feature.html
-  - title: User-friendly interface
+  - title: Lightweight、User-friendly interface
     icon: code-box-fill
-    details: Provides a very intuitive interface
+    details: Only 6MB size,Provides a very intuitive interface
 meta:
   - name: keywords
     content: Restful Fast Request,idea plugin,http client,Restful API

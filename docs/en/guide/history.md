@@ -16,6 +16,7 @@ icon: changelog
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features
 * Url generation optimization
+* Fix Light files should have PSI only in one project
 
 ::: info SearchEveryWhere highlight optimization
 Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed

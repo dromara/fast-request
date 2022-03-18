@@ -5,7 +5,7 @@ icon: whats-new
 
 ::: danger 购买插件
 
-==2022.1.4==版本开始收费,购买license流程请参考[购买插件](./buy.md)
+==2022.1.4== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
 
 :::
 
@@ -23,6 +23,7 @@ icon: whats-new
 * Tab页API Navigate重命名Navigate
 * 使用引导上的细节优化
 * url解析优化
+* Fix Light files should have PSI only in one project
 * 修复了一些bug
 
 [查看变更详情----->](./history.md)

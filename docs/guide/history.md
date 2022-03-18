@@ -16,6 +16,7 @@ icon: changelog
 * Tab页API Navigate重命名Navigate
 * 使用引导上的细节优化
 * url生成优化之多url随机生成
+* 修复了Light files should have PSI only in one project
 
 ::: info SearchEveryWhere高亮优化
 高亮展示搜索关键字,加快真实想要查找的API的查找速度,同时展示api对应的javadoc
