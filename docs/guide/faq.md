@@ -36,7 +36,7 @@ public class A{
 
 相当于你操作一个文件,清空文件内容但未保存,那么看到的将还是原来修改前的文件  
 
-## Q: Nothing to show<Badge text="2022.1.4+" type="danger"/>
+## Q: Nothing to show<Badge text="2022.1.4.0+" type="danger"/>
 
 ![](../.vuepress/public/img/buy/none.png)
 

@@ -2,7 +2,7 @@
 title: 历史变更
 icon: changelog
 ---
-## 2022.1.4 <Badge text="收费" type="warn"/>
+## 2022.1.4.0 <Badge text="收费" type="warn"/>
 ==idea版本2021.3+==
 * SearchEveryWhere高亮优化
 * APIs导入导出支持
