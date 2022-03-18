@@ -10,6 +10,8 @@ actions:
         type: primary
       - text: 功能 🛠
         link: /guide/feature
+      - text: 历史变更 🔍
+        link: /guide/history
 features:
 - title: 基于原生
   icon: origin
@@ -20,14 +22,12 @@ features:
   details: 只需要简单配置即可生成方法的api请求，从而节省大量时间
   link: /guide/getstarted/start.html
 - title: 功能丰富
-  icon: feature
+  icon: features
   details: 一键生成url和参数、api导出到postman、SearchEveryWhere搜索、发送API请求、下载文件、存储历史请求,各种功能一应俱全
   link: /guide/feature.html
-- title: 界面友好
-  icon: interface
-  details: 提供一个非常直观的界面,好操作易上手
-footer: Apache License 2.0 | Copyright © 2021-present Kings
-
+- title: 轻量、界面友好
+  icon: code-box-fill
+  details: 轻量,仅6M大小,并且提供一个非常直观的界面,好操作易上手
 meta:
   - name: keywords
     content: Restful Fast Request,idea插件,http client,Restful API
@@ -43,33 +43,40 @@ meta:
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA) [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
-[![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
+[![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 <iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
 
 ### 功能  :100:
 
+> * [x] Postman一样的操作界面
 > * [x] 一键生成url和参数
 > * [x] SearchEveryWhere支持
 > * [x] API导出到Postman
-> * [x] 发送请求调试API(支持修改生成的参数)
+> * [x] 发送请求调试API
 > * [x] 发送请求并下载文件
 > * [x] 域名定制及切换
 > * [x] 自定义参数解析
 > * [x] 字符串生成策略化
 > * [x] 保存API
-> * [x] 管理API(搜索过滤、修改API名称)
-> * [x] 一键定位历史保存的API到方法
+> * [x] 管理API(搜索过滤、修改API名称等)
+> * [x] 一键定位、运行历史保存的API到方法
 > * [x] API转curl
 > * [x] 自动将API关联到模块分组
 > * [x] 内置Json参数编辑器
 > * [x] API导航树
 > * [x] Headers分组
+> * [x] Swagger参数解析支持
 > * [x] ......
 
 
 ::: tip 注意  
 请确保你的 IDEA版本 版本 >= 2020.3+
+
+插件版本       | IDEA版本要求
+------------- | -------------
+2.0.0~2.1.3   | 2020.3+
+2022.1.4+     | 2021.3+
 
 当然请如果插件有更新，请确保更新成最新版本
 :::

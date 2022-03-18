@@ -1,6 +1,6 @@
 ---
 title: Data mapping
-icon: mapping
+icon: dataMapping
 ---
 
 

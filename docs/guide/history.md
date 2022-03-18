@@ -2,7 +2,113 @@
 title: 历史变更
 icon: changelog
 ---
+## 2022.1.4 <Badge text="收费" type="warn"/>
+==idea版本2021.3+==
+* SearchEveryWhere高亮优化
+* APIs导入导出支持
+* APIs支持直接运行
+* API请求增加超时设置
+* 兼容idea 2022.1
+* 自动生成参数可选化
+* swagger注解默认值参数解析支持
+* 对Send和Send and Download按钮进行了合并
+* APIs界面优化
+* Tab页API Navigate重命名Navigate
+* 使用引导上的细节优化
+* url生成优化之多url随机生成
+* 修复了Light files should have PSI only in one project
 
+::: info SearchEveryWhere高亮优化
+高亮展示搜索关键字,加快真实想要查找的API的查找速度,同时展示api对应的javadoc
+![help](../.vuepress/public/img/searchEveryWhereHighlight.png)
+:::
+
+::: tip APIs导入导出支持
+增加对APIs的导入导出支持,利用改功能,你可以非常方便得将自己已有的APIs分享给别的开发者,或者导入到其他设备上的IDEA
+
+![exportImportApis](../.vuepress/public/img/exportImportApis.gif)
+
+更多详情请看 **[功能->APIs导入导出](./feature.md#apis导入导出)**
+::: 
+
+::: warning APIs支持直接运行
+你可以在APIs tab页直接运行你保存的请求
+
+![runInApiManagement](../.vuepress/public/img/runInApiManagement.png)
+:::
+
+
+:::note 自动生成参数可选化
+![generateSwitch](../.vuepress/public/img/generateSwitch.png)
+:::
+
+::: danger swagger注解默认值参数解析支持
+增加了swagger注解默认值的解析,该功能对于入参的传递更加人性化
+* @ApiParam(swagger2)
+* @ApiImplicitParam(swagger2)
+* @ApiModelProperty(swagger2)
+* @Parameter(swagger3)
+* @Schema(swagger3)
+
+
+
+更多详情请看 **[功能->swagger默认值解析支持](./feature.md#swagger默认值解析支持)**
+:::
+
+:::info 对Send和Send and Download按钮进行了合并
+对按钮进行了合并,因为常见的操作都是非下载操作,减少了工具栏按钮个数,看上去更加简捷
+![mergeRunAndDownload](../.vuepress/public/img/mergeRunAndDownload.png)
+:::
+
+::: tip 使用引导上的细节优化
+我们在不同的操作窗口,增加?选项用来展示一些注意事项及操作指引,对于初次使用的用户,操作门槛更低
+
+并且随着版本的迭代,后续可能会加入更多的提示操作指引
+
+![help](../.vuepress/public/img/help.png)
+:::
+
+
+::: info url解析优化
+
+历史逻辑只会取第一个url即test1,考虑到实际使用中,有可能你需要的是另外一个url,所以添加了随机支持
+
+以下demo,url将随着点击<i class="icon iconfont icon-restfulFastRequest"></i>随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+```java
+@RequestMapping({"url1","url2"})
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = {"test1","test2"})
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+
+支持变量计算,以下demo将生成 **/public/test1**
+```java
+public class Constant {
+    public static final String PUBLIC_URL = "/public";
+}
+@RequestMapping("url1")
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = Constant.PUBLIC_URL + "/test1")
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+:::
+
+::: note Tab页API Navigate重命名Navigate  
+在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
+:::
+
+
+## v2.1.3
+* 参数特殊符号编码支持
+* curl加入global headers
 
 ## v2.1.2
 
@@ -14,13 +120,19 @@ icon: changelog
 * API保存分组优化
 * 全局请求头支持
 
-:::tip Url解析优化
-
-```
+::: tip Url解析优化
 支持以下example的解析
-不再需要单独配置url replace config
 
-场景1:url是类常量引用
+不再需要单独配置url replace config
+:::
+
+
+
+:::: code-group
+
+::: code-group-item 场景1:url是类常量引用
+
+```java
 @RequestMapping(Url1.URL_TEST)
 @RestController
 public class UrlTestController {
@@ -31,14 +143,22 @@ public class UrlTestController {
         return 1;
     }
 }
+```
 
-场景2:value是一个数组
+:::
+
+::: code-group-item 场景2:value是一个数组
+
+```java
 @RequestMapping(
     value = {"/v1/save"},
     method = {RequestMethod.POST}
 )
 ```
+
 :::
+
+::::
 
 :::tip 添加对导出api到Postman的支持
 

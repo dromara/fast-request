@@ -1,6 +1,6 @@
 ---
 title: Other config
-icon: others
+icon: others1
 ---
 
 controller url fixed variable can replace by config, For example controller like this

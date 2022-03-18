@@ -2,6 +2,108 @@
 title: History changes
 icon: changelog
 ---
+## 2022.1.4 <Badge text="收费" type="warn"/>
+==require idea 2021.3+==
+* SearchEveryWhere highlight optimization
+* Add support for import and export APIs
+* Add support for run APIs
+* Add timeout for api request
+* Compatible with idea 2022.1
+* Make it optional for automatically generate parameters
+* Swagger annotation default value parameter parsing support
+* Merged Send and Send and Download buttons
+* APIs user interface optimization
+* API Navigate rename to Navigate in tab
+* Optimize the user guide of features
+* Url generation optimization
+* Fix Light files should have PSI only in one project
+
+::: info SearchEveryWhere highlight optimization
+Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
+
+![help](../../.vuepress/public/img/searchEveryWhereHighlight.png)
+:::
+
+::: tip Add support for import and export APIs
+Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
+![exportImportApis](../../.vuepress/public/img/exportImportApis.gif)
+
+More info **[Features->APIs import and export](./feature.md#apis-import-and-export)**
+:::
+
+::: warning Add support for run APIs
+You can run your saved requests directly in the APIs tab
+
+![runInApiManagement](../../.vuepress/public/img/runInApiManagement.png)
+:::
+
+
+:::note Automatically generate parameter optionals
+![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
+:::
+
+:::info Merged Send and Send and Download buttons
+The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
+![mergeRunAndDownload](../../.vuepress/public/img/mergeRunAndDownload.png)
+:::
+
+::: danger Swagger default value parsing support
+Added the parsing of the default value of swagger annotations, which is more user-friendly of input parameters
+* @ApiParam(swagger2)
+* @ApiImplicitParam(swagger2)
+* @ApiModelProperty(swagger2)
+* @Parameter(swagger3)
+* @Schema(swagger3)
+
+More info **[Features->swagger default value parsing support](./feature.md#swagger-default-value-parsing-support)**
+:::
+
+::: tip Optimize the user guide of features
+We have added a ? option in different windows to display some guidelines. For first-time users, it's easier to operate
+
+And with the iteration of the version, more prompt operation guidelines may be added in the future
+
+![help](../../.vuepress/public/img/help.png)
+:::
+
+::: info Url generation optimization
+Historical logic will only take the first url, that is, test1, considering that in actual use, it is possible that you need another url, so random support has been added.
+
+The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click <i class="icon iconfont icon-restfulFastRequest"></i>
+```java
+@RequestMapping({"url1","url2"})
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = {"test1","test2"})
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+
+Expression support. The following demo url will be generated to **/public/test1**
+```java
+public class Constant {
+  public static final String PUBLIC_URL = "/public";
+}
+@RequestMapping("url1")
+@RestController
+public class MultiUrlController {
+  @GetMapping(value = Constant.PUBLIC_URL + "/test1")
+  public Integer testUrl(){
+    return 1;
+  }
+}
+```
+:::
+
+::: note API Navigate rename to Navigate in tab  
+In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
+:::
+
+## v2.1.3
+* Add encode support for special symbol in parameter
+* Add global headers to curl
 
 ## v2.1.2
 
@@ -15,12 +117,17 @@ icon: changelog
 
 
 :::tip Optimize URL parsing
-
-```
 support parse like following example
-no longer need to configure the URL Replace Config separately
 
-Scene 1: URLS are class constant references
+no longer need to configure the URL Replace Config separately
+:::
+
+
+:::: code-group
+
+::: code-group-item Scene 1: URLS are class constant references
+
+```java
 @RequestMapping(Url1.URL_TEST)
 @RestController
 public class UrlTestController {
@@ -31,14 +138,23 @@ public class UrlTestController {
         return 1;
     }
 }
+```
 
-Scene 2: value is an array
+:::
+
+::: code-group-item Scene 2: value is an array
+
+```java
 @RequestMapping(
     value = {"/v1/save"},
     method = {RequestMethod.POST}
 )
 ```
+
 :::
+
+::::
+
 
 :::tip Add support for export api to Postman
 

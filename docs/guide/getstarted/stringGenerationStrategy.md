@@ -1,6 +1,6 @@
 ---
 title: String生成策略
-icon: string
+icon: codestring
 ---
 
 ```

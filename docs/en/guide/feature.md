@@ -4,8 +4,8 @@ icon: tools
 ---
 
 * Generate url and parameters in one click
-* SearchEveryWhere support<Badge text="new" />
-* APIs export to Postman<Badge text="new" />
+* SearchEveryWhere support
+* APIs export to Postman
 * Send request to debug API(support to modify the generated parameters)
 * Send request and download
 * Domain customization and switching
@@ -19,6 +19,8 @@ icon: tools
 * Automatically associate APIs to module groups
 * API navigate tree
 * Headers group
+* APIs import and export<Badge text="new" />
+* Swagger default value parsing support<Badge text="new" />
 
 ## Debug API & send request<Badge text="2.0.0"/>
 
@@ -121,6 +123,11 @@ Select the tree and enter keywords
 Press Enter again or double-click the left mouse button to locate the API
 
 Hover the mouse to display the doc of the api
+
+The API Navigate tree is lazy loaded by default, you need to click the refresh button, 
+and every time you add an API, you also need to refresh to get it
+
+Lazy loading helps to speed up idea startup
 ```
 
 ![apinavi](../../.vuepress/public/img/apinav.gif)
@@ -134,3 +141,81 @@ Operation method：
 ```
 
 ![headerSwitch](../../.vuepress/public/img/headerSwitch.gif)
+
+## APIs import and export<Badge text="2022.1.4" />
+Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
+
+::: danger Attention
+* A new file named fastRequestCollection.xml will be added when exporting,You can't rename it, it is exported to the current project path by default.
+
+* When importing, it will do a default backup,And will generate a file named fastRequestCollection-yyyyMMddHHmmssSSS.xml under the .idea folder ,
+If it is imported by mistake, it can be restored by importing it
+
+* Click file->Reload All from Disk to force refresh to get fastRequestCollection.xml if it is not visible
+:::
+
+![headerSwitch](../../.vuepress/public/img/exportImportApis.gif)
+
+
+## Swagger default value parsing support<Badge text="2022.1.4" />
+Below are some examples
+
+Priority: swagger default value > config default value
+:::: code-group
+
+::: code-group-item swagger2
+```java
+* @ApiParam
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",defaultValue="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+
+* @ApiImplicitParam
+
+@ApiImplicitParams({
+    @ApiImplicitParam(paramType="query",name="pageNo",dataType="String",required=true,value="pageNo",defaultValue="1"),
+    @ApiImplicitParam(paramType="query",name="pageSize",dataType="String",required=true,value="pageSize",defaultValue="10")
+})
+@GetMapping(value="/testPage)
+public String testPage(@RequestParam("pageNo") Integer pageNo, @RequestParam("pageSize") Integer pageSize) {
+    return "";
+}
+
+
+* @ApiModelProperty
+@Data
+public class UserDto {
+    @ApiModelProperty(example = "Bob")
+    private String userName;
+}
+```
+:::
+
+::: code-group-item swagger3
+```java
+* @Parameter
+
+@GetMapping(value="/test/{id}")
+public String test3(@Parameter(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+* @Schema(swagger3)
+
+@Data
+public class UserDto {
+    @Schema(example = "Bob")
+    private String userName;
+}
+```
+:::
+
+::::
