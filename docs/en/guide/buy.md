@@ -44,6 +44,8 @@ Click **help->Register Plugins...->Add New License**
 
 ![](../../.vuepress/public/img/buy/step5.png)
 
+<a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>Buy</a>
+
 ## Tips💡
 :::danger License info
 

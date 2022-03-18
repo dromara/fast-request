@@ -139,7 +139,7 @@ API Navigate树默认是懒加载的,需要点击刷新按钮,同样每次新增
 
 ![headerSwitch](../.vuepress/public/img/headerSwitch.gif)
 
-## APIs导入导出<Badge text="2022.1.4" />
+## APIs导入导出<Badge text="2022.1.4.0" />
 利用改功能,你可以非常方便得将自己已有的APIs分享给别的开发者,或者导入到其他设备上的IDEA
 
 ::: danger 注意点
@@ -153,7 +153,7 @@ API Navigate树默认是懒加载的,需要点击刷新按钮,同样每次新增
 
 ![headerSwitch](../.vuepress/public/img/exportImportApis.gif)
 
-## swagger默认值解析支持<Badge text="2022.1.4" />
+## swagger默认值解析支持<Badge text="2022.1.4.0" />
 已下是一些example
 
 优先级: swagger配置的值 > 配置默认值

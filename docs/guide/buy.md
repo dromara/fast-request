@@ -53,3 +53,5 @@ icon: buy
 **如果您还有其他疑问,请加入群聊联系我↓↓↓**
 
 ![](../.vuepress/public/img/dingding.jpg)
+
+<a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>购买</a>
