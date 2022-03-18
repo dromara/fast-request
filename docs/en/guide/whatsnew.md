@@ -5,7 +5,7 @@ icon: whats-new
 
 ::: danger Buy plugin
 
-**2022.1.4** starts to charge,Please refer to the purchase license process in [Buy plugin](./buy.md)
+**2022.1.4** starts to charge,Please refer to the purchase **License** process in [**Buy plugin**](./buy.md)
 
 Gitter room have been created! Welcome to share your question in this community ↓↓↓
 
@@ -27,6 +27,7 @@ Gitter room have been created! Welcome to share your question in this community 
 * API Navigate rename to Navigate in tab
 * Optimize the user guide of features
 * Url generation optimization
+* Fix Light files should have PSI only in one project
 * Fix some bugs
 
 [More detail ----->](./history.md)

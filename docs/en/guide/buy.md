@@ -3,7 +3,8 @@ title: Buy Plugin
 icon: buy
 ---
 
-<Badge text="Thanks for support original, support official edition" type="tip" vertical="middle"/>
+<Badge text="❤️Thanks for support original, support official edition❤️" type="tip" vertical="middle"/>
+
 
 **Tow ways to buy**
 * Account mode: Management via [JetBrains Account](https://account.jetbrains.com/licenses)(Recommend)
@@ -35,7 +36,7 @@ Click next to enter the purchase confirmation page
 ## Step4: Type in the information and pay
 ![](../../.vuepress/public/img/buy/step4.png)
 
-## Step5: Type in the license information to activate the plugin
+## Step5: Type in the License information to activate the plugin
 Click **help->Register Plugins...->Add New License**
 
 * Way 1: Log in to your jetbrains account
@@ -43,11 +44,11 @@ Click **help->Register Plugins...->Add New License**
 
 ![](../../.vuepress/public/img/buy/step5.png)
 
-## Bear in mind
+## Tips💡
 :::danger License info
 
-**Please properly save your activation code information,and purchase licenses through formal channels, do not covet small bargains, if it is a reference to a ==third-party== lib caused by the leakage of license information, we will not be responsible for it**
+**Please keep your activation code information safe and do not leak the License information**
 ![](../../.vuepress/public/img/buy/accountLicense.png)
 :::
 
-**If you don't understand something, please join the gitter and contact me** on [![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badg查看变更详情e&utm_campaign=pr-badge)
+**If you have some questions, please join the gitter and contact me** on [![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badg查看变更详情e&utm_campaign=pr-badge)
