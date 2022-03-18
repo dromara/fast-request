@@ -20,19 +20,33 @@ module.exports = defineHopeConfig({
 //              hideRouteList:["en"],
 //              closeOnce: false
 //            }]
-               [
-                     '@vuepress/plugin-search',
-                     {
-                       locales: {
-                         '/en': {
-                           placeholder: 'Search',
-                         },
-                         '/': {
-                           placeholder: '搜索',
+           [
+                 '@vuepress/docsearch',
+                 {
+                   appId:"8FRYEU6KK8",
+                   apiKey: '84f513df1e83406ba42179da778d87b4',
+                   indexName: 'dromara-fast-request',
+                   locales: {
+                     '/en': {
+                       placeholder: 'Search Documentation',
+                       translations: {
+                         button: {
+                           buttonText: 'Search Documentation',
                          },
                        },
                      },
-                   ],
+                     '/': {
+                       placeholder: '搜索文档',
+                       translations: {
+                         button: {
+                           buttonText: '搜索文档',
+                         },
+                       },
+                     },
+                   },
+                 },
+               ],
+
     ],
     base : '/fast-request/',
     title: 'Restful Fast Request',
@@ -42,7 +56,7 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: "stylesheet",
-                href: "//at.alicdn.com/t/font_2601581_giouw7mz8fk.css",
+                href: "//at.alicdn.com/t/font_2601581_sp9fwshuf7k.css",
             },
         ],
         [
@@ -75,13 +89,17 @@ module.exports = defineHopeConfig({
                   align: true,
                   tasklist: true,
                   container: true,
-                  lazyLoad: true
+                  lazyLoad: true,
+                  codegroup: true,
+                  mark: true
               },
               comment: {
                    type: 'waline',
                    serverURL: "https://fast-request-vercel.vercel.app"
               }
         },
+        displayFooter: true,
+        copyright: "Copyright © 2021-present Kings",
         themeColor: {
               blue: "#087CFA",
               red: "#FE2857",
@@ -102,13 +120,9 @@ module.exports = defineHopeConfig({
       docsBranch: 'master',
       // 默认是 false, 设置为 true 来启用
       editLinks: true,
-      footer: {
-            display: true,
-            content: "Apache License 2.0 | Copyright © 2021-present Kings",
-      },
       locales: {
             '/en/': {
-
+                footer: "Apache License 2.0  | Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/'>vuepress-theme-hope</a>",
                 selectText: 'Languages',
                 label: 'English',
 //                navbar: [
@@ -153,11 +167,13 @@ module.exports = defineHopeConfig({
                         "feature",
                         "whatsnew",
                         "history",
+                        "buy",
                         "faq",
                     ]
                 }
             },
             '/': {
+                footer: "Apache License 2.0  | Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/zh/'>vuepress-theme-hope</a>",
                 // 多语言下拉菜单的标题
                 selectText: 'Languages',
                 // 该语言在下拉菜单中的标签
@@ -206,6 +222,7 @@ module.exports = defineHopeConfig({
                         "feature",
                         "whatsnew",
                         "history",
+                        "buy",
                         "faq"
                     ],
                 }

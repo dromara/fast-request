@@ -3,13 +3,31 @@ title: What's new
 icon: whats-new
 ---
 
-:::danger Announcement about charging for v2.1.4+
-1. v2.1.3 will be the last free version. In order to provide better and more detailed functions, the pro mode will be enabled from v2.1.4, and more and more powerful functions ,optimization of details will be added at that time
-2. No work, no gain, respect for knowledge then civilization will progress
-3. The plug-in will also set a reasonable and affordable price, so that every developer can still use the plug-in
+::: danger Buy plugin
+
+**2022.1.4** starts to charge,Please refer to the purchase **License** process in [**Buy plugin**](./buy.md)
+
+Gitter room have been created! Welcome to share your question in this community ↓↓↓
+
+[![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badg查看变更详情e&utm_campaign=pr-badge)
+
 :::
 
-# v2.1.3
+# v2022.1.4
 
-* Add encode support for special symbol in parameter
-* Add global headers to curl
+* SearchEveryWhere highlight optimization
+* Add support for import and export APIs
+* Add support for run APIs
+* Add timeout for api request
+* Compatible with idea 2022.1
+* Make it optional for automatically generate parameters
+* Swagger annotation default value parameter parsing support
+* Merged Send and Send and Download buttons
+* APIs user interface optimization
+* API Navigate rename to Navigate in tab
+* Optimize the user guide of features
+* Url generation optimization
+* Fix Light files should have PSI only in one project
+* Fix some bugs
+
+[More detail ----->](./history.md)

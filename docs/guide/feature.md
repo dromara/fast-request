@@ -4,8 +4,8 @@ icon: tools
 ---
 
 * 一键生成url和参数
-* SearchEveryWhere支持<Badge text="new" />
-* API导出到Postman<Badge text="new" />
+* SearchEveryWhere支持
+* API导出到Postman
 * 发送请求调试API(支持修改生成的参数)
 * 发送请求并下载文件
 * 域名定制及切换
@@ -19,6 +19,8 @@ icon: tools
 * 内置Json参数编辑器
 * API导航树
 * Headers分组
+* APIs导入导出<Badge text="new" />
+* Swagger默认值解析支持<Badge text="new" />
 
 ## 调试API发送请求<Badge text="2.0.0"/>
 
@@ -120,6 +122,9 @@ api分组是为了将保存的api保存到不同分组以便区分不同的api,�
 选中树输入关键字,再按回车或者鼠标左键双击即可定位到API
 
 悬浮鼠标显示api的doc
+
+API Navigate树默认是懒加载的,需要点击刷新按钮,同样每次新增了API你也需要刷新才能得到
+懒加载有利于加快idea启动速度
 ```
 
 ![apinavi](../.vuepress/public/img/apinav.gif)
@@ -133,3 +138,81 @@ api分组是为了将保存的api保存到不同分组以便区分不同的api,�
 ```
 
 ![headerSwitch](../.vuepress/public/img/headerSwitch.gif)
+
+## APIs导入导出<Badge text="2022.1.4" />
+利用改功能,你可以非常方便得将自己已有的APIs分享给别的开发者,或者导入到其他设备上的IDEA
+
+::: danger 注意点
+* 导出的时候会新增一个名为fastRequestCollection.xml的xml文件,你不能重命名它, 默认导出到当前项目路径下
+
+* 导入的时候会做默认备份,并且会在.idea文件夹下生成一个名为fastRequestCollection-yyyyMMddHHmmssSSS.xml的文件,
+如果是导入误操作,可以通过导入它来还原
+
+* 如果fastRequestCollection.xml不可见,点击file->Reload All from Disk来强制刷新
+:::
+
+![headerSwitch](../.vuepress/public/img/exportImportApis.gif)
+
+## swagger默认值解析支持<Badge text="2022.1.4" />
+已下是一些example
+
+优先级: swagger配置的值 > 配置默认值
+
+:::: code-group
+
+::: code-group-item swagger2
+```java
+* @ApiParam
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",defaultValue="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+
+* @ApiImplicitParam
+
+@ApiImplicitParams({
+    @ApiImplicitParam(paramType="query",name="pageNo",dataType="String",required=true,value="pageNo",defaultValue="1"),
+    @ApiImplicitParam(paramType="query",name="pageSize",dataType="String",required=true,value="pageSize",defaultValue="10")
+})
+@GetMapping(value="/testPage)
+public String testPage(@RequestParam("pageNo") Integer pageNo, @RequestParam("pageSize") Integer pageSize) {
+    return "";
+}
+
+
+* @ApiModelProperty
+@Data
+public class UserDto {
+    @ApiModelProperty(example = "Bob")
+    private String userName;
+}
+```
+:::
+
+::: code-group-item swagger3
+```java
+* @Parameter
+
+@GetMapping(value="/test/{id}")
+public String test3(@Parameter(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+* @Schema(swagger3)
+
+@Data
+public class UserDto {
+    @Schema(example = "Bob")
+    private String userName;
+}
+```
+:::
+
+::::

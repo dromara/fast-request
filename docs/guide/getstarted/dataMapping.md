@@ -1,6 +1,6 @@
 ---
 title: 类型映射
-icon: mapping
+icon: dataMapping
 ---
 
 
