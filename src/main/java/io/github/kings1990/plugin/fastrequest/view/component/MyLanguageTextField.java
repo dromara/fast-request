@@ -93,7 +93,7 @@ public class MyLanguageTextField extends LanguageTextField {
         settings.setCaretRowShown(true);
         settings.setLineMarkerAreaShown(true);
         settings.setDndEnabled(true);
-        //å¼€å¯å³ä¾§çš„é”™è¯¯æ¡çº¹
+        //¿ªÆôÓÒ²àµÄ´íÎóÌõÎÆ
         ErrorStripeEditorCustomization.ENABLED.customize(editor);
     }
 

@@ -22,7 +22,7 @@ public class ParamKeyValue implements Serializable {
     private String key;
     private Object value;
     /**
-     * 1-è‡ªå®šä¹‰(å®ä½“)dataMappingæ˜ å°„  2-åŸºæœ¬ç±»å‹æ˜ å°„
+     * 1-×Ô¶¨Òå(ÊµÌå)dataMappingÓ³Éä  2-»ù±¾ÀàĞÍÓ³Éä
      */
     private Integer customFlag;
     /**

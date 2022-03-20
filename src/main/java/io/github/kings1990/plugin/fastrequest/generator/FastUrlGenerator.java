@@ -28,10 +28,10 @@ public abstract class FastUrlGenerator {
     public abstract String generate(PsiElement psiElement);
 
     /**
-     * è·å–æ–¹æ³•çš„mappingUrl
+     * »ñÈ¡·½·¨µÄmappingUrl
      * //RequestMapping("/url") GetMapping("url")
      *
-     * @param psiMethod psiçš„æ–¹æ³•
+     * @param psiMethod psiµÄ·½·¨
      * @return {@link String }
      * @author Kings
      * @date 2021/05/23
@@ -39,10 +39,10 @@ public abstract class FastUrlGenerator {
     public abstract String getMethodRequestMappingUrl(PsiMethod psiMethod);
 
     /**
-     * å¾—åˆ°ç±»çš„mappingUrl
+     * µÃµ½ÀàµÄmappingUrl
      * //@Controller("url") @RestController("url")
      *
-     * @param psiMethod psiçš„æ–¹æ³•
+     * @param psiMethod psiµÄ·½·¨
      * @return {@link String }
      * @author Kings
      * @date 2021/05/23
@@ -51,9 +51,9 @@ public abstract class FastUrlGenerator {
 
 
     /**
-     * è·å–æ–¹æ³•å‚æ•°åˆ—è¡¨
+     * »ñÈ¡·½·¨²ÎÊıÁĞ±í
      *
-     * @param psiMethod psiçš„æ–¹æ³•
+     * @param psiMethod psiµÄ·½·¨
      * @return {@link List<String> }
      * @author Kings
      * @date 2021/05/24
@@ -64,9 +64,9 @@ public abstract class FastUrlGenerator {
 
 
     /**
-     * è·å–æ–¹æ³•æè¿°
+     * »ñÈ¡·½·¨ÃèÊö
      *
-     * @param psiMethod psiçš„æ–¹æ³•
+     * @param psiMethod psiµÄ·½·¨
      * @return {@link String }
      * @author Kings
      * @date 2021/07/27

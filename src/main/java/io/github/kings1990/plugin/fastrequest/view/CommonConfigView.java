@@ -72,7 +72,7 @@ public class CommonConfigView extends AbstractConfigurableView {
     }
 
     /**
-     * åˆ›å»ºuicomponent
+     * ´´½¨uicomponent
      *
      * @return
      * @author Kings
@@ -89,7 +89,7 @@ public class CommonConfigView extends AbstractConfigurableView {
     }
 
     /**
-     * æ¸²æŸ“tableé¢æ¿
+     * äÖÈ¾tableÃæ°å
      *
      * @return
      * @author Kings
@@ -107,7 +107,7 @@ public class CommonConfigView extends AbstractConfigurableView {
     }
 
     /**
-     * æ¸²æŸ“é¡¹ç›®åé¢æ¿
+     * äÖÈ¾ÏîÄ¿ÃûÃæ°å
      *
      * @return
      * @author Kings
@@ -121,12 +121,12 @@ public class CommonConfigView extends AbstractConfigurableView {
         ToolbarDecorator toolbarDecoratorProject = ToolbarDecorator.createDecorator(projectNameJbList);
         toolbarDecoratorProject.setMoveUpAction(null).setMoveDownAction(null);
         toolbarDecoratorProject.setAddAction(button -> {
-            //addç•Œé¢
+            //add½çÃæ
             EnvAddView envAddView = new EnvAddView("Add project", "Please add project");
             if (envAddView.showAndGet()) {
                 String project = envAddView.getText();
                 if (viewProjectList.contains(project)) {
-                    //å·²å­˜åœ¨å¼¹å‡ºè­¦å‘Š
+                    //ÒÑ´æÔÚµ¯³ö¾¯¸æ
                     Messages.showMessageDialog("Project already exist", "Error", Messages.getInformationIcon());
                     return;
                 }
@@ -149,7 +149,7 @@ public class CommonConfigView extends AbstractConfigurableView {
     }
 
     /**
-     * æ¸²æŸ“envé¢æ¿
+     * äÖÈ¾envÃæ°å
      *
      * @author Kings
      * @date 2021/05/21
@@ -289,11 +289,11 @@ public class CommonConfigView extends AbstractConfigurableView {
 
     
     /**
-     * ä¿®æ”¹Env->åˆ·æ–°æ•°æ®åˆ—è¡¨
+     * ÐÞ¸ÄEnv->Ë¢ÐÂÊý¾ÝÁÐ±í
      *
-     * @param viewEnvList è§†å›¾å±‚envåˆ—è¡¨
-     * @param env         envåå­—
-     * @param isRemove    æ˜¯åˆ é™¤
+     * @param viewEnvList ÊÓÍ¼²ãenvÁÐ±í
+     * @param env         envÃû×Ö
+     * @param isRemove    ÊÇÉ¾³ý
      * @return
      * @author Kings
      * @date 2021/05/26
@@ -317,11 +317,11 @@ public class CommonConfigView extends AbstractConfigurableView {
     }
 
     /**
-     * ä¿®æ”¹é¡¹ç›®->åˆ·æ–°æ•°æ®åˆ—è¡¨
+     * ÐÞ¸ÄÏîÄ¿->Ë¢ÐÂÊý¾ÝÁÐ±í
      *
-     * @param viewProjectList è¯•å›¾é¡¹ç›®åˆ—è¡¨
-     * @param project         é¡¹ç›®
-     * @param isRemove        æ˜¯åˆ é™¤
+     * @param viewProjectList ÊÔÍ¼ÏîÄ¿ÁÐ±í
+     * @param project         ÏîÄ¿
+     * @param isRemove        ÊÇÉ¾³ý
      * @return
      * @author Kings
      * @date 2021/05/26
@@ -342,7 +342,7 @@ public class CommonConfigView extends AbstractConfigurableView {
     }
 
     /**
-     * åˆ›å»ºåˆ—
+     * ´´½¨ÁÐ
      *
      * @return {@link ColumnInfo<Object,Object>[] }
      * @author Kings
@@ -375,7 +375,7 @@ public class CommonConfigView extends AbstractConfigurableView {
     }
 
     /**
-     * åˆ›å»ºproject/envè¡¨
+     * ´´½¨project/env±í
      *
      * @return {@link JBTable }
      * @author Kings
@@ -434,7 +434,7 @@ public class CommonConfigView extends AbstractConfigurableView {
 
 
     /**
-     * è‡ªå®šä¹‰èŠ‚ç‚¹
+     * ×Ô¶¨Òå½Úµã
      *
      * @author Kings
      * @date 2021/05/21

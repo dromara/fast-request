@@ -40,7 +40,7 @@ public class WhatsNewActivity implements StartupActivity {
             RunOnceUtil.runOnceForApp(lastVersion, () -> {
                 ApplicationManager.getApplication().invokeLater(() -> {
                     if ("zh".equals(MyResourceBundleUtil.getKey("language"))) {
-                        HTMLEditorProvider.openEditor(project, "æœ€æ–°å˜åŒ–", GITEE_DOC_URL, "<div style=\"padding-top: 1rem; margin-bottom: 0.8rem;\">åŠ è½½å¤±è´¥!</div> <br/><div><a href=" + GITEE_DOC_URL + " target=\"_blank\" style=\"font-size: 2rem\">æµè§ˆå™¨æ‰“å¼€</a></div>");
+                        HTMLEditorProvider.openEditor(project, "×îĞÂ±ä»¯", GITEE_DOC_URL, "<div style=\"padding-top: 1rem; margin-bottom: 0.8rem;\">¼ÓÔØÊ§°Ü!</div> <br/><div><a href=" + GITEE_DOC_URL + " target=\"_blank\" style=\"font-size: 2rem\">ä¯ÀÀÆ÷´ò¿ª</a></div>");
                     } else {
                         HTMLEditorProvider.openEditor(project, "What's New", GITHUB_DOC_URL, "<div style=\"padding-top: 1rem; margin-bottom: 0.8rem;\">Failed to load!</div> <br/><div><a href=" + GITHUB_DOC_URL + " target=\"_blank\" style=\"font-size: 2rem\">Open in browser</a></div>");
                     }

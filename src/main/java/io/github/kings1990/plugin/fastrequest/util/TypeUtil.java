@@ -87,16 +87,16 @@ public class TypeUtil {
     }
 
     public static boolean isNumeric(String str) {
-        // è¯¥æ­£åˆ™è¡¨è¾¾å¼å¯ä»¥åŒ¹é…æ‰€æœ‰çš„æ•°å­— åŒ…æ‹¬è´Ÿæ•°
+        // ¸ÃÕıÔò±í´ïÊ½¿ÉÒÔÆ¥ÅäËùÓĞµÄÊı×Ö °üÀ¨¸ºÊı
         Pattern pattern = Pattern.compile("-?[0-9]+(\\.[0-9]+)?");
         String bigStr;
         try {
             bigStr = new BigDecimal(str).toString();
         } catch (Exception e) {
-            return false;//å¼‚å¸¸ è¯´æ˜åŒ…å«éæ•°å­—ã€‚
+            return false;//Òì³£ ËµÃ÷°üº¬·ÇÊı×Ö¡£
         }
 
-        Matcher isNum = pattern.matcher(bigStr); // matcheræ˜¯å…¨åŒ¹é…
+        Matcher isNum = pattern.matcher(bigStr); // matcherÊÇÈ«Æ¥Åä
         if (!isNum.matches()) {
             return false;
         }

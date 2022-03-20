@@ -192,7 +192,7 @@ public class NodeUtil {
 
     private static void sortPackage(List<PackageNode> list) {
         list.sort((p1, p2) -> {
-            //æœ‰packageä¼˜å…ˆ,æ— packageæ’æœ€å å†æŒ‰nameæ’åº
+            //ÓĞpackageÓÅÏÈ,ÎŞpackageÅÅ×îºó ÔÙ°´nameÅÅĞò
             int childCount1 = p1.getChildCount();
             int childCount2 = p2.getChildCount();
             String prefix1 = childCount1 == 0 ? "999999" : "000000";

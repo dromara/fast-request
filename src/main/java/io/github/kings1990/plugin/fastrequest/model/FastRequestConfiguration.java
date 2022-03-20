@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * æ€»é…ç½®
+ * ×ÜÅäÖÃ
  *
  * @author Kings
  * @date 2021/05/22
@@ -33,27 +33,27 @@ import java.util.List;
 public class FastRequestConfiguration implements Serializable {
 
     /**
-     * é¡¹ç›®åˆ—è¡¨
+     * ÏîÄ¿ÁĞ±í
      */
     private List<String> projectList = new ArrayList<>();
     /**
-     * envåˆ—è¡¨
+     * envÁĞ±í
      */
     private List<String> envList = new ArrayList<>();
     /**
-     * æ•°æ®é›†åˆ
+     * Êı¾İ¼¯ºÏ
      */
     private List<NameGroup> dataList = new ArrayList<>();
 
     /**
-     * è‡ªå®šä¹‰æ•°æ®æ˜ å°„
+     * ×Ô¶¨ÒåÊı¾İÓ³Éä
      */
     private List<DataMapping> customDataMappingList = new ArrayList<>();
 
     private List<String> ignoreDataMappingList = Constant.IGNORE_PARAM_PARSE_LIST;
 
     /**
-     * é»˜è®¤çš„æ•°æ®æ˜ å°„
+     * Ä¬ÈÏµÄÊı¾İÓ³Éä
      */
     private List<DataMapping> defaultDataMappingList = Lists.newArrayList(
             new DataMapping("byte", "1"),
@@ -76,7 +76,7 @@ public class FastRequestConfiguration implements Serializable {
     );
 
     /**
-     * urlæ›¿æ¢è§„åˆ™
+     * urlÌæ»»¹æÔò
      */
     private List<DataMapping> urlReplaceMappingList = new ArrayList<>();
 
@@ -92,7 +92,7 @@ public class FastRequestConfiguration implements Serializable {
     private int randomStringLength = 3;
 
     /**
-     * Stringç”Ÿæˆç­–ç•¥
+     * StringÉú³É²ßÂÔ
      * name+random
      * random
      * none
@@ -100,7 +100,7 @@ public class FastRequestConfiguration implements Serializable {
     private String randomStringStrategy = "name+random";
 
     /**
-     * Stringç”Ÿæˆå™¨åˆ†éš”ç¬¦
+     * StringÉú³ÉÆ÷·Ö¸ô·û
      */
     private String randomStringDelimiter = "_";
 

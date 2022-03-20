@@ -20,17 +20,17 @@ import cn.hutool.core.util.RandomUtil;
 
 public class StringUtils {
     public static String randomString(String name, String delimiter, int length, String mode) {
-        //ä¸ç”Ÿæˆ
+        //²»Éú³É
         if ("none".equals(mode)) {
             return "";
         } else if ("name+random".equals(mode)) {
-            //å­—æ®µå+éšæœº
+            //×Ö¶ÎÃû+Ëæ»ú
             if(length < 1){
                 return name;
             }
             return name + delimiter + RandomUtil.randomString(length);
         } else {
-            //éšæœº
+            //Ëæ»ú
             return RandomUtil.randomString(length);
         }
     }

@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
 public class BodyParamParse extends AbstractParamParse {
     @Override
     public LinkedHashMap<String, Object> parseParam(FastRequestConfiguration config, List<ParamNameType> paramNameTypeList) {
-        //æ¯æ¬¡è§£æé‡ç½®è§£æçš„ç±»
+        //Ã¿´Î½âÎöÖØÖÃ½âÎöµÄÀà
         KV.reset();
 
         List<DataMapping> customDataMappingList = config.getCustomDataMappingList();
@@ -95,7 +95,7 @@ public class BodyParamParse extends AbstractParamParse {
 //                    break;
 //                }
             }
-            //é»˜è®¤çš„æ•°æ®æ˜ å°„è§£æå‚æ•°
+            //Ä¬ÈÏµÄÊı¾İÓ³Éä½âÎö²ÎÊı
             dataMapping = defaultDataMappingList.stream().filter(q -> finalType.equals(q.getType())).findFirst().orElse(null);
             if (dataMapping != null) {
                 Object value = dataMapping.getValue();
@@ -110,7 +110,7 @@ public class BodyParamParse extends AbstractParamParse {
                 }
                 continue;
             }
-            //jsonè§£æ
+            //json½âÎö
             KV kv = KV.getFields(paramNameType.getPsiClass());
 
             //String json = kv.toPrettyJson();

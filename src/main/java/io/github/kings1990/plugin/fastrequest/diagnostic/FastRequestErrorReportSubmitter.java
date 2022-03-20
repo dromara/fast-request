@@ -64,8 +64,8 @@ public class FastRequestErrorReportSubmitter extends ErrorReportSubmitter {
                 String url = "zh".equals(MyResourceBundleUtil.getKey("language")) ?  "Please report to https://gitee.com/dromara/fast-request/issues"
                         : "Please report to https://github.com/dromara/fast-request/issues";
                 builder.append("<!--").append(url).append("-->\n");
-                builder.append("### é‡ç°æ­¥éª¤(Repeat steps)\n");
-                builder.append("- æœ€å¥½æä¾›gifåŠ¨å›¾(It's best to provide a GIF)\n");
+                builder.append("### ÖØÏÖ²½Öè(Repeat steps)\n");
+                builder.append("- ×îºÃÌá¹©gif¶¯Í¼(It's best to provide a GIF)\n");
                 builder.append("- please describe what you were doing when this exception occurred\n");
                 builder.append("\n");
                 if (additionalInfo != null) {
@@ -73,13 +73,13 @@ public class FastRequestErrorReportSubmitter extends ErrorReportSubmitter {
                 }
 
                 builder.append("\n");
-                builder.append("### å½“å‰ä½¿ç”¨ç‰ˆæœ¬(Current Version)\n");
+                builder.append("### µ±Ç°Ê¹ÓÃ°æ±¾(Current Version)\n");
                 builder.append("\n");
                 ApplicationInfo info = ApplicationInfo.getInstance();
                 builder.append(info.getVersionName()).append(" `").append(info.getFullVersion()).append("`");
                 PluginId pid = getPluginId();
                 IdeaPluginDescriptor flutterPlugin = PluginManagerCore.getPlugin(pid);
-                builder.append(" â€¢ Notes plugin `").append(pid.getIdString()).append(' ').append(flutterPlugin.getVersion()).append("`\n");
+                builder.append(" ? Notes plugin `").append(pid.getIdString()).append(' ').append(flutterPlugin.getVersion()).append("`\n");
                 IdeaLoggingEvent[] var13 = events;
                 int var14 = events.length;
 

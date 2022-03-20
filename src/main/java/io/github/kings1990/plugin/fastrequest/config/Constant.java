@@ -123,7 +123,7 @@ public class Constant {
         private final String code;
 
         /**
-         * 1- path urlå‚æ•°  2-urlå‚æ•°&æ‹¼æ¥ 3-bodyå‚æ•° 0-ä¸å‚ä¸
+         * 1- path url²ÎÊı  2-url²ÎÊı&Æ´½Ó 3-body²ÎÊı 0-²»²ÎÓë
          */
 
         private final Integer parseType;
@@ -156,7 +156,7 @@ public class Constant {
         private final String code;
 
         /**
-         * 1- path urlå‚æ•°  2-urlå‚æ•°&æ‹¼æ¥ 3-bodyå‚æ•° 0-ä¸å‚ä¸
+         * 1- path url²ÎÊı  2-url²ÎÊı&Æ´½Ó 3-body²ÎÊı 0-²»²ÎÓë
          */
 
         private final Integer parseType;

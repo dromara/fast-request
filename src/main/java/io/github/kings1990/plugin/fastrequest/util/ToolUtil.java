@@ -23,18 +23,18 @@ import java.awt.datatransfer.Transferable;
 
 public class ToolUtil {
     /**
-     * æ‹·è´åˆ°å‰ªè´´æ¿
+     * ¿½±´µ½¼ôÌù°å
      *
-     * @param text æ–‡æœ¬
+     * @param text ÎÄ±¾
      * @author Kings
      * @date 2021/06/07
      */
     public static void setClipboardString(String text) {
-        // è·å–ç³»ç»Ÿå‰ªè´´æ¿
+        // »ñÈ¡ÏµÍ³¼ôÌù°å
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        // å°è£…æ–‡æœ¬å†…å®¹
+        // ·â×°ÎÄ±¾ÄÚÈİ
         Transferable trans = new StringSelection(text);
-        // æŠŠæ–‡æœ¬å†…å®¹è®¾ç½®åˆ°ç³»ç»Ÿå‰ªè´´æ¿
+        // °ÑÎÄ±¾ÄÚÈİÉèÖÃµ½ÏµÍ³¼ôÌù°å
         clipboard.setContents(trans, null);
     }
 }

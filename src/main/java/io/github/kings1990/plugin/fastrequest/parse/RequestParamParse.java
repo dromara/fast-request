@@ -89,7 +89,7 @@ public class RequestParamParse extends AbstractParamParse {
                 }
                 continue;
             }
-            //é»˜è®¤çš„æ•°æ®æ˜ å°„è§£æå‚æ•°
+            //Ä¬ÈÏµÄÊı¾İÓ³Éä½âÎö²ÎÊı
             dataMapping = defaultDataMappingList.stream().filter(q -> finalType.equals(q.getType())).findFirst().orElse(null);
             if (dataMapping != null) {
                 Object value = dataMapping.getValue();
@@ -102,10 +102,10 @@ public class RequestParamParse extends AbstractParamParse {
 //                }
                 continue;
             }
-            //ç‰¹æ®Šå‚æ•°å¤„ç†
+            //ÌØÊâ²ÎÊı´¦Àí
             if (dealTypeParams(nameValueMap, paramNameType, name)) continue;
 
-            //jsonè§£æ
+            //json½âÎö
             KV.reset();
             KV kv = KV.getFields(paramNameType.getPsiClass());
 

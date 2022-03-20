@@ -278,7 +278,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             Map<String, String> queryMap = getQuery(search);
             String query = queryMap.get("query");
             String rule = queryMap.get("rule");
-            //é€‰æ‹©æˆ–å»é™¤rule
+            //Ñ¡Ôñ»òÈ¥³ırule
             checkRule(rule);
             CollectionCustomNode node = new CollectionCustomNode("0", "Root", 1);
             convertToNode(node, rootDetail.getChildList());
@@ -559,7 +559,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     }
 
     private TreeTableView createCollectionTable() {
-        //åˆå§‹åŒ–ä¸ºç©º
+        //³õÊ¼»¯Îª¿Õ
         CollectionCustomNode root = new CollectionCustomNode("0", "Root", 1);
         convertToNode(root, new ArrayList<>());
         ColumnInfo[] columnInfo = new ColumnInfo[]{
@@ -759,13 +759,13 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
             Transferable t = support.getTransferable();
             try {
                 CollectionCustomNode add = (CollectionCustomNode) t.getTransferData(CollectionNodeSelection.CELL_DATA_FLAVOR);
-                //ä»è€èŠ‚ç‚¹åˆ é™¤
+                //´ÓÀÏ½ÚµãÉ¾³ı
                 ListTreeTableModelOnColumns myModel = (ListTreeTableModelOnColumns) collectionTable.getTableModel();
                 CollectionCustomNode old = (CollectionCustomNode) myModel.getRowValue(add.getRow());
                 CollectionCustomNode oldParent = (CollectionCustomNode) old.getParent();
                 String sourceParentId = oldParent.getId();
                 int oldIndex = oldParent.getIndex(old);
-                //æ–°èŠ‚ç‚¹å¢åŠ 
+                //ĞÂ½ÚµãÔö¼Ó
                 CollectionCustomNode toAdd = (CollectionCustomNode) myModel.getRowValue(row);
                 String targetId;
                 int position = 0;
@@ -810,7 +810,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     class Renderer extends ColoredTreeCellRenderer {
         @Override
         public void customizeCellRenderer(@NotNull JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
-            //è§£å†³TreeTable keyåŠ ä¸Š>
+            //½â¾öTreeTable key¼ÓÉÏ>
             CollectionCustomNode node = (CollectionCustomNode) value;
             append(node.getName());
             if (node.getType() == 2) {
@@ -864,7 +864,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
         ApplicationManager.getApplication().executeOnPooledThread(() -> {
             ApplicationManager.getApplication().runReadAction(() -> {
                 boolean flag = false;
-                //å®šä½æ–¹æ³•
+                //¶¨Î»·½·¨
                 CollectionConfiguration collectionConfiguration = FastRequestCollectionComponent.getInstance(myProject).getState();
                 assert collectionConfiguration != null;
                 CollectionConfiguration.CollectionDetail detail = filterById(node.getId(), collectionConfiguration.getDetail());
@@ -898,7 +898,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
 
 //
 //        Task.Backgroundable task = new Task.Backgroundable(myProject, "") {
-//â‰¤
+//¡Ü
 //            @Override
 //            public void run(@NotNull ProgressIndicator indicator) {
 //
@@ -908,7 +908,7 @@ public class FastRequestCollectionToolWindow extends SimpleToolWindowPanel {
     }
 
     private void loadAncChangeTab(boolean flag, CollectionConfiguration.CollectionDetail detail) {
-        //åˆ‡æ¢tab
+        //ÇĞ»»tab
         if (flag) {
             //change data
             ApplicationManager.getApplication().invokeLater(() -> {

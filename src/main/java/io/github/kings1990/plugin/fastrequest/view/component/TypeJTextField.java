@@ -27,7 +27,7 @@ public class TypeJTextField extends JTextField {
     public TypeJTextField(Icon icon) {
         this.icon = icon;
         Insets insets = JBUI.insetsRight(40);
-        //è®¾ç½®æ–‡æœ¬è¾“å…¥è·å³è¾¹20
+        //ÉèÖÃÎÄ±¾ÊäÈë¾àÓÒ±ß20
         this.setMargin(insets);
     }
 
@@ -38,7 +38,7 @@ public class TypeJTextField extends JTextField {
         int iconWidth = icon.getIconWidth();
         int iconHeight = icon.getIconHeight();
         int Height = this.getHeight();
-        //åœ¨æ–‡æœ¬æ¡†ä¸­ç”»ä¸Šä¹‹å‰å›¾ç‰‡
+        //ÔÚÎÄ±¾¿òÖĞ»­ÉÏÖ®Ç°Í¼Æ¬
         icon.paintIcon(this, g, this.getWidth() - 30, (Height - iconHeight) / 2);
     }
 }

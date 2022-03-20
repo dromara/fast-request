@@ -153,7 +153,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                 String comment = commentStringBuilder.toString().trim();
 
                 if (Objects.requireNonNull(field.getModifierList()).hasExplicitModifier(PsiModifier.STATIC)) {
-                    //fix staticå˜é‡ä¸è½¬åŒ–
+                    //fix static±äÁ¿²»×ª»¯
                     continue;
                 }
                 //doc comment
@@ -162,7 +162,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
 //                }
 
                 if (type instanceof PsiPrimitiveType) {       //primitive Type
-                    //åŸºæœ¬ç±»å‹
+                    //»ù±¾ÀàĞÍ
                     Object defaultValue = getPrimitiveDefaultValue(type);
                     ParamKeyValue paramKeyValue = new ParamKeyValue(name, defaultValue, 2, TypeUtil.calcTypeByValue(defaultValue), comment);
                     kv.set(name, paramKeyValue);
@@ -180,7 +180,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                             kv.set(name, paramKeyValue);
                         }
 
-                    } else if (type instanceof PsiArrayType) {   //æ•°ç»„
+                    } else if (type instanceof PsiArrayType) {   //Êı×é
                         PsiType deepType = type.getDeepComponentType();
                         ArrayList list = new ArrayList<>();
 //                        String deepTypeName = deepType.getPresentableText();
@@ -220,7 +220,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         kv.set(name, paramKeyValue);
                     } else if (CollectionUtils.isCollectionClassOrInterface(type)) {   //list type
                         PsiType iterableType = PsiUtil.extractIterableTypeParameter(type, false);
-                        //æ— æ³›å‹æŒ‡å®š
+                        //ÎŞ·ºĞÍÖ¸¶¨
                         if (iterableType == null) {
                             continue;
                         }
@@ -260,7 +260,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                             kv.set(name, paramKeyValue);
                         }
                     }  else if("org.springframework.web.multipart.MultipartFile".equals(fieldTypeName)){
-                        //æ–‡ä»¶ä¸Šä¼ 
+                        //ÎÄ¼şÉÏ´«
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, "", 2, TypeUtil.Type.File.name(), comment);
                         kv.set(name, paramKeyValue);
                     } else if (PsiUtil.resolveClassInClassTypeOnly(type).isEnum()) { //enum
@@ -279,7 +279,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
                         ParamKeyValue paramKeyValue = new ParamKeyValue(name, value, 2, TypeUtil.Type.String.name(), comment);
                         kv.set(name, paramKeyValue);
                         if (outIsEnum) {
-                            //æœ€å¤–å±‚å‚æ•°ç›´æ¥æ˜¯enum
+                            //×îÍâ²ã²ÎÊıÖ±½ÓÊÇenum
                             break;
                         }
                     } else {    //class type
@@ -373,21 +373,21 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     }
 
     /**
-     * key å­˜åœ¨ï¼Œå¹¶ä¸” value ä¸ä¸º null
+     * key ´æÔÚ£¬²¢ÇÒ value ²»Îª null
      */
     public boolean notNull(Object key) {
         return get(key) != null;
     }
 
     /**
-     * key ä¸å­˜åœ¨ï¼Œæˆ–è€… key å­˜åœ¨ä½† value ä¸ºnull
+     * key ²»´æÔÚ£¬»òÕß key ´æÔÚµ« value Îªnull
      */
     public boolean isNull(Object key) {
         return get(key) == null;
     }
 
     /**
-     * key å­˜åœ¨ï¼Œå¹¶ä¸” value ä¸º trueï¼Œåˆ™è¿”å› true
+     * key ´æÔÚ£¬²¢ÇÒ value Îª true£¬Ôò·µ»Ø true
      */
     public boolean isTrue(Object key) {
         Object value = get(key);
@@ -395,7 +395,7 @@ public class KV<K, V> extends LinkedHashMap<K, V> {
     }
 
     /**
-     * key å­˜åœ¨ï¼Œå¹¶ä¸” value ä¸º falseï¼Œåˆ™è¿”å› true
+     * key ´æÔÚ£¬²¢ÇÒ value Îª false£¬Ôò·µ»Ø true
      */
     public boolean isFalse(Object key) {
         Object value = get(key);

@@ -29,7 +29,7 @@ public class FormatActionProvider implements InspectionWidgetActionProvider {
     @Override
     public AnAction createAction(@NotNull Editor editor) {
         FormatAction action = (FormatAction) ActionManager.getInstance().getAction("fastRequest.format");
-        // 右上角按钮实现方式
+        // ���Ͻǰ�ťʵ�ַ�ʽ
 //        action.setEditor(editor);
         return action;
     }

@@ -119,7 +119,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 /**
- * FastRequestå·¥å…·çª—å£
+ * FastRequest¹¤¾ß´°¿Ú
  *
  * @author Kings
  * @date 2021/06/02
@@ -294,7 +294,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         prettyJsonEditorPanel = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
         responseTextAreaPanel = new MyLanguageTextField(myProject, PlainTextLanguage.INSTANCE, PlainTextFileType.INSTANCE);
         jsonParamsTextArea = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
-        //è®¾ç½®é«˜åº¦å›ºå®šæœç´¢æ¡†
+        //ÉèÖÃ¸ß¶È¹Ì¶¨ËÑË÷¿ò
         prettyJsonEditorPanel.setMinimumSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setPreferredSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setMaximumSize(new Dimension(-1, 1000));
@@ -330,7 +330,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         ToolbarSendRequestAction toolbarSendRequestAction = (ToolbarSendRequestAction) ActionManager.getInstance().getAction("fastRequest.sendAction");
         ToolbarSendAndDownloadRequestAction sendAndDownloadRequestAction = (ToolbarSendAndDownloadRequestAction) ActionManager.getInstance().getAction("fastRequest.sendDownloadAction");
 
-// todo ideaæš‚æ—¶æœ‰bug
+// todo ideaÔİÊ±ÓĞbug
 //        DefaultActionGroup sendGroup = DefaultActionGroup.createPopupGroupWithEmptyText();
 //        sendGroup.addAll(Lists.newArrayList(toolbarSendRequestAction, sendAndDownloadRequestAction));
 //        ActionGroup splitSendGroup = new SplitButtonAction(sendGroup);
@@ -363,7 +363,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         warnLabel2.setVisible(StringUtils.isBlank(getActiveDomain()));
 
 
-        //method é¢œè‰²æ¸²æŸ“
+        //method ÑÕÉ«äÖÈ¾
         methodTypeComboBox.setRenderer(new DefaultListCellRenderer() {
             @Override
             public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
@@ -394,7 +394,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         String activeEnv = getActiveEnv();
         String activeProject = getActiveProject();
 
-        //envä¸‹æ‹‰åˆ—è¡¨
+        //envÏÂÀ­ÁĞ±í
         ArrayList<String> envListClone = Lists.newArrayList(NO_ENV);
         envListClone.addAll(JSONObject.parseObject(JSONObject.toJSONString(config.getEnvList()), ArrayList.class));
         envListClone.add("Add Env");
@@ -434,9 +434,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 String env = selectEnv.toString();
                 List<String> envList = config.getEnvList();
                 if (!envList.contains(env)) {
-                    //é…ç½®åˆ é™¤äº†å½“å‰çš„envåˆ™é»˜è®¤é€‰ä¸­ç¬¬ä¸€ä¸ªenv
+                    //ÅäÖÃÉ¾³ıÁËµ±Ç°µÄenvÔòÄ¬ÈÏÑ¡ÖĞµÚÒ»¸öenv
                     if (envList.isEmpty()) {
-                        //envè¢«åˆ é™¤å®Œäº† è¡¥å…¨åŸŸåå¼€å…³è‡ªåŠ¨å…³é—­
+                        //env±»É¾³ıÍêÁË ²¹È«ÓòÃû¿ª¹Ø×Ô¶¯¹Ø±Õ
                         config.setEnableEnv(null);
                         projectConfig.setEnableEnv(null);
                         config.setDomain(StringUtils.EMPTY);
@@ -458,13 +458,13 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     projectConfig.setEnableEnv(env);
                 }
                 switchHeaderParam();
-                //æ ¹æ®å½“å‰çš„envå’Œprojectè®¾ç½®url
+                //¸ù¾İµ±Ç°µÄenvºÍprojectÉèÖÃurl
                 setDomain(config);
             }
         });
         envModel.setSelectedItem(StringUtils.isBlank(activeEnv) ? NO_ENV : activeEnv);
 
-        //projectä¸‹æ‹‰åˆ—è¡¨
+        //projectÏÂÀ­ÁĞ±í
         ArrayList<String> projectListClone = Lists.newArrayList(NO_PROJECT);
         projectListClone.addAll(JSONObject.parseObject(JSONObject.toJSONString(config.getProjectList()), ArrayList.class));
         projectListClone.add("Add Project");
@@ -503,9 +503,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 String projectSelect = selectProject.toString();
                 List<String> projectList = config.getProjectList();
                 if (!projectList.contains(projectSelect)) {
-                    //é…ç½®åˆ é™¤äº†å½“å‰çš„envåˆ™é»˜è®¤é€‰ä¸­ç¬¬ä¸€ä¸ªenv
+                    //ÅäÖÃÉ¾³ıÁËµ±Ç°µÄenvÔòÄ¬ÈÏÑ¡ÖĞµÚÒ»¸öenv
                     if (projectList.isEmpty()) {
-                        //projectè¢«åˆ é™¤å®Œäº† è¡¥å…¨åŸŸåå¼€å…³è‡ªåŠ¨å…³é—­
+                        //project±»É¾³ıÍêÁË ²¹È«ÓòÃû¿ª¹Ø×Ô¶¯¹Ø±Õ
                         config.setEnableProject(null);
                         projectConfig.setEnableProject(null);
                         config.setDomain(StringUtils.EMPTY);
@@ -527,18 +527,18 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     projectConfig.setEnableProject(projectSelect);
                 }
                 switchHeaderParam();
-                //æ ¹æ®å½“å‰çš„envå’Œprojectè®¾ç½®url
+                //¸ù¾İµ±Ç°µÄenvºÍprojectÉèÖÃurl
                 setDomain(config);
             }
         });
         projectModel.setSelectedItem(StringUtils.isBlank(activeProject) ? NO_PROJECT : activeProject);
 
 
-        //æ›´æ–°åŸŸå
+        //¸üĞÂÓòÃû
         config.getParamGroup().setOriginUrl("");
         setDomain(config);
 
-        //åŠ¨æ€æ›´æ–°textä¸­çš„å†…å®¹
+        //¶¯Ì¬¸üĞÂtextÖĞµÄÄÚÈİ
         urlEncodedTabbedPane.addChangeListener(changeEvent -> {
             if (urlEncodedTabbedPane.getSelectedIndex() == 0) {
                 String paramStr = conventDataToString(urlEncodedKeyValueList);
@@ -567,9 +567,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             }
         });
 
-        //åŠ¨æ€æ›´æ–°textä¸­çš„å†…å®¹
+        //¶¯Ì¬¸üĞÂtextÖĞµÄÄÚÈİ
         urlParamsTabbedPane.addChangeListener(changeEvent -> {
-            //table change å¼•å‘é‡æ–°æ„å»ºtext
+            //table change Òı·¢ÖØĞÂ¹¹½¨text
             if (urlParamsTabbedPane.getSelectedIndex() == 0) {
                 String paramStr = conventDataToString(urlParamsKeyValueList);
                 String currentUrlParamText = urlParamsTextArea.getText();
@@ -605,7 +605,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
 //        sendRequestEvent();
         //send request
-        //2ç§’å†…ä¸å…è®¸ç‹‚ç‚¹
+        //2ÃëÄÚ²»ÔÊĞí¿ñµã
         requestProgressBar.setIndeterminate(true);
         requestProgressBar.setVisible(false);
     }
@@ -738,7 +738,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             });
 
             boolean formFlag = true;
-            //jsonä¼˜å…ˆ
+            //jsonÓÅÏÈ
             if (!formMap.isEmpty()) {
                 request.form(formMap);
                 formFlag = false;
@@ -898,9 +898,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * texté¼ æ ‡å³é”®æ‹·è´è‡³ç²˜è´´æ¿
+     * textÊó±êÓÒ¼ü¿½±´ÖÁÕ³Ìù°å
      *
-     * @param textarea æ–‡æœ¬åŒºåŸŸ
+     * @param textarea ÎÄ±¾ÇøÓò
      * @return {@link MouseAdapter }
      * @author Kings
      * @date 2021/06/07
@@ -930,9 +930,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * æ ¹æ®é…ç½®è®¾ç½®domain
+     * ¸ù¾İÅäÖÃÉèÖÃdomain
      *
-     * @param config é…ç½®
+     * @param config ÅäÖÃ
      * @author Kings
      * @date 2021/05/23
      */
@@ -970,7 +970,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
 
     /**
-     * messageäº‹ä»¶:ä¿®æ”¹envå’ŒprojectåŠ¨æ€ä¿®æ”¹ToolWindowä¸­çš„å†…å®¹
+     * messageÊÂ¼ş:ĞŞ¸ÄenvºÍproject¶¯Ì¬ĞŞ¸ÄToolWindowÖĞµÄÄÚÈİ
      *
      * @author Kings
      * @date 2021/06/02
@@ -1062,7 +1062,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //method
         methodTypeComboBox.setSelectedItem(methodType);
 
-        //headersé»˜è®¤å–æœ€æ–°çš„
+        //headersÄ¬ÈÏÈ¡×îĞÂµÄ
         calcHeaderList();
 
         if ("GET".equals(methodType)) {
@@ -1073,7 +1073,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                 tabbedPane.setSelectedIndex(1);
             }
             urlParamsTabbedPane.setSelectedIndex(0);
-            //getè¯·æ±‚urlencoded paramå‚æ•°ä¸ºç©º
+            //getÇëÇóurlencoded param²ÎÊıÎª¿Õ
             urlEncodedKeyValueList = new ArrayList<>();
             urlEncodedTextArea.setText("");
             ((LanguageTextField) jsonParamsTextArea).setText("");
@@ -1099,15 +1099,15 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     tabbedPane.setSelectedIndex(3);
                     bodyTabbedPane.setSelectedIndex(1);
                 }
-                //jsonè®¾ç½®ä¸ºç©º
+                //jsonÉèÖÃÎª¿Õ
                 ((LanguageTextField) jsonParamsTextArea).setText("");
-                //å¦‚æœæ˜¯égetè¯·æ±‚åˆ™request Paramä¸ºç©ºè½¬åˆ°url Encodedå‚æ•°ä¸‹
+                //Èç¹ûÊÇ·ÇgetÇëÇóÔòrequest ParamÎª¿Õ×ªµ½url Encoded²ÎÊıÏÂ
                 urlParamsKeyValueList = new ArrayList<>();
                 urlParamsTextArea.setText("");
             }
         }
 
-        //åˆ·æ–°table
+        //Ë¢ĞÂtable
         pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
         resizeTable(pathParamsTable);
         setCheckBoxHeader(pathParamsTable, pathParamsCheckBoxHeader);
@@ -1133,7 +1133,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * messageäº‹ä»¶:actionæ“ä½œç”Ÿæˆæ•°æ®,ä¿®æ”¹ToolWindowä¸­çš„å†…å®¹
+     * messageÊÂ¼ş:action²Ù×÷Éú³ÉÊı¾İ,ĞŞ¸ÄToolWindowÖĞµÄÄÚÈİ
      *
      * @author Kings
      * @date 2021/06/02
@@ -1172,7 +1172,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //request param
         String requestParamStr = conventDataToString(conventMapToList(requestParamMap));
 
-        //é»˜è®¤urlParamæ˜¯å…è®¸çš„å³ä½¿æ˜¯post jsonå½¢å¼
+        //Ä¬ÈÏurlParamÊÇÔÊĞíµÄ¼´Ê¹ÊÇpost jsonĞÎÊ½
         urlParamsKeyValueList = conventMapToList(requestParamMap);
         urlParamsTextArea.setText(requestParamStr);
         pathParamsKeyValueList = conventMapToList(pathParamMap);
@@ -1185,18 +1185,18 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             } else {
                 tabbedPane.setSelectedIndex(1);
             }
-            //getè¯·æ±‚urlencoded paramå‚æ•°ä¸ºç©º
+            //getÇëÇóurlencoded param²ÎÊıÎª¿Õ
             urlEncodedKeyValueList = new ArrayList<>();
             urlEncodedTextArea.setText("");
             ((LanguageTextField) jsonParamsTextArea).setText("");
         } else {
-            //body param(formå’Œbodyåªèƒ½å­˜åœ¨å…¶ä¸€)
+            //body param(formºÍbodyÖ»ÄÜ´æÔÚÆäÒ»)
             if (!bodyParamMap.isEmpty()) {
                 //json
                 tabbedPane.setSelectedIndex(3);
                 bodyTabbedPane.setSelectedIndex(0);
                 ((LanguageTextField) jsonParamsTextArea).setText(bodyParamMapToJson());
-                //bodyå»é™¤formå‚æ•°
+                //bodyÈ¥³ıform²ÎÊı
                 urlEncodedTextArea.setText("");
                 urlEncodedKeyValueList = new ArrayList<>();
             } else {
@@ -1216,14 +1216,14 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                     urlEncodedTabbedPane.setSelectedIndex(0);
                     urlEncodedKeyValueList = conventMapToList(requestParamMap);
                 }
-                //jsonè®¾ç½®ä¸ºç©º(formå»é™¤bodyå‚æ•°)
+                //jsonÉèÖÃÎª¿Õ(formÈ¥³ıbody²ÎÊı)
                 ((LanguageTextField) jsonParamsTextArea).setText("");
-                //å¦‚æœæ˜¯égetè¯·æ±‚åˆ™request Paramä¸ºç©ºè½¬åˆ°url Encodedå‚æ•°ä¸‹
+                //Èç¹ûÊÇ·ÇgetÇëÇóÔòrequest ParamÎª¿Õ×ªµ½url Encoded²ÎÊıÏÂ
                 urlParamsKeyValueList = new ArrayList<>();
                 urlParamsTextArea.setText("");
             }
         }
-        //åˆ·æ–°table
+        //Ë¢ĞÂtable
         pathParamsTable.setModel(new ListTableModel<>(getPathColumnInfo(), pathParamsKeyValueList));
         resizeTable(pathParamsTable);
         setCheckBoxHeader(pathParamsTable, pathParamsCheckBoxHeader);
@@ -1391,7 +1391,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * æ¸²æŸ“UrlParams tableé¢æ¿
+     * äÖÈ¾UrlParams tableÃæ°å
      *
      * @author Kings
      * @date 2021/06/02
@@ -1489,7 +1489,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * æ¸²æŸ“UrlEncoded tableé¢æ¿
+     * äÖÈ¾UrlEncoded tableÃæ°å
      *
      * @author Kings
      * @date 2021/06/02f
@@ -1504,11 +1504,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //body param
             Object bodyParam = bodyParamMap.values().stream().findFirst().orElse("");
             if ("".equals(bodyParam)) {
-                //jsonå½¢å¼ urlencoded å€¼ä¸ºç©º
+                //jsonĞÎÊ½ urlencoded ÖµÎª¿Õ
                 urlEncodedKeyValueList = new ArrayList<>();
             }
         } else {
-            //get urlencoded å€¼ä¸ºç©º
+            //get urlencoded ÖµÎª¿Õ
             urlEncodedKeyValueList = new ArrayList<>();
         }
         urlEncodedTable = createUrlEncodedKeyValueTable();
@@ -1552,11 +1552,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             //body param
             Object bodyParam = bodyParamMap.values().stream().findFirst().orElse("");
             if ("".equals(bodyParam)) {
-                //jsonå½¢å¼ urlencoded å€¼ä¸ºç©º
+                //jsonĞÎÊ½ urlencoded ÖµÎª¿Õ
                 multipartKeyValueList = new ArrayList<>();
             }
         } else {
-            //get urlencoded å€¼ä¸ºç©º
+            //get urlencoded ÖµÎª¿Õ
             multipartKeyValueList = new ArrayList<>();
         }
         multipartTable = createMultipartKeyValueTable();
@@ -1590,9 +1590,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * LinkedHashMapæ•°æ®è½¬ParamKeyValueé›†åˆ
+     * LinkedHashMapÊı¾İ×ªParamKeyValue¼¯ºÏ
      *
-     * @param paramLinkedMap å‚æ•°ä¸åœ°å›¾
+     * @param paramLinkedMap ²ÎÊıÓëµØÍ¼
      * @return {@link List<ParamKeyValue> }
      * @author Kings
      * @date 2021/06/02
@@ -1603,7 +1603,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             ParamKeyValue paramKeyValue = (ParamKeyValue) value;
             if (paramKeyValue.getCustomFlag() == 1) {
                 KV<String, ParamKeyValue> data = (KV<String, ParamKeyValue>) paramKeyValue.getValue();
-                //kvè½¬æˆæ™®é€šç±»å‹
+                //kv×ª³ÉÆÕÍ¨ÀàĞÍ
                 List<ParamKeyValue> list = new ArrayList<>();
                 convertToParamKeyValueList("", data, list);
                 paramKeyValueList.addAll(list);
@@ -1621,10 +1621,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * requestParam urlEncodedParam è½¬ text
-     * æ¯ä¸ªå‚æ•°æ¢è¡Œå¤„ç†
+     * requestParam urlEncodedParam ×ª text
+     * Ã¿¸ö²ÎÊı»»ĞĞ´¦Àí
      *
-     * @param paramKeyValueList å‚æ•°é”®å€¼åˆ—è¡¨
+     * @param paramKeyValueList ²ÎÊı¼üÖµÁĞ±í
      * @return {@link String }
      * @author Kings
      * @date 2021/06/02
@@ -1635,10 +1635,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             Object value = paramKeyValue.getValue();
             value = paramKeyValue.getEnabled() ? value : "";
             if (paramKeyValue.getCustomFlag() == 2) {
-                //åŸºæœ¬ç±»å‹æ˜ å°„  key=value
+                //»ù±¾ÀàĞÍÓ³Éä  key=value
                 sb.append(paramKeyValue.getKey()).append("=").append(value).append("\n&");
             } else {
-                //å¯¹è±¡ ç›´æ¥æ‹¼ä¸Švalue
+                //¶ÔÏó Ö±½ÓÆ´ÉÏvalue
                 sb.append(value).append("\n&");
             }
         });
@@ -1663,7 +1663,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * tableåˆ—ä¿¡æ¯
+     * tableÁĞĞÅÏ¢
      *
      * @return {@link ColumnInfo<Object, Object>[] }
      * @author Kings
@@ -1687,7 +1687,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
 
     private TreeTableView createJsonResponseTable() {
-        //åˆå§‹åŒ–ä¸ºç©º
+        //³õÊ¼»¯Îª¿Õ
         CustomNode root = new CustomNode("Root", "");
         convertToNode(true, root, new LinkedHashMap<>());
         ColumnInfo[] columnInfo = new ColumnInfo[]{
@@ -1758,9 +1758,9 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * è§£ææ•°æ®,å¼‚å¸¸è¿”å›é»˜è®¤å€¼
+     * ½âÎöÊı¾İ,Òì³£·µ»ØÄ¬ÈÏÖµ
      *
-     * @param type ç±»å‹
+     * @param type ÀàĞÍ
      * @return {@link Object }
      * @author Kings
      * @date 2021/06/09
@@ -1864,7 +1864,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     class Renderer extends ColoredTreeCellRenderer {
         @Override
         public void customizeCellRenderer(@NotNull JTree tree, Object value, boolean selected, boolean expanded, boolean leaf, int row, boolean hasFocus) {
-            //è§£å†³TreeTable keyåŠ ä¸Š>
+            //½â¾öTreeTable key¼ÓÉÏ>
             CustomNode node = (CustomNode) value;
             append(node.getKey());
             setToolTipText(node.getComment());
@@ -1884,7 +1884,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             Icon icon = icons.get(value);
             JLabel picture = new JLabel("", icon, JLabel.LEFT);
             if (index != -1) {
-                //ä¸‹æ‹‰æ‰æ˜¾ç¤ºå€¼
+                //ÏÂÀ­²ÅÏÔÊ¾Öµ
                 picture.setText(value.toString());
             }
             picture.setHorizontalAlignment(JLabel.LEFT);
@@ -2005,10 +2005,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * jsonæ•°æ®è½¬åŒ–ä¸ºmapç”¨äºtextå±•ç¤º(é€’å½’éå†)
+     * jsonÊı¾İ×ª»¯ÎªmapÓÃÓÚtextÕ¹Ê¾(µİ¹é±éÀú)
      *
-     * @param data   æ•°æ®
-     * @param result ç»“æœ
+     * @param data   Êı¾İ
+     * @param result ½á¹û
      * @return
      * @author Kings
      * @date 2021/06/07
@@ -2055,10 +2055,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * jsonæ•°æ® listè½¬åŒ–ä¸ºmapç”¨äºtextå±•ç¤º(é€’å½’éå†)
+     * jsonÊı¾İ list×ª»¯ÎªmapÓÃÓÚtextÕ¹Ê¾(µİ¹é±éÀú)
      *
-     * @param data   æ•°æ®
-     * @param result ç»“æœ
+     * @param data   Êı¾İ
+     * @param result ½á¹û
      * @return
      * @author Kings
      * @date 2021/06/07
@@ -2127,7 +2127,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             String arrayKey = key + "[" + i + "]";
             Object o = childList.get(i);
             if (o instanceof ParamKeyValue) {
-                //éå¯¹è±¡è¿›å…¥
+                //·Ç¶ÔÏó½øÈë
                 ParamKeyValue paramKeyValue = (ParamKeyValue) o;
                 paramKeyValue.setKey(key + "[0]");
                 list.add(paramKeyValue);
@@ -2155,10 +2155,10 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
 
     /**
-     * jsonæ•°æ®è½¬æ ‘èŠ‚ç‚¹
+     * jsonÊı¾İ×ªÊ÷½Úµã
      *
-     * @param node èŠ‚ç‚¹
-     * @param data æ•°æ®
+     * @param node ½Úµã
+     * @param data Êı¾İ
      * @return {@link CustomNode }
      * @author Kings
      * @date 2021/06/07
@@ -2205,7 +2205,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
                             }
                         }
                     } else {
-                        //å‚æ•°ç›´æ¥ä¼ BeanName []
+                        //²ÎÊıÖ±½Ó´«BeanName []
                         for (Map.Entry<String, ParamKeyValue> entry : ((KV<String, ParamKeyValue>) k).entrySet()) {
                             ParamKeyValue paramKeyValue = entry.getValue();
                             String childType = paramKeyValue.getType();
@@ -2245,11 +2245,11 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
 
 
     /**
-     * jsonæ•°æ®ä¸­listè½¬æ ‘èŠ‚ç‚¹
+     * jsonÊı¾İÖĞlist×ªÊ÷½Úµã
      *
-     * @param key      å…³é”®
-     * @param dataList æ•°æ®åˆ—è¡¨
-     * @param node     èŠ‚ç‚¹
+     * @param key      ¹Ø¼ü
+     * @param dataList Êı¾İÁĞ±í
+     * @param node     ½Úµã
      * @author Kings
      * @date 2021/06/07
      */
@@ -2263,12 +2263,12 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         for (int j = 0; j < dataList.size(); j++) {
             Object o = dataList.get(j);
             if (o instanceof ParamKeyValue) {
-                //éå¯¹è±¡è¿›å…¥
+                //·Ç¶ÔÏó½øÈë
                 ParamKeyValue paramKeyValue = (ParamKeyValue) o;
                 CustomNode nodeArrayIndex = new CustomNode("index " + j, paramKeyValue.getValue(), paramKeyValue.getType());
                 addNode.add(nodeArrayIndex);
             } else {
-                //å¯¹è±¡è¿›å…¥
+                //¶ÔÏó½øÈë
                 KV<String, ParamKeyValue> kv = (KV<String, ParamKeyValue>) dataList.get(j);
                 CustomNode nodeArrayIndex = new CustomNode("index " + j, null, TypeUtil.Type.Object.name());
                 kv.entrySet().forEach(inKv -> {
@@ -2305,7 +2305,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * è‡ªå®šä¹‰èŠ‚ç‚¹ jsonæ ‘èŠ‚ç‚¹
+     * ×Ô¶¨Òå½Úµã jsonÊ÷½Úµã
      *
      * @author Kings
      * @date 2021/06/07
@@ -2373,7 +2373,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * åˆ›å»ºurlEncoded table
+     * ´´½¨urlEncoded table
      *
      * @return {@link JBTable }
      * @author Kings
@@ -2494,7 +2494,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * åˆ›å»ºurlEncoded table
+     * ´´½¨urlEncoded table
      *
      * @return {@link JBTable }
      * @author Kings
@@ -2831,7 +2831,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         JBTable table = new JBTable(model) {
             @Override
             public boolean isCellEditable(int row, int column) {
-                //é»˜è®¤åªå…è®¸ä¿®æ”¹valueä¸å…è®¸ä¿®æ”¹key
+                //Ä¬ÈÏÖ»ÔÊĞíĞŞ¸Ävalue²»ÔÊĞíĞŞ¸Äkey
                 return true;
             }
 
@@ -2857,7 +2857,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     }
 
     /**
-     * åˆ›å»ºurlParams table
+     * ´´½¨urlParams table
      *
      * @return {@link JBTable }
      * @author Kings
@@ -3029,7 +3029,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             collectionDetail = filterById(id, collectionConfiguration.getDetail());
             boolean insertFlag = collectionDetail == null;
             if (insertFlag) {
-                //æ’å…¥
+                //²åÈë
                 collectionDetail = new CollectionConfiguration.CollectionDetail();
                 String mid = "id_" + paramGroup.getClassName() + "." + paramGroup.getMethod();
                 collectionDetail.setId(mid);
@@ -3099,7 +3099,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
             messageBus.connect();
             ConfigChangeNotifier configChangeNotifier = messageBus.syncPublisher(ConfigChangeNotifier.ADD_REQUEST_TOPIC);
             configChangeNotifier.configChanged(true, myProject.getName());
-            //å…¼å®¹æ€§å¤„ç†code
+            //¼æÈİĞÔ´¦Àícode
             NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Success", MessageType.INFO).notify(myProject);
             // 2020.3 before
             //new NotificationGroup("toolWindowNotificationGroup", NotificationDisplayType.TOOL_WINDOW, true).createNotification("Success", NotificationType.INFORMATION).notify(myProject);
@@ -3114,7 +3114,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         @Override
         public void actionPerformed(@NotNull AnActionEvent e) {
             String curlData = getCurlDataAndCopy();
-            //å…¼å®¹æ€§å¤„ç†code
+            //¼æÈİĞÔ´¦Àícode
             if (StringUtils.isNoneBlank(curlData)) {
                 NotificationGroupManager.getInstance().getNotificationGroup("toolWindowNotificationGroup").createNotification("Copy success", MessageType.INFO).notify(myProject);
             }

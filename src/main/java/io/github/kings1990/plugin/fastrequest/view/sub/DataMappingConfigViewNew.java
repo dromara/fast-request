@@ -176,7 +176,7 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
     }
 
     /**
-     * æ¸²æŸ“é»˜è®¤æ•°æ®æ˜ å°„panel
+     * äÖÈ¾Ä¬ÈÏÊı¾İÓ³Éäpanel
      *
      * @author Kings
      * @date 2021/05/24
@@ -199,13 +199,13 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
     }
 
     /**
-     * æ¸²æŸ“è‡ªå®šä¹‰æ•°æ®æ˜ å°„panel
+     * äÖÈ¾×Ô¶¨ÒåÊı¾İÓ³Éäpanel
      *
      * @author Kings
      * @date 2021/05/24
      */
     private void renderingCustomDataMappingPanel() {
-        //å®ç°æ·±æ‹·è´ è¢«å‘äº†åŠå¤©
+        //ÊµÏÖÉî¿½±´ ±»¿ÓÁË°ëÌì
         FastRequestConfiguration configOld = JSONObject.parseObject(JSONObject.toJSONString(config), FastRequestConfiguration.class);
         viewCustomDataMappingList = configOld.getCustomDataMappingList();
         if (viewCustomDataMappingList == null) {
@@ -259,10 +259,10 @@ public class DataMappingConfigViewNew extends AbstractConfigurableView {
     }
 
     /**
-     * æ˜¯å¦åŒ…å«
+     * ÊÇ·ñ°üº¬
      *
-     * @param list   åˆ—è¡¨
-     * @param target ç›®æ ‡
+     * @param list   ÁĞ±í
+     * @param target Ä¿±ê
      * @return boolean
      * @author Kings
      * @date 2021/05/24

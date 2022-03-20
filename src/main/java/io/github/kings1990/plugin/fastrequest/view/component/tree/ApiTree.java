@@ -57,7 +57,7 @@ public class ApiTree extends Tree implements TreeExpander {
             }
         }
 
-        // 灞曞紑鎴栨敹璧峰繀椤昏嚜涓嬭�屼笂杩涜
+        // 展开或收起必须自下而上进行
         if (expand) {
             expandPath(parent);
         } else {

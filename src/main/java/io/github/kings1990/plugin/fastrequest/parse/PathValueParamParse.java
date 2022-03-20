@@ -50,7 +50,7 @@ public class PathValueParamParse extends AbstractParamParse {
                 result.put(name, value);
                 continue;
             }
-            //pathValueParam ‰∏çÊîØÊåÅËá™ÂÆö‰πâÁ±ªËß£Êûê Âè™ËÉΩÊòØÂü∫Á°ÄÁ±ªÂûã
+            //pathValueParam ≤ª÷ß≥÷◊‘∂®“Â¿‡Ω‚Œˆ ÷ªƒ‹ «ª˘¥°¿‡–Õ
 //            DataMapping dataMapping = customDataMappingList.stream().filter(q -> type.equals(q.getType())).findFirst().orElse(null);
 //            if (dataMapping != null) {
 //                Object value = dataMapping.getValue();
@@ -63,7 +63,7 @@ public class PathValueParamParse extends AbstractParamParse {
                 String calcType = TypeUtil.calcType(type);
                 result.put(name, new ParamKeyValue(name, value, 2, calcType));
             } else {
-                //ÂåπÈÖç‰∏çÂà∞ÈªòËÆ§ÂåπÈÖçstring
+                //∆•≈‰≤ªµΩƒ¨»œ∆•≈‰string
 
                 PsiClass psiClass = PsiUtil.resolveClassInClassTypeOnly(PsiTypesUtil.getClassType(paramNameType.getPsiClass()).getDeepComponentType());
                 boolean isEnum = psiClass != null && psiClass.isEnum();

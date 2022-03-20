@@ -126,7 +126,7 @@ public class JaxRsGenerator extends FastUrlGenerator {
         if (annotationRequestMapping == null) {
             return StringUtils.EMPTY;
         }
-        //é»˜è®¤å–value,å†å–path
+        //Ä¬ÈÏÈ¡value,ÔÙÈ¡path
         PsiAnnotationMemberValue value = annotationRequestMapping.findDeclaredAttributeValue("value");
         if (value == null) {
             return StringUtils.EMPTY;
@@ -186,7 +186,7 @@ public class JaxRsGenerator extends FastUrlGenerator {
             boolean parseFlag = false;
             PsiClass psiClass = PsiUtil.resolveClassInType(param.getType());
             if (judgeIgnore(config.getIgnoreDataMappingList(), param.getType().getCanonicalText())) {
-                // ä¸éœ€è¦è§£æçš„è¯·æ±‚å‚æ•°ç±»å‹ã€‚
+                // ²»ĞèÒª½âÎöµÄÇëÇó²ÎÊıÀàĞÍ¡£
                 continue;
             }
             for (Constant.JaxRsUrlParamConfig config : urlParamConfigArray) {
@@ -220,7 +220,7 @@ public class JaxRsGenerator extends FastUrlGenerator {
                         continue;
                     }
                 }
-                //é»˜è®¤æ— æ³¨è§£ä¼ å‚ requestParam
+                //Ä¬ÈÏÎŞ×¢½â´«²Î requestParam
                 ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass,
                         Constant.SpringUrlParamConfig.REQUEST_PARAM.getParseType(), param.getType());
                 result.add(paramNameType);
@@ -237,7 +237,7 @@ public class JaxRsGenerator extends FastUrlGenerator {
         OUT:
         for (PsiParameter param : parameters) {
             if (judgeIgnore(config.getIgnoreDataMappingList(), param.getType().getCanonicalText())) {
-                // ä¸éœ€è¦è§£æçš„è¯·æ±‚å‚æ•°ç±»å‹ã€‚
+                // ²»ĞèÒª½âÎöµÄÇëÇó²ÎÊıÀàĞÍ¡£
                 continue;
             }
             Constant.JaxRsUrlParamConfig[] urlParamConfigArray = Constant.JaxRsUrlParamConfig.values();
@@ -281,7 +281,7 @@ public class JaxRsGenerator extends FastUrlGenerator {
 
     @Override
     public String getMethodDescription(PsiMethod psiMethod) {
-        //javadocä¸­è·å–
+        //javadocÖĞ»ñÈ¡
         PsiDocComment docComment = psiMethod.getDocComment();
         StringBuilder commentStringBuilder = new StringBuilder();
         if (docComment != null) {

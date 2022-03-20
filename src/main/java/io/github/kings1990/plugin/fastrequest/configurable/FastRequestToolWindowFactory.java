@@ -87,7 +87,7 @@ public class FastRequestToolWindowFactory implements ToolWindowFactory, DumbAwar
                 new ConfigChangeNotifier() {
                     @Override
                     public void configChanged(boolean active, String projectName) {
-                        //æœ‰å¯èƒ½åœ¨å…¨å±€é…ç½®ä¸‹ç‚¹å‡»,
+                        //ÓĞ¿ÉÄÜÔÚÈ«¾ÖÅäÖÃÏÂµã»÷,
                         FastRequestToolWindow window = windowMap.get(projectName);
                         if (window != null) {
                             window.changeEnvAndProject();

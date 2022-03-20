@@ -133,7 +133,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         if (annotationRequestMapping == null) {
             return StringUtils.EMPTY;
         }
-        //é»˜è®¤å–value,å†å–path
+        //Ä¬ÈÏÈ¡value,ÔÙÈ¡path
         PsiAnnotationMemberValue value = annotationRequestMapping.findDeclaredAttributeValue("value");
         value = value != null ? value : annotationRequestMapping.findDeclaredAttributeValue("path");
         if (value == null) {
@@ -168,10 +168,10 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
     }
 
     /**
-     * å¾—åˆ°ç±»çš„mappingUrl
+     * µÃµ½ÀàµÄmappingUrl
      * //@Controller("xxController") @RequestMapping("url") or @RequestMapping("url/${fixed module name}/xxx")
      *
-     * @param psiMethod psiçš„æ–¹æ³•
+     * @param psiMethod psiµÄ·½·¨
      * @return {@link String }
      * @author Kings
      * @date 2021/05/23
@@ -214,7 +214,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
         for (PsiParameter param : parameters) {
             String canonicalText = param.getType().getCanonicalText();
             if (judgeIgnore(config.getIgnoreDataMappingList(), canonicalText)) {
-                // ä¸éœ€è¦è§£æçš„è¯·æ±‚å‚æ•°ç±»å‹
+                // ²»ĞèÒª½âÎöµÄÇëÇó²ÎÊıÀàĞÍ
                 continue;
             }
             PsiClass psiClass = null;
@@ -244,7 +244,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
 
         for (PsiParameter param : parameters) {
             if (judgeIgnore(config.getIgnoreDataMappingList(), param.getType().getCanonicalText())) {
-                // ä¸éœ€è¦è§£æçš„è¯·æ±‚å‚æ•°ç±»å‹ã€‚
+                // ²»ĞèÒª½âÎöµÄÇëÇó²ÎÊıÀàĞÍ¡£
                 continue;
             }
             boolean parseFlag = false;
@@ -266,7 +266,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
                 }
             }
             if (!parseFlag) {
-                //é»˜è®¤æ— æ³¨è§£ä¼ å‚ requestParam
+                //Ä¬ÈÏÎŞ×¢½â´«²Î requestParam
                 ParamNameType paramNameType = new ParamNameType(param.getName(), param.getType().getCanonicalText(), psiClass,
                         Constant.SpringUrlParamConfig.REQUEST_PARAM.getParseType(), param.getType());
                 result.add(paramNameType);
@@ -288,7 +288,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
                     //RequestMapping
                     PsiAnnotationMemberValue method = annotation.findDeclaredAttributeValue("method");
                     if (method == null) {
-                        //é»˜è®¤è¿”å›GET
+                        //Ä¬ÈÏ·µ»ØGET
                         return "GET";
                     }
                     String methodText;
@@ -313,7 +313,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
 
     @Override
     public String getMethodDescription(PsiMethod psiMethod) {
-        //ä¼˜å…ˆè·å–swaggeræ¥å£ApiOperationä¸­çš„valueï¼Œå¦‚æœè·å–ä¸åˆ°åˆ™è·å–javadoc
+        //ÓÅÏÈ»ñÈ¡swagger½Ó¿ÚApiOperationÖĞµÄvalue£¬Èç¹û»ñÈ¡²»µ½Ôò»ñÈ¡javadoc
         PsiAnnotation annotation = psiMethod.getAnnotation("io.swagger.annotations.ApiOperation");
         if (annotation != null) {
             PsiAnnotationMemberValue descValue = annotation.findDeclaredAttributeValue("value");
@@ -321,7 +321,7 @@ public class SpringMethodUrlGenerator extends FastUrlGenerator {
                 return descValue.getText().replace("\"","");
             }
         } else {
-            //javadocä¸­è·å–
+            //javadocÖĞ»ñÈ¡
             PsiDocComment docComment = psiMethod.getDocComment();
             StringBuilder commentStringBuilder = new StringBuilder();
             if(docComment != null){
