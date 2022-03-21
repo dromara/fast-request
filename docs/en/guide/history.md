@@ -81,12 +81,12 @@ public class MultiUrlController {
 }
 ```
 
-Expression support. The following demo url will be generated to **/public/test1**
+Expression support. The following demo url will be generated to **/url/public/test1**
 ```java
 public class Constant {
   public static final String PUBLIC_URL = "/public";
 }
-@RequestMapping("url1")
+@RequestMapping("url")
 @RestController
 public class MultiUrlController {
   @GetMapping(value = Constant.PUBLIC_URL + "/test1")

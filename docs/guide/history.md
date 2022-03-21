@@ -85,12 +85,12 @@ public class MultiUrlController {
 }
 ```
 
-支持变量计算,以下demo将生成 **/public/test1**
+支持变量计算,以下demo将生成 **/url/public/test1**
 ```java
 public class Constant {
     public static final String PUBLIC_URL = "/public";
 }
-@RequestMapping("url1")
+@RequestMapping("url")
 @RestController
 public class MultiUrlController {
     @GetMapping(value = Constant.PUBLIC_URL + "/test1")

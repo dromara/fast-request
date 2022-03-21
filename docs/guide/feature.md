@@ -77,7 +77,7 @@ else
 :::
 ![example_download](../.vuepress/public/img/saveRequest.png)
 
-## 重新生存请求<Badge text="2.0.0" type="error"/>
+## 重新生成请求<Badge text="2.0.0" type="error"/>
 :::tip 特别说明
 如果你已经保存一个请求,但是想彻底重新修改其中的参数,那么你可以选择该操作
 :::
@@ -85,7 +85,7 @@ else
 ![regenerate](../.vuepress/public/img/regenerate.png)
 
 ## CURL 拷贝<Badge text="1.1.4" type="warning"/>
-必须是先生存方法url及参数后,点击工具栏![curl](../.vuepress/public/img/icon/curl_dark.svg)
+必须是先生成方法url及参数后,点击工具栏![curl](../.vuepress/public/img/icon/curl_dark.svg)
 
 ![curl](../.vuepress/public/img/curl.png)
 

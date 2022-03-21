@@ -11,7 +11,7 @@ icon: buy
 
 **注册jetbrains账号购买方式可以方便后续找license,且不容易丢失**
 ## Step0: 前往插件激活页面
-点击**激活插件**
+点击**激活插件**,当然你也可以先免费试用插件30天,点击start trial
 
 ![](../.vuepress/public/img/buy/activate.png)
 

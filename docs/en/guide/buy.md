@@ -16,6 +16,7 @@ icon: buy
 ## Step0: Go to the plugin activation page
 
 Click **Activate Plugin**
+Of course, you can also try the plugin first，it's free 30 days.Please click start trial
 
 ![](../../.vuepress/public/img/buy/activate_en.png)
 
