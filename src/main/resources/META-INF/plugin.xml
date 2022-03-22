@@ -1,0 +1,205 @@
+<idea-plugin>
+    <id>io.github.kings1990.FastRequest</id>
+    <name>Restful Fast Request</name>
+    <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
+
+    <description><![CDATA[
+    Restful Fast Request is a powerful restful api toolkit plugin(http client) help you quickly generate url and params by exist method.Plugin = API debug tool + API manager tool<br/>
+    It has a beautiful interface to compose requests,inspect server responses,store your api request and export api request<br/>
+    Plugin help you debug request just in Intellij frame<br/>
+    support Spring framework (Spring MVC / Spring Boot)<br/>
+    support JAX-RS<br/>
+    <br/>
+
+    中文:<br/>
+    Restful Fast Request 是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。<br/>
+    Restful Fast Request = API调试工具+API管理工具。<br/>
+    它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求<br/>
+    插件帮助你在IDEA界面内更快更高效得调试你的API<br/>
+    支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
+    支持 JAX-RS 体系<br/>
+    <br/>
+    <a href="https://github.com/dromara/fast-request">Github</a> | <a href="https://gitee.com/dromara/fast-request">Gitee</a> Welcome to star(欢迎star)
+    <br/><br/>
+    <a href="https://plugins.sheng90.wang/fast-request">详细文档</a> | <a href="https://github.com/dromara/fast-request/issues">问题反馈</a> | <a href="https://fast-request.sheng90.wang/fast-request/guide/whatsnew/">历史变更</a> | 钉钉群:31690894<br/>
+    <a href="https://dromara.github.io/fast-request/en">Documentation</a> | <a href="https://github.com/dromara/fast-request/issues">Issues Tracker</a> | <a href="https://dromara.github.io/fast-request/en/guide/whatsnew/">change log</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
+    <br/>
+
+    Features:
+    <ul>
+        <li>API navigate tree</li>
+        <li>SearchEveryWhere for api</li>
+        <li>APIs export to Postman</li>
+        <li>Generate url and parameters in one click</li>
+        <li>Send request to debug API</li>
+        <li>Send request and download</li>
+        <li>Domain customization and switching</li>
+        <li>Custom parameter parse</li>
+        <li>String generation strategy</li>
+        <li>Save api</li>
+        <li>Management API (search filter, modify API name)</li>
+        <li>One click location history save api to method</li>
+        <li>Api to curl</li>
+        <li>Automatically associate APIs to module groups</li>
+        <li>Built-in Json parameter editor</li>
+    </ul>
+
+    功能:
+    <ul>
+        <li>API导航树</li>
+        <li>SearchEveryWhere搜索API</li>
+        <li>API导出到Postman</li>
+        <li>一键生成url和参数</li>
+        <li>发送请求调试API</li>
+        <li>发送请求并下载文件</li>
+        <li>域名定制及切换</li>
+        <li>自定义参数解析</li>
+        <li>字符串生成策略化</li>
+        <li>保存API</li>
+        <li>管理API(搜索过滤、修改API名称)</li>
+        <li>一键定位历史保存的API到方法</li>
+        <li>API转curl</li>
+        <li>自动将API关联到模块分组</li>
+        <li>内置Json参数编辑器</li>
+    </ul>
+    <br/>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/example.png" />
+    <h2>SearchEveryWhere for API</h2>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/searchEveryWhere.png" /><br/>
+    <h2>API manager</h2>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apis.png" /><br/>
+    <h2>API navigate</h2>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apiNavigate.png" /><br/>
+
+    <h3>Latest changes</h3>
+    <h3>v2.1.3</h3>
+    <ul>
+        <li>English
+            <ul>
+                <li>Add encode support for special symbol in parameter</li>
+                <li>Add global headers to curl</li>
+            </ul>
+        </li>
+        <li>中文
+            <ul>
+                <li>参数特殊符号编码支持</li>
+                <li>curl加入global headers</li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    ]]>
+    </description>
+
+    <!--    2019.2-->
+    <idea-version since-build="203"/>
+    <!--    <idea-version since-build="192"/>-->
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>org.intellij.plugins.markdown</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestComponent"
+                            order="first"/>
+        <projectService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent"/>
+        <projectService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCurrentProjectConfigComponent"/>
+        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService"/>
+        <applicationService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.generator.impl.JaxRsGenerator"/>
+        <applicationService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.generator.impl.SpringMethodUrlGenerator"/>
+        <applicationConfigurable id="p" displayName="Restful Fast Request"
+                                 instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
+            <configurable parentId="p"
+                          instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>
+            <configurable parentId="p"
+                          instance="io.github.kings1990.plugin.fastrequest.configurable.OtherConfigConfigurable"/>
+        </applicationConfigurable>
+        <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest_toolwindow"
+                    factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory"
+                    secondary="false"/>
+
+        <codeInsight.lineMarkerProvider language="JAVA"
+                                        implementationClass="io.github.kings1990.plugin.fastrequest.view.linemarker.FastRequestLineMarkerProvider"/>
+
+        <!--兼容性处理code-->
+        <notificationGroup id="toolWindowNotificationGroup" displayType="TOOL_WINDOW"/>
+
+        <postStartupActivity implementation="io.github.kings1990.plugin.fastrequest.update.WhatsNewActivity"/>
+
+        <!--        <iw.actionProvider implementation="io.github.kings1990.plugin.fastrequest.action.FormatActionProvider"/>-->
+
+        <!--        <editorFloatingToolbarProvider-->
+        <!--                order="after DefaultFloatingToolbarProvider"-->
+        <!--                implementation="io.github.kings1990.plugin.fastrequest.editor.FastRequestFloatingToolbarProvider"-->
+        <!--                id="fastRequestEditorFloatingToolbarProvider"/>-->
+
+        <errorHandler
+                implementation="io.github.kings1990.plugin.fastrequest.diagnostic.FastRequestErrorReportSubmitter"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="generateUrlAndParam" text="FastRequest" description="FastRequest" popup="true">
+            <separator/>
+            <group id="generateSubGroup"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="fastRequest.generator" class="io.github.kings1990.plugin.fastrequest.action.GenerateUrlAction"
+                    text="Generate URL and Param"
+                    description="Generate URL and Param">
+                <add-to-group group-id="JavaGenerateGroup1" anchor="before" relative-to-action="GenerateEquals"/>
+                <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="Default for XWin" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH"/>
+            </action>
+
+            <action id="fastRequest.sendAction"
+                    class="io.github.kings1990.plugin.fastrequest.action.ToolbarSendRequestAction">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt EQUALS"/>
+            </action>
+
+            <action id="fastRequest.sendDownloadAction"
+                    class="io.github.kings1990.plugin.fastrequest.action.ToolbarSendAndDownloadRequestAction">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt MINUS"/>
+            </action>
+        </group>
+
+        <group id="fastRequest.editor.floatGroup">
+            <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction">
+                <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            </action>
+
+        </group>
+
+        <action id="fastRequest.gotoFastRequest"
+                class="io.github.kings1990.plugin.fastrequest.action.GotoFastRequestAction">
+            <keyboard-shortcut first-keystroke="alt F" keymap="$default"/>
+        </action>
+
+    </actions>
+
+    <extensionPoints>
+        <extensionPoint name="requestMappingContributor" interface="com.intellij.navigation.ChooseByNameContributor"
+                        dynamic="true"/>
+    </extensionPoints>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <searchEverywhereContributor
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.FastRequestGotoContributor$Factory"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="io.github.kings1990.FastRequest">
+        <requestMappingContributor
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.JavaRequestMappingContributor"/>
+
+    </extensions>
+
+
+</idea-plugin>
