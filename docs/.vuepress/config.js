@@ -95,7 +95,8 @@ module.exports = defineHopeConfig({
               },
               comment: {
                    type: 'waline',
-                   serverURL: "https://fast-request-vercel.vercel.app"
+                   serverURL: "https://fast-request-vercel.vercel.app",
+                   login: "force"
               }
         },
         displayFooter: true,
