@@ -15,7 +15,7 @@ actions:
 features:
 - title: 基于原生
   icon: origin
-  details: 集成IDEA工具
+  details: 集成IDEA工具,在线离线均可使用,不再需要额外的诸如Postman等API调试工具
   link: /guide/introduce.html
 - title: 效率至上
   icon: effective
