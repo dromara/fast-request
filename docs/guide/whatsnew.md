@@ -8,8 +8,14 @@ icon: whats-new
 ==2022.1.4.0== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
 
 :::
+# v2022.1.5<Badge text="收费" type="warn"/>
+* 移除了Accept头上的text/html
+* 添加对自动生成参数描述的支持
+* 添加一键生成API文档的支持
+* 添加单个类的API整体预览
+* 修复了一些bug
 
-# v2022.1.4.0
+# v2022.1.4.0<Badge text="收费" type="warn"/>
 
 * SearchEveryWhere高亮优化
 * APIs导入导出支持

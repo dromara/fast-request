@@ -219,3 +219,26 @@ public class UserDto {
 :::
 
 ::::
+
+
+## Auto Description<Badge text="2022.1.5" />
+Field description need to conform to standard javadoc. Please use`/**some description*/`
+
+You can hide or show description by toggle click
+
+![paramDescription](../../.vuepress/public/img/paramDescription.png)
+
+
+## API to markdown document<Badge text="2022.1.5" />
+
+Response Example requires running your API to be displayed
+
+![shareDocButton](../../.vuepress/public/img/shareDocButton.png)
+
+![apiDocExample](../../.vuepress/public/img/apiDocExample.png)
+
+## API list preview<Badge text="2022.1.5" />
+
+After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
+
+![apiDocExample](../../.vuepress/public/img/apiPreview.gif)

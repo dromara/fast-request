@@ -21,6 +21,9 @@ icon: tools
 * Headers分组
 * APIs导入导出<Badge text="new" />
 * Swagger默认值解析支持<Badge text="new" />
+* API自动生成注释<Badge text="new" />
+* API生成Markdown文档<Badge text="new" />
+* API一览表预览<Badge text="new" />
 
 ## 调试API发送请求<Badge text="2.0.0"/>
 
@@ -216,3 +219,25 @@ public class UserDto {
 :::
 
 ::::
+
+## API自动生成注释<Badge text="2022.1.5" />
+字段注释需要符合标准注释规范,使用`/**描述*/`
+
+可以通过点击隐藏或显示Description
+
+![paramDescription](../.vuepress/public/img/paramDescription.png)
+
+
+## API生成Markdown文档<Badge text="2022.1.5" />
+
+Response Example需要运行你的API后才会被显示
+
+![shareDocButton](../.vuepress/public/img/shareDocButton.png)
+
+![apiDocExample](../.vuepress/public/img/apiDocExample.png)
+
+## API一览表预览<Badge text="2022.1.5" />
+
+聚焦窗口后输入关键字,根据API的路径关键字可以快速搜索
+
+![apiDocExample](../.vuepress/public/img/apiPreview.gif)

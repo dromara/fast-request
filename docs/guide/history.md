@@ -2,6 +2,38 @@
 title: 历史变更
 icon: changelog
 ---
+## 2022.1.5<Badge text="收费" type="warn"/>
+* 移除了Accept头上的text/html
+* 添加对自动生成参数描述的支持
+* 添加一键生成API文档的支持
+* 添加单个类的API整体预览
+* 修复了一些bug
+
+::: tip 添加对自动生成参数描述的支持
+
+可选择性的对描述进行隐藏
+
+![paramDescription](../.vuepress/public/img/paramDescription.png)
+:::
+
+::: info 添加一键生成API文档的支持
+
+点击生成参数后,可通过分享直接生成Markdown文档
+
+![shareDocButton](../.vuepress/public/img/shareDocButton.png)
+
+![apiDocExample](../.vuepress/public/img/apiDocExample.png)
+
+:::
+
+::: note 添加单个类的API整体预览
+
+聚焦窗口后输入关键字可快速定位
+
+![apiDocExample](../.vuepress/public/img/apiPreview.gif)
+:::
+
+
 ## 2022.1.4.0 <Badge text="收费" type="warn"/>
 ==idea版本2021.3+==
 * SearchEveryWhere高亮优化

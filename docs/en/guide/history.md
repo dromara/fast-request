@@ -2,7 +2,40 @@
 title: History changes
 icon: changelog
 ---
-## 2022.1.4 <Badge text="收费" type="warn"/>
+
+## 2022.1.4 <Badge text="Charge" type="warn"/>
+* Remove text/html in Accept param in default header
+* Add support for automatically generating parameter descriptions
+* Add support for generate API documentation
+* Add support for single class API list preview
+* Fix some bugs
+
+::: tip Add support for automatically generating parameter descriptions
+
+You can hide or show description by toggle click
+
+![paramDescription](../../.vuepress/public/img/paramDescription.png)
+:::
+
+::: info Add support for generate API documentation
+
+After generating parameters, you can generate a Markdown document directly by sharing
+
+![shareDocButton](../../.vuepress/public/img/shareDocButton.png)
+
+![apiDocExample](../../.vuepress/public/img/apiDocExample.png)
+
+:::
+
+::: note Add support for single class API list preview
+
+After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
+
+![apiDocExample](../../.vuepress/public/img/apiPreview.gif)
+:::
+
+
+## 2022.1.4.0 <Badge text="Charge" type="warn"/>
 ==require idea 2021.3+==
 * SearchEveryWhere highlight optimization
 * Add support for import and export APIs

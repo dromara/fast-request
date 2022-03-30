@@ -67,6 +67,9 @@ meta:
 > * [x] API导航树
 > * [x] Headers分组
 > * [x] Swagger参数解析支持
+> * [x] 自动生成API字段的描述
+> * [x] 一键生成API文档
+> * [x] API一览表
 > * [x] ......
 
 

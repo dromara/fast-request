@@ -27,7 +27,7 @@ features:
     link: /en/guide/feature.html
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
-    details: Only 6MB size,Provides a very intuitive interface
+    details: Only 6 MB size,Provides a very intuitive interface
 meta:
   - name: keywords
     content: Restful Fast Request,idea plugin,http client,Restful API
@@ -65,6 +65,9 @@ meta:
 > * [x] API navigate tree
 > * [x] Headers group
 > * [x] Swagger Parameter parsing support
+> * [x] Automatically generate descriptions for API fields
+> * [x] One click to generate API documentation
+> * [x] Single class API list preview
 > * [x] ......
 
 

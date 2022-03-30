@@ -13,7 +13,15 @@ Gitter room have been created! Welcome to share your question in this community 
 
 :::
 
-# v2022.1.4
+# 2022.1.5<Badge text="Charge" type="warn"/>
+* Remove text/html in Accept param in default header
+* Add support for automatically generating parameter descriptions
+* Add support for generate API documentation
+* Add support for single class API list preview
+* Fix some bugs
+
+
+# v2022.1.4.0<Badge text="Charge" type="warn"/>
 
 * SearchEveryWhere highlight optimization
 * Add support for import and export APIs

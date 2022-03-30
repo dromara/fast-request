@@ -42,9 +42,13 @@ public class A{
 
 <Badge text="请按照以下步骤注册license" type="danger" vertical="middle"/>
 
+如果点击<i class="icon iconfont icon-restfulFastRequest"></i>报npe或者界面不显示的情况,用以下方式解决
+
 step1: 点击 **help->Register...->Add New License**
+如果有老的License或者有问题的License,请先点击Remove License
+
 * 方式1: 登录jetbrains账号(拥有激活的license)
-* 方式2: 在Activation code中输入激活码
+* 方式2: 在Activation code中输入正确且有效的激活码
 * 方式3: 点击开始试用(start trial)
 
 ![](../.vuepress/public/img/buy/step5.png)
