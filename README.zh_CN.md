@@ -67,6 +67,9 @@
 > Api导出到postman
 ![export2postman](./docs/.vuepress/public/img/export2postman.gif)
 
+> Api一览表
+![apiPreview](./docs/.vuepress/public/img/apiPreview.gif)
+
 # Document
 
 * [中文文档](https://plugins.sheng90.wang/fast-request)

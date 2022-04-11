@@ -28,11 +28,14 @@ features:
 - title: 轻量、界面友好
   icon: code-box-fill
   details: 轻量,仅6M大小,并且提供一个非常直观的界面,好操作易上手
-meta:
-  - name: keywords
-    content: Restful Fast Request,idea插件,http client,Restful API
-  - name: description
-    content: Restful Fast Request,一个基于IDEA的类似postman的restful api工具包插件,可以根据已有的方法帮助您快速生成url和params,一个API调试工具+API管理工具,支持springmvc、springboot、java-rs
+
+head:
+  - - meta
+    - name: keywords
+      content: Restful Fast Request,idea插件,http client,Restful API
+  - - meta
+    - name: description
+      content: Restful Fast Request 一个基于IDEA的类似postman的restful api工具包插件,可以根据已有的方法帮助您快速生成url和params,一个API调试工具+API管理工具,支持springmvc、springboot、java-rs
 
 ---
 

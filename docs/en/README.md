@@ -28,11 +28,14 @@ features:
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
     details: Only 6 MB size,Provides a very intuitive interface
-meta:
-  - name: keywords
-    content: Restful Fast Request,idea plugin,http client,Restful API
-  - name: description
-    content: Restful Fast Request,a postman-like restful api toolkit plugin based on IDEA,Can help you quickly generate url and params according to existing methods,An API debugging tool + API management tool.Support springmvc、springboot、java-rs
+
+head:
+  - - meta
+    - name: keywords
+      content: Restful Fast Request,idea plugin,http client,Restful API,IDEA plugin
+  - - meta
+    - name: description
+      content: Restful Fast Request,idea plugin,a postman-like restful api toolkit plugin based on IDEA,Can help you quickly generate url and params according to existing methods,An API debugging tool + API management tool.Support springmvc、springboot、java-rs
 ---
 
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>

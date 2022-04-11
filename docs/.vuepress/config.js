@@ -50,7 +50,7 @@ module.exports = defineHopeConfig({
     ],
     base : '/fast-request/',
     title: 'Restful Fast Request',
-    description: 'Intellij Restful Fast Request',
+//    description: 'Intellij Restful Fast Request',
     head: [
         [
             'link',
