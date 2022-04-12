@@ -7,7 +7,15 @@ icon: whats-new
 
 ==2022.1.4.0== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
 
+微信公众号搜索==RestfulFastRequest==,还目前没啥文章和内容，主要是加入Fast Request微信技术群的渠道 
 :::
+
+# v2022.1.6<Badge text="收费" type="warn"/>
+* 添加一键添加Cookie到Header的支持
+* 添加API分享Word和html的支持
+* 修复了Basic authorization没有携带Basic字符串
+* 添加YouTrack跟踪bug支持
+
 # v2022.1.5<Badge text="收费" type="warn"/>
 * 移除了Accept头上的text/html
 * 添加对自动生成参数描述的支持

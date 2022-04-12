@@ -2,7 +2,38 @@
 title: 历史变更
 icon: changelog
 ---
-## 2022.1.5<Badge text="收费" type="warn"/>
+## v2022.1.6<Badge text="收费" type="warn"/>
+* 添加一键添加Cookie到Header的支持
+* 添加API分享Word和html的支持
+* 修复了Basic authorization没有携带Basic字符串
+* 添加YouTrack跟踪bug支持
+
+::: tip 添加一键添加Cookie到Header的支持
+
+针对登录需要Cookie支持的,可以将响应中的Cookie快速添加到Header来实现
+
+![addCookie2Header](../.vuepress/public/img/addCookie2Header.png)
+:::
+
+::: info 添加API分享Word和html的支持
+
+请注意word形式的API内部采用html来实现的,所以不要觉得奇怪,导出就行
+
+![shareApi](../.vuepress/public/img/shareApi.png)
+:::
+
+::: note 添加YouTrack跟踪bug支持
+
+Fast Request接通了YouTrack Issue自动上报的功能,直接点击上报bug即可反馈问题,无需手动再复制粘贴到Github提报bug
+
+Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
+
+![youtrackSubmit](../.vuepress/public/img/youtrackSubmit.png)
+:::
+
+
+
+## v2022.1.5<Badge text="收费" type="warn"/>
 * 移除了Accept头上的text/html
 * 添加对自动生成参数描述的支持
 * 添加一键生成API文档的支持
@@ -34,7 +65,7 @@ icon: changelog
 :::
 
 
-## 2022.1.4.0 <Badge text="收费" type="warn"/>
+## v2022.1.4 <Badge text="收费" type="warn"/>
 ==idea版本2021.3+==
 * SearchEveryWhere高亮优化
 * APIs导入导出支持

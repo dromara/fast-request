@@ -13,7 +13,13 @@ Gitter room have been created! Welcome to share your question in this community 
 
 :::
 
-# 2022.1.5<Badge text="Charge" type="warn"/>
+# v2022.1.6<Badge text="Charge" type="warn"/>
+* Add support for one click to add cookie to header
+* Add support for sharing API to Word and html
+* Fix bug for `Basic Authorization` don't carry Basic
+* Add YouTrack bug support
+
+# v2022.1.5<Badge text="Charge" type="warn"/>
 * Remove text/html in Accept param in default header
 * Add support for automatically generating parameter descriptions
 * Add support for generate API documentation

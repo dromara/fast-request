@@ -19,11 +19,13 @@ icon: tools
 * 内置Json参数编辑器
 * API导航树
 * Headers分组
-* APIs导入导出<Badge text="new" />
-* Swagger默认值解析支持<Badge text="new" />
-* API自动生成注释<Badge text="new" />
-* API生成Markdown文档<Badge text="new" />
-* API一览表预览<Badge text="new" />
+* APIs导入导出<Badge text="2022.1.4" />
+* Swagger默认值解析支持<Badge text="2022.1.4" />
+* API自动生成注释<Badge text="2022.1.5" />
+* API生成文档<Badge text="2022.1.5+" />
+* API一览表预览<Badge text="2022.1.5" />
+* 一键添加Cookie到Header<Badge text="2022.1.6" />
+* YouTrack跟踪bug支持<Badge text="2022.1.6" />
 
 ## 调试API发送请求<Badge text="2.0.0"/>
 
@@ -230,9 +232,11 @@ public class UserDto {
 
 ## API生成Markdown文档<Badge text="2022.1.5" />
 
+请注意word形式的API内部采用html来实现的,所以不要觉得奇怪,导出就行
+
 Response Example需要运行你的API后才会被显示
 
-![shareDocButton](../.vuepress/public/img/shareDocButton.png)
+![shareDocButton](../.vuepress/public/img/shareApi.png)
 
 ![apiDocExample](../.vuepress/public/img/apiDocExample.png)
 
@@ -241,3 +245,18 @@ Response Example需要运行你的API后才会被显示
 聚焦窗口后输入关键字,根据API的路径关键字可以快速搜索
 
 ![apiDocExample](../.vuepress/public/img/apiPreview.gif)
+
+## 一键添加Cookie到Header<Badge text="2022.1.6" />
+
+针对登录需要Cookie支持的,可以将响应中的Cookie快速添加到Header来实现
+
+![addCookie2Header](../.vuepress/public/img/addCookie2Header.png)
+
+
+## YouTrack跟踪bug支持<Badge text="2022.1.6" />
+
+Fast Request接通了YouTrack Issue自动上报的功能,直接点击上报bug即可反馈问题,无需手动再复制粘贴到Github提报bug
+
+Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
+
+![youtrackSubmit](../.vuepress/public/img/youtrackSubmit.png)

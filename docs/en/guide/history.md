@@ -3,7 +3,37 @@ title: History changes
 icon: changelog
 ---
 
-## 2022.1.4 <Badge text="Charge" type="warn"/>
+## v2022.1.6<Badge text="Charge" type="warn"/>
+* Add support for one click to add cookie to header
+* Add support for sharing API to Word and html
+* Fix bug for `Basic Authorization` don't carry Basic
+* Add YouTrack bug support
+
+::: tip Add support for one click to add cookie to header
+
+For those that require cookie support for login, you can quickly add the cookie in the response to the Header to achieve this
+
+![addCookie2Header](../../.vuepress/public/img/addCookie2Header.png)
+:::
+
+::: info Add support for sharing API to Word and html
+
+Please note that the API in word form is implemented in html, so don't feel strange, just export it
+
+![shareApi](../../.vuepress/public/img/shareApi_en.png)
+:::
+
+::: note Add YouTrack bug support
+
+Fast Request has enabled the automatic reporting bug to YouTrack. Just one click,No need to manually copy and paste it to Github to report bugs
+
+Fast Request YouTrack website: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
+
+![youtrackSubmit](../../.vuepress/public/img/youtrackSubmit.png)
+:::
+
+
+## v2022.1.5 <Badge text="Charge" type="warn"/>
 * Remove text/html in Accept param in default header
 * Add support for automatically generating parameter descriptions
 * Add support for generate API documentation
@@ -35,7 +65,7 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 :::
 
 
-## 2022.1.4.0 <Badge text="Charge" type="warn"/>
+## v2022.1.4 <Badge text="Charge" type="warn"/>
 ==require idea 2021.3+==
 * SearchEveryWhere highlight optimization
 * Add support for import and export APIs

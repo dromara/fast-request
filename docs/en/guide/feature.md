@@ -19,8 +19,13 @@ icon: tools
 * Automatically associate APIs to module groups
 * API navigate tree
 * Headers group
-* APIs import and export<Badge text="new" />
-* Swagger default value parsing support<Badge text="new" />
+* APIs import and export<Badge text="2022.1.4" />
+* Swagger default value parsing support<Badge text="2022.1.4" />
+* Auto Description<Badge text="2022.1.5" />
+* API share document<Badge text="2022.1.5+" />
+* API list preview<Badge text="2022.1.5" />
+* Cookie to header<Badge text="2022.1.6" />
+* YouTrack bug support<Badge text="2022.1.6" />
 
 ## Debug API & send request<Badge text="2.0.0"/>
 
@@ -229,11 +234,13 @@ You can hide or show description by toggle click
 ![paramDescription](../../.vuepress/public/img/paramDescription.png)
 
 
-## API to markdown document<Badge text="2022.1.5" />
+## API share document<Badge text="2022.1.5+" />
+
+Please note that the API in word form is implemented in html, so don't feel strange, just export it
 
 Response Example requires running your API to be displayed
 
-![shareDocButton](../../.vuepress/public/img/shareDocButton.png)
+![shareDocButton](../../.vuepress/public/img/shareApi_en.png)
 
 ![apiDocExample](../../.vuepress/public/img/apiDocExample.png)
 
@@ -242,3 +249,19 @@ Response Example requires running your API to be displayed
 After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
 
 ![apiDocExample](../../.vuepress/public/img/apiPreview.gif)
+
+
+## Cookie to header<Badge text="2022.1.6" />
+
+For those that require cookie support for login, you can quickly add the cookie in the response to the Header to achieve this
+
+![addCookie2Header](../../.vuepress/public/img/addCookie2Header.png)
+
+
+## YouTrack bug support<Badge text="2022.1.6" />
+
+Fast Request has enabled the automatic reporting bug to YouTrack. Just one click,No need to manually copy and paste it to Github to report bugs
+
+Fast Request YouTrack website: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
+
+![youtrackSubmit](../../.vuepress/public/img/youtrackSubmit.png)
