@@ -3,7 +3,7 @@ const { comment } = require("vuepress-plugin-comment2");
 
 
 module.exports = defineHopeConfig({
-    plugins: ['@vuepress/nprogress',
+    plugins: [
 //        ["@vuepress-yard/vuepress-plugin-window",
 //            {
 //              title: "二轮投票支持",  //vuepress公告插件 先安装在配置 npm install @vuepress-yard/vuepress-plugin-window --save
@@ -94,7 +94,7 @@ module.exports = defineHopeConfig({
                   mark: true
               },
               comment: {
-                   type: 'waline',
+                   type: 'giscus',
                    serverURL: "https://fast-request-vercel.vercel.app",
                    login: "force"
               }
