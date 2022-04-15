@@ -94,9 +94,11 @@ module.exports = defineHopeConfig({
                   mark: true
               },
               comment: {
-                   type: 'waline',
-                   serverURL: "https://fast-request-vercel.vercel.app",
-                   login: "force"
+                   type: 'giscus',
+                   repo:'kings1990/giscus-fastrequest',
+                   repoId:'R_kgDOHLlUsg',
+                   category:'fastRequest',
+                   categoryId:'DIC_kwDOHLlUss4COlsW'
               }
         },
         displayFooter: true,
