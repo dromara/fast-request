@@ -20,6 +20,7 @@
     "docs:eject-theme": "vuepress eject-hope docs"
   },
   "dependencies": {
-    "vuepress-plugin-comment2": "^2.0.0-alpha.41"
+    "@vuepress-yard/vuepress-plugin-window": "^1.0.10",
+    "vuepress-plugin-comment2": "^2.0.0-beta.41"
   }
 }
