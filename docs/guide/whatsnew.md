@@ -15,6 +15,7 @@ icon: whats-new
 * 添加API分享Word和html的支持
 * 修复了Basic authorization没有携带Basic字符串
 * 添加YouTrack跟踪bug支持
+* 移除了APIs标签下的拉拽功能
 
 # v2022.1.5<Badge text="收费" type="warn"/>
 * 移除了Accept头上的text/html

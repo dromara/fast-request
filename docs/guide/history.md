@@ -7,6 +7,7 @@ icon: changelog
 * 添加API分享Word和html的支持
 * 修复了Basic authorization没有携带Basic字符串
 * 添加YouTrack跟踪bug支持
+* 移除了APIs标签下的拉拽功能
 
 ::: tip 添加一键添加Cookie到Header的支持
 

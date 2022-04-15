@@ -18,6 +18,7 @@ Gitter room have been created! Welcome to share your question in this community 
 * Add support for sharing API to Word and html
 * Fix bug for `Basic Authorization` don't carry Basic
 * Add YouTrack bug support
+* Removes the drag function in APIs tab
 
 # v2022.1.5<Badge text="Charge" type="warn"/>
 * Remove text/html in Accept param in default header

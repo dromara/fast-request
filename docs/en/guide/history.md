@@ -8,6 +8,7 @@ icon: changelog
 * Add support for sharing API to Word and html
 * Fix bug for `Basic Authorization` don't carry Basic
 * Add YouTrack bug support
+* Removes the drag function in APIs tab
 
 ::: tip Add support for one click to add cookie to header
 
