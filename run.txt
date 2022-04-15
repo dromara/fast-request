@@ -8,3 +8,8 @@ sudo sh ./deploy.sh
 中:\*(.*)\(
 
 英:\(.*\)
+
+
+升级
+npm i vuepress@next vuepress-theme-hope@next && npm install && npm update
+
