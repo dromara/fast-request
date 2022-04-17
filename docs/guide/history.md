@@ -2,6 +2,48 @@
 title: 历史变更
 icon: changelog
 ---
+
+## v2022.1.7<Badge text="收费" type="warn"/>
+* Kotlin spring系列框架支持
+* 新增SearchEveryWhere范围搜索策略
+* 编辑器ToggleUseSoftWrap支持
+* 响应数据一键添加Global Header支持
+* 优化多模块下保存的API回显自动绑定项目
+* 添加导航到当前方法的支持
+
+::: tip Kotlin spring系列框架支持
+添加了Kotlin语言下,Spring系列框架支持
+![kotlinSupport](../.vuepress/public/img/kotlinSupport.png)
+:::
+
+::: info 新增SearchEveryWhere范围搜索策略
+2022.1.7版本默认可以搜索到feign或者controller中的mapping
+
+默认搜索策略是根据注解来搜索的,再提供2种选项,如果在搜索过程中需要排除类似feign中的接口,可以通过去除Interface的勾选来处理.
+![searchEveryWhereStrategy](../.vuepress/public/img/searchEveryWhereStrategy.png)
+:::
+
+::: note 编辑器ToggleUseSoftWrap支持
+
+![toggleUseSoftWrap](../.vuepress/public/img/toggleUseSoftWrap.png)
+:::
+
+::: tip 响应数据一键添加Global Header支持
+多模块项目下建议使用,因为Add to Headers只能添加到当前模块项目下
+
+![add2GlobalHeader](../.vuepress/public/img/add2GlobalHeader.png)
+:::
+
+::: info 优化多模块下保存的API回显自动绑定项目
+优化了**多模块**下下针对保存的api回显需要**手动切换项目下拉框**
+:::
+
+::: note 添加导航到当前方法的支持
+当你生成好方法的url以后,又切换到代码中的别的地方,然后又想开始调试该API方法,可以通过此功能快速定位到代码
+
+![navigate2CurrentMethod](../.vuepress/public/img/navigate2CurrentMethod.png)
+:::
+
 ## v2022.1.6<Badge text="收费" type="warn"/>
 * 添加一键添加Cookie到Header的支持
 * 添加API分享Word和html的支持

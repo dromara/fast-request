@@ -7,8 +7,18 @@ icon: whats-new
 
 ==2022.1.4.0== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
 
-微信公众号搜索==RestfulFastRequest==,还目前没啥文章和内容，主要是加入Fast Request微信技术群的渠道 
+微信公众号搜索==RestfulFastRequest==,还目前没啥文章和内容，主要是加入Fast Request微信技术群的渠道
+
+钉钉或微信内可享受折扣(国内)
 :::
+
+# v2022.1.7<Badge text="收费" type="warn"/>
+* Kotlin spring系列框架支持
+* 新增SearchEveryWhere范围搜索策略
+* 编辑器ToggleUseSoftWrap支持
+* 响应数据一键添加Global Header支持
+* 优化多模块下保存的API回显自动绑定项目
+* 添加导航到当前方法的支持
 
 # v2022.1.6<Badge text="收费" type="warn"/>
 * 添加一键添加Cookie到Header的支持

@@ -13,6 +13,16 @@ Gitter room have been created! Welcome to share your question in this community 
 
 :::
 
+# v2022.1.7<Badge text="Charge" type="warn"/>
+* Kotlin spring framework support
+* Add SearchEveryWhere scope search strategy
+* Add toggleUseSoftWrap support in editor
+* Add support for add to Global Header from response
+* Optimize automatic binding projectName for saved api under multiple modules
+* Add support for navigating to the current method
+
+
+
 # v2022.1.6<Badge text="Charge" type="warn"/>
 * Add support for one click to add cookie to header
 * Add support for sharing API to Word and html

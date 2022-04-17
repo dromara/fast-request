@@ -3,6 +3,46 @@ title: History changes
 icon: changelog
 ---
 
+## v2022.1.7<Badge text="Charge" type="warn"/>
+* Kotlin spring framework support
+* Add SearchEveryWhere scope search strategy
+* Add toggleUseSoftWrap support in editor
+* Add support for add to Global Header from response
+* Optimize automatic binding projectName for saved api under multiple modules
+* Add support for navigating to the current method
+
+::: tip Kotlin spring framework support
+![kotlinSupport](../../.vuepress/public/img/kotlinSupport.png)
+:::
+
+::: info Add SearchEveryWhere scope search strategy
+The 2022.1.7 version can search for mapping in SpringBoot feign or controller by default
+
+The default search strategy is to search based on annotations, and two options are provided. If you need to exclude interfaces similar in SpringBoot feign interface during the search process, you can remove the check of Interface to deal with it.
+![searchEveryWhereStrategy](../../.vuepress/public/img/searchEveryWhereStrategy.png)
+:::
+
+::: note Add toggleUseSoftWrap support in editor
+
+![toggleUseSoftWrap](../../.vuepress/public/img/toggleUseSoftWrap.png)
+:::
+
+::: tip Add support for add to Global Header from response
+It is recommended to use in multi-module projects, because Add to Headers can only be added to the current module project
+
+![add2GlobalHeader](../../.vuepress/public/img/add2GlobalHeader.png)
+:::
+
+::: info Optimize automatic binding projectName for saved api under multiple modules
+Optimized the need to manually switch the project drop-down box for the saved api echo under the multi-module
+:::
+
+::: note Add support for navigating to the current method
+After you generate the url of the method, sometimes you will switch to another place in the code, and then want to start debugging the API method, you can use this function to quickly locate the code
+
+![navigate2CurrentMethod](../../.vuepress/public/img/navigate2CurrentMethod.png)
+:::
+
 ## v2022.1.6<Badge text="Charge" type="warn"/>
 * Add support for one click to add cookie to header
 * Add support for sharing API to Word and html
