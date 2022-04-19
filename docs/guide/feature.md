@@ -100,7 +100,7 @@ else
 ![fastAddToken](../.vuepress/public/img/fastAddToken.gif)
 
 ## API分组自动关联<Badge text="2.0.6" type="warning"/>
-api分组是为了将保存的api保存到不同分组以便区分不同的api,当处于多模块的项目情况下,支持扫秒项目中的module,并且快速得将module添加到分组中,这种方式会将分组添加到root下
+api分组是为了将保存的api保存到不同分组以便区分不同的api,当处于多模块的项目情况下,支持扫描项目中的module,并且快速得将module添加到分组中,这种方式会将分组添加到root下
 
 **v2.1.2保存api的时候自动创建module group**
 
