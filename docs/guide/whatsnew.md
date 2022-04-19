@@ -9,7 +9,7 @@ icon: whats-new
 
 微信公众号搜索==RestfulFastRequest==,还目前没啥文章和内容，主要是加入Fast Request微信技术群的渠道
 
-钉钉或微信内可享受折扣(国内)
+钉钉或微信内6折(国内)
 :::
 
 # v2022.1.7<Badge text="收费" type="warn"/>
