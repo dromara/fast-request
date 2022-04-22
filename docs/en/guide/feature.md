@@ -25,7 +25,7 @@ icon: tools
 * API share document<Badge text="2022.1.5+" />
 * API list preview<Badge text="2022.1.5" />
 * Cookie to header<Badge text="2022.1.6" />
-* YouTrack bug support<Badge text="2022.1.6" />
+* Project-level global parameters support<Badge text="2022.1.8" />
 
 ## Debug API & send request<Badge text="2.0.0"/>
 
@@ -258,10 +258,9 @@ For those that require cookie support for login, you can quickly add the cookie 
 ![addCookie2Header](../../.vuepress/public/img/addCookie2Header.png)
 
 
-## YouTrack bug support<Badge text="2022.1.6" />
+## Project-level global parameters support<Badge text="2022.1.8" />
+Support global parameters within the project level, not affected by multiple modules.
 
-Fast Request has enabled the automatic reporting bug to YouTrack. Just one click,No need to manually copy and paste it to Github to report bugs
+Configure priority `api header > project header>global header`
 
-Fast Request YouTrack website: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
-
-![youtrackSubmit](../../.vuepress/public/img/youtrackSubmit.png)
+![projectConfigParam](../../.vuepress/public/img/projectConfigParam.png)

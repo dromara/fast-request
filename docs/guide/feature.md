@@ -25,7 +25,7 @@ icon: tools
 * API生成文档<Badge text="2022.1.5+" />
 * API一览表预览<Badge text="2022.1.5" />
 * 一键添加Cookie到Header<Badge text="2022.1.6" />
-* YouTrack跟踪bug支持<Badge text="2022.1.6" />
+* 项目级别全局参数支持<Badge text="2022.1.8" />
 
 ## 调试API发送请求<Badge text="2.0.0"/>
 
@@ -253,10 +253,10 @@ Response Example需要运行你的API后才会被显示
 ![addCookie2Header](../.vuepress/public/img/addCookie2Header.png)
 
 
-## YouTrack跟踪bug支持<Badge text="2022.1.6" />
+## 项目级别全局参数支持<Badge text="2022.1.8" />
+支持项目级别内的全局参数,不受多模块影响
 
-Fast Request接通了YouTrack Issue自动上报的功能,直接点击上报bug即可反馈问题,无需手动再复制粘贴到Github提报bug
+配置优先级`api头 > 项目级别全局请求头 > 全局请求头`
 
-Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
-
-![youtrackSubmit](../.vuepress/public/img/youtrackSubmit.png)
+![projectConfigParam](../.vuepress/public/img/projectConfigParam.png)
+:::
