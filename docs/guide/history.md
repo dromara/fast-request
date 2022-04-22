@@ -3,6 +3,31 @@ title: 历史变更
 icon: changelog
 ---
 
+## v2022.1.8<Badge text="收费" type="warn"/>
+* 项目级别全局参数支持
+* 优化响应数据快速添加到头
+* 优化cookie快速添加到头
+* postman导出优化
+* 修复了一些bug
+
+::: tip 项目级别全局参数支持
+支持项目级别内的全局参数,不受多模块影响
+
+配置优先级`api头 > 项目级别全局请求头 > 全局请求头`
+
+![projectConfigParam](../.vuepress/public/img/projectConfigParam.png)
+:::
+
+::: info 快速添加到头参数
+
+原响应结果从添加到 ~~全局请求头~~ 变更为添加到 ==项目全局请求头==,cookie也是如此
+
+![add2projectConfig](../.vuepress/public/img/add2projectConfig.png)
+
+![cookie2projectConfig](../.vuepress/public/img/cookie2projectConfig.png)
+:::
+
+
 ## v2022.1.7<Badge text="收费" type="warn"/>
 * Kotlin spring系列框架支持
 * 新增SearchEveryWhere范围搜索策略

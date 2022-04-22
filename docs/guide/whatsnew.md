@@ -9,8 +9,14 @@ icon: whats-new
 
 微信公众号搜索==RestfulFastRequest==,还目前没啥文章和内容，主要是加入Fast Request微信技术群的渠道
 
-==平台只能挂一个价格,国内用户请进群,一律6折==
+==平台只能挂一个价格,国内用户请进群,一律6折,入正无烦恼更新==
 :::
+# v2022.1.8<Badge text="收费" type="warn"/>
+* 项目级别全局参数支持
+* 优化响应数据快速添加到头
+* 优化cookie快速添加到头
+* postman导出优化
+* 修复了一些bug
 
 # v2022.1.7<Badge text="收费" type="warn"/>
 * Kotlin spring系列框架支持

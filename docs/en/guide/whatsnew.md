@@ -13,6 +13,14 @@ Gitter room have been created! Welcome to share your question in this community 
 
 :::
 
+# v2022.1.8<Badge text="Charge" type="warn"/>
+* Project-level global parameters support
+* Optimized response data quickly add to headers
+* Optimized cookies quickly added to the header
+* postman export optimization
+* fix some bug
+
+
 # v2022.1.7<Badge text="Charge" type="warn"/>
 * Kotlin spring framework support
 * Add SearchEveryWhere scope search strategy
