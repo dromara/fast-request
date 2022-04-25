@@ -13,11 +13,14 @@ Gitter room have been created! Welcome to share your question in this community 
 
 :::
 
+[More detail ---------------->](./history.md)
+
 # v2022.1.8<Badge text="Charge" type="warn"/>
 * Project-level global parameters support
 * Optimized response data quickly add to headers
 * Optimized cookies quickly added to the header
-* postman export optimization
+* Postman export optimization
+* Fix navigate tree scan bug
 * fix some bug
 
 
@@ -63,4 +66,3 @@ Gitter room have been created! Welcome to share your question in this community 
 * Fix Light files should have PSI only in one project
 * Fix some bugs
 
-[More detail ----->](./history.md)

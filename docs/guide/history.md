@@ -7,7 +7,8 @@ icon: changelog
 * 项目级别全局参数支持
 * 优化响应数据快速添加到头
 * 优化cookie快速添加到头
-* postman导出优化
+* Postman导出优化
+* 修复navigate树扫描bug
 * 修复了一些bug
 
 ::: tip 项目级别全局参数支持

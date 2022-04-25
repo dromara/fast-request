@@ -7,7 +7,8 @@ icon: changelog
 * Project-level global parameters support
 * Optimized response data quickly add to headers
 * Optimized cookies quickly added to the header
-* postman export optimization
+* Postman export optimization
+* Fix navigate tree scan bug
 * fix some bug
 
 ::: tip Project-level global parameters support

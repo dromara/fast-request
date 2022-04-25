@@ -3,19 +3,25 @@ title: 最新变化
 icon: whats-new
 ---
 
-::: danger 购买插件
+::: danger 公告
 
 ==2022.1.4.0== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
 
-微信公众号搜索==RestfulFastRequest==,还目前没啥文章和内容，主要是加入Fast Request微信技术群的渠道
+==平台只能挂一个价格,国内用户请进群,一律6折,入正后无烦恼更新==
 
-==平台只能挂一个价格,国内用户请进群,一律6折,入正无烦恼更新==
+==技术群二维码==在评论区,会讨论各种技术问题、心得交流，==请往下拉==或者直接点击[这里](https://github.com/kings1990/giscus-fastrequest/discussions/4)
+
+Issue还是走==github==吧,作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
 :::
+
+[**查看变更详情----------------->**](./history.md)
+
 # v2022.1.8<Badge text="收费" type="warn"/>
 * 项目级别全局参数支持
 * 优化响应数据快速添加到头
 * 优化cookie快速添加到头
-* postman导出优化
+* Postman导出优化
+* 修复navigate树扫描bug
 * 修复了一些bug
 
 # v2022.1.7<Badge text="收费" type="warn"/>
@@ -57,4 +63,3 @@ icon: whats-new
 * Fix Light files should have PSI only in one project
 * 修复了一些bug
 
-[查看变更详情----->](./history.md)
