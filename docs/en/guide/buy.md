@@ -54,4 +54,4 @@ Click **help->Register Plugins...->Add New License**
 ![](../../.vuepress/public/img/buy/accountLicense.png)
 :::
 
-**If you have some questions, please join the gitter and contact me** on [![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badg查看变更详情e&utm_campaign=pr-badge)
+**If you have some questions, please join the Telegram and contact me** on [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
