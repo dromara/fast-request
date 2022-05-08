@@ -56,7 +56,7 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: "stylesheet",
-                href: "//at.alicdn.com/t/font_2601581_sp9fwshuf7k.css",
+                href: "//at.alicdn.com/t/font_2601581_7lcyllqdmfo.css",
             },
         ],
         [
@@ -171,6 +171,7 @@ module.exports = defineHopeConfig({
                         "whatsnew",
                         "history",
                         "buy",
+                        "concatGroup",
                         "faq",
                     ]
                 }
@@ -226,6 +227,7 @@ module.exports = defineHopeConfig({
                         "whatsnew",
                         "history",
                         "buy",
+                        "concatGroup",
                         "faq"
                     ],
                 }

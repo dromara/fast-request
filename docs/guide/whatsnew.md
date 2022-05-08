@@ -9,7 +9,7 @@ icon: whats-new
 
 ==平台只能挂一个价格,国内用户请进群,一律6折,入正后无烦恼更新==
 
-==技术群二维码==在评论区,会讨论各种技术问题、心得交流，==请往下拉==或者直接点击[这里](https://github.com/kings1990/giscus-fastrequest/discussions/4)
+==技术群==,会讨论各种技术问题、心得交流，请点击[*这里*](./concatGroup.md)
 
 Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
 :::
