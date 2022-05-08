@@ -27,7 +27,7 @@ features:
     link: /en/guide/feature.html
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
-    details: Only 6 MB size,Provides a very intuitive interface
+    details: Only 7 MB size,Provides a very intuitive interface
 
 head:
   - - meta
@@ -71,6 +71,9 @@ head:
 > * [x] Automatically generate descriptions for API fields
 > * [x] One click to generate API documentation
 > * [x] Single class API list preview
+> * [x] Project Global config
+> * [x] HTML preview
+> * [x] Automatic cookie storage
 > * [x] ......
 
 

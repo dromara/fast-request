@@ -3,6 +3,90 @@ title: History changes
 icon: changelog
 ---
 
+::: danger Announcement
+**2022.1.4** starts to charge,Please refer to the purchase **License** process in [**Buy plugin**](./buy.md)
+
+Click to join **Telegram Group**↓↓↓
+
+[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
+
+Issue please goto [Github](https://github.com/dromara/fast-request/issues)
+
+:::
+
+## v2022.1.9<Badge text="Charge" type="warn"/>
+* Add shortcut keys for tool window jump
+* Ignore field parsing optimizations
+* Generic parameter parsing support
+* Improve project global config
+* Add auto add cookie support
+* Fixed bug when editing params at the same time delete param
+* Interface optimization
+* Save API insertion order optimization
+* Add support for html preview in response raw
+* APIs list view optimization
+* Optimized export preview
+
+
+::: tip Add shortcut keys for tool window jump
+Provides shortcut keys to jump quickly, you can change it in `setting -> Keymap`
+![toolwindowShortcut](../../.vuepress/public/img/toolwindowShortcut.png)
+:::
+
+::: info Ignore field parsing optimizations
+* Ignore parsing annotated by `@JsonIgnore`、`@JSONField(serialize = false)` fields
+* Ignore parsing`transient` keyword-decorated fields
+  :::
+
+::: info Generic parameter parsing support
+Support for such generic parameter parsing
+```java
+@Data
+public class CommonDTO<T,R> implements Serializable {
+    private String accessToken;
+    private String appKey;
+    private String clientId;
+    private T data;
+    private List<R> dataList;
+}
+
+@PostMapping(value = "/apply")
+public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
+    return 1;
+}
+```
+:::
+
+::: danger Improve project global config
+Added `URL Params`、`URL-Encoded Params`、`Cookies`
+![projectConfigParam](../../.vuepress/public/img/projectGlobalParam.png)
+:::
+
+
+::: tip Add auto add cookie support
+Then automatically stored in == project global parameters ==
+If enable this configuration,cookie will automatically store in ==Project Global Config== -> `cookies`,This configuration is enabled by default.
+![autoStoreCookie](../../.vuepress/public/img/autoStoreCookie.png)
+:::
+
+::: note Optimization
+* Interface optimization
+  * Optimized tab spacing(narrow under windows)、background color
+* Save API insertion order optimization
+  * The post-saved API will be placed on top
+:::
+
+::: info Add support for html preview in response raw
+The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
+
+![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
+:::
+
+::: tip APIs list view optimization
+The rendering of the APIs interface has been optimized,Newly saved api icons are automatically optimized by default,The API saved in history can be right-clicked to select and change
+![apisList](../../.vuepress/public/img/apisList.png)
+:::
+
 ## v2022.1.8<Badge text="Charge" type="warn"/>
 * Project-level global parameters support
 * Optimized response data quickly add to headers

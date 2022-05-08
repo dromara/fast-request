@@ -2,6 +2,87 @@
 title: 历史变更
 icon: changelog
 ---
+::: danger 公告
+
+==2022.1.4.0== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
+
+==平台只能挂一个价格,国内用户请进群,一律6折,入正后无烦恼更新==
+
+==技术群二维码==在评论区,会讨论各种技术问题、心得交流，==请往下拉==或者直接点击[这里](https://github.com/kings1990/giscus-fastrequest/discussions/4)
+
+Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
+:::
+
+## v2022.1.9<Badge text="收费" type="warn"/>
+* 工具窗口跳转增加快捷键
+* 忽略字段解析优化
+* 泛型参数解析支持
+* 完善项目全局参数
+* 添加自动添加Cookie支持
+* 修复编辑参数时同时按删除参数导致报错
+* 界面优化
+* 保存API插入顺序优化
+* 响应raw中增加html预览
+* APIs列表视图优化
+* 优化了导出预览
+
+::: tip 工具窗口跳转增加快捷键
+提供了快捷键可以快速跳转,可以在`setting->Keymap`中修改
+![toolwindowShortcut](../.vuepress/public/img/toolwindowShortcut.png)
+:::
+
+::: info 忽略字段解析优化
+* 忽略解析使用`@JsonIgnore`、`@JSONField(serialize = false)`注解的字段
+* 忽略解析`transient`关键字修饰的字段
+:::
+
+::: info 泛型参数解析支持
+支持此类泛型参数解析
+```java
+@Data
+public class CommonDTO<T,R> implements Serializable {
+    private String accessToken;
+    private String appKey;
+    private String clientId;
+    private T data;
+    private List<R> dataList;
+}
+
+@PostMapping(value = "/apply")
+public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
+    return 1;
+}
+```
+:::
+
+::: danger 完善项目全局参数
+加入了`URL Params`、`URL-Encoded Params`、`Cookies`
+![projectConfigParam](../.vuepress/public/img/projectGlobalParam.png)
+:::
+
+
+::: tip 添加自动添加Cookie支持
+开启此配置,cookie再自动存入==项目全局参数==中的`cookies`中,此配置默认开启
+![autoStoreCookie](../.vuepress/public/img/autoStoreCookie.png)
+:::
+
+::: note 优化
+* 界面优化
+  * 优化了tab间距(windows下不正常)、背景颜色、个别突出的tab颜色等
+* 保存API插入顺序优化
+  * 后保存的放在最上面
+:::
+
+::: info 响应raw中增加html预览
+raw中不再截断html返回类型的响应,同时可以对html进行预览
+
+![rawHtmlPreview](../.vuepress/public/img/rawHtmlPreview.png)
+:::
+
+::: tip APIs列表视图优化
+渲染进行了优化,新保存的api图标会自动优化,历史保存的api可以右键进行选择变更
+![apisList](../.vuepress/public/img/apisList.png)
+:::
 
 ## v2022.1.8<Badge text="收费" type="warn"/>
 * 项目级别全局参数支持

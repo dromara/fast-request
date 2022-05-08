@@ -27,7 +27,7 @@ features:
   link: /guide/feature.html
 - title: 轻量、界面友好
   icon: code-box-fill
-  details: 轻量,仅6M大小,并且提供一个非常直观的界面,好操作易上手
+  details: 轻量,仅7M大小,并且提供一个非常直观的界面,好操作易上手
 
 head:
   - - meta
@@ -73,6 +73,9 @@ head:
 > * [x] 自动生成API字段的描述
 > * [x] 一键生成API文档
 > * [x] API一览表
+> * [x] 项目全局配置
+> * [x] HTML预览
+> * [x] 自动Cookie存储
 > * [x] ......
 
 

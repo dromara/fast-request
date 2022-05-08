@@ -3,7 +3,7 @@ title: What's new
 icon: whats-new
 ---
 
-::: danger Buy plugin
+::: danger Announcement
 
 **2022.1.4** starts to charge,Please refer to the purchase **License** process in [**Buy plugin**](./buy.md)
 
@@ -11,9 +11,23 @@ Click to join **Telegram Group**↓↓↓
 
 [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
 
+Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 :::
 
 [More detail ---------------->](./history.md)
+
+# v2022.1.8<Badge text="Charge" type="warn"/>
+* Add shortcut keys for tool window jump
+* Ignore field parsing optimizations
+* Generic parameter parsing support
+* Improve project global parameters
+* Add auto add cookie support
+* Fixed bug when editing params at the same time delete param
+* Interface optimization
+* Save API insertion order optimization
+* Add support for html preview in response raw
+* APIs list view optimization
+* Optimized export preview
 
 # v2022.1.8<Badge text="Charge" type="warn"/>
 * Project-level global parameters support

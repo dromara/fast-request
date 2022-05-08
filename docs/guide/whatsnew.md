@@ -11,10 +11,23 @@ icon: whats-new
 
 ==技术群二维码==在评论区,会讨论各种技术问题、心得交流，==请往下拉==或者直接点击[这里](https://github.com/kings1990/giscus-fastrequest/discussions/4)
 
-Issue还是走==github==吧,作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
+Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
 :::
 
 [**查看变更详情----------------->**](./history.md)
+
+# v2022.1.9<Badge text="收费" type="warn"/>
+* 工具窗口跳转增加快捷键
+* 忽略字段解析优化
+* 泛型参数解析支持
+* 完善项目全局参数
+* 添加自动添加Cookie支持
+* 修复编辑参数时同时按删除参数导致报错
+* 界面优化
+* 保存API插入顺序优化
+* 响应raw中增加html预览
+* APIs列表视图优化
+* 优化了导出预览
 
 # v2022.1.8<Badge text="收费" type="warn"/>
 * 项目级别全局参数支持
