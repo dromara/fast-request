@@ -1,24 +1,37 @@
-Restful Fast Request 系列产品许可协议
-=========================================================================================
-欢迎使用Restful Fast Request。简称RFR,以下条款和条件构成您就软件使用许可所达成的协议。，
-用户安装和使用此产品，即意味着同意以下条款和条件。
+End-User License Agreement (EULA) of Restful Fast Request
+This End-User License Agreement ("EULA") is a legal agreement between you and KingSoft. Our EULA was created by EULA Template for Restful Fast Request.
 
+This EULA agreement governs your acquisition and use of our Restful Fast Request software ("Software") directly from KingSoft or indirectly through a KingSoft authorized reseller or distributor (a "Reseller").
 
-1   用户使用许可授权范围
-1.1、保留权利： 本《协议》未明示授权的其他一切权利仍归所有，用户使用其他权利时须另外取得RFR的书面同意。
-1.2、除本《协议》有明确规定外，本《协议》并未对利用本"软件"访问的RFR的其他相关单独服务的服务条款予以列明，对于这些服务可能有单独的服务条款加以规范，请用户在使用有关服务时另行了解与确认。如用户使用该服务，视为对相关服务条款的接受。
+Please read this EULA agreement carefully before completing the installation process and using the Restful Fast Request software. It provides a license to use the Restful Fast Request software and contains warranty information and liability disclaimers.
 
-2   权利与义务
+If you register for a free trial of the Restful Fast Request software, this EULA agreement will also govern that trial. By clicking "accept" or installing and/or using the Restful Fast Request software, you are confirming your acceptance of the Software and agreeing to become bound by the terms of this EULA agreement.
 
-2.1、未获商业授权之前，不得将本软件用于商业用途
-2.2、不得对所获本软件授权进行重新发布、出租、出售、抵押或发放子许可证，不得通过拷贝、复制、泄露、授权等方式给任意第三方包括用户的关联公司。也不得以任何方式将系统源代码及系统本身提供给任意第三方包括用户的关联公司，否则应承担相应赔偿责任。
-2.3、RFR将本软件提供给授权用户，同时提供软件的安装说明，使用说明等文档，授权网站、用户依法享有该软件的使用权。
-2.4、利用本授权软件发生的商业行为均由授权用户自行负责，利用本软件进行商业行为所产生的一切纠纷均与RFR无关。
-2.5、授权软件升级前授权用户应自行备份数据，升级过程中造成的授权用户数据丢失的RFR不承担责任。
-2.6、您不得在非授权的情况下，私自使用插件相关的功能,除非是免费版，如有以上行为发生，将视为您侵犯了RFR的知识产权，RFR将保留起诉、追究法律责任并要求获得赔偿的权利。
-2.7、授权用户将在享有上述条款授予的权力的同时，受到相关的约束和限制。协议许可范围以外的行为，将直接违反本授权协议并构成侵权，我们有权随时终止授权，责令停止损害，并保留追究相关责任的权力。
-2.8、因本协议履行过程中的争议，由RFR所在地人民法院审理。
+If you are entering into this EULA agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such entity and its affiliates to these terms and conditions. If you do not have such authority or if you do not agree with the terms and conditions of this EULA agreement, do not install or use the Software, and you must not accept this EULA agreement.
 
-RFR拥有最终解释权，任何站点使用本软件则表示默认接收此协议。
+This EULA agreement shall apply only to the Software supplied by KingSoft herewith regardless of whether other software is referred to or described herein. The terms also apply to any KingSoft updates, supplements, Internet-based services, and support services for the Software, unless other terms accompany those items on delivery. If so, those terms apply.
 
-Copyright 2021 Kings1990(darkings1990@gmail.com)
+License Grant
+KingSoft hereby grants you a personal, non-transferable, non-exclusive licence to use the Restful Fast Request software on your devices in accordance with the terms of this EULA agreement.
+
+You are permitted to load the Restful Fast Request software (for example a PC, laptop, mobile or tablet) under your control. You are responsible for ensuring your device meets the minimum requirements of the Restful Fast Request software.
+
+You are not permitted to:
+
+Edit, alter, modify, adapt, translate or otherwise change the whole or any part of the Software nor permit the whole or any part of the Software to be combined with or become incorporated in any other software, nor decompile, disassemble or reverse engineer the Software or attempt to do any such things
+Reproduce, copy, distribute, resell or otherwise use the Software for any commercial purpose
+Allow any third party to use the Software on behalf of or for the benefit of any third party
+Use the Software in any way which breaches any applicable local, national or international law
+use the Software for any purpose that KingSoft considers is a breach of this EULA agreement
+Intellectual Property and Ownership
+KingSoft shall at all times retain ownership of the Software as originally downloaded by you and all subsequent downloads of the Software by you. The Software (and the copyright, and other intellectual property rights of whatever nature in the Software, including any modifications made thereto) are and shall remain the property of KingSoft.
+
+KingSoft reserves the right to grant licences to use the Software to third parties.
+
+Termination
+This EULA agreement is effective from the date you first use the Software and shall continue until terminated. You may terminate it at any time upon written notice to KingSoft.
+
+It will also terminate immediately if you fail to comply with any term of this EULA agreement. Upon such termination, the licenses granted by this EULA agreement will immediately terminate and you agree to stop all access and use of the Software. The provisions that by their nature continue and survive will survive any termination of this EULA agreement.
+
+Governing Law
+This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of cn.
