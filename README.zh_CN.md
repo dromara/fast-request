@@ -15,6 +15,8 @@
 ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
 [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
+[![OSCS Status](https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small)](https://www.oscs1024.com/project/dromara/fast-request?ref=badge_small)
+
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是idea版Postman,它是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。`Restful Fast Request = API调试工具+API管理工具+API搜索工具`。
 它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求,插件帮助你在IDEA界面内更快更高效得调试你的API。
@@ -75,15 +77,17 @@
 * [中文文档](https://plugins.sheng90.wang/fast-request)
 * [English Document](https://dromara.github.io/fast-request/en/)
 
-# 钉钉群:31690894
+# 群聊
 
-更快速得回复问题,可以加入钉钉群聊,同时也可以一起探讨研究技术问题
+[https://dromara.gitee.io/fast-request/guide/concatGroup.html](https://dromara.gitee.io/fast-request/guide/concatGroup.html)
 
-快速加入钉钉群:**31690894**(推荐)
+更快速得回复问题,可以加入微信1群，也可以加入钉钉群聊,同时也可以一起探讨研究技术问题
 
-![](./screenshot/dingding.jpg)
 
-[comment]: <> ([![QQ群]&#40;https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ&#41;]&#40;https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO&#41;)
+| ![微信](./screenshot/wechat.jpg) |
+|---|
+|微信1群已满,请加群主入群|
+
 
 ## 安装
 
@@ -94,12 +98,7 @@
 
 ![](./screenshot/download.png)
 
-## 支持作者
 
-如果觉得插件很赞，为你节约了不少时间，那么就请作者喝杯咖啡吧~☕☕☕,非常感谢.您的支持是鼓励我们前行的动力,无论金额多少都足够表达您这份心意。
-
-| ![微信](./screenshot/pay/wechat.jpg) | ![支付宝](./screenshot/pay/alipay.png) |
-| --- | --- |
 
 [latest-release]: https://github.com/dromara/fast-request/releases/latest
 

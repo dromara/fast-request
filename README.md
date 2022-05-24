@@ -14,7 +14,8 @@
 ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)
 ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
 [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
-[![Gitter](https://badges.gitter.im/fastRequest/community.svg)](https://gitter.im/fastRequest/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
+[![OSCS Status](https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small)](https://www.oscs1024.com/project/dromara/fast-request?ref=badge_small)
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is the IDEA version of Postman,it is a powerful restful api toolkit plugin(http client) help you quickly generate url and params by exist method.`Plugin = API debug tool + API manager tool + API search tool`<br/>
 It has a beautiful interface to compose requests,inspect server responses,store your api request and export api request.Plugin help you debug request just in Intellij frame

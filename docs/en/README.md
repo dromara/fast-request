@@ -74,8 +74,80 @@ head:
 > * [x] Project Global config
 > * [x] HTML preview
 > * [x] Automatic cookie storage
+> * [x] History request preview
 > * [x] ......
 
+::: chart Fast Request Functional Rose Diagram
+
+```json
+{
+  "type": "polarArea",
+  "data": {
+    "labels": ["Usability","Swagger", "Java", "Kotlin", "Pressure test", "Integrations"],
+    "datasets": [
+      {
+        "label": "My First Dataset",
+        "data": [95, 90, 90, 70, 40, 60],
+        "backgroundColor": [
+          "rgb(255, 99, 132)",
+          "rgb(75, 192, 192)",
+          "rgb(255, 182, 193)",
+          "rgb(255, 215, 0)",
+          "rgb(54, 162, 235)",
+          "rgb(0, 250, 154)"
+        ]
+      }
+    ]
+  }
+}
+```
+
+:::
+------
+
+::: chart API tool comparison
+
+```json
+{
+  "type": "radar",
+  "data": {
+    "labels": ["Usability","Swagger", "Java", "Kotlin", "Pressure test", "Integrations"],
+    "datasets": [
+      {
+        "label": "Fast Request",
+        "data": [95, 90, 90, 70, 40, 60],
+        "fill": true,
+        "backgroundColor": "rgba(0, 250, 154, 0.2)",
+        "borderColor": "rgb(0, 250, 154)",
+        "pointBackgroundColor": "rgb(0, 250, 154)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(0, 250, 154)"
+      },
+      {
+        "label": "Postman",
+        "data": [80, 80, 80, 50, 90, 100],
+        "fill": true,
+        "backgroundColor": "rgba(54, 162, 235, 0.2)",
+        "borderColor": "rgb(54, 162, 235)",
+        "pointBackgroundColor": "rgb(54, 162, 235)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(54, 162, 235)"
+      }
+    ]
+  },
+  "options": {
+    "elements": {
+      "line": {
+        "borderWidth": 3
+      }
+    }
+  }
+}
+```
+
+:::
 
 ::: tip Notice  
 Make sure your IDEA version >= 2020.3+

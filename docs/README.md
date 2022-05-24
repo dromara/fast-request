@@ -52,31 +52,105 @@ head:
 
 ### 功能  :100:
 
-> * [x] Postman一样的操作界面
-> * [x] 一键生成url和参数
-> * [x] SearchEveryWhere支持
-> * [x] API导出到Postman
-> * [x] 发送请求调试API
-> * [x] 发送请求并下载文件
-> * [x] 域名定制及切换
-> * [x] 自定义参数解析
-> * [x] 字符串生成策略化
-> * [x] 保存API
-> * [x] 管理API(搜索过滤、修改API名称等)
-> * [x] 一键定位、运行历史保存的API到方法
-> * [x] API转curl
-> * [x] 自动将API关联到模块分组
-> * [x] 内置Json参数编辑器
-> * [x] API导航树
-> * [x] Headers分组
-> * [x] Swagger参数解析支持
-> * [x] 自动生成API字段的描述
-> * [x] 一键生成API文档
-> * [x] API一览表
-> * [x] 项目全局配置
-> * [x] HTML预览
-> * [x] 自动Cookie存储
-> * [x] ......
+* [x] Postman一样的操作界面
+* [x] 一键生成url和参数
+* [x] SearchEveryWhere支持
+* [x] API导出到Postman
+* [x] 发送请求调试API
+* [x] 发送请求并下载文件
+* [x] 域名定制及切换
+* [x] 自定义参数解析
+* [x] 字符串生成策略化
+* [x] 保存API
+* [x] 管理API(搜索过滤、修改API名称等)
+* [x] 一键定位、运行历史保存的API到方法
+* [x] API转curl
+* [x] 自动将API关联到模块分组
+* [x] 内置Json参数编辑器
+* [x] API导航树
+* [x] Headers分组
+* [x] Swagger参数解析支持
+* [x] 自动生成API字段的描述
+* [x] 一键生成API文档
+* [x] API一览表
+* [x] 项目全局配置
+* [x] HTML预览
+* [x] 自动Cookie存储
+* [x] 历史请求预览
+* [x] ......
+
+
+::: chart Fast Request功能玫瑰图
+
+```json
+{
+  "type": "polarArea",
+  "data": {
+    "labels": ["易用性","Swagger", "Java", "Kotlin", "压测", "集成"],
+    "datasets": [
+      {
+        "label": "My First Dataset",
+        "data": [95, 90, 90, 70, 40, 60],
+        "backgroundColor": [
+          "rgb(255, 99, 132)",
+          "rgb(75, 192, 192)",
+          "rgb(255, 182, 193)",
+          "rgb(255, 215, 0)",
+          "rgb(54, 162, 235)",
+          "rgb(0, 250, 154)"
+        ]
+      }
+    ]
+  }
+}
+```
+
+:::
+------
+
+::: chart API工具对比
+
+```json
+{
+  "type": "radar",
+  "data": {
+    "labels": ["易用性","Swagger", "Java", "Kotlin", "压测", "集成"],
+    "datasets": [
+      {
+        "label": "Fast Request",
+        "data": [95, 90, 90, 70, 40, 60],
+        "fill": true,
+        "backgroundColor": "rgba(0, 250, 154, 0.2)",
+        "borderColor": "rgb(0, 250, 154)",
+        "pointBackgroundColor": "rgb(0, 250, 154)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(0, 250, 154)"
+      },
+      {
+        "label": "Postman",
+        "data": [80, 80, 80, 50, 90, 100],
+        "fill": true,
+        "backgroundColor": "rgba(54, 162, 235, 0.2)",
+        "borderColor": "rgb(54, 162, 235)",
+        "pointBackgroundColor": "rgb(54, 162, 235)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(54, 162, 235)"
+      }
+    ]
+  },
+  "options": {
+    "elements": {
+      "line": {
+        "borderWidth": 3
+      }
+    }
+  }
+}
+```
+
+:::
 
 
 ::: tip 注意  

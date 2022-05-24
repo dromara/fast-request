@@ -14,6 +14,39 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 
 :::
 
+## v2022.1.10<Badge text="Charge" type="warn"/>
+* Add support for history request preview
+* Add support for description search in SearchEveryWhere
+* Shortcut key conflict optimization
+* Add request timeout settings
+* Text editor character display cursor positioning optimization
+* Curl output format optimization
+* Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)
+
+::: tip Add support for history request preview
+Hidden skills: Double-click the record to display details
+![history](../../.vuepress/public/img/history.png)
+:::
+
+::: info Add support for description search in SearchEveryWhere
+Support description search API
+![searchEveryWhereDescription](../../.vuepress/public/img/searchEveryWhereDescription.png)
+:::
+
+
+::: danger Add request timeout settings
+Default value: 60 seconds
+![timeoutSetting](../../.vuepress/public/img/timeoutSetting.png)
+:::
+
+
+::: note Optimization
+* Shortcut key conflict optimization
+  * Added Shift to the three shortcut keys for opening windows
+* Text editor character display cursor positioning optimization
+  * When the text editor generates a string, it focuses on the first line by default
+:::
+
 ## v2022.1.9<Badge text="Charge" type="warn"/>
 * Add shortcut keys for tool window jump
 * Ignore field parsing optimizations

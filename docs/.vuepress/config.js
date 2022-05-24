@@ -91,7 +91,9 @@ module.exports = defineHopeConfig({
                   container: true,
                   lazyLoad: true,
                   codegroup: true,
-                  mark: true
+                  mark: true,
+                  chart: true
+
               },
               comment: {
                    type: 'giscus',

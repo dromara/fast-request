@@ -16,6 +16,15 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 
 [**查看变更详情----------------->**](./history.md)
 
+# v2022.1.10<Badge text="收费" type="warn"/>
+* 添加对历史请求预览的支持
+* SearchEveryWhere支持方法注释搜索
+* 快捷键冲突优化
+* 超时时间自定义设置
+* 文本编辑器字符显示光标定位优化
+* Curl输出格式优化
+* 优化@Consumes(APPLICATION_JSON)不生效问题(JAX-RS)
+
 # v2022.1.9<Badge text="收费" type="warn"/>
 * 工具窗口跳转增加快捷键
 * 忽略字段解析优化

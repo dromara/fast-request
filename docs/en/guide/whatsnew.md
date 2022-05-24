@@ -16,7 +16,16 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 
 [More detail ---------------->](./history.md)
 
-# v2022.1.8<Badge text="Charge" type="warn"/>
+# v2022.1.10<Badge text="Charge" type="warn"/>
+* Add support for history request preview
+* Add support for description search in SearchEveryWhere
+* Shortcut key conflict optimization
+* Add request timeout settings
+* Text editor character display cursor positioning optimization
+* Curl output format optimization
+* Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)
+
+# v2022.1.9<Badge text="Charge" type="warn"/>
 * Add shortcut keys for tool window jump
 * Ignore field parsing optimizations
 * Generic parameter parsing support

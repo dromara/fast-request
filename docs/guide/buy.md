@@ -4,7 +4,7 @@ icon: buy
 ---
 <Badge text="❤️感谢您支持原创,支持正版️❤️" type="tip" vertical="middle"/>
 <br/><br/>
-<Badge text="加入钉钉群/微信群直接找我购买6折,或者100块三年️" type="danger" vertical="middle"/>
+<Badge text="加入微信群购买享6折️" type="danger" vertical="middle"/>
 
 **购买分为2种方式**
 * 账号模式: 注册[jetbrains账号](https://account.jetbrains.com/licenses)购买(推荐)
@@ -54,6 +54,6 @@ icon: buy
 
 **如果您还有其他疑问,请加入群聊联系我↓↓↓**
 
-![](../.vuepress/public/img/dingding.jpg)
+![](https://oscimg.oschina.net/oscnet/up-7571c5b5fd54665199b0eb99454389cd615.png)
 
 <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>购买</a>

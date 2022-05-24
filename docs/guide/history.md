@@ -13,6 +13,40 @@ icon: changelog
 Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
 :::
 
+## v2022.1.10<Badge text="收费" type="warn"/>
+* 添加对历史请求预览的支持
+* SearchEveryWhere支持方法注释搜索
+* 快捷键冲突优化
+* 超时时间自定义设置
+* 文本编辑器字符显示光标定位优化
+* Curl输出格式优化
+* 优化@Consumes(APPLICATION_JSON)不生效问题(JAX-RS)
+
+::: tip 添加对历史请求预览的支持
+隐藏技能:双击记录可以展示详情
+![history](../.vuepress/public/img/history.png)
+:::
+
+::: info SearchEveryWhere支持方法注释搜索
+支持注释搜索API
+![searchEveryWhereDescription](../.vuepress/public/img/searchEveryWhereDescription.png)
+:::
+
+
+::: danger 超时时间自定义设置
+默认: 60秒
+![timeoutSetting](../.vuepress/public/img/timeoutSetting.png)
+:::
+
+
+::: note 优化
+* 快捷键冲突优化
+  * 将打开创建的三个快捷键统一加上了Shift
+* 文本编辑器字符显示光标定位优化
+  * 文本编辑器生成字符串的时候默认聚焦到第一行
+:::
+
+
 ## v2022.1.9<Badge text="收费" type="warn"/>
 * 工具窗口跳转增加快捷键
 * 忽略字段解析优化
