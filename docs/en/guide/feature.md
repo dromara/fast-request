@@ -3,29 +3,7 @@ title: Features
 icon: tools
 ---
 
-* Generate url and parameters in one click
-* SearchEveryWhere support
-* APIs export to Postman
-* Send request to debug API(support to modify the generated parameters)
-* Send request and download
-* Domain customization and switching
-* Custom parameter parse
-* String generation strategy
-* Save api
-* Management API (search filter, modify API name)
-* One click location history save api to method
-* Api to curl
-* Built-in Json parameter editor
-* Automatically associate APIs to module groups
-* API navigate tree
-* Headers group
-* APIs import and export<Badge text="2022.1.4" />
-* Swagger default value parsing support<Badge text="2022.1.4" />
-* Auto Description<Badge text="2022.1.5" />
-* API share document<Badge text="2022.1.5+" />
-* API list preview<Badge text="2022.1.5" />
-* Cookie to header<Badge text="2022.1.6" />
-* Project-level global parameters support<Badge text="2022.1.8" />
+[[toc]]
 
 ## Debug API & send request<Badge text="2.0.0"/>
 
@@ -78,7 +56,28 @@ else
     apiName = New Request       
 ```
 :::
-![example_download](../../.vuepress/public/img/saveRequest_en.png)
+![example_download](../../.vuepress/public/img/saveRequest.png)
+
+## API grouping parameter save support<Badge text="2022.2.1" type="error"/>
+Purpose: Save parameters of different combinations under one API
+
+==The original save operation will be classified into the Default group by default==
+
+![groupSave](../../.vuepress/public/img/2022.2.1/groupSave_en.png)
+
+**Toggle parameter**
+
+The following is the query of the book list in 3 languages
+
+![apiParamGroup](../../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+
+## Temporary request save support<Badge text="2022.2.1" type="error"/>
+
+Purpose: Save any request that does not belong to this project for temporary invocation, not associated with the current project code
+
+==The Url of the Request saved by the temporary request must start with `http` or `https`==
+
+![tempSave](../../.vuepress/public/img/2022.2.1/tempSave_en.png)
 
 
 ## Regenetate<Badge text="2.0.0" type="error"/>

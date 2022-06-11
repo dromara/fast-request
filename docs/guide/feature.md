@@ -3,29 +3,7 @@ title: 功能
 icon: tools
 ---
 
-* 一键生成url和参数
-* SearchEveryWhere支持
-* API导出到Postman
-* 发送请求调试API(支持修改生成的参数)
-* 发送请求并下载文件
-* 域名定制及切换
-* 自定义参数解析
-* 字符串生成策略化
-* 保存API
-* 管理API(搜索过滤、修改API名称)
-* 一键定位历史保存的API到方法
-* API转curl
-* 自动将API关联到模块分组
-* 内置Json参数编辑器
-* API导航树
-* Headers分组
-* APIs导入导出<Badge text="2022.1.4" />
-* Swagger默认值解析支持<Badge text="2022.1.4" />
-* API自动生成注释<Badge text="2022.1.5" />
-* API生成文档<Badge text="2022.1.5+" />
-* API一览表预览<Badge text="2022.1.5" />
-* 一键添加Cookie到Header<Badge text="2022.1.6" />
-* 项目级别全局参数支持<Badge text="2022.1.8" />
+[[toc]]
 
 ## 调试API发送请求<Badge text="2.0.0"/>
 
@@ -81,6 +59,28 @@ else
 ```
 :::
 ![example_download](../.vuepress/public/img/saveRequest.png)
+
+## API分组参数保存支持<Badge text="2022.2.1"/>
+目的:一个API下保存不同组合的参数
+
+==原保存操作将默认归类到Default分组==
+
+![groupSave](../.vuepress/public/img/2022.2.1/groupSave_en.png)
+
+**切换参数**
+
+以下是book列表3种语言的查询
+
+![apiParamGroup](../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+
+
+## 临时请求保存支持<Badge text="2022.2.1"/>
+目的:项目中保存任意不属于本项目的请求,用于临时调用,跟当前项目代码不关联
+
+==临时请求保存的Request的Url必须以`http`或者`https`开头==
+
+![tempSave](../.vuepress/public/img/2022.2.1/tempSave_en.png)
+
 
 ## 重新生成请求<Badge text="2.0.0" type="error"/>
 :::tip 特别说明

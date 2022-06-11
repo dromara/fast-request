@@ -13,6 +13,58 @@ icon: changelog
 Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
 :::
 
+## v2022.2.1<Badge text="收费" type="warn"/><Badge text="大力开发中,请期待" type="tip"/>
+* API分组参数保存支持
+* 临时请求保存支持
+* Response Header展示
+* 添加对Url尾缀支持
+* 优化解析
+* 修复Word导出bug
+* 优化快捷键
+
+::: tip API分组参数保存支持
+目的:一个API下保存不同组合的参数
+
+==原保存操作将默认归类到Default分组==
+
+![groupSave](../.vuepress/public/img/2022.2.1/groupSave.png)
+
+**切换参数**
+
+以下是book列表3种语言的查询
+
+![apiParamGroup](../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+:::
+
+::: info 临时请求保存支持
+目的:保存任意不属于本项目的请求,用于临时调用,跟当前项目代码不关联
+
+==临时请求保存的Request的Url必须以`http`或者`https`开头==
+
+![tempSave](../.vuepress/public/img/2022.2.1/tempSave.png)
+
+
+:::
+
+
+::: info Response Header展示
+
+![responseHeader](../.vuepress/public/img/2022.2.1/responseHeader.png)
+
+:::
+
+::: info 添加对Url尾缀支持
+
+目的:有些请求需要在url结尾加上.do
+
+![responseHeader](../.vuepress/public/img/2022.2.1/urlSuffix.png)
+
+:::
+
+::: note 优化解析
+优化了`List<Entity>`的解析
+:::
+
 ## v2022.1.10<Badge text="收费" type="warn"/>
 * 添加对历史请求预览的支持
 * SearchEveryWhere支持方法注释搜索

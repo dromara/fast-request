@@ -4,28 +4,41 @@
     <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
 
     <description><![CDATA[
-    Restful Fast Request is a powerful restful api toolkit plugin(http client) help you quickly generate url and params by exist method.Plugin = API debug tool + API manager tool<br/>
+
+    <p>Restful Fast Request is an IDEA plugin similar to Postman, it is a powerful restful api toolkit plugin(http client) help you quickly generate url and params by exist method.Plugin = API debug tool + API manager tool + API search tool<br/>
     It has a beautiful interface to compose requests,inspect server responses,store your api request and export api request<br/>
-    Plugin help you debug request just in Intellij frame<br/>
+    Plugin help you debug request just in Intellij frame<br/><br/>
+
+    <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/176597">Last free Version is 2.1.3.0</a><p>(Paid version 2022.x.x(require IDEA 2021.3+) has more features since <a href="https://dromara.org/fast-request/guide/history.html#_2022-1-4-0">2022.1.4.0</a>)</p><br/>
+
     support Spring framework (Spring MVC / Spring Boot)<br/>
+    support Kotlin + Spring framework<br/>
     support JAX-RS<br/>
     <br/>
+    </p>
+
 
     中文:<br/>
-    Restful Fast Request 是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。<br/>
-    Restful Fast Request = API调试工具+API管理工具。<br/>
+    <a href="https://dromara.gitee.io/fast-request/guide/concatGroup.html">平台只能挂一个价格,国内用户请进群,一律6折</a><br/>
+    <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/176597">最后一个免费版为2.1.3.0</a>
+    <p>(能升级IDEA版本请务必升级到2021.3+,插件最新版2022.x.x系列功能非常强大,从<a href="https://dromara.org/fast-request/guide/history.html#_2022-1-4-0">2022.1.4.0</a>开始,加入了各种人性化功能)</p><br/>
+
+    <p>
+    Restful Fast Request是一个类似于Postman的IDEA插件,它是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。<br/>
+    Restful Fast Request = API调试工具+API管理工具+API搜索工具。<br/>
     它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求<br/>
-    插件帮助你在IDEA界面内更快更高效得调试你的API<br/>
-    支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
-    支持 JAX-RS 体系<br/>
+    插件帮助你在IDEA界面内更快更高效得调试你的API<br/><br/>
+    支持 Spring 框架 (Spring MVC / Spring Boot)<br/>
+    支持 Kotlin 语言下的spring系列框架<br/>
+    支持 JAX-RS 框架<br/>
     <br/>
-    <a href="https://github.com/dromara/fast-request">Github</a> | <a href="https://gitee.com/dromara/fast-request">Gitee</a> Welcome to star(欢迎star)
-    <br/><br/>
-    <a href="https://plugins.sheng90.wang/fast-request">详细文档</a> | <a href="https://github.com/dromara/fast-request/issues">问题反馈</a> | <a href="https://fast-request.sheng90.wang/fast-request/guide/whatsnew/">历史变更</a> | 钉钉群:31690894<br/>
-    <a href="https://dromara.github.io/fast-request/en">Documentation</a> | <a href="https://github.com/dromara/fast-request/issues">Issues Tracker</a> | <a href="https://dromara.github.io/fast-request/en/guide/whatsnew/">change log</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
+    </p>
+    <br/>
+    <a href="https://dromara.gitee.io/fast-request">详细文档</a> | <a href="https://github.com/dromara/fast-request/issues">问题反馈</a> | <a href="https://dromara.gitee.io/fast-request/guide/history.html">历史变更</a> | <a href="https://darkings.youtrack.cloud/issues">Issue Track</a> | <a href="https://dromara.gitee.io/fast-request/guide/concatGroup.html">加入群聊</a><br/>
+    <a href="https://dromara.github.io/fast-request/en">Documentation</a> | <a href="https://github.com/dromara/fast-request/issues">Issues Tracker</a> | <a href="https://dromara.org/fast-request/en/guide/history.html">change log</a> | <a href="https://darkings.youtrack.cloud/issues">Issue Track</a> | <a href="https://t.me/restful_fast_request">Telegram</a><br/>
     <br/>
 
-    Features:
+    <p>Features:</p>
     <ul>
         <li>API navigate tree</li>
         <li>SearchEveryWhere for api</li>
@@ -42,9 +55,14 @@
         <li>Api to curl</li>
         <li>Automatically associate APIs to module groups</li>
         <li>Built-in Json parameter editor</li>
+        <li>Swagger parse support</li>
+        <li>Automatically generate descriptions for API fields</li>
+        <li>One click to generate API documentation</li>
+        <li>Single class API list preview</li>
+        <li>Kotlin spring framework support</li>
     </ul>
 
-    功能:
+    <p>功能:</p>
     <ul>
         <li>API导航树</li>
         <li>SearchEveryWhere搜索API</li>
@@ -61,28 +79,76 @@
         <li>API转curl</li>
         <li>自动将API关联到模块分组</li>
         <li>内置Json参数编辑器</li>
+        <li>Swagger解析支持</li>
+        <li>自动生成API字段的描述</li>
+        <li>一键生成API的markdown、word、html文档</li>
+        <li>API一览表</li>
+        <li>Kotlin spring框架支持</li>
     </ul>
     <br/>
     <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/example.png" />
     <h2>SearchEveryWhere for API</h2>
-    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/searchEveryWhere.png" /><br/>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/searchEveryWhere.png" />
     <h2>API manager</h2>
-    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apis.png" /><br/>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apis.png" />
     <h2>API navigate</h2>
-    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apiNavigate.png" /><br/>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apiNavigate.png" />
 
-    <h3>Latest changes</h3>
+    <h3>Features in paid version(收费版上的功能更完善)[IDEA version >=2021.3]</h3>
+    <a href="https://dromara.org/fast-request/en/guide/history.html">See more detail</a> | <a href="https://dromara.gitee.io/fast-request/guide/history.html">更多详情</a>
     <h3>v2.1.3</h3>
     <ul>
         <li>English
             <ul>
-                <li>Add encode support for special symbol in parameter</li>
+                <li>Better looking interface</li>
+                <li>SearchEveryWhere highlight optimization</li>
+                <li>Add support for import and export APIs</li>
+                <li>Add support for run APIs</li>
+                <li>Add timeout for api request</li>
+                <li>Compatible with idea 2022.1</li>
+                <li>Make it optional for automatically generate parameters</li>
+                <li>Swagger2/Swagger3 annotation default value parameter parsing support</li>
+                <li>Merged Send and Send and Download buttons</li>
+                <li>APIs user interface optimization</li>
+                <li>Optimize the user guide of features</li>
+                <li>Url generation optimization</li>
+                <li>Fix Light files should have PSI only in one project</li>
+                <li>Remove text/html in Accept param in default header</li>
+                <li>Add support for automatically generating parameter descriptions</li>
+                <li>Add support for sharing API documentation</li>
+                <li>Add support for single class API list preview</li>
+                <li>Add cookies to Header with one click</li>
+                <li>Project-level global parameters support</li>
+                <li>Automatic cookie added</li>
+                <li>Html preview</li>
+                <li>History request preview</li>
                 <li>Add global headers to curl</li>
             </ul>
         </li>
         <li>中文
             <ul>
-                <li>参数特殊符号编码支持</li>
+                <li>更好看的界面</li>
+                <li>SearchEveryWhere高亮优化</li>
+                <li>APIs导入导出支持</li>
+                <li>APIs支持直接运行</li>
+                <li>API请求增加超时设置</li>
+                <li>兼容idea 2022.1</li>
+                <li>自动生成参数可选化</li>
+                <li>Swagger2/Swagger3注解默认值参数解析支持</li>
+                <li>对Send和Send and Download按钮进行了合并</li>
+                <li>APIs界面优化</li>
+                <li>使用引导上的细节优化</li>
+                <li>url解析优化</li>
+                <li>修复了Light files should have PSI only in one project</li>
+                <li>移除Accept头上的text/html</li>
+                <li>添加对自动生成参数描述的支持</li>
+                <li>分享API文档的支持</li>
+                <li>添加单个类的API整体预览</li>
+                <li>一键将Cookie添加到Header</li>
+                <li>项目级别全局参数支持</li>
+                <li>自动Cookie记录添加</li>
+                <li>Html预览</li>
+                <li>历史请求预览</li>
                 <li>curl加入global headers</li>
             </ul>
         </li>

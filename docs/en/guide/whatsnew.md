@@ -17,6 +17,15 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 [More detail ---------------->](./history.md)
 
 # v2022.1.10<Badge text="Charge" type="warn"/>
+* API grouping parameter save support
+* Temporary request save support
+* Add Response Header in response
+* Add support for Url suffix
+* Optimized parameter parsing
+* Fix Word export bug
+* Optimize shortcut keys
+
+# v2022.1.10<Badge text="Charge" type="warn"/>
 * Add support for history request preview
 * Add support for description search in SearchEveryWhere
 * Shortcut key conflict optimization

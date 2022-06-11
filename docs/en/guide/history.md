@@ -14,6 +14,58 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 
 :::
 
+## v2022.2.1<Badge text="Charge" type="warn"/><Badge text="Developing..." type="tip"/>
+* API grouping parameter save support
+* Temporary request save support
+* Add Response Header in response
+* Add support for Url suffix
+* Optimized parameter parsing
+* Fix Word export bug
+* Optimize shortcut keys
+
+::: tip API grouping parameter save support
+Purpose: Save parameters of different combinations under one API
+
+==The original save operation will be classified into the Default group by default==
+
+![groupSave](../../.vuepress/public/img/2022.2.1/groupSave_en.png)
+
+**Toggle parameter**
+
+The following is the query of the book list in 3 languages
+
+![apiParamGroup](../../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+:::
+
+::: info Temporary request save support
+
+Purpose: Save any request that does not belong to this project for temporary invocation, not associated with the current project code
+
+==The Url of the Request saved by the temporary request must start with `http` or `https`==
+
+![tempSave](../../.vuepress/public/img/2022.2.1/tempSave_en.png)
+
+:::
+
+
+::: info Add Response Header in response
+
+![responseHeader](../../.vuepress/public/img/2022.2.1/responseHeader.png)
+
+:::
+
+::: info Add support for Url suffix
+
+Purpose: Some requests need to add .do at the end of the url
+
+![responseHeader](../../.vuepress/public/img/2022.2.1/urlSuffix.png)
+
+:::
+
+::: note Optimized parameter parsing
+Optimized parsing of `List<Entity>`
+:::
+
 ## v2022.1.10<Badge text="Charge" type="warn"/>
 * Add support for history request preview
 * Add support for description search in SearchEveryWhere

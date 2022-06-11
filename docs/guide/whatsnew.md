@@ -16,6 +16,15 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 
 [**查看变更详情----------------->**](./history.md)
 
+# v2022.2.1<Badge text="收费" type="warn"/>
+* API分组参数保存支持
+* 临时请求保存支持
+* Response Header展示
+* 添加对Url尾缀支持
+* 优化解析
+* 修复Word导出bug
+* 优化快捷键
+
 # v2022.1.10<Badge text="收费" type="warn"/>
 * 添加对历史请求预览的支持
 * SearchEveryWhere支持方法注释搜索

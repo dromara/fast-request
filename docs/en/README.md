@@ -50,32 +50,35 @@ head:
 
 ### Features :100:
 
-> * [x] Postman-like user interface
-> * [x] Generate url and parameters in one click
-> * [x] SearchEveryWhere support
-> * [x] APIs export to Postman
-> * [x] Send request to debug API
-> * [x] Send request and download
-> * [x] Domain customization and switching
-> * [x] Custom parameter parse
-> * [x] String generation strategy
-> * [x] Save api
-> * [x] Management API
-> * [x] One click navigate or run history save api to method
-> * [x] Api to curl
-> * [x] Built-in Json parameter editor
-> * [x] Automatically associate APIs to module groups
-> * [x] API navigate tree
-> * [x] Headers group
-> * [x] Swagger Parameter parsing support
-> * [x] Automatically generate descriptions for API fields
-> * [x] One click to generate API documentation
-> * [x] Single class API list preview
-> * [x] Project Global config
-> * [x] HTML preview
-> * [x] Automatic cookie storage
-> * [x] History request preview
-> * [x] ......
+* [x] Postman-like user interface
+* [x] Generate url and parameters in one click
+* [x] SearchEveryWhere support
+* [x] APIs export to Postman
+* [x] Send request to debug API
+* [x] Send request and download
+* [x] Domain customization and switching
+* [x] Custom parameter parse
+* [x] String generation strategy
+* [x] Save api
+* [x] Management API
+* [x] One click navigate or run history save api to method
+* [x] Api to curl
+* [x] Built-in Json parameter editor
+* [x] Automatically associate APIs to module groups
+* [x] API navigate tree
+* [x] Headers group
+* [x] Swagger Parameter parsing support
+* [x] Automatically generate descriptions for API fields
+* [x] One click to generate API documentation
+* [x] Single class API list preview
+* [x] Project Global config
+* [x] HTML preview
+* [x] Automatic cookie storage
+* [x] History request preview
+* [x] API grouping parameter save support
+* [x] Temporary request save support
+* [x] Url suffix support
+* [x] ......
 
 ::: chart Fast Request Functional Rose Diagram
 
