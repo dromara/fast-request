@@ -20,6 +20,5 @@
     "docs:eject-theme": "vuepress eject-hope docs"
   },
   "dependencies": {
-    "@vuepress-yard/vuepress-plugin-window": "^1.0.10"
   }
 }
