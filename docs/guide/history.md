@@ -13,7 +13,7 @@ icon: changelog
 Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
 :::
 
-## v2022.2.1<Badge text="收费" type="warn"/><Badge text="大力开发中,请期待" type="tip"/>
+## v2022.2.1<Badge text="收费" type="warn"/><Badge text="最新版" type="tip"/>
 * API分组参数保存支持
 * 临时请求保存支持
 * cURL导入支持
