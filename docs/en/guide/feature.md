@@ -250,16 +250,13 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 ![apiDocExample](../../.vuepress/public/img/apiPreview.gif)
 
 
-## Cookie to header<Badge text="2022.1.6" />
-
-For those that require cookie support for login, you can quickly add the cookie in the response to the Header to achieve this
-
-![addCookie2Header](../../.vuepress/public/img/addCookie2Header.png)
-
-
 ## Project-level global parameters support<Badge text="2022.1.8" />
 Support global parameters within the project level, not affected by multiple modules.
 
 Configure priority `api header > project header>global header`
 
 ![projectConfigParam](../../.vuepress/public/img/projectConfigParam.png)
+
+
+## cURL import<Badge text="2022.2.1" />
+![importByCurl](../../.vuepress/public/img/2022.2.1/importByCurl_en.gif)

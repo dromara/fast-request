@@ -19,6 +19,7 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 # v2022.1.10<Badge text="Charge" type="warn"/>
 * API grouping parameter save support
 * Temporary request save support
+* Add support for cURL import
 * Add Response Header in response
 * Add support for Url suffix
 * Optimized parameter parsing

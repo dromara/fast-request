@@ -246,12 +246,6 @@ Response Example需要运行你的API后才会被显示
 
 ![apiDocExample](../.vuepress/public/img/apiPreview.gif)
 
-## 一键添加Cookie到Header<Badge text="2022.1.6" />
-
-针对登录需要Cookie支持的,可以将响应中的Cookie快速添加到Header来实现
-
-![addCookie2Header](../.vuepress/public/img/addCookie2Header.png)
-
 
 ## 项目级别全局参数支持<Badge text="2022.1.8" />
 支持项目级别内的全局参数,不受多模块影响
@@ -260,3 +254,8 @@ Response Example需要运行你的API后才会被显示
 
 ![projectConfigParam](../.vuepress/public/img/projectConfigParam.png)
 :::
+
+## cURL导入<Badge text="2022.2.1" />
+![importByCurl](../.vuepress/public/img/2022.2.1/importByCurl.gif)
+
+==请注意如果需要绑定方法,则需要将光标放置到方法名上==

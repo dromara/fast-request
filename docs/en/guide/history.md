@@ -17,6 +17,7 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 ## v2022.2.1<Badge text="Charge" type="warn"/><Badge text="Developing..." type="tip"/>
 * API grouping parameter save support
 * Temporary request save support
+* Add support for cURL import
 * Add Response Header in response
 * Add support for Url suffix
 * Optimized parameter parsing
@@ -45,6 +46,13 @@ Purpose: Save any request that does not belong to this project for temporary inv
 
 ![tempSave](../../.vuepress/public/img/2022.2.1/tempSave_en.png)
 
+:::
+
+::: tip cURL import
+
+![importByCurl](../../.vuepress/public/img/2022.2.1/importByCurl_en.gif)
+
+==Note that if you need to bind a method, you need to place the cursor on the method name==
 :::
 
 

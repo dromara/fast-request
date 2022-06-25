@@ -19,6 +19,7 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 # v2022.2.1<Badge text="收费" type="warn"/>
 * API分组参数保存支持
 * 临时请求保存支持
+* cURL导入支持
 * Response Header展示
 * 添加对Url尾缀支持
 * 优化解析

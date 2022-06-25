@@ -16,6 +16,7 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 ## v2022.2.1<Badge text="收费" type="warn"/><Badge text="大力开发中,请期待" type="tip"/>
 * API分组参数保存支持
 * 临时请求保存支持
+* cURL导入支持
 * Response Header展示
 * 添加对Url尾缀支持
 * 优化解析
@@ -44,6 +45,13 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 ![tempSave](../.vuepress/public/img/2022.2.1/tempSave.png)
 
 
+:::
+
+::: tip cURL导入支持
+
+![importByCurl](../.vuepress/public/img/2022.2.1/importByCurl.gif)
+
+==请注意如果需要绑定方法,则需要将光标放置到方法名上==
 :::
 
 
