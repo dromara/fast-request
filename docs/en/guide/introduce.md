@@ -5,7 +5,9 @@ icon: restfulFastRequest
 
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
-[![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
+[![Jetbrains Plugins][plugin-img]][plugin]
+![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)  [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is an IDEA plugin similar to Postman, it is a powerful restful api toolkit plugin which help you quickly generate url and params by exist method.
 `Restful Fast Request = API debug tool + API manager tool + API search tool`. It has a beautiful interface to compose requests,inspect server
@@ -25,6 +27,7 @@ The purpose of the plug-in is to simplify development and improve efficiency. Ou
 ```
 Spring framework (Spring MVC / Spring Boot)
 JAX-RS
+Kotlin Spring framework
 ```
 
 
