@@ -127,30 +127,26 @@ module.exports = defineHopeConfig({
       editLinks: true,
       locales: {
             '/en/': {
-                footer: "Apache License 2.0  | Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/'>vuepress-theme-hope</a>",
+                footer: "Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/'>vuepress-theme-hope</a>",
                 selectText: 'Languages',
                 label: 'English',
-//                navbar: [
-//                    {
-//                        text: 'Guide',
-//                        link: '/en/guide/introduce',
-//                        icon: "config"
-//                    },
-//                    {
-//                        text: 'Code',
-//                        children: [
-//                            {
-//                                text: 'Github',
-//                                link: 'https://github.com/dromara/fast-request'
-//                            },
-//                            {
-//                                text: 'Gitee',
-//                                link: 'https://gitee.com/dromara/fast-request'
-//                            }
-//                        ],
-//                        icon: "code"
-//                    }
-//                ],
+                navbar: [
+                      {
+                          text: 'Get start',
+                          link: '/en/guide/getstarted/start',
+                          icon: "start1"
+                      },
+                      {
+                          text: 'Features',
+                          link: '/en/guide/feature',
+                          icon: "tools"
+                      },
+                      {
+                          text: 'Contact Group',
+                          link: '/en/guide/history',
+                          icon: "changelog"
+                      }
+                  ],
                 sidebar: {
                     '/en/guide/': [
                         "introduce",
@@ -179,34 +175,35 @@ module.exports = defineHopeConfig({
                 }
             },
             '/': {
-                footer: "Apache License 2.0  | Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/zh/'>vuepress-theme-hope</a>",
+                footer: "Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/zh/'>vuepress-theme-hope</a>",
                 // 多语言下拉菜单的标题
                 selectText: 'Languages',
                 // 该语言在下拉菜单中的标签
                 label: '简体中文',
                 // 当前 locale 的 algolia docsearch 选项
                 algolia: {},
-//                navbar: [
-//                    {
-//                        text: '指南',
-//                        link: '/guide/introduce',
-//                        icon: "config"
-//                    },
-//                    {
-//                        text: '代码',
-//                        children: [
-//                            {
-//                                text: 'Github',
-//                                link: 'https://github.com/dromara/fast-request'
-//                            },
-//                            {
-//                                text: 'Gitee',
-//                                link: 'https://gitee.com/dromara/fast-request'
-//                            }
-//                        ],
-//                        icon: "code"
-//                    }
-//                ],
+                navbar: [
+                    {
+                        text: '快速开始',
+                        link: '/guide/getstarted/start',
+                        icon: "start1"
+                    },
+                    {
+                        text: '功能',
+                        link: '/guide/feature',
+                        icon: "tools"
+                    },
+                    {
+                        text: '历史变更',
+                        link: '/guide/history',
+                        icon: "changelog"
+                    },
+                     {
+                         text: '加入群聊',
+                         link: '/guide/concatGroup',
+                         icon: "contactGroup"
+                     }
+                ],
                 sidebar: {
                     '/guide/': [
                         "introduce",

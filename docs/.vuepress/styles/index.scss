@@ -1,11 +1,73 @@
+@font-face{
+    font-family: 'bobohei';
+    src : url('/BOBOHEI-2.otf');
+}
 
 #main-content > header > div > p.actions{
     margin-left: -10px;
 }
-.theme-hope-content img {
-    border-radius: 11px;
-    box-shadow: 2px 2px 22px #ffffffff, -2px -2px 22px #ffffffff;
+.home.project{
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
+
+.home.project .hero h1{
+    font-family:'bobohei';
+}
+.home.project .features{
+    max-width: 100%;
+    padding: 0 5rem;
+    margin: 0;
+}
+.theme-hope-content.custom{
+    padding: 0 5rem;
+}
+.home.project .hero .action-button.primary{
+    color: #FFF;
+    font-family: 'bobohei';
+}
+.home.project .feature h2{
+    font-family: 'bobohei';
+}
+.navbar .site-name{
+    font-family: 'bobohei';
+}
+h1,h2{
+    font-family: 'bobohei';
+}
+.home.project .hero .description{
+    font-size: 1rem;
+    font-family: 'bobohei';
+}
+.home.project .hero{
+    max-width: 100%;
+}
+.home.project{
+//     background-image: url(http://liteflow.yomahub.com/img/bg-read.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.home.project .hero img{
+    margin: 0 auto;
+}
+
+.home.project .hero {
+    display: block;
+}
+
+.home.project .hero{
+    text-align: center;
+}
+.home.project .hero .description{
+    max-width:100%;
+}
+// .theme-hope-content img {
+//     border-radius: 11px;
+//     box-shadow: 2px 2px 22px #ffffffff, -2px -2px 22px #ffffffff;
+// }
 //
 // .home .features .feature p{
 //     height:145px;

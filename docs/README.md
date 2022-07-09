@@ -3,15 +3,11 @@ home: true
 title: 主页
 heroImage: /img/fastRequest.svg
 heroText: Restful Fast Request
-tagline: 为简化开发而生
+tagline: 为简化调试API而生
 actions:
-      - text: 快速上手 💡
+      - text: 🚀 快速上手
         link: /guide/getstarted/start
         type: primary
-      - text: 功能 🛠
-        link: /guide/feature
-      - text: 历史变更 🔍
-        link: /guide/history
 features:
 - title: 基于原生
   icon: origin
@@ -45,7 +41,7 @@ head:
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
-![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA) [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
+![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)  [![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
 
 <iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
@@ -166,6 +162,92 @@ head:
 
 当然请如果插件有更新，请确保更新成最新版本
 :::
+
+
+[comment]: <> (## 🧲 友情链接)
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://hertzbeat.com/" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/hertzbeat.svg'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://gitee.com/dromara/easy-es" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/easy-es.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://gitee.com/dromara/TLog" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/tlog-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://liteflow.yomahub.com/" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/lite-flow.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://gitee.com/dromara/sa-token" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/sa-token.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
+
+
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://gitee.com/dromara/hutool" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/hutool-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://gitee.com/dromara/forest" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/forest-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
+
+
+[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
+
+[comment]: <> (    <a href="https://jpom-docs.keepbx.cn/" target="_blank">)
+
+[comment]: <> (        <img :src="$withBase&#40;'/img/link/jpom-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</span>)
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 
