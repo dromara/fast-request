@@ -1,6 +1,6 @@
 ---
-title: 视频
-icon: start
+title: 视频教程
+icon: bilibili
 ---
 
 B站系列视频

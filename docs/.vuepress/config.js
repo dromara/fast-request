@@ -55,13 +55,6 @@ module.exports = defineHopeConfig({
         [
             'link',
             {
-                rel: "stylesheet",
-                href: "//at.alicdn.com/t/font_2601581_7lcyllqdmfo.css",
-            },
-        ],
-        [
-            'link',
-            {
                 rel: 'icon',
                 href: '/fast-request/img/fastRequest.svg'
             }
@@ -202,6 +195,11 @@ module.exports = defineHopeConfig({
                         text: '历史变更',
                         link: '/guide/history',
                         icon: "changelog"
+                    },
+                    {
+                        text: '视频教程',
+                        link: '/guide/teachingVideo',
+                        icon: "bilibili"
                     },
                      {
                          text: '加入群聊',

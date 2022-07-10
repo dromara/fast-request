@@ -1,7 +1,8 @@
 @font-face{
     font-family: 'bobohei';
-    src : url('/BOBOHEI-2.otf');
+    src : url('/font/BOBOHEI-2.otf');
 }
+@import url("/font/iconfont.css");
 
 #main-content > header > div > p.actions{
     margin-left: -10px;
