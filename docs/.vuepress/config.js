@@ -66,7 +66,12 @@ module.exports = defineHopeConfig({
                 href: '/fast-request/img/fastRequest.svg'
             }
         ],
-
+        [
+            'script',
+            {
+                src: '/fast-request/js/love-me.js'
+            }
+        ],
     ],
     markdown: {
         lineNumbers: true
