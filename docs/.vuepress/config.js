@@ -232,6 +232,7 @@ module.exports = defineHopeConfig({
                         "history",
                         "buy",
                         "concatGroup",
+                        "teachingVideo",
                         "faq"
                     ],
                 }
