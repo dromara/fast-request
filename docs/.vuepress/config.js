@@ -90,7 +90,8 @@ module.exports = defineHopeConfig({
                   lazyLoad: true,
                   codegroup: true,
                   mark: true,
-                  chart: true
+                  chart: true,
+                  flowchart: true,
 
               },
               comment: {
