@@ -12,17 +12,38 @@ Click to join **Telegram Group**↓↓↓
 
 Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 
+---
+feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="Fix or Remove function" type="danger"/>
 :::
 
+## v2022.2.2<Badge text="Charge" type="warn"/><Badge text="Developing..." type="tip"/>
+* <Badge text="Add stop API request function" type="tip"/>
+* <Badge text="Batch export API doc" type="tip"/>
+* <Badge text="Add annotations when export to Postman" type="tip"/>
+* <Badge text="The experience and tips in some scenarios" type="info"/>
+* <Badge text="SearchEveryWhere err in EAP/New ui version" type="danger"/>
+* <Badge text="Error when modify number param in Multipart" type="danger"/>
+
+:::tip Add stop API request function
+![stopApi](../../.vuepress/public/img/2022.2.2/stopApi.gif)
+:::
+
+:::tip Batch export API doc
+![batchExportApiDoc](../../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
+:::
+
+
+
 ## v2022.2.1<Badge text="Charge" type="warn"/><Badge text="Newest version" type="tip"/>
-* API grouping parameter save support
-* Temporary request save support
-* Add support for cURL import
-* Add Response Header in response
-* Add support for Url suffix
-* Optimized parameter parsing
-* Fix Word export bug
-* Optimize shortcut keys
+* <Badge text="API grouping parameter save support" type="tip"/>
+* <Badge text="Temporary request save support" type="tip"/>
+* <Badge text="Add support for cURL import" type="tip"/>
+* <Badge text="Add Response Header in response" type="tip"/>
+* <Badge text="Add support for Url suffix" type="tip"/>
+* <Badge text="Optimized parameter parsing" type="info"/>
+* <Badge text="Optimize shortcut keys" type="info"/>
+* <Badge text="Fix Word export bug" type="danger"/>
+
 
 ::: tip API grouping parameter save support
 Purpose: Save parameters of different combinations under one API
@@ -38,7 +59,7 @@ The following is the query of the book list in 3 languages
 ![apiParamGroup](../../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
 :::
 
-::: info Temporary request save support
+::: tip Temporary request save support
 
 Purpose: Save any request that does not belong to this project for temporary invocation, not associated with the current project code
 
@@ -56,13 +77,13 @@ The Url of the Request saved by the temporary request must start with ==http== o
 :::
 
 
-::: info Add Response Header in response
+::: tip Add Response Header in response
 
 ![responseHeader](../../.vuepress/public/img/2022.2.1/responseHeader.png)
 
 :::
 
-::: info Add support for Url suffix
+::: tip Add support for Url suffix
 
 Purpose: Some requests need to add .do at the end of the url
 
@@ -70,18 +91,18 @@ Purpose: Some requests need to add .do at the end of the url
 
 :::
 
-::: note Optimized parameter parsing
+::: info Optimized parameter parsing
 Optimized parsing of `List<Entity>`
 :::
 
 ## v2022.1.10<Badge text="Charge" type="warn"/>
-* Add support for history request preview
-* Add support for description search in SearchEveryWhere
-* Shortcut key conflict optimization
-* Add request timeout settings
-* Text editor character display cursor positioning optimization
-* Curl output format optimization
-* Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)
+* <Badge text="Add support for history request preview" type="tip"/>
+* <Badge text="Add support for description search in SearchEveryWhere" type="tip"/>
+* <Badge text="Add request timeout settings" type="tip"/>
+* <Badge text="Shortcut key conflict optimization" type="info"/>
+* <Badge text="Text editor character display cursor positioning optimization" type="info"/>
+* <Badge text="Curl output format optimization" type="info"/>
+* <Badge text="Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)" type="info"/>
 
 ::: tip Add support for history request preview
 Hidden skills: Double-click the record to display details
@@ -94,13 +115,13 @@ Support description search API
 :::
 
 
-::: danger Add request timeout settings
+::: tip Add request timeout settings
 Default value: 60 seconds
 ![timeoutSetting](../../.vuepress/public/img/timeoutSetting.png)
 :::
 
 
-::: note Optimization
+::: info Optimization
 * Shortcut key conflict optimization
   * Added Shift to the three shortcut keys for opening windows
 * Text editor character display cursor positioning optimization
@@ -108,27 +129,38 @@ Default value: 60 seconds
 :::
 
 ## v2022.1.9<Badge text="Charge" type="warn"/>
-* Add shortcut keys for tool window jump
-* Ignore field parsing optimizations
-* Generic parameter parsing support
-* Improve project global config
-* Add auto add cookie support
-* Fixed bug when editing params at the same time delete param
-* Interface optimization
-* Save API insertion order optimization
-* Add support for html preview in response raw
-* APIs list view optimization
-* Optimized export preview
-
+* <Badge text="Add shortcut keys for tool window jump" type="tip"/>
+* <Badge text="Add auto add cookie support" type="tip"/>
+* <Badge text="Add support for html preview in response raw" type="tip"/>
+* <Badge text="Ignore field parsing optimizations" type="info"/>
+* <Badge text="Generic parameter parsing support" type="info"/>
+* <Badge text="Improve project global config" type="info"/>
+* <Badge text="Interface optimization" type="info"/>
+* <Badge text="Save API insertion order optimization" type="info"/>
+* <Badge text="APIs list view optimization" type="info"/>
+* <Badge text="Optimized export preview" type="info"/>
+* <Badge text="Fixed bug when editing params at the same time delete param" type="danger"/>
 
 ::: tip Add shortcut keys for tool window jump
 Provides shortcut keys to jump quickly, you can change it in `setting -> Keymap`
 ![toolwindowShortcut](../../.vuepress/public/img/toolwindowShortcut.png)
 :::
 
+::: tip Add auto add cookie support
+Then automatically stored in == project global parameters ==
+If enable this configuration,cookie will automatically store in ==Project Global Config== -> `cookies`,This configuration is enabled by default.
+![autoStoreCookie](../../.vuepress/public/img/autoStoreCookie.png)
+:::
+
+::: info Add support for html preview in response raw
+The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
+
+![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
+:::
+
 ::: info Ignore field parsing optimizations
-* Ignore parsing annotated by `@JsonIgnore`、`@JSONField(serialize = false)` fields
-* Ignore parsing`transient` keyword-decorated fields
+* <Badge text="Ignore parsing annotated by `@JsonIgnore`、`@JSONField(serialize = false)` fields" type="info"/>
+* <Badge text="Ignore parsing`transient` keyword-decorated fields" type="info"/>
   :::
 
 ::: info Generic parameter parsing support
@@ -150,17 +182,12 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 ```
 :::
 
-::: danger Improve project global config
+::: info Improve project global config
 Added `URL Params`、`URL-Encoded Params`、`Cookies`
 ![projectConfigParam](../../.vuepress/public/img/projectGlobalParam.png)
 :::
 
 
-::: tip Add auto add cookie support
-Then automatically stored in == project global parameters ==
-If enable this configuration,cookie will automatically store in ==Project Global Config== -> `cookies`,This configuration is enabled by default.
-![autoStoreCookie](../../.vuepress/public/img/autoStoreCookie.png)
-:::
 
 ::: note Optimization
 * Interface optimization
@@ -169,11 +196,7 @@ If enable this configuration,cookie will automatically store in ==Project Global
   * The post-saved API will be placed on top
 :::
 
-::: info Add support for html preview in response raw
-The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
 
-![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
-:::
 
 ::: tip APIs list view optimization
 The rendering of the APIs interface has been optimized,Newly saved api icons are automatically optimized by default,The API saved in history can be right-clicked to select and change
@@ -181,12 +204,12 @@ The rendering of the APIs interface has been optimized,Newly saved api icons are
 :::
 
 ## v2022.1.8<Badge text="Charge" type="warn"/>
-* Project-level global parameters support
-* Optimized response data quickly add to headers
-* Optimized cookies quickly added to the header
-* Postman export optimization
-* Fix navigate tree scan bug
-* fix some bug
+* <Badge text="Project-level global parameters support" type="tip"/>
+* <Badge text="Optimized response data quickly add to headers" type="info"/>
+* <Badge text="Optimized cookies quickly added to the header" type="info"/>
+* <Badge text="Postman export optimization" type="info"/>
+* <Badge text="Fix navigate tree scan bug" type="danger"/>
+* <Badge text="fix some bug" type="danger"/>
 
 ::: tip Project-level global parameters support
 
@@ -209,12 +232,12 @@ Cookie is also like this
 :::
 
 ## v2022.1.7<Badge text="Charge" type="warn"/>
-* Kotlin spring framework support
-* Add SearchEveryWhere scope search strategy
-* Add toggleUseSoftWrap support in editor
-* Add support for add to Global Header from response
-* Optimize automatic binding projectName for saved api under multiple modules
-* Add support for navigating to the current method
+* <Badge text="Kotlin spring framework support" type="tip"/>
+* <Badge text="Add SearchEveryWhere scope search strategy" type="tip"/>
+* <Badge text="Add toggleUseSoftWrap support in editor" type="tip"/>
+* <Badge text="Add support for add to Global Header from response" type="tip"/>
+* <Badge text="Add support for navigating to the current method" type="tip"/>
+* <Badge text="Optimize automatic binding projectName for saved api under multiple modules" type="info"/>
 
 ::: tip Kotlin spring framework support
 ![kotlinSupport](../../.vuepress/public/img/kotlinSupport.png)
@@ -238,22 +261,21 @@ It is recommended to use in multi-module projects, because Add to Headers can on
 ![add2GlobalHeader](../../.vuepress/public/img/add2GlobalHeader.png)
 :::
 
-::: info Optimize automatic binding projectName for saved api under multiple modules
-Optimized the need to manually switch the project drop-down box for the saved api echo under the multi-module
-:::
-
 ::: note Add support for navigating to the current method
 After you generate the url of the method, sometimes you will switch to another place in the code, and then want to start debugging the API method, you can use this function to quickly locate the code
 
 ![navigate2CurrentMethod](../../.vuepress/public/img/navigate2CurrentMethod.png)
 :::
 
+::: info Optimize automatic binding projectName for saved api under multiple modules
+Optimized the need to manually switch the project drop-down box for the saved api echo under the multi-module
+:::
+
 ## v2022.1.6<Badge text="Charge" type="warn"/>
-* Add support for one click to add cookie to header
-* Add support for sharing API to Word and html
-* Fix bug for `Basic Authorization` don't carry Basic
-* Add YouTrack bug support
-* Removes the drag function in APIs tab
+* <Badge text="Add support for one click to add cookie to header" type="tip"/>
+* <Badge text="Add support for sharing API to Word and html" type="tip"/>
+* <Badge text="Fix bug for `Basic Authorization` don't carry Basic" type="danger"/>
+* <Badge text="Removes the drag function in APIs tab" type="dnager"/>
 
 ::: tip Add support for one click to add cookie to header
 
@@ -262,29 +284,21 @@ For those that require cookie support for login, you can quickly add the cookie 
 ![addCookie2Header](../../.vuepress/public/img/addCookie2Header.png)
 :::
 
-::: info Add support for sharing API to Word and html
+::: tip Add support for sharing API to Word and html
 
 Please note that the API in word form is implemented in html, so don't feel strange, just export it
 
 ![shareApi](../../.vuepress/public/img/shareApi_en.png)
 :::
 
-::: note Add YouTrack bug support
-
-Fast Request has enabled the automatic reporting bug to YouTrack. Just one click,No need to manually copy and paste it to Github to report bugs
-
-Fast Request YouTrack website: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
-
-![youtrackSubmit](../../.vuepress/public/img/youtrackSubmit.png)
-:::
 
 
 ## v2022.1.5 <Badge text="Charge" type="warn"/>
-* Remove text/html in Accept param in default header
-* Add support for automatically generating parameter descriptions
-* Add support for generate API documentation
-* Add support for single class API list preview
-* Fix some bugs
+* <Badge text="Add support for automatically generating parameter descriptions" type="tip"/>
+* <Badge text="Add support for generate API documentation" type="tip"/>
+* <Badge text="Add support for single class API list preview" type="tip"/>
+* <Badge text="Remove text/html in Accept param in default header" type="danger"/>
+* <Badge text="Fix some bugs" type="danger"/>
 
 ::: tip Add support for automatically generating parameter descriptions
 
@@ -293,7 +307,7 @@ You can hide or show description by toggle click
 ![paramDescription](../../.vuepress/public/img/paramDescription.png)
 :::
 
-::: info Add support for generate API documentation
+::: tip Add support for generate API documentation
 
 After generating parameters, you can generate a Markdown document directly by sharing
 
@@ -303,7 +317,7 @@ After generating parameters, you can generate a Markdown document directly by sh
 
 :::
 
-::: note Add support for single class API list preview
+::: tip Add support for single class API list preview
 
 After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
 
@@ -313,19 +327,19 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 
 ## v2022.1.4 <Badge text="Charge" type="warn"/>
 ==require idea 2021.3+==
-* SearchEveryWhere highlight optimization
-* Add support for import and export APIs
-* Add support for run APIs
-* Add timeout for api request
-* Compatible with idea 2022.1
-* Make it optional for automatically generate parameters
-* Swagger annotation default value parameter parsing support
-* Merged Send and Send and Download buttons
-* APIs user interface optimization
-* API Navigate rename to Navigate in tab
-* Optimize the user guide of features
-* Url generation optimization
-* Fix Light files should have PSI only in one project
+* <Badge text="SearchEveryWhere highlight optimization" type="info"/>
+* <Badge text="Add support for import and export APIs" type="tip"/>
+* <Badge text="Add support for run APIs" type="tip"/>
+* <Badge text="Add timeout for api request" type="tip"/>
+* <Badge text="Compatible with idea 2022.1" type="info"/>
+* <Badge text="Make it optional for automatically generate parameters" type="tip"/>
+* <Badge text="Swagger annotation default value parameter parsing support" type="tip"/>
+* <Badge text="Merged Send and Send and Download buttons" type="info"/>
+* <Badge text="APIs user interface optimization" type="info"/>
+* <Badge text="API Navigate rename to Navigate in tab" type="info"/>
+* <Badge text="Optimize the user guide of features" type="info"/>
+* <Badge text="Url generation optimization" type="info"/>
+* <Badge text="Fix Light files should have PSI only in one project" type="danger"/>
 
 ::: info SearchEveryWhere highlight optimization
 Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
@@ -340,14 +354,14 @@ Using this function, you can easily share your existing APIs with other develope
 More info **[Features->APIs import and export](./feature.md#apis-import-and-export)**
 :::
 
-::: warning Add support for run APIs
+::: tip Add support for run APIs
 You can run your saved requests directly in the APIs tab
 
 ![runInApiManagement](../../.vuepress/public/img/runInApiManagement.png)
 :::
 
 
-:::note Automatically generate parameter optionals
+:::info Automatically generate parameter optionals
 ![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
 :::
 
@@ -356,7 +370,7 @@ The buttons have been merged, because we usually use Send but not Send and Downl
 ![mergeRunAndDownload](../../.vuepress/public/img/mergeRunAndDownload.png)
 :::
 
-::: danger Swagger default value parsing support
+::: tip Swagger default value parsing support
 Added the parsing of the default value of swagger annotations, which is more user-friendly of input parameters
 * @ApiParam(swagger2)
 * @ApiImplicitParam(swagger2)
@@ -406,7 +420,7 @@ public class MultiUrlController {
 ```
 :::
 
-::: note API Navigate rename to Navigate in tab  
+::: info API Navigate rename to Navigate in tab  
 In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
 :::
 

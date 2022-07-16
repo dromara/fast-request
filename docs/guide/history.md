@@ -8,20 +8,39 @@ icon: changelog
 
 ==平台只能挂一个价格,国内用户请进群,一律6折,入正后无烦恼更新==
 
-==技术群二维码==在[*这里*](./concatGroup.md)
+==技术群二维码==在[*这里*](./concatGroup.md),不仅仅是RFR查件群,更是java技术群!
 
-Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
+Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会一一回应并==认真思考==大家提出的bug以及建议......
+
+---
+feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="修复/移除" type="danger"/>
+:::
+
+## v2022.2.2<Badge text="收费" type="warn"/><Badge text="开发中..." type="tip"/>
+* <Badge text="终止API请求功能" type="tip"/>
+* <Badge text="批量导出API文档" type="tip"/>
+* <Badge text="导出到Postman添加注释" type="tip"/>
+* <Badge text="某些场景下的体验和提示" type="info"/>
+* <Badge text="新UI及EAP下SearchEveryWhere报错" type="danger"/>
+* <Badge text="Multipart修改数字类型参数报错" type="danger"/>
+
+:::tip 终止API请求功能
+![stopApi](../.vuepress/public/img/2022.2.2/stopApi.gif)
+:::
+
+:::tip 批量导出API文档
+![batchExportApiDoc](../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
 :::
 
 ## v2022.2.1<Badge text="收费" type="warn"/><Badge text="最新版" type="tip"/>
-* API分组参数保存支持
-* 临时请求保存支持
-* cURL导入支持
-* Response Header展示
-* 添加对Url尾缀支持
-* 优化解析
-* 修复Word导出bug
-* 优化快捷键
+* <Badge text="API分组参数保存支持" type="tip"/>
+* <Badge text="临时请求保存支持" type="tip"/>
+* <Badge text="cURL导入支持" type="tip"/>
+* <Badge text="Response Header展示" type="tip"/>
+* <Badge text="添加对Url尾缀支持" type="tip"/>
+* <Badge text="优化快捷键" type="info"/>
+* <Badge text="优化解析" type="info"/>
+* <Badge text="修复Word导出bug" type="danger"/>
 
 ::: tip API分组参数保存支持
 目的:一个API下保存不同组合的参数
@@ -37,7 +56,7 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 ![apiParamGroup](../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
 :::
 
-::: info 临时请求保存支持
+::: tip 临时请求保存支持
 目的:保存任意不属于本项目的请求,用于临时调用,跟当前项目代码不关联
 
 临时请求保存的Request的Url必须以==http==或者==https==开头
@@ -55,13 +74,13 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 :::
 
 
-::: info Response Header展示
+::: tip Response Header展示
 
 ![responseHeader](../.vuepress/public/img/2022.2.1/responseHeader.png)
 
 :::
 
-::: info 添加对Url尾缀支持
+::: tip 添加对Url尾缀支持
 
 目的:有些请求需要在url结尾加上.do
 
@@ -69,22 +88,27 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 
 :::
 
-::: note 优化解析
+::: info 优化解析
 优化了`List<Entity>`的解析
 :::
 
 ## v2022.1.10<Badge text="收费" type="warn"/>
-* 添加对历史请求预览的支持
-* SearchEveryWhere支持方法注释搜索
-* 快捷键冲突优化
-* 超时时间自定义设置
-* 文本编辑器字符显示光标定位优化
-* Curl输出格式优化
-* 优化@Consumes(APPLICATION_JSON)不生效问题(JAX-RS)
+* <Badge text="添加对历史请求预览的支持" type="tip"/>
+* <Badge text="超时时间自定义设置" type="tip"/>
+* <Badge text="SearchEveryWhere支持方法注释搜索" type="info"/>
+* <Badge text="快捷键冲突优化" type="info"/>
+* <Badge text="文本编辑器字符显示光标定位优化" type="info"/>
+* <Badge text="Curl输出格式优化" type="info"/>
+* <Badge text="优化@Consumes(APPLICATION_JSON)不生效问题(JAX-RS)" type="info"/>
 
 ::: tip 添加对历史请求预览的支持
 隐藏技能:双击记录可以展示详情
 ![history](../.vuepress/public/img/history.png)
+:::
+
+::: tip 超时时间自定义设置
+默认: 60秒
+![timeoutSetting](../.vuepress/public/img/timeoutSetting.png)
 :::
 
 ::: info SearchEveryWhere支持方法注释搜索
@@ -93,41 +117,46 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 :::
 
 
-::: danger 超时时间自定义设置
-默认: 60秒
-![timeoutSetting](../.vuepress/public/img/timeoutSetting.png)
-:::
-
-
-::: note 优化
-* 快捷键冲突优化
-  * 将打开创建的三个快捷键统一加上了Shift
-* 文本编辑器字符显示光标定位优化
-  * 文本编辑器生成字符串的时候默认聚焦到第一行
+::: info 优化
+* <Badge text="快捷键冲突优化" type="info"/>
+  * <Badge text="将打开创建的三个快捷键统一加上了Shift" type="info"/>
+* <Badge text="文本编辑器字符显示光标定位优化" type="info"/>
+  * <Badge text="文本编辑器生成字符串的时候默认聚焦到第一行" type="info"/>
 :::
 
 
 ## v2022.1.9<Badge text="收费" type="warn"/>
-* 工具窗口跳转增加快捷键
-* 忽略字段解析优化
-* 泛型参数解析支持
-* 完善项目全局参数
-* 添加自动添加Cookie支持
-* 修复编辑参数时同时按删除参数导致报错
-* 界面优化
-* 保存API插入顺序优化
-* 响应raw中增加html预览
-* APIs列表视图优化
-* 优化了导出预览
+* <Badge text="工具窗口跳转增加快捷键" type="tip"/>
+* <Badge text="添加自动添加Cookie支持" type="tip"/>
+* <Badge text="响应raw中增加html预览" type="tip"/>
+* <Badge text="APIs列表视图优化" type="info"/>
+* <Badge text="忽略字段解析优化" type="info"/>
+* <Badge text="泛型参数解析支持" type="info"/>
+* <Badge text="完善项目全局参数" type="info"/>
+* <Badge text="修复编辑参数时同时按删除参数导致报错" type="info"/>
+* <Badge text="界面优化" type="info"/>
+* <Badge text="保存API插入顺序优化" type="info"/>
+* <Badge text="优化了导出预览" type="info"/>
 
 ::: tip 工具窗口跳转增加快捷键
 提供了快捷键可以快速跳转,可以在`setting->Keymap`中修改
 ![toolwindowShortcut](../.vuepress/public/img/toolwindowShortcut.png)
 :::
 
+::: tip 添加自动添加Cookie支持
+开启此配置,cookie再自动存入==项目全局参数==中的`cookies`中,此配置默认开启
+![autoStoreCookie](../.vuepress/public/img/autoStoreCookie.png)
+:::
+
+::: tip 响应raw中增加html预览
+raw中不再截断html返回类型的响应,同时可以对html进行预览
+
+![rawHtmlPreview](../.vuepress/public/img/rawHtmlPreview.png)
+:::
+
 ::: info 忽略字段解析优化
-* 忽略解析使用`@JsonIgnore`、`@JSONField(serialize = false)`注解的字段
-* 忽略解析`transient`关键字修饰的字段
+* <Badge text="忽略解析使用`@JsonIgnore`、`@JSONField(serialize = false)`注解的字段" type="info"/>
+* <Badge text="忽略解析`transient`关键字修饰的字段" type="info"/>
 :::
 
 ::: info 泛型参数解析支持
@@ -149,42 +178,33 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 ```
 :::
 
-::: danger 完善项目全局参数
+::: info 完善项目全局参数
 加入了`URL Params`、`URL-Encoded Params`、`Cookies`
 ![projectConfigParam](../.vuepress/public/img/projectGlobalParam.png)
 :::
 
 
-::: tip 添加自动添加Cookie支持
-开启此配置,cookie再自动存入==项目全局参数==中的`cookies`中,此配置默认开启
-![autoStoreCookie](../.vuepress/public/img/autoStoreCookie.png)
-:::
-
-::: note 优化
+::: info 优化
 * 界面优化
   * 优化了tab间距(windows下不正常)、背景颜色、个别突出的tab颜色等
 * 保存API插入顺序优化
   * 后保存的放在最上面
 :::
 
-::: info 响应raw中增加html预览
-raw中不再截断html返回类型的响应,同时可以对html进行预览
 
-![rawHtmlPreview](../.vuepress/public/img/rawHtmlPreview.png)
-:::
 
-::: tip APIs列表视图优化
+::: info APIs列表视图优化
 渲染进行了优化,新保存的api图标会自动优化,历史保存的api可以右键进行选择变更
 ![apisList](../.vuepress/public/img/apisList.png)
 :::
 
 ## v2022.1.8<Badge text="收费" type="warn"/>
-* 项目级别全局参数支持
-* 优化响应数据快速添加到头
-* 优化cookie快速添加到头
-* Postman导出优化
-* 修复navigate树扫描bug
-* 修复了一些bug
+* <Badge text="项目级别全局参数支持" type="tip"/>
+* <Badge text="优化响应数据快速添加到头" type="info"/>
+* <Badge text="优化cookie快速添加到头" type="info"/>
+* <Badge text="Postman导出优化" type="info"/>
+* <Badge text="修复navigate树扫描bug" type="info"/>
+* <Badge text="修复了一些bug" type="danger"/>
 
 ::: tip 项目级别全局参数支持
 支持项目级别内的全局参数,不受多模块影响
@@ -205,26 +225,27 @@ raw中不再截断html返回类型的响应,同时可以对html进行预览
 
 
 ## v2022.1.7<Badge text="收费" type="warn"/>
-* Kotlin spring系列框架支持
-* 新增SearchEveryWhere范围搜索策略
-* 编辑器ToggleUseSoftWrap支持
-* 响应数据一键添加Global Header支持
-* 优化多模块下保存的API回显自动绑定项目
-* 添加导航到当前方法的支持
+* <Badge text="Kotlin spring系列框架支持" type="tip"/>
+* <Badge text="新增SearchEveryWhere范围搜索策略" type="tip"/>
+* <Badge text="编辑器ToggleUseSoftWrap支持" type="tip"/>
+* <Badge text="响应数据一键添加Global Header支持" type="tip"/>
+* <Badge text="添加导航到当前方法的支持" type="tip"/>
+* <Badge text="优化多模块下保存的API回显自动绑定项目" type="info"/>
+
 
 ::: tip Kotlin spring系列框架支持
 添加了Kotlin语言下,Spring系列框架支持
 ![kotlinSupport](../.vuepress/public/img/kotlinSupport.png)
 :::
 
-::: info 新增SearchEveryWhere范围搜索策略
+::: tip 新增SearchEveryWhere范围搜索策略
 2022.1.7版本默认可以搜索到feign或者controller中的mapping
 
 默认搜索策略是根据注解来搜索的,再提供2种选项,如果在搜索过程中需要排除类似feign中的接口,可以通过去除Interface的勾选来处理.
 ![searchEveryWhereStrategy](../.vuepress/public/img/searchEveryWhereStrategy.png)
 :::
 
-::: note 编辑器ToggleUseSoftWrap支持
+::: tip 编辑器ToggleUseSoftWrap支持
 
 ![toggleUseSoftWrap](../.vuepress/public/img/toggleUseSoftWrap.png)
 :::
@@ -235,22 +256,21 @@ raw中不再截断html返回类型的响应,同时可以对html进行预览
 ![add2GlobalHeader](../.vuepress/public/img/add2GlobalHeader.png)
 :::
 
-::: info 优化多模块下保存的API回显自动绑定项目
-优化了**多模块**下下针对保存的api回显需要**手动切换项目下拉框**
-:::
-
-::: note 添加导航到当前方法的支持
+::: tip 添加导航到当前方法的支持
 当你生成好方法的url以后,又切换到代码中的别的地方,然后又想开始调试该API方法,可以通过此功能快速定位到代码
 
 ![navigate2CurrentMethod](../.vuepress/public/img/navigate2CurrentMethod.png)
 :::
 
+::: info 优化多模块下保存的API回显自动绑定项目
+优化了**多模块**下下针对保存的api回显需要**手动切换项目下拉框**
+:::
+
 ## v2022.1.6<Badge text="收费" type="warn"/>
-* 添加一键添加Cookie到Header的支持
-* 添加API分享Word和html的支持
-* 修复了Basic authorization没有携带Basic字符串
-* 添加YouTrack跟踪bug支持
-* 移除了APIs标签下的拉拽功能
+* <Badge text="添加一键添加Cookie到Header的支持" type="tip"/>
+* <Badge text="添加API分享Word和html的支持" type="tip"/>
+* <Badge text="修复了Basic authorization没有携带Basic字符串" type="danger"/>
+* <Badge text="移除了APIs标签下的拉拽功能" type="danger"/>
 
 ::: tip 添加一键添加Cookie到Header的支持
 
@@ -259,30 +279,32 @@ raw中不再截断html返回类型的响应,同时可以对html进行预览
 ![addCookie2Header](../.vuepress/public/img/addCookie2Header.png)
 :::
 
-::: info 添加API分享Word和html的支持
+::: tip 添加API分享Word和html的支持
 
 请注意word形式的API内部采用html来实现的,所以不要觉得奇怪,导出就行
 
 ![shareApi](../.vuepress/public/img/shareApi.png)
 :::
 
-::: note 添加YouTrack跟踪bug支持
+[comment]: <> (::: note 添加YouTrack跟踪bug支持)
 
-Fast Request接通了YouTrack Issue自动上报的功能,直接点击上报bug即可反馈问题,无需手动再复制粘贴到Github提报bug
+[comment]: <> (Fast Request接通了YouTrack Issue自动上报的功能,直接点击上报bug即可反馈问题,无需手动再复制粘贴到Github提报bug)
 
-Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)
+[comment]: <> (Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues]&#40;https://darkings.youtrack.cloud/issues&#41;)
 
-![youtrackSubmit](../.vuepress/public/img/youtrackSubmit.png)
-:::
+[comment]: <> (![youtrackSubmit]&#40;../.vuepress/public/img/youtrackSubmit.png&#41;)
+
+[comment]: <> (:::)
 
 
 
 ## v2022.1.5<Badge text="收费" type="warn"/>
-* 移除了Accept头上的text/html
-* 添加对自动生成参数描述的支持
-* 添加一键生成API文档的支持
-* 添加单个类的API整体预览
-* 修复了一些bug
+
+* <Badge text="添加对自动生成参数描述的支持" type="tip"/>
+* <Badge text="添加一键生成API文档的支持" type="tip"/>
+* <Badge text="添加单个类的API整体预览" type="tip"/>
+* <Badge text="移除了Accept头上的text/html" type="danger"/>
+* <Badge text="修复了一些bug" type="danger"/>
 
 ::: tip 添加对自动生成参数描述的支持
 
@@ -291,7 +313,7 @@ Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](http
 ![paramDescription](../.vuepress/public/img/paramDescription.png)
 :::
 
-::: info 添加一键生成API文档的支持
+::: tip 添加一键生成API文档的支持
 
 点击生成参数后,可通过分享直接生成Markdown文档
 
@@ -301,7 +323,7 @@ Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](http
 
 :::
 
-::: note 添加单个类的API整体预览
+::: tip 添加单个类的API整体预览
 
 聚焦窗口后输入关键字可快速定位
 
@@ -311,19 +333,20 @@ Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](http
 
 ## v2022.1.4 <Badge text="收费" type="warn"/>
 ==idea版本2021.3+==
-* SearchEveryWhere高亮优化
-* APIs导入导出支持
-* APIs支持直接运行
-* API请求增加超时设置
-* 兼容idea 2022.1
-* 自动生成参数可选化
-* swagger注解默认值参数解析支持
-* 对Send和Send and Download按钮进行了合并
-* APIs界面优化
-* Tab页API Navigate重命名Navigate
-* 使用引导上的细节优化
-* url生成优化之多url随机生成
-* 修复了Light files should have PSI only in one project
+
+* <Badge text="APIs导入导出支持" type="tip"/>
+* <Badge text="APIs支持直接运行" type="tip"/>
+* <Badge text="API请求增加超时设置" type="tip"/>
+* <Badge text="url生成优化之多url随机生成" type="tip"/>
+* <Badge text="自动生成参数可选化" type="tip"/>
+* <Badge text="swagger注解默认值参数解析支持" type="tip"/>
+* <Badge text="兼容idea 2022.1" type="info"/>
+* <Badge text="SearchEveryWhere高亮优化" type="info"/>
+* <Badge text="对Send和Send and Download按钮进行了合并" type="info"/>
+* <Badge text="APIs界面优化" type="info"/>
+* <Badge text="Tab页API Navigate重命名Navigate" type="info"/>
+* <Badge text="使用引导上的细节优化" type="info"/>
+* <Badge text="修复了Light files should have PSI only in one project" type="danger"/>
 
 ::: info SearchEveryWhere高亮优化
 高亮展示搜索关键字,加快真实想要查找的API的查找速度,同时展示api对应的javadoc
@@ -338,18 +361,18 @@ Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](http
 更多详情请看 **[功能->APIs导入导出](./feature.md#apis导入导出)**
 ::: 
 
-::: warning APIs支持直接运行
+::: tip APIs支持直接运行
 你可以在APIs tab页直接运行你保存的请求
 
 ![runInApiManagement](../.vuepress/public/img/runInApiManagement.png)
 :::
 
 
-:::note 自动生成参数可选化
+::: info 自动生成参数可选化
 ![generateSwitch](../.vuepress/public/img/generateSwitch.png)
 :::
 
-::: danger swagger注解默认值参数解析支持
+::: tip swagger注解默认值参数解析支持
 增加了swagger注解默认值的解析,该功能对于入参的传递更加人性化
 * @ApiParam(swagger2)
 * @ApiImplicitParam(swagger2)
@@ -367,7 +390,7 @@ Fast Request YouTrack官方网址: [https://darkings.youtrack.cloud/issues](http
 ![mergeRunAndDownload](../.vuepress/public/img/mergeRunAndDownload.png)
 :::
 
-::: tip 使用引导上的细节优化
+::: info 使用引导上的细节优化
 我们在不同的操作窗口,增加?选项用来展示一些注意事项及操作指引,对于初次使用的用户,操作门槛更低
 
 并且随着版本的迭代,后续可能会加入更多的提示操作指引
@@ -408,7 +431,7 @@ public class MultiUrlController {
 ```
 :::
 
-::: note Tab页API Navigate重命名Navigate  
+::: info Tab页API Navigate重命名Navigate  
 在工具窗口比较小的情况下,API Navigate会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
 :::
 
@@ -510,7 +533,7 @@ post /save        (指定post方式指定url)
 ![searchEveryWhere](../.vuepress/public/img/searchEveryWhere.gif)
 :::
 
-:::tip 最新版本快速查看
+:::info 最新版本快速查看
 ![whatsnewNotifcation](../.vuepress/public/img/whatsnewNotifcation.png)
 :::
 
