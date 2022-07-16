@@ -63,6 +63,9 @@ Purpose: Save parameters of different combinations under one API
 
 ==The original save operation will be classified into the Default group by default==
 
+How to:After entering the parameters, click ==Save group param request==
+
+
 ![groupSave](../../.vuepress/public/img/2022.2.1/groupSave_en.png)
 
 **Toggle parameter**
