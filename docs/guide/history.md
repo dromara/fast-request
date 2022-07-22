@@ -20,9 +20,11 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="终止API请求功能" type="tip"/>
 * <Badge text="批量导出API文档" type="tip"/>
 * <Badge text="导出到Postman添加注释" type="tip"/>
+* <Badge text="响应数据量巨大情况下卡顿优化" type="info"/>
 * <Badge text="某些场景下的体验和提示" type="info"/>
 * <Badge text="新UI及EAP下SearchEveryWhere报错" type="danger"/>
 * <Badge text="Multipart修改数字类型参数报错" type="danger"/>
+* <Badge text="某些情况下历史请求删除操作报错" type="danger"/>
 
 :::tip 终止API请求功能
 ![stopApi](../.vuepress/public/img/2022.2.2/stopApi.gif)

@@ -16,7 +16,6 @@ op4=>operation: 选择环境名
 op5=>inputoutput: 点击方法左侧火箭🚀
 op6=>operation: 点击发送按钮
 e=>end: 结束|future
-![img.png](img.png)
 st(bottom)->cfg(path1,right)->op1(bottom)->op20->op21(path1,right)->op3->op5
 st(bottom)->cfg(path2,left)->op2(bottom)->op20->op21(path2,bottom)->op4->op5
 op5->op6->e

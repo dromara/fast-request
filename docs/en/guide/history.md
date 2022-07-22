@@ -20,9 +20,11 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 * <Badge text="Add stop API request function" type="tip"/>
 * <Badge text="Batch export API doc" type="tip"/>
 * <Badge text="Add annotations when export to Postman" type="tip"/>
+* <Badge text="Editor hangs in case of a large amount of response data" type="info"/>
 * <Badge text="The experience and tips in some scenarios" type="info"/>
 * <Badge text="SearchEveryWhere err in EAP/New ui version" type="danger"/>
 * <Badge text="Error when modify number param in Multipart" type="danger"/>
+* <Badge text="History request delete operation error in some cases" type="danger"/>
 
 :::tip Add stop API request function
 ![stopApi](../../.vuepress/public/img/2022.2.2/stopApi.gif)
@@ -211,7 +213,7 @@ The rendering of the APIs interface has been optimized,Newly saved api icons are
 * <Badge text="Optimized cookies quickly added to the header" type="info"/>
 * <Badge text="Postman export optimization" type="info"/>
 * <Badge text="Fix navigate tree scan bug" type="danger"/>
-* <Badge text="fix some bug" type="danger"/>
+* <Badge text="Fix some bug" type="danger"/>
 
 ::: tip Project-level global parameters support
 
@@ -277,7 +279,7 @@ Optimized the need to manually switch the project drop-down box for the saved ap
 * <Badge text="Add support for one click to add cookie to header" type="tip"/>
 * <Badge text="Add support for sharing API to Word and html" type="tip"/>
 * <Badge text="Fix bug for `Basic Authorization` don't carry Basic" type="danger"/>
-* <Badge text="Removes the drag function in APIs tab" type="dnager"/>
+* <Badge text="Removes the drag function in APIs tab" type="danger"/>
 
 ::: tip Add support for one click to add cookie to header
 
