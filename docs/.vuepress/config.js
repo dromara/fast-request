@@ -141,7 +141,7 @@ module.exports = defineHopeConfig({
                           icon: "tools"
                       },
                       {
-                          text: 'Contact Group',
+                          text: 'History change',
                           link: '/en/guide/history',
                           icon: "changelog"
                       }
