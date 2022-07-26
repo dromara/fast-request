@@ -16,7 +16,7 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="Fix or Remove function" type="danger"/>
 :::
 
-## v2022.2.2<Badge text="Charge" type="warn"/><Badge text="Developing..." type="tip"/>
+## v2022.2.2<Badge text="Charge" type="warn"/><Badge text="Newest version" type="tip"/>
 * <Badge text="Add stop API request function" type="tip"/>
 * <Badge text="Batch export API doc" type="tip"/>
 * <Badge text="Add annotations when export to Postman" type="tip"/>
@@ -36,7 +36,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 
 
 
-## v2022.2.1<Badge text="Charge" type="warn"/><Badge text="Newest version" type="tip"/>
+## v2022.2.1<Badge text="Charge" type="warn"/>
 * <Badge text="API grouping parameter save support" type="tip"/>
 * <Badge text="Temporary request save support" type="tip"/>
 * <Badge text="Add support for cURL import" type="tip"/>

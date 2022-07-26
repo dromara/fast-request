@@ -19,7 +19,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 
 [More detail ---------------->](./history.md)
 
-## v2022.2.2<Badge text="Charge" type="warn"/><Badge text="Developing..." type="tip"/>
+## v2022.2.2<Badge text="Charge" type="warn"/>
 * <Badge text="Add stop API request function" type="tip"/>
 * <Badge text="Batch export API doc" type="tip"/>
 * <Badge text="Add annotations when export to Postman" type="tip"/>

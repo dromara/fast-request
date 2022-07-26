@@ -19,7 +19,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**查看变更详情----------------->**](./history.md)
 
-# v2022.2.2<Badge text="收费" type="warn"/><Badge text="开发中..." type="tip"/>
+# v2022.2.2<Badge text="收费" type="warn"/>
 * <Badge text="终止API请求功能" type="tip"/>
 * <Badge text="批量导出API文档" type="tip"/>
 * <Badge text="导出到Postman添加注释" type="tip"/>
