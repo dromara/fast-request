@@ -4,7 +4,7 @@ icon: buy
 ---
 <Badge text="❤️感谢您支持原创,支持正版️❤️" type="tip" vertical="middle"/>
 <br/><br/>
-<Badge text="加入微信群购买享6折️" type="danger" vertical="middle"/>
+<Badge text="加入微信群购买享6折️,六折码已放群公告" type="danger" vertical="middle"/>
 
 **购买分为2种方式**
 * 账号模式: 注册[jetbrains账号](https://account.jetbrains.com/licenses)购买(推荐)
