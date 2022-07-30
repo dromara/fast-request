@@ -16,7 +16,7 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="Fix or Remove function" type="danger"/>
 :::
 
-## v2022.2.2 <Badge text="Charge" type="tip"/><Badge text="Developing..." type="info"/>
+## v2022.2.3 <Badge text="Charge" type="tip"/><Badge text="Developing..." type="info"/>
 * <Badge text="Pre-request Script" type="tip"/>
 * <Badge text="Post-request Script" type="tip"/>
 * <Badge text="RequestParam defaultValue parse" type="info"/>
