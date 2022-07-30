@@ -4,7 +4,9 @@ icon: faq
 ---
 
 [[toc]]
- 
+
+## Q: After entering the parameters, the API call found that the parameters were invalid
+**A:** Plugin version less than ==2022.2.3==, when editing a value in the table , you need to ==click in the blank space== after editing the value, and then send the request, the bug is fixed in the 2022.2.3+ version
 
 ## Q: Why the plugin doesn't respond
 **A:** Please configure the relevant configuration according to the steps introduced in the first chapter first, and then click the icon.  

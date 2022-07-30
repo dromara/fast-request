@@ -16,6 +16,24 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="Fix or Remove function" type="danger"/>
 :::
 
+## v2022.2.2 <Badge text="Charge" type="tip"/><Badge text="Developing..." type="info"/>
+* <Badge text="Pre-request Script" type="tip"/>
+* <Badge text="Post-request Script" type="tip"/>
+* <Badge text="RequestParam defaultValue parse" type="info"/>
+* <Badge text="Apply table cell value change when click send request" type="info"/>
+
+:::tip Script support
+Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
+Please refer to [Script](./script.md)
+:::
+
+::: info Apply table cell value change when click send request
+Before ==2022.2.3==, when entering the parameters in the table, if the cursor is still inside the table, click the action button at this time, and in some scenarios, an error will be reported or the value cannot be modified, and the problem is solved in this version.
+
+How the old version deals with it: [FAQ:After entering the parameters, the API call found that the parameters were invalid](./faq.md)
+:::
+
+
 ## v2022.2.2<Badge text="Charge" type="warn"/><Badge text="Newest version" type="tip"/>
 * <Badge text="Add stop API request function" type="tip"/>
 * <Badge text="Batch export API doc" type="tip"/>

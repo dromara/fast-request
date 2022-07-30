@@ -19,7 +19,7 @@ features:
   link: /guide/getstarted/start.html
 - title: 功能丰富
   icon: features
-  details: 一键生成url和参数、api导出到postman、SearchEveryWhere搜索、发送API请求、下载文件、存储历史请求,各种功能一应俱全
+  details: 一键生成url和参数、脚本、api导出到postman、SearchEveryWhere搜索、发送API请求、下载文件、存储历史请求,各种功能一应俱全
   link: /guide/feature.html
 - title: 轻量、界面友好
   icon: code-box-fill
@@ -48,6 +48,7 @@ head:
 ### 功能  :100:
 
 * [x] Postman一样的操作界面
+* [x] Groovy前后置脚本支持
 * [x] 一键生成url和参数
 * [x] SearchEveryWhere支持
 * [x] API导出到Postman

@@ -67,7 +67,7 @@ module.exports = defineHopeConfig({
         ],
     ],
     markdown: {
-        lineNumbers: true
+        lineNumbers: true,
     },
     locales: {
         // 键名是该语言所属的子路径
@@ -141,6 +141,11 @@ module.exports = defineHopeConfig({
                           icon: "tools"
                       },
                       {
+                          text: 'Script',
+                          link: '/guide/script',
+                          icon: "code-box-fill"
+                      },
+                      {
                           text: 'History changes',
                           link: '/en/guide/history',
                           icon: "changelog"
@@ -165,6 +170,7 @@ module.exports = defineHopeConfig({
                         },
                         "install",
                         "feature",
+                        "script",
                         "whatsnew",
                         "history",
                         "buy",
@@ -192,6 +198,11 @@ module.exports = defineHopeConfig({
                         link: '/guide/feature',
                         icon: "tools"
                     },
+                     {
+                         text: '脚本',
+                         link: '/guide/script',
+                         icon: "code-box-fill"
+                     },
                     {
                         text: '历史变更',
                         link: '/guide/history',
@@ -227,6 +238,7 @@ module.exports = defineHopeConfig({
                         },
                         "install",
                         "feature",
+                        "script",
                         "whatsnew",
                         "history",
                         "buy",

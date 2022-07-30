@@ -16,6 +16,23 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="修复/移除" type="danger"/>
 :::
 
+## v2022.2.3 <Badge text="收费" type="tip"/><Badge text="开发中..." type="info"/>
+* <Badge text="前置脚本" type="tip"/>
+* <Badge text="后置脚本" type="tip"/>
+* <Badge text="RequestParam defaultValue属性解析" type="info"/>
+* <Badge text="点击按钮时触发表格单元格值更改" type="info"/>
+
+:::tip 脚本支持
+脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理  
+具体请参考-------> [脚本](./script.md)
+:::
+
+::: info 点击按钮时触发表格单元格值更改
+==2022.2.3版本之前==在输入表格中的参数时候,若光标还在表格内部,此时去点击操作按钮,某些场景下会报错或者值无法被修改,该问题在此版本得到解决
+
+老版本如何处理: [FAQ:输入参数后调用API发现无效](./faq.md)
+:::
+
 ## v2022.2.2<Badge text="收费" type="warn"/><Badge text="最新版" type="tip"/>
 * <Badge text="终止API请求功能" type="tip"/>
 * <Badge text="批量导出API文档" type="tip"/>

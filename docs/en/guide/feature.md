@@ -24,6 +24,10 @@ post /save        (search by post method and url)
 
 ![example_download](../../.vuepress/public/img/downloadFile.gif)
 
+## Script
+Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
+Please refer to [Script](./script.md)
+
 ## APIs export to Postman<Badge text="2.1.2" type="error"/>
 ![export2postman](../../.vuepress/public/img/export2postman.gif)
 

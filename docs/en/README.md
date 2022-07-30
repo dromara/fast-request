@@ -19,7 +19,7 @@ features:
     link: /en/guide/getstarted/start.html
   - title: Rich features
     icon: features
-    details: Generate url and parameters、API export to postman、SearchEveryWhere support、send/download request、Store request...
+    details: Generate url and parameters、Script support、API export to postman、SearchEveryWhere support、send/download request、Store request...
     link: /en/guide/feature.html
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
@@ -47,6 +47,7 @@ head:
 ### Features :100:
 
 * [x] Postman-like user interface
+* [x] Groovy pre/post script support
 * [x] Generate url and parameters in one click
 * [x] SearchEveryWhere support
 * [x] APIs export to Postman
