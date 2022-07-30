@@ -22,6 +22,8 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 ## v2022.2.3 <Badge text="Charge" type="tip"/><Badge text="Developing..." type="info"/>
 * <Badge text="Pre-request Script" type="tip"/>
 * <Badge text="Post-request Script" type="tip"/>
+* <Badge text="One-click copy Url" type="tip"/>
+* <Badge text="Compatible with IDEA 2021.2.1" type="info"/>  
 * <Badge text="RequestParam defaultValue parse" type="info"/>
 * <Badge text="Apply table cell value change when click send request" type="info"/>
 

@@ -22,6 +22,8 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## v2022.2.3 <Badge text="收费" type="tip"/><Badge text="开发中..." type="info"/>
 * <Badge text="前置脚本" type="tip"/>
 * <Badge text="后置脚本" type="tip"/>
+* <Badge text="一键拷贝Url" type="tip"/>  
+* <Badge text="兼容IDEA2021.2.1+" type="info"/>
 * <Badge text="RequestParam defaultValue属性解析" type="info"/>
 * <Badge text="点击按钮时触发表格单元格值更改" type="info"/>
 

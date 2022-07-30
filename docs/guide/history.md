@@ -19,12 +19,22 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## v2022.2.3 <Badge text="收费" type="tip"/><Badge text="开发中..." type="info"/>
 * <Badge text="前置脚本" type="tip"/>
 * <Badge text="后置脚本" type="tip"/>
+* <Badge text="一键拷贝Url" type="tip"/>
+* <Badge text="兼容IDEA2021.2.1+" type="info"/>
 * <Badge text="RequestParam defaultValue属性解析" type="info"/>
 * <Badge text="点击按钮时触发表格单元格值更改" type="info"/>
 
 :::tip 脚本支持
 脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理  
 具体请参考-------> [脚本](./script.md)
+
+![scriptProject](../.vuepress/public/img/2022.2.3/scriptProject.png)
+
+![scriptModule](../.vuepress/public/img/2022.2.3/scriptModule.png)
+:::
+
+:::tip 一键拷贝Url
+![copyUrl](../.vuepress/public/img/2022.2.3/copyUrl.png)
 :::
 
 ::: info 点击按钮时触发表格单元格值更改

@@ -19,12 +19,22 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 ## v2022.2.3 <Badge text="Charge" type="tip"/><Badge text="Developing..." type="info"/>
 * <Badge text="Pre-request Script" type="tip"/>
 * <Badge text="Post-request Script" type="tip"/>
+* <Badge text="One-click copy Url" type="tip"/>
+* <Badge text="Compatible with IDEA 2021.2.1" type="info"/>  
 * <Badge text="RequestParam defaultValue parse" type="info"/>
 * <Badge text="Apply table cell value change when click send request" type="info"/>
 
 :::tip Script support
 Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
 Please refer to [Script](./script.md)
+
+![scriptProject](../../.vuepress/public/img/2022.2.3/scriptProject_en.png)
+
+![scriptModule](../../.vuepress/public/img/2022.2.3/scriptModule_en.png)
+:::
+
+:::tip One-click copy Url
+![copyUrl](../../.vuepress/public/img/2022.2.3/copyUrl.png)
 :::
 
 ::: info Apply table cell value change when click send request
