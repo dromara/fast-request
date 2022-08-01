@@ -1,0 +1,1 @@
+const e={key:"v-0c785bc4",path:"/en/guide/install.html",title:"Install",lang:"en-US",frontmatter:{icon:"install-fill",title:"Install"},excerpt:"",headers:[],git:{createdTime:1638169323e3,updatedTime:1644386537e3,contributors:[{name:"kings",email:"963987632@qq.com",commits:2}]},readingTime:{minutes:.11,words:34},filePathRelative:"en/guide/install.md"};export{e as data};

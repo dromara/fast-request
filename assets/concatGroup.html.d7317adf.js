@@ -1,0 +1,1 @@
+const t={key:"v-5f2aecda",path:"/guide/concatGroup.html",title:"\u7FA4\u804A",lang:"zh-CN",frontmatter:{icon:"contactGroup",title:"\u7FA4\u804A"},excerpt:"",headers:[],git:{createdTime:1651982825e3,updatedTime:1658925794e3,contributors:[{name:"kings",email:"963987632@qq.com",commits:6}]},readingTime:{minutes:.3,words:91},filePathRelative:"guide/concatGroup.md"};export{t as data};
