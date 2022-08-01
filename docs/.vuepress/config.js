@@ -158,7 +158,7 @@ module.exports = defineHopeConfig({
                             text: "Getting started",
                             icon: "leibie",
                             prefix: "getstarted/",
-                            collapsable: false,
+                            collapsable: true,
                             children: [
                               "start",
                               "projectEnv",
@@ -166,6 +166,7 @@ module.exports = defineHopeConfig({
                               "stringGenerationStrategy",
                               "icon",
                               "otherConfig",
+                              "shortcut"
                             ],
                         },
                         "install",
@@ -226,7 +227,7 @@ module.exports = defineHopeConfig({
                             text: "快速上手",
                             icon: "leibie",
                             prefix: "getstarted/",
-                            collapsable: false,
+                            collapsable: true,
                             children: [
                               "start",
                               "projectEnv",
@@ -234,6 +235,7 @@ module.exports = defineHopeConfig({
                               "stringGenerationStrategy",
                               "icon",
                               "otherConfig",
+                              "shortcut"
                             ],
                         },
                         "install",

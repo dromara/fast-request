@@ -155,7 +155,7 @@ Make sure your IDEA version >= 2020.3+
 Plugin version| IDEA version requirements
 ------------- | -------------
 2.0.0~2.1.3   | 2020.3+
-2022.1.4+     | 2021.3+
+2022.1.4+     | 2021.2+
 
 Of course, if there are any updates to the plugin, please make sure to update it to the latest version
 :::

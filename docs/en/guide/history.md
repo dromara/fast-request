@@ -358,7 +358,7 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 
 
 ## v2022.1.4 <Badge text="Charge" type="warn"/>
-==require idea 2021.3+==
+==require idea 2021.2+==
 * <Badge text="SearchEveryWhere highlight optimization" type="info"/>
 * <Badge text="Add support for import and export APIs" type="tip"/>
 * <Badge text="Add support for run APIs" type="tip"/>

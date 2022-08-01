@@ -41,6 +41,7 @@ gradle-app.setting
 
 .idea
 PluginInfoUtil.java
+CouponUtil.java
 
 node_modules/
 dist
