@@ -23,6 +23,8 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="兼容IDEA2021.2.1+" type="info"/>
 * <Badge text="RequestParam defaultValue属性解析" type="info"/>
 * <Badge text="点击按钮时触发表格单元格值更改" type="info"/>
+* <Badge text="关闭RFR工具窗口后点击火箭第一次url无法生成" type="danger"/>
+* <Badge text="Jax-rs PATCH支持" type="danger"/>
 
 :::tip 脚本支持
 脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理  

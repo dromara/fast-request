@@ -23,6 +23,8 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 * <Badge text="Compatible with IDEA 2021.2.1" type="info"/>  
 * <Badge text="RequestParam defaultValue parse" type="info"/>
 * <Badge text="Apply table cell value change when click send request" type="info"/>
+* <Badge text="Url can not generate after close tool window and reopen" type="danger"/>
+* <Badge text="Jax-rs PATCH not supported" type="danger"/>
 
 :::tip Script support
 Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
