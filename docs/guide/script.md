@@ -3,8 +3,6 @@ title: 脚本
 icon: code-box-fill
 headerDepth: 4
 ---
-<Badge text="开发中,暂未开放,预计2022.2.3版本开放此功能️,内容可能会有所变动" type="tip"/>
-
 
 **脚本的作用**: 开发者可以利用Groovy脚本来自定义一些逻辑,从而使得api更加灵活,例如对参数进行动态加密签名,放入header,而不是直接写死
 

@@ -3,9 +3,6 @@ title: Script
 icon: code-box-fill
 ---
 
-<Badge text="Under development, not yet open, this function is expected to be opened in 2022.2.3 version, content may change️" type="tip"/>
-
-
 **Function**: Developers can use Groovy scripts to customize some logic, which makes the API more flexible, such as dynamically encrypting and signing parameters and putting them in the header rather than directly write dead
 
 **Language**: [Groovy](https://groovy-lang.org/)       

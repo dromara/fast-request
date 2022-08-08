@@ -19,7 +19,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 
 [More detail ---------------->](./history.md)
 
-## v2022.2.3 <Badge text="Charge" type="tip"/><Badge text="Developing..." type="info"/>
+## v2022.2.3 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
 * <Badge text="Pre-request Script" type="tip"/>
 * <Badge text="Post-request Script" type="tip"/>
 * <Badge text="One-click copy Url" type="tip"/>
@@ -30,7 +30,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 * <Badge text="Jax-rs PATCH not supported" type="danger"/>
 
 
-## v2022.2.2 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
+## v2022.2.2 <Badge text="Charge" type="tip"/>
 * <Badge text="Add stop API request function" type="tip"/>
 * <Badge text="Batch export API doc" type="tip"/>
 * <Badge text="Add annotations when export to Postman" type="tip"/>
