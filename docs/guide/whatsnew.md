@@ -18,6 +18,8 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 [**查看变更详情----------------->**](./history.md)
+## v2022.2.3.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
+* <Badge text="修复参数无法清除的bug" type="danger"/>
 
 ## v2022.2.3 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 * <Badge text="前置脚本" type="tip"/>

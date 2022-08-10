@@ -16,7 +16,10 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="修复/移除" type="danger"/>
 :::
 
-## v2022.2.3 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
+## v2022.2.3.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
+* <Badge text="修复参数无法清除的bug" type="danger"/>
+
+## v2022.2.3 <Badge text="收费" type="tip"/>
 * <Badge text="前置脚本" type="tip"/>
 * <Badge text="后置脚本" type="tip"/>
 * <Badge text="一键拷贝Url" type="tip"/>
