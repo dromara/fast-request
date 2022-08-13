@@ -18,8 +18,15 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 :::
 
 [More detail ---------------->](./history.md)
-## v2022.2.3.1 <Badge text="收费" type="tip"/><Badge text="Newest version" type="tip"/>
-* <Badge text="Fix the bug that the parameter cannot be cleared" type="danger"/>
+## v2022.2.4 <Badge text="Charge" type="tip"/><Badge text="Deveoping" type="tip"/>
+* <Badge text="Support parse date by DateTimeFormat annotation pattern" type="tip"/>
+* <Badge text="Support parse url of BaseController" type="tip"/>
+* <Badge text="Change auto update configurable" type="info"/>
+* <Badge text="Parameter encoding" type="info"/>
+
+
+## v2022.2.3.1 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
+* <Badge text="Parameter cannot be cleared" type="danger"/>
 
 ## v2022.2.3 <Badge text="Charge" type="tip"/>
 * <Badge text="Pre-request Script" type="tip"/>
