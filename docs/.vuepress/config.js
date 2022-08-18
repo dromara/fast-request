@@ -105,15 +105,14 @@ module.exports = defineHopeConfig({
         displayFooter: true,
         copyright: "Copyright © 2021-present Kings",
         themeColor: {
+              green: "#21D789",
               blue: "#087CFA",
               red: "#FE2857",
-              green: "#21D789",
-              orange: "#FC801D",
-              pink :"#FF318C",
+              pink :"#f26d6d",
               lightBlue:"#07C3F2"
         },
         iconPrefix:'iconfont icon-',
-        logo:'/img/fastRequest.svg',
+        logo:'/img/logo.gif',
         lastUpdated: 'Last Updated',
       // 以下为可选的编辑链接选项
       // 假如你的文档仓库和项目本身不在一个仓库：

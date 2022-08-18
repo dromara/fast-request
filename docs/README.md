@@ -1,7 +1,8 @@
 ---
 home: true
 title: 主页
-heroImage: /img/fastRequest.svg
+heroImage: /img/logo.gif
+heroImageDark: /img/logoDark.gif
 heroText: Restful Fast Request
 tagline: 为简化调试API而生
 actions:
@@ -35,15 +36,22 @@ head:
 
 ---
 
-<a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
-<a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
+<div style="height:130px"></div>
 
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
-![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
+![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) 
 
-<iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
+![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
+
+
+<div >
+  <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
+  <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
+</div>
+
+<div style="height:30px"></div>
 
 ### 功能  :100:
 
@@ -78,6 +86,7 @@ head:
 * [x] url尾缀支持
 * [x] ......
 
+<div style="height:100px"></div>
 
 ::: chart Fast Request功能玫瑰图
 
@@ -106,6 +115,8 @@ head:
 
 :::
 ------
+
+<div style="height:100px"></div>
 
 ::: chart API工具对比
 
@@ -151,6 +162,7 @@ head:
 
 :::
 
+<div style="height:50px"></div>
 
 ::: tip 注意  
 请确保你的 IDEA版本 版本 >= 2020.3+
@@ -163,91 +175,74 @@ head:
 当然请如果插件有更新，请确保更新成最新版本
 :::
 
+<div style="height:50px"></div>
 
-[comment]: <> (## 🧲 友情链接)
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://hertzbeat.com/" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/hertzbeat.svg'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://gitee.com/dromara/easy-es" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/easy-es.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://gitee.com/dromara/TLog" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/tlog-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://liteflow.yomahub.com/" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/lite-flow.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://gitee.com/dromara/sa-token" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/sa-token.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
-
-
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://gitee.com/dromara/hutool" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/hutool-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://gitee.com/dromara/forest" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/forest-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
-
-
-[comment]: <> (<span style="width:16%;  padding:15px 15px 15px 15px;display:inline-block">)
-
-[comment]: <> (    <a href="https://jpom-docs.keepbx.cn/" target="_blank">)
-
-[comment]: <> (        <img :src="$withBase&#40;'/img/link/jpom-logo.png'&#41;" class="no-zoom" style="height:40px;max-width:150px;margin: 10px;">)
-
-[comment]: <> (    </a>)
-
-[comment]: <> (</span>)
+## 🧲 Dromara 成员项目
+<div>
+    <a href="https://hutool.cn/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/hutool-logo.png')" title="🍬小而全的Java工具类库，使Java拥有函数式语言般的优雅，让Java语言也可以“甜甜的”。">
+    </a>
+    <a href="https://sa-token.dev33.cn/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/sa-token.png')" title="一个轻量级 java 权限认证框架，让鉴权变得简单、优雅！">
+    </a>
+    <a href="https://gitee.com/dromara/liteFlow" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/lite-flow.png')" title="轻量，快速，稳定，可编排的组件式流程引擎">
+    </a>
+    <a href="https://hertzbeat.com/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/hertzbeat-logo.png')" title="易用友好的云监控系统">
+    </a>
+    <a href="http://forest.dtflyx.com/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/forest-logo.png')" title="Forest能够帮助您使用更简单的方式编写Java的HTTP客户端" nf>
+    </a>
+    <a href="https://easy-es.cn/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/easy-es.png')" title="🚀傻瓜级ElasticSearch搜索引擎ORM框架">
+    </a>
+    <a href="https://gitee.com/dromara/northstar" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/northstar-logo.png')" title="Northstar盈富量化交易平台">
+    </a>
+    <a href="https://gitee.com/dromara/TLog" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/tlog-logo.png')" title="一个轻量级的分布式日志标记追踪神器，10分钟即可接入，自动对日志打标签完成微服务的链路追踪">
+    </a>
+    <a href="https://gitee.com/dromara/hmily" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/hmily-logo.png')" title="高性能一站式分布式事务解决方案。">
+    </a>
+    <a href="https://gitee.com/dromara/Raincat" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/raincat-logo.png')" title="强一致性分布式事务解决方案。">
+    </a>
+    <a href="https://gitee.com/dromara/myth" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/myth-logo.png')" title="可靠消息分布式事务解决方案。">
+    </a>
+    <a href="https://cubic.jiagoujishu.com/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/cubic-logo.png')" title="一站式问题定位平台，以agent的方式无侵入接入应用，完整集成arthas功能模块，致力于应用级监控，帮助开发人员快速定位问题">
+    </a>
+    <a href="https://jpom.io/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/jpom-logo.png')" title="一款简而轻的低侵入式在线构建、自动部署、日常运维、项目监控软件">
+    </a>
+    <a href="https://su.usthe.com/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/sureness-logo.png')" title="面向 REST API 的高性能认证鉴权框架">
+    </a>
+    <a href="https://www.jeesuite.com/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/mendmix-logo.png')" title="开源分布式云原生架构一站式解决方案">
+    </a>
+    <a href="https://gitee.com/dromara/koalas-rpc" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/koalas-logo.png')" title="企业生产级百亿日PV高可用可拓展的RPC框架。">
+    </a>
+    <a href="https://dynamictp.cn/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/dynamictp-logo.png')" title="🔥🔥🔥 基于配置中心的轻量级动态可监控线程池">
+    </a>
+    <a href="https://www.x-easypdf.cn" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/easypdf.png')" title="一个用搭积木的方式构建pdf的框架（基于pdfbox）">
+    </a>
+    <a href="https://www.herodotus.cn/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/dante-cloud2.png')" title="Dante-Cloud 是一款企业级微服务架构和服务能力开发平台。">
+    </a>
+    <a href="https://maxkey.top/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/maxkey-logo.png')" title="业界领先的身份管理和认证产品">
+    </a>
+    <a href="https://async.sizegang.cn/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/gobrs-async.png')" title="🔥 配置极简功能强大的异步任务动态编排框架">
+    </a>
+</div>
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 

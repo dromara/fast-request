@@ -20,10 +20,12 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 [**查看变更详情----------------->**](./history.md)
 
 ## v2022.2.4 <Badge text="收费" type="tip"/><Badge text="开发中" type="tip"/>
+* <Badge text="全新的Logo" type="tip"/>
 * <Badge text="支持通过DateTimeFormat注释解析日期" type="tip"/>
 * <Badge text="支持解析BaseController" type="tip"/>
 * <Badge text="自动更新可配置化" type="info"/>
 * <Badge text="参数编码传参优化" type="info"/>
+* <Badge text="Map不带泛型解析错误" type="danger"/>
 
 ## v2022.2.3.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 * <Badge text="修复参数无法清除的bug" type="danger"/>
