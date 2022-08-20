@@ -18,7 +18,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ## v2022.2.4 <Badge text="收费" type="tip"/><Badge text="开发中" type="tip"/>
 * <Badge text="全新的Logo" type="tip"/>
-* <Badge text="支持通过DateTimeFormat注释解析日期" type="tip"/>
+* <Badge text="支持通过注释解析日期" type="tip"/>
 * <Badge text="支持解析BaseController" type="tip"/>
 * <Badge text="自动更新可配置化" type="info"/>
 * <Badge text="参数编码传参优化" type="info"/>

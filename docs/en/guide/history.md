@@ -21,7 +21,7 @@ Because developing version is still in development, the documentation of develop
 
 ## v2022.2.4 <Badge text="Charge" type="tip"/><Badge text="Developing" type="tip"/>
 * <Badge text="New logo" type="tip"/>
-* <Badge text="Support parse date by DateTimeFormat annotation pattern" type="tip"/>
+* <Badge text="Support parse date by annotation's pattern" type="tip"/>
 * <Badge text="Support parse url of BaseController" type="tip"/>
 * <Badge text="Change auto update configurable" type="info"/>
 * <Badge text="Parameter encoding" type="info"/>

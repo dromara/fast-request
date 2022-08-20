@@ -20,7 +20,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 [More detail ---------------->](./history.md)
 ## v2022.2.4 <Badge text="Charge" type="tip"/><Badge text="Deveoping" type="tip"/>
 * <Badge text="New logo" type="tip"/>
-* <Badge text="Support parse date by DateTimeFormat annotation pattern" type="tip"/>
+* <Badge text="Support parse date by annotation's pattern" type="tip"/>
 * <Badge text="Support parse url of BaseController" type="tip"/>
 * <Badge text="Change auto update configurable" type="info"/>
 * <Badge text="Parameter encoding" type="info"/>
