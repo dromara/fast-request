@@ -60,6 +60,13 @@ module.exports = defineHopeConfig({
             }
         ],
         [
+            'link',
+            {
+                rel: "stylesheet",
+                href: "//at.alicdn.com/t/c/font_2601581_wj829vmttd.css",
+            },
+        ],
+        [
             'script',
             {
                 src: '/fast-request/js/love-me.js'

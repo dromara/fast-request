@@ -1,6 +1,6 @@
 ---
 title: EULA
-icon: faq
+icon: license
 ---
 
 ## Restful Fast Request for JetBrains IDEs EULA
