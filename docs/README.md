@@ -86,6 +86,30 @@ head:
 * [x] url尾缀支持
 * [x] ......
 
+
+<div style="height:30px"></div>
+
+## 🌈 赞助商
+
+==广告位招商==
+
+[如何成为赞助商?](./guide/sponsor.md)
+
+<div style="height:30px"></div>
+
+## 🎉 致谢
+**Restful Fast Request**自从2021年上线以来获得了很多人的支持。目前微信社区群700多人,下载超过70K，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
+
+感谢OSCHINA和Gitee官方平台对**Restful Fast Request**项目的推荐和肯定。
+
+**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC年度最受欢迎个人项目" **Top 15**殊荣。
+
+**Restful Fast Request**首页的Logo、动效及背景由 **森阳** 提供，感谢她的创作，如需要插画和Logo商业合作小伙伴可以联系她：
+
+```
+邮件：sssenyang@qq.com | 微信：ArtSenyang
+```
+
 <div style="height:100px"></div>
 
 ::: chart Fast Request功能玫瑰图
@@ -162,7 +186,7 @@ head:
 
 :::
 
-<div style="height:50px"></div>
+<div style="height:30px"></div>
 
 ::: tip 注意  
 请确保你的 IDEA版本 版本 >= 2020.3+
@@ -175,9 +199,10 @@ head:
 当然请如果插件有更新，请确保更新成最新版本
 :::
 
-<div style="height:50px"></div>
+<div style="height:30px"></div>
 
-## 🧲 Dromara 成员项目
+
+## 🐳 Dromara组织成员项目
 <div>
     <a href="https://hutool.cn/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
         <img style="height:40px;" :src="$withBase('/img/link/hutool-logo.png')" title="🍬小而全的Java工具类库，使Java拥有函数式语言般的优雅，让Java语言也可以“甜甜的”。">
@@ -243,6 +268,17 @@ head:
         <img style="height:40px;" :src="$withBase('/img/link/gobrs-async.png')" title="🔥 配置极简功能强大的异步任务动态编排框架">
     </a>
 </div>
+
+## 🧲 友情链接
+<div>
+    <a href="https://gitee.com/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/gitee-logo.png')" >
+    </a>
+    <a href="https://www.oschina.net/" target="_blank" style="width:15%; height:40px;  padding:10px 10px 10px 10px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/oschina-logo.png')" >
+    </a>
+</div>
+
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 

@@ -63,7 +63,7 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: "stylesheet",
-                href: "//at.alicdn.com/t/c/font_2601581_wj829vmttd.css",
+                href: "//at.alicdn.com/t/c/font_2601581_9o8c0qvtq78.css",
             },
         ],
         [
@@ -216,6 +216,10 @@ module.exports = defineHopeConfig({
                         icon: "changelog"
                     },
                     {
+                         text: '❤️赞助',
+                         link: '/guide/sponsorList',
+                     },
+                    {
                         text: '视频教程',
                         link: '/guide/teachingVideo',
                         icon: "bilibili"
@@ -253,6 +257,7 @@ module.exports = defineHopeConfig({
                         "concatGroup",
                         "teachingVideo",
                         "faq",
+                        "sponsorList",
                         "eula"
                     ],
                 }
