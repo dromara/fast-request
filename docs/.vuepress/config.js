@@ -49,7 +49,7 @@ module.exports = defineHopeConfig({
 
     ],
     base : '/fast-request/',
-    title: 'Restful Fast Request',
+    title: '',
 //    description: 'Intellij Restful Fast Request',
     head: [
         [
@@ -80,8 +80,7 @@ module.exports = defineHopeConfig({
         }
     },
     themeConfig: {
-        repo: "https://github.com/dromara/fast-request",
-        repoLabel: "GitHub",
+
         plugins: {
               mdEnhance: {
                   align: true,
@@ -112,7 +111,7 @@ module.exports = defineHopeConfig({
               lightBlue:"#07C3F2"
         },
         iconPrefix:'iconfont icon-',
-        logo:'/img/logo.gif',
+        logo:'/img/logoLine.gif',
         lastUpdated: 'Last Updated',
       // 以下为可选的编辑链接选项
       // 假如你的文档仓库和项目本身不在一个仓库：
@@ -176,6 +175,7 @@ module.exports = defineHopeConfig({
                         "buy",
                         "concatGroup",
                         "faq",
+                        "eula"
                     ]
                 }
             },
@@ -245,7 +245,8 @@ module.exports = defineHopeConfig({
                         "buy",
                         "concatGroup",
                         "teachingVideo",
-                        "faq"
+                        "faq",
+                        "eula"
                     ],
                 }
             }

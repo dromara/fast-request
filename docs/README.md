@@ -1,9 +1,9 @@
 ---
 home: true
 title: 主页
-heroImage: /img/logo.gif
+heroImage: /img/logoLight.gif
 heroImageDark: /img/logoDark.gif
-heroText: Restful Fast Request
+heroText: 
 tagline: 为简化调试API而生
 actions:
       - text: 🚀 快速上手

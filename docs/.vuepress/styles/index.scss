@@ -38,6 +38,10 @@
 h1,h2{
     font-family: 'bobohei';
 }
+
+.navbar .nav-item > .nav-link{
+    font-family: 'bobohei';
+}
 .home.project .hero .description{
     font-size: 1rem;
     font-family: 'bobohei';
@@ -57,7 +61,8 @@ h1,h2{
 
 
 .home.project .hero img{
-    margin: 50px auto;
+    margin: 50px auto 0;
+    max-height: 400px;
 }
 
 .home.project .hero {
@@ -68,6 +73,7 @@ h1,h2{
 
 .home.project .hero .description{
     max-width:100%;
+    font-size: 12px;
 }
 // .theme-hope-content img {
 //     border-radius: 11px;
