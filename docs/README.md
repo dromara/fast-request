@@ -53,7 +53,7 @@ head:
 
 <div style="height:30px"></div>
 
-### 🌈 赞助商
+## 🌈 赞助商
 
 ==广告位招商==
 
@@ -63,7 +63,7 @@ head:
 
 <div style="height:30px"></div>
 
-### 功能  :100:
+## 功能  :100:
 
 * [x] Postman一样的操作界面
 * [x] Groovy前后置脚本支持
@@ -100,13 +100,13 @@ head:
 <div style="height:30px"></div>
 
 ## 🎉 致谢
-**Restful Fast Request**自从2021年上线以来获得了很多人的支持。目前微信社区群700多人,下载超过70K，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
+**Restful Fast Request**简称**RFR**自从2021年上线以来获得了很多人的支持。目前微信社区群700多人,下载超过![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
 
-感谢OSCHINA和Gitee官方平台对**Restful Fast Request**项目的推荐和肯定。
+感谢OSCHINA和Gitee官方平台对**RFR**项目的推荐和肯定。
 
-**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC年度最受欢迎个人项目" **Top 15**殊荣。
+**RFR**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC年度最受欢迎个人项目" **Top 15**殊荣。
 
-**Restful Fast Request**首页的Logo、动效及背景由 **森阳** 提供，感谢她的创作，如需要插画和Logo商业合作小伙伴可以联系她：
+**RFR**首页的Logo、动效及背景由 **森阳** 提供，感谢她的创作，如需要插画和Logo商业合作小伙伴可以联系她：
 
 ```
 邮件：sssenyang@qq.com | 微信：ArtSenyang
@@ -257,6 +257,7 @@ head:
     <a href="https://dynamictp.cn/" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
         <img style="height:40px;" :src="$withBase('/img/link/dynamictp-logo.png')" title="🔥🔥🔥 基于配置中心的轻量级动态可监控线程池">
     </a>
+    <span style="width:15%;  padding:10px 10px 10px 10px;display:inline-block"></span>
     <a href="https://www.x-easypdf.cn" target="_blank" style="width:15%;  padding:10px 10px 10px 10px;display:inline-block">
         <img style="height:40px;" :src="$withBase('/img/link/easypdf.png')" title="一个用搭积木的方式构建pdf的框架（基于pdfbox）">
     </a>
