@@ -14,12 +14,12 @@ icon: aixin
 ![为什么要赞助](../.vuepress/public/img/whySponsor.png)
 
 ## 我要赞助
-如果您口袋充裕，扫以下的赞助码，即可成为**Restful Fast Request**的赞助者。
+如果您口袋充裕，扫以下的赞助码（注意微信号是==FastRequest99==），即可成为**Restful Fast Request**的赞助者。
 
 <img style="width:300px;height:370px" :src="$withBase('/img/wechatRfr.jpg')" >
 
 
-1. 扫码添加微信，添加好友时请备注："赞助"
+1. 扫码添加微信，添加好友时请备注：==赞助==
 2. 好友添加成功后请发送赞助支付截图
 
 ## 赞助者福利
@@ -29,7 +29,7 @@ icon: aixin
 
 赞助列表**排序规则**:==按照赞助费从大到小排序==
 
-## 首页赞助商需要提供的资料
+## 首页上墙需提供的资料
 提供Logo和对应文案，链接
 
 ## 赞助列表效果
