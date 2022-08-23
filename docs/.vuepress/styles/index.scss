@@ -54,7 +54,6 @@ h1,h2{
     height:735px;
 }
 .home.project{
-//     background-image: url(http://liteflow.yomahub.com/img/bg-read.png);
     background-size: contain;
     background-repeat: no-repeat;
     top: 0;
@@ -62,10 +61,13 @@ h1,h2{
     background: url(/img/bg.svg)  no-repeat;
 }
 
+.home.project .feature p{
+    font-weight:600;
+}
 
 .home.project .hero img{
     margin: 50px auto 0;
-    max-height: 400px;
+    max-height: 440px;
 }
 
 .home.project .hero {
@@ -76,7 +78,7 @@ h1,h2{
 
 .home.project .hero .description{
     max-width:100%;
-    font-size: 12px;
+    font-size: 13px;
 }
 // .theme-hope-content img {
 //     border-radius: 11px;
