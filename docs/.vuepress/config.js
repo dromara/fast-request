@@ -72,6 +72,12 @@ module.exports = defineHopeConfig({
                 src: '/fast-request/js/love-me.js'
             }
         ],
+          [
+              'script',
+              {
+                  src: '/fast-request/js/baidu.js'
+              }
+          ],
     ],
     markdown: {
         lineNumbers: true,

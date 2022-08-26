@@ -20,6 +20,9 @@ e=>end: End
 st(bottom)->op1(right)->op2(right)->op3->e
 ```
 
+## 测试项目
+[https://github.com/kings1990/fast-request-samples](https://github.com/kings1990/fast-request-samples)
+
 ## 案例
 
 * [x] 往header塞入md5签名
