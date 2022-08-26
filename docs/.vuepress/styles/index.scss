@@ -20,6 +20,7 @@
     max-width: 100%;
     padding: 0 5rem;
     margin: 0;
+    border-top: none;
 }
 .theme-hope-content.custom{
     padding: 0 5rem;
@@ -34,7 +35,14 @@
 .navbar .site-name{
     font-family: 'bobohei';
 }
+.home.project h2{
+    border-bottom: none;
+}
 h1,h2{
+    font-family: 'bobohei';
+}
+
+.navbar .nav-item > .nav-link{
     font-family: 'bobohei';
 }
 .home.project .hero .description{
@@ -43,27 +51,34 @@ h1,h2{
 }
 .home.project .hero{
     max-width: 100%;
+    height:735px;
 }
 .home.project{
-//     background-image: url(http://liteflow.yomahub.com/img/bg-read.png);
     background-size: contain;
     background-repeat: no-repeat;
+    top: 0;
+    width: 100%;
+    background: url(/img/bg.svg)  no-repeat;
 }
 
+.home.project .feature p{
+    font-weight:600;
+}
 
 .home.project .hero img{
-    margin: 0 auto;
+    margin: 50px auto 0;
+    max-height: 440px;
 }
 
 .home.project .hero {
     display: block;
-}
-
-.home.project .hero{
     text-align: center;
 }
+
+
 .home.project .hero .description{
     max-width:100%;
+    font-size: 13px;
 }
 // .theme-hope-content img {
 //     border-radius: 11px;

@@ -49,7 +49,7 @@ module.exports = defineHopeConfig({
 
     ],
     base : '/fast-request/',
-    title: 'Restful Fast Request',
+    title: '',
 //    description: 'Intellij Restful Fast Request',
     head: [
         [
@@ -60,11 +60,24 @@ module.exports = defineHopeConfig({
             }
         ],
         [
+            'link',
+            {
+                rel: "stylesheet",
+                href: "//at.alicdn.com/t/c/font_2601581_9o8c0qvtq78.css",
+            },
+        ],
+        [
             'script',
             {
                 src: '/fast-request/js/love-me.js'
             }
         ],
+          [
+              'script',
+              {
+                  src: '/fast-request/js/baidu.js'
+              }
+          ],
     ],
     markdown: {
         lineNumbers: true,
@@ -80,8 +93,7 @@ module.exports = defineHopeConfig({
         }
     },
     themeConfig: {
-        repo: "https://github.com/dromara/fast-request",
-        repoLabel: "GitHub",
+
         plugins: {
               mdEnhance: {
                   align: true,
@@ -105,15 +117,14 @@ module.exports = defineHopeConfig({
         displayFooter: true,
         copyright: "Copyright © 2021-present Kings",
         themeColor: {
+              green: "#21D789",
               blue: "#087CFA",
               red: "#FE2857",
-              green: "#21D789",
-              orange: "#FC801D",
-              pink :"#FF318C",
+              pink :"#f26d6d",
               lightBlue:"#07C3F2"
         },
         iconPrefix:'iconfont icon-',
-        logo:'/img/fastRequest.svg',
+        logo:'/img/logoLine.gif',
         lastUpdated: 'Last Updated',
       // 以下为可选的编辑链接选项
       // 假如你的文档仓库和项目本身不在一个仓库：
@@ -177,6 +188,7 @@ module.exports = defineHopeConfig({
                         "buy",
                         "concatGroup",
                         "faq",
+                        "eula"
                     ]
                 }
             },
@@ -209,6 +221,10 @@ module.exports = defineHopeConfig({
                         link: '/guide/history',
                         icon: "changelog"
                     },
+                    {
+                         text: '❤️赞助',
+                         link: '/guide/sponsorList',
+                     },
                     {
                         text: '视频教程',
                         link: '/guide/teachingVideo',
@@ -246,7 +262,9 @@ module.exports = defineHopeConfig({
                         "buy",
                         "concatGroup",
                         "teachingVideo",
-                        "faq"
+                        "faq",
+                        "sponsorList",
+                        "eula"
                     ],
                 }
             }

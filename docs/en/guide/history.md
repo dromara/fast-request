@@ -3,7 +3,7 @@ title: History changes
 icon: changelog
 ---
 
-::: danger Announcement
+::: tip Announcement
 **2022.1.4** starts to charge,Please refer to the purchase **License** process in [**Buy plugin**](./buy.md)
 
 Click to join **Telegram Group**↓↓↓
@@ -20,10 +20,38 @@ Because developing version is still in development, the documentation of develop
 
 
 ## v2022.2.4 <Badge text="Charge" type="tip"/><Badge text="Developing" type="tip"/>
-* <Badge text="Support parse date by DateTimeFormat annotation pattern" type="tip"/>
+* <Badge text="New logo" type="tip"/>
+* <Badge text="Support parse date by annotation's pattern" type="tip"/>
 * <Badge text="Support parse url of BaseController" type="tip"/>
 * <Badge text="Change auto update configurable" type="info"/>
 * <Badge text="Parameter encoding" type="info"/>
+* <Badge text="Parse error when map not contains generics" type="danger"/>
+* <Badge text="Post script can not add or remove header" type="danger"/>
+
+
+::: tip New logo
+Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
+
+![newLogo](../../.vuepress/public/img/2022.2.4/newLogo.gif)
+
+![newLogoConfig](../../.vuepress/public/img/2022.2.4/newLogoConfig.png)
+
+![newLogo](../../.vuepress/public/img/2022.2.4/newLogo.png)
+
+:::
+
+:::tip Support parse date by DateTimeFormat annotation pattern
+![dateTimeFormat](../../.vuepress/public/img/2022.2.4/dateTimeFormat.png)
+:::
+
+:::tip Support parse url of BaseController
+![baseController](../../.vuepress/public/img/2022.2.4/baseController.png)
+:::
+
+:::info Change auto update configurable
+If you don't need to receive automatic updates, you can turn it off and update it manually (recommend open)
+![autoUpdate](../../.vuepress/public/img/2022.2.4/autoUpdate.png)
+:::
 
 ## v2022.2.3.1 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
 * <Badge text="Fix the bug that the parameter cannot be cleared" type="danger"/>

@@ -2,7 +2,7 @@
 title: 历史变更
 icon: changelog
 ---
-::: danger 公告
+::: tip 公告
 
 ==2022.1.4.0== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
 
@@ -17,10 +17,36 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ## v2022.2.4 <Badge text="收费" type="tip"/><Badge text="开发中" type="tip"/>
-* <Badge text="支持通过DateTimeFormat注释解析日期" type="tip"/>
+* <Badge text="全新的Logo" type="tip"/>
+* <Badge text="支持通过注释解析日期" type="tip"/>
 * <Badge text="支持解析BaseController" type="tip"/>
 * <Badge text="自动更新可配置化" type="info"/>
 * <Badge text="参数编码传参优化" type="info"/>
+* <Badge text="Map不带泛型解析错误" type="danger"/>
+* <Badge text="后置脚本删除添加头信息失败" type="danger"/>
+
+::: tip 全新的Logo
+开发者可以在下拉框里面自由选择并切换你想要的颜色,并且可以让它==动起来==(性能佳)
+
+![newLogo](../.vuepress/public/img/2022.2.4/newLogo.gif)
+
+![newLogoConfig](../.vuepress/public/img/2022.2.4/newLogoConfig.png)
+
+![newLogo](../.vuepress/public/img/2022.2.4/newLogo.png)
+:::
+
+:::tip 支持通过DateTimeFormat注释解析日期
+![dateTimeFormat](../.vuepress/public/img/2022.2.4/dateTimeFormat.png)
+:::
+
+:::tip 支持解析BaseController
+![baseController](../.vuepress/public/img/2022.2.4/baseController.png)
+:::
+
+:::info 自动更新可配置化
+如果你不需要接收自动更新,则可以关闭,通过手动的形式更新(建议开启)
+![autoUpdate](../.vuepress/public/img/2022.2.4/autoUpdate.png)
+:::
 
 ## v2022.2.3.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 * <Badge text="修复参数无法清除的bug" type="danger"/>
