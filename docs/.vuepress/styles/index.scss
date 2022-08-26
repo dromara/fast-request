@@ -4,6 +4,12 @@
 }
 
 
+@media (min-width:959px){
+    .home.project{
+        background: url(/img/bg.svg)  no-repeat;
+    }
+}
+
 #main-content > header > div > p.actions{
     margin-left: -10px;
 }
@@ -58,7 +64,7 @@ h1,h2{
     background-repeat: no-repeat;
     top: 0;
     width: 100%;
-    background: url(/img/bg.svg)  no-repeat;
+
 }
 
 .home.project .feature p{
