@@ -26,6 +26,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="自动更新可配置化" type="info"/>
 * <Badge text="参数编码传参优化" type="info"/>
 * <Badge text="Map不带泛型解析错误" type="danger"/>
+* <Badge text="后置脚本删除添加头信息失败" type="danger"/>
 
 ## v2022.2.3.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 * <Badge text="修复参数无法清除的bug" type="danger"/>

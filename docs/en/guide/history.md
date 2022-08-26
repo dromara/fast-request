@@ -26,6 +26,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Change auto update configurable" type="info"/>
 * <Badge text="Parameter encoding" type="info"/>
 * <Badge text="Parse error when map not contains generics" type="danger"/>
+* <Badge text="Post script can not add or remove header" type="danger"/>
 
 
 ::: tip New logo

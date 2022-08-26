@@ -23,6 +23,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="自动更新可配置化" type="info"/>
 * <Badge text="参数编码传参优化" type="info"/>
 * <Badge text="Map不带泛型解析错误" type="danger"/>
+* <Badge text="后置脚本删除添加头信息失败" type="danger"/>
 
 ::: tip 全新的Logo
 开发者可以在下拉框里面自由选择并切换你想要的颜色,并且可以让它==动起来==(性能佳)
