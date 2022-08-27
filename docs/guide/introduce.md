@@ -6,7 +6,7 @@ icon: restfulFastRequest
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
-![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)  [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
+![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)  [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request) [![Reddit](https://img.shields.io/static/v1?label=Reddit&message=Restful%20Fast%20Request&logo=reddit&color=FC8D34)](https://www.reddit.com/r/FastRequest/)
 
 [**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个类似于Postman的IDEA插件。它是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。
 `Restful Fast Request = API调试工具 + API管理工具 + API搜索工具`。 它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求。插件帮助你在IDEA界面内更快更高效得调试你的API
