@@ -19,8 +19,13 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+## v2022.2.4.1 <Badge text="Charge" type="tip"/><Badge text="Newest version in auditing" type="tip"/>
 
-## v2022.2.4 <Badge text="Charge" type="tip"/><Badge text="Developing" type="tip"/>
+* <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
+
+download: [https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/215742](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/215742)
+
+## v2022.2.4 <Badge text="Charge" type="tip"/>
 * <Badge text="New logo" type="tip"/>
 * <Badge text="Support parse date by annotation's pattern" type="tip"/>
 * <Badge text="Support parse url of BaseController" type="tip"/>
@@ -54,7 +59,7 @@ If you don't need to receive automatic updates, you can turn it off and update i
 ![autoUpdate](../../.vuepress/public/img/2022.2.4/autoUpdate.png)
 :::
 
-## v2022.2.3.1 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
+## v2022.2.3.1 <Badge text="Charge" type="tip"/>
 * <Badge text="Fix the bug that the parameter cannot be cleared" type="danger"/>
 
 ## v2022.2.3 <Badge text="Charge" type="tip"/>
