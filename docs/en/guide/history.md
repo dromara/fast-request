@@ -19,11 +19,9 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2022.2.4.1 <Badge text="Charge" type="tip"/><Badge text="Newest version in auditing" type="tip"/>
+## v2022.2.4.1 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
 
 * <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
-
-download: [https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/215742](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/215742)
 
 ## v2022.2.4 <Badge text="Charge" type="tip"/>
 * <Badge text="New logo" type="tip"/>

@@ -17,11 +17,9 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 
-## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="最新版审核中" type="info"/>
+## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 
 * <Badge text="修复小屏EUAL协议无法显示同意按钮" type="danger"/>
-
-快速下载: [https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/215742](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/215742)
 
 
 ## v2022.2.4 <Badge text="收费" type="tip"/>

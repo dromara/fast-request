@@ -20,7 +20,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 
 [More detail ---------------->](./history.md)
 
-## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="Newest version in auditing" type="tip"/>
+## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="Newest version" type="tip"/>
 
 * <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
 
