@@ -5,7 +5,7 @@ icon: license
 
 ## Restful Fast Request for JetBrains IDEs EULA
 
-“**开发着**”指DKingSoft。
+“**开发者**”指DKingSoft。
 
 “**JetBrains**”是指 JetBrains sro，其注册办事处位于捷克共和国布拉格 Na Hrebenech II 1718/10，14000，在布拉格市法院保存的商业登记处注册，C 部分，文件 86211，ID.Nr.：265 02 275。
 
