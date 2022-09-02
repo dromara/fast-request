@@ -9,7 +9,7 @@ icon: whats-new
 
 Click to join **Telegram Group**↓↓↓
 
-[![Reddit](https://img.shields.io/static/v1?label=Reddit&message=Restful%20Fast%20Request&logo=reddit&color=FC8D34)](https://www.reddit.com/r/FastRequest/)
+[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
 
 Issue please goto [Github](https://github.com/dromara/fast-request/issues)

@@ -8,7 +8,9 @@ icon: changelog
 
 ==平台只能挂一个价格,国内用户请进群,一律6折,入正后无烦恼更新==
 
-==技术群二维码==在[*这里*](./concatGroup.md),不仅仅是RFR插件群,更是java技术群!
+==技术群二维码==在[**这里**](./concatGroup.md),不仅仅是RFR插件群,更是java技术群!
+
+官方推特: [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 
 Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会一一回应并==认真思考==大家提出的bug以及建议......
 

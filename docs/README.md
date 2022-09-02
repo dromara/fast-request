@@ -29,7 +29,7 @@ features:
 head:
   - - meta
     - name: keywords
-      content: Restful Fast Request,idea插件,http client,Restful API
+      content: Restful Fast Request,Fast Request,fast request,fast request官网,idea插件,http client,Restful API
   - - meta
     - name: description
       content: Restful Fast Request 一个基于IDEA的类似postman的restful api工具包插件,可以根据已有的方法帮助您快速生成url和params,一个API调试工具+API管理工具,支持springmvc、springboot、java-rs
@@ -43,7 +43,7 @@ head:
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) 
 
-![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request) [![Reddit](https://img.shields.io/static/v1?label=Reddit&message=Restful%20Fast%20Request&logo=reddit&color=FC8D34)](https://www.reddit.com/r/FastRequest/)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request) [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 
 
 <div >

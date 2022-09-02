@@ -10,7 +10,7 @@ title: 群聊
 
 微信活码由[码星球](http://hm.hencoder.cn/)提供支持
 
-[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request) [![Reddit](https://img.shields.io/static/v1?label=Reddit&message=Restful%20Fast%20Request&logo=reddit&color=FC8D34)](https://www.reddit.com/r/FastRequest/)
+[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request) [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 
  |微信|
 |------------- |
