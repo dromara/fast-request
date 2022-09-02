@@ -166,7 +166,12 @@ module.exports = defineHopeConfig({
                           text: 'History changes',
                           link: '/en/guide/history',
                           icon: "changelog"
-                      }
+                      },
+                      {
+                           text: 'Contact group',
+                           link: '/en/guide/concatGroup',
+                           icon: "contactGroup"
+                       }
                   ],
                 sidebar: {
                     '/en/guide/': [
