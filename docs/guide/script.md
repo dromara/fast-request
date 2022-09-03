@@ -116,6 +116,21 @@ if(StringUtils.isNotBlank(debug)){
 }
 ```
 
+## Console <Badge text="2022.2.5" type="tip"/>
+Console帮助开发者打印一些你想要的信息
+
+
+``` java 
+console.info("info")
+console.print("print info")
+console.warn("warn")
+console.success("success")
+console.error("error")
+
+```
+
+![console](../.vuepress/public/img/2022.2.5/console.png)
+
 ## Demo
 ::: tip 1.签名参数
 在你的本地新建一个xxx.groovy文件,粘贴以下代码,适当修改后,能保证本地可以正常运行,再把代码粘贴到脚本中

@@ -3,14 +3,11 @@ icon: contactGroup
 title: Contact Group
 ---
 
-[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
+Come and follow me ❤️❤️❤️ 
 
-[Tegegram](https://t.me/restful_fast_request)
-
-![download](../../.vuepress/public/img/telegram.png)
-
-
-
+|[Twitter](https://twitter.com/FastRequest666)|[Tegegram](https://t.me/restful_fast_request)|
+|------|------------- |
+|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|![telegram](../../.vuepress/public/img/telegram.png)|
 
 
 

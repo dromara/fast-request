@@ -159,7 +159,7 @@ module.exports = defineHopeConfig({
                       },
                       {
                           text: 'Script',
-                          link: '/guide/script',
+                          link: '/en/guide/script',
                           icon: "code-box-fill"
                       },
                       {

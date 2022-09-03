@@ -116,6 +116,20 @@ if(StringUtils.isNotBlank(debug)){
 }
 ```
 
+## Console <Badge text="2022.2.5" type="tip"/>
+Console helps developers print some info you wanted
+
+``` java
+console.info("info")
+console.print("print info")
+console.warn("warn")
+console.success("success")
+console.error("error")
+
+```
+
+![console](../../.vuepress/public/img/2022.2.5/console_en.png)
+
 ## Demo
 ::: tip 1.Sign parameter
 Create a new xxx.groovy file in your local idea, paste the following code, after appropriate modification, it can ensure that the local can run normally, and then paste the code into the script
