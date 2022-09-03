@@ -14,7 +14,7 @@ title: 群聊
 
  |微信|Twitter|
 |------------- |-------|
-|![image](https://oscimg.oschina.net/oscnet/up-7571c5b5fd54665199b0eb99454389cd615.png)|![twitter](../.vuepress/public/img/twitter.png)|
+|![wechatChat](../.vuepress/public/img/wechatGroup.png)|![twitter](../.vuepress/public/img/twitter.png)|
 |==如果二维码过期请直接添加二维码下方作者微信,添加请说明来意==|欢迎关注我的Twitter|
 
 
