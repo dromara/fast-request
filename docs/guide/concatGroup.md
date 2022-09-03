@@ -12,7 +12,7 @@ title: 群聊
 
 [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) 
 
- |微信|Twitter|
+ |微信|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
 |------------- |-------|
 |![wechatChat](../.vuepress/public/img/wechatGroup.png)|![twitter](../.vuepress/public/img/twitter.png)|
 |==如果二维码过期请直接添加二维码下方作者微信,添加请说明来意==|欢迎关注我的Twitter|
