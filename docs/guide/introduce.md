@@ -34,8 +34,8 @@ Kotlin Spring体系框架
 
 |  微信|
 |------------- | 
-| ![image](https://oscimg.oschina.net/oscnet/up-7571c5b5fd54665199b0eb99454389cd615.png)
-|==微信1群已满,请加群主入群==|
+| ![wechatChat](../.vuepress/public/img/wechatGroup.png)|
+|==进群六折,微信1群已满,请加群主入群==|
 
 ## 支持
 

@@ -6,6 +6,8 @@ icon: buy
 <br/><br/>
 <Badge text="加入微信群购买享6折️,六折码已放群公告" type="danger" vertical="middle"/>
 
+[加入群聊](./concatGroup.md)
+
 **购买分为2种方式**
 * 账号模式: 注册[jetbrains账号](https://account.jetbrains.com/licenses)购买(推荐)
 * 邮件模式: 直接使用email邮箱接收license
@@ -54,6 +56,6 @@ icon: buy
 
 **如果您还有其他疑问,请加入群聊联系我↓↓↓**
 
-![](https://oscimg.oschina.net/oscnet/up-7571c5b5fd54665199b0eb99454389cd615.png)
+![wechatChat](../.vuepress/public/img/wechatGroup.png)
 
 <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>购买</a>
