@@ -19,6 +19,28 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+## v2022.2.5 <Badge text="Charge" type="tip"/><Badge text="Developing" color="LightGreen"/>
+* <Badge text="Add console for script" type="tip"/>
+* <Badge text="Add print script support" type="tip"/>
+* <Badge text="Get description from javadoc for path and request param" type="tip"/>
+
+::: tip Console support
+Console helps developers print some info you wanted
+
+More info please see [script](./script.md#console)
+
+![console](../../.vuepress/public/img/2022.2.5/console_en.png)
+
+:::
+
+::: tip Get description from javadoc for path and request param
+Parse parameter comments in the form of Javadoc, suitable for path parameters and request param is a parameter of non-entity class
+
+![parseDocDesc](../../.vuepress/public/img/2022.2.5/parseDocDesc.png)
+:::
+
+
+
 ## v2022.2.4.1 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
 
 * <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>

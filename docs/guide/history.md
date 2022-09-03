@@ -20,6 +20,26 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
+## v2022.2.5 <Badge text="收费" type="tip"/><Badge text="开发中" color="LightGreen"/>
+* <Badge text="添加Console控制台" type="tip"/>
+* <Badge text="添加打印语法支持" type="tip"/>
+* <Badge text="从Javadoc读取注释" type="tip"/>
+
+
+::: tip Console支持
+Console帮助开发者打印一些你想要的信息
+
+更多信息请看-----> [script](./script.md#console)
+
+![console](../.vuepress/public/img/2022.2.5/console.png)
+
+:::
+
+::: tip 从Javadoc读取注释
+读取Javadoc形式的参数注释,适用于path参数以及request param是非实体类的参数
+
+![console](../.vuepress/public/img/2022.2.5/parseDocDesc.png)
+:::
 
 ## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 

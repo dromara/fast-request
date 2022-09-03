@@ -16,9 +16,18 @@ Issue please goto [Github](https://github.com/dromara/fast-request/issues)
 
 ---
 feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="Fix or Remove function" type="danger"/>
+
+Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-[More detail ---------------->](./history.md)
+[**More detail ---------------->**](./history.md)
+
+
+## v2022.2.5 <Badge text="Charge" type="tip"/><Badge text="Developing" color="LightGreen"/>
+* <Badge text="Add console for script" type="tip"/>
+* <Badge text="Add print script support" type="tip"/>
+* <Badge text="Get description from javadoc for path and request param" type="tip"/>
+
 
 ## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="Newest version" type="tip"/>
 

@@ -15,9 +15,16 @@ Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作�
 
 ---
 feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="修复/移除" type="danger"/>
+
+由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
 [**查看变更详情----------------->**](./history.md)
+
+## v2022.2.5 <Badge text="收费" type="tip"/><Badge text="开发中" color="LightGreen"/>
+* <Badge text="添加Console控制台" type="tip"/>
+* <Badge text="添加打印语法支持" type="tip"/>
+* <Badge text="从Javadoc读取注释" type="tip"/>
 
 ## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 
