@@ -109,9 +109,7 @@ module.exports = defineHopeConfig({
                   codegroup: true,
                   mark: true,
                   chart: true,
-                  flowchart: true,
-                  imageSize: true,
-
+                  flowchart: true
               },
               comment: {
                    type: 'giscus',
