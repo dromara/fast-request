@@ -110,6 +110,7 @@ module.exports = defineHopeConfig({
                   mark: true,
                   chart: true,
                   flowchart: true,
+                  imageSize: true,
 
               },
               comment: {
@@ -168,7 +169,7 @@ module.exports = defineHopeConfig({
                           icon: "changelog"
                       },
                       {
-                           text: 'Contact group',
+                           text: 'Contacts',
                            link: '/en/guide/concatGroup',
                            icon: "contactGroup"
                        }
