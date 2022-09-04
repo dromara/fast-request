@@ -3,15 +3,20 @@ title: 最新变化
 icon: whats-new
 ---
 
-::: danger 公告
+::: tip 公告
 
-==2022.1.4.0== 版本开始收费,购买**License**流程请参考[**购买插件**](./buy.md)
+购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看==群公告==
 
 ==平台只能挂一个价格,国内用户请进群,一律6折,入正后无烦恼更新==
 
-==技术群==,会讨论各种技术问题、心得交流，请点击[*这里*](./concatGroup.md)
+==技术群二维码==在[**这里**](./concatGroup.md),不仅仅是RFR插件群,群里全部都是==Javaer==,经常会讨论一些技术问题,并且热心,可以帮助你==学到一些东西==
 
-Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会==一一回应==并==认真思考==大家提出的bug以及建议,作者很==热心==......
+|![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
+|------------- |-------|
+|![wechatChat](../.vuepress/public/img/wechatGroup.png)|![twitter](../.vuepress/public/img/twitter.png)|
+|==如果二维码过期请直接添加二维码下方作者微信,添加请说明来意==|欢迎关注官方Twitter|
+
+Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会一一回应并==认真思考==大家提出的bug以及建议......
 
 ---
 feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="修复/移除" type="danger"/>

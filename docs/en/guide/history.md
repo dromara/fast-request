@@ -6,10 +6,11 @@ icon: changelog
 ::: tip Announcement
 **2022.1.4** begin to charge,Please refer to the purchase **License** process in [**Buy plugin**](./buy.md)
 
-Come and follow me ❤️❤️❤️↓↓↓
+Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
-[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
-[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request)
+|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request)|
+|------|------------- |
+|![twitter](../../.vuepress/public/img/twitter.png)|![telegram](../../.vuepress/public/img/telegram.png)|
 
 Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 
