@@ -4,6 +4,13 @@ icon: bilibili
 ---
 
 B站系列视频
+
+|[![Bilibili](https://img.shields.io/static/v1?label=Bilibili&message=Bilibili&logo=bilibili&color=FC8D34)](https://space.bilibili.com/370110042)
+|------|
+|<img alt="bilibili" src="../.vuepress/public/img/bilibili.jpg" width="" height=""/>|
+|==关注我==获得视频更新文档,小伙伴们快来给我==一键三连==吧|
+
+
 <iframe src="//player.bilibili.com/player.html?aid=772394974&bvid=BV1b14y1x7Vt&cid=816992700&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="600"> </iframe>
 <div style="height:20px"></div>
 
