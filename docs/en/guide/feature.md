@@ -5,7 +5,7 @@ icon: tools
 
 [[toc]]
 
-## Make icon move
+## Make icon move<Badge text="2022.2.4" />
 Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
 
 ![newLogo](../../.vuepress/public/img/2022.2.4/newLogo.gif)
@@ -16,6 +16,10 @@ Developers can freely choose and switch the color you want in the drop-down box,
 
 ![example](../../.vuepress/public/img/example_en.gif)
 
+In new version, send button have move to toolbar
+
+![sendRequest](../../.vuepress/public/img/sendRequest.png)
+
 ## SearchEveryWhere support<Badge text="2.1.1" />
 
 ```
@@ -23,15 +27,16 @@ example
 /url              (search by url)
 get /list         (search by get method and url)
 post /save        (search by post method and url)
+description keywords  (search by keywords)
 ```
 
 ![searchEveryWhere](../../.vuepress/public/img/searchEveryWhere.gif)
 
 ## Send and download<Badge text="2.0.2" type="error"/>
 
-![example_download](../../.vuepress/public/img/downloadFile.gif)
+![example_download](../../.vuepress/public/img/downloadFile.png)
 
-## Script
+## Script<Badge text="2022.2.3+" type="tip"/>
 Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
 Please refer to [Script](./script.md)
 
@@ -278,3 +283,29 @@ Configure priority `api header > project header>global header`
 
 ## cURL import<Badge text="2022.2.1" />
 ![importByCurl](../../.vuepress/public/img/2022.2.1/importByCurl_en.gif)
+
+## Navigate to current method<Badge text="2022.1.7" />
+
+After you generate the url of the method, sometimes you will switch to another place in the code, and then want to start debugging the API method, you can use this function to quickly locate the code
+
+![navigate2CurrentMethod](../../.vuepress/public/img/navigate2CurrentMethod.png)
+
+## History request<Badge text="2022.1.0" />
+Hidden skills: Double-click the record to display details
+
+![history](../../.vuepress/public/img/history.png)
+:::
+
+## Stop API request<Badge text="2022.2.2" />
+![stopApi](../../.vuepress/public/img/2022.2.2/stopApi.gif)
+
+## Batch export API doc<Badge text="2022.2.2" />
+![batchExportApiDoc](../../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
+
+## One click copy url<Badge text="2022.2.3" />
+![copyUrl](../../.vuepress/public/img/2022.2.3/copyUrl.png)
+
+## Html preview in response raw<Badge text="2022.1.9" />
+The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
+
+![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)

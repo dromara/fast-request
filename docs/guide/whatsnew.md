@@ -30,6 +30,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>
 * <Badge text="从Javadoc读取注释" type="tip"/>
+* <Badge text="新增推特" type="tip"/>
 
 ## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 

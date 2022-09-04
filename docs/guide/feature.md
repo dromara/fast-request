@@ -16,6 +16,10 @@ icon: tools
 
 ![example](../.vuepress/public/img/example.gif)
 
+新版本中发送按钮在工具栏
+
+![sendRequest](../.vuepress/public/img/sendRequest.png)
+
 ## SearchEveryWhere支持<Badge text="2.1.1" />
 
 ```
@@ -23,6 +27,7 @@ icon: tools
 /url              (查询指定url)
 get /list         (指定get方式指定url)
 post /save        (指定post方式指定url)
+方法关键字          (查询指定描述)
 ```
 
 ![searchEveryWhere](../.vuepress/public/img/searchEveryWhere.gif)
@@ -31,9 +36,9 @@ post /save        (指定post方式指定url)
 
 点击Send and download
 
-![example_download](../.vuepress/public/img/downloadFile.gif)
+![example_download](../.vuepress/public/img/downloadFile.png)
 
-## 脚本<Badge text="2022.2.3" type="error"/>
+## 脚本<Badge text="2022.2.3+" type="error"/>
 脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理  
 具体请参考-------> [脚本](./script.md)
 
@@ -278,3 +283,28 @@ Response Example需要运行你的API后才会被显示
 ![importByCurl](../.vuepress/public/img/2022.2.1/importByCurl.gif)
 
 ==请注意如果需要绑定方法,则需要将光标放置到方法名上==
+
+## 当前方法定位<Badge text="2022.1.7" />
+当你生成好方法的url以后,又切换到代码中的别的地方,然后又想开始调试该API方法,可以通过此功能快速定位到代码
+
+![navigate2CurrentMethod](../.vuepress/public/img/navigate2CurrentMethod.png)
+
+## 历史请求预览<Badge text="2022.1.10" />
+隐藏技能:双击记录可以展示详情
+
+![history](../.vuepress/public/img/history.png)
+
+## 终止API请求功能<Badge text="2022.2.2" />
+![stopApi](../.vuepress/public/img/2022.2.2/stopApi.gif)
+
+## 批量导出API文档<Badge text="2022.2.2" />
+![batchExportApiDoc](../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
+
+## 一键拷贝Url<Badge text="2022.2.3" />
+![copyUrl](../.vuepress/public/img/2022.2.3/copyUrl.png)
+
+
+## Raw中html预览<Badge text="2022.1.9" />
+可以对html进行预览
+
+![rawHtmlPreview](../.vuepress/public/img/rawHtmlPreview.png)

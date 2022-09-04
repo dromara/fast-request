@@ -27,6 +27,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
 * <Badge text="Get description from javadoc for path and request param" type="tip"/>
+* <Badge text="Add twitter in doc action group" type="tip"/>
 
 
 ## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="Newest version" type="tip"/>

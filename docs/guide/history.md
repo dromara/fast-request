@@ -27,7 +27,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>
 * <Badge text="从Javadoc读取注释" type="tip"/>
-
+* <Badge text="新增推特" type="tip"/>
 
 ::: tip Console支持
 Console帮助开发者打印一些你想要的信息
@@ -43,6 +43,15 @@ Console帮助开发者打印一些你想要的信息
 
 ![console](../.vuepress/public/img/2022.2.5/parseDocDesc.png)
 :::
+
+::: tip 新增推特
+有推特账号的请关注我,感谢
+
+![](../.vuepress/public/img/twitter.png)
+
+![twitterAction](../.vuepress/public/img/2022.2.5/twitterAction.png)
+:::
+
 
 ## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="最新版" type="info"/>
 

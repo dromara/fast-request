@@ -24,6 +24,8 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
 * <Badge text="Get description from javadoc for path and request param" type="tip"/>
+* <Badge text="Add twitter in doc action group" type="tip"/>
+
 
 ::: tip Console support
 Console helps developers print some info you wanted
@@ -40,6 +42,14 @@ Parse parameter comments in the form of Javadoc, suitable for path parameters an
 ![parseDocDesc](../../.vuepress/public/img/2022.2.5/parseDocDesc.png)
 :::
 
+
+::: tip twitter
+有推特账号的请关注我,感谢
+
+![](../../.vuepress/public/img/twitter.png)
+
+![twitterAction](../../.vuepress/public/img/2022.2.5/twitterAction.png)
+:::
 
 
 ## v2022.2.4.1 <Badge text="Charge" type="tip"/><Badge text="Newest version" type="tip"/>
