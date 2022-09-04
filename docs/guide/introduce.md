@@ -32,10 +32,10 @@ Kotlin Spring体系框架
 
 ## 联系我们
 
-|  微信|
-|------------- | 
-| ![wechatChat](../.vuepress/public/img/wechatGroup.png)|
-|==进群六折,微信1群已满,请加群主入群==|
+|![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
+|------------- |-------|
+|![wechatChat](../.vuepress/public/img/wechatGroup.png)|![twitter](../.vuepress/public/img/twitter.png)|
+|==如果二维码过期请直接添加二维码下方作者微信,添加请说明来意==|欢迎关注官方Twitter|
 
 ## 支持
 

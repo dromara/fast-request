@@ -33,6 +33,15 @@ op5->op6->e
 
 
 
+## 联系我们
+如果遇到了问题,请通过一下方式联系我们,将会有更快为你解决问题,同时[进群](../concatGroup.md)将会给与==六折==优惠,群里全部都是==Javaer==,经常会讨论一些技术问题,并且热心,也许可以帮助你==学到一些东西==
+
+|![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
+|------------- |-------|
+|![wechatChat](../../.vuepress/public/img/wechatGroup.png)|![twitter](../../.vuepress/public/img/twitter.png)|
+|==如果二维码过期请直接添加二维码下方作者微信,添加请说明来意==|欢迎关注官方Twitter|
+
+
 
 
 
