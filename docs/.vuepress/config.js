@@ -77,13 +77,7 @@ module.exports = defineHopeConfig({
               {
                   src: '/fast-request/js/baidu.js'
               }
-          ],
-          [
-            'script',
-            {
-                src: '/fast-request/js/baiduGithub.js'
-            }
-        ],
+          ]
     ],
     markdown: {
         lineNumbers: true,
