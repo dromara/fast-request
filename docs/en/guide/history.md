@@ -23,17 +23,24 @@ Because developing version is still in development, the documentation of develop
 ## v2022.2.5 <Badge text="Charge" type="tip"/><Badge text="Developing" color="LightGreen"/>
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
+* <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
 * <Badge text="Get description from javadoc for path and request param" type="tip"/>
 * <Badge text="Add twitter in doc action group" type="tip"/>
-
+* <Badge text="Post script not execute when response is success but code for example is 401" type="danger"/>
 
 ::: tip Console support
 Console helps developers print some info you wanted
 
-More info please see [script](./script.md#console)
+More info please see [script->console](./script.md#console)
 
 ![console](../../.vuepress/public/img/2022.2.5/console_en.png)
 
+:::
+
+::: tip Add currentProjectName and currentEnvName property in build-in property
+You can use these 2 variables for some judgment
+
+More info please see [script->Built-in variable->rfr](./script.md#rfr)
 :::
 
 ::: tip Get description from javadoc for path and request param

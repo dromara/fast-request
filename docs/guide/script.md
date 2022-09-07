@@ -73,7 +73,16 @@ request.header("sign",sign)
 类型:java.util.LinkedHashMap
 ```
 
-
+#### rfr.currentProjectName <Badge text="2022.2.5️" type="tip"/>
+```
+作用:当前下拉框选择的项目名
+类型:java.lang.String
+```
+#### rfr.currentEnvName <Badge text="2022.2.5️" type="tip"/>
+```
+作用:当前下拉框选择的环境名称
+类型:java.lang.String
+```
 
 ## 引入第三方Jar
 
@@ -81,7 +90,7 @@ request.header("sign",sign)
 
 ```
 com.alibaba:fastjson:1.2.78
-cn.hutool:hutool-all:5.8.4.M1
+cn.hutool:hutool-all:5.8.5
 com.google.guava:guava:30.1.1-jre
 ```
 Jar的版本会不定期更新,如果发现bug请联系作者要求作者升级

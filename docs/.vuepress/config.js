@@ -93,7 +93,7 @@ module.exports = defineHopeConfig({
         }
     },
     themeConfig: {
-
+        darkmode: 'enable',
         plugins: {
               mdEnhance: {
                   align: true,

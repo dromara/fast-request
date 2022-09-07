@@ -26,8 +26,10 @@ Because developing version is still in development, the documentation of develop
 ## v2022.2.5 <Badge text="Charge" type="tip"/><Badge text="Developing" color="LightGreen"/>
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
+* <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
 * <Badge text="Get description from javadoc for path and request param" type="tip"/>
 * <Badge text="Add twitter in doc action group" type="tip"/>
+* <Badge text="Post script not execute when response is success but code for example is 401" type="danger"/>
 
 
 ## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="Newest version" type="tip"/>

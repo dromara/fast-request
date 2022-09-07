@@ -73,6 +73,17 @@ Remark:Contains module level headers, which can be modified to dynamically set v
 Type:java.util.LinkedHashMap
 ```
 
+#### rfr.currentProjectName <Badge text="2022.2.5️" type="tip"/>
+```
+Remark:The project name of the item currently selected in the drop-down box
+Type:java.lang.String
+```
+#### rfr.currentEnvName <Badge text="2022.2.5️" type="tip"/>
+```
+Remark:The name of the environment currently selected in the drop-down box
+Type:java.lang.String
+```
+
 
 
 ## Import third jar
@@ -81,7 +92,7 @@ Type:java.util.LinkedHashMap
 
 ```
 com.alibaba:fastjson:1.2.78
-cn.hutool:hutool-all:5.8.4.M1
+cn.hutool:hutool-all:5.8.5
 com.google.guava:guava:30.1.1-jre
 ```
 The version of Jar will be updated from time to time. If you find a bug, please contact up to upgrade
