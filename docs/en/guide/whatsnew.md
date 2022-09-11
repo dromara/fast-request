@@ -28,6 +28,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Add print script support" type="tip"/>
 * <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
 * <Badge text="Get description from javadoc for path and request param" type="tip"/>
+* <Badge text="@RequestPart support" type="tip"/>  
 * <Badge text="Add twitter in doc action group" type="tip"/>
 * <Badge text="Post script not execute when response is success but code for example is 401" type="danger"/>
 

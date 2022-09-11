@@ -36,7 +36,7 @@ Kotlin Spring体系框架
 |![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
 |------------- |-------|
 |![wechatChat](../.vuepress/public/img/wechatGroup.png)|![twitter](../.vuepress/public/img/twitter.png)|
-|如果扫码失败请直接搜微信号==FastRequest99==,如果二维码==过期==请直接添加==二维码下方作者微信==,添加请说明来意|欢迎关注官方Twitter|
+|如果扫码失败请直接搜微信号==FastRequest99==|欢迎关注官方Twitter|
 
 ## 支持
 

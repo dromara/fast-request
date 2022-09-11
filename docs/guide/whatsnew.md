@@ -14,7 +14,7 @@ icon: whats-new
 |![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
 |------------- |-------|
 |![wechatChat](../.vuepress/public/img/wechatGroup.png)|![twitter](../.vuepress/public/img/twitter.png)|
-|如果扫码失败请直接搜微信号==FastRequest99==,如果二维码==过期==请直接添加==二维码下方作者微信==,添加请说明来意|欢迎关注官方Twitter|
+|如果扫码失败请直接搜微信号==FastRequest99==|欢迎关注官方Twitter|
 
 Issue提报请到[*Github*](https://github.com/dromara/fast-request/issues),作者会一一回应并==认真思考==大家提出的bug以及建议......
 
@@ -31,6 +31,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="添加打印语法支持" type="tip"/>
 * <Badge text="内置变量rfr添加currentProjectName、currentEnvName属性" type="tip"/>
 * <Badge text="从Javadoc读取注释" type="tip"/>
+* <Badge text="@RequestPart支持" type="tip"/>
 * <Badge text="新增推特" type="tip"/>
 * <Badge text="后置脚本在请求成功但响应是401不执行" type="danger"/>
 
