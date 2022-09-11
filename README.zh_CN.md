@@ -6,14 +6,13 @@
 <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
 <a href='https://gitee.com/dromara/fast-request'><img src='https://gitee.com/dromara/fast-request/widgets/widget_3.svg' width = "15%" alt='Fork me on Gitee'></img></a>
 
+[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
 ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
-![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
-[![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
 [![OSCS Status](https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small)](https://www.oscs1024.com/project/dromara/fast-request?ref=badge_small)
 
@@ -31,8 +30,21 @@
 > 宗旨  
 >> 插件的宗旨是为简化开发、提高效率而生，我们的愿景是成为 IDEA 最好的搭档，就像魂斗罗中的 1P、2P，基友搭配，效率翻倍。
 
+# Document
 
-如果你觉得本插件不错,请给个🌟Star吧,也欢迎提供宝贵的建议
+* [中文文档](https://dromara.gitee.io/fast-request)
+* [English Document](https://dromara.github.io/fast-request/en/)
+
+# 群聊
+
+[https://dromara.gitee.io/fast-request/guide/concatGroup.html](https://dromara.gitee.io/fast-request/guide/concatGroup.html)
+
+更快速得回复问题,可以加入微信1群,同时也可以一起探讨研究技术问题
+
+
+| ![微信](./screenshot/wechat.jpg) |
+|---|
+|如果扫码失败请直接搜微信号FastRequest99|
 
 ## 功能
 
@@ -71,23 +83,6 @@
 
 > Api一览表
 ![apiPreview](./docs/.vuepress/public/img/apiPreview.gif)
-
-# Document
-
-* [中文文档](https://plugins.sheng90.wang/fast-request)
-* [English Document](https://dromara.github.io/fast-request/en/)
-
-# 群聊
-
-[https://dromara.gitee.io/fast-request/guide/concatGroup.html](https://dromara.gitee.io/fast-request/guide/concatGroup.html)
-
-更快速得回复问题,可以加入微信1群，也可以加入钉钉群聊,同时也可以一起探讨研究技术问题
-
-
-| ![微信](./screenshot/wechat.jpg) |
-|---|
-|微信1群已满,请加群主入群|
-
 
 ## 安装
 

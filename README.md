@@ -6,6 +6,7 @@
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
 <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
 
+[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
 [![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
 [![Jetbrains Plugins][plugin-img]][plugin]
@@ -13,7 +14,6 @@
 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
 ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)
 ![GitHub](https://img.shields.io/github/license/dromara/fast-request?color=087CFA)
-[![QQ群](https://img.shields.io/badge/chat-QQ群:754131222-46BC99.svg?logo=Tencent%20QQ)](https://qm.qq.com/cgi-bin/qm/qr?k=1OEJ5QST4zoEUv0x0OvOmC3TUfAIZXAO)
 [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
 [![OSCS Status](https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small)](https://www.oscs1024.com/project/dromara/fast-request?ref=badge_small)
 
@@ -33,7 +33,10 @@ more flexible.And it integrates additional features such as search, Postman inte
 > PURPOSE  
 >> The purpose of the plug-in is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
 
-If you think this plugin help you, please **🌟Star** project, and also welcome to provide excellent recommendation
+# Document
+
+* [中文文档](https://dromara.gitee.io/fast-request)
+* [English Document](https://dromara.github.io/fast-request/en)
 
 ## Features
 
@@ -73,10 +76,6 @@ If you think this plugin help you, please **🌟Star** project, and also welcome
 > Api list preview
 ![apiPreview](./docs/.vuepress/public/img/apiPreview.gif)
 
-# Document
-
-* [中文文档](https://plugins.sheng90.wang/fast-request)
-* [English Document](https://dromara.github.io/fast-request/en)
 
 ## Install
 
