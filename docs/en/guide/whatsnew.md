@@ -23,7 +23,7 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 
-## v2022.2.5 <Badge text="Charge" type="tip"/><Badge text="Developing" color="LightGreen"/>
+## v2022.2.5 <Badge text="Subscribe" type="tip"/><Badge text="Developing" color="LightGreen"/>
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
 * <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
@@ -38,7 +38,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
 
 
-## v2022.2.4 <Badge text="Charge" type="tip"/>
+## v2022.2.4 <Badge text="Subscribe" type="tip"/>
 * <Badge text="New logo" type="tip"/>
 * <Badge text="Support parse date by annotation's pattern" type="tip"/>
 * <Badge text="Support parse url of BaseController" type="tip"/>
@@ -47,10 +47,10 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Parse error when map not contains generics" type="danger"/>
 * <Badge text="Post script can not add or remove header" type="danger"/>
 
-## v2022.2.3.1 <Badge text="Charge" type="tip"/>
+## v2022.2.3.1 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Parameter cannot be cleared" type="danger"/>
 
-## v2022.2.3 <Badge text="Charge" type="tip"/>
+## v2022.2.3 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Pre-request Script" type="tip"/>
 * <Badge text="Post-request Script" type="tip"/>
 * <Badge text="One-click copy Url" type="tip"/>
@@ -61,7 +61,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Jax-rs PATCH not supported" type="danger"/>
 
 
-## v2022.2.2 <Badge text="Charge" type="tip"/>
+## v2022.2.2 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Add stop API request function" type="tip"/>
 * <Badge text="Batch export API doc" type="tip"/>
 * <Badge text="Add annotations when export to Postman" type="tip"/>
@@ -71,7 +71,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Error when modify number param in Multipart" type="danger"/>
 * <Badge text="History request delete operation error in some cases" type="danger"/>
 
-## v2022.2.1 <Badge text="Charge" type="tip"/>
+## v2022.2.1 <Badge text="Subscribe" type="tip"/>
 * <Badge text="API grouping parameter save support" type="tip"/>
 * <Badge text="Temporary request save support" type="tip"/>
 * <Badge text="Add support for cURL import" type="tip"/>
@@ -81,7 +81,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Optimize shortcut keys" type="info"/>
 * <Badge text="Fix Word export bug" type="danger"/>
 
-## v2022.1.10 <Badge text="Charge" type="tip"/>
+## v2022.1.10 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Add support for history request preview" type="tip"/>
 * <Badge text="Add support for description search in SearchEveryWhere" type="tip"/>
 * <Badge text="Add request timeout settings" type="tip"/>
@@ -90,7 +90,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Curl output format optimization" type="info"/>
 * <Badge text="Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)" type="info"/>
 
-## v2022.1.9 <Badge text="Charge" type="tip"/>
+## v2022.1.9 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Add shortcut keys for tool window jump" type="tip"/>
 * <Badge text="Add auto add cookie support" type="tip"/>
 * <Badge text="Add support for html preview in response raw" type="tip"/>
@@ -103,7 +103,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Optimized export preview" type="info"/>
 * <Badge text="Fixed bug when editing params at the same time delete param" type="danger"/>
 
-## v2022.1.8 <Badge text="Charge" type="tip"/>
+## v2022.1.8 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Project-level global parameters support" type="tip"/>
 * <Badge text="Optimized response data quickly add to headers" type="info"/>
 * <Badge text="Optimized cookies quickly added to the header" type="info"/>
@@ -111,7 +111,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Fix navigate tree scan bug" type="danger"/>
 * <Badge text="Fix some bug" type="danger"/>
 
-## v2022.1.7 <Badge text="Charge" type="tip"/>
+## v2022.1.7 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Kotlin spring framework support" type="tip"/>
 * <Badge text="Add SearchEveryWhere scope search strategy" type="tip"/>
 * <Badge text="Add toggleUseSoftWrap support in editor" type="tip"/>
@@ -121,13 +121,13 @@ Because developing version is still in development, the documentation of develop
 
 
 
-## v2022.1.6 <Badge text="Charge" type="tip"/>
+## v2022.1.6 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Add support for one click to add cookie to header" type="tip"/>
 * <Badge text="Add support for sharing API to Word and html" type="tip"/>
 * <Badge text="Fix bug for `Basic Authorization` don't carry Basic" type="danger"/>
 * <Badge text="Removes the drag function in APIs tab" type="danger"/>
 
-## v2022.1.5 <Badge text="Charge" type="tip"/>
+## v2022.1.5 <Badge text="Subscribe" type="tip"/>
 * <Badge text="Add support for automatically generating parameter descriptions" type="tip"/>
 * <Badge text="Add support for generate API documentation" type="tip"/>
 * <Badge text="Add support for single class API list preview" type="tip"/>
@@ -135,7 +135,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Fix some bugs" type="danger"/>
 
 
-## v2022.1.4.0 <Badge text="Charge" type="tip"/>
+## v2022.1.4.0 <Badge text="Subscribe" type="tip"/>
 
 * <Badge text="SearchEveryWhere highlight optimization" type="info"/>
 * <Badge text="Add support for import and export APIs" type="tip"/>
