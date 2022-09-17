@@ -4,7 +4,9 @@ icon: changelog
 ---
 
 ::: tip Announcement
-**2022.1.4** begin to charge,Please refer to the purchase **License** process in [**Buy plugin**](./buy.md)
+**2022.1.4+** is paid version, if you want to compare the difference from free and paid version, you can see the release log from 2022.1.4
+
+[**Buy plugin**](./buy.md)
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
