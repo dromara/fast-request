@@ -25,7 +25,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## v2022.2.5 <Badge text="订阅" type="tip"/><Badge text="开发中" color="LightGreen"/>
+## v2022.2.5 <Badge text="免费试用" type="tip"/><Badge text="开发中" color="LightGreen"/>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>
 * <Badge text="内置变量rfr添加currentProjectName、currentEnvName属性" type="tip"/>
@@ -64,12 +64,12 @@ Console帮助开发者打印一些你想要的信息
 :::
 
 
-## v2022.2.4.1 <Badge text="订阅" type="tip"/><Badge text="最新版" type="info"/>
+## v2022.2.4.1 <Badge text="免费试用" type="tip"/><Badge text="最新版" type="info"/>
 
 * <Badge text="修复小屏EUAL协议无法显示同意按钮" type="danger"/>
 
 
-## v2022.2.4 <Badge text="订阅" type="tip"/>
+## v2022.2.4 <Badge text="免费试用" type="tip"/>
 * <Badge text="全新的Logo" type="tip"/>
 * <Badge text="支持通过注释解析日期" type="tip"/>
 * <Badge text="支持解析BaseController" type="tip"/>
@@ -101,10 +101,10 @@ Console帮助开发者打印一些你想要的信息
 ![autoUpdate](../.vuepress/public/img/2022.2.4/autoUpdate.png)
 :::
 
-## v2022.2.3.1 <Badge text="订阅" type="tip"/>
+## v2022.2.3.1 <Badge text="免费试用" type="tip"/>
 * <Badge text="修复参数无法清除的bug" type="danger"/>
 
-## v2022.2.3 <Badge text="订阅" type="tip"/>
+## v2022.2.3 <Badge text="免费试用" type="tip"/>
 * <Badge text="前置脚本" type="tip"/>
 * <Badge text="后置脚本" type="tip"/>
 * <Badge text="一键拷贝Url" type="tip"/>
@@ -133,7 +133,7 @@ Console帮助开发者打印一些你想要的信息
 老版本如何处理: [FAQ:输入参数后调用API发现无效](./faq.md)
 :::
 
-## v2022.2.2<Badge text="订阅" type="warn"/>
+## v2022.2.2<Badge text="免费试用" type="warn"/>
 * <Badge text="终止API请求功能" type="tip"/>
 * <Badge text="批量导出API文档" type="tip"/>
 * <Badge text="导出到Postman添加注释" type="tip"/>
@@ -151,7 +151,7 @@ Console帮助开发者打印一些你想要的信息
 ![batchExportApiDoc](../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
 :::
 
-## v2022.2.1<Badge text="订阅" type="warn"/>
+## v2022.2.1<Badge text="免费试用" type="warn"/>
 * <Badge text="API分组参数保存支持" type="tip"/>
 * <Badge text="临时请求保存支持" type="tip"/>
 * <Badge text="cURL导入支持" type="tip"/>
@@ -217,7 +217,7 @@ Console帮助开发者打印一些你想要的信息
 优化了`List<Entity>`的解析
 :::
 
-## v2022.1.10<Badge text="订阅" type="warn"/>
+## v2022.1.10<Badge text="免费试用" type="warn"/>
 * <Badge text="添加对历史请求预览的支持" type="tip"/>
 * <Badge text="超时时间自定义设置" type="tip"/>
 * <Badge text="SearchEveryWhere支持方法注释搜索" type="info"/>
@@ -250,7 +250,7 @@ Console帮助开发者打印一些你想要的信息
 :::
 
 
-## v2022.1.9<Badge text="订阅" type="warn"/>
+## v2022.1.9<Badge text="免费试用" type="warn"/>
 * <Badge text="工具窗口跳转增加快捷键" type="tip"/>
 * <Badge text="添加自动添加Cookie支持" type="tip"/>
 * <Badge text="响应raw中增加html预览" type="tip"/>
@@ -323,7 +323,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 ![apisList](../.vuepress/public/img/apisList.png)
 :::
 
-## v2022.1.8<Badge text="订阅" type="warn"/>
+## v2022.1.8<Badge text="免费试用" type="warn"/>
 * <Badge text="项目级别全局参数支持" type="tip"/>
 * <Badge text="优化响应数据快速添加到头" type="info"/>
 * <Badge text="优化cookie快速添加到头" type="info"/>
@@ -349,7 +349,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 :::
 
 
-## v2022.1.7<Badge text="订阅" type="warn"/>
+## v2022.1.7<Badge text="免费试用" type="warn"/>
 * <Badge text="Kotlin spring系列框架支持" type="tip"/>
 * <Badge text="新增SearchEveryWhere范围搜索策略" type="tip"/>
 * <Badge text="编辑器ToggleUseSoftWrap支持" type="tip"/>
@@ -391,7 +391,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 优化了**多模块**下下针对保存的api回显需要**手动切换项目下拉框**
 :::
 
-## v2022.1.6<Badge text="订阅" type="warn"/>
+## v2022.1.6<Badge text="免费试用" type="warn"/>
 * <Badge text="添加一键添加Cookie到Header的支持" type="tip"/>
 * <Badge text="添加API分享Word和html的支持" type="tip"/>
 * <Badge text="修复了Basic authorization没有携带Basic字符串" type="danger"/>
@@ -423,7 +423,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 
 
-## v2022.1.5<Badge text="订阅" type="warn"/>
+## v2022.1.5<Badge text="免费试用" type="warn"/>
 
 * <Badge text="添加对自动生成参数描述的支持" type="tip"/>
 * <Badge text="添加一键生成API文档的支持" type="tip"/>
@@ -456,7 +456,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 :::
 
 
-## v2022.1.4 <Badge text="订阅" type="warn"/>
+## v2022.1.4 <Badge text="免费试用" type="warn"/>
 ==idea版本2021.3+==
 
 * <Badge text="APIs导入导出支持" type="tip"/>

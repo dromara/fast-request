@@ -22,7 +22,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2022.2.5 <Badge text="Subscribe" type="tip"/><Badge text="Developing" color="LightGreen"/>
+## v2022.2.5 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
 * <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
@@ -62,11 +62,11 @@ Parse parameter comments in the form of Javadoc, suitable for path parameters an
 :::
 
 
-## v2022.2.4.1 <Badge text="Subscribe" type="tip"/><Badge text="Newest version" type="tip"/>
+## v2022.2.4.1 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>
 
 * <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
 
-## v2022.2.4 <Badge text="Subscribe" type="tip"/>
+## v2022.2.4 <Badge text="Free trial" type="tip"/>
 * <Badge text="New logo" type="tip"/>
 * <Badge text="Support parse date by annotation's pattern" type="tip"/>
 * <Badge text="Support parse url of BaseController" type="tip"/>
@@ -100,10 +100,10 @@ If you don't need to receive automatic updates, you can turn it off and update i
 ![autoUpdate](../../.vuepress/public/img/2022.2.4/autoUpdate.png)
 :::
 
-## v2022.2.3.1 <Badge text="Subscribe" type="tip"/>
+## v2022.2.3.1 <Badge text="Free trial" type="tip"/>
 * <Badge text="Fix the bug that the parameter cannot be cleared" type="danger"/>
 
-## v2022.2.3 <Badge text="Subscribe" type="tip"/>
+## v2022.2.3 <Badge text="Free trial" type="tip"/>
 * <Badge text="Pre-request Script" type="tip"/>
 * <Badge text="Post-request Script" type="tip"/>
 * <Badge text="One-click copy Url" type="tip"/>
@@ -133,7 +133,7 @@ How the old version deals with it: [FAQ:After entering the parameters, the API c
 :::
 
 
-## v2022.2.2<Badge text="Subscribe" type="warn"/>
+## v2022.2.2<Badge text="Free trial" type="warn"/>
 * <Badge text="Add stop API request function" type="tip"/>
 * <Badge text="Batch export API doc" type="tip"/>
 * <Badge text="Add annotations when export to Postman" type="tip"/>
@@ -153,7 +153,7 @@ How the old version deals with it: [FAQ:After entering the parameters, the API c
 
 
 
-## v2022.2.1<Badge text="Subscribe" type="warn"/>
+## v2022.2.1<Badge text="Free trial" type="warn"/>
 * <Badge text="API grouping parameter save support" type="tip"/>
 * <Badge text="Temporary request save support" type="tip"/>
 * <Badge text="Add support for cURL import" type="tip"/>
@@ -216,7 +216,7 @@ Purpose: Some requests need to add .do at the end of the url
 Optimized parsing of `List<Entity>`
 :::
 
-## v2022.1.10<Badge text="Subscribe" type="warn"/>
+## v2022.1.10<Badge text="Free trial" type="warn"/>
 * <Badge text="Add support for history request preview" type="tip"/>
 * <Badge text="Add support for description search in SearchEveryWhere" type="tip"/>
 * <Badge text="Add request timeout settings" type="tip"/>
@@ -249,7 +249,7 @@ Default value: 60 seconds
   * When the text editor generates a string, it focuses on the first line by default
 :::
 
-## v2022.1.9<Badge text="Subscribe" type="warn"/>
+## v2022.1.9<Badge text="Free trial" type="warn"/>
 * <Badge text="Add shortcut keys for tool window jump" type="tip"/>
 * <Badge text="Add auto add cookie support" type="tip"/>
 * <Badge text="Add support for html preview in response raw" type="tip"/>
@@ -324,7 +324,7 @@ The rendering of the APIs interface has been optimized,Newly saved api icons are
 ![apisList](../../.vuepress/public/img/apisList.png)
 :::
 
-## v2022.1.8<Badge text="Subscribe" type="warn"/>
+## v2022.1.8<Badge text="Free trial" type="warn"/>
 * <Badge text="Project-level global parameters support" type="tip"/>
 * <Badge text="Optimized response data quickly add to headers" type="info"/>
 * <Badge text="Optimized cookies quickly added to the header" type="info"/>
@@ -352,7 +352,7 @@ Cookie is also like this
 ![cookie2projectConfig](../../.vuepress/public/img/cookie2projectConfig.png)
 :::
 
-## v2022.1.7<Badge text="Subscribe" type="warn"/>
+## v2022.1.7<Badge text="Free trial" type="warn"/>
 * <Badge text="Kotlin spring framework support" type="tip"/>
 * <Badge text="Add SearchEveryWhere scope search strategy" type="tip"/>
 * <Badge text="Add toggleUseSoftWrap support in editor" type="tip"/>
@@ -392,7 +392,7 @@ After you generate the url of the method, sometimes you will switch to another p
 Optimized the need to manually switch the project drop-down box for the saved api echo under the multi-module
 :::
 
-## v2022.1.6<Badge text="Subscribe" type="warn"/>
+## v2022.1.6<Badge text="Free trial" type="warn"/>
 * <Badge text="Add support for one click to add cookie to header" type="tip"/>
 * <Badge text="Add support for sharing API to Word and html" type="tip"/>
 * <Badge text="Fix bug for `Basic Authorization` don't carry Basic" type="danger"/>
@@ -414,7 +414,7 @@ Please note that the API in word form is implemented in html, so don't feel stra
 
 
 
-## v2022.1.5 <Badge text="Subscribe" type="warn"/>
+## v2022.1.5 <Badge text="Free trial" type="warn"/>
 * <Badge text="Add support for automatically generating parameter descriptions" type="tip"/>
 * <Badge text="Add support for generate API documentation" type="tip"/>
 * <Badge text="Add support for single class API list preview" type="tip"/>
@@ -446,7 +446,7 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 :::
 
 
-## v2022.1.4 <Badge text="Subscribe" type="warn"/>
+## v2022.1.4 <Badge text="Free trial" type="warn"/>
 ==require idea 2021.2+==
 * <Badge text="SearchEveryWhere highlight optimization" type="info"/>
 * <Badge text="Add support for import and export APIs" type="tip"/>

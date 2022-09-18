@@ -28,7 +28,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**查看变更详情----------------->**](./history.md)
 
-## v2022.2.5 <Badge text="订阅" type="tip"/><Badge text="开发中" color="LightGreen"/>
+## v2022.2.5 <Badge text="免费试用" type="tip"/><Badge text="开发中" color="LightGreen"/>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>
 * <Badge text="内置变量rfr添加currentProjectName、currentEnvName属性" type="tip"/>
@@ -37,12 +37,12 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="新增推特" type="tip"/>
 * <Badge text="后置脚本在请求成功但响应是401不执行" type="danger"/>
 
-## v2022.2.4.1 <Badge text="订阅" type="tip"/><Badge text="最新版" type="info"/>
+## v2022.2.4.1 <Badge text="免费试用" type="tip"/><Badge text="最新版" type="info"/>
 
 * <Badge text="修复小屏EUAL协议无法显示同意按钮" type="danger"/>
 
 
-## v2022.2.4 <Badge text="订阅" type="tip"/>
+## v2022.2.4 <Badge text="免费试用" type="tip"/>
 * <Badge text="全新的Logo" type="tip"/>
 * <Badge text="支持通过注释解析日期" type="tip"/>
 * <Badge text="支持解析BaseController" type="tip"/>
@@ -51,10 +51,10 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="Map不带泛型解析错误" type="danger"/>
 * <Badge text="后置脚本删除添加头信息失败" type="danger"/>
 
-## v2022.2.3.1 <Badge text="订阅" type="tip"/>
+## v2022.2.3.1 <Badge text="免费试用" type="tip"/>
 * <Badge text="修复参数无法清除的bug" type="danger"/>
 
-## v2022.2.3 <Badge text="订阅" type="tip"/>
+## v2022.2.3 <Badge text="免费试用" type="tip"/>
 * <Badge text="前置脚本" type="tip"/>
 * <Badge text="后置脚本" type="tip"/>
 * <Badge text="一键拷贝Url" type="tip"/>  
@@ -65,7 +65,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="Jax-rs PATCH支持" type="danger"/>
 
 
-## v2022.2.2 <Badge text="订阅" type="tip"/>
+## v2022.2.2 <Badge text="免费试用" type="tip"/>
 * <Badge text="终止API请求功能" type="tip"/>
 * <Badge text="批量导出API文档" type="tip"/>
 * <Badge text="导出到Postman添加注释" type="tip"/>
@@ -75,7 +75,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="Multipart修改数字类型参数报错" type="danger"/>
 * <Badge text="某些情况下历史请求删除操作报错" type="danger"/>
 
-## v2022.2.1 <Badge text="订阅" type="tip"/>
+## v2022.2.1 <Badge text="免费试用" type="tip"/>
 * <Badge text="API分组参数保存支持" type="tip"/>
 * <Badge text="临时请求保存支持" type="tip"/>
 * <Badge text="cURL导入支持" type="tip"/>
@@ -85,7 +85,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="优化解析" type="info"/>
 * <Badge text="修复Word导出bug" type="danger"/>
 
-## v2022.1.10 <Badge text="订阅" type="tip"/>
+## v2022.1.10 <Badge text="免费试用" type="tip"/>
 * <Badge text="添加对历史请求预览的支持" type="tip"/>
 * <Badge text="超时时间自定义设置" type="tip"/>
 * <Badge text="SearchEveryWhere支持方法注释搜索" type="info"/>
@@ -94,7 +94,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="Curl输出格式优化" type="info"/>
 * <Badge text="优化@Consumes(APPLICATION_JSON)不生效问题(JAX-RS)" type="info"/>
 
-## v2022.1.9 <Badge text="订阅" type="tip"/>
+## v2022.1.9 <Badge text="免费试用" type="tip"/>
 * <Badge text="工具窗口跳转增加快捷键" type="tip"/>
 * <Badge text="添加自动添加Cookie支持" type="tip"/>
 * <Badge text="响应raw中增加html预览" type="tip"/>
@@ -107,7 +107,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="保存API插入顺序优化" type="info"/>
 * <Badge text="优化了导出预览" type="info"/>
 
-## v2022.1.8 <Badge text="订阅" type="tip"/>
+## v2022.1.8 <Badge text="免费试用" type="tip"/>
 * <Badge text="项目级别全局参数支持" type="tip"/>
 * <Badge text="优化响应数据快速添加到头" type="info"/>
 * <Badge text="优化cookie快速添加到头" type="info"/>
@@ -115,7 +115,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="修复navigate树扫描bug" type="info"/>
 * <Badge text="修复了一些bug" type="danger"/>
 
-## v2022.1.7 <Badge text="订阅" type="tip"/>
+## v2022.1.7 <Badge text="免费试用" type="tip"/>
 * <Badge text="Kotlin spring系列框架支持" type="tip"/>
 * <Badge text="新增SearchEveryWhere范围搜索策略" type="tip"/>
 * <Badge text="编辑器ToggleUseSoftWrap支持" type="tip"/>
@@ -123,20 +123,20 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 * <Badge text="添加导航到当前方法的支持" type="tip"/>
 * <Badge text="优化多模块下保存的API回显自动绑定项目" type="info"/>
 
-## v2022.1.6 <Badge text="订阅" type="tip"/>
+## v2022.1.6 <Badge text="免费试用" type="tip"/>
 * <Badge text="添加一键添加Cookie到Header的支持" type="tip"/>
 * <Badge text="添加API分享Word和html的支持" type="tip"/>
 * <Badge text="修复了Basic authorization没有携带Basic字符串" type="danger"/>
 * <Badge text="移除了APIs标签下的拉拽功能" type="danger"/>
 
-## v2022.1.5 <Badge text="订阅" type="tip"/>
+## v2022.1.5 <Badge text="免费试用" type="tip"/>
 * <Badge text="添加对自动生成参数描述的支持" type="tip"/>
 * <Badge text="添加一键生成API文档的支持" type="tip"/>
 * <Badge text="添加单个类的API整体预览" type="tip"/>
 * <Badge text="移除了Accept头上的text/html" type="danger"/>
 * <Badge text="修复了一些bug" type="danger"/>
 
-## v2022.1.4.0 <Badge text="订阅" type="tip"/>
+## v2022.1.4.0 <Badge text="免费试用" type="tip"/>
 
 * <Badge text="APIs导入导出支持" type="tip"/>
 * <Badge text="APIs支持直接运行" type="tip"/>
