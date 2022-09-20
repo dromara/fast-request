@@ -13,7 +13,7 @@ op20=>operation: 设置域名
 op21=>parallel: 返回主界面
 op3=>operation: 选择项目名
 op4=>operation: 选择环境名
-op5=>inputoutput: 点击方法左侧火箭🚀
+op5=>inputoutput: 点击方法左侧火箭R字图标
 op6=>operation: 点击发送按钮
 e=>end: 结束|future
 st(bottom)->cfg(path1,right)->op1(bottom)->op20->op21(path1,right)->op3->op5
@@ -30,6 +30,10 @@ op5->op6->e
 :::
 
 ![](../../.vuepress/public/img/howToUse.gif)
+
+新Logo icon
+
+![](../../.vuepress/public/img/newLogoIcon.png)
 
 
 

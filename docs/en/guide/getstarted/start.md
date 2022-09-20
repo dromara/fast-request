@@ -12,7 +12,7 @@ op20=>operation: Set domain
 op21=>parallel: Return main interface
 op3=>operation: Select project
 op4=>operation: Select env
-op5=>inputoutput: Click rocket button on method left
+op5=>inputoutput: Click R icon button on method left
 op6=>operation: Click send button 
 e=>end: End
 
@@ -30,6 +30,11 @@ op5->op6->e
 :::
 
 ![](../../../.vuepress/public/img/howToUse_en.gif)
+
+
+New logo icon
+
+![](../../../.vuepress/public/img/newLogoIcon.png)
 
 ## Contacts 
 Join and follow us to solve your question  ❤️❤️❤️
