@@ -25,7 +25,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## v2022.2.5 <Badge text="免费试用" type="tip"/><Badge text="开发中" color="LightGreen"/>
+## v2022.2.5 <Badge text="免费试用" type="tip"/>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>
 * <Badge text="内置变量rfr添加currentProjectName、currentEnvName属性" type="tip"/>

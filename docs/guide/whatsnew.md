@@ -28,7 +28,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**查看变更详情----------------->**](./history.md)
 
-## v2022.2.5 <Badge text="免费试用" type="tip"/><Badge text="开发中" color="LightGreen"/>
+## v2022.2.5 <Badge text="免费试用" type="tip"/>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>
 * <Badge text="内置变量rfr添加currentProjectName、currentEnvName属性" type="tip"/>

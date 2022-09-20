@@ -22,7 +22,7 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2022.2.5 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
+## v2022.2.5 <Badge text="Free trial" type="tip"/>
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
 * <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>

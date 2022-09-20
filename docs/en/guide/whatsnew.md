@@ -25,7 +25,7 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 
-## v2022.2.5 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
+## v2022.2.5 <Badge text="Free trial" type="tip"/>
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
 * <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
