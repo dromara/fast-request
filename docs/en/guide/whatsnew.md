@@ -24,6 +24,12 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## v2022.2.5.2 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>
+* <Badge text="Post script cannot be cleared" type="danger"/>
+
+## v2022.2.5.1 <Badge text="Free trial" type="tip"/>
+* <Badge text="Console syntax error" type="danger"/>
+
 
 ## v2022.2.5 <Badge text="Free trial" type="tip"/>
 * <Badge text="Add console for script" type="tip"/>
@@ -35,7 +41,7 @@ Because developing version is still in development, the documentation of develop
 * <Badge text="Post script not execute when response is success but code for example is 401" type="danger"/>
 
 
-## v2022.2.4.1 <Badge text="收费" type="tip"/><Badge text="Newest version" type="tip"/>
+## v2022.2.4.1 <Badge text="收费" type="tip"/>
 
 * <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
 

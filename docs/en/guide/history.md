@@ -22,6 +22,12 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+## v2022.2.5.2 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>
+* <Badge text="Post script cannot be cleared" type="danger"/>
+
+## v2022.2.5.1 <Badge text="Free trial" type="tip"/>
+* <Badge text="Console syntax error" type="danger"/>
+
 ## v2022.2.5 <Badge text="Free trial" type="tip"/>
 * <Badge text="Add console for script" type="tip"/>
 * <Badge text="Add print script support" type="tip"/>
@@ -62,7 +68,7 @@ Parse parameter comments in the form of Javadoc, suitable for path parameters an
 :::
 
 
-## v2022.2.4.1 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>
+## v2022.2.4.1 <Badge text="Free trial" type="tip"/>
 
 * <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
 

@@ -28,6 +28,13 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**查看变更详情----------------->**](./history.md)
 
+## v2022.2.5.2 <Badge text="免费试用" type="tip"/>
+* <Badge text="后置脚本无法清空" type="danger"/>
+
+## v2022.2.5.1 <Badge text="免费试用" type="tip"/>
+* <Badge text="Console语法报错" type="danger"/>
+
+
 ## v2022.2.5 <Badge text="免费试用" type="tip"/>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>

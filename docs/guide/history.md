@@ -25,6 +25,12 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
+## v2022.2.5.2 <Badge text="免费试用" type="tip"/><Badge text="最新版" type="info"/>
+* <Badge text="后置脚本无法清空" type="danger"/>
+
+## v2022.2.5.1 <Badge text="免费试用" type="tip"/>
+* <Badge text="Console语法报错" type="danger"/>
+
 ## v2022.2.5 <Badge text="免费试用" type="tip"/>
 * <Badge text="添加Console控制台" type="tip"/>
 * <Badge text="添加打印语法支持" type="tip"/>
@@ -64,7 +70,7 @@ Console帮助开发者打印一些你想要的信息
 :::
 
 
-## v2022.2.4.1 <Badge text="免费试用" type="tip"/><Badge text="最新版" type="info"/>
+## v2022.2.4.1 <Badge text="免费试用" type="tip"/>
 
 * <Badge text="修复小屏EUAL协议无法显示同意按钮" type="danger"/>
 
