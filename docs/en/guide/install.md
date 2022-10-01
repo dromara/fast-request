@@ -22,4 +22,4 @@ b. Go to `setting -> plugins -> Install plugin from disk`
 
 c. Select the downloaded zip file and restart (Be careful not to unzip the zip file)
 
-![installLocal](../.vuepress/public/img/installLocal.png)
+![installLocal](../../.vuepress/public/img/installLocal.png)
