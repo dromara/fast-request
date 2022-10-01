@@ -24,7 +24,7 @@ features:
     link: /en/guide/feature.html
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
-    details: Only 7 MB size,Provides a very intuitive interface
+    details: Only 16 MB size,Provides a very intuitive interface
 
 head:
   - - meta

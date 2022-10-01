@@ -308,3 +308,8 @@ Response Example需要运行你的API后才会被显示
 可以对html进行预览
 
 ![rawHtmlPreview](../.vuepress/public/img/rawHtmlPreview.png)
+
+## Api注释预览
+![showCommentConfig](../.vuepress/public/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](../.vuepress/public/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)

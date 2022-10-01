@@ -24,7 +24,7 @@ features:
   link: /guide/feature.html
 - title: 轻量、界面友好
   icon: code-box-fill
-  details: 轻量,仅7M大小,并且提供一个非常直观的界面,好操作易上手
+  details: 轻量,仅16M大小,并且提供一个非常直观的界面,好操作易上手
 
 head:
   - - meta

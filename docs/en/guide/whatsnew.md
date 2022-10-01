@@ -24,6 +24,11 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## v2022.2.6 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
+* <Badge text="Api comment preview" type="tip"/>
+* <Badge text="Long delay in checking for updates" type="info"/>
+* <Badge text="Long delay when first open tool window" type="info"/>
+
 ## v2022.2.5.2 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>
 * <Badge text="Post script cannot be cleared" type="danger"/>
 

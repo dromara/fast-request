@@ -309,3 +309,8 @@ Hidden skills: Double-click the record to display details
 The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
 
 ![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
+
+## Api comment preview
+![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](../../.vuepress/public/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](../../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)

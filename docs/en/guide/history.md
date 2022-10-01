@@ -22,6 +22,17 @@ feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+## v2022.2.6 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
+* <Badge text="Api comment preview" type="tip"/>
+* <Badge text="Long delay in checking for updates" type="info"/>
+* <Badge text="Long delay when first open tool window" type="info"/>
+
+::: tip Api comment preview
+![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](../../.vuepress/public/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](../../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)
+:::
+
 ## v2022.2.5.2 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>
 * <Badge text="Post script cannot be cleared" type="danger"/>
 
