@@ -23,9 +23,15 @@ Because developing version is still in development, the documentation of develop
 :::
 
 ## v2022.2.6 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
+* <Badge text="Clear params support" type="tip"/>
 * <Badge text="Api comment preview" type="tip"/>
 * <Badge text="Long delay in checking for updates" type="info"/>
 * <Badge text="Long delay when first open tool window" type="info"/>
+
+::: tip Clear params support
+![clear](../../.vuepress/public/img/2022.2.6/clear.png)
+:::
+
 
 ::: tip Api comment preview
 ![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)

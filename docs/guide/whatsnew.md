@@ -29,6 +29,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 [**查看变更详情----------------->**](./history.md)
 
 ## v2022.2.6 <Badge text="免费试用" type="tip"/><Badge text="开发中" color="LightGreen"/>
+* <Badge text="一键清除参数" type="tip"/>
 * <Badge text="API注释预览" type="tip"/>
 * <Badge text="优化内网检查更新延迟较长" type="info"/>
 * <Badge text="第一次打开工具窗口有短暂卡顿现象" type="info"/>
