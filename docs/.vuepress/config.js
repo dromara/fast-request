@@ -63,7 +63,7 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: "stylesheet",
-                href: "//at.alicdn.com/t/c/font_2601581_9o8c0qvtq78.css",
+                href: "//at.alicdn.com/t/c/font_2601581_3ppze600wbd.css",
             },
         ],
         [
@@ -227,7 +227,7 @@ module.exports = defineHopeConfig({
                         icon: "changelog"
                     },
                     {
-                         text: '❤️赞助',
+                         text: '❤️ 赞助',
                          link: '/guide/sponsorList',
                      },
                     {
@@ -236,10 +236,13 @@ module.exports = defineHopeConfig({
                         icon: "bilibili"
                     },
                      {
-                         text: '加入群聊',
+                         text: '🔥 加入群聊',
                          link: '/guide/concatGroup',
-                         icon: "contactGroup"
-                     }
+                     },
+                     {
+                          text: '🎁 活动',
+                          link: '/guide/activity',
+                      }
                 ],
                 sidebar: {
                     '/guide/': [
@@ -269,6 +272,7 @@ module.exports = defineHopeConfig({
                         "teachingVideo",
                         "faq",
                         "sponsorList",
+                        "activity",
                         "eula"
                     ],
                 }
