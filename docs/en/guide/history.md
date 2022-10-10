@@ -25,11 +25,18 @@ Because developing version is still in development, the documentation of develop
 ## v2022.2.6 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
 * <Badge text="Clear params support" type="tip"/>
 * <Badge text="Api comment preview" type="tip"/>
+* <Badge text="Sort param column by key" type="tip"/>
+* <Badge text="Api doc add required column" type="info"/>
 * <Badge text="Long delay in checking for updates" type="info"/>
 * <Badge text="Long delay when first open tool window" type="info"/>
+* <Badge text="Multi print when use pre-script" type="danger"/>
 
 ::: tip Clear params support
+clear all
 ![clear](../../.vuepress/public/img/2022.2.6/clear.png)
+
+batch clean column value 
+![clearColumnValue](../../.vuepress/public/img/2022.2.6/clearColumnValue.png)
 :::
 
 
@@ -37,6 +44,11 @@ Because developing version is still in development, the documentation of develop
 ![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)
 ![showCommentInClass](../../.vuepress/public/img/2022.2.6/showCommentInClass.png)
 ![showCommentInNavigate](../../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)
+:::
+
+
+::: tip Sort param column by key
+![sortColumn](../../.vuepress/public/img/2022.2.6/sortColumn.png)
 :::
 
 ## v2022.2.5.2 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>

@@ -28,18 +28,28 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## v2022.2.6 <Badge text="免费试用" type="tip"/><Badge text="开发中" color="LightGreen"/>
 * <Badge text="一键清除参数" type="tip"/>
 * <Badge text="API注释预览" type="tip"/>
+* <Badge text="参数列根据key排序" type="tip"/>  
+* <Badge text="Api文档导出新增required列" type="info"/>
 * <Badge text="优化内网检查更新延迟较长" type="info"/>
 * <Badge text="第一次打开工具窗口有短暂卡顿现象" type="info"/>
-
+* <Badge text="前置脚本多次打印" type="danger"/>
 
 ::: tip 一键清除参数
+全局清空
 ![clear](../.vuepress/public/img/2022.2.6/clear.png)
+
+批量清空列值
+![clearColumnValue](../.vuepress/public/img/2022.2.6/clearColumnValue.png)
 :::
 
 ::: tip API注释预览
 ![showCommentConfig](../.vuepress/public/img/2022.2.6/showCommentConfig.png)
 ![showCommentInClass](../.vuepress/public/img/2022.2.6/showCommentInClass.png)
 ![showCommentInNavigate](../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)
+:::
+
+::: tip 参数列根据key排序
+![sortColumn](../.vuepress/public/img/2022.2.6/sortColumn.png)
 :::
 
 ## v2022.2.5.2 <Badge text="免费试用" type="tip"/><Badge text="最新版" type="info"/>
