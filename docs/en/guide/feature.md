@@ -310,7 +310,7 @@ The response of the html return type is no longer truncated in raw, and the html
 
 ![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
 
-## Api comment preview
+## Api comment preview<Badge text="2022.2.6" />
 ![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)
 ![showCommentInClass](../../.vuepress/public/img/2022.2.6/showCommentInClass.png)
 ![showCommentInNavigate](../../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)

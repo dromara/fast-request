@@ -9,7 +9,7 @@ icon: restfulFastRequest
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)  [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) 
 
-[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is an IDEA plugin similar to Postman, it is a powerful restful api toolkit plugin which help you quickly generate url and params by exist method.
+[**<i class="icon iconfont icon-restfulFastRequest"></i>estful <i class="icon iconfont icon-rfr-f"></i>ast <i class="icon iconfont icon-restfulFastRequest"></i>equest**](https://plugins.jetbrains.com/plugin/16988-fast-request) is an IDEA plugin similar to Postman, it is a powerful restful api toolkit plugin which help you quickly generate url and params by exist method.
 `Restful Fast Request = API debug tool + API manager tool + API search tool`. It has a beautiful interface to compose requests,inspect server
 responses,store your api request and export api request.Plugin help you debug request just in IntelliJ IDEA frame
 

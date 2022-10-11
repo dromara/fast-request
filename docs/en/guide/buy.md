@@ -38,12 +38,23 @@ Click next to enter the purchase confirmation page
 ![](../../.vuepress/public/img/buy/step4.png)
 
 ## Step5: Type in the License information to activate the plugin
+
+>Online activation
+
 Click **help->Register Plugins...->Add New License**
 
-* Way 1: Log in to your jetbrains account
-* Way 2: Enter the activation code in Activation code
+Log in your jetbrains account
 
 ![](../../.vuepress/public/img/buy/step5.png)
+
+> Offline activation
+* 1.[Download activation code](https://account.jetbrains.com/licenses)
+
+![](../../.vuepress/public/img/buy/offlineCodeDownload.png)
+
+* 2.Enter the activation code in Activation code
+
+![](../../.vuepress/public/img/buy/offline.png)
 
 <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>Buy</a>
 

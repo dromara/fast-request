@@ -8,7 +8,7 @@ icon: restfulFastRequest
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)  [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) 
 
-[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个类似于Postman的IDEA插件。它是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。
+[**<i class="icon iconfont icon-restfulFastRequest"></i>estful <i class="icon iconfont icon-rfr-f"></i>ast <i class="icon iconfont icon-restfulFastRequest"></i>equest**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个类似于Postman的IDEA插件。它是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。
 `Restful Fast Request = API调试工具 + API管理工具 + API搜索工具`。 它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求。插件帮助你在IDEA界面内更快更高效得调试你的API
 
 对比与HTTP Client，Fast Request不仅拥有HTTP Client内置的功能，还提供了友好易懂直观的界面，让使用者调试API的时候能够更加方便、简捷。同时各种类型参数也提供了不同的定制方式，更加灵活。而且集成了搜索、Postman集成，Swagger支持等额外的功能。

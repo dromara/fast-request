@@ -63,7 +63,7 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: "stylesheet",
-                href: "//at.alicdn.com/t/c/font_2601581_3ppze600wbd.css",
+                href: "//at.alicdn.com/t/c/font_2601581_ab2wsjsnqpr.css",
             },
         ],
         [
@@ -162,6 +162,11 @@ module.exports = defineHopeConfig({
                           icon: "changelog"
                       },
                       {
+                          text: 'Buy plugin',
+                          link: '/en/guide/buy',
+                          icon: "buy"
+                      },
+                      {
                            text: 'Contacts',
                            link: '/en/guide/concatGroup',
                            icon: "contactGroup"
@@ -225,6 +230,11 @@ module.exports = defineHopeConfig({
                         text: '历史变更',
                         link: '/guide/history',
                         icon: "changelog"
+                    },
+                    {
+                        text: '购买插件',
+                        link: '/guide/buy',
+                        icon: "buy"
                     },
                     {
                          text: '❤️ 赞助',

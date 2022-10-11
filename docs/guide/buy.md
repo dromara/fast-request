@@ -40,11 +40,23 @@ icon: buy
 
 ## Step5: 填写License信息激活插件
 
+>在线激活
+
 点击 **help->Register Plugins...->Add New License**
-* 方式1: 登录 Jetbrains账号
-* 方式2: 在 Activation code中输入激活码
+
+需要登录 Jetbrains账号
 
 ![](../.vuepress/public/img/buy/step5.png)
+
+> 离线激活
+* 1.[下载离线激活码](https://account.jetbrains.com/licenses)
+
+![](../.vuepress/public/img/buy/offlineCodeDownload.png)
+
+* 2.在 Activation code中输入激活码
+
+![](../.vuepress/public/img/buy/offline.png)
+
 
 
 ## Tips💡

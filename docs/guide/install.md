@@ -3,6 +3,8 @@ icon: install-fill
 title: 安装
 ---
 
+==请不要安装其他类似插件,引起冲突或者数据丢失概不负责==
+
 * 方式1: 在线安装(推荐). IDEA插件市场搜索Restful Fast Request并安装
 
 ![download](../.vuepress/public/img/download.png)

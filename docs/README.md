@@ -114,15 +114,8 @@ head:
 ## 🎉 致谢
 **Restful Fast Request**简称**RFR**自从2021年上线以来获得了很多人的支持。目前微信社区群700多人,下载超过 <img src="https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857" alt="Downloads" loading="lazy" style="vertical-align: middle;">，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
 
-感谢OSCHINA和Gitee官方平台对**RFR**项目的推荐和肯定。
+感谢OSCHINA和Gitee官方平台对**RFR**项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC年度最受欢迎个人项目" <span class="badge tip" style="vertical-align: middle;">Top 15</span> 殊荣。
 
-**RFR**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC年度最受欢迎个人项目" <span class="badge tip" style="vertical-align: middle;">Top 15</span> 殊荣。
-
-**RFR**首页的Logo、动效及背景由 **森阳** 提供，感谢她的创作，如需要插画和Logo商业合作小伙伴可以联系她：
-
-```
-邮件：sssenyang@qq.com | 微信：ArtSenyang
-```
 
 <div style="height:100px"></div>
 
@@ -298,6 +291,9 @@ head:
     </a>
     <a href="https://www.oschina.net/" target="_blank" style="width:15%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
         <img style="height:40px;" :src="$withBase('/img/link/oschina-logo.png')" >
+    </a>
+    <a href="https://www.xiaonuo.vip/" target="_blank" style="width:15%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
+        <img style="height:40px;" :src="$withBase('/img/link/snowy.png')" title="国内首个国密前后分离快速开发平台">
     </a>
 </div>
 
