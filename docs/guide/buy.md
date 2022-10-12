@@ -1,8 +1,8 @@
 ---
-title: 购买插件
+title: 支持插件
 icon: buy
 ---
-<Badge text="❤️感谢您支持原创,支持正版️❤️" type="tip" vertical="middle"/>
+<Badge text="❤️插件的发展离不开各位开发者的支持,感谢您支持原创,支持正版️❤️" type="tip" vertical="middle"/>
 <br/><br/>
 <Badge text="加入微信群购买享6折️,六折码已放群公告" type="danger" vertical="middle"/>
 
@@ -70,4 +70,4 @@ icon: buy
 
 ![wechatChat](../.vuepress/public/img/wechatGroup.png)
 
-<a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>购买</a>
+<a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>入正</a>

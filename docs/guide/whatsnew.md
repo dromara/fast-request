@@ -26,7 +26,7 @@ feat:<Badge text="新功能" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-[**查看变更详情----------------->**](./history.md)
+[**务必查看变更详情----------------->**](./history.md)
 
 ## v2022.2.6 <Badge text="免费试用" type="tip"/><Badge text="开发中" color="LightGreen"/>
 * <Badge text="一键清除参数" type="tip"/>

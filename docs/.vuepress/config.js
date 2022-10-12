@@ -232,14 +232,10 @@ module.exports = defineHopeConfig({
                         icon: "changelog"
                     },
                     {
-                        text: '购买插件',
+                        text: '支持插件',
                         link: '/guide/buy',
                         icon: "buy"
                     },
-                    {
-                         text: '❤️ 赞助',
-                         link: '/guide/sponsorList',
-                     },
                     {
                         text: '视频教程',
                         link: '/guide/teachingVideo',
@@ -248,6 +244,10 @@ module.exports = defineHopeConfig({
                      {
                          text: '🔥 加入群聊',
                          link: '/guide/concatGroup',
+                     },
+                    {
+                         text: '❤️ 赞助',
+                         link: '/guide/sponsorList',
                      },
                      {
                           text: '🎁 活动',
