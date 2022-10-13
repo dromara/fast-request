@@ -50,6 +50,8 @@ export default hopeTheme({
       categoryId: "DIC_kwDOHLlUss4COlsW",
     },
 
+    components: ["BiliBili"],
+
     mdEnhance: {
       align: true,
       chart: true,
