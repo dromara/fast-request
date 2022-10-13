@@ -5,6 +5,8 @@ icon: featuresNew
 
 The icon in the document corresponds to the button icon in the plugin
 
+![toolwindow](../../../.vuepress/public/img/toolwindow.png)
+
 ## Request
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Make icon move](./makeIconMove.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./searchEveryWhere.md)

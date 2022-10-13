@@ -5,6 +5,8 @@ icon: featuresNew
 
 文档中的图标对应插件中的按钮图标,大标题对应tab以及功能
 
+![toolwindow](../../.vuepress/public/img/toolwindow.png)
+
 ## Request
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./makeIconMove.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./searchEveryWhere.md)
