@@ -20,8 +20,10 @@
   },
   "packageManager": "pnpm@7.13.4",
   "pnpm": {
-    "ignoreMissing": [
-      "@algolia/client-search"
-    ]
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
   }
 }
