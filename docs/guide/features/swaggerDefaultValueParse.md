@@ -1,13 +1,15 @@
-# Swagger默认值
-版本要求:<Badge text="2022.1.4.0" />
+# Swagger 默认值
 
-已下是一些example
+版本要求: <Badge text="2022.1.4.0" />
 
-优先级: swagger配置的值 > 配置默认值
+已下是一些 example
 
-:::: code-group
+优先级: swagger 配置的值 > 配置默认值
 
-::: code-group-item swagger2
+::: code-tabs
+
+@tab swagger2
+
 ```java
 * @ApiParam
 
@@ -41,9 +43,9 @@ public class UserDto {
     private String userName;
 }
 ```
-:::
 
-::: code-group-item swagger3
+@tab swagger3
+
 ```java
 * @Parameter
 
@@ -60,6 +62,5 @@ public class UserDto {
     private String userName;
 }
 ```
-:::
 
-::::
+:::

@@ -3,7 +3,6 @@ title: 快速开始
 icon: start1
 ---
 
-
 ```flow
 st=>start: 开始
 cfg=>parallel: 配置
@@ -22,33 +21,26 @@ op5->op6->e
 ```
 
 ::: tip 使用入门
-* Step1: 点击配置添加项目名[如微信卡片]和环境名[如local、dev]  
-* Step2: 设置对应项目及环境的域名  
-* Step3: 打开工具窗口(右上角位置),选择当前项目想要启用的环境  
-* Step4: 点击在方法左侧的fastRequest的图标<i class="icon iconfont icon-restfulFastRequest"></i>(老图标<i class="icon iconfont icon-restfulFastRequest1"></i>)
-* Step5: 点击发送请求按钮发送请求  
+
+- Step1: 点击配置添加项目名[如微信卡片]和环境名[如 local、dev]
+- Step2: 设置对应项目及环境的域名
+- Step3: 打开工具窗口(右上角位置),选择当前项目想要启用的环境
+- Step4: 点击在方法左侧的 fastRequest 的图标<i class="icon iconfont icon-restfulFastRequest"></i>(老图标<i class="icon iconfont icon-restfulFastRequest1"></i>)
+- Step5: 点击发送请求按钮发送请求
+
 :::
 
 ![](../../.vuepress/public/img/howToUse.gif)
 
-新Logo icon <i class="icon iconfont icon-restfulFastRequest"></i>
+新 Logo icon <i class="icon iconfont icon-restfulFastRequest"></i>
 
 ![](../../.vuepress/public/img/newLogoIcon.png)
 
-
-
 ## 联系我们
+
 如果遇到了问题,请通过一下方式联系我们,将会有更快为你解决问题,同时[进群](../concatGroup.md)将会给与==六折==优惠,群里全部都是==Javaer==,经常会讨论一些技术问题,并且热心,也许可以帮助你==学到一些东西==
 
-|![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
-|------------- |-------|
-|![wechatChat](../../.vuepress/public/img/wechatGroup.png)|![twitter](../../.vuepress/public/img/twitter.png)|
-|如果扫码失败请直接搜微信号==FastRequest99==|欢迎关注官方Twitter|
-
-
-
-
-
-
-
-
+| ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![wechatChat](../../.vuepress/public/img/wechatGroup.png)                                    | ![twitter](../../.vuepress/public/img/twitter.png)                                                                                                |
+| 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |

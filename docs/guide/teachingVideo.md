@@ -3,7 +3,7 @@ title: 视频教程
 icon: bilibili
 ---
 
-B站系列视频
+B 站系列视频
 
 |[![Bilibili](https://img.shields.io/static/v1?label=Bilibili&message=Bilibili&logo=bilibili&color=FC8D34)](https://space.bilibili.com/370110042)
 |------|

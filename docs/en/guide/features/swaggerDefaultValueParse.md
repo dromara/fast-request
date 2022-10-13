@@ -1,12 +1,15 @@
 # Swagger default value
-Version required:<Badge text="2022.1.4" />
+
+Version required: <Badge text="2022.1.4" />
 
 Below are some examples
 
 Priority: swagger default value > config default value
-:::: code-group
 
-::: code-group-item swagger2
+:::: code-tabs
+
+@tab swagger2
+
 ```java
 * @ApiParam
 
@@ -40,9 +43,9 @@ public String test3(@ApiParam(name = "id",defaultValue="2") @PathVariable("id") 
         private String userName;
         }
 ```
-:::
 
-::: code-group-item swagger3
+@tab swagger3
+
 ```java
 * @Parameter
 
@@ -59,6 +62,5 @@ public class UserDto {
     private String userName;
 }
 ```
-:::
 
-::::
+:::

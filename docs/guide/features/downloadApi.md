@@ -1,5 +1,5 @@
 # 下载文件
 
-点击Send and download
+点击 Send and download
 
 ![example_download](../../.vuepress/public/img/downloadFile.png)
