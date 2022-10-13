@@ -124,11 +124,11 @@ module.exports = defineHopeConfig({
         displayFooter: true,
         copyright: "Copyright © 2021-present Kings",
         themeColor: {
-              green: "#21D789",
-              blue: "#087CFA",
-              red: "#FE2857",
               pink :"#f26d6d",
-              lightBlue:"#07C3F2"
+              lightBlue:"#07C3F2",
+              orange: "#FC801D",
+              blue: "#087CFA",
+              red: "#FE2857"
         },
         iconPrefix:'iconfont icon-',
         logo:'/img/logoLine.gif',
