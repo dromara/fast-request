@@ -3,6 +3,8 @@ title: Features
 icon: tools
 ---
 
+==Deprecated==,[Please click here](./features/README.md)
+
 [[toc]]
 
 ## Make icon move<Badge text="2022.2.4" />

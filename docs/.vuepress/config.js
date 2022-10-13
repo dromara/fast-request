@@ -63,9 +63,16 @@ module.exports = defineHopeConfig({
             'link',
             {
                 rel: "stylesheet",
-                href: "//at.alicdn.com/t/c/font_2601581_ab2wsjsnqpr.css",
+                href: "//at.alicdn.com/t/c/font_2601581_jazhgjsvaba.css",
             },
         ],
+        [
+            'script',
+            {
+                src: '//at.alicdn.com/t/c/font_2601581_jazhgjsvaba.js'
+            }
+        ],
+
         [
             'script',
             {
@@ -148,8 +155,8 @@ module.exports = defineHopeConfig({
                       },
                       {
                           text: 'Features',
-                          link: '/en/guide/feature',
-                          icon: "tools"
+                          link: '/en/guide/features',
+                          icon: "featuresNew"
                       },
                       {
                           text: 'Script',
@@ -191,14 +198,52 @@ module.exports = defineHopeConfig({
                             ],
                         },
                         "install",
-                        "feature",
+                        {
+                            text: "Features",
+                            icon: "featuresNew",
+                            prefix: "features/",
+                            collapsable: true,
+                            link: "/en/guide/features",
+                            children: [
+                                "makeIconMove",
+                                "searchEveryWhere",
+                                "projectValueConfig",
+                                "navigateCurrentMethod",
+                                "debugApi",
+                                "downloadApi",
+                                "stopRequest",
+                                "saveRequest",
+                                "apiGroup",
+                                "tempRequest",
+                                "regenerate",
+                                "curlImport",
+                                "copyCurl",
+                                "copyUrl",
+                                "historyRequest",
+                                "htmlPreview",
+                                "swaggerDefaultValueParse",
+                                "autoDescription",
+                                "apiList",
+                                "apiToPostman",
+                                "apiImportExport",
+                                "batchExportApiDoc",
+                                "apiNavigateTree",
+                                "apiPreview",
+                                "apiCommentPreview",
+                                "script",
+                                "quickAddHeader",
+                                "headersGroup",
+                                "jsonGrammarCheck",
+                            ],
+                        },
                         "script",
                         "whatsnew",
                         "history",
                         "buy",
                         "concatGroup",
                         "faq",
-                        "eula"
+                        "eula",
+                        "feature"
                     ]
                 }
             },
@@ -218,8 +263,8 @@ module.exports = defineHopeConfig({
                     },
                     {
                         text: '功能',
-                        link: '/guide/feature',
-                        icon: "tools"
+                        link: '/guide/features',
+                        icon: "featuresNew"
                     },
                      {
                          text: '脚本',
@@ -273,7 +318,44 @@ module.exports = defineHopeConfig({
                             ],
                         },
                         "install",
-                        "feature",
+                        {
+                            text: "功能",
+                            icon: "featuresNew",
+                            prefix: "features/",
+                            collapsable: true,
+                            link: "/guide/features",
+                            children: [
+                              "makeIconMove",
+                              "searchEveryWhere",
+                              "projectValueConfig",
+                              "navigateCurrentMethod",
+                              "debugApi",
+                              "downloadApi",
+                              "stopRequest",
+                              "saveRequest",
+                              "apiGroup",
+                              "tempRequest",
+                              "regenerate",
+                              "curlImport",
+                              "copyCurl",
+                              "copyUrl",
+                              "historyRequest",
+                              "htmlPreview",
+                              "swaggerDefaultValueParse",
+                              "autoDescription",
+                              "apiList",
+                              "apiToPostman",
+                              "apiImportExport",
+                              "batchExportApiDoc",
+                              "apiNavigateTree",
+                              "apiPreview",
+                              "apiCommentPreview",
+                              "script",
+                              "quickAddHeader",
+                              "headersGroup",
+                              "jsonGrammarCheck",
+                            ],
+                        },
                         "script",
                         "whatsnew",
                         "history",
@@ -283,7 +365,8 @@ module.exports = defineHopeConfig({
                         "faq",
                         "sponsorList",
                         "activity",
-                        "eula"
+                        "eula",
+                        "feature"
                     ],
                 }
             }

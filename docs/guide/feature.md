@@ -3,6 +3,8 @@ title: 功能
 icon: tools
 ---
 
+==不再维护==,[请点击这边的文档](./features/README.md)
+
 [[toc]]
 
 ## 让图标动起来<Badge text="2022.2.4"/>
@@ -277,7 +279,7 @@ Response Example需要运行你的API后才会被显示
 配置优先级`api头 > 项目级别全局请求头 > 全局请求头`
 
 ![projectConfigParam](../.vuepress/public/img/projectConfigParam.png)
-:::
+
 
 ## cURL导入<Badge text="2022.2.1" />
 ![importByCurl](../.vuepress/public/img/2022.2.1/importByCurl.gif)

@@ -25,14 +25,14 @@ op5->op6->e
 * Step1: Click Manager config then add project name[example:wx card] and env[example:local、dev]  
 * Step2: set target domain  
 * Step3: open toolwindow(at the top-right corner),select project and env  
-* Step4: click <i class="icon iconfont icon-restfulFastRequest"></i>(fastRequest icon) on method left  
+* Step4: click <i class="icon iconfont icon-restfulFastRequest"></i>(fastRequest icon) on method left(Old icon<i class="icon iconfont icon-restfulFastRequest1"></i>)
 * Step5: click send button for sending request  
 :::
 
 ![](../../../.vuepress/public/img/howToUse_en.gif)
 
 
-New logo icon
+New logo icon <i class="icon iconfont icon-restfulFastRequest"></i>
 
 ![](../../../.vuepress/public/img/newLogoIcon.png)
 

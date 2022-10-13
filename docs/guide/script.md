@@ -13,9 +13,9 @@ headerDepth: 4
 ## 脚本流程图
 ```flow
 st=>start: Start
-op1=>inputoutput: Pre-request script
+op1=>inputoutput: 前置脚本
 op2=>subroutine: Do request
-op3=>operation: Post-request script
+op3=>operation: 后置脚本
 e=>end: End
 st(bottom)->op1(right)->op2(right)->op3->e
 ```

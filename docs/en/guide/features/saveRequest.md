@@ -1,0 +1,16 @@
+# Save request
+
+:::tip Special Note  
+1.The saved request will be put in *Default Group* by default, support drag and drop into other groups,Of course, it is best to join the module group, please see `API group automatic association`
+
+2.API Name:If the api uses swagger annotations `@ApiOperation("xxx")`,The api is named xxx,If there is no swagger annotation,Use javadoc as the name of the api,Otherwise it will be named New Request
+```
+if (@ApiOperation("xxx"))
+    apiName = xxx
+else if(java doc)
+    apiName = java doc
+else 
+    apiName = New Request       
+```
+:::
+![example_download](../../../.vuepress/public/img/saveRequest.png)

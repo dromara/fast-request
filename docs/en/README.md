@@ -1,5 +1,6 @@
 ---
 home: true
+icon: restfulFastRequest
 title: home
 heroImage: /img/logoLight.gif
 heroImageDark: /img/logoDark.gif

@@ -1,4 +1,5 @@
 ---
+icon: restfulFastRequest
 home: true
 title: 主页
 heroImage: /img/logoLight.gif
@@ -73,7 +74,7 @@ head:
 |![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
 |------------- |-------|
 |![wechatChat](./.vuepress/public/img/wechatGroup.png)|![twitter](./.vuepress/public/img/twitter.png)|
-|如果二维码过期请直接添加二维码下方作者微信|欢迎关注官方Twitter|
+|如果扫码失败请直接搜微信号FastRequest99|欢迎关注官方Twitter|
 
 ## 🥇 功能
 
