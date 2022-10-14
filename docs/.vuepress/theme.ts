@@ -3,7 +3,7 @@ import { enNavbar, zhNavbar } from "./navbar.js";
 import { enSidebar, zhSidebar } from "./sidebar.js";
 
 export default hopeTheme({
-  logo: "/img/logoLine.gif",
+  logo: "/img/logo/logo.svg",
 
   repo: "https://github.com/dromara/fast-request",
   docsDir: "docs",
