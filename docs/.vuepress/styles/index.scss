@@ -83,3 +83,24 @@ h2 {
 .navbar .site-name {
   display: none;
 }
+
+.breadcrumb a{
+    font-family: bobohei, sans-serif;
+}
+.navbar {
+  .site-name {
+    font-family: bobohei, sans-serif;
+  }
+
+  .nav-item > .nav-link {
+    font-family: bobohei, sans-serif;
+  }
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}

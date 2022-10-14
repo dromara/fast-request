@@ -39,10 +39,10 @@
 
 [https://dromara.gitee.io/fast-request/guide/concatGroup.html](https://dromara.gitee.io/fast-request/guide/concatGroup.html)
 
-更快速得回复问题,可以加入微信1群,同时也可以一起探讨研究技术问题
+更快速得回复问题,可以加入微信群,同时也可以一起探讨研究技术问题
 
 
-| ![微信](./screenshot/wechat.jpg) |
+| ![微信](./screenshot/wechatGroup.png) |
 |---|
 |如果扫码失败请直接搜微信号FastRequest99|
 
@@ -102,14 +102,12 @@
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA
 
 ## 特别鸣谢
+[vuepress-theme-hope主题](https://vuepress-theme-hope.github.io/v2/) 作者 [Mister-Hope](https://github.com/Mister-Hope) 提供文档支持
 
-为Restful Fast Request提供宣传、托管等服务
+OsChina、Gitee为Restful Fast Request提供宣传、托管等服务
 
 [![](./screenshot/org/gitee.svg)](https://gitee.com)
 [![](./screenshot/org/OSChina.svg)](https://www.oschina.net)
 
-[comment]: <> (## Dromara成员项目)
-
-[comment]: <> ([![]&#40;./screenshot/org/hutool.svg&#41;]&#40;https://hutool.cn&#41;)
 
 
