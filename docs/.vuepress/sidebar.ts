@@ -135,6 +135,7 @@ export const zhSidebar = sidebar({
     "sponsorList",
     "activity",
     "eula",
+    "link",
     "feature",
   ],
 });
