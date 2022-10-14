@@ -1,4 +1,4 @@
-# 调试API发送请求
+# 调试 API 发送请求
 
 ![example](../../.vuepress/public/img/example.gif)
 

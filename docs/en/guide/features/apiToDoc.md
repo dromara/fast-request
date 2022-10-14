@@ -1,5 +1,6 @@
 # API to document
-Version required:<Badge text="2022.1.5+" />
+
+Version required: <Badge text="2022.1.5+" />
 
 Please note that the API in word form is implemented in html, so don't feel strange, just export it
 

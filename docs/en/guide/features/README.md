@@ -1,6 +1,7 @@
 ---
 icon: featuresNew
 ---
+
 # Features
 
 The icon in the document corresponds to the button icon in the plugin
@@ -8,10 +9,11 @@ The icon in the document corresponds to the button icon in the plugin
 ![toolwindow](../../../.vuepress/public/img/toolwindow.png)
 
 ## Request
+
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Make icon move](./makeIconMove.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./searchEveryWhere.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config](./projectValueConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method](./navigateCurrentMethod.md) 
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method](./navigateCurrentMethod.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> Debug API & send request](./debugApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> Download file](./downloadApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> Stop API request](./stopRequest.md)
@@ -27,37 +29,32 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./htmlPreview.md)
 
 ## Apis
+
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-ppLib"></use></svg> API list](./apiList.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-postman"></use></svg> APIs export to Postman](./apiToPostman.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-export"></use></svg> APIs import and export](./apiImportExport.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> Batch export API doc](./batchExportApiDoc.md)
 
 ## Navigate
+
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> API navigate tree](./apiNavigateTree.md)
 
 ## Generate
+
 - [Swagger default value parsing support](./swaggerDefaultValueParse.md)
 - [Auto Description](./autoDescription.md)
 
 ## Editor
+
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> API list preview](./apiPreview.md)
 - [Api comment preview](./apiCommentPreview.md)
 
 ## Script
+
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-script"></use></svg> Script](./script.md)
 
 ## Other
+
 - [Quickly add header](./quickAddHeader.md)
 - [Headers group](./headersGroup.md)
 - [Json grammar check](./jsonGrammarCheck.md)
-
-
-
-
-
-
-
-
-
-
-

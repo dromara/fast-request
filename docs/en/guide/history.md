@@ -10,35 +10,36 @@ icon: changelog
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
-|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request)|
-|------|------------- |
-|![twitter](../../.vuepress/public/img/twitter.png)|![telegram](../../.vuepress/public/img/telegram.png)|
+| [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) | [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![twitter](../../.vuepress/public/img/twitter.png)                                                                                                | ![telegram](../../.vuepress/public/img/telegram.png)                                                                                                          |
 
 Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 
 ---
-feat:<Badge text="New function" type="tip"/>  <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf:<Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix:<Badge text="Fix or Remove function" type="danger"/>
+
+feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2022.2.6 <Badge text="Free trial" type="tip"/><Badge text="Developing" color="LightGreen"/>
-* <Badge text="Clear params support" type="tip"/>
-* <Badge text="Api comment preview" type="tip"/>
-* <Badge text="Sort param column by key" type="tip"/>
-* <Badge text="Api doc add required column" type="info"/>
-* <Badge text="Long delay in checking for updates" type="info"/>
-* <Badge text="Long delay when first open tool window" type="info"/>
-* <Badge text="Multi print when use pre-script" type="danger"/>
+## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+
+- <Badge text="Clear params support" type="tip"/>
+- <Badge text="Api comment preview" type="tip"/>
+- <Badge text="Sort param column by key" type="tip"/>
+- <Badge text="Api doc add required column" type="info"/>
+- <Badge text="Long delay in checking for updates" type="info"/>
+- <Badge text="Long delay when first open tool window" type="info"/>
+- <Badge text="Multi print when use pre-script" type="danger"/>
 
 ::: tip Clear params support
 clear all
 ![clear](../../.vuepress/public/img/2022.2.6/clear.png)
 
-batch clean column value 
+batch clean column value
 ![clearColumnValue](../../.vuepress/public/img/2022.2.6/clearColumnValue.png)
 :::
-
 
 ::: tip Api comment preview
 ![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)
@@ -46,25 +47,27 @@ batch clean column value
 ![showCommentInNavigate](../../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)
 :::
 
-
 ::: tip Sort param column by key
 ![sortColumn](../../.vuepress/public/img/2022.2.6/sortColumn.png)
 :::
 
-## v2022.2.5.2 <Badge text="Free trial" type="tip"/><Badge text="Newest version" type="tip"/>
-* <Badge text="Post script cannot be cleared" type="danger"/>
+## v2022.2.5.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="tip"/>
+
+- <Badge text="Post script cannot be cleared" type="danger"/>
 
 ## v2022.2.5.1 <Badge text="Free trial" type="tip"/>
-* <Badge text="Console syntax error" type="danger"/>
+
+- <Badge text="Console syntax error" type="danger"/>
 
 ## v2022.2.5 <Badge text="Free trial" type="tip"/>
-* <Badge text="Add console for script" type="tip"/>
-* <Badge text="Add print script support" type="tip"/>
-* <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
-* <Badge text="Get description from javadoc for path and request param" type="tip"/>
-* <Badge text="@RequestPart support" type="tip"/>  
-* <Badge text="Add twitter in doc action group" type="tip"/>
-* <Badge text="Post script not execute when response is success but code for example is 401" type="danger"/>
+
+- <Badge text="Add console for script" type="tip"/>
+- <Badge text="Add print script support" type="tip"/>
+- <Badge text="Add currentProjectName and currentEnvName property in build-in property" type="tip"/>
+- <Badge text="Get description from javadoc for path and request param" type="tip"/>
+- <Badge text="@RequestPart support" type="tip"/>
+- <Badge text="Add twitter in doc action group" type="tip"/>
+- <Badge text="Post script not execute when response is success but code for example is 401" type="danger"/>
 
 ::: tip Console support
 Console helps developers print some info you wanted
@@ -87,7 +90,6 @@ Parse parameter comments in the form of Javadoc, suitable for path parameters an
 ![parseDocDesc](../../.vuepress/public/img/2022.2.5/parseDocDesc.png)
 :::
 
-
 ::: tip twitter
 有推特账号的请关注我,感谢
 
@@ -96,20 +98,19 @@ Parse parameter comments in the form of Javadoc, suitable for path parameters an
 ![twitterAction](../../.vuepress/public/img/2022.2.5/twitterAction.png)
 :::
 
-
 ## v2022.2.4.1 <Badge text="Free trial" type="tip"/>
 
-* <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
+- <Badge text="Fix the small screen EUAL agreement cannot display the agree button" type="danger"/>
 
 ## v2022.2.4 <Badge text="Free trial" type="tip"/>
-* <Badge text="New logo" type="tip"/>
-* <Badge text="Support parse date by annotation's pattern" type="tip"/>
-* <Badge text="Support parse url of BaseController" type="tip"/>
-* <Badge text="Change auto update configurable" type="info"/>
-* <Badge text="Parameter encoding" type="info"/>
-* <Badge text="Parse error when map not contains generics" type="danger"/>
-* <Badge text="Post script can not add or remove header" type="danger"/>
 
+- <Badge text="New logo" type="tip"/>
+- <Badge text="Support parse date by annotation's pattern" type="tip"/>
+- <Badge text="Support parse url of BaseController" type="tip"/>
+- <Badge text="Change auto update configurable" type="info"/>
+- <Badge text="Parameter encoding" type="info"/>
+- <Badge text="Parse error when map not contains generics" type="danger"/>
+- <Badge text="Post script can not add or remove header" type="danger"/>
 
 ::: tip New logo
 Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
@@ -122,33 +123,35 @@ Developers can freely choose and switch the color you want in the drop-down box,
 
 :::
 
-:::tip Support parse date by DateTimeFormat annotation pattern
+::: tip Support parse date by DateTimeFormat annotation pattern
 ![dateTimeFormat](../../.vuepress/public/img/2022.2.4/dateTimeFormat.png)
 :::
 
-:::tip Support parse url of BaseController
+::: tip Support parse url of BaseController
 ![baseController](../../.vuepress/public/img/2022.2.4/baseController.png)
 :::
 
-:::info Change auto update configurable
+::: info Change auto update configurable
 If you don't need to receive automatic updates, you can turn it off and update it manually (recommend open)
 ![autoUpdate](../../.vuepress/public/img/2022.2.4/autoUpdate.png)
 :::
 
 ## v2022.2.3.1 <Badge text="Free trial" type="tip"/>
-* <Badge text="Fix the bug that the parameter cannot be cleared" type="danger"/>
+
+- <Badge text="Fix the bug that the parameter cannot be cleared" type="danger"/>
 
 ## v2022.2.3 <Badge text="Free trial" type="tip"/>
-* <Badge text="Pre-request Script" type="tip"/>
-* <Badge text="Post-request Script" type="tip"/>
-* <Badge text="One-click copy Url" type="tip"/>
-* <Badge text="Compatible with IDEA 2021.2.1" type="info"/>  
-* <Badge text="RequestParam defaultValue parse" type="info"/>
-* <Badge text="Apply table cell value change when click send request" type="info"/>
-* <Badge text="Url can not generate after close tool window and reopen" type="danger"/>
-* <Badge text="Jax-rs PATCH not supported" type="danger"/>
 
-:::tip Script support
+- <Badge text="Pre-request Script" type="tip"/>
+- <Badge text="Post-request Script" type="tip"/>
+- <Badge text="One-click copy Url" type="tip"/>
+- <Badge text="Compatible with IDEA 2021.2.1" type="info"/>
+- <Badge text="RequestParam defaultValue parse" type="info"/>
+- <Badge text="Apply table cell value change when click send request" type="info"/>
+- <Badge text="Url can not generate after close tool window and reopen" type="danger"/>
+- <Badge text="Jax-rs PATCH not supported" type="danger"/>
+
+::: tip Script support
 Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
 Please refer to [Script](./script.md)
 
@@ -157,7 +160,7 @@ Please refer to [Script](./script.md)
 ![scriptModule](../../.vuepress/public/img/2022.2.3/scriptModule_en.png)
 :::
 
-:::tip One-click copy Url
+::: tip One-click copy Url
 ![copyUrl](../../.vuepress/public/img/2022.2.3/copyUrl.png)
 :::
 
@@ -167,37 +170,35 @@ Before ==2022.2.3==, when entering the parameters in the table, if the cursor is
 How the old version deals with it: [FAQ:After entering the parameters, the API call found that the parameters were invalid](./faq.md)
 :::
 
+## v2022.2.2 <Badge text="Free trial" type="warn"/>
 
-## v2022.2.2<Badge text="Free trial" type="warn"/>
-* <Badge text="Add stop API request function" type="tip"/>
-* <Badge text="Batch export API doc" type="tip"/>
-* <Badge text="Add annotations when export to Postman" type="tip"/>
-* <Badge text="Editor hangs in case of a large amount of response data" type="info"/>
-* <Badge text="The experience and tips in some scenarios" type="info"/>
-* <Badge text="SearchEveryWhere err in EAP/New ui version" type="danger"/>
-* <Badge text="Error when modify number param in Multipart" type="danger"/>
-* <Badge text="History request delete operation error in some cases" type="danger"/>
+- <Badge text="Add stop API request function" type="tip"/>
+- <Badge text="Batch export API doc" type="tip"/>
+- <Badge text="Add annotations when export to Postman" type="tip"/>
+- <Badge text="Editor hangs in case of a large amount of response data" type="info"/>
+- <Badge text="The experience and tips in some scenarios" type="info"/>
+- <Badge text="SearchEveryWhere err in EAP/New ui version" type="danger"/>
+- <Badge text="Error when modify number param in Multipart" type="danger"/>
+- <Badge text="History request delete operation error in some cases" type="danger"/>
 
-:::tip Add stop API request function
+::: tip Add stop API request function
 ![stopApi](../../.vuepress/public/img/2022.2.2/stopApi.gif)
 :::
 
-:::tip Batch export API doc
+::: tip Batch export API doc
 ![batchExportApiDoc](../../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
 :::
 
+## v2022.2.1 <Badge text="Free trial" type="warn"/>
 
-
-## v2022.2.1<Badge text="Free trial" type="warn"/>
-* <Badge text="API grouping parameter save support" type="tip"/>
-* <Badge text="Temporary request save support" type="tip"/>
-* <Badge text="Add support for cURL import" type="tip"/>
-* <Badge text="Add Response Header in response" type="tip"/>
-* <Badge text="Add support for Url suffix" type="tip"/>
-* <Badge text="Optimized parameter parsing" type="info"/>
-* <Badge text="Optimize shortcut keys" type="info"/>
-* <Badge text="Fix Word export bug" type="danger"/>
-
+- <Badge text="API grouping parameter save support" type="tip"/>
+- <Badge text="Temporary request save support" type="tip"/>
+- <Badge text="Add support for cURL import" type="tip"/>
+- <Badge text="Add Response Header in response" type="tip"/>
+- <Badge text="Add support for Url suffix" type="tip"/>
+- <Badge text="Optimized parameter parsing" type="info"/>
+- <Badge text="Optimize shortcut keys" type="info"/>
+- <Badge text="Fix Word export bug" type="danger"/>
 
 ::: tip API grouping parameter save support
 Purpose: Save parameters of different combinations under one API
@@ -232,7 +233,6 @@ The Url of the Request saved by the temporary request must start with ==http== o
 ==Note that if you need to bind a method, you need to place the cursor on the method name==
 :::
 
-
 ::: tip Add Response Header in response
 
 ![responseHeader](../../.vuepress/public/img/2022.2.1/responseHeader.png)
@@ -251,14 +251,15 @@ Purpose: Some requests need to add .do at the end of the url
 Optimized parsing of `List<Entity>`
 :::
 
-## v2022.1.10<Badge text="Free trial" type="warn"/>
-* <Badge text="Add support for history request preview" type="tip"/>
-* <Badge text="Add support for description search in SearchEveryWhere" type="tip"/>
-* <Badge text="Add request timeout settings" type="tip"/>
-* <Badge text="Shortcut key conflict optimization" type="info"/>
-* <Badge text="Text editor character display cursor positioning optimization" type="info"/>
-* <Badge text="Curl output format optimization" type="info"/>
-* <Badge text="Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)" type="info"/>
+## v2022.1.10 <Badge text="Free trial" type="warn"/>
+
+- <Badge text="Add support for history request preview" type="tip"/>
+- <Badge text="Add support for description search in SearchEveryWhere" type="tip"/>
+- <Badge text="Add request timeout settings" type="tip"/>
+- <Badge text="Shortcut key conflict optimization" type="info"/>
+- <Badge text="Text editor character display cursor positioning optimization" type="info"/>
+- <Badge text="Curl output format optimization" type="info"/>
+- <Badge text="Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)" type="info"/>
 
 ::: tip Add support for history request preview
 Hidden skills: Double-click the record to display details
@@ -270,32 +271,33 @@ Support description search API
 ![searchEveryWhereDescription](../../.vuepress/public/img/searchEveryWhereDescription.png)
 :::
 
-
 ::: tip Add request timeout settings
 Default value: 60 seconds
 ![timeoutSetting](../../.vuepress/public/img/timeoutSetting.png)
 :::
 
-
 ::: info Optimization
-* Shortcut key conflict optimization
-  * Added Shift to the three shortcut keys for opening windows
-* Text editor character display cursor positioning optimization
-  * When the text editor generates a string, it focuses on the first line by default
+
+- Shortcut key conflict optimization
+  - Added Shift to the three shortcut keys for opening windows
+- Text editor character display cursor positioning optimization
+  - When the text editor generates a string, it focuses on the first line by default
+
 :::
 
-## v2022.1.9<Badge text="Free trial" type="warn"/>
-* <Badge text="Add shortcut keys for tool window jump" type="tip"/>
-* <Badge text="Add auto add cookie support" type="tip"/>
-* <Badge text="Add support for html preview in response raw" type="tip"/>
-* <Badge text="Ignore field parsing optimizations" type="info"/>
-* <Badge text="Generic parameter parsing support" type="info"/>
-* <Badge text="Improve project global config" type="info"/>
-* <Badge text="Interface optimization" type="info"/>
-* <Badge text="Save API insertion order optimization" type="info"/>
-* <Badge text="APIs list view optimization" type="info"/>
-* <Badge text="Optimized export preview" type="info"/>
-* <Badge text="Fixed bug when editing params at the same time delete param" type="danger"/>
+## v2022.1.9 <Badge text="Free trial" type="warn"/>
+
+- <Badge text="Add shortcut keys for tool window jump" type="tip"/>
+- <Badge text="Add auto add cookie support" type="tip"/>
+- <Badge text="Add support for html preview in response raw" type="tip"/>
+- <Badge text="Ignore field parsing optimizations" type="info"/>
+- <Badge text="Generic parameter parsing support" type="info"/>
+- <Badge text="Improve project global config" type="info"/>
+- <Badge text="Interface optimization" type="info"/>
+- <Badge text="Save API insertion order optimization" type="info"/>
+- <Badge text="APIs list view optimization" type="info"/>
+- <Badge text="Optimized export preview" type="info"/>
+- <Badge text="Fixed bug when editing params at the same time delete param" type="danger"/>
 
 ::: tip Add shortcut keys for tool window jump
 Provides shortcut keys to jump quickly, you can change it in `setting -> Keymap`
@@ -315,12 +317,15 @@ The response of the html return type is no longer truncated in raw, and the html
 :::
 
 ::: info Ignore field parsing optimizations
-* <Badge text="Ignore parsing annotated by `@JsonIgnore`、`@JSONField(serialize = false)` fields" type="info"/>
-* <Badge text="Ignore parsing`transient` keyword-decorated fields" type="info"/>
-  :::
+
+- <Badge text="Ignore parsing annotated by `@JsonIgnore`、`@JSONField(serialize = false)` fields" type="info"/>
+- <Badge text="Ignore parsing`transient` keyword-decorated fields" type="info"/>
+
+:::
 
 ::: info Generic parameter parsing support
 Support for such generic parameter parsing
+
 ```java
 @Data
 public class CommonDTO<T,R> implements Serializable {
@@ -336,6 +341,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
     return 1;
 }
 ```
+
 :::
 
 ::: info Improve project global config
@@ -343,29 +349,28 @@ Added `URL Params`、`URL-Encoded Params`、`Cookies`
 ![projectConfigParam](../../.vuepress/public/img/projectGlobalParam.png)
 :::
 
-
-
 ::: note Optimization
-* Interface optimization
-  * Optimized tab spacing(narrow under windows)、background color
-* Save API insertion order optimization
-  * The post-saved API will be placed on top
+
+- Interface optimization
+  - Optimized tab spacing(narrow under windows)、background color
+- Save API insertion order optimization
+  - The post-saved API will be placed on top
+
 :::
-
-
 
 ::: tip APIs list view optimization
 The rendering of the APIs interface has been optimized,Newly saved api icons are automatically optimized by default,The API saved in history can be right-clicked to select and change
 ![apisList](../../.vuepress/public/img/apisList.png)
 :::
 
-## v2022.1.8<Badge text="Free trial" type="warn"/>
-* <Badge text="Project-level global parameters support" type="tip"/>
-* <Badge text="Optimized response data quickly add to headers" type="info"/>
-* <Badge text="Optimized cookies quickly added to the header" type="info"/>
-* <Badge text="Postman export optimization" type="info"/>
-* <Badge text="Fix navigate tree scan bug" type="danger"/>
-* <Badge text="Fix some bug" type="danger"/>
+## v2022.1.8 <Badge text="Free trial" type="warn"/>
+
+- <Badge text="Project-level global parameters support" type="tip"/>
+- <Badge text="Optimized response data quickly add to headers" type="info"/>
+- <Badge text="Optimized cookies quickly added to the header" type="info"/>
+- <Badge text="Postman export optimization" type="info"/>
+- <Badge text="Fix navigate tree scan bug" type="danger"/>
+- <Badge text="Fix some bug" type="danger"/>
 
 ::: tip Project-level global parameters support
 
@@ -378,7 +383,7 @@ Configure priority `api header > project header>global header`
 
 ::: info Quickly add to header parameters
 
-Change ~~add params to global header~~ to `add params to project global header` 
+Change ~~add params to global header~~ to `add params to project global header`
 
 Cookie is also like this
 
@@ -387,13 +392,14 @@ Cookie is also like this
 ![cookie2projectConfig](../../.vuepress/public/img/cookie2projectConfig.png)
 :::
 
-## v2022.1.7<Badge text="Free trial" type="warn"/>
-* <Badge text="Kotlin spring framework support" type="tip"/>
-* <Badge text="Add SearchEveryWhere scope search strategy" type="tip"/>
-* <Badge text="Add toggleUseSoftWrap support in editor" type="tip"/>
-* <Badge text="Add support for add to Global Header from response" type="tip"/>
-* <Badge text="Add support for navigating to the current method" type="tip"/>
-* <Badge text="Optimize automatic binding projectName for saved api under multiple modules" type="info"/>
+## v2022.1.7 <Badge text="Free trial" type="warn"/>
+
+- <Badge text="Kotlin spring framework support" type="tip"/>
+- <Badge text="Add SearchEveryWhere scope search strategy" type="tip"/>
+- <Badge text="Add toggleUseSoftWrap support in editor" type="tip"/>
+- <Badge text="Add support for add to Global Header from response" type="tip"/>
+- <Badge text="Add support for navigating to the current method" type="tip"/>
+- <Badge text="Optimize automatic binding projectName for saved api under multiple modules" type="info"/>
 
 ::: tip Kotlin spring framework support
 ![kotlinSupport](../../.vuepress/public/img/kotlinSupport.png)
@@ -427,11 +433,12 @@ After you generate the url of the method, sometimes you will switch to another p
 Optimized the need to manually switch the project drop-down box for the saved api echo under the multi-module
 :::
 
-## v2022.1.6<Badge text="Free trial" type="warn"/>
-* <Badge text="Add support for one click to add cookie to header" type="tip"/>
-* <Badge text="Add support for sharing API to Word and html" type="tip"/>
-* <Badge text="Fix bug for `Basic Authorization` don't carry Basic" type="danger"/>
-* <Badge text="Removes the drag function in APIs tab" type="danger"/>
+## v2022.1.6 <Badge text="Free trial" type="warn"/>
+
+- <Badge text="Add support for one click to add cookie to header" type="tip"/>
+- <Badge text="Add support for sharing API to Word and html" type="tip"/>
+- <Badge text="Fix bug for `Basic Authorization` don't carry Basic" type="danger"/>
+- <Badge text="Removes the drag function in APIs tab" type="danger"/>
 
 ::: tip Add support for one click to add cookie to header
 
@@ -447,14 +454,13 @@ Please note that the API in word form is implemented in html, so don't feel stra
 ![shareApi](../../.vuepress/public/img/shareApi_en.png)
 :::
 
-
-
 ## v2022.1.5 <Badge text="Free trial" type="warn"/>
-* <Badge text="Add support for automatically generating parameter descriptions" type="tip"/>
-* <Badge text="Add support for generate API documentation" type="tip"/>
-* <Badge text="Add support for single class API list preview" type="tip"/>
-* <Badge text="Remove text/html in Accept param in default header" type="danger"/>
-* <Badge text="Fix some bugs" type="danger"/>
+
+- <Badge text="Add support for automatically generating parameter descriptions" type="tip"/>
+- <Badge text="Add support for generate API documentation" type="tip"/>
+- <Badge text="Add support for single class API list preview" type="tip"/>
+- <Badge text="Remove text/html in Accept param in default header" type="danger"/>
+- <Badge text="Fix some bugs" type="danger"/>
 
 ::: tip Add support for automatically generating parameter descriptions
 
@@ -480,22 +486,23 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 ![apiDocExample](../../.vuepress/public/img/apiPreview.gif)
 :::
 
-
 ## v2022.1.4 <Badge text="Free trial" type="warn"/>
+
 ==require idea 2021.2+==
-* <Badge text="SearchEveryWhere highlight optimization" type="info"/>
-* <Badge text="Add support for import and export APIs" type="tip"/>
-* <Badge text="Add support for run APIs" type="tip"/>
-* <Badge text="Add timeout for api request" type="tip"/>
-* <Badge text="Compatible with idea 2022.1" type="info"/>
-* <Badge text="Make it optional for automatically generate parameters" type="tip"/>
-* <Badge text="Swagger annotation default value parameter parsing support" type="tip"/>
-* <Badge text="Merged Send and Send and Download buttons" type="info"/>
-* <Badge text="APIs user interface optimization" type="info"/>
-* <Badge text="API Navigate rename to Navigate in tab" type="info"/>
-* <Badge text="Optimize the user guide of features" type="info"/>
-* <Badge text="Url generation optimization" type="info"/>
-* <Badge text="Fix Light files should have PSI only in one project" type="danger"/>
+
+- <Badge text="SearchEveryWhere highlight optimization" type="info"/>
+- <Badge text="Add support for import and export APIs" type="tip"/>
+- <Badge text="Add support for run APIs" type="tip"/>
+- <Badge text="Add timeout for api request" type="tip"/>
+- <Badge text="Compatible with idea 2022.1" type="info"/>
+- <Badge text="Make it optional for automatically generate parameters" type="tip"/>
+- <Badge text="Swagger annotation default value parameter parsing support" type="tip"/>
+- <Badge text="Merged Send and Send and Download buttons" type="info"/>
+- <Badge text="APIs user interface optimization" type="info"/>
+- <Badge text="API Navigate rename to Navigate in tab" type="info"/>
+- <Badge text="Optimize the user guide of features" type="info"/>
+- <Badge text="Url generation optimization" type="info"/>
+- <Badge text="Fix Light files should have PSI only in one project" type="danger"/>
 
 ::: info SearchEveryWhere highlight optimization
 Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
@@ -516,23 +523,23 @@ You can run your saved requests directly in the APIs tab
 ![runInApiManagement](../../.vuepress/public/img/runInApiManagement.png)
 :::
 
-
-:::info Automatically generate parameter optionals
+::: info Automatically generate parameter optionals
 ![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
 :::
 
-:::info Merged Send and Send and Download buttons
+::: info Merged Send and Send and Download buttons
 The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
 ![mergeRunAndDownload](../../.vuepress/public/img/mergeRunAndDownload.png)
 :::
 
 ::: tip Swagger default value parsing support
 Added the parsing of the default value of swagger annotations, which is more user-friendly of input parameters
-* @ApiParam(swagger2)
-* @ApiImplicitParam(swagger2)
-* @ApiModelProperty(swagger2)
-* @Parameter(swagger3)
-* @Schema(swagger3)
+
+- @ApiParam(swagger2)
+- @ApiImplicitParam(swagger2)
+- @ApiModelProperty(swagger2)
+- @Parameter(swagger3)
+- @Schema(swagger3)
 
 More info **[Features->swagger default value parsing support](./feature.md#swagger-default-value-parsing-support)**
 :::
@@ -549,6 +556,7 @@ And with the iteration of the version, more prompt operation guidelines may be a
 Historical logic will only take the first url, that is, test1, considering that in actual use, it is possible that you need another url, so random support has been added.
 
 The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click <i class="icon iconfont icon-restfulFastRequest"></i>
+
 ```java
 @RequestMapping({"url1","url2"})
 @RestController
@@ -561,6 +569,7 @@ public class MultiUrlController {
 ```
 
 Expression support. The following demo url will be generated to **/url/public/test1**
+
 ```java
 public class Constant {
   public static final String PUBLIC_URL = "/public";
@@ -574,6 +583,7 @@ public class MultiUrlController {
   }
 }
 ```
+
 :::
 
 ::: info API Navigate rename to Navigate in tab  
@@ -581,30 +591,29 @@ In the case where the tool window is relatively small, the API Navigate will be 
 :::
 
 ## v2.1.3
-* Add encode support for special symbol in parameter
-* Add global headers to curl
+
+- Add encode support for special symbol in parameter
+- Add global headers to curl
 
 ## v2.1.2
 
-* Add support for export api to Postman
-* Open the idea lazy loading API Navigate tree for the first time
-* SearchEveryWhere show module
-* Optimize URL parsing
-* Optimize the display of api navigate tree
-* Optimize the group when save api
-* Global header params support
+- Add support for export api to Postman
+- Open the idea lazy loading API Navigate tree for the first time
+- SearchEveryWhere show module
+- Optimize URL parsing
+- Optimize the display of api navigate tree
+- Optimize the group when save api
+- Global header params support
 
-
-:::tip Optimize URL parsing
+::: tip Optimize URL parsing
 support parse like following example
 
 no longer need to configure the URL Replace Config separately
 :::
 
+::: code-tabs
 
-:::: code-group
-
-::: code-group-item Scene 1: URLS are class constant references
+@tab Scene 1: URLS are class constant references
 
 ```java
 @RequestMapping(Url1.URL_TEST)
@@ -619,9 +628,7 @@ public class UrlTestController {
 }
 ```
 
-:::
-
-::: code-group-item Scene 2: value is an array
+@tab Scene 2: value is an array
 
 ```java
 @RequestMapping(
@@ -632,20 +639,17 @@ public class UrlTestController {
 
 :::
 
-::::
-
-
-:::tip Add support for export api to Postman
+::: tip Add support for export api to Postman
 
 ![export2postman](../../.vuepress/public/img/export2postman.gif)
 :::
 
-:::tip SearchEveryWhere show module
+::: tip SearchEveryWhere show module
 
 ![searchEveryWhereModule](../../.vuepress/public/img/searchEveryWhereModule.png)
 :::
 
-:::tip Optimize the group when save api
+::: tip Optimize the group when save api
 
 ```
 when saving the api,it will save to a group named controller's name
@@ -655,23 +659,23 @@ when saving the api,it will save to a group named controller's name
 ![save2ControllerGroup](../../.vuepress/public/img/save2ControllerGroup.png)
 :::
 
-:::tip Global header params support
+::: tip Global header params support
 
 ![globalRequestHeader](../../.vuepress/public/img/globalRequestHeader.png)
 :::
 
 ## v2.1.1
 
-* SearchEveryWhere support
-* Add a what's new button to view the latest version at any time
-* Optimize the parsing of enum
-* Add support for http redirect
+- SearchEveryWhere support
+- Add a what's new button to view the latest version at any time
+- Optimize the parsing of enum
+- Add support for http redirect
 
-:::tip SearchEveryWhere support
+::: tip SearchEveryWhere support
 
 ```
 example
-/url  
+/url
 get /list         (used for search get method)
 post /save        (used for search post method)
 ```
@@ -679,34 +683,34 @@ post /save        (used for search post method)
 ![searchEveryWhere](../../.vuepress/public/img/searchEveryWhere.gif)
 :::
 
-:::tip Quick view of the latest version
+::: tip Quick view of the latest version
 ![whatsnewNotifcation](../../.vuepress/public/img/whatsnewNotifcation.png)
 :::
 
 ## v2.1.0.2
 
-* Joined the organization [**Dromara**](https://dromara.org/zh/)(An organization dedicated to native solutions for the
+- Joined the organization [**Dromara**](https://dromara.org/zh/)(An organization dedicated to native solutions for the
   microservice cloud)
 
 ## v2.1.0.1
 
-* Fix get param error
+- Fix get param error
 
 ## v2.1.0
 
-* Fix post api parse error when using @RequestBody and @RequestParam
-* Parsing support for nested classes
-* Add support for url parse from the path property of the @RequestMapping in controller class level
-* Added support for Api Tree scanning with @RequestMapping class
+- Fix post api parse error when using @RequestBody and @RequestParam
+- Parsing support for nested classes
+- Add support for url parse from the path property of the @RequestMapping in controller class level
+- Added support for Api Tree scanning with @RequestMapping class
 
 ## v2.0.9
 
-* Fix "Slow operations are prohibited on EDT" for 2021.3+
-* Fix add headers from response
-* Add project-level configuration,env and project will not change while switch project
-* Add format action icon to textEditor
+- Fix "Slow operations are prohibited on EDT" for 2021.3+
+- Fix add headers from response
+- Add project-level configuration,env and project will not change while switch project
+- Add format action icon to textEditor
 
-:::tip Add headers from response
+::: tip Add headers from response
 
 ```
 if your api need token in header,you can do like this to add params to header from response
@@ -715,27 +719,27 @@ if your api need token in header,you can do like this to add params to header fr
 ![format](../../.vuepress/public/img/quickAddHeaders.gif)
 :::
 
-:::tip Add format action icon to textEditor
+::: tip Add format action icon to textEditor
 ![format](../../.vuepress/public/img/format.gif)
 :::
 
 ## v2.0.8.1
 
-* Fix conflicting error when searchEveryWhere
-* Adjust position of toolbar action button
-* remove unnecessary dependence,size 11.1M->5.9M
+- Fix conflicting error when searchEveryWhere
+- Adjust position of toolbar action button
+- remove unnecessary dependence,size 11.1M->5.9M
 
 ## v2.0.8
 
-* Fix npe when first add project/env
-* Json tree response character rendering maximum limit
-* Add support for filter by methodType in Api navigate
-* Add support for ignoring parameter parsing
-* Fix some EDT problem
-* Send/sendDownload button support for custom shortcut keys
-* Fix response text not show in 2021.3
+- Fix npe when first add project/env
+- Json tree response character rendering maximum limit
+- Add support for filter by methodType in Api navigate
+- Add support for ignoring parameter parsing
+- Fix some EDT problem
+- Send/sendDownload button support for custom shortcut keys
+- Fix response text not show in 2021.3
 
-:::tip send/sendDownload button support for custom shortcut keys
+::: tip send/sendDownload button support for custom shortcut keys
 
 ```
 shortcut is available anywhere to trigger the event,No longer need to focus on the tool window
@@ -744,24 +748,25 @@ shortcut is available anywhere to trigger the event,No longer need to focus on t
 ![shortcutSendAndDownload](../../.vuepress/public/img/shortcutSendAndDownload.png)
 :::
 
-:::tip Add support for filter by methodType in Api navigate
+::: tip Add support for filter by methodType in Api navigate
 ![shortcutSendAndDownload](../../.vuepress/public/img/methodFilter.png)
 :::
 
 ## v2.0.7
 
-* Add support for api navigate tree
-* Add support for automatic switching of Headers with project and environment switching
-* Optimized Windows system. In some cases, downloading files cannot pop up the directory
-* Optimize the parameter parse of @RequestParam
-* Optimize tool window project and env drop-down components and layout
-* Optimize the prompt message of curl copy
-* Optimize the prompt message of curl regenerate
-* Add confirm operation when delete project and env config
-* Fix the order of json field output is disrupted
-* Move send button to toolbar and support keyboard shortcut
+- Add support for api navigate tree
+- Add support for automatic switching of Headers with project and environment switching
+- Optimized Windows system. In some cases, downloading files cannot pop up the directory
+- Optimize the parameter parse of @RequestParam
+- Optimize tool window project and env drop-down components and layout
+- Optimize the prompt message of curl copy
+- Optimize the prompt message of curl regenerate
+- Add confirm operation when delete project and env config
+- Fix the order of json field output is disrupted
+- Move send button to toolbar and support keyboard shortcut
 
-:::tip API navigate tree
+::: tip API navigate tree
+
 ```
 Select the tree and enter keywords
 Press Enter again or double-click the left mouse button to locate the API
@@ -772,10 +777,11 @@ Hover the mouse to display the doc of the api
 ![apinavi](../../.vuepress/public/img/apinav.gif)
 :::
 
-:::tip Headers Automatic switching
+::: tip Headers Automatic switching
+
 ```
-Scenes:Multi-module projects such as SpringBoot have different header parameters in different projects and different environments. 
-In order to quickly switch headers, header grouping is coming.  
+Scenes:Multi-module projects such as SpringBoot have different header parameters in different projects and different environments.
+In order to quickly switch headers, header grouping is coming.
 Operation method：
 1.Modify in the headers group, constraint: the input value must be in standard json format
 2.Switch the environment or project name directly, and then enter the corresponding key and value values in the headers form
@@ -784,26 +790,27 @@ Operation method：
 ![headerSwitch](../../.vuepress/public/img/headerSwitch.gif)
 :::
 
-:::tip Optimize the parameter parse of @RequestParam
+::: tip Optimize the parameter parse of @RequestParam
 @RequestParam parameters will be prioritized according to the alias  
 `@RequestParam("nameAlias")List<String> nameList` param name will be nameAlias
 :::
 
+::: tip Move send button to toolbar and support keyboard shortcut
 
-:::tip Move send button to toolbar and support keyboard shortcut
 ```
 send request: alt =
-send and download: alt -  
+send and download: alt -
 Prerequisites:Tool window needs to be focused
 ```
 
 ![toolbarSend](../../.vuepress/public/img/toolbarSend.png)
 :::
 
-:::tip Optimize tool window project and env drop-down box and layout
+::: tip Optimize tool window project and env drop-down box and layout
+
 ```
 Icon p represents project
-Icon e represents environment  
+Icon e represents environment
 ```
 
 ![dropdownProject](../../.vuepress/public/img/dropdownProject.png)
@@ -811,17 +818,17 @@ Icon e represents environment
 ![dropdownEnv](../../.vuepress/public/img/dropdownEnv.png)
 :::
 
-
 ## v2.0.6
-* Fix "Light files should have PSI only in one project"
-* Add support for json syntax check
-* Add support for PATCH method
-* Added support for saving the API to the corresponding module group
-* Fix null value in response not output
-* Add support for JAX-RS
-* Display what's new
 
-Without affecting the use, sometimes it will pop up "*Light files should have PSI only in one project"*.This has fixed in 2.0.6
+- Fix "Light files should have PSI only in one project"
+- Add support for json syntax check
+- Add support for PATCH method
+- Added support for saving the API to the corresponding module group
+- Fix null value in response not output
+- Add support for JAX-RS
+- Display what's new
+
+Without affecting the use, sometimes it will pop up "_Light files should have PSI only in one project"_.This has fixed in 2.0.6
 
 ::: tip json grammar check
 ![json](../../.vuepress/public/img/json_en.png)
@@ -845,49 +852,49 @@ Will only be shown once
 
 ## v2.0.5
 
-* JSON built-in editor support
-* Fix checkbox hidden when change param by text
-* Fix headers param show error when reshow the api
-* Optimized the request progress bar display
+- JSON built-in editor support
+- Fix checkbox hidden when change param by text
+- Fix headers param show error when reshow the api
+- Optimized the request progress bar display
 
 ## v2.0.4
 
-* Fix the interface confusion caused by the response content aisle
-* Optimization of response JSON ultra long display
-* Optimized icon size
-* Migrate Chinese documents to Gitee
+- Fix the interface confusion caused by the response content aisle
+- Optimization of response JSON ultra long display
+- Optimized icon size
+- Migrate Chinese documents to Gitee
 
 ## v2.0.3
 
-*   Add confirmation when deleting api
-*   Added the support of selecting all parameters and inverting selection
-*   Fix param parse for java.util.Set
-*   Fix parse like 【@RequestParam
-*   Fix the confusion of the quick add header interface
+- Add confirmation when deleting api
+- Added the support of selecting all parameters and inverting selection
+- Fix param parse for java.util.Set
+- Fix parse like 【@RequestParam
+- Fix the confusion of the quick add header interface
 
 ## v2.0.2
 
-*   Fix that the A request is displayed to the B project in the case of multiple open projects
-*   Fix array and list param parse error decorate by @ResponseBody
-*   Fix List without generic parse error
-*   Add support for send and download
-*   Show progressbar while sending request
-*   Brand new document\[click the doc icon in the toolbar\]
-*   Some optimization
+- Fix that the A request is displayed to the B project in the case of multiple open projects
+- Fix array and list param parse error decorate by @ResponseBody
+- Fix List without generic parse error
+- Add support for send and download
+- Show progressbar while sending request
+- Brand new document\[click the doc icon in the toolbar\]
+- Some optimization
 
 ## v2.0.1
 
-*   rename from Fast Request to Restful Fast Request
-*   merge Json、Form URL-Encoded、Multipart to Body Tab to reduce the tool window width
-*   fix bug when modify config in global mode
-*   add get、post、delete、put icon to saved request
-*   saved request support more search strategy
-*   rename tab name from collection to APIs
-*   support parse java.time.YearMonth
+- rename from Fast Request to Restful Fast Request
+- merge Json、Form URL-Encoded、Multipart to Body Tab to reduce the tool window width
+- fix bug when modify config in global mode
+- add get、post、delete、put icon to saved request
+- saved request support more search strategy
+- rename tab name from collection to APIs
+- support parse java.time.YearMonth
 
 ## v2.0.0
 
-*   support store request
-*   support params optional
-*   optimal iu
-*   fix some bugs
+- support store request
+- support params optional
+- optimal iu
+- fix some bugs

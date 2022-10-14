@@ -1,5 +1,6 @@
-# Headers分组
-版本要求:<Badge text="2.0.7"/>
+# Headers 分组
+
+版本要求: <Badge text="2.0.7"/>
 
 ```
 场景:SpringBoot等多模块项目不同项目、不同环境下头参数不同,为了快速自动切换headers,引入了header分组

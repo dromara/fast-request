@@ -1,5 +1,6 @@
 # cURL import
-Version required:<Badge text="2022.2.1" />
+
+Version required: <Badge text="2022.2.1" />
 
 ![importByCurl](../../../.vuepress/public/img/2022.2.1/importByCurl_en.gif)
 
