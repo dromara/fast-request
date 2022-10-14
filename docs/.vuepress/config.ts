@@ -5,8 +5,8 @@ import theme from "./theme.js";
 export default defineUserConfig({
   base: "/fast-request/",
 
-  title: "",
-  //    description: 'Intellij Restful Fast Request',
+  title: "Fast Request",
+  description: "Intellij Restful Fast Request",
 
   head: [
     [

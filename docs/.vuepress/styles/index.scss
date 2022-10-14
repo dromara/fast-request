@@ -1,39 +1,47 @@
 @font-face {
-  font-family: "bobohei";
+  font-family: bobohei;
   src: url("/fast-request/font/BOBOHEI-2.otf");
 }
 
+h1,
+h2 {
+  font-family: bobohei sans-serif;
+}
+
 .home.project {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
   top: 0;
 
+  width: 100%;
+  max-width: unset;
+  padding-right: 0;
+  padding-left: 0;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
   @media (min-width: 959px) {
-    background: url(/img/bg.svg) no-repeat;
+    background: url("/img/bg.svg") no-repeat;
   }
 
   .hero {
     display: block;
-    text-align: center;
     max-width: 100%;
-    height: 735px;
+    height: 90vh;
+    text-align: center;
 
     img {
-      margin: 50px auto 0;
       max-height: 440px;
+      margin: 50px auto 0;
     }
 
     h1 {
-      font-family: "bobohei";
+      font-family: bobohei sans-serif;
     }
 
     .description {
       max-width: 100%;
       font-size: 13px;
-      font-family: "bobohei";
+      font-family: bobohei sans-serif;
     }
 
     .actions {
@@ -42,21 +50,23 @@
 
     .action-button.primary {
       color: #fff;
-      font-family: "bobohei";
+      font-family: bobohei sans-serif;
+    }
+  }
+
+  .features {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 5rem;
+    border-top: none;
+  }
+
+  .feature {
+    h2 {
+      font-family: bobohei sans-serif;
     }
 
-    .features {
-      max-width: 100%;
-      padding: 0 5rem;
-      margin: 0;
-      border-top: none;
-    }
-
-    .feature h2 {
-      font-family: "bobohei";
-    }
-
-    .feature p {
+    p {
       font-weight: 600;
     }
   }
@@ -70,29 +80,6 @@
   padding: 0 5rem;
 }
 
-.navbar {
-  .site-name {
-    font-family: "bobohei";
-  }
-
-  .nav-item > .nav-link {
-    font-family: "bobohei";
-  }
-}
-
-.sidebar > .sidebar-links > li:not(:first-child) {
-  margin-top: 0.1rem;
-}
-
-h1,
-h2 {
-  font-family: "bobohei";
-}
-
-.icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
+.navbar .site-name {
+  display: none;
 }

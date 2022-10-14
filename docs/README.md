@@ -4,7 +4,7 @@ home: true
 title: 主页
 heroImage: /img/logoLight.gif
 heroImageDark: /img/logoDark.gif
-heroText: ""
+heroText: false
 tagline: 为简化调试API而生
 actions:
   - text: 🚀 快速上手

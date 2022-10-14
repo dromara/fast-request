@@ -50,7 +50,7 @@ export default hopeTheme({
       categoryId: "DIC_kwDOHLlUss4COlsW",
     },
 
-    components: ["BiliBili"],
+    components: ["Badge", "BiliBili"],
 
     mdEnhance: {
       align: true,
