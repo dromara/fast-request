@@ -27,7 +27,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LightGreen"/>
+## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
 
 - <Badge text="一键清除参数" type="tip"/>
 - <Badge text="API注释预览" type="tip"/>
@@ -55,7 +55,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![sortColumn](../.vuepress/public/img/2022.2.6/sortColumn.png)
 :::
 
-## v2022.2.5.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## v2022.2.5.2 <Badge text="免费试用" type="tip"/> 
 
 - <Badge text="后置脚本无法清空" type="danger"/>
 

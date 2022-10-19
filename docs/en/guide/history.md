@@ -23,7 +23,7 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="info"/>
 
 - <Badge text="Clear params support" type="tip"/>
 - <Badge text="Api comment preview" type="tip"/>
@@ -51,7 +51,7 @@ batch clean column value
 ![sortColumn](../../.vuepress/public/img/2022.2.6/sortColumn.png)
 :::
 
-## v2022.2.5.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="tip"/>
+## v2022.2.5.2 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Post script cannot be cleared" type="danger"/>
 

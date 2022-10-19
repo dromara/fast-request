@@ -25,7 +25,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
 - <Badge text="Clear params support" type="tip"/>
 - <Badge text="Api comment preview" type="tip"/>
@@ -35,7 +35,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Long delay when first open tool window" type="info"/>
 - <Badge text="Multi print when use pre-script" type="danger"/>
 
-## v2022.2.5.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="tip"/>
+## v2022.2.5.2 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Post script cannot be cleared" type="danger"/>
 

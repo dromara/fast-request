@@ -29,7 +29,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LightGreen"/>
+## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
 
 - <Badge text="一键清除参数" type="tip"/>
 - <Badge text="API注释预览" type="tip"/>
@@ -39,7 +39,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="第一次打开工具窗口有短暂卡顿现象" type="info"/>
 - <Badge text="前置脚本多次打印" type="danger"/>
 
-## v2022.2.5.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## v2022.2.5.2 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="后置脚本无法清空" type="danger"/>
 
