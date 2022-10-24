@@ -25,6 +25,12 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+- <Badge text="Api sync" type="tip"/>
+- <Badge text="Api doc show return type document" type="tip"/>
+- <Badge text="Full screen" type="tip"/>  
+- <Badge text="Comment preview" type="info"/>
+
 ## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
 - <Badge text="Clear params support" type="tip"/>

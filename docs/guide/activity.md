@@ -3,6 +3,12 @@ title: 活动
 icon: activity
 ---
 
+> 20221024
+```
+微信参与抽奖
+```
+![](../.vuepress/public/img/activity/20221024.png)
+
 > 活动 1
 
 ```

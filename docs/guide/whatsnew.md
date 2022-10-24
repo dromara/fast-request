@@ -29,6 +29,12 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="LightGreen"/>
+- <Badge text="Api同步" type="tip"/>
+- <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
+- <Badge text="全屏" type="tip"/>  
+- <Badge text="注释预览" type="info"/>
+
 ## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
 
 - <Badge text="一键清除参数" type="tip"/>
