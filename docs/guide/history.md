@@ -647,7 +647,6 @@ public class UrlTestController {
 }
 ```
 
-:::
 
 @tab 场景 2: value 是一个数组
 
