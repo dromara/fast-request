@@ -80,36 +80,46 @@ head:
 
 ## 🥇 功能
 
-- [x] Postman 一样的操作界面
-- [x] Groovy 前后置脚本支持
-- [x] 一键生成 url 和参数
-- [x] SearchEveryWhere 支持
-- [x] API 导出到 Postman
-- [x] 发送请求调试 API
-- [x] 发送请求并下载文件
-- [x] 域名定制及切换
-- [x] 自定义参数解析
-- [x] 字符串生成策略化
-- [x] 保存 API
-- [x] 管理 API(搜索过滤、修改 API 名称等)
-- [x] 一键定位、运行历史保存的 API 到方法
-- [x] API 转 curl
-- [x] 自动将 API 关联到模块分组
-- [x] 内置 Json 参数编辑器
-- [x] API 导航树
-- [x] Headers 分组
-- [x] Swagger 参数解析支持
-- [x] 自动生成 API 字段的描述
-- [x] 一键生成 API 文档
-- [x] API 一览表
-- [x] 项目全局配置
-- [x] HTML 预览
-- [x] 自动 Cookie 存储
-- [x] 历史请求预览
-- [x] API 分组参数保存支持
-- [x] 临时请求保存支持
-- [x] url 尾缀支持
-- [x] [ 更多...](./guide/features)
+
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./guide/features/makeIconMove.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./guide/features/searchEveryWhere.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./guide/features/projectValueConfig.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> 当前方法定位](./guide/features/navigateCurrentMethod.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> 调试 API 发送请求](./guide/features/debugApi.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> 下载文件](./guide/features/downloadApi.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> 终止 API 请求功能](./guide/features/stopRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> 保存请求](./guide/features/saveRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API 分组](./guide/features/apiGroup.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> 临时请求](./guide/features/tempRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg> 重新生成请求](./guide/features/regenerate.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-clear"></use></svg> 清除](./guide/features/clear.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL 导入](./guide/features/curlImport.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-curl1"></use></svg> cURL 拷贝](./guide/features/copyCurl.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-urlCopy"></use></svg> 一键拷贝 Url](./guide/features/copyUrl.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> 历史请求预览](./guide/features/historyRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API文档同步](./guide/features/apiDocSync.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API文档分享](./guide/features/shareApiDoc.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-wendang"></use></svg> 文档/快速联系](./guide/features/docAndContact.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./guide/features/settingManager.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./guide/features/fullScreen.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](./guide/eula.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Headers 分组](./guide/features/headerGroup.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数](./guide/features/commonHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuth"></use></svg> Basei auth](./guide/features/basicAuth.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览](./guide/features/htmlPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-ppLib"></use></svg> API 列表](./guide/features/apiList.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-postman"></use></svg> API 导出到 Postman](./guide/features/apiToPostman.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-export"></use></svg> APIs 导入导出](./guide/features/apiImportExport.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> 批量导出 API 文档](./guide/features/batchExportApiDoc.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> API 导航树](./guide/features/apiNavigateTree.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-swagger"></use></svg> Swagger 默认值](./guide/features/swaggerDefaultValueParse.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-java"></use></svg> API 自动生成注释](./guide/features/autoDescription.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> API 一览表预览](./guide/features/apiPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api 注释预览](./guide/features/apiCommentPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-script"></use></svg> 脚本](./guide/features/script.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-add1"></use></svg> 快速添加 header](./guide/features/quickAddHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-json"></use></svg> Json 语法检查](./guide/features/jsonGrammarCheck.md)
+- [ 更多...](./guide/features)
 
 <div style="height:30px"></div>
 

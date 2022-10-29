@@ -32,8 +32,15 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
+
+----
+
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Headers 分组](./headerGroup.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数](./commonHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuth"></use></svg> Basei auth](./basicAuth.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览](./htmlPreview.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Html 常用头参数](./commonHeader.md)
+
+
 
 ## Apis
 
@@ -48,13 +55,13 @@ icon: featuresNew
 
 ## Generate
 
-- [Swagger 默认值](./swaggerDefaultValueParse.md)
-- [API 自动生成注释](./autoDescription.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-swagger"></use></svg> Swagger 默认值](./swaggerDefaultValueParse.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-java"></use></svg> API 自动生成注释](./autoDescription.md)
 
 ## Editor
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> API 一览表预览](./apiPreview.md)
-- [Api 注释预览](./apiCommentPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api 注释预览](./apiCommentPreview.md)
 
 ## Script
 
@@ -62,6 +69,5 @@ icon: featuresNew
 
 ## Other
 
-- [快速添加 header](./quickAddHeader.md)
-- [Headers 分组](./headersGroup.md)
-- [Json 语法检查](./jsonGrammarCheck.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-add1"></use></svg> 快速添加 header](./quickAddHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-json"></use></svg> Json 语法检查](./jsonGrammarCheck.md)

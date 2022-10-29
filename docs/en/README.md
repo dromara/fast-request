@@ -57,35 +57,44 @@ head:
 
 ## 🥇 Features
 
-- [x] Postman-like user interface
-- [x] Groovy pre/post script support
-- [x] Generate url and parameters in one click
-- [x] SearchEveryWhere support
-- [x] APIs export to Postman
-- [x] Send request to debug API
-- [x] Send request and download
-- [x] Domain customization and switching
-- [x] Custom parameter parse
-- [x] String generation strategy
-- [x] Save api
-- [x] Management API
-- [x] One click navigate or run history save api to method
-- [x] Api to curl
-- [x] Built-in Json parameter editor
-- [x] Automatically associate APIs to module groups
-- [x] API navigate tree
-- [x] Headers group
-- [x] Swagger Parameter parsing support
-- [x] Automatically generate descriptions for API fields
-- [x] One click to generate API documentation
-- [x] Single class API list preview
-- [x] Project Global config
-- [x] HTML preview
-- [x] Automatic cookie storage
-- [x] History request preview
-- [x] API grouping parameter save support
-- [x] Temporary request save support
-- [x] Url suffix support
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Make icon move](./guide/features/makeIconMove.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./guide/features/searchEveryWhere.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config](./guide/features/projectValueConfig.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method](./guide/features/navigateCurrentMethod.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> Debug API & send request](./guide/features/debugApi.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> Download file](./guide/features/downloadApi.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> Stop API request](./guide/features/stopRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> Save request](./guide/features/saveRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API group](./guide/features/apiGroup.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> Temporary request](./guide/features/tempRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg> Re generate](./guide/features/regenerate.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-clear"></use></svg> Clear](./guide/features/clear.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL import](./guide/features/curlImport.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-curl1"></use></svg> cURL copy](./guide/features/copyCurl.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-urlCopy"></use></svg> Single url copy](./guide/features/copyUrl.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> History request](./guide/features/historyRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API document sync](./guide/features/apiDocSync.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API document share](./guide/features/shareApiDoc.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-wendang"></use></svg> Document / Contact](./guide/features/docAndContact.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> Setting manager](./guide/features/settingManager.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> Full screen](./guide/features/fullScreen.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](./guide/eula.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Header group](./guide/features/headerGroup.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Common header](./guide/features/commonHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuth"></use></svg> Basei auth](./guide/features/basicAuth.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./guide/features/htmlPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-ppLib"></use></svg> API list](./guide/features/apiList.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-postman"></use></svg> APIs export to Postman](./guide/features/apiToPostman.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-export"></use></svg> APIs import and export](./guide/features/apiImportExport.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> Batch export API doc](./guide/features/batchExportApiDoc.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> API navigate tree](./guide/features/apiNavigateTree.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-swagger"></use></svg> Swagger default value parsing support](./guide/features/swaggerDefaultValueParse.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-java"></use></svg> Auto Description](./guide/features/autoDescription.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> API list preview](./guide/features/apiPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api comment preview](./guide/features/apiCommentPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-script"></use></svg> Script](./guide/features/script.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-add1"></use></svg> Quickly add header](./guide/features/quickAddHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-json"></use></svg> Json grammar check](./guide/features/jsonGrammarCheck.md)
 - [x] [ More...](./guide/features)
 
 <div style="height:30px"></div>

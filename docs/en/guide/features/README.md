@@ -32,8 +32,13 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> Setting manager](./settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> Full screen](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./htmlPreview.md)
+
+----
+
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Header group](./headerGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Common header](./commonHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuth"></use></svg> Basei auth](./basicAuth.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./htmlPreview.md)
 
 ## Apis
 
@@ -48,13 +53,13 @@ The icon in the document corresponds to the button icon in the plugin
 
 ## Generate
 
-- [Swagger default value parsing support](./swaggerDefaultValueParse.md)
-- [Auto Description](./autoDescription.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-swagger"></use></svg> Swagger default value parsing support](./swaggerDefaultValueParse.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-java"></use></svg> Auto Description](./autoDescription.md)
 
 ## Editor
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> API list preview](./apiPreview.md)
-- [Api comment preview](./apiCommentPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api comment preview](./apiCommentPreview.md)
 
 ## Script
 
@@ -62,6 +67,5 @@ The icon in the document corresponds to the button icon in the plugin
 
 ## Other
 
-- [Quickly add header](./quickAddHeader.md)
-- [Headers group](./headersGroup.md)
-- [Json grammar check](./jsonGrammarCheck.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-add1"></use></svg> Quickly add header](./quickAddHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-json"></use></svg> Json grammar check](./jsonGrammarCheck.md)
