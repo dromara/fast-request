@@ -51,7 +51,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ::: tip 公共请求头
 
 [---->详情](./features/commonHeader.md)
-![commonHeader](../.vuepress/public/img/2022.2.7/commonHeader.png)
+![commonHeader](../.vuepress/public/img/2022.2.7/commonHeader.gif)
 :::
 
 ::: tip 全屏

@@ -4,4 +4,4 @@
 
 此功能帮助快速添加一些比较常用的Header参数,支持多个选择后点击添加
 
-![commonHeader](../../.vuepress/public/img/2022.2.7/commonHeader.png)
+![commonHeader](../../.vuepress/public/img/2022.2.7/commonHeader.gif)

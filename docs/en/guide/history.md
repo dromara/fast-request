@@ -33,7 +33,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Parse bug" type="danger"/>
 
 ::: tip Api sync
-Online Api doc sync,---->[More detail](./features/apiDocSync.md)
+Online Api doc sync---->[More detail](./features/apiDocSync.md)
 
 ![apiSync](../../.vuepress/public/img/2022.2.7/apiSync_en.png)
 
@@ -47,7 +47,7 @@ Online Api doc sync,---->[More detail](./features/apiDocSync.md)
 ::: tip Common header
 
 [---->More detail](./features/commonHeader.md)
-![commonHeader](../../.vuepress/public/img/2022.2.7/commonHeader.png)
+![commonHeader](../../.vuepress/public/img/2022.2.7/commonHeader.gif)
 :::
 
 ::: tip Full screen
