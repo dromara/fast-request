@@ -21,3 +21,17 @@
 
 注意点:命名策略决定了同步至云端的文件名称,文件名称来自Javadoc或者Swagger方法命名注解,如果勾选使用javadoc,请确保Javadoc和Swagger方法命名一定要==简短==,
 否则云端的文件名会非常长,这种情况下考虑勾选方法名来同步
+
+## Token
+生成的token需要勾选对应的最小权限来支持api同步,同时需要确保token在有时间效期内
+```
+Gitee:必须勾选projects
+Github:必须勾选repo
+Gitlab:必须勾选api
+```
+
+![giteeToken](../../.vuepress/public/img/2022.2.7/giteeToken.png)
+
+![githubToken](../../.vuepress/public/img/2022.2.7/githubToken.png)
+
+![gitlabToken](../../.vuepress/public/img/2022.2.7/gitlabToken.png)

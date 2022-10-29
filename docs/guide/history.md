@@ -30,8 +30,39 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="LightGreen"/>
 - <Badge text="Api同步" type="tip"/>
 - <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
+- <Badge text="公共请求头" type="tip"/>
 - <Badge text="全屏" type="tip"/>  
 - <Badge text="注释预览" type="info"/>
+- <Badge text="模块头一直被选中" type="danger"/>
+- <Badge text="解析bug" type="danger"/>
+
+::: tip Api文档同步
+在线文档同步,---->[详情](./features/apiDocSync.md)
+
+![apiSync](../.vuepress/public/img/2022.2.7/apiSync.png)
+
+![apiSyncSetting](../.vuepress/public/img/2022.2.7/apiSyncSetting.png)
+:::
+
+:::tip Api文档显示返回值类型参数文档
+![returnValueDoc](../.vuepress/public/img/2022.2.7/returnValueDoc.png)
+:::
+
+::: tip 公共请求头
+
+[---->详情](./features/commonHeader.md)
+![commonHeader](../.vuepress/public/img/2022.2.7/commonHeader.png)
+:::
+
+::: tip 全屏
+---->[详情](./features/fullScreen.md)
+![fullScreen](../.vuepress/public/img/2022.2.7/fullScreen.png)
+:::
+
+
+::: info 注释预览
+![fullScreen](../.vuepress/public/img/2022.2.7/commentPreview.png)
+:::
 
 
 ## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>

@@ -26,8 +26,39 @@ Because developing version is still in development, the documentation of develop
 ## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
 - <Badge text="Api sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>
+- <Badge text="Common header" type="tip"/>  
 - <Badge text="Full screen" type="tip"/>  
 - <Badge text="Comment preview" type="info"/>
+- <Badge text="Module header value always be checked" type="danger"/>
+- <Badge text="Parse bug" type="danger"/>
+
+::: tip Api sync
+Online Api doc sync,---->[More detail](./features/apiDocSync.md)
+
+![apiSync](../../.vuepress/public/img/2022.2.7/apiSync_en.png)
+
+![apiSyncSetting](../../.vuepress/public/img/2022.2.7/apiSyncSetting_en.png)
+:::
+
+:::tip Api doc show return type document
+![returnValueDoc](../../.vuepress/public/img/2022.2.7/returnValueDoc.png)
+:::
+
+::: tip Common header
+
+[---->More detail](./features/commonHeader.md)
+![commonHeader](../../.vuepress/public/img/2022.2.7/commonHeader.png)
+:::
+
+::: tip Full screen
+---->[More detail](./features/fullScreen.md)
+![fullScreen](../../.vuepress/public/img/2022.2.7/fullScreen.png)
+:::
+
+
+::: info Comment preview
+![fullScreen](../../.vuepress/public/img/2022.2.7/commentPreview.png)
+:::
 
 ## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="info"/>
 

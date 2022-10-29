@@ -32,8 +32,11 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="LightGreen"/>
 - <Badge text="Api同步" type="tip"/>
 - <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
+- <Badge text="公共请求头" type="tip"/>
 - <Badge text="全屏" type="tip"/>  
 - <Badge text="注释预览" type="info"/>
+- <Badge text="模块头一直被选中" type="danger"/>
+- <Badge text="解析bug" type="danger"/>
 
 ## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
 

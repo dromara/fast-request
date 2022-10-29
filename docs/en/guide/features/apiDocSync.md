@@ -21,3 +21,18 @@ and generate online documents and share them with other partners.
 
 Note: The naming policy determines the name of the file synchronized to the cloud,The file name comes from the Javadoc or Swagger method naming annotation,If javadoc is checked,Please make sure that the Javadoc and Swagger method naming must be ==short==,
 Otherwise, the file name in the cloud will be very long. In this case, consider checking the method name to synchronize
+
+## Token
+When check the permissions, you must ensure that the minimum permissions are checked to support the api sync and the token is within the valid time frame.
+
+```
+Github:must check 'repo'
+Gitlab:must check 'api'
+Gitee:must check 'projects'
+```
+
+![githubToken](../../../.vuepress/public/img/2022.2.7/githubToken.png)
+
+![gitlabToken](../../../.vuepress/public/img/2022.2.7/gitlabToken.png)
+
+![giteeToken](../../../.vuepress/public/img/2022.2.7/giteeToken.png)

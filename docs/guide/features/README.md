@@ -33,6 +33,7 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览](./htmlPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Html 常用头参数](./commonHeader.md)
 
 ## Apis
 

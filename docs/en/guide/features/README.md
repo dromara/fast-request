@@ -33,6 +33,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> Full screen](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./htmlPreview.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Common header](./commonHeader.md)
 
 ## Apis
 
