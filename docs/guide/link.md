@@ -81,6 +81,11 @@ icon: youqinglianjie
 
 ### 其他
 
+Restful Fast Request 首页的logo及背景由 **森阳** 提供，感谢她的创作，如果要插画和logo商业化合作小伙伴可以找她
+```
+邮件：sssenyang@qq.com | 微信：ArtSenyang
+```
+
 <div>
     <a href="https://gitee.com/" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
         <img style="height:40px;" :src="$withBase('/img/link/gitee-logo.png')" >
