@@ -7,6 +7,13 @@ icon: skills
 
 [[toc]]
 
+## Url错误
+![urlError](../.vuepress/public/img/skill/urlError.png)
+
+<Badge text="解决办法" type="tip" />
+1. 配置正确的域名,并启用项目和环境2个下拉框
+2. 设置正确的url,例如需要将url上的变量{id}替换,可以在Path Param tab中替换变量
+
 ## 多文件上传
 输入多个值并将字段类型设置为file
 
