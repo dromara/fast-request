@@ -31,7 +31,8 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="Api同步" type="tip"/>
 - <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
 - <Badge text="公共请求头" type="tip"/>
-- <Badge text="全屏" type="tip"/>  
+- <Badge text="全屏" type="tip"/>
+- <Badge text="插件更新通知机制" type="tip"/>
 - <Badge text="注释预览" type="info"/>
 - <Badge text="模块头一直被选中" type="danger"/>
 - <Badge text="解析bug" type="danger"/>
@@ -57,6 +58,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ::: tip 全屏
 ---->[详情](./features/fullScreen.md)
 ![fullScreen](../.vuepress/public/img/2022.2.7/fullScreen.png)
+:::
+
+::: tip 插件更新通知机制
+从显式的对话框改为通知，同时自动更新也修改为==打开==了，如果你想关闭，请到配置页面手动关闭它.更新不再烦恼
+
+需要注意的是,前一个版本的更新依然会是弹窗,这个版本以后就是消息通知机制了
+
+![upgradeNotice](../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
 :::
 
 
