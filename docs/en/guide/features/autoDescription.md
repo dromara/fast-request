@@ -6,4 +6,4 @@ Field description need to conform to standard javadoc. Please use`/**some descri
 
 You can hide or show description by toggle click
 
-![paramDescription](../../../.vuepress/public/img/paramDescription.png)
+![paramDescription](/img/paramDescription.png)

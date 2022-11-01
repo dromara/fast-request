@@ -10,10 +10,10 @@
 
 ==原保存操作将默认归类到 Default 分组==
 
-![groupSave](../../.vuepress/public/img/2022.2.1/groupSave_en.png)
+![groupSave](/img/2022.2.1/groupSave_en.png)
 
 **切换参数**
 
 以下是 book 列表 3 种语言的查询
 
-![apiParamGroup](../../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif)

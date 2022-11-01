@@ -150,7 +150,7 @@ console.error("error")
 
 ```
 
-![console](../../.vuepress/public/img/2022.2.5/console_en.png)
+![console](/img/2022.2.5/console_en.png)
 
 ## Demo
 
@@ -225,4 +225,4 @@ High-voted and practical scripts will have the opportunity to join to ==Plugin p
 ....
 ```
 
-![scriptDonate](../../.vuepress/public/img/2022.2.3/scriptDonate_en.png)
+![scriptDonate](/img/2022.2.3/scriptDonate_en.png)

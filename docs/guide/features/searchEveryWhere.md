@@ -8,4 +8,4 @@ post /save        (指定post方式指定url)
 方法关键字          (查询指定描述)
 ```
 
-![searchEveryWhere](../../.vuepress/public/img/searchEveryWhere.gif)
+![searchEveryWhere](/img/searchEveryWhere.gif)

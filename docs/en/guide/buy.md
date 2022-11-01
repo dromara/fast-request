@@ -18,28 +18,28 @@ icon: buy
 Click **Activate Plugin**
 Of course, you can also try the plugin first，it's free 30 days.Please click start trial
 
-![](../../.vuepress/public/img/buy/activate_en.png)
+![](/img/buy/activate_en.png)
 
 ## Step1: Click Buy license
 
-![](../../.vuepress/public/img/buy/step1.png)
+![](/img/buy/step1.png)
 
 ## step2: Choose a package
 
 - package 1: Monthly Subscription
 - package 2: Yearly Subscription(Recommended)
-  ![](../../.vuepress/public/img/buy/step2.png)
+  ![](/img/buy/step2.png)
 
 ## Step3: Email confirmation(Email mode)
 
 If you have not registered a jetbrains account and logged in, you will enter this page, where you need to enter the email address that accepts the license.
 Click next to enter the purchase confirmation page
 
-![](../../.vuepress/public/img/buy/step3.png)
+![](/img/buy/step3.png)
 
 ## Step4: Type in the information and pay
 
-![](../../.vuepress/public/img/buy/step4.png)
+![](/img/buy/step4.png)
 
 ## Step5: Type in the License information to activate the plugin
 
@@ -49,17 +49,17 @@ Click **help->Register Plugins...->Add New License**
 
 Log in your jetbrains account
 
-![](../../.vuepress/public/img/buy/step5.png)
+![](/img/buy/step5.png)
 
 > Offline activation
 
 - 1.[Download activation code](https://account.jetbrains.com/licenses)
 
-![](../../.vuepress/public/img/buy/offlineCodeDownload.png)
+![](/img/buy/offlineCodeDownload.png)
 
 - 2.Enter the activation code in Activation code
 
-![](../../.vuepress/public/img/buy/offline.png)
+![](/img/buy/offline.png)
 
 <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>Buy</a>
 
@@ -68,7 +68,7 @@ Log in your jetbrains account
 ::: danger License info
 
 **Please keep your activation code information safe and do not leak the License information**
-![](../../.vuepress/public/img/buy/accountLicense.png)
+![](/img/buy/accountLicense.png)
 :::
 
 **If you have some questions, please join the Telegram and contact me** on

@@ -15,4 +15,4 @@
 
 :::
 
-![exportImportApis](../../.vuepress/public/img/exportImportApis.gif)
+![exportImportApis](/img/exportImportApis.gif)

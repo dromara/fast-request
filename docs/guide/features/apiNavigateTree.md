@@ -8,4 +8,4 @@
 
 API Navigate 树需要点击刷新按钮，同样每次新增了 API 你也需要刷新才能得到
 
-![apinavi](../../.vuepress/public/img/apinav.gif)
+![apinavi](/img/apinav.gif)

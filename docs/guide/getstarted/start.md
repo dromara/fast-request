@@ -15,32 +15,25 @@ op4=>operation: 选择环境名
 op5=>inputoutput: 点击方法左侧火箭R字图标
 op6=>operation: 点击发送按钮
 e=>end: 结束|future
-st(bottom)->cfg(path1,right)->op1(bottom)->op20->op21(path1,right)->op3->op5
-st(bottom)->cfg(path2,left)->op2(bottom)->op20->op21(path2,bottom)->op4->op5
+st(bottom)->cfg(path1，right)->op1(bottom)->op20->op21(path1，right)->op3->op5
+st(bottom)->cfg(path2，left)->op2(bottom)->op20->op21(path2，bottom)->op4->op5
 op5->op6->e
 ```
 
 ::: tip 使用入门
 
-- Step1: 点击配置添加项目名[如微信卡片]和环境名[如 local、dev]
-- Step2: 设置对应项目及环境的域名
-- Step3: 打开工具窗口(右上角位置),选择当前项目想要启用的环境
-- Step4: 点击在方法左侧的 fastRequest 的图标<i class="icon iconfont icon-restfulFastRequest"></i>(老图标<i class="icon iconfont icon-restfulFastRequest1"></i>)
-- Step5: 点击发送请求按钮发送请求
+1. 点击配置添加项目名 (如微信卡片) 和环境名 (如 local、dev)
+1. 设置对应项目及环境的域名
+1. 打开工具窗口(右上角位置)，选择当前项目想要启用的环境
+1. 点击在方法左侧的 fastRequest 的图标 <FontIcon icon="restfulFastRequest" /> (老图标<FontIcon icon="restfulFastRequest1" />)
+1. 点击发送请求按钮发送请求
 
 :::
 
-![](../../.vuepress/public/img/howToUse.gif)
+![](/img/howToUse.gif)
 
-新 Logo icon <i class="icon iconfont icon-restfulFastRequest"></i>
+新 Logo icon <FontIcon icon="restfulFastRequest" />
 
-![](../../.vuepress/public/img/newLogoIcon.png)
+![](/img/newLogoIcon.png)
 
-## 联系我们
-
-如果遇到了问题,请通过一下方式联系我们,将会有更快为你解决问题,同时[进群](../concatGroup.md)将会给与==六折==优惠,群里全部都是==Javaer==,经常会讨论一些技术问题,并且热心,也许可以帮助你==学到一些东西==
-
-| ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechatChat](../../.vuepress/public/img/wechatGroup.png)                                    | ![twitter](../../.vuepress/public/img/twitter.png)                                                                                                |
-| 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
+@include(@src/contact.snippet.md)

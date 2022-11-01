@@ -5,20 +5,20 @@ icon: changelog
 
 ::: tip 公告
 
-插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金),对比氪金版和免费有什么更强大的功能,只需要看更新日志>=2021.1.4+的
+插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金)，对比氪金版和免费有什么更强大的功能，只需要看更新日志>=2021.1.4+的
 
 购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看==群公告==
 
-==平台只能挂一个价格,国内用户请进群,一律 6 折,入正后无烦恼更新==
+==平台只能挂一个价格，国内用户请进群，一律 6 折，入正后无烦恼更新==
 
-==技术群二维码==在[**这里**](./concatGroup.md),不仅仅是 RFR 插件群,群里全部都是==Javaer==,经常会讨论一些技术问题,并且热心,可以帮助你==学到一些东西==
+==技术群二维码==在[**这里**](./concatGroup.md)，不仅仅是 RFR 插件群，群里全部都是==Javaer==，经常会讨论一些技术问题，并且热心，可以帮助你==学到一些东西==
 
 | ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechatChat](../.vuepress/public/img/wechatGroup.png)                                       | ![twitter](../.vuepress/public/img/twitter.png)                                                                                                   |
+| ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
 
-Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues),作者会一一回应并==认真思考==大家提出的 bug 以及建议......
+Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)，作者会一一回应并==认真思考==大家提出的 bug 以及建议......
 
 ---
 
@@ -39,38 +39,38 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="解析bug" type="danger"/>
 
 ::: tip Api 文档同步
-在线文档同步,---->[详情](./features/apiDocSync.md)
+在线文档同步，---->[详情](./features/apiDocSync.md)
 
-![apiSync](../.vuepress/public/img/2022.2.7/apiSync.png)
+![apiSync](/img/2022.2.7/apiSync.png)
 
-![apiSyncSetting](../.vuepress/public/img/2022.2.7/apiSyncSetting.png)
+![apiSyncSetting](/img/2022.2.7/apiSyncSetting.png)
 :::
 
 :::tip Api 文档显示返回值类型参数文档
-![returnValueDoc](../.vuepress/public/img/2022.2.7/returnValueDoc.png)
+![returnValueDoc](/img/2022.2.7/returnValueDoc.png)
 :::
 
 ::: tip 公共请求头
 
 [---->详情](./features/commonHeader.md)
-![commonHeader](../.vuepress/public/img/2022.2.7/commonHeader.gif)
+![commonHeader](/img/2022.2.7/commonHeader.gif)
 :::
 
 ::: tip 全屏
 ---->[详情](./features/fullScreen.md)
-![fullScreen](../.vuepress/public/img/2022.2.7/fullScreen.png)
+![fullScreen](/img/2022.2.7/fullScreen.png)
 :::
 
 ::: tip 插件更新通知机制
 从显式的对话框改为通知，同时自动更新也修改为==打开==了，如果你想关闭，请到配置页面手动关闭它.更新不再烦恼
 
-需要注意的是,前一个版本的更新依然会是弹窗,这个版本以后就是消息通知机制了
+需要注意的是，前一个版本的更新依然会是弹窗，这个版本以后就是消息通知机制了
 
-![upgradeNotice](../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
+![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
 :::
 
 ::: info 注释预览
-![fullScreen](../.vuepress/public/img/2022.2.7/commentPreview.png)
+![fullScreen](/img/2022.2.7/commentPreview.png)
 :::
 
 ## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
@@ -85,20 +85,20 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ::: tip 一键清除参数
 全局清空
-![clear](../.vuepress/public/img/2022.2.6/clear.png)
+![clear](/img/2022.2.6/clear.png)
 
 批量清空列值
-![clearColumnValue](../.vuepress/public/img/2022.2.6/clearColumnValue.png)
+![clearColumnValue](/img/2022.2.6/clearColumnValue.png)
 :::
 
 ::: tip API 注释预览
-![showCommentConfig](../.vuepress/public/img/2022.2.6/showCommentConfig.png)
-![showCommentInClass](../.vuepress/public/img/2022.2.6/showCommentInClass.png)
-![showCommentInNavigate](../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)
+![showCommentConfig](/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](/img/2022.2.6/showCommentInNavigate.png)
 :::
 
 ::: tip 参数列根据 key 排序
-![sortColumn](../.vuepress/public/img/2022.2.6/sortColumn.png)
+![sortColumn](/img/2022.2.6/sortColumn.png)
 :::
 
 ## v2022.2.5.2 <Badge text="免费试用" type="tip"/>
@@ -124,7 +124,7 @@ Console 帮助开发者打印一些你想要的信息
 
 更多信息请看-----> [script->console](./script.md#console)
 
-![console](../.vuepress/public/img/2022.2.5/console.png)
+![console](/img/2022.2.5/console.png)
 
 :::
 
@@ -135,17 +135,17 @@ Console 帮助开发者打印一些你想要的信息
 :::
 
 ::: tip 从 Javadoc 读取注释
-读取 Javadoc 形式的参数注释,适用于 path 参数以及 request param 是非实体类的参数
+读取 Javadoc 形式的参数注释，适用于 path 参数以及 request param 是非实体类的参数
 
-![console](../.vuepress/public/img/2022.2.5/parseDocDesc.png)
+![console](/img/2022.2.5/parseDocDesc.png)
 :::
 
 ::: tip 新增推特
-有推特账号的请关注我,感谢
+有推特账号的请关注我，感谢
 
-![](../.vuepress/public/img/twitter.png)
+![](/img/twitter.png)
 
-![twitterAction](../.vuepress/public/img/2022.2.5/twitterAction.png)
+![twitterAction](/img/2022.2.5/twitterAction.png)
 :::
 
 ## v2022.2.4.1 <Badge text="免费试用" type="tip"/>
@@ -163,26 +163,26 @@ Console 帮助开发者打印一些你想要的信息
 - <Badge text="后置脚本删除添加头信息失败" type="danger"/>
 
 ::: tip 全新的 Logo
-开发者可以在下拉框里面自由选择并切换你想要的颜色,并且可以让它==动起来==(性能佳)
+开发者可以在下拉框里面自由选择并切换你想要的颜色，并且可以让它==动起来==(性能佳)
 
-![newLogo](../.vuepress/public/img/2022.2.4/newLogo.gif)
+![newLogo](/img/2022.2.4/newLogo.gif)
 
-![newLogoConfig](../.vuepress/public/img/2022.2.4/newLogoConfig.png)
+![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
 
-![newLogo](../.vuepress/public/img/2022.2.4/newLogo.png)
+![newLogo](/img/2022.2.4/newLogo.png)
 :::
 
 ::: tip 支持通过 DateTimeFormat 注释解析日期
-![dateTimeFormat](../.vuepress/public/img/2022.2.4/dateTimeFormat.png)
+![dateTimeFormat](/img/2022.2.4/dateTimeFormat.png)
 :::
 
 ::: tip 支持解析 BaseController
-![baseController](../.vuepress/public/img/2022.2.4/baseController.png)
+![baseController](/img/2022.2.4/baseController.png)
 :::
 
 ::: info 自动更新可配置化
-如果你不需要接收自动更新,则可以关闭,通过手动的形式更新(建议开启)
-![autoUpdate](../.vuepress/public/img/2022.2.4/autoUpdate.png)
+如果你不需要接收自动更新，则可以关闭，通过手动的形式更新(建议开启)
+![autoUpdate](/img/2022.2.4/autoUpdate.png)
 :::
 
 ## v2022.2.3.1 <Badge text="免费试用" type="tip"/>
@@ -204,17 +204,17 @@ Console 帮助开发者打印一些你想要的信息
 脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理  
 具体请参考-------> [脚本](./script.md)
 
-![scriptProject](../.vuepress/public/img/2022.2.3/scriptProject.png)
+![scriptProject](/img/2022.2.3/scriptProject.png)
 
-![scriptModule](../.vuepress/public/img/2022.2.3/scriptModule.png)
+![scriptModule](/img/2022.2.3/scriptModule.png)
 :::
 
 ::: tip 一键拷贝 Url
-![copyUrl](../.vuepress/public/img/2022.2.3/copyUrl.png)
+![copyUrl](/img/2022.2.3/copyUrl.png)
 :::
 
 ::: info 点击按钮时触发表格单元格值更改
-==2022.2.3 版本之前==在输入表格中的参数时候,若光标还在表格内部,此时去点击操作按钮,某些场景下会报错或者值无法被修改,该问题在此版本得到解决
+==2022.2.3 版本之前==在输入表格中的参数时候，若光标还在表格内部，此时去点击操作按钮，某些场景下会报错或者值无法被修改，该问题在此版本得到解决
 
 老版本如何处理: [FAQ:输入参数后调用 API 发现无效](./faq.md)
 :::
@@ -231,11 +231,11 @@ Console 帮助开发者打印一些你想要的信息
 - <Badge text="某些情况下历史请求删除操作报错" type="danger"/>
 
 ::: tip 终止 API 请求功能
-![stopApi](../.vuepress/public/img/2022.2.2/stopApi.gif)
+![stopApi](/img/2022.2.2/stopApi.gif)
 :::
 
 ::: tip 批量导出 API 文档
-![batchExportApiDoc](../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
+![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)
 :::
 
 ## v2022.2.1 <Badge text="免费试用" type="warn"/>
@@ -258,34 +258,34 @@ Console 帮助开发者打印一些你想要的信息
 
 如何操作:输入参数后点击==分组请求保存==
 
-![groupSave](../.vuepress/public/img/2022.2.1/groupSave.png)
+![groupSave](/img/2022.2.1/groupSave.png)
 
 **切换参数**
 
 以下是 book 列表 3 种语言的查询
 
-![apiParamGroup](../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif)
 :::
 
 ::: tip 临时请求保存支持
-目的:保存任意不属于本项目的请求,用于临时调用,跟当前项目代码不关联
+目的:保存任意不属于本项目的请求，用于临时调用，跟当前项目代码不关联
 
 临时请求保存的 Request 的 Url 必须以==http==或者==https==开头
 
-![tempSave](../.vuepress/public/img/2022.2.1/tempSave.png)
+![tempSave](/img/2022.2.1/tempSave.png)
 
 :::
 
 ::: tip cURL 导入支持
 
-![importByCurl](../.vuepress/public/img/2022.2.1/importByCurl.gif)
+![importByCurl](/img/2022.2.1/importByCurl.gif)
 
-==请注意如果需要绑定方法,则需要将光标放置到方法名上==
+==请注意如果需要绑定方法，则需要将光标放置到方法名上==
 :::
 
 ::: tip Response Header 展示
 
-![responseHeader](../.vuepress/public/img/2022.2.1/responseHeader.png)
+![responseHeader](/img/2022.2.1/responseHeader.png)
 
 :::
 
@@ -293,7 +293,7 @@ Console 帮助开发者打印一些你想要的信息
 
 目的:有些请求需要在 url 结尾加上.do
 
-![responseHeader](../.vuepress/public/img/2022.2.1/urlSuffix.png)
+![responseHeader](/img/2022.2.1/urlSuffix.png)
 
 :::
 
@@ -313,17 +313,17 @@ Console 帮助开发者打印一些你想要的信息
 
 ::: tip 添加对历史请求预览的支持
 隐藏技能:双击记录可以展示详情
-![history](../.vuepress/public/img/history.png)
+![history](/img/history.png)
 :::
 
 ::: tip 超时时间自定义设置
 默认: 60 秒
-![timeoutSetting](../.vuepress/public/img/timeoutSetting.png)
+![timeoutSetting](/img/timeoutSetting.png)
 :::
 
 ::: info SearchEveryWhere 支持方法注释搜索
 支持注释搜索 API
-![searchEveryWhereDescription](../.vuepress/public/img/searchEveryWhereDescription.png)
+![searchEveryWhereDescription](/img/searchEveryWhereDescription.png)
 :::
 
 ::: info 优化
@@ -350,19 +350,19 @@ Console 帮助开发者打印一些你想要的信息
 - <Badge text="优化了导出预览" type="info"/>
 
 ::: tip 工具窗口跳转增加快捷键
-提供了快捷键可以快速跳转,可以在`setting->Keymap`中修改
-![toolwindowShortcut](../.vuepress/public/img/toolwindowShortcut.png)
+提供了快捷键可以快速跳转，可以在`setting->Keymap`中修改
+![toolwindowShortcut](/img/toolwindowShortcut.png)
 :::
 
 ::: tip 添加自动添加 Cookie 支持
-开启此配置,cookie 再自动存入==项目全局参数==中的`cookies`中,此配置默认开启
-![autoStoreCookie](../.vuepress/public/img/autoStoreCookie.png)
+开启此配置，cookie 再自动存入==项目全局参数==中的`cookies`中，此配置默认开启
+![autoStoreCookie](/img/autoStoreCookie.png)
 :::
 
 ::: tip 响应 raw 中增加 html 预览
-raw 中不再截断 html 返回类型的响应,同时可以对 html 进行预览
+raw 中不再截断 html 返回类型的响应，同时可以对 html 进行预览
 
-![rawHtmlPreview](../.vuepress/public/img/rawHtmlPreview.png)
+![rawHtmlPreview](/img/rawHtmlPreview.png)
 :::
 
 ::: info 忽略字段解析优化
@@ -377,7 +377,7 @@ raw 中不再截断 html 返回类型的响应,同时可以对 html 进行预览
 
 ```java
 @Data
-public class CommonDTO<T,R> implements Serializable {
+public class CommonDTO<T，R> implements Serializable {
     private String accessToken;
     private String appKey;
     private String clientId;
@@ -386,7 +386,7 @@ public class CommonDTO<T,R> implements Serializable {
 }
 
 @PostMapping(value = "/apply")
-public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
+public Integer loanApply(@RequestBody CommonDTO<Book， TestDTO> req){
     return 1;
 }
 ```
@@ -395,7 +395,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 ::: info 完善项目全局参数
 加入了`URL Params`、`URL-Encoded Params`、`Cookies`
-![projectConfigParam](../.vuepress/public/img/projectGlobalParam.png)
+![projectConfigParam](/img/projectGlobalParam.png)
 :::
 
 ::: info 优化
@@ -408,8 +408,8 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 :::
 
 ::: info APIs 列表视图优化
-渲染进行了优化,新保存的 api 图标会自动优化,历史保存的 api 可以右键进行选择变更
-![apisList](../.vuepress/public/img/apisList.png)
+渲染进行了优化，新保存的 api 图标会自动优化，历史保存的 api 可以右键进行选择变更
+![apisList](/img/apisList.png)
 :::
 
 ## v2022.1.8 <Badge text="免费试用" type="warn"/>
@@ -422,20 +422,20 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 - <Badge text="修复了一些bug" type="danger"/>
 
 ::: tip 项目级别全局参数支持
-支持项目级别内的全局参数,不受多模块影响
+支持项目级别内的全局参数，不受多模块影响
 
 配置优先级`api头 > 项目级别全局请求头 > 全局请求头`
 
-![projectConfigParam](../.vuepress/public/img/projectConfigParam.png)
+![projectConfigParam](/img/projectConfigParam.png)
 :::
 
 ::: info 快速添加到头参数
 
-原响应结果从添加到 ~~全局请求头~~ 变更为添加到 ==项目全局请求头==,cookie 也是如此
+原响应结果从添加到 ~~全局请求头~~ 变更为添加到 ==项目全局请求头==，cookie 也是如此
 
-![add2projectConfig](../.vuepress/public/img/add2projectConfig.png)
+![add2projectConfig](/img/add2projectConfig.png)
 
-![cookie2projectConfig](../.vuepress/public/img/cookie2projectConfig.png)
+![cookie2projectConfig](/img/cookie2projectConfig.png)
 :::
 
 ## v2022.1.7 <Badge text="免费试用" type="warn"/>
@@ -448,32 +448,32 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 - <Badge text="优化多模块下保存的API回显自动绑定项目" type="info"/>
 
 ::: tip Kotlin spring 系列框架支持
-添加了 Kotlin 语言下,Spring 系列框架支持
-![kotlinSupport](../.vuepress/public/img/kotlinSupport.png)
+添加了 Kotlin 语言下，Spring 系列框架支持
+![kotlinSupport](/img/kotlinSupport.png)
 :::
 
 ::: tip 新增 SearchEveryWhere 范围搜索策略
 2022.1.7 版本默认可以搜索到 feign 或者 controller 中的 mapping
 
-默认搜索策略是根据注解来搜索的,再提供 2 种选项,如果在搜索过程中需要排除类似 feign 中的接口,可以通过去除 Interface 的勾选来处理.
-![searchEveryWhereStrategy](../.vuepress/public/img/searchEveryWhereStrategy.png)
+默认搜索策略是根据注解来搜索的，再提供 2 种选项，如果在搜索过程中需要排除类似 feign 中的接口，可以通过去除 Interface 的勾选来处理.
+![searchEveryWhereStrategy](/img/searchEveryWhereStrategy.png)
 :::
 
 ::: tip 编辑器 ToggleUseSoftWrap 支持
 
-![toggleUseSoftWrap](../.vuepress/public/img/toggleUseSoftWrap.png)
+![toggleUseSoftWrap](/img/toggleUseSoftWrap.png)
 :::
 
 ::: tip 响应数据一键添加 Global Header 支持
-多模块项目下建议使用,因为 Add to Headers 只能添加到当前模块项目下
+多模块项目下建议使用，因为 Add to Headers 只能添加到当前模块项目下
 
-![add2GlobalHeader](../.vuepress/public/img/add2GlobalHeader.png)
+![add2GlobalHeader](/img/add2GlobalHeader.png)
 :::
 
 ::: tip 添加导航到当前方法的支持
-当你生成好方法的 url 以后,又切换到代码中的别的地方,然后又想开始调试该 API 方法,可以通过此功能快速定位到代码
+当你生成好方法的 url 以后，又切换到代码中的别的地方，然后又想开始调试该 API 方法，可以通过此功能快速定位到代码
 
-![navigate2CurrentMethod](../.vuepress/public/img/navigate2CurrentMethod.png)
+![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
 :::
 
 ::: info 优化多模块下保存的 API 回显自动绑定项目
@@ -489,25 +489,25 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 ::: tip 添加一键添加 Cookie 到 Header 的支持
 
-针对登录需要 Cookie 支持的,可以将响应中的 Cookie 快速添加到 Header 来实现
+针对登录需要 Cookie 支持的，可以将响应中的 Cookie 快速添加到 Header 来实现
 
-![addCookie2Header](../.vuepress/public/img/addCookie2Header.png)
+![addCookie2Header](/img/addCookie2Header.png)
 :::
 
 ::: tip 添加 API 分享 Word 和 html 的支持
 
-请注意 word 形式的 API 内部采用 html 来实现的,所以不要觉得奇怪,导出就行
+请注意 word 形式的 API 内部采用 html 来实现的，所以不要觉得奇怪，导出就行
 
-![shareApi](../.vuepress/public/img/shareApi.png)
+![shareApi](/img/shareApi.png)
 :::
 
 [comment]: <> (::: note 添加 YouTrack 跟踪 bug 支持)
 
-[comment]: <> (Fast Request 接通了 YouTrack Issue 自动上报的功能,直接点击上报 bug 即可反馈问题,无需手动再复制粘贴到 Github 提报 bug)
+[comment]: <> (Fast Request 接通了 YouTrack Issue 自动上报的功能，直接点击上报 bug 即可反馈问题，无需手动再复制粘贴到 Github 提报 bug)
 
 [comment]: <> (Fast Request YouTrack 官方网址: [https://darkings.youtrack.cloud/issues]&#40;https://darkings.youtrack.cloud/issues&#41;)
 
-[comment]: <> (![youtrackSubmit]&#40;../.vuepress/public/img/youtrackSubmit.png&#41;)
+[comment]: <> (![youtrackSubmit]&#40;/img/youtrackSubmit.png&#41;)
 
 [comment]: <> (::: )
 
@@ -523,16 +523,16 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 可选择性的对描述进行隐藏
 
-![paramDescription](../.vuepress/public/img/paramDescription.png)
+![paramDescription](/img/paramDescription.png)
 :::
 
 ::: tip 添加一键生成 API 文档的支持
 
-点击生成参数后,可通过分享直接生成 Markdown 文档
+点击生成参数后，可通过分享直接生成 Markdown 文档
 
-![shareDocButton](../.vuepress/public/img/shareDocButton.png)
+![shareDocButton](/img/shareDocButton.png)
 
-![apiDocExample](../.vuepress/public/img/apiDocExample.png)
+![apiDocExample](/img/apiDocExample.png)
 
 :::
 
@@ -540,7 +540,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 聚焦窗口后输入关键字可快速定位
 
-![apiDocExample](../.vuepress/public/img/apiPreview.gif)
+![apiDocExample](/img/apiPreview.gif)
 :::
 
 ## v2022.1.4 <Badge text="免费试用" type="warn"/>
@@ -562,14 +562,14 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 - <Badge text="修复了Light files should have PSI only in one project" type="danger"/>
 
 ::: info SearchEveryWhere 高亮优化
-高亮展示搜索关键字,加快真实想要查找的 API 的查找速度,同时展示 api 对应的 javadoc
-![help](../.vuepress/public/img/searchEveryWhereHighlight.png)
+高亮展示搜索关键字，加快真实想要查找的 API 的查找速度，同时展示 api 对应的 javadoc
+![help](/img/searchEveryWhereHighlight.png)
 :::
 
 ::: tip APIs 导入导出支持
-增加对 APIs 的导入导出支持,利用改功能,你可以非常方便得将自己已有的 APIs 分享给别的开发者,或者导入到其他设备上的 IDEA
+增加对 APIs 的导入导出支持，利用改功能，你可以非常方便得将自己已有的 APIs 分享给别的开发者，或者导入到其他设备上的 IDEA
 
-![exportImportApis](../.vuepress/public/img/exportImportApis.gif)
+![exportImportApis](/img/exportImportApis.gif)
 
 更多详情请看 **[功能->APIs 导入导出](./feature.md#apis导入导出)**
 :::
@@ -577,15 +577,15 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 ::: tip APIs 支持直接运行
 你可以在 APIs tab 页直接运行你保存的请求
 
-![runInApiManagement](../.vuepress/public/img/runInApiManagement.png)
+![runInApiManagement](/img/runInApiManagement.png)
 :::
 
 ::: info 自动生成参数可选化
-![generateSwitch](../.vuepress/public/img/generateSwitch.png)
+![generateSwitch](/img/generateSwitch.png)
 :::
 
 ::: tip swagger 注解默认值参数解析支持
-增加了 swagger 注解默认值的解析,该功能对于入参的传递更加人性化
+增加了 swagger 注解默认值的解析，该功能对于入参的传递更加人性化
 
 - @ApiParam(swagger2)
 - @ApiImplicitParam(swagger2)
@@ -597,23 +597,23 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 :::
 
 ::: info 对 Send 和 Send and Download 按钮进行了合并
-对按钮进行了合并,因为常见的操作都是非下载操作,减少了工具栏按钮个数,看上去更加简捷
-![mergeRunAndDownload](../.vuepress/public/img/mergeRunAndDownload.png)
+对按钮进行了合并，因为常见的操作都是非下载操作，减少了工具栏按钮个数，看上去更加简捷
+![mergeRunAndDownload](/img/mergeRunAndDownload.png)
 :::
 
 ::: info 使用引导上的细节优化
-我们在不同的操作窗口,增加?选项用来展示一些注意事项及操作指引,对于初次使用的用户,操作门槛更低
+我们在不同的操作窗口，增加?选项用来展示一些注意事项及操作指引，对于初次使用的用户，操作门槛更低
 
-并且随着版本的迭代,后续可能会加入更多的提示操作指引
+并且随着版本的迭代，后续可能会加入更多的提示操作指引
 
-![help](../.vuepress/public/img/help.png)
+![help](/img/help.png)
 :::
 
 ::: info url 解析优化
 
-历史逻辑只会取第一个 url 即 test1,考虑到实际使用中,有可能你需要的是另外一个 url,所以添加了随机支持
+历史逻辑只会取第一个 url 即 test1，考虑到实际使用中，有可能你需要的是另外一个 url，所以添加了随机支持
 
-以下 demo,url 将随着点击<i class="icon iconfont icon-restfulFastRequest"></i>随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+以下 demo，url 将随着点击<FontIcon icon="restfulFastRequest" />随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
 
 ```java
 @RequestMapping({"url1","url2"})
@@ -626,7 +626,7 @@ public class MultiUrlController {
 }
 ```
 
-支持变量计算,以下 demo 将生成 **/url/public/test1**
+支持变量计算，以下 demo 将生成 **/url/public/test1**
 
 ```java
 public class Constant {
@@ -645,7 +645,7 @@ public class MultiUrlController {
 :::
 
 ::: info Tab 页 API Navigate 重命名 Navigate  
-在工具窗口比较小的情况下,API Navigate 会被隐藏,为了在尽可能小的工具窗口展示更多内容,所以命名更加简短
+在工具窗口比较小的情况下，API Navigate 会被隐藏，为了在尽可能小的工具窗口展示更多内容，所以命名更加简短
 :::
 
 ## v2.1.3
@@ -699,26 +699,26 @@ public class UrlTestController {
 
 ::: tip 添加对导出 api 到 Postman 的支持
 
-![export2postman](../.vuepress/public/img/export2postman.gif)
+![export2postman](/img/export2postman.gif)
 :::
 
 ::: tip SearchEveryWhere module 标识
 
-![searchEveryWhereModule](../.vuepress/public/img/searchEveryWhereModule.png)
+![searchEveryWhereModule](/img/searchEveryWhereModule.png)
 :::
 
 ::: tip API 保存分组优化
 
 ```
-保存api的时候,api将会保存到对应的请求指定到控制器名所在的分组(更加直观)
+保存api的时候，api将会保存到对应的请求指定到控制器名所在的分组(更加直观)
 ```
 
-![save2ControllerGroup](../.vuepress/public/img/save2ControllerGroup.png)
+![save2ControllerGroup](/img/save2ControllerGroup.png)
 :::
 
 ::: tip 全局请求头支持
 
-![globalRequestHeader](../.vuepress/public/img/globalRequestHeader.png)
+![globalRequestHeader](/img/globalRequestHeader.png)
 :::
 
 ## v2.1.1
@@ -737,11 +737,11 @@ get /list         (指定get方式指定url)
 post /save        (指定post方式指定url)
 ```
 
-![searchEveryWhere](../.vuepress/public/img/searchEveryWhere.gif)
+![searchEveryWhere](/img/searchEveryWhere.gif)
 :::
 
 ::: info 最新版本快速查看
-![whatsnewNotifcation](../.vuepress/public/img/whatsnewNotifcation.png)
+![whatsnewNotifcation](/img/whatsnewNotifcation.png)
 :::
 
 ## v2.1.0.2
@@ -763,27 +763,27 @@ post /save        (指定post方式指定url)
 
 - 2021.3+版本修复"Slow operations are prohibited on EDT"
 - 修复快速从 response 添加 Headers
-- 添加项目级别的配置,切换项目 env 和 project 不受变化
+- 添加项目级别的配置，切换项目 env 和 project 不受变化
 - 文本编辑器添加了快捷格式化按钮
 
 ::: tip 从 response 添加 Headers
 
 ```
-如果你的api需要再header里面塞入token,你可以像这样子从响应里面快速加参数塞入headers
+如果你的api需要再header里面塞入token，你可以像这样子从响应里面快速加参数塞入headers
 ```
 
-![format](../.vuepress/public/img/quickAddHeaders.gif)
+![format](/img/quickAddHeaders.gif)
 :::
 
 ::: tip 文本编辑器添加了快捷格式化按钮
-![format](../.vuepress/public/img/format.gif)
+![format](/img/format.gif)
 :::
 
 ## v2.0.8.1
 
 - 修复 searchEveryWhere 冲突警告
 - 调整低版本 idea 工具栏操作按钮至工具栏顶部位置
-- 移除多余依赖,插件从 11.1M 降至 5.9M
+- 移除多余依赖，插件从 11.1M 降至 5.9M
 
 ## v2.0.8
 
@@ -798,15 +798,15 @@ post /save        (指定post方式指定url)
 ::: tip send/sendDownload 支持自定义快捷键
 
 ```
-快捷键在任意位置点击均可触发,不再需要聚焦到工具窗口
+快捷键在任意位置点击均可触发，不再需要聚焦到工具窗口
 ```
 
-![shortcutSendAndDownload](../.vuepress/public/img/shortcutSendAndDownload.png)
+![shortcutSendAndDownload](/img/shortcutSendAndDownload.png)
 :::
 
 ::: tip 添加 Api navigate 对 methodType 的支持
 
-![shortcutSendAndDownload](../.vuepress/public/img/methodFilter.png)
+![shortcutSendAndDownload](/img/methodFilter.png)
 :::
 
 ## v2.0.7
@@ -825,24 +825,24 @@ post /save        (指定post方式指定url)
 ::: tip API 导航树
 
 ```
-选中树输入关键字,再按回车或者鼠标左键双击即可定位到API
+选中树输入关键字，再按回车或者鼠标左键双击即可定位到API
 
 悬浮鼠标显示api的doc
 ```
 
-![apinavi](../.vuepress/public/img/apinav.gif)
+![apinavi](/img/apinav.gif)
 :::
 
 ::: tip Headers 自动切换
 
 ```
-场景:SpringBoot等多模块项目不同项目、不同环境下头参数不同,为了快速自动切换headers,引入了header分组
+场景:SpringBoot等多模块项目不同项目、不同环境下头参数不同，为了快速自动切换headers，引入了header分组
 操作方式：
 1.在headers group里修改约束:输入的值必须是标准json格式
-2.直接切换环境,然后再headers表格中输入对应的key、value值
+2.直接切换环境，然后再headers表格中输入对应的key、value值
 ```
 
-![headerSwitch](../.vuepress/public/img/headerSwitch.gif)
+![headerSwitch](/img/headerSwitch.gif)
 :::
 
 ::: tip 优化@RequestParam 的参数解析
@@ -858,7 +858,7 @@ send and download: alt -
 前提条件:工具窗口需要被聚焦
 ```
 
-![toolbarSend](../.vuepress/public/img/toolbarSend.png)
+![toolbarSend](/img/toolbarSend.png)
 :::
 
 ::: tip 优化工具窗口 project 和 env 下拉组件及布局
@@ -868,9 +868,9 @@ send and download: alt -
 图标e代表environment
 ```
 
-![dropdownProject](../.vuepress/public/img/dropdownProject.png)
+![dropdownProject](/img/dropdownProject.png)
 
-![dropdownEnv](../.vuepress/public/img/dropdownEnv.png)
+![dropdownEnv](/img/dropdownEnv.png)
 :::
 
 ## v2.0.6
@@ -883,26 +883,26 @@ send and download: alt -
 - 添加对 JAX-RS 的支持
 - 最新功能展示
 
-在不影响使用的情况下,有时候会经常弹出*Light files should have PSI only in one project*.2.0.6 版本得到修复
+在不影响使用的情况下，有时候会经常弹出*Light files should have PSI only in one project*.2.0.6 版本得到修复
 
 ::: tip json 语法支持
-![json](../.vuepress/public/img/json.png)
+![json](/img/json.png)
 :::
 
 ::: tip 添加 API 保存时候存入对应的模块分组的支持
-![apiGroup](../.vuepress/public/img/apiGroup.gif)
+![apiGroup](/img/apiGroup.gif)
 
 同时模块支持快速搜索
-![apiGroup](../.vuepress/public/img/moduleSearch.gif)
+![apiGroup](/img/moduleSearch.gif)
 :::
 
 ::: tip JAX-RS 的支持
-![apiGroup](../.vuepress/public/img/jaxrs.gif)
+![apiGroup](/img/jaxrs.gif)
 :::
 
 ::: tip 最新功能展示  
 只会展示一次
-![apiGroup](../.vuepress/public/img/whatsnew.png)
+![apiGroup](/img/whatsnew.png)
 :::
 
 ## v2.0.5
@@ -933,7 +933,7 @@ send and download: alt -
 - 修复 List 参数无泛型解析问题
 - 添加对文件下载的支持
 - 发送请求时展示进度条
-- 全新的 document,点击工具栏 doc 图标
+- 全新的 document，点击工具栏 doc 图标
 - 一些优化
 
 ## v2.0.1

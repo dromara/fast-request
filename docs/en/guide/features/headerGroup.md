@@ -9,4 +9,4 @@ Operation method：
 2.Switch the environment or project name directly, and then enter the corresponding key and value values in the headers form
 ```
 
-![headerSwitch](../../../.vuepress/public/img/headerSwitch.gif)
+![headerSwitch](/img/headerSwitch.gif)

@@ -72,4 +72,6 @@ export default defineUserConfig({
       },
     }),
   ],
+
+  pagePatterns: ["**/*.md", "!*.snippet.md", "!.vuepress", "!node_modules"],
 });

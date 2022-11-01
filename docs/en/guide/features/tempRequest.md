@@ -6,4 +6,4 @@ Purpose: Save any request that does not belong to this project for temporary inv
 
 The Url of the Request saved by the temporary request must start with ==http== or ==https==
 
-![tempSave](../../../.vuepress/public/img/2022.2.1/tempSave_en.png)
+![tempSave](/img/2022.2.1/tempSave_en.png)

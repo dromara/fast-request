@@ -10,5 +10,5 @@ API 的 name 值支持修改。
 
 :::
 
-![api](../../.vuepress/public/img/apis_hd.png)
-![apiManager](../../.vuepress/public/img/apiManager.png)
+![api](/img/apis_hd.png)
+![apiManager](/img/apiManager.png)

@@ -9,5 +9,5 @@
 API name value supports modification  
 :::
 
-![apis](../../../.vuepress/public/img/apis_hd.png)
-![apiManager](../../../.vuepress/public/img/apiManager_en.png)
+![apis](/img/apis_hd.png)
+![apiManager](/img/apiManager_en.png)

@@ -6,7 +6,7 @@ icon: featuresNew
 
 The icon in the document corresponds to the button icon in the plugin
 
-![toolwindow](../../../.vuepress/public/img/toolwindow.png)
+![toolwindow](/img/toolwindow.png)
 
 ## Request
 

@@ -7,7 +7,7 @@
 用于将 API 文档同步至<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> Github、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> Gitee、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> Gitlab，
 生成在线文档，分享给其他的小伙伴看。
 
-![apiSync](../../.vuepress/public/img/2022.2.7/apiSync.png)
+![apiSync](/img/2022.2.7/apiSync.png)
 
 ## 注意点
 
@@ -18,7 +18,7 @@
 
 ## 配置介绍
 
-![apiSyncSetting](../../.vuepress/public/img/2022.2.7/apiSyncSetting.png)
+![apiSyncSetting](/img/2022.2.7/apiSyncSetting.png)
 
 注意点: 命名策略决定了同步至云端的文件名称，文件名称来自 Javadoc 或者 Swagger 方法命名注解，如果勾选使用 javadoc，请确保 Javadoc 和 Swagger 方法命名一定要==简短==，
 否则云端的文件名会非常长，这种情况下考虑勾选方法名来同步。
@@ -31,8 +31,8 @@
 - Github: 必须勾选 repo
 - Gitlab: 必须勾选 api
 
-![giteeToken](../../.vuepress/public/img/2022.2.7/giteeToken.png)
+![giteeToken](/img/2022.2.7/giteeToken.png)
 
-![githubToken](../../.vuepress/public/img/2022.2.7/githubToken.png)
+![githubToken](/img/2022.2.7/githubToken.png)
 
-![gitlabToken](../../.vuepress/public/img/2022.2.7/gitlabToken.png)
+![gitlabToken](/img/2022.2.7/gitlabToken.png)

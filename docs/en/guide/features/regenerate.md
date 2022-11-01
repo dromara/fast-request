@@ -8,6 +8,6 @@ If you have saved a request,But if you want to completely re-modify the paramete
 
 :::
 
-![regenerateNew](../../../.vuepress/public/img/regenerateNew.png)
+![regenerateNew](/img/regenerateNew.png)
 
-![regenerate](../../../.vuepress/public/img/regenerate_en.png)
+![regenerate](/img/regenerate_en.png)

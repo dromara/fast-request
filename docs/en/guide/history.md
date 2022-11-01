@@ -12,7 +12,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) | [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![twitter](../../.vuepress/public/img/twitter.png)                                                                                                | ![telegram](../../.vuepress/public/img/telegram.png)                                                                                                          |
+| ![twitter](/img/twitter.png)                                                                                                                      | ![telegram](/img/telegram.png)                                                                                                                                |
 
 Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 
@@ -37,24 +37,24 @@ Because developing version is still in development, the documentation of develop
 ::: tip Api sync
 Online Api doc sync---->[More detail](./features/apiDocSync.md)
 
-![apiSync](../../.vuepress/public/img/2022.2.7/apiSync_en.png)
+![apiSync](/img/2022.2.7/apiSync_en.png)
 
-![apiSyncSetting](../../.vuepress/public/img/2022.2.7/apiSyncSetting_en.png)
+![apiSyncSetting](/img/2022.2.7/apiSyncSetting_en.png)
 :::
 
 :::tip Api doc show return type document
-![returnValueDoc](../../.vuepress/public/img/2022.2.7/returnValueDoc.png)
+![returnValueDoc](/img/2022.2.7/returnValueDoc.png)
 :::
 
 ::: tip Common header
 
 [---->More detail](./features/commonHeader.md)
-![commonHeader](../../.vuepress/public/img/2022.2.7/commonHeader.gif)
+![commonHeader](/img/2022.2.7/commonHeader.gif)
 :::
 
 ::: tip Full screen
 ---->[More detail](./features/fullScreen.md)
-![fullScreen](../../.vuepress/public/img/2022.2.7/fullScreen.png)
+![fullScreen](/img/2022.2.7/fullScreen.png)
 :::
 
 ::: tip Plugin update notification mechanism
@@ -62,11 +62,11 @@ Change from an explicit dialog box to a notification, at the same time automatic
 
 Note that the previous version of the update will still be a pop-up dialog, this version onwards will be a message notification
 
-![upgradeNotice](../../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
+![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
 :::
 
 ::: info Comment preview
-![fullScreen](../../.vuepress/public/img/2022.2.7/commentPreview.png)
+![fullScreen](/img/2022.2.7/commentPreview.png)
 :::
 
 ## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="info"/>
@@ -81,20 +81,20 @@ Note that the previous version of the update will still be a pop-up dialog, this
 
 ::: tip Clear params support
 clear all
-![clear](../../.vuepress/public/img/2022.2.6/clear.png)
+![clear](/img/2022.2.6/clear.png)
 
 batch clean column value
-![clearColumnValue](../../.vuepress/public/img/2022.2.6/clearColumnValue.png)
+![clearColumnValue](/img/2022.2.6/clearColumnValue.png)
 :::
 
 ::: tip Api comment preview
-![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)
-![showCommentInClass](../../.vuepress/public/img/2022.2.6/showCommentInClass.png)
-![showCommentInNavigate](../../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)
+![showCommentConfig](/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](/img/2022.2.6/showCommentInNavigate.png)
 :::
 
 ::: tip Sort param column by key
-![sortColumn](../../.vuepress/public/img/2022.2.6/sortColumn.png)
+![sortColumn](/img/2022.2.6/sortColumn.png)
 :::
 
 ## v2022.2.5.2 <Badge text="Free trial" type="tip"/>
@@ -120,7 +120,7 @@ Console helps developers print some info you wanted
 
 More info please see [script->console](./script.md#console)
 
-![console](../../.vuepress/public/img/2022.2.5/console_en.png)
+![console](/img/2022.2.5/console_en.png)
 
 :::
 
@@ -133,15 +133,15 @@ More info please see [script->Built-in variable->rfr](./script.md#rfr)
 ::: tip Get description from javadoc for path and request param
 Parse parameter comments in the form of Javadoc, suitable for path parameters and request param is a parameter of non-entity class
 
-![parseDocDesc](../../.vuepress/public/img/2022.2.5/parseDocDesc.png)
+![parseDocDesc](/img/2022.2.5/parseDocDesc.png)
 :::
 
 ::: tip twitter
 有推特账号的请关注我,感谢
 
-![](../../.vuepress/public/img/twitter.png)
+![](/img/twitter.png)
 
-![twitterAction](../../.vuepress/public/img/2022.2.5/twitterAction.png)
+![twitterAction](/img/2022.2.5/twitterAction.png)
 :::
 
 ## v2022.2.4.1 <Badge text="Free trial" type="tip"/>
@@ -161,25 +161,25 @@ Parse parameter comments in the form of Javadoc, suitable for path parameters an
 ::: tip New logo
 Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
 
-![newLogo](../../.vuepress/public/img/2022.2.4/newLogo.gif)
+![newLogo](/img/2022.2.4/newLogo.gif)
 
-![newLogoConfig](../../.vuepress/public/img/2022.2.4/newLogoConfig.png)
+![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
 
-![newLogo](../../.vuepress/public/img/2022.2.4/newLogo.png)
+![newLogo](/img/2022.2.4/newLogo.png)
 
 :::
 
 ::: tip Support parse date by DateTimeFormat annotation pattern
-![dateTimeFormat](../../.vuepress/public/img/2022.2.4/dateTimeFormat.png)
+![dateTimeFormat](/img/2022.2.4/dateTimeFormat.png)
 :::
 
 ::: tip Support parse url of BaseController
-![baseController](../../.vuepress/public/img/2022.2.4/baseController.png)
+![baseController](/img/2022.2.4/baseController.png)
 :::
 
 ::: info Change auto update configurable
 If you don't need to receive automatic updates, you can turn it off and update it manually (recommend open)
-![autoUpdate](../../.vuepress/public/img/2022.2.4/autoUpdate.png)
+![autoUpdate](/img/2022.2.4/autoUpdate.png)
 :::
 
 ## v2022.2.3.1 <Badge text="Free trial" type="tip"/>
@@ -201,13 +201,13 @@ If you don't need to receive automatic updates, you can turn it off and update i
 Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
 Please refer to [Script](./script.md)
 
-![scriptProject](../../.vuepress/public/img/2022.2.3/scriptProject_en.png)
+![scriptProject](/img/2022.2.3/scriptProject_en.png)
 
-![scriptModule](../../.vuepress/public/img/2022.2.3/scriptModule_en.png)
+![scriptModule](/img/2022.2.3/scriptModule_en.png)
 :::
 
 ::: tip One-click copy Url
-![copyUrl](../../.vuepress/public/img/2022.2.3/copyUrl.png)
+![copyUrl](/img/2022.2.3/copyUrl.png)
 :::
 
 ::: info Apply table cell value change when click send request
@@ -228,11 +228,11 @@ How the old version deals with it: [FAQ:After entering the parameters, the API c
 - <Badge text="History request delete operation error in some cases" type="danger"/>
 
 ::: tip Add stop API request function
-![stopApi](../../.vuepress/public/img/2022.2.2/stopApi.gif)
+![stopApi](/img/2022.2.2/stopApi.gif)
 :::
 
 ::: tip Batch export API doc
-![batchExportApiDoc](../../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
+![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)
 :::
 
 ## v2022.2.1 <Badge text="Free trial" type="warn"/>
@@ -253,13 +253,13 @@ Purpose: Save parameters of different combinations under one API
 
 How to:After entering the parameters, click ==Save group param request==
 
-![groupSave](../../.vuepress/public/img/2022.2.1/groupSave_en.png)
+![groupSave](/img/2022.2.1/groupSave_en.png)
 
 **Toggle parameter**
 
 The following is the query of the book list in 3 languages
 
-![apiParamGroup](../../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif)
 :::
 
 ::: tip Temporary request save support
@@ -268,20 +268,20 @@ Purpose: Save any request that does not belong to this project for temporary inv
 
 The Url of the Request saved by the temporary request must start with ==http== or ==https==
 
-![tempSave](../../.vuepress/public/img/2022.2.1/tempSave_en.png)
+![tempSave](/img/2022.2.1/tempSave_en.png)
 
 :::
 
 ::: tip cURL import
 
-![importByCurl](../../.vuepress/public/img/2022.2.1/importByCurl_en.gif)
+![importByCurl](/img/2022.2.1/importByCurl_en.gif)
 
 ==Note that if you need to bind a method, you need to place the cursor on the method name==
 :::
 
 ::: tip Add Response Header in response
 
-![responseHeader](../../.vuepress/public/img/2022.2.1/responseHeader.png)
+![responseHeader](/img/2022.2.1/responseHeader.png)
 
 :::
 
@@ -289,7 +289,7 @@ The Url of the Request saved by the temporary request must start with ==http== o
 
 Purpose: Some requests need to add .do at the end of the url
 
-![responseHeader](../../.vuepress/public/img/2022.2.1/urlSuffix.png)
+![responseHeader](/img/2022.2.1/urlSuffix.png)
 
 :::
 
@@ -309,17 +309,17 @@ Optimized parsing of `List<Entity>`
 
 ::: tip Add support for history request preview
 Hidden skills: Double-click the record to display details
-![history](../../.vuepress/public/img/history.png)
+![history](/img/history.png)
 :::
 
 ::: info Add support for description search in SearchEveryWhere
 Support description search API
-![searchEveryWhereDescription](../../.vuepress/public/img/searchEveryWhereDescription.png)
+![searchEveryWhereDescription](/img/searchEveryWhereDescription.png)
 :::
 
 ::: tip Add request timeout settings
 Default value: 60 seconds
-![timeoutSetting](../../.vuepress/public/img/timeoutSetting.png)
+![timeoutSetting](/img/timeoutSetting.png)
 :::
 
 ::: info Optimization
@@ -347,19 +347,19 @@ Default value: 60 seconds
 
 ::: tip Add shortcut keys for tool window jump
 Provides shortcut keys to jump quickly, you can change it in `setting -> Keymap`
-![toolwindowShortcut](../../.vuepress/public/img/toolwindowShortcut.png)
+![toolwindowShortcut](/img/toolwindowShortcut.png)
 :::
 
 ::: tip Add auto add cookie support
 Then automatically stored in == project global parameters ==
 If enable this configuration,cookie will automatically store in ==Project Global Config== -> `cookies`,This configuration is enabled by default.
-![autoStoreCookie](../../.vuepress/public/img/autoStoreCookie.png)
+![autoStoreCookie](/img/autoStoreCookie.png)
 :::
 
 ::: info Add support for html preview in response raw
 The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
 
-![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
+![rawHtmlPreview](/img/rawHtmlPreview.png)
 :::
 
 ::: info Ignore field parsing optimizations
@@ -392,7 +392,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 ::: info Improve project global config
 Added `URL Params`、`URL-Encoded Params`、`Cookies`
-![projectConfigParam](../../.vuepress/public/img/projectGlobalParam.png)
+![projectConfigParam](/img/projectGlobalParam.png)
 :::
 
 ::: note Optimization
@@ -406,7 +406,7 @@ Added `URL Params`、`URL-Encoded Params`、`Cookies`
 
 ::: tip APIs list view optimization
 The rendering of the APIs interface has been optimized,Newly saved api icons are automatically optimized by default,The API saved in history can be right-clicked to select and change
-![apisList](../../.vuepress/public/img/apisList.png)
+![apisList](/img/apisList.png)
 :::
 
 ## v2022.1.8 <Badge text="Free trial" type="warn"/>
@@ -424,7 +424,7 @@ Support global parameters within the project level, not affected by multiple mod
 
 Configure priority `api header > project header>global header`
 
-![projectConfigParam](../../.vuepress/public/img/projectConfigParam.png)
+![projectConfigParam](/img/projectConfigParam.png)
 :::
 
 ::: info Quickly add to header parameters
@@ -433,9 +433,9 @@ Change ~~add params to global header~~ to `add params to project global header`
 
 Cookie is also like this
 
-![add2projectConfig](../../.vuepress/public/img/add2projectConfig.png)
+![add2projectConfig](/img/add2projectConfig.png)
 
-![cookie2projectConfig](../../.vuepress/public/img/cookie2projectConfig.png)
+![cookie2projectConfig](/img/cookie2projectConfig.png)
 :::
 
 ## v2022.1.7 <Badge text="Free trial" type="warn"/>
@@ -448,31 +448,31 @@ Cookie is also like this
 - <Badge text="Optimize automatic binding projectName for saved api under multiple modules" type="info"/>
 
 ::: tip Kotlin spring framework support
-![kotlinSupport](../../.vuepress/public/img/kotlinSupport.png)
+![kotlinSupport](/img/kotlinSupport.png)
 :::
 
 ::: info Add SearchEveryWhere scope search strategy
 The 2022.1.7 version can search for mapping in SpringBoot feign or controller by default
 
 The default search strategy is to search based on annotations, and two options are provided. If you need to exclude interfaces similar in SpringBoot feign interface during the search process, you can remove the check of Interface to deal with it.
-![searchEveryWhereStrategy](../../.vuepress/public/img/searchEveryWhereStrategy.png)
+![searchEveryWhereStrategy](/img/searchEveryWhereStrategy.png)
 :::
 
 ::: note Add toggleUseSoftWrap support in editor
 
-![toggleUseSoftWrap](../../.vuepress/public/img/toggleUseSoftWrap.png)
+![toggleUseSoftWrap](/img/toggleUseSoftWrap.png)
 :::
 
 ::: tip Add support for add to Global Header from response
 It is recommended to use in multi-module projects, because Add to Headers can only be added to the current module project
 
-![add2GlobalHeader](../../.vuepress/public/img/add2GlobalHeader.png)
+![add2GlobalHeader](/img/add2GlobalHeader.png)
 :::
 
 ::: note Add support for navigating to the current method
 After you generate the url of the method, sometimes you will switch to another place in the code, and then want to start debugging the API method, you can use this function to quickly locate the code
 
-![navigate2CurrentMethod](../../.vuepress/public/img/navigate2CurrentMethod.png)
+![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
 :::
 
 ::: info Optimize automatic binding projectName for saved api under multiple modules
@@ -490,14 +490,14 @@ Optimized the need to manually switch the project drop-down box for the saved ap
 
 For those that require cookie support for login, you can quickly add the cookie in the response to the Header to achieve this
 
-![addCookie2Header](../../.vuepress/public/img/addCookie2Header.png)
+![addCookie2Header](/img/addCookie2Header.png)
 :::
 
 ::: tip Add support for sharing API to Word and html
 
 Please note that the API in word form is implemented in html, so don't feel strange, just export it
 
-![shareApi](../../.vuepress/public/img/shareApi_en.png)
+![shareApi](/img/shareApi_en.png)
 :::
 
 ## v2022.1.5 <Badge text="Free trial" type="warn"/>
@@ -512,16 +512,16 @@ Please note that the API in word form is implemented in html, so don't feel stra
 
 You can hide or show description by toggle click
 
-![paramDescription](../../.vuepress/public/img/paramDescription.png)
+![paramDescription](/img/paramDescription.png)
 :::
 
 ::: tip Add support for generate API documentation
 
 After generating parameters, you can generate a Markdown document directly by sharing
 
-![shareDocButton](../../.vuepress/public/img/shareDocButton.png)
+![shareDocButton](/img/shareDocButton.png)
 
-![apiDocExample](../../.vuepress/public/img/apiDocExample.png)
+![apiDocExample](/img/apiDocExample.png)
 
 :::
 
@@ -529,7 +529,7 @@ After generating parameters, you can generate a Markdown document directly by sh
 
 After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
 
-![apiDocExample](../../.vuepress/public/img/apiPreview.gif)
+![apiDocExample](/img/apiPreview.gif)
 :::
 
 ## v2022.1.4 <Badge text="Free trial" type="warn"/>
@@ -553,12 +553,12 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 ::: info SearchEveryWhere highlight optimization
 Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
 
-![help](../../.vuepress/public/img/searchEveryWhereHighlight.png)
+![help](/img/searchEveryWhereHighlight.png)
 :::
 
 ::: tip Add support for import and export APIs
 Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
-![exportImportApis](../../.vuepress/public/img/exportImportApis.gif)
+![exportImportApis](/img/exportImportApis.gif)
 
 More info **[Features->APIs import and export](./feature.md#apis-import-and-export)**
 :::
@@ -566,16 +566,16 @@ More info **[Features->APIs import and export](./feature.md#apis-import-and-expo
 ::: tip Add support for run APIs
 You can run your saved requests directly in the APIs tab
 
-![runInApiManagement](../../.vuepress/public/img/runInApiManagement.png)
+![runInApiManagement](/img/runInApiManagement.png)
 :::
 
 ::: info Automatically generate parameter optionals
-![generateSwitch](../../.vuepress/public/img/generateSwitch_en.png)
+![generateSwitch](/img/generateSwitch_en.png)
 :::
 
 ::: info Merged Send and Send and Download buttons
 The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
-![mergeRunAndDownload](../../.vuepress/public/img/mergeRunAndDownload.png)
+![mergeRunAndDownload](/img/mergeRunAndDownload.png)
 :::
 
 ::: tip Swagger default value parsing support
@@ -595,13 +595,13 @@ We have added a ? option in different windows to display some guidelines. For fi
 
 And with the iteration of the version, more prompt operation guidelines may be added in the future
 
-![help](../../.vuepress/public/img/help.png)
+![help](/img/help.png)
 :::
 
 ::: info Url generation optimization
 Historical logic will only take the first url, that is, test1, considering that in actual use, it is possible that you need another url, so random support has been added.
 
-The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click <i class="icon iconfont icon-restfulFastRequest"></i>
+The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click <FontIcon icon="restfulFastRequest" />
 
 ```java
 @RequestMapping({"url1","url2"})
@@ -687,12 +687,12 @@ public class UrlTestController {
 
 ::: tip Add support for export api to Postman
 
-![export2postman](../../.vuepress/public/img/export2postman.gif)
+![export2postman](/img/export2postman.gif)
 :::
 
 ::: tip SearchEveryWhere show module
 
-![searchEveryWhereModule](../../.vuepress/public/img/searchEveryWhereModule.png)
+![searchEveryWhereModule](/img/searchEveryWhereModule.png)
 :::
 
 ::: tip Optimize the group when save api
@@ -702,12 +702,12 @@ when saving the api,it will save to a group named controller's name
 
 ```
 
-![save2ControllerGroup](../../.vuepress/public/img/save2ControllerGroup.png)
+![save2ControllerGroup](/img/save2ControllerGroup.png)
 :::
 
 ::: tip Global header params support
 
-![globalRequestHeader](../../.vuepress/public/img/globalRequestHeader.png)
+![globalRequestHeader](/img/globalRequestHeader.png)
 :::
 
 ## v2.1.1
@@ -726,11 +726,11 @@ get /list         (used for search get method)
 post /save        (used for search post method)
 ```
 
-![searchEveryWhere](../../.vuepress/public/img/searchEveryWhere.gif)
+![searchEveryWhere](/img/searchEveryWhere.gif)
 :::
 
 ::: tip Quick view of the latest version
-![whatsnewNotifcation](../../.vuepress/public/img/whatsnewNotifcation.png)
+![whatsnewNotifcation](/img/whatsnewNotifcation.png)
 :::
 
 ## v2.1.0.2
@@ -762,11 +762,11 @@ post /save        (used for search post method)
 if your api need token in header,you can do like this to add params to header from response
 ```
 
-![format](../../.vuepress/public/img/quickAddHeaders.gif)
+![format](/img/quickAddHeaders.gif)
 :::
 
 ::: tip Add format action icon to textEditor
-![format](../../.vuepress/public/img/format.gif)
+![format](/img/format.gif)
 :::
 
 ## v2.0.8.1
@@ -791,11 +791,11 @@ if your api need token in header,you can do like this to add params to header fr
 shortcut is available anywhere to trigger the event,No longer need to focus on the tool window
 ```
 
-![shortcutSendAndDownload](../../.vuepress/public/img/shortcutSendAndDownload.png)
+![shortcutSendAndDownload](/img/shortcutSendAndDownload.png)
 :::
 
 ::: tip Add support for filter by methodType in Api navigate
-![shortcutSendAndDownload](../../.vuepress/public/img/methodFilter.png)
+![shortcutSendAndDownload](/img/methodFilter.png)
 :::
 
 ## v2.0.7
@@ -820,7 +820,7 @@ Press Enter again or double-click the left mouse button to locate the API
 Hover the mouse to display the doc of the api
 ```
 
-![apinavi](../../.vuepress/public/img/apinav.gif)
+![apinavi](/img/apinav.gif)
 :::
 
 ::: tip Headers Automatic switching
@@ -833,7 +833,7 @@ Operation method：
 2.Switch the environment or project name directly, and then enter the corresponding key and value values in the headers form
 ```
 
-![headerSwitch](../../.vuepress/public/img/headerSwitch.gif)
+![headerSwitch](/img/headerSwitch.gif)
 :::
 
 ::: tip Optimize the parameter parse of @RequestParam
@@ -849,7 +849,7 @@ send and download: alt -
 Prerequisites:Tool window needs to be focused
 ```
 
-![toolbarSend](../../.vuepress/public/img/toolbarSend.png)
+![toolbarSend](/img/toolbarSend.png)
 :::
 
 ::: tip Optimize tool window project and env drop-down box and layout
@@ -859,9 +859,9 @@ Icon p represents project
 Icon e represents environment
 ```
 
-![dropdownProject](../../.vuepress/public/img/dropdownProject.png)
+![dropdownProject](/img/dropdownProject.png)
 
-![dropdownEnv](../../.vuepress/public/img/dropdownEnv.png)
+![dropdownEnv](/img/dropdownEnv.png)
 :::
 
 ## v2.0.6
@@ -877,23 +877,23 @@ Icon e represents environment
 Without affecting the use, sometimes it will pop up "_Light files should have PSI only in one project"_.This has fixed in 2.0.6
 
 ::: tip json grammar check
-![json](../../.vuepress/public/img/json_en.png)
+![json](/img/json_en.png)
 :::
 
 ::: tip API group automatic association
-![apiGroup](../../.vuepress/public/img/apiGroup_en.gif)
+![apiGroup](/img/apiGroup_en.gif)
 
 Module supports quick search
-![apiGroup](../../.vuepress/public/img/moduleSearch.gif)
+![apiGroup](/img/moduleSearch.gif)
 :::
 
 ::: tip JAX-RS support
-![apiGroup](../../.vuepress/public/img/jaxrs.gif)
+![apiGroup](/img/jaxrs.gif)
 :::
 
 ::: tip Show what's new  
 Will only be shown once
-![apiGroup](../../.vuepress/public/img/whatsnew_en.png)
+![apiGroup](/img/whatsnew_en.png)
 :::
 
 ## v2.0.5

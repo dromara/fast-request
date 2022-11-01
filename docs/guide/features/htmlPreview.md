@@ -4,4 +4,4 @@
 
 可以对 html 进行预览
 
-![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
+![rawHtmlPreview](/img/rawHtmlPreview.png)

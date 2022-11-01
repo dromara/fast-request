@@ -4,4 +4,4 @@
 
 选中对应的文件夹，即可导出文件夹下的所有 API。
 
-![batchExportApiDoc](../../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
+![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)

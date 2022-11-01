@@ -5,4 +5,4 @@
 - <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-twitter"></use></svg> Quick Follow Author Twitter
 - <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-telegram"></use></svg> Quickly add Telegram and troubleshoot problems
 
-![docAndContact](../../../.vuepress/public/img/docAndContact_en.png)
+![docAndContact](/img/docAndContact_en.png)

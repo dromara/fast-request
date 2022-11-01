@@ -5,12 +5,15 @@ icon: config2
 
 设置映射关系，配置对应项目下对应环境的 url 前缀地址
 
-![](../../.vuepress/public/img/projectEnvUrl.png)
+![project env url](/img/projectEnvUrl.png)
 
-```
-图标P含义为Project,图标E含义为Environment
-```
+::: note
 
-![dropdownProject](../../.vuepress/public/img/dropdownProject.png)
+- 图标 P 含义为 Project
+- 图标 E 含义为 Environment
 
-![dropdownEnv](../../.vuepress/public/img/dropdownEnv.png)
+:::
+
+![dropdownProject](/img/dropdownProject.png)
+
+![dropdownEnv](/img/dropdownEnv.png)

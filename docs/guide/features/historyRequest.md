@@ -4,4 +4,4 @@
 
 隐藏技能:双击记录可以展示详情
 
-![history](../../.vuepress/public/img/history.png)
+![history](/img/history.png)

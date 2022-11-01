@@ -15,4 +15,4 @@ Using this function, you can easily share your existing APIs with other develope
 
 :::
 
-![exportImportApis](../../../.vuepress/public/img/exportImportApis.gif)
+![exportImportApis](/img/exportImportApis.gif)

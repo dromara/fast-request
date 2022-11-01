@@ -6,6 +6,6 @@
 
 Response Example 需要运行你的 API 后才会被显示
 
-![shareDocButton](../../.vuepress/public/img/shareApi.png)
+![shareDocButton](/img/shareApi.png)
 
-![apiDocExample](../../.vuepress/public/img/apiDocExample.png)
+![apiDocExample](/img/apiDocExample.png)

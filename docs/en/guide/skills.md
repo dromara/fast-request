@@ -7,7 +7,7 @@ icon: skills
 
 ## Url error
 
-![urlError](../../.vuepress/public/img/skill/urlError_en.png)
+![urlError](/img/skill/urlError_en.png)
 
 <Badge text="Solution" type="tip" />
 
@@ -18,7 +18,7 @@ icon: skills
 
 Enter multiple values and set the field type to file
 
-![multiFileUpload](../../.vuepress/public/img/skill/multiFileUpload.png)
+![multiFileUpload](/img/skill/multiFileUpload.png)
 
 ## Pass text/plain param in body
 

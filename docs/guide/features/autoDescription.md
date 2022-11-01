@@ -6,4 +6,4 @@
 
 可以通过点击隐藏或显示 Description。
 
-![paramDescription](../../.vuepress/public/img/paramDescription.png)
+![paramDescription](/img/paramDescription.png)

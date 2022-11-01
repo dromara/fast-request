@@ -4,10 +4,10 @@
 
 ::: tip 特别说明
 
-如果你已经保存一个请求,但是想彻底重新修改其中的参数,那么你可以选择该操作
+如果你已经保存一个请求，但是想彻底重新修改其中的参数，那么你可以选择该操作
 
 :::
 
-![regenerateNew](../../.vuepress/public/img/regenerateNew.png)
+![regenerateNew](/img/regenerateNew.png)
 
-![regenerate](../../.vuepress/public/img/regenerate.png)
+![regenerate](/img/regenerate.png)

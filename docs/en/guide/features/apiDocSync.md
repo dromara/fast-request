@@ -7,7 +7,7 @@ Version required: <Badge text="2022.2.7+" />
 Used to synchronize API documents to <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> Github、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> Gitee、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> Gitlab,
 and generate online documents and share them with other partners.
 
-![apiSync](../../../.vuepress/public/img/2022.2.7/apiSync_en.png)
+![apiSync](/img/2022.2.7/apiSync_en.png)
 
 ## Attention
 
@@ -18,7 +18,7 @@ and generate online documents and share them with other partners.
 
 ## Configuration
 
-![apiSyncSetting](../../../.vuepress/public/img/2022.2.7/apiSyncSetting_en.png)
+![apiSyncSetting](/img/2022.2.7/apiSyncSetting_en.png)
 
 Note: The naming policy determines the name of the file synchronized to the cloud,The file name comes from the Javadoc or Swagger method naming annotation,If javadoc is checked,Please make sure that the Javadoc and Swagger method naming must be ==short==,
 Otherwise, the file name in the cloud will be very long. In this case, consider checking the method name to synchronize
@@ -33,8 +33,8 @@ Gitlab:must check 'api'
 Gitee:must check 'projects'
 ```
 
-![githubToken](../../../.vuepress/public/img/2022.2.7/githubToken.png)
+![githubToken](/img/2022.2.7/githubToken.png)
 
-![gitlabToken](../../../.vuepress/public/img/2022.2.7/gitlabToken.png)
+![gitlabToken](/img/2022.2.7/gitlabToken.png)
 
-![giteeToken](../../../.vuepress/public/img/2022.2.7/giteeToken.png)
+![giteeToken](/img/2022.2.7/giteeToken.png)

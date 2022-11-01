@@ -7,7 +7,7 @@ title: Install
 
 - Way 1(recommend) Search **Restful Fast Request** in idea plugin market
 
-![download](../../.vuepress/public/img/download.png)
+![download](/img/download.png)
 
 - Way 2: Offline install. Applicable to intranet use or trial version usage
 
@@ -17,4 +17,4 @@ b. Go to `setting -> plugins -> Install plugin from disk`
 
 c. Select the downloaded zip file and restart (Be careful not to unzip the zip file)
 
-![installLocal](../../.vuepress/public/img/installLocal.png)
+![installLocal](/img/installLocal.png)
