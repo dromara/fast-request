@@ -57,10 +57,10 @@ export default hopeTheme({
       chart: true,
       codetabs: true,
       container: true,
-      lazyLoad: true,
+      flowchart: true,
+      imageLazyload: true,
       mark: true,
       tasklist: true,
-      flowchart: true,
     },
   },
 });

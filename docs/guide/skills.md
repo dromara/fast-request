@@ -7,7 +7,8 @@ icon: skills
 
 [[toc]]
 
-## Url错误
+## Url 错误
+
 ![urlError](../.vuepress/public/img/skill/urlError.png)
 
 <Badge text="解决办法" type="tip" />
@@ -15,15 +16,17 @@ icon: skills
 2. 设置正确的url,例如需要将url上的变量{id}替换,可以在Path Param tab中替换变量
 
 ## 多文件上传
-输入多个值并将字段类型设置为file
+
+输入多个值并将字段类型设置为 file
 
 ![multiFileUpload](../.vuepress/public/img/skill/multiFileUpload.png)
 
-## Body中想直接传text
-在header中加入**Content-Type: text/plain**
+## Body 中想直接传 text
+
+在 header 中加入**Content-Type: text/plain**
 
 考虑使用[常用头参数](./features/commonHeader.md)快速添加
 
+## 没有 Controller,如何发送请求
 
-## 没有Controller,如何发送请求
 参考[临时请求](./features/tempRequest.md)

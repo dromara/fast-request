@@ -80,7 +80,6 @@ head:
 
 ## 🥇 功能
 
-
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./guide/features/makeIconMove.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./guide/features/searchEveryWhere.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./guide/features/projectValueConfig.md)
@@ -97,8 +96,8 @@ head:
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-curl1"></use></svg> cURL 拷贝](./guide/features/copyCurl.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-urlCopy"></use></svg> 一键拷贝 Url](./guide/features/copyUrl.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> 历史请求预览](./guide/features/historyRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API文档同步](./guide/features/apiDocSync.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API文档分享](./guide/features/shareApiDoc.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API 文档同步](./guide/features/apiDocSync.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API 文档分享](./guide/features/shareApiDoc.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-wendang"></use></svg> 文档/快速联系](./guide/features/docAndContact.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./guide/features/settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./guide/features/fullScreen.md)
@@ -220,7 +219,6 @@ head:
 :::
 
 <div style="height:30px"></div>
-
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA

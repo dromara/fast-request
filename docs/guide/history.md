@@ -28,6 +28,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="LightGreen"/>
+
 - <Badge text="Api同步" type="tip"/>
 - <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
 - <Badge text="公共请求头" type="tip"/>
@@ -37,7 +38,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="模块头一直被选中" type="danger"/>
 - <Badge text="解析bug" type="danger"/>
 
-::: tip Api文档同步
+::: tip Api 文档同步
 在线文档同步,---->[详情](./features/apiDocSync.md)
 
 ![apiSync](../.vuepress/public/img/2022.2.7/apiSync.png)
@@ -45,7 +46,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![apiSyncSetting](../.vuepress/public/img/2022.2.7/apiSyncSetting.png)
 :::
 
-:::tip Api文档显示返回值类型参数文档
+:::tip Api 文档显示返回值类型参数文档
 ![returnValueDoc](../.vuepress/public/img/2022.2.7/returnValueDoc.png)
 :::
 
@@ -68,11 +69,9 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![upgradeNotice](../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
 :::
 
-
 ::: info 注释预览
 ![fullScreen](../.vuepress/public/img/2022.2.7/commentPreview.png)
 :::
-
 
 ## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
 
@@ -102,7 +101,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![sortColumn](../.vuepress/public/img/2022.2.6/sortColumn.png)
 :::
 
-## v2022.2.5.2 <Badge text="免费试用" type="tip"/> 
+## v2022.2.5.2 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="后置脚本无法清空" type="danger"/>
 
@@ -686,7 +685,6 @@ public class UrlTestController {
     }
 }
 ```
-
 
 @tab 场景 2: value 是一个数组
 

@@ -1,5 +1,5 @@
 # Basic auth
 
-功能: 用Basic auth的形式往Headers添加Authorization头
+功能: 用 Basic auth 的形式往 Headers 添加 Authorization 头
 
 ![basicAuth](../../.vuepress/public/img/basicAuth.png)

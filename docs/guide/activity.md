@@ -4,9 +4,11 @@ icon: activity
 ---
 
 > 20221024
+
 ```
 微信参与抽奖1年license 8名,半年license 15名
 ```
+
 ![](../.vuepress/public/img/activity/20221024.png)
 
 ![](../.vuepress/public/img/activity/20221024-1.png)

@@ -24,9 +24,10 @@ Because developing version is still in development, the documentation of develop
 :::
 
 ## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+
 - <Badge text="Api sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>
-- <Badge text="Common header" type="tip"/>  
+- <Badge text="Common header" type="tip"/>
 - <Badge text="Full screen" type="tip"/>
 - <Badge text="Plugin update alert mechanism" type="info"/>
 - <Badge text="Comment preview" type="info"/>
@@ -63,7 +64,6 @@ Note that the previous version of the update will still be a pop-up dialog, this
 
 ![upgradeNotice](../../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
 :::
-
 
 ::: info Comment preview
 ![fullScreen](../../.vuepress/public/img/2022.2.7/commentPreview.png)
