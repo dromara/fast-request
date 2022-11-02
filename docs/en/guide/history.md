@@ -24,11 +24,11 @@ Because developing version is still in development, the documentation of develop
 :::
 
 ## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
-- <Badge text="Api sync" type="tip"/>
+- <Badge text="Api doc sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>
+- <Badge text="Plugin update alert mechanism" type="info"/>
 - <Badge text="Common header" type="tip"/>  
 - <Badge text="Full screen" type="tip"/>
-- <Badge text="Plugin update alert mechanism" type="info"/>
 - <Badge text="Comment preview" type="info"/>
 - <Badge text="Module header value always be checked" type="danger"/>
 - <Badge text="Parse bug" type="danger"/>
@@ -45,6 +45,17 @@ Online Api doc sync---->[More detail](./features/apiDocSync.md)
 ![returnValueDoc](../../.vuepress/public/img/2022.2.7/returnValueDoc.png)
 :::
 
+
+::: tip Plugin update notification mechanism
+Change from an explicit dialog box to a notification, at the same time automatic updates have been changed to ==turn on==, if you want to turn it off, please go to the configuration page and turn it off manually.
+But I recommend ==turning it on==, so that you can receive updates in time
+
+Note that the previous version of the update will still be a pop-up dialog, this version onwards will be a message notification
+
+![upgradeNotice](../../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
+:::
+
+
 ::: tip Common header
 
 [---->More detail](./features/commonHeader.md)
@@ -55,15 +66,6 @@ Online Api doc sync---->[More detail](./features/apiDocSync.md)
 ---->[More detail](./features/fullScreen.md)
 ![fullScreen](../../.vuepress/public/img/2022.2.7/fullScreen.png)
 :::
-
-::: tip Plugin update notification mechanism
-Change from an explicit dialog box to a notification, at the same time automatic updates have been changed to ==turn on==, if you want to turn it off, please go to the configuration page and turn it off manually.No more hassle with updates.
-
-Note that the previous version of the update will still be a pop-up dialog, this version onwards will be a message notification
-
-![upgradeNotice](../../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
-:::
-
 
 ::: info Comment preview
 ![fullScreen](../../.vuepress/public/img/2022.2.7/commentPreview.png)
