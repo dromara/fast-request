@@ -1,15 +1,15 @@
 ---
-title: 类型ICON映射
+title: 类型 Icon 映射
 icon: discoverfill
 ---
 
-图标和类型映射关系
+## 图标和类型映射关系
 
-| Icon                                             | Type    |
-| ------------------------------------------------ | ------- |
-| ![](../../.vuepress/public/img/icon/array.svg)   | Array   |
-| ![](../../.vuepress/public/img/icon/object.svg)  | Object  |
-| ![](../../.vuepress/public/img/icon/number.svg)  | Number  |
-| ![](../../.vuepress/public/img/icon/string.svg)  | String  |
-| ![](../../.vuepress/public/img/icon/boolean.svg) | Boolean |
-| ![](../../.vuepress/public/img/icon/file.svg)    | File    |
+| Icon                              | Type    |
+| --------------------------------- | ------- |
+| ![array](/img/icon/array.svg)     | Array   |
+| ![object](/img/icon/object.svg)   | Object  |
+| ![number](/img/icon/number.svg)   | Number  |
+| ![string](/img/icon/string.svg)   | String  |
+| ![boolean](/img/icon/boolean.svg) | Boolean |
+| ![file](/img/icon/file.svg)       | File    |

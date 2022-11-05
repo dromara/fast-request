@@ -16,4 +16,4 @@ else
 ```
 
 :::
-![example_download](../../../.vuepress/public/img/saveRequest.png)
+![example_download](/img/saveRequest.png)

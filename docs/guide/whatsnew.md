@@ -5,20 +5,20 @@ icon: whats-new
 
 ::: tip 公告
 
-插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金),对比氪金版和免费有什么更强大的功能,只需要看更新日志>=2021.1.4+的
+插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金)，对比氪金版和免费有什么更强大的功能，只需要看更新日志>=2021.1.4+的
 
 购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看==群公告==
 
-==平台只能挂一个价格,国内用户请进群,一律 6 折,入正后无烦恼更新==
+==平台只能挂一个价格，国内用户请进群，一律 6 折，入正后无烦恼更新==
 
-==技术群二维码==在[**这里**](./concatGroup.md),不仅仅是 RFR 插件群,群里全部都是==Javaer==,经常会讨论一些技术问题,并且热心,可以帮助你==学到一些东西==
+==技术群二维码==在[**这里**](./concatGroup.md)，不仅仅是 RFR 插件群，群里全部都是==Javaer==，经常会讨论一些技术问题，并且热心，可以帮助你==学到一些东西==
 
 | ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechatChat](../.vuepress/public/img/wechatGroup.png)                                       | ![twitter](../.vuepress/public/img/twitter.png)                                                                                                   |
+| ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
 
-Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues),作者会一一回应并==认真思考==大家提出的 bug 以及建议......
+Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)，作者会一一回应并==认真思考==大家提出的 bug 以及建议......
 
 ---
 
@@ -30,6 +30,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 [**务必查看变更详情----------------->**](./history.md)
 
 ## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="LightGreen"/>
+
 - <Badge text="Api文档同步" type="tip"/>
 - <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
 - <Badge text="插件更新通知机制" type="tip"/>

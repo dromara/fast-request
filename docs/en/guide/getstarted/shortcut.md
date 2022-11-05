@@ -9,4 +9,4 @@ Shortcut keys help to improve the speed of the operation, and skilled use will m
 
 setting -> keymap -> fill in `FastRequest` -> Right-click the corresponding entry to modify
 
-![](../../../.vuepress/public/img/shortcut.png)
+![](/img/shortcut.png)

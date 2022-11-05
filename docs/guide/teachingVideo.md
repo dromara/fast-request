@@ -7,8 +7,8 @@ B 站系列视频
 
 |[![Bilibili](https://img.shields.io/static/v1?label=BiliBili&message=BiliBili&logo=bilibili&color=FC8D34)](https://space.bilibili.com/370110042)
 |------|
-|<img alt="bilibili" src="../.vuepress/public/img/bilibili.jpg" width="" height=""/>|
-|==关注我==获得视频更新文档,小伙伴们快来给我==一键三连==吧|
+|<img alt="bilibili" src="/img/bilibili.jpg" width="" height=""/>|
+|==关注我==获得视频更新文档，小伙伴们快来给我==一键三连==吧|
 
 <BiliBili bvid="BV1vt4y1M7rV" :ratio="5/4" />
 

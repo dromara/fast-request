@@ -10,4 +10,4 @@ strategy
 * none(not generate)
 ```
 
-![](../../../.vuepress/public/img/stringGenerate_en.png)
+![](/img/stringGenerate_en.png)

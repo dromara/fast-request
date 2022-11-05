@@ -1,7 +1,7 @@
-name: Deploy Docs
+name: Docs Test
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 
@@ -28,14 +28,3 @@ jobs:
 
       - name: Build docs
         run: pnpm docs:build
-
-      - name: Add .nojekyll
-        run: echo > docs/.vuepress/dist/.nojekyll
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          build_dir: docs/.vuepress/dist
-          target_branch: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

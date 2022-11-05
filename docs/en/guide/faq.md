@@ -45,7 +45,7 @@ If your API has been saved and you want to change the parameters again, then you
 
 ## Q: Nothing to show <Badge text="2022.1.4+" type="danger"/>
 
-![](../../.vuepress/public/img/buy/none.png)
+![](/img/buy/none.png)
 
 <Badge text="Follow these steps to register for licenses" type="danger" vertical="middle"/>
 
@@ -55,7 +55,7 @@ step1:Click **help->Register...->Add New License**
 - Way 2: Enter the activation code in Activation code
 - Way 3: Click start trial
 
-![](../../.vuepress/public/img/buy/step5.png)
+![](/img/buy/step5.png)
 
 step2: restart idea
 

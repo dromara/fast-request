@@ -4,9 +4,9 @@ icon: featuresNew
 
 # 功能列表
 
-文档中的图标对应插件中的按钮图标,大标题对应 tab 以及功能
+文档中的图标对应插件中的按钮图标，大标题对应 tab 以及功能
 
-![toolwindow](../../.vuepress/public/img/toolwindow.png)
+![tool window](/img/toolwindow.png)
 
 ## Request
 
@@ -26,21 +26,19 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-curl1"></use></svg> cURL 拷贝](./copyCurl.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-urlCopy"></use></svg> 一键拷贝 Url](./copyUrl.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> 历史请求预览](./historyRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API文档同步](./apiDocSync.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API文档分享](./shareApiDoc.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API 文档同步](./apiDocSync.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API 文档分享](./shareApiDoc.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-wendang"></use></svg> 文档/快速联系](./docAndContact.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
 
-----
+---
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Headers 分组](./headerGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数](./commonHeader.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuth"></use></svg> Basei auth](./basicAuth.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览](./htmlPreview.md)
-
-
 
 ## Apis
 

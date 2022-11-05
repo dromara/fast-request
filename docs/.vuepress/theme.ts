@@ -1,3 +1,4 @@
+import { resolve } from "node:path";
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar.js";
 import { enSidebar, zhSidebar } from "./sidebar.js";
@@ -57,10 +58,18 @@ export default hopeTheme({
       chart: true,
       codetabs: true,
       container: true,
-      lazyLoad: true,
+      flowchart: true,
+      include: {
+        getPath: (file) => {
+          if (file.startsWith("@src"))
+            return file.replace("@src", resolve(__dirname, ".."));
+
+          return file;
+        },
+      },
+      imageLazyload: true,
       mark: true,
       tasklist: true,
-      flowchart: true,
     },
   },
 });

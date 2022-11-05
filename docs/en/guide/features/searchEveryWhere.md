@@ -8,4 +8,4 @@ post /save        (search by post method and url)
 description keywords  (search by keywords)
 ```
 
-![searchEveryWhere](../../../.vuepress/public/img/searchEveryWhere.gif)
+![searchEveryWhere](/img/searchEveryWhere.gif)

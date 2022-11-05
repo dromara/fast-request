@@ -12,7 +12,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) | [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![twitter](../../.vuepress/public/img/twitter.png)                                                                                                | ![telegram](../../.vuepress/public/img/telegram.png)                                                                                                          |
+| ![twitter](/img/twitter.png)                                                                                                                      | ![telegram](/img/telegram.png)                                                                                                                                |
 
 Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 
@@ -26,6 +26,7 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 ## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+
 - <Badge text="Api doc sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>
 - <Badge text="Plugin update notification mechanism" type="info"/>

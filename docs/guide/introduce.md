@@ -9,7 +9,7 @@ icon: restfulFastRequest
 [![Jetbrains Plugins][plugin-img]][plugin]
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request)
 
-[**<i class="icon iconfont icon-restfulFastRequest"></i>estful <i class="icon iconfont icon-rfr-f"></i>ast <i class="icon iconfont icon-restfulFastRequest"></i>equest**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个类似于 Postman 的 IDEA 插件。它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params。
+[**<FontIcon icon="restfulFastRequest" />estful <i class="icon iconfont icon-rfr-f"></i>ast <FontIcon icon="restfulFastRequest" />equest**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是一个类似于 Postman 的 IDEA 插件。它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params。
 `Restful Fast Request = API调试工具 + API管理工具 + API搜索工具`。 它有一个漂亮的界面来完成请求、检查服务器响应、存储你的 api 请求和导出 api 请求。插件帮助你在 IDEA 界面内更快更高效得调试你的 API
 
 对比与 HTTP Client，Fast Request 不仅拥有 HTTP Client 内置的功能，还提供了友好易懂直观的界面，让使用者调试 API 的时候能够更加方便、简捷。同时各种类型参数也提供了不同的定制方式，更加灵活。而且集成了搜索、Postman 集成，Swagger 支持等额外的功能。
@@ -31,14 +31,7 @@ Kotlin Spring体系框架
 
 如果有新版本出来，请尽快更新到最新的版本。(插件往往在升级过程中会加入新的功能或者修复你未发现的 bug)
 
-## 联系我们
-
-如果遇到了问题,请通过一下方式联系我们,将会有更快为你解决问题,同时[进群](../guide/concatGroup.md)将会给与==六折==优惠,群里全部都是==Javaer==,经常会讨论一些技术问题,并且热心,也许可以帮助你==学到一些东西==
-
-| ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechatChat](../.vuepress/public/img/wechatGroup.png)                                       | ![twitter](../.vuepress/public/img/twitter.png)                                                                                                   |
-| 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
+@include(@src/contact.snippet.md)
 
 ## 支持
 

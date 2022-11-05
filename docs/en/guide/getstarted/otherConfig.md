@@ -15,4 +15,4 @@ public class XxxController(){
 
 the actual url is `/api/base/user`,Then `${api-module}` can be replaced by the following configuration
 
-![](../../../.vuepress/public/img/otherConfig_en.png)
+![](/img/otherConfig_en.png)

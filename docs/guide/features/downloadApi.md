@@ -2,4 +2,4 @@
 
 点击 Send and download
 
-![example_download](../../.vuepress/public/img/downloadFile.png)
+![example_download](/img/downloadFile.png)

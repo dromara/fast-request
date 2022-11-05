@@ -11,17 +11,17 @@ icon: tools
 
 Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
 
-![newLogo](../../.vuepress/public/img/2022.2.4/newLogo.gif)
+![newLogo](/img/2022.2.4/newLogo.gif)
 
-![newLogoConfig](../../.vuepress/public/img/2022.2.4/newLogoConfig.png)
+![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
 
 ## Debug API & send request <Badge text="2.0.0"/>
 
-![example](../../.vuepress/public/img/example_en.gif)
+![example](/img/example_en.gif)
 
 In new version, send button have move to toolbar
 
-![sendRequest](../../.vuepress/public/img/sendRequest.png)
+![sendRequest](/img/sendRequest.png)
 
 ## SearchEveryWhere support <Badge text="2.1.1" />
 
@@ -33,24 +33,24 @@ post /save        (search by post method and url)
 description keywords  (search by keywords)
 ```
 
-![searchEveryWhere](../../.vuepress/public/img/searchEveryWhere.gif)
+![searchEveryWhere](/img/searchEveryWhere.gif)
 
 ## Send and download <Badge text="2.0.2" type="error"/>
 
-![example_download](../../.vuepress/public/img/downloadFile.png)
+![example_download](/img/downloadFile.png)
 
 ## Script <Badge text="2022.2.3+" type="tip"/>
 
 Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
 Please refer to [Script](./script.md)
 
-![scriptProject](../../.vuepress/public/img/2022.2.3/scriptProject_en.png)
+![scriptProject](/img/2022.2.3/scriptProject_en.png)
 
-![scriptModule](../../.vuepress/public/img/2022.2.3/scriptModule_en.png)
+![scriptModule](/img/2022.2.3/scriptModule_en.png)
 
 ## APIs export to Postman <Badge text="2.1.2" type="error"/>
 
-![export2postman](../../.vuepress/public/img/export2postman.gif)
+![export2postman](/img/export2postman.gif)
 
 ## API List <Badge text="2.0.1" type="warning"/>
 
@@ -63,8 +63,8 @@ Please refer to [Script](./script.md)
 API name value supports modification  
 :::
 
-![apis](../../.vuepress/public/img/apis_hd.png)
-![apiManager](../../.vuepress/public/img/apiManager_en.png)
+![apis](/img/apis_hd.png)
+![apiManager](/img/apiManager_en.png)
 
 ## Save Request <Badge text="2.0.0"/>
 
@@ -84,7 +84,7 @@ else
 ```
 
 :::
-![example_download](../../.vuepress/public/img/saveRequest.png)
+![example_download](/img/saveRequest.png)
 
 ## API grouping parameter save support <Badge text="2022.2.1" type="error"/>
 
@@ -94,13 +94,13 @@ Purpose: Save parameters of different combinations under one API
 
 How to:After entering the parameters, click ==Save group param request==
 
-![groupSave](../../.vuepress/public/img/2022.2.1/groupSave_en.png)
+![groupSave](/img/2022.2.1/groupSave_en.png)
 
 **Toggle parameter**
 
 The following is the query of the book list in 3 languages
 
-![apiParamGroup](../../.vuepress/public/img/2022.2.1/apiParamGroup_en.gif)
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif)
 
 ## Temporary request save support <Badge text="2022.2.1" type="error"/>
 
@@ -108,7 +108,7 @@ Purpose: Save any request that does not belong to this project for temporary inv
 
 The Url of the Request saved by the temporary request must start with ==http== or ==https==
 
-![tempSave](../../.vuepress/public/img/2022.2.1/tempSave_en.png)
+![tempSave](/img/2022.2.1/tempSave_en.png)
 
 ## Regenetate <Badge text="2.0.0" type="error"/>
 
@@ -116,19 +116,19 @@ The Url of the Request saved by the temporary request must start with ==http== o
 If you have saved a request,But if you want to completely re-modify the parameters, then you can choose this operation  
 :::
 
-![regenerate](../../.vuepress/public/img/regenerate_en.png)
+![regenerate](/img/regenerate_en.png)
 
 ## CURL copy <Badge text="1.1.4" type="warning"/>
 
-After generate the method url and parameters, click on the toolbar![curl](../../.vuepress/public/img/icon/curl_dark.svg)
+After generate the method url and parameters, click on the toolbar![curl](/img/icon/curl_dark.svg)
 
-![curl](../../.vuepress/public/img/curl_en.png)
+![curl](/img/curl_en.png)
 
 ## Quickly add header <Badge text="2.0.0"/>
 
 If your request requires a token and the token can be obtained through a login interface, then you don't need to manually add it each time, just visit the login interface and then process it through the following operations
 
-![fastAddToken](../../.vuepress/public/img/fastAddToken_en.gif)
+![fastAddToken](/img/fastAddToken_en.gif)
 
 ## API group automatic association <Badge text="2.0.6" type="warning"/>
 
@@ -136,7 +136,7 @@ The API group is to save the saved apis into different groups to distinguish dif
 
 **v2.1.2 will automatically create module group**
 
-![apiGroup](../../.vuepress/public/img/apiGroup_en.gif)
+![apiGroup](/img/apiGroup_en.gif)
 
 ::: tip Special Note
 
@@ -148,14 +148,14 @@ The API group is to save the saved apis into different groups to distinguish dif
 
 Module supports quick search(Put the cursor on the list and enter keywords)
 
-![moduleSearch](../../.vuepress/public/img/moduleSearch.gif)
+![moduleSearch](/img/moduleSearch.gif)
 
 ## Json grammar check <Badge text="2.0.6" type="error"/>
 
 The upper right corner of the json parameter input box provides a json syntax check. If the json is incorrect, the corresponding error will be prompted  
 Of course it also supports formatting and other operations
 
-![json](../../.vuepress/public/img/json_en.png)
+![json](/img/json_en.png)
 
 ## API navigate tree <Badge text="2.0.7"/>
 
@@ -171,7 +171,7 @@ and every time you add an API, you also need to refresh to get it
 Lazy loading helps to speed up idea startup
 ```
 
-![apinavi](../../.vuepress/public/img/apinav.gif)
+![apinavi](/img/apinav.gif)
 
 ## Headers group(Automatic switching) <Badge text="2.0.7"/>
 
@@ -182,7 +182,7 @@ Operation method：
 2.Switch the environment or project name directly, and then enter the corresponding key and value values in the headers form
 ```
 
-![headerSwitch](../../.vuepress/public/img/headerSwitch.gif)
+![headerSwitch](/img/headerSwitch.gif)
 
 ## APIs import and export <Badge text="2022.1.4" />
 
@@ -199,7 +199,7 @@ Using this function, you can easily share your existing APIs with other develope
 
 :::
 
-![headerSwitch](../../.vuepress/public/img/exportImportApis.gif)
+![headerSwitch](/img/exportImportApis.gif)
 
 ## Swagger default value parsing support <Badge text="2022.1.4" />
 
@@ -272,7 +272,7 @@ Field description need to conform to standard javadoc. Please use`/**some descri
 
 You can hide or show description by toggle click
 
-![paramDescription](../../.vuepress/public/img/paramDescription.png)
+![paramDescription](/img/paramDescription.png)
 
 ## API share document <Badge text="2022.1.5+" />
 
@@ -280,15 +280,15 @@ Please note that the API in word form is implemented in html, so don't feel stra
 
 Response Example requires running your API to be displayed
 
-![shareDocButton](../../.vuepress/public/img/shareApi_en.png)
+![shareDocButton](/img/shareApi_en.png)
 
-![apiDocExample](../../.vuepress/public/img/apiDocExample.png)
+![apiDocExample](/img/apiDocExample.png)
 
 ## API list preview <Badge text="2022.1.5" />
 
 After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
 
-![apiDocExample](../../.vuepress/public/img/apiPreview.gif)
+![apiDocExample](/img/apiPreview.gif)
 
 ## Project-level global parameters support <Badge text="2022.1.8" />
 
@@ -296,45 +296,45 @@ Support global parameters within the project level, not affected by multiple mod
 
 Configure priority `api header > project header>global header`
 
-![projectConfigParam](../../.vuepress/public/img/projectConfigParam.png)
+![projectConfigParam](/img/projectConfigParam.png)
 
 ## cURL import <Badge text="2022.2.1" />
 
-![importByCurl](../../.vuepress/public/img/2022.2.1/importByCurl_en.gif)
+![importByCurl](/img/2022.2.1/importByCurl_en.gif)
 
 ## Navigate to current method <Badge text="2022.1.7" />
 
 After you generate the url of the method, sometimes you will switch to another place in the code, and then want to start debugging the API method, you can use this function to quickly locate the code
 
-![navigate2CurrentMethod](../../.vuepress/public/img/navigate2CurrentMethod.png)
+![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
 
 ## History request <Badge text="2022.1.0" />
 
 Hidden skills: Double-click the record to display details
 
-![history](../../.vuepress/public/img/history.png)
+![history](/img/history.png)
 :::
 
 ## Stop API request <Badge text="2022.2.2" />
 
-![stopApi](../../.vuepress/public/img/2022.2.2/stopApi.gif)
+![stopApi](/img/2022.2.2/stopApi.gif)
 
 ## Batch export API doc <Badge text="2022.2.2" />
 
-![batchExportApiDoc](../../.vuepress/public/img/2022.2.2/batchExportApiDoc.png)
+![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)
 
 ## One click copy url <Badge text="2022.2.3" />
 
-![copyUrl](../../.vuepress/public/img/2022.2.3/copyUrl.png)
+![copyUrl](/img/2022.2.3/copyUrl.png)
 
 ## Html preview in response raw <Badge text="2022.1.9" />
 
 The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
 
-![rawHtmlPreview](../../.vuepress/public/img/rawHtmlPreview.png)
+![rawHtmlPreview](/img/rawHtmlPreview.png)
 
 ## Api comment preview <Badge text="2022.2.6" />
 
-![showCommentConfig](../../.vuepress/public/img/2022.2.6/showCommentConfig.png)
-![showCommentInClass](../../.vuepress/public/img/2022.2.6/showCommentInClass.png)
-![showCommentInNavigate](../../.vuepress/public/img/2022.2.6/showCommentInNavigate.png)
+![showCommentConfig](/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](/img/2022.2.6/showCommentInNavigate.png)

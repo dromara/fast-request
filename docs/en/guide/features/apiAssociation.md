@@ -6,7 +6,7 @@ The API group is to save the saved apis into different groups to distinguish dif
 
 **v2.1.2 will automatically create module group**
 
-![apiGroup](../../../.vuepress/public/img/apiGroup_en.gif)
+![apiGroup](/img/apiGroup_en.gif)
 
 ::: tip Special Note
 
@@ -18,4 +18,4 @@ The API group is to save the saved apis into different groups to distinguish dif
 
 Module supports quick search(Put the cursor on the list and enter keywords)
 
-![moduleSearch](../../../.vuepress/public/img/moduleSearch.gif)
+![moduleSearch](/img/moduleSearch.gif)

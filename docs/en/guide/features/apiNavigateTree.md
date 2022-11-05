@@ -14,4 +14,4 @@ and every time you add an API, you also need to refresh to get it
 Lazy loading helps to speed up idea startup
 ```
 
-![apinavi](../../../.vuepress/public/img/apinav.gif)
+![apinavi](/img/apinav.gif)

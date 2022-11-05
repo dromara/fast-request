@@ -3,11 +3,11 @@ title: Icon and type mapping
 icon: discoverfill
 ---
 
-| Icon                                                | Type    |
-| --------------------------------------------------- | ------- |
-| ![](../../../.vuepress/public/img/icon/array.svg)   | Array   |
-| ![](../../../.vuepress/public/img/icon/object.svg)  | Object  |
-| ![](../../../.vuepress/public/img/icon/number.svg)  | Number  |
-| ![](../../../.vuepress/public/img/icon/string.svg)  | String  |
-| ![](../../../.vuepress/public/img/icon/boolean.svg) | Boolean |
-| ![](../../../.vuepress/public/img/icon/file.svg)    | File    |
+| Icon                       | Type    |
+| -------------------------- | ------- |
+| ![](/img/icon/array.svg)   | Array   |
+| ![](/img/icon/object.svg)  | Object  |
+| ![](/img/icon/number.svg)  | Number  |
+| ![](/img/icon/string.svg)  | String  |
+| ![](/img/icon/boolean.svg) | Boolean |
+| ![](/img/icon/file.svg)    | File    |

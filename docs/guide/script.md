@@ -151,7 +151,7 @@ console.error("error")
 
 ```
 
-![console](../.vuepress/public/img/2022.2.5/console.png)
+![console](/img/2022.2.5/console.png)
 
 ## Demo
 
@@ -225,4 +225,4 @@ if(myResponse.isOk()){
 ....
 ```
 
-![scriptDonate](../.vuepress/public/img/2022.2.3/scriptDonate.png)
+![scriptDonate](/img/2022.2.3/scriptDonate.png)

@@ -4,21 +4,27 @@ title: 安装
 ---
 
 ## 安装
-==请不要安装其他类似插件,引起冲突或者数据丢失概不负责==
 
-- 方式 1: 在线安装(推荐). IDEA 插件市场搜索 Restful Fast Request 并安装
+::: danger
+请不要安装其他类似插件，引起冲突或者数据丢失概不负责！
+:::
 
-![download](../.vuepress/public/img/download.png)
+## 在线安装(推荐)
 
-- 方式 2: 离线安装.适用内网使用或者体验版使用
+IDEA 插件市场搜索 Restful Fast Request 并安装
 
-a. 前往[https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions)下载安装包
+![download](/img/download.png)
 
-b. 前往`setting -> plugins -> Install plugin from disk`
+## 离线安装
 
-c. 选择下载好的安装包并重启(==请不要解压压缩包==)
 
-![installLocal](../.vuepress/public/img/installLocal.png)
+> 适用内网使用或者体验版使用
+
+1. 前往 [https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions) 下载安装包
+2. 前往 setting → plugins → Install plugin from disk
+3. 选择下载好的安装包并重启 (==请不要解压压缩包==)
+
+![installLocal](/img/installLocal.png)
 
 ## EAP
 ==IDEA版本2021.2+==
@@ -33,3 +39,4 @@ eap版本需要先去下载对应的eap压缩包,安装请参考方式 2,忽略�
 使用eap版本的时候需要注意,一般低版本升级到高版本的eap不大会出什么问题,但是从高版本的eap版本降级到低版本的稳定版本,eap版本中一些新的功能保存的数据,
 可能会丢失
 :::
+

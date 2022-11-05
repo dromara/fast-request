@@ -1,7 +1,7 @@
 # 调试 API 发送请求
 
-![example](../../.vuepress/public/img/example.gif)
+![example](/img/example.gif)
 
-新版本中发送按钮在工具栏,左侧图标从<i class="icon iconfont icon-restfulFastRequest1"></i>变为<i class="icon iconfont icon-restfulFastRequest"></i>
+新版本中发送按钮在工具栏，左侧图标从<FontIcon icon="restfulFastRequest1" />变为<FontIcon icon="restfulFastRequest" />
 
-![sendRequest](../../.vuepress/public/img/sendRequest.png)
+![sendRequest](/img/sendRequest.png)

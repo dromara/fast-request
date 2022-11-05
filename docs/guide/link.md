@@ -78,10 +78,10 @@ icon: youqinglianjie
     </a>
 </div>
 
-
 ### 其他
 
-Restful Fast Request 首页的logo及背景由 **森阳** 提供，感谢她的创作，如果要插画和logo商业化合作小伙伴可以找她
+Restful Fast Request 首页的 logo 及背景由 **森阳** 提供，感谢她的创作，如果要插画和 logo 商业化合作小伙伴可以找她
+
 ```
 邮件：sssenyang@qq.com | 微信：ArtSenyang
 ```
