@@ -20,10 +20,10 @@ export default defineUserConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "//at.alicdn.com/t/c/font_2601581_cbbqfjevox9.css",
+        href: "//at.alicdn.com/t/c/font_2601581_d9idpi4434t.css",
       },
     ],
-    ["script", { src: "//at.alicdn.com/t/c/font_2601581_cbbqfjevox9.js" }],
+    ["script", { src: "//at.alicdn.com/t/c/font_2601581_d9idpi4434t.js" }],
     ["script", { src: "/fast-request/js/love-me.js" }],
     ["script", { src: "/fast-request/js/baidu.js" }],
   ],

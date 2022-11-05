@@ -30,7 +30,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Api doc sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>
 - <Badge text="Plugin update notification mechanism" type="info"/>
-- <Badge text="Common header" type="tip"/>  
+- <Badge text="Common header" type="tip"/>
 - <Badge text="Full screen" type="tip"/>
 - <Badge text="Comment preview" type="info"/>
 - <Badge text="Module header value always be checked" type="danger"/>

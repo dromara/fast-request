@@ -39,7 +39,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="解析bug" type="danger"/>
 
 ::: tip Api 文档同步
-在线文档同步，---->[详情](./features/apiDocSync.md)
+在线文档同步---->[详情](./features/apiDocSync.md)
 
 ![apiSync](/img/2022.2.7/apiSync.png)
 
@@ -51,9 +51,9 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ::: tip 插件更新通知机制
-从显式的对话框改为通知，同时自动更新也修改为==打开==了,如果你想关闭,请到配置页面手动关闭它,但我建议==开启它==,这样子就可以及时接收到更新.
+从显式的对话框改为通知，同时自动更新也修改为==打开==了，如果你想关闭，请到配置页面手动关闭它，但我建议==开启它==，这样子就可以及时接收到更新。
 
-需要注意的是,前一个版本的更新依然会是弹窗,这个版本以后就是消息通知机制了
+需要注意的是，前一个版本的更新依然会是弹窗，这个版本以后就是消息通知机制了
 
 ![upgradeNotice](../.vuepress/public/img/2022.2.7/upgradeNotice.png)
 :::
@@ -69,7 +69,6 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![fullScreen](/img/2022.2.7/fullScreen.png)
 :::
 
-
 ::: tip 插件更新通知机制
 从显式的对话框改为通知，同时自动更新也修改为==打开==了，如果你想关闭，请到配置页面手动关闭它.更新不再烦恼
 
@@ -77,7 +76,6 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
 :::
-
 
 ::: info 注释预览
 ![fullScreen](/img/2022.2.7/commentPreview.png)

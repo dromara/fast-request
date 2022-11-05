@@ -28,7 +28,7 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> 历史请求预览](./historyRequest.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API 文档同步](./apiDocSync.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API 文档分享](./shareApiDoc.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-wendang"></use></svg> 文档/快速联系](./docAndContact.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc1"></use></svg> 文档/快速联系](./docAndContact.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
