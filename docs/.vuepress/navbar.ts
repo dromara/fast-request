@@ -76,4 +76,8 @@ export const zhNavbar = navbar([
     text: "🎁 活动",
     link: "/guide/activity",
   },
+  {
+      text: "友情链接",
+      link: "/guide/link",
+    },
 ]);

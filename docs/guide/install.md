@@ -29,7 +29,7 @@ IDEA 插件市场搜索 Restful Fast Request 并安装
 
 eap 版本为抢先版本,可能会相对不大稳定,但是很多用户希望提前使用一些高级的功能,那么可以尝试使用.
 
-eap 版本需要先去下载对应的 eap 压缩包,安装请参考方式 2,忽略步骤 a
+eap 版本需要先去下载对应的 eap 压缩包,安装请参考方式**离线安装**,忽略步骤 a
 
 [前往下载](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/eap)
 

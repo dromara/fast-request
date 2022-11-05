@@ -31,7 +31,7 @@ c. Select the downloaded zip file and restart (Be careful not to unzip the zip f
 
 The eap version is a pre-release and may be relatively unstable, but many users will want to try out some of the advanced features in advance.so you can try it out.
 
-To install the eap version, you need to download the corresponding eap package, please refer to Way 2, ignore first step
+To install the eap version, you need to download the corresponding eap package, please refer to **Offline install**, ignore first step
 
 [Download eap package](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/eap)
 
