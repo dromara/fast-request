@@ -48,11 +48,11 @@ Online Api doc sync---->[More detail](./features/apiDocSync.md)
 
 ::: tip Plugin update notification mechanism
 Change from an explicit dialog box to a notification, at the same time automatic updates have been changed to ==turn on==, if you want to turn it off, please go to the configuration page and turn it off manually.
-But I recommend ==turning it on==, so that you can receive updates in time
+But I recommend ==turning it on==, so that you can receive updates in time.
 
-Note that the previous version of the update will still be a pop-up dialog, this version onwards will be a message notification
+Note that the previous version of the update will still be a pop-up dialog, this version onwards will be a message notification.
 
-![upgradeNotice](../../.vuepress/public/img/2022.2.7/upgradeNotice_en.png)
+![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
 :::
 
 ::: tip Common header
@@ -64,14 +64,6 @@ Note that the previous version of the update will still be a pop-up dialog, this
 ::: tip Full screen
 ---->[More detail](./features/fullScreen.md)
 ![fullScreen](/img/2022.2.7/fullScreen.png)
-:::
-
-::: tip Plugin update notification mechanism
-Change from an explicit dialog box to a notification, at the same time automatic updates have been changed to ==turn on==, if you want to turn it off, please go to the configuration page and turn it off manually.No more hassle with updates.
-
-Note that the previous version of the update will still be a pop-up dialog, this version onwards will be a message notification
-
-![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
 :::
 
 ::: info Comment preview

@@ -55,7 +55,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 需要注意的是，前一个版本的更新依然会是弹窗，这个版本以后就是消息通知机制了
 
-![upgradeNotice](../.vuepress/public/img/2022.2.7/upgradeNotice.png)
+![upgradeNotice](/img/2022.2.7/upgradeNotice.png)
 :::
 
 ::: tip 公共请求头
@@ -67,14 +67,6 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ::: tip 全屏
 ---->[详情](./features/fullScreen.md)
 ![fullScreen](/img/2022.2.7/fullScreen.png)
-:::
-
-::: tip 插件更新通知机制
-从显式的对话框改为通知，同时自动更新也修改为==打开==了，如果你想关闭，请到配置页面手动关闭它.更新不再烦恼
-
-需要注意的是，前一个版本的更新依然会是弹窗，这个版本以后就是消息通知机制了
-
-![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
 :::
 
 ::: info 注释预览
