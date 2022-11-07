@@ -18,7 +18,7 @@ icon: whats-new
 | ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
 
-Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)，作者会一一回应并==认真思考==大家提出的 bug 以及建议......
+Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 ---
 
@@ -29,7 +29,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="LightGreen"/>
+## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
 
 - <Badge text="Api文档同步" type="tip"/>
 - <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
@@ -39,6 +39,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="注释预览" type="info"/>
 - <Badge text="模块头一直被选中" type="danger"/>
 - <Badge text="解析bug" type="danger"/>
+- <Badge text="body中传string参数报错" type="danger"/>
 
 ## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
 

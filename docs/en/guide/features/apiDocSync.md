@@ -21,7 +21,7 @@ and generate online documents and share them with other partners.
 ![apiSyncSetting](/img/2022.2.7/apiSyncSetting_en.png)
 
 Note: The naming policy determines the name of the file synchronized to the cloud,The file name comes from the Javadoc or Swagger method naming annotation,If javadoc is checked,Please make sure that the Javadoc and Swagger method naming must be ==short==,
-Otherwise, the file name in the cloud will be very long. In this case, consider checking the method name to synchronize
+otherwise, the file name in the cloud will be very long. In this case, consider checking the method name to synchronize
 
 ## Token
 

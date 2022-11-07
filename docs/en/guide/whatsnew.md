@@ -25,7 +25,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
 - <Badge text="Api doc sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>
@@ -35,8 +35,9 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Comment preview" type="info"/>
 - <Badge text="Module header value always be checked" type="danger"/>
 - <Badge text="Parse bug" type="danger"/>
+- <Badge text="Error when use string param in body" type="danger"/>
 
-## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2022.2.6 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Clear params support" type="tip"/>
 - <Badge text="Api comment preview" type="tip"/>

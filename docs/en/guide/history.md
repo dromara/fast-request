@@ -23,7 +23,7 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
 - <Badge text="Api doc sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>
@@ -33,6 +33,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Comment preview" type="info"/>
 - <Badge text="Module header value always be checked" type="danger"/>
 - <Badge text="Parse bug" type="danger"/>
+- <Badge text="Error when use string param in body" type="danger"/>
 
 ::: tip Api sync
 Online Api doc sync---->[More detail](./features/apiDocSync.md)

@@ -1,7 +1,7 @@
 ---
 home: true
 icon: restfulFastRequest
-title: home
+title: Restful Fast Request
 heroImageDark: /img/logoDark.gif
 heroText: false
 tagline: Born to simplify debugging APIs

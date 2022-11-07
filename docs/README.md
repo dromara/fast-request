@@ -1,7 +1,7 @@
 ---
 icon: restfulFastRequest
 home: true
-title: 主页
+title: Restful Fast Request
 heroImageDark: /img/logoDark.gif
 heroText: false
 tagline: 为简化调试API而生
