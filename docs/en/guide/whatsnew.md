@@ -25,7 +25,12 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2022.2.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Directory download file support" type="info"/>
+- <Badge text="@RequestParam support name attribute" type="info"/>
+- <Badge text="Error when check update" type="info"/>
+
+## v2022.2.7 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Api doc sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>

@@ -23,7 +23,16 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2022.2.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2022.2.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Directory download file support" type="info"/>
+- <Badge text="@RequestParam support name attribute" type="info"/>
+- <Badge text="Error when check update" type="info"/>
+
+::: tip Directory download file support
+When response contains `content-disposition:attachment`, click send will automatically adapt the download
+:::
+
+## v2022.2.7 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Api doc sync" type="tip"/>
 - <Badge text="Api doc show return type document" type="tip"/>

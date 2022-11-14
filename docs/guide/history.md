@@ -27,7 +27,16 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## v2022.2.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## 2022.2.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+- <Badge text="自动适配下载" type="info"/>
+- <Badge text="@RequestParam支持name解析" type="info"/>
+- <Badge text="检查更新报错" type="danger"/>
+
+::: info 下载文件适配
+当response加了`content-disposition:attachment`，点击send自动适配下载
+:::
+
+## v2022.2.7 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="Api文档同步" type="tip"/>
 - <Badge text="Api文档显示返回值类型参数文档" type="tip"/>
