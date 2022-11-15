@@ -3,28 +3,19 @@ title: 最新变化
 icon: whats-new
 ---
 
-::: tip 公告
+::: danger 价格调整
 
-插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金)，对比氪金版和免费有什么更强大的功能，只需要看更新日志>=2021.1.4+的
+自Restful Fast Request推出订阅以来，我们从未提高过插件的价格，并且我们一直在不断地更新新的功能，速度相当快，甚至有些人都跟不上更新的节奏，到此为止我们一共迭代了19个版本，加了许多许多非常实用的功能，例如API文档同步，是一个性价比非常高的插件。
+我们同时也为用户提供最低至六折的续费优惠（第二年八折），同时还有国内群折扣码，这也是我们感激长期使用的忠实用户的一种方式。
 
-购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看==群公告==
+然而，我们也到了需要提高订阅价格的时间节点。新价格将于 2023 年 1 月 1 日生效。将从原来的$1/月调整至$1.9/月，年订阅价格是月订阅价格的10倍(按10个月收费)。
 
-==平台只能挂一个价格，国内用户请进群，一律 6 折，入正后无烦恼更新==
+> 在新价格生效前按当前价格预付订阅
 
-==技术群二维码==在[**这里**](./concatGroup.md)，不仅仅是 RFR 插件群，群里全部都是==Javaer==，经常会讨论一些技术问题，并且热心，可以帮助你==学到一些东西==
+我们为新老客户调整了预付订阅的长度限制，开发者可以前往[账户中心](https://account.jetbrains.com/licenses)，按当前价格进行超过一年的续订。现在，个人订阅允许最多至三年，企业订阅最多至两年。
 
-| ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
-| 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
-
-Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
-
----
-
-feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
-
-由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
+::: right
+2022-11-15 Kings
 :::
 
 [**务必查看变更详情----------------->**](./history.md)

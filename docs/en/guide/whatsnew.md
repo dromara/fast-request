@@ -3,24 +3,17 @@ title: What's new
 icon: whats-new
 ---
 
-::: tip Announcement
-**2022.1.4+** is free trial version, you will have a 30 days free trial, if you want to compare the difference from free and paid version, you can see the release log from 2022.1.4
+::: danger Increased Subscription Pricing for Plugin
+Since the introduction of subscriptions, we have not increased the pricing of plugin. During this time, we are constantly developing new features, so far we have released 19 version, adding many very useful features, for example api doc sync, and is a very cost-effective plugin. We also lower the cost of subscriptions up to 40% when you renew. It is our way of thanking you for your loyalty.
 
-[**Buy plugin**](./buy.md)
+However, we are at the point where we need to increase our subscription prices. The new prices  will come into effect on December 31, 2022. It will be adjusted from $1/month to $1.9/month and the annual subscription price will be 10 times the monthly subscription price (10 months).
 
-Join and follow us to solve your question ❤️❤️❤️↓↓↓
+> Prepay at the current price for more than one year
 
-| [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) | [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![twitter](/img/twitter.png)                                                                                                                      | ![telegram](/img/telegram.png)                                                                                                                                |
+For both new and existing customers, we are extending the maximum permissible renewal period, you can go to [License page](https://account.jetbrains.com/licenses) to renew subscription. This is now three years for individual subscriptions, and two years for business subscriptions. While this will require an upfront payment, it will allow you to renew at the current price for more than one year.
 
-Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
-
----
-
-feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
-
-Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
+::: right
+2022-11-15 Kings
 :::
 
 [**More detail ---------------->**](./history.md)
