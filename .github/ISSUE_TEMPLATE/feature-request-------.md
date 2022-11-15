@@ -1,5 +1,5 @@
 ---
-name: Feature request(合理性建议)
+name: Feature request
 about: Suggest an idea for this project
 title: ''
 labels: 'enhancement'
@@ -7,5 +7,5 @@ assignees: 'kings1990'
 
 ---
 
-## 建议/改进(Suggestion/improvement)
-eg:希望支持xx类型的解析(eg:hope to support parsing of type XX)
+## Suggestion/improvement
+eg:hope to support parsing of type XX
