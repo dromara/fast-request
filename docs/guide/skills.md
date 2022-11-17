@@ -30,3 +30,7 @@ icon: skills
 ## 没有 Controller，如何发送请求
 
 参考[临时请求](./features/tempRequest.md)
+
+## API文档同步
+当你修改了你的接口参数，从APIs列表双击回来的api是你未更新前保存的API，此时你想保证在线API文档是你修改后的，
+需要再点一下 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(保存) 或者左侧图标 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> ,再进行同步。

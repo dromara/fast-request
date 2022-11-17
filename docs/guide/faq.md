@@ -62,7 +62,3 @@ step1: 点击 **help->Register...->Add New License**
 ![](/img/buy/step5.png)
 
 step2:重启 idea
-
-## Q:遇到 Fix Light files should have PSI only in one project
-
-**A:** 此问题发生在版本低于 2022.1.4.0，如果遇到请去 github 下载修复版[https://github.com/dromara/fast-request/issues/61](https://github.com/dromara/fast-request/issues/61)

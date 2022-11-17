@@ -13,9 +13,21 @@ icon: changelog
 > 在新价格生效前按当前价格预付订阅
 
 我们为新老客户调整了预付订阅的长度限制，开发者可以前往[账户中心](https://account.jetbrains.com/licenses)，按当前价格进行超过一年的续订。现在，个人订阅允许最多至三年，企业订阅最多至两年。
-
 ::: right
 2022-11-15 Kings
+
+---
+
+::: left
+
+平台只能挂一个价格，国内用户请进群打折，入正后无烦恼更新
+
+| ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
+| 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
+
+
 :::
 
 ## 2022.2.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>

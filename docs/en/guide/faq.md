@@ -58,7 +58,3 @@ step1:Click **help->Register...->Add New License**
 ![](/img/buy/step5.png)
 
 step2: restart idea
-
-## Q: Fix Light files should have PSI only in one project
-
-**A:** This error occur below 2022.1.4.0. Go to github to download the repaired version [https://github.com/dromara/fast-request/issues/61](https://github.com/dromara/fast-request/issues/61)

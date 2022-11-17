@@ -29,3 +29,8 @@ Consider using add header by [`Common header`](./features/commonHeader.md)
 ## No controller, how to send a request
 
 Refer to [Temporary request](./features/tempRequest.md)
+
+
+## API doc sync
+When you modify your method, the api returned from the APIs list is the API saved before you updated it. At this time, if you want to ensure that the online API document is your modified one,
+you need to click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(save) or click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> again and then sync api doc.
