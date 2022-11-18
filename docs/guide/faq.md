@@ -3,7 +3,45 @@ title: FAQ
 icon: faq
 ---
 
+> 关键字含义
+<Badge text="S: 技巧" color="#087CFA" />  <Badge text="Q: 问题" color="#FE2857" />  <Badge text="A: 答案" color="#21D789" />
+
+
 [[toc]]
+
+
+## S: Url 错误
+
+![urlError](/img/skill/urlError.png)
+
+<Badge text="解决办法" type="tip" />
+1. 配置正确的域名，并启用项目和环境2个下拉框
+2. 设置正确的url，例如需要将url上的变量{id}替换，可以在Path Param tab中替换变量
+
+## S: 多文件上传
+
+输入多个值并将字段类型设置为 file
+
+![multiFileUpload](/img/skill/multiFileUpload.png)
+
+## S: Body 中想直接传 text
+
+在 header 中加入**Content-Type: text/plain**
+
+考虑使用[常用头参数](./features/commonHeader.md)快速添加
+
+## S: 没有 Controller，如何发送请求
+
+参考[临时请求](./features/tempRequest.md)
+
+## S: API文档同步
+当你修改了你的接口参数，从APIs列表双击回来的api是你未更新前保存的API，此时你想保证在线API文档是你修改后的，
+需要再点一下 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(保存) 或者左侧图标 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> ,再进行同步。
+
+## S: APIs回显
+针对保存后的api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([重新生成](/guide/features/regenerate.md))
+
+> 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
 
 ## Q: 输入参数后调用 API 发现无效
 
@@ -11,7 +49,7 @@ icon: faq
 
 ## Q: 为啥插件没反应
 
-**A:** 请优先按照第一章节介绍的使用步骤配置相关的配置，再点击图标
+**A:** 请先完善配置，参考[快速开始](/guide/getstarted/start.md)，再点击图标
 
 ## Q: 点击图标后 idea 卡死
 
@@ -36,29 +74,3 @@ public class A{
     private int xx;
 }
 ```
-
-## Q: 保存 API 图标旁重新生成的作用
-
-**A:** 旨在重置生成的参数，会清空之前 API 的参数，但是不包含保存动作.  
-如果你的 API 已保存，想重新换一下参数，那么你可以通过点击重新生成按钮，记得一定要再次保存，否则还是会保留原有的参数.
-
-相当于你操作一个文件，清空文件内容但未保存，那么看到的将还是原来修改前的文件
-
-## Q: Nothing to show <Badge text="2022.1.4.0+" type="danger"/>
-
-![](/img/buy/none.png)
-
-<Badge text="请按照以下步骤注册license" type="danger" vertical="middle"/>
-
-如果点击<FontIcon icon="restfulFastRequest" />报 npe 或者界面不显示的情况，用以下方式解决
-
-step1: 点击 **help->Register...->Add New License**
-如果有老的 License 或者有问题的 License，请先点击 Remove License
-
-- 方式 1: 登录 jetbrains 账号(拥有激活的 license)
-- 方式 2: 在 Activation code 中输入正确且有效的激活码
-- 方式 3: 点击开始试用(start trial)
-
-![](/img/buy/step5.png)
-
-step2:重启 idea

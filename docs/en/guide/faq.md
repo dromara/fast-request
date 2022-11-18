@@ -3,7 +3,47 @@ title: FAQ
 icon: faq
 ---
 
+> Keywords meaning
+<Badge text="S: Skill" color="#087CFA" /> <Badge text="Q: Question" color="#FE2857" /> <Badge text="A: Answer" color="#21D789" />
+
+
 [[toc]]
+
+## S: Url error
+
+![urlError](/img/skill/urlError_en.png)
+
+<Badge text="Solution" type="tip" />
+
+1. Configure the correct domain name and enable the 2 drop down boxes for project and environment
+2. Set the correct url, for example to replace the variable {id} on the url, you can replace the variable in the Path Param tab
+
+## S: Multi-file upload
+
+Enter multiple values and set the field type to file
+
+![multiFileUpload](/img/skill/multiFileUpload.png)
+
+## S: Pass text/plain param in body
+
+Please add **Content-Type: text/plain** in the header
+
+Consider using add header by [`Common header`](./features/commonHeader.md)
+
+## S: No controller, how to send a request
+
+Refer to [Temporary request](./features/tempRequest.md)
+
+
+## S: API doc sync
+When you modify your method, the api returned from the APIs list is the API saved before you updated it. At this time, if you want to ensure that the online API document is your modified one,
+you need to click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(save) or click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> again and then sync api doc.
+
+## S: APIs echo
+For the saved api，you modify it again, you need manually fill in parameters and save <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> it. If you don't want the parameters you saved before at all, you can just click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([Re generate](/guide/features/regenerate.md)).
+
+> Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
+
 
 ## Q: After entering the parameters, the API call found that the parameters were invalid
 
@@ -36,25 +76,3 @@ public class A{
     private int xx;
 }
 ```
-
-## Q: Regeneration function
-
-**A:** Designed to reset generated parameters,it will clear the parameters of the previous API,but does not include the save action.  
-If your API has been saved and you want to change the parameters again, then you can click the regenerate button and remember to save again, otherwise the original parameters will be retained.  
-(It is equivalent to operating a file, emptying the content of the file but not saving it, then you will still see the original file before modification)
-
-## Q: Nothing to show <Badge text="2022.1.4+" type="danger"/>
-
-![](/img/buy/none.png)
-
-<Badge text="Follow these steps to register for licenses" type="danger" vertical="middle"/>
-
-step1:Click **help->Register...->Add New License**
-
-- Way 1: Log in to your jetbrains account(Make sure you have buy the license)
-- Way 2: Enter the activation code in Activation code
-- Way 3: Click start trial
-
-![](/img/buy/step5.png)
-
-step2: restart idea
