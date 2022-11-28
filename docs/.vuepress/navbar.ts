@@ -31,6 +31,11 @@ export const enNavbar = navbar([
     link: "/en/guide/concatGroup",
     icon: "contactGroup",
   },
+
+  {
+    text: "FAQ",
+    link: "/guide/faq",
+  },
 ]);
 
 export const zhNavbar = navbar([
@@ -73,11 +78,16 @@ export const zhNavbar = navbar([
     link: "/guide/sponsorList",
   },
   {
-    text: "🎁 活动",
-    link: "/guide/activity",
+    text: "FAQ",
+    link: "/guide/faq",
   },
+//   {
+//     text: "🎁 活动",
+//     link: "/guide/activity",
+//   },
   {
       text: "友情链接",
       link: "/guide/link",
     },
+
 ]);

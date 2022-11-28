@@ -18,6 +18,13 @@ icon: faq
 1. Configure the correct domain name and enable the 2 drop down boxes for project and environment
 2. Set the correct url, for example to replace the variable {id} on the url, you can replace the variable in the Path Param tab
 
+## S: Fast positioning
+After getting the focus of the window or pop-up box，Enter the letters to position，Then use the `↑` arrow or the `↓` arrow for jump positioning
+
+For example:
+
+![apiDocExample](/img/apiPreview.gif)
+
 ## S: Multi-file upload
 
 Enter multiple values and set the field type to file
