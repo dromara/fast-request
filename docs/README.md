@@ -130,7 +130,7 @@ head:
     "labels": ["易用性", "Swagger", "Java", "Kotlin", "压测", "集成"],
     "datasets": [
       {
-        "label": "My First Dataset",
+        "label": "Restful Fast Request",
         "data": [95, 90, 90, 70, 40, 60],
         "backgroundColor": [
           "rgb(255, 99, 132)",
