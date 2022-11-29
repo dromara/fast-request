@@ -20,7 +20,13 @@ icon: whats-new
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2022.2.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## 2022.2.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+- <Badge text="兼容IDEA2022.2.4" type="tip"/>
+- <Badge text="全局动画配置" type="tip"/>
+- <Badge text="多Cookie值错误" type="danger"/>
+- <Badge text="导航Navigate tab加载错误" type="danger"/>
+
+## 2022.2.8 <Badge text="免费试用" type="tip"/>
 - <Badge text="下载文件适配" type="info"/>
 - <Badge text="@RequestParam支持name解析" type="info"/>
 - <Badge text="检查更新报错" type="danger"/>

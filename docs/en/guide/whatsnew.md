@@ -18,10 +18,16 @@ For both new and existing customers, we are extending the maximum permissible re
 
 [**More detail ---------------->**](./history.md)
 
-## v2022.2.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2022.2.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Compatible with IDEA 2022.2.4" type="tip"/>
+- <Badge text="Global animate config support" type="tip"/>
+- <Badge text="Cookie bug" type="danger"/>
+- <Badge text="Navigate tab load error" type="danger"/>
+
+## v2022.2.8 <Badge text="Free trial" type="tip"/>
 - <Badge text="Directory download file support" type="info"/>
 - <Badge text="@RequestParam support name attribute" type="info"/>
-- <Badge text="Error when check update" type="info"/>
+- <Badge text="Error when check update" type="danger"/>
 
 ## v2022.2.7 <Badge text="Free trial" type="tip"/>
 

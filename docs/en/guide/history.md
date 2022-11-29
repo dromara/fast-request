@@ -16,8 +16,19 @@ For both new and existing customers, we are extending the maximum permissible re
 2022-11-15 Kings
 
 :::
+## v2022.2.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Compatible with IDEA 2022.2.4" type="tip"/>
+- <Badge text="Global animate config support" type="tip"/>
+- <Badge text="Cookie bug" type="danger"/>
+- <Badge text="Navigate tab load error" type="danger"/>
 
-## v2022.2.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+::: tip Global animate config support
+You can close animate in this global config, if close, icon will no logger move
+
+![animateConfig](/img/2022.2.9/animateConfig_en.png)
+:::
+
+## v2022.2.8 <Badge text="Free trial" type="tip"/>
 - <Badge text="Directory download file support" type="info"/>
 - <Badge text="@RequestParam support name attribute" type="info"/>
 - <Badge text="Error when check update" type="info"/>
