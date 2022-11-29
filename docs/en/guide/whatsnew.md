@@ -10,7 +10,7 @@ However, we are at the point where we need to increase our subscription prices. 
 
 > Prepay at the current price for more than one year
 
-For both new and existing customers, we are extending the maximum permissible renewal period, you can go to [License page](https://account.jetbrains.com/licenses) to renew subscription. This is now three years for individual subscriptions, and two years for business subscriptions. While this will require an upfront payment, it will allow you to renew at the current price for more than one year.
+For both new and existing customers, we are extending the maximum permissible renewal period, you can go to [License page](https://account.jetbrains.com/licenses) to renew subscription. This is now three years for individual subscriptions, and two years for business subscriptions. While this will require an upfront payment, it will allow you to renew at the current price for more than one year ==in advance==.
 
 ::: right
 2022-11-15 Kings
