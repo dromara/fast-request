@@ -7,7 +7,7 @@ export const enSidebar = sidebar({
       text: "Getting started",
       icon: "leibie",
       prefix: "getstarted/",
-      collapsable: true,
+      collapsible: true,
       children: [
         "start",
         "projectEnv",
@@ -24,7 +24,7 @@ export const enSidebar = sidebar({
       icon: "featuresNew",
       prefix: "features/",
       link: "features/",
-      collapsable: true,
+      collapsible: true,
       children: [
         "makeIconMove",
         "searchEveryWhere",
@@ -80,7 +80,7 @@ export const zhSidebar = sidebar({
       text: "快速上手",
       icon: "leibie",
       prefix: "getstarted/",
-      collapsable: true,
+      collapsible: true,
       children: [
         "start",
         "projectEnv",
@@ -96,7 +96,7 @@ export const zhSidebar = sidebar({
       text: "功能",
       icon: "featuresNew",
       prefix: "features/",
-      collapsable: true,
+      collapsible: true,
       link: "/guide/features",
       children: [
         "makeIconMove",
