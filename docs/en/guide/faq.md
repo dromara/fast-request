@@ -4,8 +4,7 @@ icon: faq
 ---
 
 > Keywords meaning
-<Badge text="S: Skill" color="#087CFA" /> <Badge text="Q: Question" color="#FE2857" /> <Badge text="A: Answer" color="#21D789" />
-
+> <Badge text="S: Skill" color="#087CFA" /> <Badge text="Q: Question" color="#FE2857" /> <Badge text="A: Answer" color="#21D789" />
 
 [[toc]]
 
@@ -19,6 +18,7 @@ icon: faq
 2. Set the correct url, for example to replace the variable {id} on the url, you can replace the variable in the Path Param tab
 
 ## S: Fast positioning
+
 After getting the focus of the window or pop-up box，Enter the letters to position，Then use the `↑` arrow or the `↓` arrow for jump positioning
 
 For example:
@@ -41,16 +41,16 @@ Consider using add header by [`Common header`](./features/commonHeader.md)
 
 Refer to [Temporary request](./features/tempRequest.md)
 
-
 ## S: API doc sync
+
 When you modify your method, the api returned from the APIs list is the API saved before you updated it. At this time, if you want to ensure that the online API document is your modified one,
 you need to click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(save) or click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> again and then sync api doc.
 
 ## S: APIs echo
+
 For the saved api，you modify it again, you need manually fill in parameters and save <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> it. If you don't want the parameters you saved before at all, you can just click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([Re generate](/guide/features/regenerate.md)).
 
 > Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
-
 
 ## Q: After entering the parameters, the API call found that the parameters were invalid
 

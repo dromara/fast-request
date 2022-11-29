@@ -81,13 +81,12 @@ export const zhNavbar = navbar([
     text: "FAQ",
     link: "/guide/faq",
   },
-//   {
-//     text: "🎁 活动",
-//     link: "/guide/activity",
-//   },
+  //   {
+  //     text: "🎁 活动",
+  //     link: "/guide/activity",
+  //   },
   {
-      text: "友情链接",
-      link: "/guide/link",
-    },
-
+    text: "友情链接",
+    link: "/guide/link",
+  },
 ]);

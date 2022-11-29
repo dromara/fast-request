@@ -27,10 +27,10 @@ icon: changelog
 | ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
 
-
 :::
 
 ## 2022.2.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+
 - <Badge text="兼容IDEA2022.2.4" type="tip"/>
 - <Badge text="全局动画配置" type="tip"/>
 - <Badge text="多Cookie值错误" type="danger"/>
@@ -42,8 +42,8 @@ icon: changelog
 ![animateConfig](/img/2022.2.9/animateConfig.png)
 :::
 
-
 ## 2022.2.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+
 - <Badge text="自动适配下载" type="info"/>
 - <Badge text="@RequestParam支持name解析" type="info"/>
 - <Badge text="检查更新报错" type="danger"/>

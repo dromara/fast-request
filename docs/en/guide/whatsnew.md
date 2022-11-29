@@ -6,7 +6,7 @@ icon: whats-new
 ::: danger Increased Subscription Pricing for Plugin
 Since the introduction of subscriptions, we have not increased the pricing of plugin. During this time, we are constantly developing new features, so far we have released 19 version, adding many very useful features, for example api doc sync, and is a very cost-effective plugin. We also lower the cost of subscriptions up to 40% when you renew. It is our way of thanking you for your loyalty.
 
-However, we are at the point where we need to increase our subscription prices. The new prices  will come into effect on December 31, 2022. It will be adjusted from $1/month to $1.9/month and the annual subscription price will be 10 times the monthly subscription price (10 months).
+However, we are at the point where we need to increase our subscription prices. The new prices will come into effect on December 31, 2022. It will be adjusted from $1/month to $1.9/month and the annual subscription price will be 10 times the monthly subscription price (10 months).
 
 > Prepay at the current price for more than one year
 
@@ -19,12 +19,14 @@ For both new and existing customers, we are extending the maximum permissible re
 [**More detail ---------------->**](./history.md)
 
 ## v2022.2.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+
 - <Badge text="Compatible with IDEA 2022.2.4" type="tip"/>
 - <Badge text="Global animate config support" type="tip"/>
 - <Badge text="Cookie bug" type="danger"/>
 - <Badge text="Navigate tab load error" type="danger"/>
 
 ## v2022.2.8 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Directory download file support" type="info"/>
 - <Badge text="@RequestParam support name attribute" type="info"/>
 - <Badge text="Error when check update" type="danger"/>

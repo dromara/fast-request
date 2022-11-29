@@ -4,11 +4,9 @@ icon: faq
 ---
 
 > 关键字含义
-<Badge text="S: 技巧" color="#087CFA" />  <Badge text="Q: 问题" color="#FE2857" />  <Badge text="A: 答案" color="#21D789" />
-
+> <Badge text="S: 技巧" color="#087CFA" /> <Badge text="Q: 问题" color="#FE2857" /> <Badge text="A: 答案" color="#21D789" />
 
 [[toc]]
-
 
 ## S: Url 错误
 
@@ -19,6 +17,7 @@ icon: faq
 2. 设置正确的url，例如需要将url上的变量{id}替换，可以在Path Param tab中替换变量
 
 ## S: 快速定位
+
 获取到窗口或者弹出框焦点以后，输入需要搜索的字母，快读定位，然后使用`↑`箭头或者`↓`箭头进行跳跃定位
 
 例如:
@@ -42,10 +41,12 @@ icon: faq
 参考[临时请求](./features/tempRequest.md)
 
 ## S: API文档同步
+
 当你修改了你的接口参数，从APIs列表双击回来的api是你未更新前保存的API，此时你想保证在线API文档是你修改后的，
 需要再点一下 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(保存) 或者左侧图标 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> ,再进行同步。
 
 ## S: APIs回显
+
 针对保存后的api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([重新生成](/guide/features/regenerate.md))
 
 > 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
