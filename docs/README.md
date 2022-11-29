@@ -69,8 +69,6 @@ head:
 
 <div style="height:30px"></div>
 
-@include(@src/contact.snippet.md)
-
 ## 🥇 功能
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./guide/features/makeIconMove.md)
@@ -197,6 +195,8 @@ head:
 ```
 
 :::
+
+@include(@src/contact.snippet.md)
 
 <div style="height:30px"></div>
 
