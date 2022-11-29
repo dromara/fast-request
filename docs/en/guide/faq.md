@@ -14,12 +14,12 @@ icon: faq
 
 <Badge text="Solution" type="tip" />
 
-1. Configure the correct domain name and enable the 2 drop down boxes for project and environment
-2. Set the correct url, for example to replace the variable {id} on the url, you can replace the variable in the Path Param tab
+1. Configure the correct domain name and enable the 2 drop-down boxes for the project and environment
+2. Set the correct URL, for example, to replace the variable {id} on the URL, you can replace the variable in the Path Param tab
 
-## S: Fast positioning
+## S: Fast position
 
-After getting the focus of the window or pop-up box，Enter the letters to position，Then use the `↑` arrow or the `↓` arrow for jump positioning
+After getting the focus of the window or pop-up box, enter the letters to position, then use the `↑` arrow or the `↓` arrow for jump position
 
 For example:
 
@@ -43,20 +43,20 @@ Refer to [Temporary request](./features/tempRequest.md)
 
 ## S: API doc sync
 
-When you modify your method, the api returned from the APIs list is the API saved before you updated it. At this time, if you want to ensure that the online API document is your modified one,
+When you modify your method, the API returned from the APIs list is the API saved before you update it. At this time, if you want to ensure that the online API document is your modified one,
 you need to click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(save) or click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> again and then sync api doc.
 
-Recommendations：There is no need to create repo in Github, Gitee and Gitlab in advance. Plug-ins will automatically help create repo. Developers only need to provide repo name.
+Recommendation: There is no need to create a repo in Github, Gitee, and Gitlab in advance. Plug-ins will automatically help create a repo. Developers only need to provide the repo name.
 
 ## S: APIs echo
 
-For the saved api，you modify it again, you need manually fill in parameters and save <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> it. If you don't want the parameters you saved before at all, you can just click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([Re generate](/guide/features/regenerate.md)).
+For the saved API, you modify it again, and you need manually fill in the parameters and save <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> it. If you don't want the parameters you saved before at all, you can just click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([Re generate](/guide/features/regenerate.md)).
 
 > Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
 
 ## Q: After entering the parameters, the API call found that the parameters were invalid
 
-**A:** Plugin version less than ==2022.2.3==, when editing a value in the table , you need to ==click in the blank space== after editing the value, and then send the request, the bug is fixed in the 2022.2.3+ version
+**A:** Plugin version less than ==2022.2.3==, when editing a value in the table, you need to ==click in the blank space== after editing the value, then send the request. The bug has been fixed in the 2022.2.3+ version.
 
 ## Q: Why the plugin doesn't respond
 

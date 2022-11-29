@@ -3,7 +3,7 @@ title: Shortcut
 icon: shortcut-fill
 ---
 
-Shortcut keys help to improve the speed of the operation, and skilled use will make the operation easier
+Shortcut keys help improve the operation's speed, and professional use will make the process more easier.
 
 - How to
 

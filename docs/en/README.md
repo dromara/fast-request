@@ -13,12 +13,12 @@ actions:
 features:
   - title: Based on native
     icon: origin
-    details: integrated idea tool
+    details: Integrated in IntelliJ Idea
     link: /en/guide/introduce.html
 
   - title: Efficiency comes first
     icon: effective
-    details: Only need simple configuration to generate method api request, thus saving a lot of time
+    details: You only need simple configuration to generate method api request, thus saving a lot of time
     link: /en/guide/getstarted/start.html
 
   - title: Rich features
@@ -28,7 +28,7 @@ features:
 
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
-    details: Only 16 MB size,Provides a very intuitive interface
+    details: Only 16 MB size. Plugin provides a very intuitive interface
 
 head:
   - - meta
@@ -115,7 +115,7 @@ head:
     ],
     "datasets": [
       {
-        "label": "My First Dataset",
+        "label": "Restful Fast Request",
         "data": [95, 90, 90, 70, 40, 60],
         "backgroundColor": [
           "rgb(255, 99, 132)",
@@ -196,7 +196,7 @@ Make sure your IDEA version >= 2020.3+
 | 2.0.0~2.1.3    | 2020.3+                   |
 | 2022.1.4+      | 2021.2+                   |
 
-Of course, if there are any updates to the plugin, please make sure to update it to the latest version
+Of course, if there are any updates to the plugin, please make sure to update it to the latest version.
 :::
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988

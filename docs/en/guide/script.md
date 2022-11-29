@@ -3,11 +3,11 @@ title: Script
 icon: code-box-fill
 ---
 
-**Function**: Developers can use Groovy scripts to customize some logic, which makes the API more flexible, such as dynamically encrypting and signing parameters and putting them in the header rather than directly write dead
+**Function**: Developers can use Groovy scripts to customize some logic, which makes the API more flexible, such as dynamically encrypting and signing parameters and putting them in the header rather than directly writing dead.
 
 **Language**: [Groovy](https://groovy-lang.org/)
 
-Groovy syntax is almost identical to Java
+The groovy syntax is almost identical to Java.
 
 ## Script flow chart
 
@@ -43,7 +43,7 @@ request.header("sign",sign)
 
 ::: danger Notice
 
-Developers should pay attention to the fact that the built-in variable has been declared in the script edited by themselves, instead of creating a new Request or Response object, otherwise it may cause unexpected errors.
+Developers should pay attention to the fact that the built-in variable has been declared in the script edited by themselves instead of creating a new Request or Response object. Otherwise, it may cause unexpected errors.
 
 :::
 
@@ -54,14 +54,14 @@ Plugin use [hutool](https://hutool.cn/)的`cn.hutool.http.HttpRequest` send requ
 - Remark: Contains request-related information, such as url, header, body, parameters
 - Type: cn.hutool.http.HttpRequest
 
-Parameters can be dynamically adjusted by modifying the request value
+Parameters can be dynamically adjusted by modifying the request value.
 
 ### response <Badge text="2022.2.3️" type="tip"/>
 
 - Remark: Contains response information
 - Type: cn.hutool.http.HttpResponse
 
-You can get the result of the response through the response value
+You can get the result of the response through the response value.
 
 ### rfr <Badge text="2022.2.3️" type="tip"/>
 
@@ -105,14 +105,14 @@ cn.hutool:hutool-all:5.8.5
 com.google.guava:guava:30.1.1-jre
 ```
 
-The version of Jar will be updated from time to time. If you find a bug, please contact up to upgrade
+The version of Jar will be updated from time to time. If you find a bug, please contact up to upgrade.
 
-Developers can use the tools and methods provided by the above three Jars to reference directly in the script, without relying on third-party Jar
+Developers can use the tools and methods provided by the above three Jars to reference directly in the script without relying on third-party Jar.
 :::
 
 - [x] Import jar(maven style)
 
-Downloading the jar may take extra time
+Downloading the jar may take extra time.
 
 ```groovy
 @Grab("org.apache.commons:commons-lang3:3.12.0")
@@ -139,7 +139,7 @@ if(StringUtils.isNotBlank(debug)){
 
 ## Console <Badge text="2022.2.5" type="tip"/>
 
-Console helps developers print some info you wanted
+The console helps developers print some info you want.
 
 ```java
 console.info("info")
@@ -156,7 +156,7 @@ console.error("error")
 
 ::: tip 1. Sign parameter
 
-Create a new xxx.groovy file in your local idea, paste the following code, after appropriate modification, it can ensure that the local can run normally, and then paste the code into the script
+Create a new xxx.groovy file in your local idea, paste the following code. After appropriate modification, it can ensure that the local can run normally and then paste the code into the script.
 
 - <Badge text="Note that the final script needs to remove this line of code" type="danger"/>
 
@@ -181,7 +181,7 @@ request.header("sign",sign)
 
 :::
 
-::: tip 2. Use the response of a request as the Header parameter of the request
+::: tip 2. Use the response of a request as the Header parameter of the request.
 
 ```groovy
 import cn.hutool.core.util.CharsetUtil
@@ -204,15 +204,15 @@ if(myResponse.isOk()){
 
 ## Note
 
-- Groovy scripts are not sensitive to ==;==, Java uses ; as the end of the statement code, Groovy uses a newline to indicate the end of a code
+- Groovy scripts are not sensitive to `;`, Java uses `;` as the end of the statement code, Groovy uses a newline to indicate the end of a code
 - The built-in variable has been declared. For example, in Demo 2, if an additional request needs to be created, the variable name needs to be noted that it cannot be the same as the built-in variable.
 
 ## Script contribute :star2:
 
-In order to make the script more powerful, community script are welcome, develop can donate the script in comments, develop can ==vote== the script if you think the script help much,
-High-voted and practical scripts will have the opportunity to join to ==Plugin page==,so that your homepage gets more attention :fire:
+In order to make the script more powerful, community script are welcome, and developers can donate the script in comments, develop can ==vote== the script if you think the script help much,
+High-voted and practical scripts will have the opportunity to join to ==Plugin page==, so that your homepage gets more attention :fire:
 
-- 格式
+- Format
 
 ```groovy
 /**

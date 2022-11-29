@@ -3,7 +3,7 @@ title: Buy Plugin
 icon: buy
 ---
 
-<Badge text="❤️Thanks for support original, support official edition❤️" type="tip" vertical="middle"/>
+<Badge text="❤️Thanks for supporting the original, support official edition.❤️" type="tip" vertical="middle"/>
 
 **Tow ways to buy**
 
@@ -11,12 +11,11 @@ icon: buy
 - Email mode: Receive the license directly by email
 - License server mode: <Badge text="Not support" type="danger" vertical="middle"/>
 
-**Registering a jetbrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose**
+**Registering a JetBrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose.**
 
 ## Step0: Go to the plugin activation page
 
-Click **Activate Plugin**
-Of course, you can also try the plugin first，it's free 30 days.Please click start trial
+Click **Activate Plugin**. Of course, you can also try the plugin first. It's free for 30 days. Please click start trial.
 
 ![](/img/buy/activate_en.png)
 
@@ -32,8 +31,8 @@ Of course, you can also try the plugin first，it's free 30 days.Please click st
 
 ## Step3: Email confirmation(Email mode)
 
-If you have not registered a jetbrains account and logged in, you will enter this page, where you need to enter the email address that accepts the license.
-Click next to enter the purchase confirmation page
+If you have not registered a JetBrains account and logged in, you will enter this page, where you need to enter the email address that accepts the license.
+Click next to enter the purchase confirmation page.
 
 ![](/img/buy/step3.png)
 
@@ -47,7 +46,7 @@ Click next to enter the purchase confirmation page
 
 Click **help->Register Plugins...->Add New License**
 
-Log in your jetbrains account
+Log in to your JetBrains account.
 
 ![](/img/buy/step5.png)
 
@@ -57,7 +56,7 @@ Log in your jetbrains account
 
 ![](/img/buy/offlineCodeDownload.png)
 
-- 2.Enter the activation code in Activation code
+- 2.Enter the activation code in the Activation code
 
 ![](/img/buy/offline.png)
 
@@ -67,10 +66,10 @@ Log in your jetbrains account
 
 ::: danger License info
 
-**Please keep your activation code information safe and do not leak the License information**
+**Please keep your activation code information safe and do not leak the License information.**
 ![](/img/buy/accountLicense.png)
 :::
 
-**If you have some questions, please join the Telegram and contact me** on
+**If you have some questions, please join [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) and contact me**
 
-[![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request)
+
