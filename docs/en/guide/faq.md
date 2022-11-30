@@ -17,7 +17,7 @@ icon: faq
 1. Configure the correct domain name and enable the 2 drop-down boxes for the project and environment
 2. Set the correct URL, for example, to replace the variable {id} on the URL, you can replace the variable in the Path Param tab
 
-## S: Fast position
+## S: Quick locate
 
 After getting the focus of the window or pop-up box, enter the letters to position, then use the `↑` arrow or the `↓` arrow for jump position
 
