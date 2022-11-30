@@ -10,5 +10,6 @@ API 的 name 值支持修改。
 
 :::
 
-![api](/img/apis_hd.png)
-![apiManager](/img/apiManager.png)
+![api](/img/apis_hd.png "API列表")
+
+![apiManager](/img/apiManager.png "API管理")

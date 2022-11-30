@@ -2,6 +2,6 @@
 
 Version required: <Badge text="2022.2.7+" />
 
-Click full screen, in the case of sub-screen, the interface will be more friendly, click mark ② in the figure to restore
+For multiple screens, click on full screen for a more user-friendly interface. Click on the mark ② in the picture to resume.
 
 ![fullScreen](/img/2022.2.7/fullScreen.png)

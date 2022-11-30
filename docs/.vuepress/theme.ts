@@ -59,6 +59,7 @@ export default hopeTheme({
       codetabs: true,
       container: true,
       flowchart: true,
+      imageTitle: true,
       include: {
         getPath: (file) => {
           if (file.startsWith("@src"))

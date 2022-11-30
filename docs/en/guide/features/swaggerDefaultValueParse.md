@@ -2,9 +2,9 @@
 
 Version required: <Badge text="2022.1.4" />
 
-Below are some examples
+Below are some examples.
 
-Priority: swagger default value > config default value
+**Priority**: swagger default value > config default value
 
 :::: code-tabs
 

@@ -1,10 +1,7 @@
 # Save request
 
-::: tip Special Note
-
-1. The saved request will be put in _Default Group_ by default, support drag and drop into other groups,Of course, it is best to join the module group, please see `API group automatic association`
-
-1. API Name:If the api uses swagger annotations `@ApiOperation("xxx")`,The api is named xxx,If there is no swagger annotation,Use javadoc as the name of the api,Otherwise it will be named New Request
+::: tip Note
+**API Naming**: If the API uses swagger annotations `@ApiOperation("xxx")`, the API is named `xxx`. If there is no swagger annotation, Use JavaDoc as the name of the API. Otherwise, it will be named with `New Request`.
 
 ```
 if (@ApiOperation("xxx"))

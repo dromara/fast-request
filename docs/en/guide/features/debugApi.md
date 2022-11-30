@@ -1,7 +1,13 @@
 # Debug API & send request
 
-![example](/img/example_en.gif)
+:::tip
+In the new version, send button has moved to the toolbar, and the left icon has been changed from <FontIcon icon="restfulFastRequest1" /> to <FontIcon icon="restfulFastRequest" />
+:::
 
-In new version, send button have moved to toolbar and the left icon have been changed from <FontIcon icon="restfulFastRequest1" /> to <FontIcon icon="restfulFastRequest" />
 
-![sendRequest](/img/sendRequest.png)
+![sendRequest](/img/sendRequest.png "New version")
+
+
+> Old version
+
+![example](/img/example_en.gif "Old version")

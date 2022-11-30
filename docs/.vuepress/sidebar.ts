@@ -57,7 +57,7 @@ export const enSidebar = sidebar({
         "apiCommentPreview",
         "script",
         "quickAddHeader",
-        "headersGroup",
+        "headerGroup",
         "jsonGrammarCheck",
       ],
     },

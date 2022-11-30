@@ -2,6 +2,6 @@
 
 Version required: <Badge text="2022.1.9" />
 
-The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
+Click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> and view the response using HTML.
 
 ![rawHtmlPreview](/img/rawHtmlPreview.png)

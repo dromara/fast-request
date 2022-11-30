@@ -18,7 +18,7 @@
 
 ## 配置介绍
 
-![apiSyncSetting](/img/2022.2.7/apiSyncSetting.png)
+![apiSyncSetting](/img/2022.2.7/apiSyncSetting.png "同步配置")
 
 注意点: 命名策略决定了同步至云端的文件名称，文件名称来自 Javadoc 或者 Swagger 方法命名注解，如果勾选使用 javadoc，请确保 Javadoc 和 Swagger 方法命名一定要==简短==，
 否则云端的文件名会非常长，这种情况下考虑勾选方法名来同步。
@@ -31,8 +31,8 @@
 - Github: 必须勾选 repo
 - Gitlab: 必须勾选 api
 
-![giteeToken](/img/2022.2.7/giteeToken.png)
+![giteeToken](/img/2022.2.7/giteeToken.png "Gitee token")
 
-![githubToken](/img/2022.2.7/githubToken.png)
+![githubToken](/img/2022.2.7/githubToken.png "Github token")
 
-![gitlabToken](/img/2022.2.7/gitlabToken.png)
+![gitlabToken](/img/2022.2.7/gitlabToken.png "Gitlab token")
