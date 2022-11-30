@@ -10,8 +10,8 @@ icon: restfulFastRequest
 ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request)
 
-[**<FontIcon icon="restfulFastRequest" />estful <i class="icon iconfont icon-rfr-f"></i>ast <FontIcon icon="restfulFastRequest" />equest**](https://plugins.jetbrains.com/plugin/16988-fast-request) is an IDEA plugin similar to Postman that helps developers debug apis efficiently. It is a powerful restful api toolkit plugin which helps you quickly generate url and params by the existing method.
-`Restful Fast Request = API debug tool + API manager tool + API search tool`. It has a beautiful interface to compose requests, inspect server responses, store your api request and export api request. The plugin helps you debug requests just in IntelliJ IDEA frame.
+[**<FontIcon icon="restfulFastRequest" />estful <i class="icon iconfont icon-rfr-f"></i>ast <FontIcon icon="restfulFastRequest" />equest**](https://plugins.jetbrains.com/plugin/16988-fast-request) is an IDEA plugin similar to Postman that helps developers debug APIs efficiently. It is a powerful restful API toolkit plugin which helps you quickly generate URL and params by the existing method.
+`Restful Fast Request = API debug tool + API manager tool + API search tool`. It has a beautiful interface to compose requests, inspect server responses, store your API request and export API request. Plugin helps you debug requests just in IntelliJ IDEA frame.
 
 Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client but also
 provides a friendly, easy-to-understand and intuitive interface, which makes it more convenient and simple for users to
@@ -19,7 +19,7 @@ debug the API. At the same time, various types of parameters also provide differ
 more flexible. And it integrates additional features such as search, Postman integration, Swagger support and so on.
 
 ::: tip PURPOSE  
-The purpose of the plug-in is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
+The purpose of the plugin is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
 :::
 
 ## Supported framework
