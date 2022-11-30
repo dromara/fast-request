@@ -25,7 +25,7 @@ For both new and existing customers, we are extending the maximum permissible re
 - <Badge text="Navigate tab load error" type="danger"/>
 
 ::: tip Global animate config support
-You can close animate in this global config, if close, icon will no logger move
+You can close animate in this global config, if close, icon animation <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> will stop
 
 ![animateConfig](/img/2022.2.9/animateConfig_en.png)
 :::

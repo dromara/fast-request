@@ -9,7 +9,8 @@ icon: buy
 
 - Account mode: Management via [JetBrains Account](https://account.jetbrains.com/licenses)(Recommend)
 - Email mode: Receive the license directly by email
-- License server mode: <Badge text="Not support" type="danger" vertical="middle"/>
+
+[comment]: <> (- License server mode: <Badge text="Not support" type="danger" vertical="middle"/>)
 
 **Registering a JetBrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose.**
 

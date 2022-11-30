@@ -13,7 +13,8 @@ icon: buy
 
 - 账号模式: 注册 [jetbrains 账号](https://account.jetbrains.com/licenses) 购买(推荐)
 - 邮件模式: 直接使用 email 邮箱接收 license
-- License server 模式: <Badge text="不支持" type="danger" vertical="middle"/>
+
+[comment]: <> (- License server 模式: <Badge text="不支持" type="danger" vertical="middle"/>)
 
 **注册 jetbrains 账号购买方式可以方便后续找 license，且不容易丢失**
 
