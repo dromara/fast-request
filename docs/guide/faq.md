@@ -4,7 +4,9 @@ icon: faq
 ---
 
 > 关键字含义
-> <Badge text="S: 技巧" color="#087CFA" /> <Badge text="Q: 问题" color="#FE2857" /> <Badge text="A: 答案" color="#21D789" />
+> <Badge text="S: 技巧" color="#087CFA" /> <Badge text="Q: 问题" color="#FE2857" /> <Badge text="A: 答案" color="#21D789" />  
+>  ---
+> 我们将持续更新开发者遇到的问题以及解决方案 
 
 [[toc]]
 
@@ -15,6 +17,16 @@ icon: faq
 <Badge text="解决办法" type="tip" />
 1. 配置正确的域名，并启用项目和环境2个下拉框
 2. 设置正确的url，例如需要将url上的变量{id}替换，可以在Path Param tab中替换变量
+
+## S: 解析如何忽略某个字段
+方式1： 使用如下2种注解中的一种
+```
+com.fasterxml.jackson.annotation.JsonIgnore
+
+com.alibaba.fastjson.annotation.JSONField(serialize = false)
+```
+
+方式2： 给字段增加 `static` 修饰符
 
 ## S: 快速定位
 

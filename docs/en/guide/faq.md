@@ -5,6 +5,8 @@ icon: faq
 
 > Keywords meaning
 > <Badge text="S: Skill" color="#087CFA" /> <Badge text="Q: Question" color="#FE2857" /> <Badge text="A: Answer" color="#21D789" />
+> ---
+> We will constantly update the problems encountered by developers and the corresponding solutions.
 
 [[toc]]
 
@@ -16,6 +18,16 @@ icon: faq
 
 1. Configure the correct domain name and enable the 2 drop-down boxes for the project and environment
 2. Set the correct URL, for example, to replace the variable {id} on the URL, you can replace the variable in the Path Param tab
+
+## S: How to ignore the field of the entity
+Way 1: Use one of the following 2 annotations.
+```
+com.fasterxml.jackson.annotation.JsonIgnore
+
+com.alibaba.fastjson.annotation.JSONField(serialize = false)
+```
+
+Way 2: Add the `static` modifier to the field.
 
 ## S: Quick locate
 
