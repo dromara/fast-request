@@ -66,6 +66,11 @@ For the saved API, you modify it again, and you need manually fill in the parame
 
 > Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
 
+## Q: Left icon missing
+Left icon <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> missing.
+
+**A:** Open config `setting->Editor->Gutter icons->show gutter icon`
+
 ## Q: After entering the parameters, the API call found that the parameters were invalid
 
 **A:** Plugin version less than ==2022.2.3==, when editing a value in the table, you need to ==click in the blank space== after editing the value, then send the request. The bug has been fixed in the 2022.2.3+ version.

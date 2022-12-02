@@ -65,6 +65,11 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 
 > 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
 
+## Q: 左侧图标不显示
+左侧图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>不显示。
+
+**A:** 打开配置 `setting->Editor->Gutter icons->show gutter icon`
+
 ## Q: 输入参数后调用 API 发现无效
 
 **A:** 插件版本小于2022.2.3的在 table 控件编辑某个值的时候，需要在编辑完值后==先在空白处点一下==，再发送请求，该问题在 2022.2.3+版本得到修复
