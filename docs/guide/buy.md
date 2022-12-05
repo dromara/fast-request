@@ -18,6 +18,8 @@ icon: buy
 
 **注册 jetbrains 账号购买方式可以方便后续找 license，且不容易丢失**
 
+请参考JetBrains提供的[文档](https://plugins.jetbrains.com/docs/marketplace/how-to-buy-a-plugin.html)，也可以参考以下作者提供的几个步骤。
+
 ## Step0: 前往插件激活页面
 
 点击**激活插件**，当然你也可以先免费试用插件 30 天，点击 start trial。

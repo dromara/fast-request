@@ -14,6 +14,8 @@ icon: buy
 
 **Registering a JetBrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose.**
 
+[Documentation](https://plugins.jetbrains.com/docs/marketplace/how-to-buy-a-plugin.html) how to buy a plugin provided by JetBrains, or you can refer to the following steps.
+
 ## Step0: Go to the plugin activation page
 
 Click **Activate Plugin**. Of course, you can also try the plugin first. It's free for 30 days. Please click start trial.

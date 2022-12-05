@@ -65,6 +65,12 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 
 > 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
 
+## Q: 新UI下SearchEveryWhere中Tab无法显示
+
+**A:** 暂时先把IDEA的主题换成`Dark`，操作步骤：`打开SearchEveryWhere->输入theme->回车或者确定切换主题至Dark`，这是IDEA主题导致的bug。
+
+![](/img/faq/searchEveryWhereError.png)
+
 ## Q: 左侧图标不显示
 左侧图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>不显示。
 

@@ -66,6 +66,11 @@ For the saved API, you modify it again, and you need manually fill in the parame
 
 > Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
 
+## Q: Tab not displayed in SearchEveryWhere under new UI
+**A:** Change the theme of IDEA to`Dark`. Steps：`Open SearchEveryWhere -> Fill in 'theme' -> Enter or confirm and switch the theme to Dark`. This is a bug caused by the IDEA theme.
+
+![](/img/faq/searchEveryWhereError.png)
+
 ## Q: Left icon missing
 Left icon <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> missing.
 
