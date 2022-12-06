@@ -33,7 +33,7 @@ features:
 head:
   - - meta
     - name: keywords
-      content: Restful Fast Request,RestfulFastRequest,Fast Request,Postman,idea plugin,http client,Restful API,IDEA plugin
+      content: Restful Fast Request,RestfulFastRequest,Fast Request,Postman,Rest Client,idea plugin,http client,Restful API,IDEA plugin,Restful,API
   - - meta
     - name: description
       content: Restful Fast Request,idea plugin,a postman-like restful api toolkit plugin based on IDEA,Can help you quickly generate url and params according to existing methods,An API debugging tool + API management tool.Support springmvc、springboot、java-rs
