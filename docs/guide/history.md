@@ -29,7 +29,31 @@ icon: changelog
 
 :::
 
-## 2022.2.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+- <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
+- <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
+- <Badge text="激活提示优化" type="info"/>
+- <Badge text="Kotlin和Java混编导致Navigate加载api失败" type="danger"/>
+
+::: tip 注释增加@parseIgnore用来忽略字段解析
+
+以下的代码，插件会忽略解析该字段，请使用`@parseIgnore`
+
+```java
+/**
+ * xxx description
+ * @parseIgnore
+ */
+private String someIgnoreField ;
+```
+:::
+
+::: tip Script中增加rfr.currentDomain支持
+在脚本中可以通过`rfr.currentDomain`获取当前作用的域名
+:::
+
+
+## 2022.2.9 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="兼容IDEA2022.2.4" type="tip"/>
 - <Badge text="全局动画配置" type="tip"/>
@@ -42,7 +66,7 @@ icon: changelog
 ![animateConfig](/img/2022.2.9/animateConfig.png)
 :::
 
-## 2022.2.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## 2022.2.8 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="自动适配下载" type="info"/>
 - <Badge text="@RequestParam支持name解析" type="info"/>

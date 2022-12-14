@@ -71,29 +71,36 @@ request.header("sign",sign)
 #### rfr.projectHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```
-作用:包含了项目级别头,可以通过修改来动态往UI里面设置值
-类型:java.util.LinkedHashMap
+作用: 包含了项目级别头,可以通过修改来动态往UI里面设置值
+类型: java.util.LinkedHashMap
 ```
 
 #### rfr.moduleHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```
-作用:包含了模块级别头,可以通过修改来动态往UI里面设置值
-类型:java.util.LinkedHashMap
+作用: 包含了模块级别头,可以通过修改来动态往UI里面设置值
+类型: java.util.LinkedHashMap
 ```
 
 #### rfr.currentProjectName <Badge text="2022.2.5️" type="tip"/>
 
 ```
-作用:当前下拉框选择的项目名
-类型:java.lang.String
+作用: 当前下拉框选择的项目名
+类型: java.lang.String
 ```
 
 #### rfr.currentEnvName <Badge text="2022.2.5️" type="tip"/>
 
 ```
-作用:当前下拉框选择的环境名称
-类型:java.lang.String
+作用: 当前下拉框选择的环境名称
+类型: java.lang.String
+```
+
+#### rfr.currentDomain <Badge text="2022.3.1️" type="tip"/>
+
+```
+作用: 获取当前作用的域名
+类型: java.lang.String
 ```
 
 ## 引入第三方 Jar

@@ -70,29 +70,36 @@ You can get the result of the response through the response value.
 #### rfr.projectHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```
-Remark:Contains project-level headers, which can be modified to dynamically set values in the UI
-Type:java.util.LinkedHashMap
+Remark: Contains project-level headers, which can be modified to dynamically set values in the UI
+Type: java.util.LinkedHashMap
 ```
 
 #### rfr.moduleHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```
-Remark:Contains module level headers, which can be modified to dynamically set values in the UI
-Type:java.util.LinkedHashMap
+Remark: Contains module level headers, which can be modified to dynamically set values in the UI
+Type: java.util.LinkedHashMap
 ```
 
 #### rfr.currentProjectName <Badge text="2022.2.5️" type="tip"/>
 
 ```
-Remark:The project name of the item currently selected in the drop-down box
-Type:java.lang.String
+Remark: The project name of the item currently selected in the drop-down box
+Type: java.lang.String
 ```
 
 #### rfr.currentEnvName <Badge text="2022.2.5️" type="tip"/>
 
 ```
-Remark:The name of the environment currently selected in the drop-down box
-Type:java.lang.String
+Remark: The name of the environment currently selected in the drop-down box
+Type: java.lang.String
+```
+
+#### rfr.currentDomain <Badge text="2022.3.1️" type="tip"/>
+
+```
+Remark: Get the currently active domain link
+类型: java.lang.String
 ```
 
 ## Import third jar

@@ -20,7 +20,13 @@ icon: whats-new
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2022.2.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+- <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
+- <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
+- <Badge text="激活提示优化" type="info"/>
+- <Badge text="Kotlin和Java混编导致Navigate加载api失败" type="danger"/>
+
+## 2022.2.9 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="兼容IDEA2022.2.4" type="tip"/>
 - <Badge text="全局动画配置" type="tip"/>

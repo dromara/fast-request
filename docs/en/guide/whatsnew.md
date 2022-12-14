@@ -18,7 +18,13 @@ For both new and existing customers, we are extending the maximum permissible re
 
 [**More detail ---------------->**](./history.md)
 
-## v2022.2.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2022.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Add @parseIgnore comment support for parse" type="tip"/>
+- <Badge text="Add rfr.currentDomain in Script" type="tip"/>
+- <Badge text="Activation prompt optimization" type="info"/>
+- <Badge text="Reload api error in navigate when using Kotlin and Java in one project" type="danger"/>
+
+## v2022.2.9 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Compatible with IDEA 2022.2.4" type="tip"/>
 - <Badge text="Global animate config support" type="tip"/>
