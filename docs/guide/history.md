@@ -1,5 +1,5 @@
 ---
-title: 历史变更
+title: 最新变化
 icon: changelog
 ---
 
@@ -29,7 +29,30 @@ icon: changelog
 
 :::
 
-## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## 2023.1.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LightPink"/>
+- <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
+- <Badge text="项目级别域名配置" type="tip"/>
+- <Badge text="图标排版" type="info"/>
+- <Badge text="新UI工具窗口图标" type="info"/>
+- <Badge text="基础类型Swagger默认值解析" type="danger"/>
+
+::: tip 项目级别域名配置
+支持直接从`yml`和`properties`配置文件快速配置域名，更多详情请查看 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目域名配置](./features/projectLevelDomainConfig.md)
+
+![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig.png "域名配置")
+
+![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog.png "域名列表")
+:::
+
+::: info 图标排版
+对按钮进行了归类整理，让开发者更加容易找到和理解对应按钮的功能。
+:::
+
+::: info 新UI工具窗口图标
+新UI下工具窗口图标清晰度进行了优化。
+:::
+
+## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LightGreen"/>
 - <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
 - <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
 - <Badge text="激活提示优化" type="info"/>

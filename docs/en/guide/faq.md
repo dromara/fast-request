@@ -10,6 +10,10 @@ icon: faq
 
 [[toc]]
 
+## S: Quickly add domain
+Please refer [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./features/projectLevelDomainConfig.md)
+(Plugin version>=**2023.1.1**)
+
 ## S: Url error
 
 ![urlError](/img/skill/urlError_en.png)
@@ -53,6 +57,15 @@ Consider using add header by [`Common header`](./features/commonHeader.md)
 
 Refer to [Temporary request](./features/tempRequest.md)
 
+## S: Get code hints while writing scripts
+Copy the code and delete it after finish the script
+```
+import cn.hutool.http.HttpUtil
+
+def request = HttpUtil.createGet("shouldremove")
+def response = request.execute()
+```
+
 ## S: API doc sync
 
 When you modify your method, the API returned from the APIs list is the API saved before you update it. At this time, if you want to ensure that the online API document is your modified one,
@@ -65,6 +78,9 @@ Recommendation: There is no need to create a repo in Github, Gitee, and Gitlab i
 For the saved API, you modify it again, and you need manually fill in the parameters and save <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> it. If you don't want the parameters you saved before at all, you can just click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([Re generate](/guide/features/regenerate.md)).
 
 > Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
+
+# Best Visual Effects
+Adjust tool window width to `610`+ pixel and will achieve the best visual effect
 
 ## Q: Tab not displayed in SearchEveryWhere under new UI
 **A:** Change the theme of IDEA to`Dark`. Steps：`Open SearchEveryWhere -> Fill in 'theme' -> Enter or confirm and switch the theme to Dark`. This is a bug caused by the IDEA theme.

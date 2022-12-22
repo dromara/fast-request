@@ -1,5 +1,5 @@
 ---
-title: 最新变化
+title: 历史变更
 icon: whats-new
 ---
 
@@ -20,7 +20,14 @@ icon: whats-new
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## 2023.1.1 <Badge text="免费试用" type="tip"/>  <Badge text="开发中" color="LigntPink"/>
+- <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
+- <Badge text="项目级别域名配置" type="tip"/>
+- <Badge text="图标排版" type="info"/>
+- <Badge text="新UI工具窗口图标" type="info"/>
+- <Badge text="基础类型Swagger默认值解析" type="danger"/>
+
+## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntBlue"/>
 - <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
 - <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
 - <Badge text="激活提示优化" type="info"/>

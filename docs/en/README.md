@@ -24,7 +24,7 @@ features:
   - title: Rich features
     icon: features
     details: Generate url and parameters、Script support、API export to postman、SearchEveryWhere support、send/download request、Store request...
-    link: /en/guide/feature.html
+    link: /en/guide/features
 
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
@@ -39,7 +39,7 @@ head:
       content: Restful Fast Request,idea plugin,a postman-like restful api toolkit plugin based on IDEA,Can help you quickly generate url and params according to existing methods,An API debugging tool + API management tool.Support springmvc、springboot、java-rs
 ---
 
-<div style="height:130px"></div>
+<div style="height:230px"></div>
 
 [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
@@ -58,12 +58,13 @@ head:
 ## 🥇 Features
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Make icon move](./guide/features/makeIconMove.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./guide/features/searchEveryWhere.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./guide/features/projectLevelDomainConfig.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config](./guide/features/projectValueConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method](./guide/features/navigateCurrentMethod.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./guide/features/searchEveryWhere.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> Debug API & send request](./guide/features/debugApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> Download file](./guide/features/downloadApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> Stop API request](./guide/features/stopRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method](./guide/features/navigateCurrentMethod.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> Save request](./guide/features/saveRequest.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API group](./guide/features/apiGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> Temporary request](./guide/features/tempRequest.md)

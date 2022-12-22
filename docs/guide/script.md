@@ -145,6 +145,15 @@ if(StringUtils.isNotBlank(debug)){
 }
 ```
 
+## 作用范围与顺序
+分为`项目级别`和`单API级别`，项目全局作用需要点击 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./features/projectValueConfig.md) 进行配置
+
+项目级别将作用项目中所有的API，单API级别只作用于单个API。
+
+执行顺序：`项目级别`->`单API级别`
+
+![scriptScope](/img/script.png)
+
 ## Console <Badge text="2022.2.5" type="tip"/>
 
 Console 帮助开发者打印一些你想要的信息

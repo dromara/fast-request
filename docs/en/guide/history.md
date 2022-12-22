@@ -1,5 +1,5 @@
 ---
-title: History changes
+title: What's New
 icon: changelog
 ---
 
@@ -15,6 +15,30 @@ For both new and existing customers, we are extending the maximum permissible re
 ::: right
 2022-11-15 Kings
 
+:::
+
+## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="developing" color="LightPink"/>
+- <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
+- <Badge text="Add project-level domain config" type="tip"/>
+- <Badge text="Icon alignment" type="info"/>
+- <Badge text="Tool window icon in new UI" type="info"/>
+- <Badge text="Swagger default value for basic type" type="danger"/>
+
+::: tip Project-level domain config
+Supports fast config domain directly from the `yml` or `properties` file，for more detail, please see [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./features/projectLevelDomainConfig.md)
+
+![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig_en.png "Domain config")
+
+![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog_en.png "Domain list")
+
+:::
+
+::: info Icon alignment
+The buttons have been categorised to make it easier for developers to find and understand the function of the corresponding button.
+:::
+
+::: info Tool window icon in new UI
+The clarity of the tool window icons has been optimised under the new UI.
 :::
 
 ## v2022.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>

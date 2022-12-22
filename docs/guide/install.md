@@ -7,6 +7,9 @@ title: 安装
 请不要安装其他类似插件，引起冲突或者数据丢失概不负责！
 :::
 
+点击安装
+<iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
+
 ## 在线安装(推荐)
 
 IDEA 插件市场搜索 Restful Fast Request 并安装

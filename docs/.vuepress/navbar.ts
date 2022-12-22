@@ -70,7 +70,7 @@ export const zhNavbar = navbar([
     icon: "bilibili",
   },
   {
-    text: "🔥 加入群聊",
+    text: "🔥 群聊",
     link: "/guide/concatGroup",
   },
   {
@@ -86,7 +86,7 @@ export const zhNavbar = navbar([
   //     link: "/guide/activity",
   //   },
   {
-    text: "友情链接",
+    text: "友链",
     link: "/guide/link",
   },
 ]);

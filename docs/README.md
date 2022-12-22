@@ -24,7 +24,7 @@ features:
   - title: 功能丰富
     icon: features
     details: 一键生成 URL 和参数、脚本、API 导出到 Postman、SearchEveryWhere 搜索、发送 API 请求、下载文件、存储历史请求，各种功能一应俱全
-    link: /guide/feature.html
+    link: /guide/features
 
   - title: 轻量、界面友好
     icon: code-box-fill
@@ -39,7 +39,7 @@ head:
       content: Restful Fast Request 一个基于 IDEA 的类似 postman 的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params，一个API调试工具+API管理工具，支持 springmvc、springboot、java-rs
 ---
 
-<div style="height:130px"></div>
+<div style="height:230px"></div>
 
 [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
@@ -72,12 +72,13 @@ head:
 ## 🥇 功能
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./guide/features/makeIconMove.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目域名配置](./guide/features/projectLevelDomainConfig.md)
+- - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./guide/features/projectValueConfig.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./guide/features/searchEveryWhere.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./guide/features/projectValueConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> 当前方法定位](./guide/features/navigateCurrentMethod.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> 调试 API 发送请求](./guide/features/debugApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> 下载文件](./guide/features/downloadApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> 终止 API 请求功能](./guide/features/stopRequest.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> 当前方法定位](./guide/features/navigateCurrentMethod.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> 保存请求](./guide/features/saveRequest.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API 分组](./guide/features/apiGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> 临时请求](./guide/features/tempRequest.md)

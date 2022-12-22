@@ -1,5 +1,5 @@
 ---
-title: What's new
+title: History changes
 icon: whats-new
 ---
 
@@ -17,6 +17,14 @@ For both new and existing customers, we are extending the maximum permissible re
 :::
 
 [**More detail ---------------->**](./history.md)
+
+## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="developing" color="Lightpink"/>
+- <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
+- <Badge text="Add project-level domain config" type="tip"/>
+- <Badge text="Icon alignment" type="info"/>
+- <Badge text="Tool window icon in new UI" type="info"/>
+- <Badge text="Swagger default value for basic type" type="danger"/>
+
 
 ## v2022.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Add @parseIgnore comment support for parse" type="tip"/>

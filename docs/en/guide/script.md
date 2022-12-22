@@ -144,6 +144,15 @@ if(StringUtils.isNotBlank(debug)){
 }
 ```
 
+## Scope and order
+**Scope**: `Project-level` and `Single API level`，`Project-level` needs to click [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config](./features/projectValueConfig.md).
+
+`Project-level` will effort all APIs in the project, and `Single API level` only affects one API.
+
+Execute order：`Project-level`->`Single API level`
+
+![scriptScope](/img/script_en.png)
+
 ## Console <Badge text="2022.2.5" type="tip"/>
 
 The console helps developers print some info you want.

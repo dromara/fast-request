@@ -23,7 +23,7 @@ op5->op6->e
 
 ::: tip How to
 
-- Step1: Click Manager config then add project name[example:wx card] and env[example:local、dev]
+- Step1: Click Manager config then add project name[example:wx card] and env[example:local、dev], if plugin version >= **2023.1.1**, please refer to [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](../features/projectLevelDomainConfig.md), combine configuration files to quickly add domain configuration
 - Step2: set target domain
 - Step3: open toolwindow(at the top-right corner),select project and env
 - Step4: click <FontIcon icon="restfulFastRequest" />(fastRequest icon) on method left(Old icon<FontIcon icon="restfulFastRequest1" />)

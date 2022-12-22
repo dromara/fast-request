@@ -9,6 +9,9 @@ icon: faq
 > 我们将持续更新开发者遇到的问题以及解决方案 
 
 [[toc]]
+## S: 快捷添加域名
+请参考 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目级别域名配置](./features/projectLevelDomainConfig.md)
+(插件版本>=**2023.1.1**)
 
 ## S: Url 错误
 
@@ -52,6 +55,15 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 
 参考[临时请求](./features/tempRequest.md)
 
+## S: 写脚本时得到提示
+复制一下代码，完成脚本编辑后删除
+```
+import cn.hutool.http.HttpUtil
+
+def request = HttpUtil.createGet("shouldremove")
+def response = request.execute()
+```
+
 ## S: API文档同步
 
 当你修改了你的接口参数，从APIs列表双击回来的api是你未更新前保存的API，此时你想保证在线API文档是你修改后的，
@@ -64,6 +76,9 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 针对保存后的api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([重新生成](/guide/features/regenerate.md))
 
 > 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
+
+# 最佳视觉效果
+调整工具窗口宽度至`610`+像素，达到最佳视觉效果
 
 ## Q: 新UI下SearchEveryWhere中Tab无法显示
 
