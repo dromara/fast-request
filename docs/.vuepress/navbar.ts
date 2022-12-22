@@ -17,7 +17,7 @@ export const enNavbar = navbar([
     icon: "code-box-fill",
   },
   {
-    text: "History changes",
+    text: "What's New",
     link: "/en/guide/history",
     icon: "changelog",
   },
@@ -55,7 +55,7 @@ export const zhNavbar = navbar([
     icon: "code-box-fill",
   },
   {
-    text: "历史变更",
+    text: "最新变化",
     link: "/guide/history",
     icon: "changelog",
   },
