@@ -6,7 +6,7 @@ heroImageDark: /img/logoDark.gif
 heroText: false
 tagline: Born to simplify debugging APIs
 actions:
-  - text: Get Started
+  - text: 🚀 Get Started
     link: /en/guide/getstarted/start
     type: primary
 
