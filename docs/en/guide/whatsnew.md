@@ -3,17 +3,24 @@ title: History changes
 icon: whats-new
 ---
 
-::: danger Increased Subscription Pricing for Plugin
-Since the introduction of subscriptions, we have not increased the pricing of the plugin. During this time, we are constantly developing new features; so far, we have had 19 versions, adding many very useful features, for example, API doc sync, and it is a very cost-effective plugin. We also lower the cost of subscriptions by up to 40% when you renew. It is our way of thanking you for your loyalty.
+::: tip Announcement
+**2022.1.4+** is free trial version, you will have a 30 days free trial, if you want to compare the difference from free and paid version, you can see the release log from 2022.1.4
 
-However, we are at the point where we need to increase our subscription prices. The new prices will come into effect on ==January 1, 2023==. It will be adjusted from **$1/month** to **$1.9/month** for individual use and from **$2/month** to **$2.9/month** for organization use, and the annual subscription price will be 10 times the monthly subscription price (10 months).
+[**Buy plugin**](./buy.md)
 
-> Prepay at the current price for more than one year
+Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
-For both new and existing customers, we are extending the maximum permissible renewal period, and you can go to [License page](https://account.jetbrains.com/licenses) to renew your subscription. There are now three years for individual subscriptions and two years for business subscriptions. While this will require an upfront payment, it will allow you to renew at the current price for more than one year ==in advance==.
+| [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) | [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![twitter](/img/twitter.png)                                                                                                                      | ![telegram](/img/telegram.png)                                                                                                                                |
 
-::: right
-2022-11-15 Kings
+Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
+
+---
+
+feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
+
+Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
 [**More detail ---------------->**](./history.md)
