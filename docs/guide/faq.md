@@ -31,6 +31,16 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 
 方式2： 给字段增加 `static` 修饰符
 
+方式3：注释上加@parseIgnore
+
+```java
+/**
+ * xxx description
+ * @parseIgnore
+ */
+private String someIgnoreField ;
+```
+
 ## S: 快速定位
 
 获取到窗口或者弹出框焦点以后，输入需要搜索的字母，快读定位，然后使用`↑`箭头或者`↓`箭头进行跳跃定位
@@ -77,8 +87,11 @@ def response = request.execute()
 
 > 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
 
-# 最佳视觉效果
+# S: 最佳视觉效果
 调整工具窗口宽度至`610`+像素，达到最佳视觉效果
+
+## Q: 生成参数、跳转错乱
+**A:** controller代码里面不要出现方法名一样的方法
 
 ## Q: 新UI下SearchEveryWhere中Tab无法显示
 

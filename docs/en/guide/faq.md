@@ -33,6 +33,15 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 
 Way 2: Add the `static` modifier to the field.
 
+Way 3: Add `@parseIgnore` in comment
+```java
+/**
+ * xxx description
+ * @parseIgnore
+ */
+private String someIgnoreField ;
+```
+
 ## S: Quick locate
 
 After getting the focus of the window or pop-up box, enter the letters to position, then use the `↑` arrow or the `↓` arrow for jump position
@@ -79,8 +88,11 @@ For the saved API, you modify it again, and you need manually fill in the parame
 
 > Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
 
-# Best Visual Effects
+# S: Best Visual Effects
 Adjust tool window width to `610`+ pixel and will achieve the best visual effect
+
+## Q: Generate parameters、jump error
+**A:** Do not have methods with the same method name in the controller code
 
 ## Q: Tab not displayed in SearchEveryWhere under new UI
 **A:** Change the theme of IDEA to`Dark`. Steps：`Open SearchEveryWhere -> Fill in 'theme' -> Enter or confirm and switch the theme to Dark`. This is a bug caused by the IDEA theme.
