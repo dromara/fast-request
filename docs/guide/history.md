@@ -28,6 +28,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="项目级别域名配置" type="tip"/>
 - <Badge text="图标排版" type="info"/>
 - <Badge text="新UI工具窗口图标" type="info"/>
+- <Badge text="项目级别头参数可选" type="info"/>  
 - <Badge text="基础类型Swagger默认值解析" type="danger"/>
 
 ::: tip 项目级别域名配置

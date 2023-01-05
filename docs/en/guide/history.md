@@ -28,6 +28,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Add project-level domain config" type="tip"/>
 - <Badge text="Icon alignment" type="info"/>
 - <Badge text="Tool window icon in new UI" type="info"/>
+- <Badge text="Make Project-level headers value optional" type="info"/>
 - <Badge text="Swagger default value for basic type" type="danger"/>
 
 ::: tip Project-level domain config
