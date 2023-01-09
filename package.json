@@ -8,7 +8,7 @@
     "docs:build": "vuepress build docs",
     "docs:lint": "prettier --check --write docs/",
     "docs:clean-dev": "vuepress dev docs --no-cache",
-    "docs:package-update": "pnpm add @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/utils@next vuepress@next vuepress-theme-hope@next vue@latest"
+    "docs:package-update": "pnpm add @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/utils@next vuepress@next vuepress-theme-hope@next vue@latest && pnpm up"
   },
   "dependencies": {
     "@vuepress/client": "2.0.0-beta.60",
