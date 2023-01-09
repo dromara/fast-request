@@ -1,6 +1,8 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const enSidebar = sidebar({
+  "/en/": false,
+
   "/en/guide/": [
     "introduce",
     {
@@ -75,6 +77,8 @@ export const enSidebar = sidebar({
 });
 
 export const zhSidebar = sidebar({
+  "/en/": false,
+
   "/guide/": [
     "introduce",
     {

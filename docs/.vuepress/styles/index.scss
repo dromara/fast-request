@@ -1,3 +1,5 @@
+@use "@sass-palette/hope-config";
+
 @font-face {
   font-family: bobohei;
   src: url("/fast-request/font/BOBOHEI-2.otf");
@@ -8,6 +10,15 @@ h2 {
   font-family: bobohei, sans-serif;
 }
 
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+// home page
 .home.project {
   top: 0;
 
@@ -23,7 +34,7 @@ h2 {
     background: url("/img/bg1.svg") no-repeat;
   }
 
-  .hero {
+  .hero-info-wrapper {
     display: block;
     max-width: 100%;
     height: 90vh;
@@ -54,14 +65,18 @@ h2 {
     }
   }
 
-  .features {
+  .feature-wrapper {
     max-width: 100%;
     margin: 0;
     padding: 0 5rem;
     border-top: none;
   }
 
-  .feature {
+  .feature-item {
+    &:hover {
+      background-color: transparent;
+    }
+
     h2 {
       font-family: bobohei, sans-serif;
     }
@@ -76,19 +91,16 @@ h2 {
   }
 }
 
-.theme-hope-content.custom {
+#{hope-config.$content-class}.custom {
   padding: 0 5rem;
 }
 
-.navbar .site-name {
-  //   display: none;
-  color: #fff;
-}
-
-.breadcrumb a {
-  font-family: bobohei, sans-serif;
-}
+// navbar
 .navbar {
+  .site-name {
+    color: #fff;
+  }
+
   .site-name {
     font-family: bobohei, sans-serif;
   }
@@ -98,10 +110,7 @@ h2 {
   }
 }
 
-.svg-icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
+// breadcrumb
+.breadcrumb a {
+  font-family: bobohei, sans-serif;
 }

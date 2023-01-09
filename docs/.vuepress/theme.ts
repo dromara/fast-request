@@ -1,7 +1,9 @@
-import { resolve } from "node:path";
+import { getDirname, path } from "@vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar.js";
 import { enSidebar, zhSidebar } from "./sidebar.js";
+
+const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
   logo: "/img/logo/logo.svg",
@@ -23,12 +25,14 @@ export default hopeTheme({
     blue: "#087cfa",
     red: "#fe2857",
   },
+
+  iconAssets: "//at.alicdn.com/t/c/font_2601581_bwh3hrhwv7e.css",
   iconPrefix: "iconfont icon-",
 
   locales: {
     "/": {
       footer:
-        "Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/zh/'>vuepress-theme-hope</a>",
+        "主题使用 <a target='blank' href='https://theme-hope.vuejs.press/zh/'>vuepress-theme-hope</a>",
 
       navbar: zhNavbar,
       sidebar: zhSidebar,
@@ -38,7 +42,7 @@ export default hopeTheme({
       navbar: enNavbar,
       sidebar: enSidebar,
       footer:
-        "Theme by <a target='blank' href='https://vuepress-theme-hope.github.io/v2/'>vuepress-theme-hope</a>",
+        "Theme by <a target='blank' href='https://theme-hope.vuejs.press/'>vuepress-theme-hope</a>",
     },
   },
 
@@ -51,7 +55,9 @@ export default hopeTheme({
       categoryId: "DIC_kwDOHLlUss4COlsW",
     },
 
-    components: ["Badge", "BiliBili"],
+    components: {
+      components: ["Badge", "BiliBili"],
+    },
 
     mdEnhance: {
       align: true,
@@ -59,16 +65,16 @@ export default hopeTheme({
       codetabs: true,
       container: true,
       flowchart: true,
-      imageTitle: true,
+      figure: true,
+      imgLazyload: true,
+      // FIXME: Upstream bug
+      // @ts-ignore
       include: {
-        getPath: (file) => {
-          if (file.startsWith("@src"))
-            return file.replace("@src", resolve(__dirname, ".."));
-
-          return file;
-        },
+        resolvePath: (file) =>
+          file.startsWith("@src")
+            ? file.replace("@src", path.resolve(__dirname, ".."))
+            : file,
       },
-      imageLazyload: true,
       mark: true,
       tasklist: true,
     },
