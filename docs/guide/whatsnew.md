@@ -32,6 +32,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="新UI工具窗口图标" type="info"/>
 - <Badge text="项目级别头参数可选" type="info"/>  
 - <Badge text="基础类型Swagger默认值解析" type="danger"/>
+- <Badge text="数组不解析" type="danger"/>
 
 ## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntBlue"/>
 - <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>

@@ -30,6 +30,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Tool window icon in new UI" type="info"/>
 - <Badge text="Make Project-level headers value optional" type="info"/>
 - <Badge text="Swagger default value for basic type" type="danger"/>
+- <Badge text="Array not parse" type="danger"/>
 
 ::: tip Project-level domain config
 Supports fast config domain directly from the `yml` or `properties` file，for more detail, please see [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./features/projectLevelDomainConfig.md)
