@@ -1,5 +1,8 @@
 # Notes
 
+## 升级
+rm -rf ./node_modules && pnpm add @vuepress/client@next vue vuepress@next vuepress-theme-hope@next && pnpm i && pnpm up
+
 ## 预览文档
 
 ```sh

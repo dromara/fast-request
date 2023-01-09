@@ -197,7 +197,7 @@ head:
 
 :::
 
-@include(@src/contact.snippet.md)
+@include(./contact.snippet.md)
 
 <div style="height:30px"></div>
 
