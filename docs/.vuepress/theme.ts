@@ -56,6 +56,38 @@ export default hopeTheme({
 
     components: {
       components: ["Badge", "BiliBili"],
+      rootComponents: {
+          notice: [
+            {
+              path: "/en",
+              title: "Next version: 2023.1.1",
+              content: "<b>Pretty point</b>: Add configuration file domain recognize",
+              actions: [
+                {
+                  text: "View",
+                  link: "/en/guide/history.html",
+                  type: "primary",
+                }
+              ],
+              showOnce: true,
+              key:"2023.1.1"
+            },
+            {
+              path: "/",
+              title: "下个版本: 2023.1.1",
+              content: "<b>靓点</b>：新增配置文件域名识别",
+              actions: [
+                {
+                  text: "查看",
+                  link: "/guide/history.html",
+                  type: "primary",
+                }
+              ],
+              showOnce: true,
+              key:"2023.1.1"
+            },
+          ],
+        },
     },
 
     mdEnhance: {
