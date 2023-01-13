@@ -55,7 +55,7 @@ export default hopeTheme({
     },
 
     components: {
-      components: ["Badge", "BiliBili"],
+      components: ["Badge", "BiliBili", "SiteInfo"],
       rootComponents: {
           notice: [
             {
