@@ -91,6 +91,10 @@ docsDromara:
    logo: https://pic.jiagoujishu.com/cubic-icon.svg
    url: https://cubic.jiagoujishu.com/
    preview: /img/link/preview/cubic.png
+ - name: Easy-Trans
+   desc: 一个注解搞定数据翻译,减少30%SQL代码量
+   url: http://easy-trans.fhs-opensource.top/
+   preview: /img/link/preview/easy-trans.png
 ---
 
 ## 网站主题
