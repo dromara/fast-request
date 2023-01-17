@@ -104,6 +104,8 @@ def response = request.execute()
 
 **A:** 打开配置 `setting->Editor->Gutter icons->show gutter icon`
 
+**B:** 检查是否安装了forestx插件，该插件目前会引起Fast Request插件图标不展示
+
 ## Q: 输入参数后调用 API 发现无效
 
 **A:** 插件版本小于2022.2.3的在 table 控件编辑某个值的时候，需要在编辑完值后==先在空白处点一下==，再发送请求，该问题在 2022.2.3+版本得到修复
