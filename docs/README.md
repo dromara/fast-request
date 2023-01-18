@@ -214,7 +214,7 @@ head:
 
 :::
 
-<div style="height:30px"></div>
+
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA
