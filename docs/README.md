@@ -73,7 +73,7 @@ head:
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./guide/features/makeIconMove.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目域名配置](./guide/features/projectLevelDomainConfig.md)
-- - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./guide/features/projectValueConfig.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./guide/features/projectValueConfig.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./guide/features/searchEveryWhere.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> 调试 API 发送请求](./guide/features/debugApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> 下载文件](./guide/features/downloadApi.md)
