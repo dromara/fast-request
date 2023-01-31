@@ -25,7 +25,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="developing" color="Lightpink"/>
+## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="Lightpink"/>
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>
 - <Badge text="Icon alignment" type="info"/>
@@ -36,7 +36,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Array not parse" type="danger"/>
 
 
-## v2022.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2022.3.1 <Badge text="Free trial" type="tip"/>
 - <Badge text="Add @parseIgnore comment support for parse" type="tip"/>
 - <Badge text="Add rfr.currentDomain in Script" type="tip"/>
 - <Badge text="Activation prompt optimization" type="info"/>

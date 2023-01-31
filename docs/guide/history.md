@@ -23,7 +23,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## 2023.1.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LightPink"/>
+## 2023.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LightPink"/>
 - <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
 - <Badge text="项目级别域名配置" type="tip"/>
 - <Badge text="图标排版" type="info"/>
@@ -49,7 +49,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 新UI下工具窗口图标清晰度进行了优化。
 :::
 
-## 2022.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LightGreen"/>
+## 2022.3.1 <Badge text="免费试用" type="tip"/>
 - <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
 - <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
 - <Badge text="激活提示优化" type="info"/>

@@ -23,7 +23,7 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="developing" color="LightPink"/>
+## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightPink"/>
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>
 - <Badge text="Icon alignment" type="info"/>
@@ -50,7 +50,7 @@ The buttons have been categorised to make it easier for developers to find and u
 The clarity of the tool window icons has been optimised under the new UI.
 :::
 
-## v2022.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2022.3.1 <Badge text="Free trial" type="tip"/>
 - <Badge text="Add @parseIgnore comment support for parse" type="tip"/>
 - <Badge text="Add rfr.currentDomain in Script" type="tip"/>
 - <Badge text="Activation prompt optimization" type="info"/>
