@@ -95,9 +95,19 @@ docsDromara:
    desc: 一个注解搞定数据翻译,减少30%SQL代码量
    url: http://easy-trans.fhs-opensource.top/
    preview: /img/link/preview/easy-trans.png
+lowCode:
+ - name: Snowy Admin
+   desc: 国内首个国密前后分离快速开发平台
+   url: https://www.xiaonuo.vip/
+   preview: /img/link/preview/xiaonuo.png
+tool:
+ - name: Stream-Query
+   desc: 封装 热门orm常用操作 封装 使用stream进行数据返回处理
+   url: https://vampireachao.gitee.io/stream-query-docs/#/
+   preview: /img/link/preview/stream-query.png
 ---
 
-## 网站主题
+## 网站主题及logo
 
 
 <SiteInfo
@@ -108,6 +118,11 @@ docsDromara:
    preview="/img/link/preview/hope.png"
 />
 
+Restful Fast Request 首页的 logo 及背景由 **森阳** 提供，感谢她的创作，如果要插画和 logo 商业化合作小伙伴可以找她
+```
+邮件：sssenyang@qq.com | 微信：ArtSenyang
+```
+
 ## Dromara 组织成员项目
 
 <SiteInfo
@@ -116,40 +131,44 @@ v-for="item in $frontmatter.docsDromara"
 v-bind="item"
 />
 
-<div>
-    <a href="https://dromara.gitee.io/fast-request/" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/fastRequest.gif')" title="Idea版postman神器">
-    </a>
-    <a href="https://gitee.com/dromara/Raincat" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/raincat-logo.png')" title="强一致性分布式事务解决方案。">
-    </a>
-    <a href="https://gitee.com/dromara/myth" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/myth-logo.png')" title="可靠消息分布式事务解决方案。">
-    </a>
-    <a href="https://gitee.com/dromara/koalas-rpc" target="_blank" style="width:30%;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/koalas-logo.png')" title="企业生产级百亿日PV高可用可拓展的RPC框架。">
-    </a>
-    <a href="https://gitee.com/dromara/hmily" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/hmily-logo.png')" title="高性能一站式分布式事务解决方案。">
-    </a>
-</div>
+[comment]: <> (<div>)
 
-## 其他
+[comment]: <> (    <a href="https://gitee.com/dromara/Raincat" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">)
 
-Restful Fast Request 首页的 logo 及背景由 **森阳** 提供，感谢她的创作，如果要插画和 logo 商业化合作小伙伴可以找她
+[comment]: <> (        <img style="height:40px;" :src="$withBase&#40;'/img/link/raincat-logo.png'&#41;" title="强一致性分布式事务解决方案。">)
 
-```
-邮件：sssenyang@qq.com | 微信：ArtSenyang
-```
+[comment]: <> (    </a>)
 
-<div>
-    <a href="https://gitee.com/" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/gitee-logo.png')" >
-    </a>
-    <a href="https://www.oschina.net/" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/oschina-logo.png')" >
-    </a>
-    <a href="https://www.xiaonuo.vip/" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">
-        <img style="height:40px;" :src="$withBase('/img/link/snowy.png')" title="国内首个国密前后分离快速开发平台">
-    </a>
-</div>
+[comment]: <> (    <a href="https://gitee.com/dromara/myth" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">)
+
+[comment]: <> (        <img style="height:40px;" :src="$withBase&#40;'/img/link/myth-logo.png'&#41;" title="可靠消息分布式事务解决方案。">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (    <a href="https://gitee.com/dromara/koalas-rpc" target="_blank" style="width:30%;  padding:10px 5px 10px 5px;display:inline-block">)
+
+[comment]: <> (        <img style="height:40px;" :src="$withBase&#40;'/img/link/koalas-logo.png'&#41;" title="企业生产级百亿日PV高可用可拓展的RPC框架。">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (    <a href="https://gitee.com/dromara/hmily" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">)
+
+[comment]: <> (        <img style="height:40px;" :src="$withBase&#40;'/img/link/hmily-logo.png'&#41;" title="高性能一站式分布式事务解决方案。">)
+
+[comment]: <> (    </a>)
+
+[comment]: <> (</div>)
+
+## 低代码
+<SiteInfo
+   v-for="item in $frontmatter.lowCode"
+   :key="item.link"
+   v-bind="item"
+/>
+
+## 工具
+<SiteInfo
+v-for="item in $frontmatter.tool"
+:key="item.link"
+v-bind="item"
+/>
