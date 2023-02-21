@@ -98,8 +98,6 @@ export default hopeTheme({
       flowchart: true,
       figure: true,
       imgLazyload: true,
-      // FIXME: Upstream bug
-      // @ts-ignore
       include: {
         resolvePath: (file) =>
           file.startsWith("@src")

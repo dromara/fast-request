@@ -14,16 +14,16 @@
     "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/plugin-docsearch": "2.0.0-beta.60",
     "@vuepress/utils": "2.0.0-beta.60",
-    "vue": "3.2.45",
+    "vue": "3.2.47",
     "vuepress": "2.0.0-beta.60",
-    "vuepress-theme-hope": "2.0.0-beta.156",
+    "vuepress-theme-hope": "2.0.0-beta.178",
     "vuepress-vite": "2.0.0-beta.60"
   },
   "devDependencies": {
-    "prettier": "2.8.2",
-    "vuepress-plugin-components": "2.0.0-beta.156"
+    "prettier": "2.8.4",
+    "vuepress-plugin-components": "2.0.0-beta.178"
   },
-  "packageManager": "pnpm@7.23.0",
+  "packageManager": "pnpm@7.27.1",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
