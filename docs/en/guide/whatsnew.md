@@ -25,6 +25,17 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+- <Badge text="Image render from response" type="tip"/>
+- <Badge text="Annual report" type="tip"/>
+- <Badge text="Url parse logic" type="info"/>
+- <Badge text="cUrl Import" type="info"/>
+- <Badge text="Url special character parameter encoding" type="info"/>
+- <Badge text="Add send request trigger to url field" type="info"/>
+- <Badge text="Remove title of window" type="info"/>
+- <Badge text="Patch request error in jdk11+" type="danger"/>
+
+
 ## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="Lightpink"/>
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>

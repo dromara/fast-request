@@ -23,6 +23,59 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+- <Badge text="Image render from response" type="tip"/>
+- <Badge text="Annual report" type="tip"/>
+- <Badge text="Url parse logic" type="info"/>
+- <Badge text="cUrl Import" type="info"/>
+- <Badge text="Url special character parameter encoding" type="info"/>
+- <Badge text="Add send request trigger to url field" type="info"/>
+- <Badge text="Remove title of window" type="info"/>
+- <Badge text="Patch request error in jdk11+" type="danger"/>
+
+::: tip Image render from response
+Automatically render images for requests that respond to image.
+
+![imageRender](/img/2023.1.2/imageRender.png)
+:::
+
+::: tip Annual report
+Statistics for previous years of operation.
+
+![annualReport](/img/2023.1.2/annualReport_en.png)
+:::
+
+::: info Url parse logic
+Optimised the final result of url splicing against variables. For example, splicing several variables finally calculates a url
+
+Plugin will calculate final url to `/test/a.htm`
+```java
+public class MyConstant {
+  public static final String MODULE_NAME = "a";
+  public static final String DYNAMIC_WEB_SUFFIX = ".htm";
+  public static final String REPAYMENT_REPAY = MODULE_NAME + DYNAMIC_WEB_SUFFIX;
+}
+@PostMapping(MyConstant.REPAYMENT_REPAY)
+  public String test2() {
+  return "";
+}
+```
+:::
+
+::: info cUrl import
+1. automatic parsing of query param into `Url params` tab page
+2. json parsing optimization
+3. Known bug fixes
+   :::
+
+::: info Url special character parameter encoding
+We have done some optimization, no longer need to encode special characters in url params.
+:::
+
+::: info Add send request trigger to url field
+Add `Enter` key listener to url field that can send the request. 
+:::
+
 ## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightPink"/>
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>

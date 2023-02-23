@@ -96,7 +96,7 @@ export default hopeTheme({
       codetabs: true,
       container: true,
       flowchart: true,
-      figure: true,
+//       figure: true,
       imgLazyload: true,
       include: {
         resolvePath: (file) =>

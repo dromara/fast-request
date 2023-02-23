@@ -33,7 +33,7 @@ features:
 head:
   - - meta
     - name: keywords
-      content: Restful Fast Request,RestfulFastRequest,Best Rest Client,Fast Request,fast request,fast request官网,Postman,idea插件,http client,Restful API,Restful,API
+      content: Restful Fast Request,RestfulFastRequest,Best Rest Client,Fast Request,fast request,fast request官网,Postman,restful toolkit,idea插件,http client,Restful API,Restful,API
   - - meta
     - name: description
       content: Restful Fast Request 一个基于 IDEA 的类似 postman 的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params，一个API调试工具+API管理工具，支持 springmvc、springboot、java-rs
@@ -120,36 +120,6 @@ head:
 
 感谢 OSCHINA 和 Gitee 官方平台对**RFR**项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC 年度最受欢迎个人项目" <span class="badge tip" style="vertical-align: middle;">Top 15</span> 殊荣。
 
-<div style="height:100px"></div>
-
-::: chart Fast Request 功能玫瑰图
-
-```json
-{
-  "type": "polarArea",
-  "data": {
-    "labels": ["易用性", "Swagger", "Java", "Kotlin", "压测", "集成"],
-    "datasets": [
-      {
-        "label": "Restful Fast Request",
-        "data": [95, 90, 90, 70, 40, 60],
-        "backgroundColor": [
-          "rgb(255, 99, 132)",
-          "rgb(75, 192, 192)",
-          "rgb(255, 182, 193)",
-          "rgb(255, 215, 0)",
-          "rgb(54, 162, 235)",
-          "rgb(0, 250, 154)"
-        ]
-      }
-    ]
-  }
-}
-```
-
-:::
-
----
 
 <div style="height:100px"></div>
 
@@ -194,7 +164,6 @@ head:
   }
 }
 ```
-
 :::
 
 @include(./contact.snippet.md)
@@ -205,12 +174,12 @@ head:
 
 请确保你的 IDEA 版本 版本 >= 2020.3+
 
-| 插件版本    | IDEA 版本要求 |
-| ----------- | ------------- |
-| 2.0.0~2.1.3 | 2020.3+       |
-| 2022.1.4+   | 2021.2+       |
+| 插件版本     | IDEA 版本要求   |免费/收费|
+| ----------- | ------------- |--------|
+| 2022.0.2    | 2020.3+       |免费|
+| 2022.1.4+   | 2021.2+       |收费|
 
-当然请如果插件有更新，请确保更新成最新版本
+当然请如果插件有更新，请确保更新成[最新版本](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions)
 
 :::
 

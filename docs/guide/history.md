@@ -23,6 +23,59 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
+## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LigntGreen"/>
+- <Badge text="图片响应渲染" type="tip"/>
+- <Badge text="年度报告" type="tip"/>
+- <Badge text="Url解析逻辑" type="info"/>
+- <Badge text="cUrl导入" type="info"/>
+- <Badge text="Url特殊字符编码" type="info"/>
+- <Badge text="Url输入框回车事件" type="info"/>
+- <Badge text="移除窗口插件标题" type="info"/>
+- <Badge text="jdk11+的idea版本中Patch请求失败" type="danger"/>
+
+::: tip 图片响应渲染
+针对响应是图片的请求，自动渲染出图片
+
+![imageRender](/img/2023.1.2/imageRender.png)
+:::
+
+::: tip 年度报告
+统计了历年操作的数据，你是否要来**PK**一把。此处省略1个狗头
+![annualReport](/img/2023.1.2/annualReport.png)
+:::
+
+::: info Url解析逻辑
+优化了url针对变量拼接的最终结果，例如几个变量拼接最终计算出一个url。
+
+插件将最终计算出url=`/test/a.htm`
+```java
+public class MyConstant {
+  public static final String MODULE_NAME = "a";
+  public static final String DYNAMIC_WEB_SUFFIX = ".htm";
+  public static final String REPAYMENT_REPAY = MODULE_NAME + DYNAMIC_WEB_SUFFIX;
+}
+@PostMapping(MyConstant.REPAYMENT_REPAY)
+  public String test2() {
+  return "";
+}
+```
+:::
+
+::: info cUrl导入
+1. 自动解析query param进入`Url params` tab页
+2. json解析优化
+3. 已知bug修复
+:::
+
+::: info Url特殊字符编码
+针对带query param的url中的参数值待特殊字符进行了处理，不需要用户再额外进行特殊编码再传参
+:::
+
+::: info Url输入框回车事件
+url输入框点击回车，自动发送请求
+:::
+
+
 ## 2023.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LightPink"/>
 - <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
 - <Badge text="项目级别域名配置" type="tip"/>

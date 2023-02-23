@@ -33,7 +33,7 @@ features:
 head:
   - - meta
     - name: keywords
-      content: Restful Fast Request,RestfulFastRequest,Fast Request,Postman,Best Rest Client,idea plugin,http client,Restful API,IDEA plugin,Restful,API
+      content: Restful Fast Request,RestfulFastRequest,Fast Request,restful toolkit,Postman,Best Rest Client,idea plugin,http client,Restful API,IDEA plugin,Restful,API
   - - meta
     - name: description
       content: Restful Fast Request,idea plugin,a postman-like restful api toolkit plugin based on IDEA,Can help you quickly generate url and params according to existing methods,An API debugging tool + API management tool.Support springmvc、springboot、java-rs
@@ -100,42 +100,6 @@ head:
 
 <div style="height:30px"></div>
 
-::: chart Fast Request Functional Rose Diagram
-
-```json
-{
-  "type": "polarArea",
-  "data": {
-    "labels": [
-      "Usability",
-      "Swagger",
-      "Java",
-      "Kotlin",
-      "Pressure test",
-      "Integrations"
-    ],
-    "datasets": [
-      {
-        "label": "Restful Fast Request",
-        "data": [95, 90, 90, 70, 40, 60],
-        "backgroundColor": [
-          "rgb(255, 99, 132)",
-          "rgb(75, 192, 192)",
-          "rgb(255, 182, 193)",
-          "rgb(255, 215, 0)",
-          "rgb(54, 162, 235)",
-          "rgb(0, 250, 154)"
-        ]
-      }
-    ]
-  }
-}
-```
-
-:::
-
----
-
 ::: chart API tool comparison
 
 ```json
@@ -192,12 +156,12 @@ head:
 ::: tip Notice  
 Make sure your IDEA version >= 2020.3+
 
-| Plugin version | IDEA version requirements |
-| -------------- | ------------------------- |
-| 2.0.0~2.1.3    | 2020.3+                   |
-| 2022.1.4+      | 2021.2+                   |
+| Plugin version | IDEA version requirements |Paid/Free|
+| -------------- | ------------------------- |---|
+| 2022.0.2       | 2020.3+                   |Free|
+| 2022.1.4+      | 2021.2+                   |Paid|
 
-Of course, if there are any updates to the plugin, please make sure to update it to the latest version.
+Of course, if there are any updates to the plugin, please make sure to update it to the [latest version](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions).
 :::
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
