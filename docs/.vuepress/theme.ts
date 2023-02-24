@@ -60,11 +60,11 @@ export default hopeTheme({
           notice: [
             {
               path: "/en",
-              title: "Coming in 2023.1.2",
-              content: "<ul><li>Image render from response</li><li>Image render from response</li></ul>",
+              title: "Coming in <b>2023.1.2</b>",
+              content: "<ul><li>Image render from response</li><li>Annual report</li><li>cUrl optimization</li></ul>",
               actions: [
                 {
-                  text: "View",
+                  text: "Learn more→",
                   link: "/en/guide/history.html#_2023-1-2",
                   type: "primary",
                 }
@@ -74,11 +74,11 @@ export default hopeTheme({
             },
             {
               path: "/",
-              title: "将在新版本2023.1.2中推出",
-              content: "<ul><li>图片响应渲染</li><li>年度报告</li></ul>",
+              title: "将在新版本<b>2023.1.2</b>中推出",
+              content: "<ul><li>图片响应渲染</li><li>年度报告</li><li>cUrl优化</li></ul>",
               actions: [
                 {
-                  text: "查看",
+                  text: "了解详情→",
                   link: "/guide/history.html#_2023-1-2",
                   type: "primary",
                 }
