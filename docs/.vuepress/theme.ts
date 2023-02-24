@@ -60,12 +60,12 @@ export default hopeTheme({
           notice: [
             {
               path: "/en",
-              title: "Next version: 2023.1.1",
-              content: "<b>Pretty point</b>: Add configuration file domain recognize",
+              title: "Coming in 2023.1.2",
+              content: "<ul><li>Image render from response</li><li>Image render from response</li></ul>",
               actions: [
                 {
                   text: "View",
-                  link: "/en/guide/history.html",
+                  link: "/en/guide/history.html#_2023-1-2",
                   type: "primary",
                 }
               ],
@@ -74,12 +74,12 @@ export default hopeTheme({
             },
             {
               path: "/",
-              title: "下个版本: 2023.1.1",
-              content: "<b>靓点</b>：新增配置文件域名识别",
+              title: "将在新版本2023.1.2中推出",
+              content: "<ul><li>图片响应渲染</li><li>年度报告</li></ul>",
               actions: [
                 {
                   text: "查看",
-                  link: "/guide/history.html",
+                  link: "/guide/history.html#_2023-1-2",
                   type: "primary",
                 }
               ],
