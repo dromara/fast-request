@@ -57,11 +57,12 @@ export default hopeTheme({
     components: {
       components: ["Badge", "BiliBili", "SiteInfo"],
       rootComponents: {
+          addThis: "ra-617a48e0d1826cc4",
           notice: [
             {
               path: "/en",
               title: "Coming in <b>2023.1.2</b>",
-              content: "<ul><li>Image render from response</li><li>Annual report</li><li>cUrl optimization</li></ul>",
+              content: "<ul><li>Image render from response</li><li>Annual report</li><li>cUrl optimization</li></ul><div class=\"addthis_inline_follow_toolbox\"></div>",
               actions: [
                 {
                   text: "Learn more→",
@@ -70,12 +71,12 @@ export default hopeTheme({
                 }
               ],
               showOnce: true,
-              key:"2023.1.1"
+              key:"2023.1.2"
             },
             {
               path: "/",
               title: "将在新版本<b>2023.1.2</b>中推出",
-              content: "<ul><li>图片响应渲染</li><li>年度报告</li><li>cUrl优化</li></ul>",
+              content: "<ul><li>图片响应渲染</li><li>年度报告</li><li>cUrl优化</li></ul><div class=\"addthis_inline_follow_toolbox_qssu\"></div>",
               actions: [
                 {
                   text: "了解详情→",
@@ -84,7 +85,7 @@ export default hopeTheme({
                 }
               ],
               showOnce: true,
-              key:"2023.1.1"
+              key:"2023.1.2"
             },
           ],
         },
