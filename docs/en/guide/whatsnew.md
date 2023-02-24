@@ -6,6 +6,8 @@ icon: whats-new
 ::: tip Announcement
 **2022.1.4+** is free trial version, you will have a 30 days free trial, if you want to compare the difference from free and paid version, you can see the release log from 2022.1.4
 
+[**Paid vs Free->**](./versionCompare.md)
+
 [**Buy plugin**](./buy.md)
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓

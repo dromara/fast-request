@@ -1,71 +1,11 @@
 ---
-icon: restfulFastRequest
-home: true
-title: Restful Fast Request
-heroImageDark: /img/logoDark.gif
-heroText: false
-tagline: 为简化调试API而生
-actions:
-  - text: 🚀 快速上手
-    link: /guide/getstarted/start
-    type: primary
-
-features:
-  - title: 基于原生
-    icon: origin
-    details: 集成 IDEA 工具，在线离线均可使用，不再需要额外的诸如 Postman 等 API 调试工具
-    link: /guide/introduce.html
-
-  - title: 效率至上
-    icon: effective
-    details: 只需要简单配置即可生成方法的 API 请求，从而节省大量时间
-    link: /guide/getstarted/start.html
-
-  - title: 功能丰富
-    icon: features
-    details: 一键生成 URL 和参数、脚本、API 导出到 Postman、SearchEveryWhere 搜索、发送 API 请求、下载文件、存储历史请求，各种功能一应俱全
-    link: /guide/features
-
-  - title: 轻量、界面友好
-    icon: code-box-fill
-    details: 轻量，仅 16M 大小，并且提供一个非常直观的界面，好操作易上手
-
-head:
-  - - meta
-    - name: keywords
-      content: Restful Fast Request,RestfulFastRequest,Best Rest Client,Fast Request,fast request,fast request官网,Postman,restful toolkit,idea插件,http client,Restful API,Restful,API
-  - - meta
-    - name: description
-      content: Restful Fast Request 一个基于 IDEA 的类似 postman 的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params，一个API调试工具+API管理工具，支持 springmvc、springboot、java-rs
+icon: versionCompare
+title: 版本对比
 ---
 
-<div style="height:230px"></div>
+收费版本将推出更多**优秀**并且**人性化**的功能，欢迎大家使用！
 
-[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
-[![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
-[![](https://img.shields.io/static/v1?label=Gitee&message=fast-request&color=FF318C&logo=gitee)](https://gitee.com/dromara/fast-request)
-[![Jetbrains Plugins][plugin-img]][plugin]
-
-![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request)
-
-<div >
-  <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
-  <a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
-</div>
-
-<div style="height:30px"></div>
-
-## 🌈 赞助商
-
-[**1.赞助可以为您带来什么(必看)**](./guide/sponsor.md#优势)
-
-[2.成为赞助者](./guide/sponsor.md#我要赞助)
-
-<div style="height:10px"></div>
-
-## 🥇 功能
-
-<div style="display: flex;width:100%">
+<div style="display: flex;width:135%">
 <div class="hint-container tip" style="width:50%; background: rgb(118 92 175 / 33%);">
     <p class="hint-container-title">收费版</p>
     <b style="padding-left:1.2rem">深度优化的领先的智能API调试插件</b>
@@ -155,19 +95,19 @@ head:
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/fullScreen.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/commonHeader.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/htmlPreview.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/apiImportExport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-export"></use></svg> APIs 导入导出</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/batchExportApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> 批量导出 API 文档</a>
         </li>
@@ -193,7 +133,7 @@ head:
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/features.html" class="task-list-item-label" > 更多...</a>
+            <a href="/fast-request/features" class="task-list-item-label" > 更多...</a>
         </li>
     </ul>
 </div>
@@ -230,65 +170,3 @@ head:
     </ul>
 </div>
 </div>
-
-<div style="height:30px"></div>
-
-## 🎉 致谢
-
-**Restful Fast Request**简称**RFR**自从 2021 年上线以来获得了很多人的支持。目前微信社区群 1000 多人，下载超过 <img src="https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857" alt="Downloads" loading="lazy" style="vertical-align: middle;">，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
-
-感谢 OSCHINA 和 Gitee 官方平台对**RFR**项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC 年度最受欢迎个人项目" <span class="badge tip" style="vertical-align: middle;">Top 15</span> 殊荣。
-
-
-<div style="height:100px"></div>
-
-::: chart API 工具对比
-
-```json
-{
-  "type": "radar",
-  "data": {
-    "labels": ["易用性", "Swagger", "Java", "Kotlin", "压测", "集成"],
-    "datasets": [
-      {
-        "label": "Fast Request",
-        "data": [95, 90, 90, 70, 40, 60],
-        "fill": true,
-        "backgroundColor": "rgba(0, 250, 154, 0.2)",
-        "borderColor": "rgb(0, 250, 154)",
-        "pointBackgroundColor": "rgb(0, 250, 154)",
-        "pointBorderColor": "#fff",
-        "pointHoverBackgroundColor": "#fff",
-        "pointHoverBorderColor": "rgb(0, 250, 154)"
-      },
-      {
-        "label": "Postman",
-        "data": [80, 80, 80, 50, 90, 100],
-        "fill": true,
-        "backgroundColor": "rgba(54, 162, 235, 0.2)",
-        "borderColor": "rgb(54, 162, 235)",
-        "pointBackgroundColor": "rgb(54, 162, 235)",
-        "pointBorderColor": "#fff",
-        "pointHoverBackgroundColor": "#fff",
-        "pointHoverBorderColor": "rgb(54, 162, 235)"
-      }
-    ]
-  },
-  "options": {
-    "elements": {
-      "line": {
-        "borderWidth": 3
-      }
-    }
-  }
-}
-```
-:::
-
-@include(./contact.snippet.md)
-
-
-
-
-[plugin]: https://plugins.jetbrains.com/plugin/16988
-[plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA
