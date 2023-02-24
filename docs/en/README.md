@@ -58,10 +58,14 @@ head:
 ## 🥇 Features
 
 <div style="display: flex;width:100%">
-<div class="hint-container tip" style="width:50%; background: rgb(118 92 175 / 33%);">
-    <p class="hint-container-title">Paid version</p>
-    <b style="padding-left:1.2rem">Deeply optimized leading smart API debugging plugin</b>
-    <p style="padding-left:1.4rem">IDEA 2021.2+</p>
+<div class="hint-container tip" style="width:50%; background: rgb(118 92 175 / 33%);border-color: rgb(118 92 175 / 33%);">
+    <p style="font-size:22px;background: #087CFA;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>   <span style="font-size:22px;font-weight:900">Paid version</span></p>
+    <b style="padding-left:1.7rem;font-weight:900">Deeply optimized leading smart API debugging plugin</b>
+    <div style="padding-left:1.7rem;margin-top:1rem;">
+        <span class="badge" style="vertical-align: middle;background: #FC801D">IDEA 2021.2+</span>
+        <span class="badge" style="vertical-align: middle;background: #21D789">Humanize</span>
+        <span class="badge" style="vertical-align: middle;background: #FF318C">Advanced</span>
+    </div>
     <ul class="task-list-container" style="list-style-type: none;">
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -190,10 +194,13 @@ head:
     </ul>
 </div>
 
-<div class="hint-container info" style="width:50%; margin-left: 10px; background: rgb(90 161 84 / 41%);">
-    <p class="hint-container-title">Free version</p>
-    <b style="padding-left:1.2rem">Basic API debugging plugin</b>
-    <p style="padding-left:1.4rem">IDEA 2020.3~2021.1.3</p>
+<div class="hint-container info" style="width:50%; margin-left: 10px; background: rgb(11 249 186 / 18%);border-color:rgb(11 249 186 / 18%)">
+    <p style="font-size:22px;background: #21D789;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest1"></use></svg> <span style="font-size:22px;font-weight:900">Free version</span></p>
+    <b style="padding-left:1.7rem;font-weight:900">Basic API debugging plugin</b>
+    <div style="padding-left:1.7rem;margin-top:1rem;">
+        <span class="badge" style="vertical-align: middle;background: #FE2857">IDEA 2020.3~2021.1.3</span>
+        <span class="badge" style="vertical-align: middle;background: #07C3F2">Basic usage</span>
+    </div>
     <ul class="task-list-container" style="list-style-type: none;">
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">

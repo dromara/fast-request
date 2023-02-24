@@ -27,6 +27,11 @@ export const enNavbar = navbar([
     icon: "buy",
   },
   {
+      text: "Version compare",
+      link: "/en/guide/versionCompare",
+      icon: "versionCompare",
+    },
+  {
     text: "Contacts",
     link: "/en/guide/concatGroup",
     icon: "contactGroup",
@@ -63,6 +68,11 @@ export const zhNavbar = navbar([
     text: "支持插件",
     link: "/guide/buy",
     icon: "buy",
+  },
+  {
+    text: "版本对比",
+    link: "/guide/versionCompare",
+    icon: "versionCompare",
   },
   {
     text: "视频教程",

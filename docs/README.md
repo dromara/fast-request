@@ -66,10 +66,14 @@ head:
 ## 🥇 功能
 
 <div style="display: flex;width:100%">
-<div class="hint-container tip" style="width:50%; background: rgb(118 92 175 / 33%);">
-    <p class="hint-container-title">收费版</p>
-    <b style="padding-left:1.2rem">深度优化的领先的智能API调试插件</b>
-    <p style="padding-left:1.4rem">IDEA 2021.2+</p>
+<div class="hint-container tip" style="width:50%; background: rgb(118 92 175 / 33%);border-color: rgb(118 92 175 / 33%);">
+    <p style="font-size:22px;background: #087CFA;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>   <span style="font-size:22px;font-weight:900">收费版</span></p>
+    <b style="padding-left:1.7rem;font-weight:900">深度优化的领先的智能API调试插件</b>
+    <div style="padding-left:1.7rem;margin-top:1rem;">
+        <span class="badge" style="vertical-align: middle;background: #FC801D">IDEA 2021.2+</span>
+        <span class="badge" style="vertical-align: middle;background: #21D789">人性化</span>
+        <span class="badge" style="vertical-align: middle;background: #FF318C">高阶</span>
+    </div>
     <ul class="task-list-container" style="list-style-type: none;">
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -155,19 +159,19 @@ head:
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/fullScreen.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/commonHeader.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/htmlPreview.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/apiImportExport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-export"></use></svg> APIs 导入导出</a>
         </li>
-        <li class="task-list-item">
+<li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/batchExportApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> 批量导出 API 文档</a>
         </li>
@@ -193,15 +197,18 @@ head:
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/features.html" class="task-list-item-label" > 更多...</a>
+            <a href="/fast-request/features" class="task-list-item-label" > 更多...</a>
         </li>
     </ul>
 </div>
 
-<div class="hint-container info" style="width:50%; margin-left: 10px; background: rgb(90 161 84 / 41%);">
-    <p class="hint-container-title">免费版</p>
-    <b style="padding-left:1.2rem">基础API调试插件</b>
-    <p style="padding-left:1.4rem">IDEA 2020.3~2021.1.3</p>
+<div class="hint-container info" style="width:50%; margin-left: 10px; background: rgb(11 249 186 / 18%);border-color:rgb(11 249 186 / 18%)">
+    <p style="font-size:22px;background: #21D789;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest1"></use></svg> <span style="font-size:22px;font-weight:900">免费版</span></p>
+    <b style="padding-left:1.7rem;font-weight:900">基础API调试插件</b>
+    <div style="padding-left:1.7rem;margin-top:1rem;">
+        <span class="badge" style="vertical-align: middle;background: #FE2857">IDEA 2020.3~2021.1.3</span>
+        <span class="badge" style="vertical-align: middle;background: #07C3F2">基础使用</span>
+    </div>
     <ul class="task-list-container" style="list-style-type: none;">
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
