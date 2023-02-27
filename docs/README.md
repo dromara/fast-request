@@ -66,7 +66,7 @@ head:
 ## 🥇 功能
 
 <div style="display: flex;width:100%">
-<div class="hint-container tip" style="width:50%; background: rgb(118 92 175 / 33%);border-color: rgb(118 92 175 / 33%);">
+<div class="hint-container tip" style="width:50%; background: rgb(39 117 182 / 38%);border-color: rgb(39 117 182 / 38%);">
     <p style="font-size:22px;background: #087CFA;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>   <span style="font-size:22px;font-weight:900">收费版</span></p>
     <b style="padding-left:1.7rem;font-weight:900">深度优化的领先的智能API调试插件</b>
     <div style="padding-left:1.7rem;margin-top:1rem;">
