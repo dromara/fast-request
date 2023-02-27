@@ -197,7 +197,7 @@ head:
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/features" class="task-list-item-label" > 更多...</a>
+            <a href="/fast-request/guide/features" class="task-list-item-label" > 更多...</a>
         </li>
     </ul>
 </div>

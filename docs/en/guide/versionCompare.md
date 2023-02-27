@@ -137,7 +137,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/en/features" class="task-list-item-label" > More...</a>
+            <a href="/fast-request/en/guide/features" class="task-list-item-label" > More...</a>
         </li>
     </ul>
 </div>
