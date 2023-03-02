@@ -5,7 +5,7 @@
 版本要求: <Badge text="2023.1.1+"/>
 
 ::: danger 建议
-建议使用项目级别域名配置，原来的[<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./settingManager.md)将作为全配置配置，并且优先级小于项目级别配置。
+建议使用项目级别域名配置，原来的[<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./settingManager.md)将作为全配置配置，并且优先级小于项目级别配置，建议项目域名以项目级别隔离而不要使用全局配置。
 
 使用项目级别配置的好处是当项目多的时候，下拉框选项将减少（排除了其他项目的配置)，只取本项目级别域名与全局域名配置的交集。
 :::

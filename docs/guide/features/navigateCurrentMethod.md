@@ -2,6 +2,6 @@
 
 版本要求: <Badge text="2022.1.7" />
 
-当你生成好方法的 url 以后又切换到代码中的别的地方然后又想开始调试该 API 方法,可以通过此功能快速定位到`Controller`代码
+当你生成好方法的 url 以后又切换到代码中的别的地方然后又想开始调试该 API 方法,可以通过此功能 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> 快速定位到`Controller`代码
 
 ![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
