@@ -34,9 +34,10 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="Url输入框回车事件" type="info"/>
 - <Badge text="移除窗口插件标题" type="info"/>
 - <Badge text="jdk11+的idea版本中Patch请求失败" type="danger"/>
+- <Badge text="API名字保存错误" type="danger"/>
 
 ::: tip 图片响应渲染
-针对响应是图片的请求，自动渲染出图片
+针对响应是图片的请求，自动渲染出图片，适合验证码场景
 
 ![imageRender](/img/2023.1.2/imageRender.png)
 :::

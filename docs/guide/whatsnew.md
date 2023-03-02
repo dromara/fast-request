@@ -36,6 +36,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="Url输入框回车事件" type="info"/>
 - <Badge text="移除窗口插件标题" type="info"/>
 - <Badge text="jdk11+的idea版本中Patch请求失败" type="danger"/>
+- <Badge text="API名字保存错误" type="danger"/>
 
 ## 2023.1.1 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntPink"/>
 - <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
