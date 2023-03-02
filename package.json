@@ -8,20 +8,21 @@
     "docs:build": "vuepress build docs",
     "docs:lint": "prettier --check --write docs/",
     "docs:clean-dev": "vuepress dev docs --no-cache",
-    "docs:package-update": "pnpm add @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/utils@next vuepress@next vuepress-theme-hope@next vue@latest && pnpm up"
+    "packages:check-update": "pnpm dlx npm-check-updates -u --deep --timeout 600000",
+    "packages:update": "pnpm dlx vp-update"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.60",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.60",
-    "@vuepress/utils": "2.0.0-beta.60",
-    "vue": "3.2.47",
-    "vuepress": "2.0.0-beta.60",
-    "vuepress-theme-hope": "2.0.0-beta.178",
-    "vuepress-vite": "2.0.0-beta.60"
+    "@vuepress/client": "2.0.0-beta.61",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.61",
+    "@vuepress/utils": "2.0.0-beta.61",
+    "vue": "^3.2.47",
+    "vuepress": "2.0.0-beta.61",
+    "vuepress-theme-hope": "2.0.0-beta.185",
+    "vuepress-vite": "2.0.0-beta.61"
   },
   "devDependencies": {
     "prettier": "2.8.4",
-    "vuepress-plugin-components": "2.0.0-beta.178"
+    "vuepress-plugin-components": "2.0.0-beta.185"
   },
   "packageManager": "pnpm@7.27.1",
   "pnpm": {
