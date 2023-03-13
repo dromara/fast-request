@@ -57,38 +57,40 @@ export default hopeTheme({
     components: {
       components: ["Badge", "BiliBili", "SiteInfo"],
       rootComponents: {
-          addThis: "ra-617a48e0d1826cc4",
-          notice: [
-            {
-              path: "/en",
-              title: "Coming in <b>2023.1.2</b>",
-              content: "<ul><li>Image render from response</li><li>Annual report</li><li>cUrl optimization</li></ul><div class=\"addthis_inline_follow_toolbox\"></div>",
-              actions: [
-                {
-                  text: "Learn more→",
-                  link: "/en/guide/history.html#_2023-1-2",
-                  type: "primary",
-                }
-              ],
-              showOnce: true,
-              key:"2023.1.2"
-            },
-            {
-              path: "/",
-              title: "将在新版本<b>2023.1.2</b>中推出",
-              content: "<ul><li>图片响应渲染</li><li>年度报告</li><li>cUrl优化</li></ul><div class=\"addthis_inline_follow_toolbox_qssu\"></div>",
-              actions: [
-                {
-                  text: "了解详情→",
-                  link: "/guide/history.html#_2023-1-2",
-                  type: "primary",
-                }
-              ],
-              showOnce: true,
-              key:"2023.1.2"
-            },
-          ],
-        },
+        addThis: "ra-617a48e0d1826cc4",
+        notice: [
+          {
+            path: "/",
+            title: "将在新版本<b>2023.1.2</b>中推出",
+            content:
+              '<ul><li>图片响应渲染</li><li>年度报告</li><li>cUrl优化</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+            actions: [
+              {
+                text: "了解详情→",
+                link: "/guide/history.html#_2023-1-2",
+                type: "primary",
+              },
+            ],
+            showOnce: true,
+            key: "2023.1.2",
+          },
+          {
+            path: "/en",
+            title: "Coming in <b>2023.1.2</b>",
+            content:
+              '<ul><li>Image render from response</li><li>Annual report</li><li>cUrl optimization</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+            actions: [
+              {
+                text: "Learn more→",
+                link: "/en/guide/history.html#_2023-1-2",
+                type: "primary",
+              },
+            ],
+            showOnce: true,
+            key: "2023.1.2",
+          },
+        ],
+      },
     },
 
     mdEnhance: {
@@ -97,7 +99,6 @@ export default hopeTheme({
       codetabs: true,
       container: true,
       flowchart: true,
-//       figure: true,
       imgLazyload: true,
       include: {
         resolvePath: (file) =>

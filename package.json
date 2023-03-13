@@ -17,14 +17,12 @@
     "@vuepress/utils": "2.0.0-beta.61",
     "vue": "^3.2.47",
     "vuepress": "2.0.0-beta.61",
-    "vuepress-theme-hope": "2.0.0-beta.185",
-    "vuepress-vite": "2.0.0-beta.61"
+    "vuepress-theme-hope": "2.0.0-beta.190"
   },
   "devDependencies": {
-    "prettier": "2.8.4",
-    "vuepress-plugin-components": "2.0.0-beta.185"
+    "prettier": "2.8.4"
   },
-  "packageManager": "pnpm@7.27.1",
+  "packageManager": "pnpm@7.29.1",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
