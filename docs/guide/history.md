@@ -36,7 +36,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+## 2023.1.3 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
 - <Badge text="重量级更新：团队协作支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
