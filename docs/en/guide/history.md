@@ -25,7 +25,39 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+::: danger Teamwork support
+We have done great jobs to refactor the plugin significantly, changing the original **standalone** version to support **teamwork** with a file version management system, enabling partial configuration and **sharing** of all APIs.
+
+But it may also bring some bugs, I hope the developers can understand! Thanks
+
+We also hope that developers will promote and share the Restful Fast Request plugin with the team, thank you very much!
+
+More details -> [Teamwork support](./teamwork.md)
+
+:::
+
+## v2023.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="Lightpink"/>
+- <Badge text="Teamwork support" type="tip"/>
+- <Badge text="API and API storage file jumps" type="tip"/>
+- <Badge text="Project config refresh" type="tip"/>
+- <Badge text="Random generate url from array url" type="danger"/>
+
+::: tip API and API storage file jumps
+Implementation of the API and the saved json data for associative jumping
+
+![jumpToJsonData](/img/2023.1.3/jumpToJsonData.png)
+
+![jump from apis](/img/2023.1.3/listJump2JsonData.png)
+:::
+
+::: tip Project config refresh
+UI project level configuration updates after configuration file update
+
+![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
+:::
+
+
+## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Image render from response" type="tip"/>
 - <Badge text="Annual report" type="tip"/>
 - <Badge text="Url parse logic" type="info"/>
@@ -79,7 +111,7 @@ We have done some optimization, no longer need to encode special characters in u
 Add `Enter` key listener to url field that can send the request. 
 :::
 
-## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightPink"/>
+## v2023.1.1 <Badge text="Free trial" type="tip"/>
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>
 - <Badge text="Icon alignment" type="info"/>

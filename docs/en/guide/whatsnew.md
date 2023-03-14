@@ -27,7 +27,25 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LightGreen"/>
+::: danger Teamwork support
+We have done great jobs to refactor the plugin significantly, changing the original **standalone** version to support **teamwork** with a file version management system, enabling partial configuration and **sharing** of all APIs.
+
+But it may also bring some bugs, I hope the developers can understand! Thanks
+
+We also hope that developers will promote and share the Restful Fast Request plugin with the team, thank you very much!
+
+More details -> [Teamwork support](./teamwork.md)
+
+:::
+
+## v2023.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="Lightpink"/>
+- <Badge text="Teamwork support" type="tip"/>
+- <Badge text="API and API storage file jumps" type="tip"/>
+- <Badge text="Project config refresh" type="tip"/>
+- <Badge text="Random generate url from array url" type="danger"/>
+
+
+## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Image render from response" type="tip"/>
 - <Badge text="Annual report" type="tip"/>
 - <Badge text="Url parse logic" type="info"/>
@@ -38,7 +56,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Patch request error in jdk11+" type="danger"/>
 - <Badge text="API name saved error" type="danger"/>
 
-## v2023.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="Lightpink"/>
+## v2023.1.1 <Badge text="Free trial" type="tip"/>
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>
 - <Badge text="Icon alignment" type="info"/>

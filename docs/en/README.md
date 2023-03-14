@@ -93,6 +93,10 @@ head:
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
+            <a class="task-list-item-label"  href="/fast-request/en/guide/teamwork.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Team work support</a>
+        </li>
+        <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a class="task-list-item-label"  href="/fast-request/en/guide/features/makeIconMove.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Funny icon</a>
         </li>
         <li class="task-list-item">

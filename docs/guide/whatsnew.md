@@ -25,9 +25,26 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
+::: danger 重量级更新：团队协作支持
+我们费了非常大的精力，对插件进行了重大的重构，将原先的**单机版**改成了支持**团队协作版**，通过文件版本管理系统，实现部分配置及所有API的**共享**。
+
+但是可能也带来了一些bug，希望开发者能体谅！
+
+同时我们也希望开发者们能在团队中推广并分享Restful Fast Request插件，再次非常感谢！
+
+更多详情请看 -> [团队协作支持](./teamwork.md)
+
+:::
+
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LigntGreen"/>
+## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LigntPink"/>
+- <Badge text="团队支持" type="tip"/>
+- <Badge text="API与存储文件跳转" type="tip"/>
+- <Badge text="项目配置刷新" type="tip"/>
+- <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
+
+## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="图片响应渲染" type="tip"/>
 - <Badge text="年度报告" type="tip"/>
 - <Badge text="Url解析逻辑" type="info"/>
@@ -38,7 +55,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="jdk11+的idea版本中Patch请求失败" type="danger"/>
 - <Badge text="API名字保存错误" type="danger"/>
 
-## 2023.1.1 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntPink"/>
+## 2023.1.1 <Badge text="免费试用" type="tip"/>
 - <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
 - <Badge text="项目级别域名配置" type="tip"/>
 - <Badge text="图标排版" type="info"/>

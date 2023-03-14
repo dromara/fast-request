@@ -25,7 +25,40 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LigntGreen"/>
+::: danger 重量级更新：团队协作支持
+我们费了非常大的精力，对插件进行了重大的重构，将原先的**单机版**改成了支持**团队协作版**，通过文件版本管理系统，实现部分配置及所有API的**共享**。
+
+但是可能也带来了一些bug，希望开发者能体谅！
+
+同时我们也希望开发者们能在团队中推广并分享Restful Fast Request插件，再次非常感谢！
+
+更多详情请看 -> [团队协作支持](./teamwork.md)
+
+:::
+
+## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+- <Badge text="重量级更新：团队协作支持" type="tip"/>
+- <Badge text="API与存储文件跳转" type="tip"/>
+- <Badge text="项目配置刷新" type="tip"/>
+- <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
+
+::: tip API与存储文件跳转
+实现API以及底层保存的json数据进行关联跳转
+
+![jumpToJsonData](/img/2023.1.3/jumpToJsonData.png)
+
+![API列表跳转到json](/img/2023.1.3/listJump2JsonData.png)
+:::
+
+::: tip 项目配置刷新
+配置文件更新后，UI实现项目级别配置更新
+
+![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
+:::
+
+
+
+## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="图片响应渲染" type="tip"/>
 - <Badge text="年度报告" type="tip"/>
 - <Badge text="Url解析逻辑" type="info"/>
@@ -79,7 +112,7 @@ url输入框点击回车，自动发送请求
 :::
 
 
-## 2023.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LightPink"/>
+## 2023.1.1 <Badge text="免费试用" type="tip"/>
 - <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
 - <Badge text="项目级别域名配置" type="tip"/>
 - <Badge text="图标排版" type="info"/>

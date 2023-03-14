@@ -26,7 +26,7 @@ export default hopeTheme({
     red: "#fe2857",
   },
 
-  iconAssets: "//at.alicdn.com/t/c/font_2601581_3mam4uxzcfd.css",
+  iconAssets: "//at.alicdn.com/t/c/font_2601581_9pz0ama5329.css",
 
   locales: {
     "/": {
@@ -61,33 +61,33 @@ export default hopeTheme({
         notice: [
           {
             path: "/",
-            title: "将在新版本<b>2023.1.2</b>中推出",
+            title: "将在新版本<b>2023.1.3</b>中推出",
             content:
-              '<ul><li>图片响应渲染</li><li>年度报告</li><li>cUrl优化</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+              '<ul><li>重量级更新：团队协作</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
             actions: [
               {
                 text: "了解详情→",
-                link: "/guide/history.html#_2023-1-2",
+                link: "/guide/history.html#_2023-1-3",
                 type: "primary",
               },
             ],
             showOnce: true,
-            key: "2023.1.2",
+            key: "2023.1.3",
           },
           {
             path: "/en",
-            title: "Coming in <b>2023.1.2</b>",
+            title: "Coming in <b>2023.1.3</b>",
             content:
-              '<ul><li>Image render from response</li><li>Annual report</li><li>cUrl optimization</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+              '<ul><li>Teamwork support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
             actions: [
               {
                 text: "Learn more→",
-                link: "/en/guide/history.html#_2023-1-2",
+                link: "/en/guide/history.html#_2023-1-3",
                 type: "primary",
               },
             ],
             showOnce: true,
-            key: "2023.1.2",
+            key: "2023.1.3",
           },
         ],
       },

@@ -101,6 +101,10 @@ head:
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
+            <a class="task-list-item-label"  href="/fast-request/guide/features/teamwork.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 团队协作</a>
+        </li>
+        <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a class="task-list-item-label"  href="/fast-request/guide/features/makeIconMove.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 动态图标</a>
         </li>
         <li class="task-list-item">

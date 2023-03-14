@@ -22,25 +22,25 @@ export const enNavbar = navbar([
     icon: "changelog",
   },
   {
-    text: "Buy plugin",
+    text: "Buy",
     link: "/en/guide/buy",
     icon: "buy",
   },
   {
-      text: "Version compare",
+      text: "Version",
       link: "/en/guide/versionCompare",
       icon: "versionCompare",
     },
-  {
-    text: "Contacts",
-    link: "/en/guide/concatGroup",
-    icon: "contactGroup",
-  },
+    {
+        text: "🔥 Teamwork",
+        link: "/en/guide/teamwork",
+    //     icon: "teamwork",
+      },
+      {
+          text: "More",
+          children:["/en/guide/concatGroup","/guide/faq"]
+        },
 
-  {
-    text: "FAQ",
-    link: "/guide/faq",
-  },
 ]);
 
 export const zhNavbar = navbar([
@@ -65,12 +65,12 @@ export const zhNavbar = navbar([
     icon: "changelog",
   },
   {
-    text: "支持插件",
+    text: "购买插件",
     link: "/guide/buy",
     icon: "buy",
   },
   {
-    text: "版本对比",
+    text: "版本",
     link: "/guide/versionCompare",
     icon: "versionCompare",
   },
@@ -80,23 +80,16 @@ export const zhNavbar = navbar([
     icon: "bilibili",
   },
   {
-    text: "🔥 群聊",
+    text: "🔥 团队协作",
+    link: "/guide/teamwork",
+//     icon: "teamwork",
+  },
+  {
+    text: "🎯 群聊",
     link: "/guide/concatGroup",
   },
   {
-    text: "❤️ 赞助",
-    link: "/guide/sponsorList",
-  },
-  {
-    text: "FAQ",
-    link: "/guide/faq",
-  },
-  //   {
-  //     text: "🎁 活动",
-  //     link: "/guide/activity",
-  //   },
-  {
-    text: "友链",
-    link: "/guide/link",
+    text: "更多",
+    children:["/guide/link","/guide/sponsorList","/guide/faq","/guide/activity"]
   },
 ]);

@@ -41,6 +41,10 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
+            <a class="task-list-item-label"  href="/fast-request/en/guide/features/teamSupport.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Teamwork support</a>
+        </li>
+        <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a class="task-list-item-label"  href="/fast-request/en/guide/features/makeIconMove.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Funny icon</a>
         </li>
         <li class="task-list-item">
