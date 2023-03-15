@@ -1,9 +1,7 @@
 ---
-title: 团队协作支持
+title: 团队协作
 icon: teamwork
 ---
-
-# 团队协作支持
 
 版本要求: <Badge text="2023.1.3"/>
 

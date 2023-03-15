@@ -1,9 +1,7 @@
 ---
-title: Teamwork support
+title: Teamwork
 icon: teamwork
 ---
-
-# Teamwork support
 
 Version Required: <Badge text="2023.1.3" type="error"/>
 
