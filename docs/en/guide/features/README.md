@@ -12,6 +12,7 @@ The icon in the document corresponds to the button icon in the plugin
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Make icon move](./makeIconMove.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./projectLevelDomainConfig.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-refresh"></use></svg> Project config refresh](./projectConfigRefresh.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config](./projectValueConfig.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./searchEveryWhere.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API group toggle](./apiGroup.md)
@@ -19,6 +20,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> Download file](./downloadApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> Stop API request](./stopRequest.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method](./navigateCurrentMethod.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-icon-Json"></use></svg> Navigate current method stored data](./navigateCurrentMethodJson.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> Save request](./saveRequest.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg> Save API group](./apiGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> Temporary request](./tempRequest.md)

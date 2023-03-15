@@ -12,6 +12,7 @@ icon: featuresNew
 
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./makeIconMove.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目域名配置](./projectLevelDomainConfig.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-refresh"></use></svg> 项目配置刷新](./projectConfigRefresh.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./projectValueConfig.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./searchEveryWhere.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API 分组切换](./apiGroup.md)
@@ -19,6 +20,7 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> 下载文件](./downloadApi.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> 终止 API 请求功能](./stopRequest.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> 当前方法定位](./navigateCurrentMethod.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-icon-Json"></use></svg> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> 保存请求](./saveRequest.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg> API 分组保存](./apiGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> 临时请求](./tempRequest.md)
