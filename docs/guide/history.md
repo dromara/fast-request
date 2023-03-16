@@ -41,6 +41,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
 - <Badge text="垂直工具栏" type="tip"/>  
+- <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="tip"/>  
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
 
 ::: tip API与存储文件跳转
@@ -61,6 +62,12 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 API调试窗口默认为水平工具栏，但是垂直工具栏可以展示更多按钮。
 
 ![toolbar](/img/2023.1.3/toolbar.png)
+:::
+
+::: info GET、POST、DELETE、PUT、PATCH图标
+对图标进行了圆角处理，并且调整了背景色
+
+![toolbar](/img/2023.1.3/apis.png)
 :::
 
 
