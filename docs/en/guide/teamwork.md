@@ -6,7 +6,7 @@ icon: teamwork
 Version Required: <Badge text="2023.1.3" type="error"/>
 
 ## Principle
-Based on version control systems, share configurations and all API data.
+Based on version control systems, share **configurations** and **API data**.
 
 ## Features
 <span class="badge" style="vertical-align: middle;background: #21D789">No deployment required</span><br/>

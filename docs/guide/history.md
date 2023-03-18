@@ -40,7 +40,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="重量级更新：团队协作支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
-- <Badge text="垂直工具栏" type="tip"/>  
+- <Badge text="工具栏" type="tip"/>  
 - <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>  
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
 
@@ -58,10 +58,15 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 :::
 
-::: tip 垂直工具栏
-API调试窗口默认为水平工具栏，但是垂直工具栏可以展示更多按钮。
+::: tip 工具栏
+1. 垂直工具栏支持
+2. 按钮位置调整和折叠
 
-![toolbar](/img/2023.1.3/toolbar.png)
+![htoolbar](/img/2023.1.3/htoolbar.png)
+
+![vtoolbar](/img/2023.1.3/vtoolbar.png)
+
+![toolbarSetting](/img/2023.1.3/toolbarSetting.png)
 :::
 
 ::: info GET、POST、DELETE、PUT、PATCH图标

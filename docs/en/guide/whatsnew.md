@@ -42,7 +42,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Teamwork support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
 - <Badge text="Project config refresh" type="tip"/>
-- <Badge text="Vertical toolbar" type="tip"/>
+- <Badge text="Toolbar" type="tip"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>  
 - <Badge text="Random generate url from array url" type="danger"/>
 

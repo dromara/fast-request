@@ -40,7 +40,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Teamwork support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
 - <Badge text="Project config refresh" type="tip"/>
-- <Badge text="Vertical toolbar" type="tip"/>
+- <Badge text="Toolbar" type="tip"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>  
 - <Badge text="Random generate url from array url" type="danger"/>
 
@@ -58,10 +58,15 @@ When the configuration file is updated, this function allows the UI to refresh t
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 :::
 
-::: tip Vertical toolbar
-The API debug window uses the horizontal toolbar by default, but the vertical toolbar allows for more buttons to be displayed.
+::: tip Toolbar
+1. Add vertical toolbar support.
+2. Button position adjustment
 
-![toolbar](/img/2023.1.3/toolbar.png)
+![htoolbar](/img/2023.1.3/htoolbar.png)
+
+![vtoolbar](/img/2023.1.3/vtoolbar.png)
+
+![toolbarSetting](/img/2023.1.3/toolbarSetting.png)
 :::
 
 ::: info GET、POST、DELETE、PUT、PATCH icon

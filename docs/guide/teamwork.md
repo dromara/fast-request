@@ -9,7 +9,7 @@ icon: teamwork
 **团队人数>=6**，可联系作者，酌情打折。同时也欢迎各位开发者在团队中推荐Restful Fast Request，谢谢!
 
 ## 原理
-基于版本控制系统，共享配置以及所有的API数据。
+基于版本控制系统，共享**部分配置**以及**API数据**。
 
 ## 特性
 <span class="badge" style="vertical-align: middle;background: #21D789">零部署</span><br/>
