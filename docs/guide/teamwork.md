@@ -14,7 +14,7 @@ icon: teamwork
 name="Restful Fast Request"
 desc="为简化调试API而生"
 url="https://dromara.gitee.io/fast-request/"
-logo="/img/logo/logo.svg"
+logo="/fast-request/img/logo/logo.svg"
 preview="/img/logo/homepage.png"
 />
 
