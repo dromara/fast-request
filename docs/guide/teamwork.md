@@ -6,7 +6,17 @@ icon: teamwork
 版本要求: <Badge text="2023.1.3"/>
 
 ## 购买优惠
-**团队人数>=6**，可联系作者，酌情打折。同时也欢迎各位开发者在团队中推荐Restful Fast Request，谢谢!
+**团队人数>=6**，可联系作者，酌情打折以及企业主页展示，欢迎合作。同时也欢迎各位开发者在团队中推荐Restful Fast Request，谢谢!
+
+企业展示页案例如下，需要提供：**名称、口号、官网链接、logo、首页预览图**
+
+<SiteInfo
+name="Restful Fast Request"
+desc="为简化调试API而生"
+url="https://dromara.gitee.io/fast-request/"
+logo="/img/logo/logo.svg"
+preview="/img/logo/homepage.png"
+/>
 
 ## 原理
 基于版本控制系统，共享**部分配置**以及**API数据**。
