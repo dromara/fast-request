@@ -103,6 +103,13 @@ request.header("sign",sign)
 类型: java.lang.String
 ```
 
+#### rfr.currentModuleName <Badge text="2023.1.3️" type="tip"/>
+
+```
+作用: 获取当前API的模块名
+类型: java.lang.String
+```
+
 ## 引入第三方 Jar
 
 ::: tip 内置的 Jar

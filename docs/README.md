@@ -61,6 +61,14 @@ head:
 
 [2.成为赞助者](./guide/sponsor.md#我要赞助)
 
+<SiteInfo style="width:30%"
+name="Restful Fast Request"
+desc="为简化调试API而生"
+url="https://dromara.gitee.io/fast-request/"
+logo="/fast-request/img/logo/logo.svg"
+preview="/img/logo/homepage.png"
+/>
+
 <div style="height:10px"></div>
 
 ## 🥇 功能

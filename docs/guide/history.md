@@ -38,11 +38,21 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ## 2023.1.3 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
 - <Badge text="重量级更新：团队协作支持" type="tip"/>
+- <Badge text="OpenAI API接口优化字段支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
-- <Badge text="工具栏" type="tip"/>  
+- <Badge text="rfr.currentModuleName支持" type="tip"/>  
+- <Badge text="工具栏" type="info"/>  
+- <Badge text="LocalDateTime、LocalDate、LocalTime解析优化" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>  
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
+- <Badge text="Kotlin字段注释未生成" type="danger"/>
+
+::: tip OpenAI API接口优化字段支持
+利用[OpenAI接口](https://platform.openai.com/docs/api-reference/chat)，替换随机字段值
+
+![AI](/img/2023.1.3/ai.gif)
+:::
 
 ::: tip API与存储文件跳转
 实现API以及底层保存的json数据进行关联跳转
@@ -58,7 +68,11 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 :::
 
-::: tip 工具栏
+::: tip rfr.currentModuleName支持
+[脚本](./script.md#rfr)中用于获取当前API所属模块支持
+:::
+
+::: info 工具栏
 1. 垂直工具栏支持
 2. 按钮位置调整和折叠
 
@@ -826,12 +840,12 @@ public class MultiUrlController {
 在工具窗口比较小的情况下，API Navigate 会被隐藏，为了在尽可能小的工具窗口展示更多内容，所以命名更加简短
 :::
 
-## v2.1.3
+## v2.1.3 <Badge text="免费" type="info"/>
 
 - 参数特殊符号编码支持
 - curl 加入 global headers
 
-## v2.1.2
+## v2.1.2 <Badge text="免费" type="info"/>
 
 - 添加对导出 api 到 Postman 的支持
 - 首次打开 idea 懒加载 API Navigate 树
@@ -899,7 +913,7 @@ public class UrlTestController {
 ![globalRequestHeader](/img/globalRequestHeader.png)
 :::
 
-## v2.1.1
+## v2.1.1 <Badge text="免费" type="info"/>
 
 - SearchEveryWhere 支持
 - 增加一个最新按钮可以随时查看最新版本
@@ -922,22 +936,22 @@ post /save        (指定post方式指定url)
 ![whatsnewNotifcation](/img/whatsnewNotifcation.png)
 :::
 
-## v2.1.0.2
+## v2.1.0.2 <Badge text="免费" type="info"/>
 
 - 加入了组织[**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
 
-## v2.1.0.1
+## v2.1.0.1 <Badge text="免费" type="info"/>
 
 - 修复 Get 参数错误
 
-## v2.1.0
+## v2.1.0 <Badge text="免费" type="info"/>
 
 - 修复 POST 形式的 API 中@RequestBody、@RequestParam 混合使用参数解析导致请求 400 异常
 - 对嵌套类的解析支持
 - 增加支持对控制器类级别@RequestMapping(path="/xxx")path 的解析
 - Api tree 针对带@RequestMapping 类的扫描支持
 
-## v2.0.9
+## v2.0.9 <Badge text="免费" type="info"/>
 
 - 2021.3+版本修复"Slow operations are prohibited on EDT"
 - 修复快速从 response 添加 Headers
@@ -957,13 +971,13 @@ post /save        (指定post方式指定url)
 ![format](/img/format.gif)
 :::
 
-## v2.0.8.1
+## v2.0.8.1 <Badge text="免费" type="info"/>
 
 - 修复 searchEveryWhere 冲突警告
 - 调整低版本 idea 工具栏操作按钮至工具栏顶部位置
 - 移除多余依赖，插件从 11.1M 降至 5.9M
 
-## v2.0.8
+## v2.0.8 <Badge text="免费" type="info"/>
 
 - 修复初次添加项目或环境 npe
 - json 树响应字符渲染最大限制
@@ -987,7 +1001,7 @@ post /save        (指定post方式指定url)
 ![shortcutSendAndDownload](/img/methodFilter.png)
 :::
 
-## v2.0.7
+## v2.0.7 <Badge text="免费" type="info"/>
 
 - 添加 API 导航树
 - 添加 Headers 随项目和环境切换自动切换的支持
@@ -1051,7 +1065,7 @@ send and download: alt -
 ![dropdownEnv](/img/dropdownEnv.png)
 :::
 
-## v2.0.6
+## v2.0.6 <Badge text="免费" type="info"/>
 
 - Fix "Light files should have PSI only in one project"
 - 添加对 json 的语法支持
@@ -1083,28 +1097,28 @@ send and download: alt -
 ![apiGroup](/img/whatsnew.png)
 :::
 
-## v2.0.5
+## v2.0.5 <Badge text="免费" type="info"/>
 
 - JSON 内置编辑器支持
 - 修复全选参数框隐藏问题
 - 修复 API 回显 Headers 参数异常
 - 优化了请求进度条显示
 
-## v2.0.4
+## v2.0.4 <Badge text="免费" type="info"/>
 
 - 修复因 response 内容过道导致的界面错乱问题
 - Response json 超长显示优化
 - 优化图标尺寸
 - 中文文档迁移至 gitee
 
-## v2.0.3
+## v2.0.3 <Badge text="免费" type="info"/>
 
 - 删除 API 的时候增加了确认
 - 添加了参数全选反选的功能
 - 修复诸如【@RequestParam(value="address[]") Set address】的参数解析
 - 修复快速添加 headers 界面错乱
 
-## v2.0.2
+## v2.0.2 <Badge text="免费" type="info"/>
 
 - 修复项目多开情况下 A 请求显示到 B 项目
 - 修复@ResponseBody 修饰的数组与集合解析问题
@@ -1114,7 +1128,7 @@ send and download: alt -
 - 全新的 document，点击工具栏 doc 图标
 - 一些优化
 
-## v2.0.1
+## v2.0.1 <Badge text="免费" type="info"/>
 
 - rename from Fast Request to Restful Fast Request
 - Json、Form URL-Encoded、Multipart Tab 合并减小工具窗口宽度
@@ -1124,7 +1138,7 @@ send and download: alt -
 - tab 重命名 collection->APIs
 - YearMonth 解析支持
 
-## v2.0.0
+## v2.0.0 <Badge text="免费" type="info"/>
 
 - 支持请求的存储
 - 支持参数可选

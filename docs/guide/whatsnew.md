@@ -39,12 +39,16 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 [**务必查看变更详情----------------->**](./history.md)
 
 ## 2023.1.3 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LigntPink"/>
-- <Badge text="团队支持" type="tip"/>
+- <Badge text="重量级更新：团队协作支持" type="tip"/>
+- <Badge text="OpenAI API接口优化字段支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
-- <Badge text="工具栏" type="tip"/>
+- <Badge text="rfr.currentModuleName支持" type="tip"/>  
+- <Badge text="工具栏" type="info"/>  
+- <Badge text="LocalDateTime、LocalDate、LocalTime解析优化" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>  
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
+- <Badge text="Kotlin字段注释未生成" type="danger"/>
 
 ## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="图片响应渲染" type="tip"/>

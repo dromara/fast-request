@@ -38,11 +38,22 @@ More details -> [Teamwork support](./teamwork.md)
 
 ## v2023.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="Lightpink"/>
 - <Badge text="Teamwork support" type="tip"/>
+- <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
 - <Badge text="Project config refresh" type="tip"/>
-- <Badge text="Toolbar" type="tip"/>
-- <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>  
+- <Badge text="rfr.currentModuleName support" type="tip"/>
+- <Badge text="Toolbar" type="info"/>
+- <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>
+- <Badge text="LocalDateTime、LocalDate、LocalTime parse" type="info"/>
 - <Badge text="Random generate url from array url" type="danger"/>
+- <Badge text="Comment can not be generate in Kotlin" type="danger"/>
+
+::: tip OpenAI API Optimising fields support
+
+Replace some random fields with the [OpenAI API](https://platform.openai.com/docs/api-reference/chat)
+
+![ai](/img/2023.1.3/ai.gif)
+:::
 
 ::: tip API and API storage file jumps
 Implementation of the API and the saved json data for associative jumping
@@ -58,7 +69,11 @@ When the configuration file is updated, this function allows the UI to refresh t
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 :::
 
-::: tip Toolbar
+::: tip rfr.currentModuleName support
+Get the module name of the current API. Please see it in [script](./script.md#rfr).
+:::
+
+::: info Toolbar
 1. Add vertical toolbar support.
 2. Button position adjustment
 
@@ -818,12 +833,12 @@ public class MultiUrlController {
 In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
 :::
 
-## v2.1.3
+## v2.1.3 <Badge text="Free" type="info"/>
 
 - Add encode support for special symbol in parameter
 - Add global headers to curl
 
-## v2.1.2
+## v2.1.2 <Badge text="Free" type="info"/>
 
 - Add support for export api to Postman
 - Open the idea lazy loading API Navigate tree for the first time
@@ -892,7 +907,7 @@ when saving the api,it will save to a group named controller's name
 ![globalRequestHeader](/img/globalRequestHeader.png)
 :::
 
-## v2.1.1
+## v2.1.1 <Badge text="Free" type="info"/>
 
 - SearchEveryWhere support
 - Add a what's new button to view the latest version at any time
@@ -915,23 +930,23 @@ post /save        (used for search post method)
 ![whatsnewNotifcation](/img/whatsnewNotifcation.png)
 :::
 
-## v2.1.0.2
+## v2.1.0.2 <Badge text="Free" type="info"/>
 
 - Joined the organization [**Dromara**](https://dromara.org/zh/)(An organization dedicated to native solutions for the
   microservice cloud)
 
-## v2.1.0.1
+## v2.1.0.1 <Badge text="Free" type="info"/>
 
 - Fix get param error
 
-## v2.1.0
+## v2.1.0 <Badge text="Free" type="info"/>
 
 - Fix post api parse error when using @RequestBody and @RequestParam
 - Parsing support for nested classes
 - Add support for url parse from the path property of the @RequestMapping in controller class level
 - Added support for Api Tree scanning with @RequestMapping class
 
-## v2.0.9
+## v2.0.9 <Badge text="Free" type="info"/>
 
 - Fix "Slow operations are prohibited on EDT" for 2021.3+
 - Fix add headers from response
@@ -951,13 +966,13 @@ if your api need token in header,you can do like this to add params to header fr
 ![format](/img/format.gif)
 :::
 
-## v2.0.8.1
+## v2.0.8.1 <Badge text="Free" type="info"/>
 
 - Fix conflicting error when searchEveryWhere
 - Adjust position of toolbar action button
 - remove unnecessary dependence,size 11.1M->5.9M
 
-## v2.0.8
+## v2.0.8 <Badge text="Free" type="info"/>
 
 - Fix npe when first add project/env
 - Json tree response character rendering maximum limit
@@ -980,7 +995,7 @@ shortcut is available anywhere to trigger the event,No longer need to focus on t
 ![shortcutSendAndDownload](/img/methodFilter.png)
 :::
 
-## v2.0.7
+## v2.0.7 <Badge text="Free" type="info"/>
 
 - Add support for api navigate tree
 - Add support for automatic switching of Headers with project and environment switching
@@ -1046,7 +1061,7 @@ Icon e represents environment
 ![dropdownEnv](/img/dropdownEnv.png)
 :::
 
-## v2.0.6
+## v2.0.6 <Badge text="Free" type="info"/>
 
 - Fix "Light files should have PSI only in one project"
 - Add support for json syntax check
@@ -1078,21 +1093,21 @@ Will only be shown once
 ![apiGroup](/img/whatsnew_en.png)
 :::
 
-## v2.0.5
+## v2.0.5 <Badge text="Free" type="info"/>
 
 - JSON built-in editor support
 - Fix checkbox hidden when change param by text
 - Fix headers param show error when reshow the api
 - Optimized the request progress bar display
 
-## v2.0.4
+## v2.0.4 <Badge text="Free" type="info"/>
 
 - Fix the interface confusion caused by the response content aisle
 - Optimization of response JSON ultra long display
 - Optimized icon size
 - Migrate Chinese documents to Gitee
 
-## v2.0.3
+## v2.0.3 <Badge text="Free" type="info"/>
 
 - Add confirmation when deleting api
 - Added the support of selecting all parameters and inverting selection
@@ -1100,7 +1115,7 @@ Will only be shown once
 - Fix parse like 【@RequestParam
 - Fix the confusion of the quick add header interface
 
-## v2.0.2
+## v2.0.2 <Badge text="Free" type="info"/>
 
 - Fix that the A request is displayed to the B project in the case of multiple open projects
 - Fix array and list param parse error decorate by @ResponseBody
@@ -1110,7 +1125,7 @@ Will only be shown once
 - Brand new document\[click the doc icon in the toolbar\]
 - Some optimization
 
-## v2.0.1
+## v2.0.1 <Badge text="Free" type="info"/>
 
 - rename from Fast Request to Restful Fast Request
 - merge Json、Form URL-Encoded、Multipart to Body Tab to reduce the tool window width
@@ -1120,7 +1135,7 @@ Will only be shown once
 - rename tab name from collection to APIs
 - support parse java.time.YearMonth
 
-## v2.0.0
+## v2.0.0 <Badge text="Free" type="info"/>
 
 - support store request
 - support params optional

@@ -40,11 +40,15 @@ More details -> [Teamwork support](./teamwork.md)
 
 ## v2023.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="Lightpink"/>
 - <Badge text="Teamwork support" type="tip"/>
+- <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
 - <Badge text="Project config refresh" type="tip"/>
-- <Badge text="Toolbar" type="tip"/>
-- <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>  
+- <Badge text="rfr.currentModuleName support" type="tip"/>  
+- <Badge text="Toolbar" type="info"/>
+- <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>
+- <Badge text="LocalDateTime、LocalDate、LocalTime parse" type="info"/>
 - <Badge text="Random generate url from array url" type="danger"/>
+- <Badge text="Comment can not be generate in Kotlin" type="danger"/>
 
 
 ## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>

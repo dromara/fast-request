@@ -99,7 +99,14 @@ Type: java.lang.String
 
 ```
 Remark: Get the currently active domain link
-类型: java.lang.String
+Type: java.lang.String
+```
+
+#### rfr.currentModuleName <Badge text="2022.3.1️" type="tip"/>
+
+```
+Remark: Get the currently module name of the API
+Type: java.lang.String
 ```
 
 ## Import third jar
