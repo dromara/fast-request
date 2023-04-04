@@ -32,9 +32,10 @@ After pull, click the API Refresh button to get the APIs submitted by other memb
 ![refreshProjectConfig](/img/2023.1.3/refreshAPI.png)
 
 ## Local file storage structure
-By default, the plugin creates a **.fastRequest** directory in the project root, the API is stored in the **collections** directory, the configuration is stored in the **config** directory, the API is stored in the `Module->Class-Name->API` structure, each directory stores a **directory. json** file in each directory, which identifies that directory.
-Other APIs are stored using the method's **full class name + method name.json**. This file may create conflicts in the version control system due to multiple modifications, which will eventually require the user to resolve the conflicts and satisfy the standard json as well as the data structure.
+By default, the plugin will create a **.fastRequest** directory in the root directory of the project. APIs are stored in the **collections** directory, and configurations are stored in the **config** directory. APIs are stored in the structure of `module->class name->API`, and each directory contains a **directory.json** file to identify the directory. 
+Other APIs are stored using the **methodName.rapi**, and conflicts may occur in this file due to multiple modifications in version control systems. Users need to resolve the conflicts and meet the standard JSON and data structures.
 
-Note that if you want to see the API history data, you can restore it in conjunction with the version control system's file history, or you can restore it in conjunction with the local file history.
+Note that if you want to view the historical data of APIs, you can use the file history records of the version control system to restore them, or you can use the local file history records to restore them.
+
 
 ![teamDirectory](/img/2023.1.3/teamDirectory_en.png)
