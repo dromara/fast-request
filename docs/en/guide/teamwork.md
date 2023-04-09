@@ -40,11 +40,9 @@ Note that if you want to view the historical data of APIs, you can use the file 
 
 ![teamDirectory](/img/2023.1.3/teamDirectory_en.png)
 
-## 历史数据转移
-::: danger API历史数据
+## Transfer historical data.
 By default, the plugin will perform a historical data migration. During the data migration (for data on versions <= 2023.1.3), you do not need to worry about historical data if your data has not been committed to the version control system. If someone else has already committed the API to the version control system, it will be overwritten. Note that if you want to view API historical data, you can restore it by combining the file history records of the version control system or the local file.
 
 If you find that the data has not been migrated, you can also manually operate it.
 
 ![transferData](/img/2023.1.3/transferData.png)
-:::
