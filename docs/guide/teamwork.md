@@ -35,12 +35,12 @@ preview="/img/logo/homepage.png"
 基于原理，所以当我们需要共享或者拉取别人的配置或者API时，假设我们利用Git作为我们的版本控制系统，我们只需要**push**即可共享配置和API数据，**pull**即可获取别人提交的配置和API数据。
 
 ### 更新配置
-版本控制系统pull后，点击刷新项目配置按钮，即可获取其他成员提交的配置
+版本控制系统pull后，例如`Git pull`，点击刷新项目配置按钮，即可获取其他成员提交的配置
 
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 
 ## 更新API
-版本控制系统pull后，点击API刷新按钮，即可获取其他成员提交的API
+版本控制系统pull后，例如`Git pull`，点击API刷新按钮，即可获取其他成员提交的API
 
 ![refreshProjectConfig](/img/2023.1.3/refreshAPI.png)
 
@@ -48,6 +48,15 @@ preview="/img/logo/homepage.png"
 插件会默认在项目根目录下创建一个 **.fastRequest** 的目录，API存储在 **collections** 目录下，配置存储在 **config** 目录下，API按照 `模块->类名->API` 的结构进行存储，每一个目录下存放一个 **directory.json** 文件，用于标识该目录。
 其他API用方法的**方法名.rapi**进行存储，该文件可能会在版本控制系统中因为多方修改产生冲突，最终需要用户解决冲突，并满足标准的json以及数据结构。
 
-注意如果想看API历史数据，可以结合版本控制系统的文件历史记录来还原，也可以结合本地文件历史记录来还原。
 
 ![teamDirectory](/img/2023.1.3/teamDirectory.png)
+
+## 历史数据转移
+::: danger API历史数据
+插件默认会进行一次历史数据转移，数据转移的时候(版本<=2023.1.3的数据)，如果你的数据在**版本管理系统**上未提交，则不需要关心历史数据。
+如果版本管理系统其他人已提交API，则会进行覆盖。 注意如果想看API历史数据，可以结合**版本控制系统**的文件**历史记录**来还原，也可以结合**本地文件历史记录**来还原。
+
+如果发现数据未转移，也可手动操作
+
+![transferData](/img/2023.1.3/transferData.png)
+:::
