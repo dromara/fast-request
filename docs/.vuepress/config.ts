@@ -16,7 +16,7 @@ export default defineUserConfig({
         href: "/fast-request/img/fastRequest.svg",
       },
     ],
-    ["script", { src: "//at.alicdn.com/t/c/font_2601581_9pz0ama5329.js" }],
+    ["script", { src: "//at.alicdn.com/t/c/font_2601581_qdgotug8lt.js" }],
     ["script", { src: "/fast-request/js/baidu.js" }],
   ],
 

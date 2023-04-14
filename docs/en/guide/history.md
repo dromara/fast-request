@@ -45,6 +45,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Toolbar" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>
 - <Badge text="LocalDateTime、LocalDate、LocalTime parse" type="info"/>
+- <Badge text="Response text not format in IDEA 2023.1" type="danger"/>
 - <Badge text="Random generate url from array url" type="danger"/>
 - <Badge text="Comment can not be generate in Kotlin" type="danger"/>
 

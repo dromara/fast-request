@@ -45,11 +45,12 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="工具栏" type="info"/>  
 - <Badge text="LocalDateTime、LocalDate、LocalTime解析优化" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>  
+- <Badge text="IDEA 2023.1 响应未格式化" type="danger"/>
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
 - <Badge text="Kotlin字段注释未生成" type="danger"/>
 
 ::: tip OpenAI API接口优化字段支持
-利用[OpenAI接口](https://platform.openai.com/docs/api-reference/chat)，替换随机字段值
+利用[OpenAI接口](https://platform.openai.com/docs/api-reference/chat)，替换随机字段值。注意由于API是非结构向数据，所以返回的内容可能会有误差。
 
 ![AI](/img/2023.1.3/ai.gif)
 :::
