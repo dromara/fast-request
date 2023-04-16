@@ -43,7 +43,8 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
 - <Badge text="Project config refresh" type="tip"/>
-- <Badge text="rfr.currentModuleName support" type="tip"/>  
+- <Badge text="rfr.currentModuleName support" type="tip"/>
+- <Badge text="API doc sync supports custom branch" type="info"/>  
 - <Badge text="Toolbar" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>
 - <Badge text="LocalDateTime、LocalDate、LocalTime parse" type="info"/>

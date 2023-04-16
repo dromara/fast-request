@@ -42,6 +42,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="API and API storage file jumps" type="tip"/>
 - <Badge text="Project config refresh" type="tip"/>
 - <Badge text="rfr.currentModuleName support" type="tip"/>
+- <Badge text="API doc sync supports custom branch" type="info"/>
 - <Badge text="Toolbar" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>
 - <Badge text="LocalDateTime、LocalDate、LocalTime parse" type="info"/>
@@ -72,6 +73,13 @@ When the configuration file is updated, this function allows the UI to refresh t
 
 ::: tip rfr.currentModuleName support
 Get the module name of the current API. Please see it in [script](./script.md#rfr).
+:::
+
+::: info API doc sync supports custom branch
+
+Support custom branch, as in some cases the 'master' branch is protected and does not allow push
+
+![apiSyncSupportBranch](/img/2023.1.3/apiSyncSupportBranch.png)
 :::
 
 ::: info Toolbar

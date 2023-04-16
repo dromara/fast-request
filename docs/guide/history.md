@@ -41,7 +41,8 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="OpenAI API接口优化字段支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
-- <Badge text="rfr.currentModuleName支持" type="tip"/>  
+- <Badge text="rfr.currentModuleName支持" type="tip"/> 
+- <Badge text="Api文档同步支持自定义分支" type="info"/>  
 - <Badge text="工具栏" type="info"/>  
 - <Badge text="LocalDateTime、LocalDate、LocalTime解析优化" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>  
@@ -71,6 +72,13 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ::: tip rfr.currentModuleName支持
 [脚本](./script.md#rfr)中用于获取当前API所属模块支持
+:::
+
+::: info Api文档同步支持自定义分支
+
+支持特定分支，因为有些情况下master被保护不允许push
+
+![apiSyncSupportBranch](/img/2023.1.3/apiSyncSupportBranch.png)
 :::
 
 ::: info 工具栏
