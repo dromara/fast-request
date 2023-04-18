@@ -14,6 +14,16 @@ icon: faq
 Please refer [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./features/projectLevelDomainConfig.md)
 (Plugin version>=**2023.1.1**)
 
+## S: APIs lost
+So sorry to inform you that installing the 2023.1.3 version of (have been hidden) will cause loss of historical APIs, and you will need to manually retrieve the data. Here's what you need to do:
+
+0. Download 2023.1.3.1+ version of plugin, for example this [version](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/321947)
+1. Go to the .idea directory in your project, right-click and click on "Local history", find the change log about `.idea/FastRequestCollection.xml` (the title contains "Deleting"), and locate the last version. Copy the contents of this version and paste them into `.idea/fastRequest/fastRequestCollection.xml`
+2. Restart IntelliJ IDEA.
+3. Click on the icon <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-dataTransfer"></use></svg> in the APIs tab and do transfer
+
+![dataTransfer20231](/img/faq/dataTransfer202313.png)
+
 ## S: Url error
 
 ![urlError](/img/skill/urlError_en.png)

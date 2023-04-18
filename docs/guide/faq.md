@@ -13,6 +13,17 @@ icon: faq
 请参考 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目级别域名配置](./features/projectLevelDomainConfig.md)
 (插件版本>=**2023.1.1**)
 
+## S: APIs丢失
+非常抱歉，安装过2023.1.3版本的(已隐藏)会导致历史apis丢失，此时需要手动找回数据。==请不要回退插件版本==
+
+0. 下载插件版本>=2023.1.3.1+的版本,例如该[版本](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/stable/321947)
+1. 找到项目下的.idea目录，右键并点击Local history(本地历史记录)，找到关于`.idea/FastRequestCollection.xml`的变更日志(标题包含了Deleting)，找到最后一个版本，把其中的内容拷贝到`.idea/fastRequest/fastRequestCollection.xml`中，
+2. 重启idea
+3. 在APIs tab下点击图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-dataTransfer"></use></svg>并确认数据转移
+
+![dataTransfer20231](/img/faq/dataTransfer202313.png)
+
+
 ## S: Url 错误
 
 ![urlError](/img/skill/urlError.png)
