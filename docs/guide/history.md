@@ -36,7 +36,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-## 2023.1.3 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+## 2023.1.3.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="重量级更新：团队协作支持" type="tip"/>
 - <Badge text="OpenAI API接口优化字段支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
@@ -49,6 +49,8 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="IDEA 2023.1 响应未格式化" type="danger"/>
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
 - <Badge text="Kotlin字段注释未生成" type="danger"/>
+
+[FAQ:安装过2023.1.3版本的数据丢失](./faq.md#s-apis%E4%B8%A2%E5%A4%B1)
 
 ::: tip OpenAI API接口优化字段支持
 利用[OpenAI接口](https://platform.openai.com/docs/api-reference/chat)，替换随机字段值。注意由于API是非结构向数据，所以返回的内容可能会有误差。
@@ -100,7 +102,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 
 
-## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.2 <Badge text="免费试用" type="tip"/>  
 - <Badge text="图片响应渲染" type="tip"/>
 - <Badge text="年度报告" type="tip"/>
 - <Badge text="Url解析逻辑" type="info"/>

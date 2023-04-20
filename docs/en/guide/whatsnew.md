@@ -38,7 +38,7 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## v2023.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="Lightpink"/>
+## v2023.1.3.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Teamwork support" type="tip"/>
 - <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
@@ -52,7 +52,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Comment can not be generate in Kotlin" type="danger"/>
 
 
-## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2023.1.2 <Badge text="Free trial" type="tip"/> 
 - <Badge text="Image render from response" type="tip"/>
 - <Badge text="Annual report" type="tip"/>
 - <Badge text="Url parse logic" type="info"/>

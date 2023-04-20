@@ -36,7 +36,7 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## v2023.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="Lightpink"/>
+## v2023.1.3.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Teamwork support" type="tip"/>
 - <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
@@ -49,6 +49,8 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Response text not format in IDEA 2023.1" type="danger"/>
 - <Badge text="Random generate url from array url" type="danger"/>
 - <Badge text="Comment can not be generate in Kotlin" type="danger"/>
+
+[FAQ:API data lost after install 2023.1.3](./faq.md#s-apis-lost)
 
 ::: tip OpenAI API Optimising fields support
 
