@@ -40,6 +40,7 @@ The icon in the document corresponds to the button icon in the plugin
 
 ---
 
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Auto domain](./autoDomain.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> OpenAI API Optimising fields](./ai.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Header group](./headerGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Common header](./commonHeader.md)

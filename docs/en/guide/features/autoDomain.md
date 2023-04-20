@@ -1,0 +1,19 @@
+# Auto domain
+
+Version required: <Badge text="2023.1.4" />
+
+When clicking <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> on the left side of the method,
+if no domain is configured, it will be automatically created.
+
+## Configuration file parsing logic
+
+1. Read `application.yml` or `bootstrap.yml`. If the configuration `server.port` or `server.servlet.context-path` can be found, take the configuration.
+2. If the above configuration files cannot find `server.port` or `server.servlet.context-path`, read `spring.profiles.active` as the variable `env`. Then look for `application-env.yml` or `bootstrap-env.yml` to find the configuration `server.port` or `server.servlet.context-path`.
+3. The logic for `properties` files is similar.
+4. If the above configurations cannot be found, use `port=8080, context-path=/`.
+5. The project name is taken from the `module name`.
+6. `spring.profiles.active` does not support Maven variables parse, for example `spring.profiles.active=@active.env@`.
+
+
+## Config switch
+![autoDomain](/img/2023.1.4/autoDomain_en.png)
