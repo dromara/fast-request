@@ -53,6 +53,10 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
+            <a class="task-list-item-label"  href="/fast-request/en/guide/features/ai.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> OpenAI API Optimising fields</a>
+        </li>
+        <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a class="task-list-item-label" href="/fast-request/en/guide/features/projectValueConfig.html" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config</a>
         </li>
         <li class="task-list-item">
@@ -134,6 +138,10 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/en/guide/features/apiCommentPreview.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api comment preview</a>
+        </li>
+        <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
+            <a class="task-list-item-label"  href="/fast-request/en/guide/features/autoDomain.html"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Auto domain</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">

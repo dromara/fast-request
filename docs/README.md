@@ -121,6 +121,10 @@ preview="/img/logo/homepage.png"
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
+            <a href="/fast-request/guide/features/ai.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> AI字段替换</a>
+        </li>
+        <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a class="task-list-item-label" href="/fast-request/guide/features/projectValueConfig.html" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持</a>
         </li>
         <li class="task-list-item">
@@ -202,6 +206,10 @@ preview="/img/logo/homepage.png"
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
             <a href="/fast-request/guide/features/apiCommentPreview.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api 注释预览</a>
+        </li>
+        <li class="task-list-item">
+            <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
+            <a href="/fast-request/guide/features/autoDomain.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 自动域名</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
