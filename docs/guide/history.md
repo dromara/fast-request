@@ -38,6 +38,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ## 2023.1.4 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="自动域名" type="tip"/>
+- <Badge text="SearchEveryWhere支持搜索jar包中的url" type="tip"/>
 - <Badge text="Script项目级别头设置失败" type="danger"/>
 
 ::: tip 自动域名

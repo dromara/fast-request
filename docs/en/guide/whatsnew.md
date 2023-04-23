@@ -40,6 +40,7 @@ More details -> [Teamwork support](./teamwork.md)
 
 ## v2023.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Auto domain" type="tip"/>
+- <Badge text="SearchEveryWhere supports searching URLs in jar" type="tip"/>  
 - <Badge text="Set project header error in Script" type="danger"/>
 
 ## v2023.1.3.2 <Badge text="Free trial" type="tip"/>
