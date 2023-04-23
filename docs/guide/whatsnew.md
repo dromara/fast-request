@@ -37,8 +37,11 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 [**务必查看变更详情----------------->**](./history.md)
+## 2023.1.4 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
+- <Badge text="自动域名" type="tip"/>
+- <Badge text="Script项目级别头设置失败" type="danger"/>
 
-## 2023.1.3.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.3.2 <Badge text="免费试用" type="tip"/>
 - <Badge text="重量级更新：团队协作支持" type="tip"/>
 - <Badge text="OpenAI API接口优化字段支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>

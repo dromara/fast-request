@@ -36,7 +36,15 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## v2023.1.3.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2023.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Auto domain" type="tip"/>
+- <Badge text="Set project header error in Script" type="danger"/>
+
+::: tip Auto domain
+Automatically identify or add a default domain,---->[More detail](./features/autoDomain.md)
+:::
+
+## v2023.1.3.2 <Badge text="Free trial" type="tip"/>
 - <Badge text="Teamwork support" type="tip"/>
 - <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
