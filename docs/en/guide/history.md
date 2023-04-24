@@ -35,8 +35,10 @@ We also hope that developers will promote and share the Restful Fast Request plu
 More details -> [Teamwork support](./teamwork.md)
 
 :::
+## v2023.1.4.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Fix Auto domain of multi-module project" type="danger"/>
 
-## v2023.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2023.1.4 <Badge text="Free trial" type="tip"/>
 - <Badge text="Auto domain" type="tip"/>
 - <Badge text="SearchEveryWhere supports searching URLs in jar" type="tip"/>  
 - <Badge text="Set project header error in Script" type="danger"/>
