@@ -58,3 +58,23 @@ preview="/img/logo/homepage.png"
 如果发现数据未转移，也可手动操作！
 
 ![transferData](/img/2023.1.3/transferData.png)
+
+## 文件权限
+如果发现因为`Permission denied`导致的错误，执行以下指令
+
+::: code-tabs#shell
+
+@tab Linux
+
+```bash
+cd [current project root dir]
+chmod -R 777 .fastRequest/*
+```
+
+@tab Windows
+```bash
+cd [current project root dir]
+takeown /f /r /d n .fastRequest/*
+```
+
+:::
