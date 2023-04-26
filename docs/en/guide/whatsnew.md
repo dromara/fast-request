@@ -38,7 +38,11 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## v2023.1.4.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2023.1.4.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Domain edit error in project domain config" type="danger"/>
+- <Badge text="headers group load error" type="danger"/>
+
+## v2023.1.4.1 <Badge text="Free trial" type="tip"/>
 - <Badge text="Fix Auto domain of multi-module project" type="danger"/>
 
 ## v2023.1.4 <Badge text="Free trial" type="tip"/>
