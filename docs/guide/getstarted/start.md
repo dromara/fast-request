@@ -36,4 +36,4 @@ op5->op6->e
 
 ![](/img/newLogoIcon.png)
 
-@include(@src/contact.snippet.md)
+<!-- @include: @src/contact.snippet.md -->

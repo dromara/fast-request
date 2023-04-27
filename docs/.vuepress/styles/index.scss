@@ -148,4 +148,11 @@ h2 {
 
 
 
-
+body {
+    @media (min-width: 1440px){
+        font-size: 16px;
+    }
+}
+.navbar .nav-links{
+    font-size: 0.7em;
+}

@@ -312,7 +312,7 @@ preview="/img/logo/homepage.png"
 ```
 :::
 
-@include(./contact.snippet.md)
+<!-- @include: @src/contact.snippet.md -->
 
 
 

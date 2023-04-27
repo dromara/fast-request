@@ -31,7 +31,21 @@ Kotlin Spring体系框架
 
 如果有新版本出来，请尽快更新到最新的版本。(插件往往在升级过程中会加入新的功能或者修复你未发现的 bug)
 
-@include(@src/contact.snippet.md)
+## 关于作者
+```card:json
+{
+  "title": "Kings",
+  "desc": "<b>Make it easier...faster...stronger...</b><br/>",
+  "logo": "/img/fastRequest.svg",
+  "link": "https://github.com/kings1990",
+  "color": "rgb(39 117 182 / 38%)"
+}
+```
+职务: 从事java软件开发。Restful Fast Request作者、设计师、星推官
+
+<!-- @include: @src/contact.snippet.md -->
+
+
 
 ## 支持
 

@@ -35,6 +35,17 @@ Kotlin Spring framework
 If a new version comes out, please update to the latest version as soon as possible(Plugins will always add new features
 or fix bugs you didn't find during the upgrade process).
 
+## About author
+```card:json
+{
+  "title": "Kings",
+  "desc": "<b>Make it easier...faster...stronger...</b><br/>",
+  "logo": "/img/fastRequest.svg",
+  "link": "https://github.com/kings1990",
+  "color": "rgb(39 117 182 / 38%)"
+}
+```
+
 ## Platform support
 
 <a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>

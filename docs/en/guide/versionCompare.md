@@ -5,10 +5,10 @@ title: Version compare
 
 The paid version will introduce more **excellent** and **user-friendly** functions
 
-<div style="display: flex;width:135%">
+<div style="display: flex;width:125%">
 <div class="hint-container tip" style="width:50%; background: rgb(39 117 182 / 38%);border-color: rgb(39 117 182 / 38%);">
     <p style="font-size:22px;background: #087CFA;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>   <span style="font-size:22px;font-weight:900">Paid version</span></p>
-    <b style="padding-left:1.7rem;font-weight:900">Deeply optimized leading smart API debugging plugin</b>
+    <b style="padding-left:1.7rem;font-weight:900">Deeply optimized leading smart API debug plugin</b>
     <div style="padding-left:1.7rem;margin-top:1rem;">
         <span class="badge" style="vertical-align: middle;background: #FC801D">IDEA 2021.2+</span>
         <span class="badge" style="vertical-align: middle;background: #21D789">Humanize</span>
@@ -156,7 +156,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
 
 <div class="hint-container info" style="width:50%; margin-left: 10px; background: rgb(11 249 186 / 18%);border-color:rgb(11 249 186 / 18%)">
     <p style="font-size:22px;background: #21D789;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest1"></use></svg> <span style="font-size:22px;font-weight:900">Free version</span></p>
-    <b style="padding-left:1.7rem;font-weight:900">Basic API debugging plugin</b>
+    <b style="padding-left:1.7rem;font-weight:900">Basic API debug plugin</b>
     <div style="padding-left:1.7rem;margin-top:1rem;">
         <span class="badge" style="vertical-align: middle;background: #FE2857">IDEA 2020.3~2021.1.3</span>
         <span class="badge" style="vertical-align: middle;background: #07C3F2">Basic usage</span>

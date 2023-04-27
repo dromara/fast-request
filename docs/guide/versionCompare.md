@@ -5,7 +5,7 @@ title: 版本对比
 
 收费版本将推出更多**优秀**并且**人性化**的功能，欢迎大家使用！
 
-<div style="display: flex;width:135%">
+<div style="display: flex;width:125%">
 <div class="hint-container tip" style="width:50%; background: rgb(39 117 182 / 38%);border-color: rgb(39 117 182 / 38%);">
     <p style="font-size:22px;background: #087CFA;border-radius:0.2rem;"><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>   <span style="font-size:22px;font-weight:900">收费版</span></p>
     <b style="padding-left:1.7rem;font-weight:900">深度优化的领先的智能API调试插件</b>
