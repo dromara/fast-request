@@ -100,6 +100,7 @@ export default hopeTheme({
       container: true,
       flowchart: true,
       imgLazyload: true,
+      mermaid: true,
       card: true,
       include: {
         resolvePath: (file) =>

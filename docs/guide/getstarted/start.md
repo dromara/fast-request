@@ -3,21 +3,19 @@ title: 快速开始
 icon: start1
 ---
 
-```flow
-st=>start: 开始
-cfg=>parallel: 配置
-op1=>subroutine: 配置项目名
-op2=>subroutine: 配置环境名
-op20=>operation: 设置域名
-op21=>parallel: 返回主界面
-op3=>operation: 选择项目名
-op4=>operation: 选择环境名
-op5=>inputoutput: 点击方法左侧火箭R字图标
-op6=>operation: 点击发送按钮
-e=>end: 结束|future
-st(bottom)->cfg(path1,right)->op1(bottom)->op20->op21(path1,right)->op3->op5
-st(bottom)->cfg(path2,left)->op2(bottom)->op20->op21(path2,bottom)->op4->op5
-op5->op6->e
+```mermaid
+flowchart TB
+A[开始] -->B(配置)
+B -->D[配置环境名]
+B -->E[配置环境名]
+D --> F[设置域名]
+E --> F[设置域名]
+F-->G[返回主界面]
+G-->H[选择项目名]
+G-->I[选择环境名]
+H-->J[点击方法左侧火箭R字图标]
+I-->J[点击方法左侧火箭R字图标]
+J-->K[点击发送按钮]
 ```
 
 ::: tip 使用入门

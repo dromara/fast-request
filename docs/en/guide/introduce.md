@@ -40,7 +40,7 @@ or fix bugs you didn't find during the upgrade process).
 {
   "title": "Kings",
   "desc": "<b>Make it easier...faster...stronger...</b><br/>",
-  "logo": "/img/fastRequest.svg",
+  "logo": "/fast-request/img/fastRequest.svg",
   "link": "https://github.com/kings1990",
   "color": "rgb(39 117 182 / 38%)"
 }
