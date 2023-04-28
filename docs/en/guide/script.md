@@ -247,6 +247,10 @@ if(myResponse.isOk()){
 - Groovy scripts are not sensitive to `;`, Java uses `;` as the end of the statement code, Groovy uses a newline to indicate the end of a code
 - The built-in variable has been declared. For example, in Demo 2, if an additional request needs to be created, the variable name needs to be noted that it cannot be the same as the built-in variable.
 
+## Skill
+In order to get method hints, if you need to use the built-in variables `request` and `response`, you can declare variable ```HttpRequest request or HttpResponse response``` first when writing a script, and then delete it after finish the script
+
+
 ## Script contribute :star2:
 
 In order to make the script more powerful, community script are welcome, and developers can donate the script in comments, develop can ==vote== the script if you think the script help much,
