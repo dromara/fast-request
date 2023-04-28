@@ -206,6 +206,20 @@ request.header("sign",sign)
 
 ::: tip 2. 利用某一个请求的响应充当请求的 Header 参数
 
+注意获取token的逻辑得结合接口返回的数据结构来处理。例如返回
+```json
+{
+    "success":true,
+    "code":200,
+    "data":{
+        "token":"xxxxx"
+    }
+}
+```
+则需要这么写
+`JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")`
+
+
 ```groovy
 import cn.hutool.core.util.CharsetUtil
 import cn.hutool.core.util.StrUtil

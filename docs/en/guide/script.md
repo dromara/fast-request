@@ -206,6 +206,23 @@ request.header("sign",sign)
 
 ::: tip 2. Use the response of a request as the Header parameter of the request.
 
+Note that the logic of obtaining the token must be handled in conjunction with the data structure returned by the http response. For example, if response returns
+
+```json
+{
+    "success":true,
+    "code":200,
+    "data":{
+        "token":"xxxxx"
+    }
+}
+```
+
+It needs to be written like this
+
+`String token = JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")`
+
+
 ```groovy
 import cn.hutool.core.util.CharsetUtil
 import cn.hutool.core.util.StrUtil
