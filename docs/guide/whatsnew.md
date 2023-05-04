@@ -38,6 +38,11 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2023.1.5 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LigntPink"/>
+- <Badge text="编辑器图标位置" type="info"/>
+- <Badge text="SearchEveryWhere样式错乱" type="danger"/>
+- <Badge text="URL变量替换" type="danger"/>
+
 ## 2023.1.4.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="项目级配置域名编辑错误" type="danger"/>
 - <Badge text="headers分组加载错误" type="danger"/>

@@ -35,6 +35,21 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 更多详情请看 -> [团队协作支持](./teamwork.md)
 
 :::
+## 2023.1.5 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+- <Badge text="编辑器图标位置" type="info"/>
+- <Badge text="SearchEveryWhere样式错乱" type="danger"/>
+- <Badge text="URL变量替换" type="danger"/>
+
+::: info 编辑器图标位置
+从原先按钮容易挡住文本的位置移至编辑器右上角
+
+![editorAction](/img/2023.1.5/editorAction.png)
+
+:::
+
+::: danger SearchEveryWhere样式错乱
+这个问题伴随了很多版本，该版本彻底修复了。SearchEveryWhere不会出现Tab宽度变大而导致Tab显示不全
+:::
 
 ## 2023.1.4.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="项目级配置域名编辑错误" type="danger"/>

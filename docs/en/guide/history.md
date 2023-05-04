@@ -36,6 +36,24 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
+## 2023.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="Editor icon location" type="info"/>
+- <Badge text="SearchEveryWhere style confusion" type="danger"/>
+- <Badge text="URL variable replacing" type="danger"/>
+
+::: info Editor icon location
+Move from the original button where it is easy to block the text to the upper right corner of the editor
+
+![editorAction](/img/2023.1.5/editorAction.png)
+
+:::
+
+::: danger SearchEveryWhere style confusion
+This issue accompanies many versions and this version completely fixes it. 
+
+SearchEveryWhere, from now on, will not have the problem of the tab width increasing and causing the tab to not be fully displayed.
+:::
+
 ## v2023.1.4.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Domain edit error in project domain config" type="danger"/>
 - <Badge text="headers group load error" type="danger"/>
