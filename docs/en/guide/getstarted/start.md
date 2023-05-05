@@ -3,20 +3,35 @@ title: Get started
 icon: start1
 ---
 
-```mermaid
-flowchart TB
-A[Start] -->B(Config)
-B -->D[Add project name]
-B -->E[Add env name]
-D --> F[Set domain]
-E --> F[Set domain]
-F-->G[Return main interface]
-G-->H[Select project]
-G-->I[Select env]
-H-->J[Click R icon button on method left]
-I-->J[Click send button]
-J-->K[End]
-```
+![](/img/start_en.svg)
+
+[comment]: <> (```mermaid)
+
+[comment]: <> (flowchart TB)
+
+[comment]: <> (A[Start] -->B&#40;Config&#41;)
+
+[comment]: <> (B -->D[Add project name])
+
+[comment]: <> (B -->E[Add env name])
+
+[comment]: <> (D --> F[Set domain])
+
+[comment]: <> (E --> F[Set domain])
+
+[comment]: <> (F-->G[Return main interface])
+
+[comment]: <> (G-->H[Select project])
+
+[comment]: <> (G-->I[Select env])
+
+[comment]: <> (H-->J[Click R icon button on method left])
+
+[comment]: <> (I-->J[Click send button])
+
+[comment]: <> (J-->K[End])
+
+[comment]: <> (```)
 
 ::: tip How to
 

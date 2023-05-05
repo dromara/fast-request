@@ -3,20 +3,35 @@ title: 快速开始
 icon: start1
 ---
 
-```mermaid
-flowchart TB
-A[开始] -->B(配置)
-B -->D[配置环境名]
-B -->E[配置环境名]
-D --> F[设置域名]
-E --> F[设置域名]
-F-->G[返回主界面]
-G-->H[选择项目名]
-G-->I[选择环境名]
-H-->J[点击方法左侧火箭R字图标]
-I-->J[点击方法左侧火箭R字图标]
-J-->K[点击发送按钮]
-```
+![](/img/start.svg)
+
+[comment]: <> (```mermaid)
+
+[comment]: <> (flowchart TB)
+
+[comment]: <> (A[开始] -->B&#40;配置&#41;)
+
+[comment]: <> (B -->D[配置环境名])
+
+[comment]: <> (B -->E[配置环境名])
+
+[comment]: <> (D --> F[设置域名])
+
+[comment]: <> (E --> F[设置域名])
+
+[comment]: <> (F-->G[返回主界面])
+
+[comment]: <> (G-->H[选择项目名])
+
+[comment]: <> (G-->I[选择环境名])
+
+[comment]: <> (H-->J[点击方法左侧火箭R字图标])
+
+[comment]: <> (I-->J[点击方法左侧火箭R字图标])
+
+[comment]: <> (J-->K[点击发送按钮])
+
+[comment]: <> (```)
 
 ::: tip 使用入门
 
