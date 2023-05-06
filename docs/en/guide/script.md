@@ -11,14 +11,23 @@ The groovy syntax is almost identical to Java.
 
 ## Script flow chart
 
-```flow
-st=>start: Start
-op1=>inputoutput: Pre-request script
-op2=>subroutine: Do request
-op3=>operation: Post-request script
-e=>end: End
-st(bottom)->op1(right)->op2(right)->op3->e
-```
+![](/img/script_en.svg)
+
+[comment]: <> (```flow)
+
+[comment]: <> (st=>start: Start)
+
+[comment]: <> (op1=>inputoutput: Pre-request script)
+
+[comment]: <> (op2=>subroutine: Do request)
+
+[comment]: <> (op3=>operation: Post-request script)
+
+[comment]: <> (e=>end: End)
+
+[comment]: <> (st&#40;bottom&#41;->op1&#40;right&#41;->op2&#40;right&#41;->op3->e)
+
+[comment]: <> (```)
 
 ## Test Project
 

@@ -12,14 +12,23 @@ headerDepth: 4
 
 ## 脚本流程图
 
-```flow
-st=>start: Start
-op1=>inputoutput: 前置脚本
-op2=>subroutine: Do request
-op3=>operation: 后置脚本
-e=>end: End
-st(bottom)->op1(right)->op2(right)->op3->e
-```
+![](/img/script.svg)
+
+[comment]: <> (```flow)
+
+[comment]: <> (st=>start: Start)
+
+[comment]: <> (op1=>inputoutput: 前置脚本)
+
+[comment]: <> (op2=>subroutine: Do request)
+
+[comment]: <> (op3=>operation: 后置脚本)
+
+[comment]: <> (e=>end: End)
+
+[comment]: <> (st&#40;bottom&#41;->op1&#40;right&#41;->op2&#40;right&#41;->op3->e)
+
+[comment]: <> (```)
 
 ## 测试项目
 
