@@ -101,6 +101,10 @@ def response = request.execute()
 # S: 最佳视觉效果
 调整工具窗口宽度至`610`+像素，达到最佳视觉效果
 
+## Q: 操作按钮不可见
+点击 `Options` 勾选 `Show Toolbar`
+![](/img/faq/showToolbar.png)
+
 ## Q: 生成参数、跳转错乱
 **A:** controller代码里面不要出现方法名一样的方法
 

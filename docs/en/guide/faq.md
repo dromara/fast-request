@@ -101,6 +101,10 @@ For the saved API, you modify it again, and you need manually fill in the parame
 # S: Best Visual Effects
 Adjust tool window width to `610`+ pixel and will achieve the best visual effect
 
+## Q: Action buttons are not visible
+Click `Options` and check `Show Toolbar`
+![](/img/faq/showToolbar.png)
+
 ## Q: Generate parameters、jump error
 **A:** Do not have methods with the same method name in the controller code
 
