@@ -41,7 +41,7 @@ h2 {
     text-align: center;
 
     img {
-      max-height: 330px;
+      max-height: 300px;
       margin: 50px auto 0;
     }
 
@@ -104,32 +104,34 @@ h2 {
 // navbar
 .navbar {
 
-  .site-name {
-      font-family: bobohei, sans-serif;
-      background-color: var(--theme-color);
-      position: relative;
-      color: transparent;
-      background-clip: text;
-  }
-  .site-name::after {
-      content: 'Fast Request';
-      position: absolute;
-      font-family: bobohei, sans-serif;
-      left: 0;
-      top: -6px;
-      background-image: linear-gradient(120deg, transparent 0%, transparent 1rem, white 2rem, transparent 3.15rem, transparent 100%);
-      background-clip: text;
-      background-size: 200% 120%;
-      background-repeat: no-repeat;
-      animation: shine 5s infinite linear;
-  }
-  @keyframes shine {
-  	0% {
-  		background-position: 50% 0;
-  	}
-  	100% {
-  		background-position: -190% 0;
-  	}
+  @media (min-width: 1200px) {
+      .site-name {
+          font-family: bobohei, sans-serif;
+          background-color: var(--theme-color);
+          position: relative;
+          color: transparent;
+          background-clip: text;
+      }
+      .site-name::after {
+          content: 'Fast Request';
+          position: absolute;
+          font-family: bobohei, sans-serif;
+          left: 0;
+          top: -6px;
+          background-image: linear-gradient(120deg, transparent 0%, transparent 1rem, white 2rem, transparent 3.15rem, transparent 100%);
+          background-clip: text;
+          background-size: 200% 120%;
+          background-repeat: no-repeat;
+          animation: shine 5s infinite linear;
+      }
+      @keyframes shine {
+        0% {
+            background-position: 50% 0;
+        }
+        100% {
+            background-position: -190% 0;
+        }
+      }
   }
 
   .nav-item > .nav-link {

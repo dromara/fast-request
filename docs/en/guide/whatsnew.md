@@ -37,8 +37,16 @@ We also hope that developers will promote and share the Restful Fast Request plu
 More details -> [Teamwork support](./teamwork.md)
 
 :::
+## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="Header batch edit" type="tip"/>
+- <Badge text="Idea hang when debug in post script" type="danger"/>
 
-## v2023.1.4.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## 2023.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+- <Badge text="Editor icon location" type="info"/>
+- <Badge text="SearchEveryWhere style confusion" type="danger"/>
+- <Badge text="URL variable replacing" type="danger"/>
+
+## v2023.1.4.2 <Badge text="Free trial" type="tip"/>
 - <Badge text="Domain edit error in project domain config" type="danger"/>
 - <Badge text="headers group load error" type="danger"/>
 

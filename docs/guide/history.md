@@ -35,7 +35,17 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 更多详情请看 -> [团队协作支持](./teamwork.md)
 
 :::
-## 2023.1.5 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+## 2023.1.6 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+- <Badge text="Header批量编辑" type="tip"/>
+- <Badge text="后置脚本发起请求idea debug卡死" type="danger"/>
+
+::: tip Header批量编辑
+
+![batchEdit](/img/2023.1.6/batchEdit.png)
+
+:::
+
+## 2023.1.5 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="编辑器图标位置" type="info"/>
 - <Badge text="SearchEveryWhere样式错乱" type="danger"/>
 - <Badge text="URL变量替换" type="danger"/>
@@ -51,7 +61,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 这个问题伴随了很多版本，该版本彻底修复了。SearchEveryWhere不会出现Tab宽度变大而导致Tab显示不全
 :::
 
-## 2023.1.4.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.4.2 <Badge text="免费试用" type="tip"/>  
 - <Badge text="项目级配置域名编辑错误" type="danger"/>
 - <Badge text="headers分组加载错误" type="danger"/>
 
