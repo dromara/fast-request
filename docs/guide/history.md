@@ -35,6 +35,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 更多详情请看 -> [团队协作支持](./teamwork.md)
 
 :::
+
+::: tip 直播使用答疑
+**2023-05-25 20:30在Bilibili**直播答疑，欢迎提出问题，扫码预约不错过
+
+![使用答疑](/img/bilibili/20230524.jpg)
+
+:::
+
 ## 2023.1.6 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
 - <Badge text="Header批量编辑" type="tip"/>
 - <Badge text="后置脚本发起请求idea debug卡死" type="danger"/>

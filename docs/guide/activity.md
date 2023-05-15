@@ -3,6 +3,11 @@ title: 活动
 icon: activity
 ---
 
+## 20230524
+使用答疑，欢迎提出问题
+
+![使用答疑](/img/bilibili/20230524.jpg)
+
 ## 20221024
 
 微信参与抽奖 1 年 license 8 名，半年 license 15 名
