@@ -63,7 +63,7 @@ export default hopeTheme({
             path: "/",
             title: "将于<b>2023-05-25 20:30在Bilibili</b>直播答疑",
             content:
-              '<div>扫码预约不错过</div><div class="addthis_inline_follow_toolbox_qssu"></div>',
+              '<div>扫码预约不错过，还有免费License赠送</div><div class="addthis_inline_follow_toolbox_qssu"></div>',
             actions: [
               {
                 text: "了解详情→",

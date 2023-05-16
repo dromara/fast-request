@@ -37,7 +37,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ::: tip 直播使用答疑
-**2023-05-25 20:30在Bilibili**直播答疑，欢迎提出问题，扫码预约不错过
+**2023-05-25 20:30在Bilibili**直播答疑，欢迎提出问题，扫码预约不错过，还有免费License赠送
 
 ![使用答疑](/img/bilibili/20230524.jpg)
 
