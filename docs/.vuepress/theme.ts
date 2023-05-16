@@ -18,13 +18,6 @@ export default hopeTheme({
   pageInfo: false,
 
   darkmode: "enable",
-  themeColor: {
-    pink: "#f26d6d",
-    lightBlue: "#07c3f2",
-    orange: "#fc801d",
-    blue: "#087cfa",
-    red: "#fe2857",
-  },
 
   iconAssets: "//at.alicdn.com/t/c/font_2601581_qdgotug8lt.css",
 
