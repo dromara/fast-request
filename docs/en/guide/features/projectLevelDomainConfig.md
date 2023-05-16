@@ -17,10 +17,10 @@ The advantage of using project-level config is that when there are many projects
 
 ![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog_en.png "Domain list")
 
-
 ::: tip Value taken
+
 1. For file with environment names such as `application-dev.properties`, plugin will automatically adapt the variables between `-` and `. ` as environment names.
 2. Project name comes from module name
 3. Domain = `http://localhost:port/context-path`
-:::
 
+:::

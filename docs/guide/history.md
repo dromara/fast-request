@@ -26,34 +26,37 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ::: danger 重量级更新：团队协作支持
-我们费了非常大的精力，对插件进行了重大的重构，将原先的**单机版**改成了支持**团队协作版**，通过文件版本管理系统，实现部分配置及所有API的**共享**。
+我们费了非常大的精力，对插件进行了重大的重构，将原先的**单机版**改成了支持**团队协作版**，通过文件版本管理系统，实现部分配置及所有 API 的**共享**。
 
-但是可能也带来了一些bug，希望开发者能体谅！
+但是可能也带来了一些 bug，希望开发者能体谅！
 
-同时我们也希望开发者们能在团队中推广并分享Restful Fast Request插件，再次非常感谢！
+同时我们也希望开发者们能在团队中推广并分享 Restful Fast Request 插件，再次非常感谢！
 
 更多详情请看 -> [团队协作支持](./teamwork.md)
 
 :::
 
 ::: tip 直播使用答疑
-**2023-05-25 20:30在Bilibili**直播答疑，欢迎提出问题，扫码预约不错过，还有免费License赠送
+
+**2023-05-25 20:30 在 Bilibili**直播答疑，欢迎提出问题，扫码预约不错过，还有免费 License 赠送
 
 ![使用答疑](/img/bilibili/20230524.jpg)
 
 :::
 
-## 2023.1.6 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+
 - <Badge text="Header批量编辑" type="tip"/>
 - <Badge text="后置脚本发起请求idea debug卡死" type="danger"/>
 
-::: tip Header批量编辑
+::: tip Header 批量编辑
 
 ![batchEdit](/img/2023.1.6/batchEdit.png)
 
 :::
 
-## 2023.1.5 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.5 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+
 - <Badge text="编辑器图标位置" type="info"/>
 - <Badge text="SearchEveryWhere样式错乱" type="danger"/>
 - <Badge text="URL变量替换" type="danger"/>
@@ -65,18 +68,21 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-::: danger SearchEveryWhere样式错乱
-这个问题伴随了很多版本，该版本彻底修复了。SearchEveryWhere不会出现Tab宽度变大而导致Tab显示不全
+::: danger SearchEveryWhere 样式错乱
+这个问题伴随了很多版本，该版本彻底修复了。SearchEveryWhere 不会出现 Tab 宽度变大而导致 Tab 显示不全
 :::
 
-## 2023.1.4.2 <Badge text="免费试用" type="tip"/>  
+## 2023.1.4.2 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="项目级配置域名编辑错误" type="danger"/>
 - <Badge text="headers分组加载错误" type="danger"/>
 
 ## 2023.1.4.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="修复多模块项目自动域名找不到配置文件" type="danger"/>
 
 ## 2023.1.4 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="自动域名" type="tip"/>
 - <Badge text="SearchEveryWhere支持搜索jar包中的url" type="tip"/>
 - <Badge text="Script项目级别头设置失败" type="danger"/>
@@ -86,29 +92,30 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ## 2023.1.3.2 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="重量级更新：团队协作支持" type="tip"/>
 - <Badge text="OpenAI API接口优化字段支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
-- <Badge text="rfr.currentModuleName支持" type="tip"/> 
-- <Badge text="Api文档同步支持自定义分支" type="info"/>  
-- <Badge text="工具栏" type="info"/>  
+- <Badge text="rfr.currentModuleName支持" type="tip"/>
+- <Badge text="Api文档同步支持自定义分支" type="info"/>
+- <Badge text="工具栏" type="info"/>
 - <Badge text="LocalDateTime、LocalDate、LocalTime解析优化" type="info"/>
-- <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>  
+- <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>
 - <Badge text="IDEA 2023.1 响应未格式化" type="danger"/>
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
 - <Badge text="Kotlin字段注释未生成" type="danger"/>
 
-[FAQ:安装过2023.1.3版本的数据丢失](./faq.md#s-apis%E4%B8%A2%E5%A4%B1)
+[FAQ:安装过 2023.1.3 版本的数据丢失](./faq.md#s-apis%E4%B8%A2%E5%A4%B1)
 
-::: tip OpenAI API接口优化字段支持
-利用[OpenAI接口](https://platform.openai.com/docs/api-reference/chat)，替换随机字段值。注意由于API是非结构向数据，所以返回的内容可能会有误差。
+::: tip OpenAI API 接口优化字段支持
+利用[OpenAI 接口](https://platform.openai.com/docs/api-reference/chat)，替换随机字段值。注意由于 API 是非结构向数据，所以返回的内容可能会有误差。
 
 ![AI](/img/2023.1.3/ai.gif)
 :::
 
-::: tip API与存储文件跳转
-实现API以及底层保存的json数据进行关联跳转
+::: tip API 与存储文件跳转
+实现 API 以及底层保存的 json 数据进行关联跳转
 
 ![jumpToJsonData](/img/2023.1.3/jumpToJsonData.png)
 
@@ -116,23 +123,24 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ::: tip 项目配置刷新
-配置文件更新后，UI实现项目级别配置更新
+配置文件更新后，UI 实现项目级别配置更新
 
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 :::
 
-::: tip rfr.currentModuleName支持
-[脚本](./script.md#rfr)中用于获取当前API所属模块支持
+::: tip rfr.currentModuleName 支持
+[脚本](./script.md#rfr)中用于获取当前 API 所属模块支持
 :::
 
-::: info Api文档同步支持自定义分支
+::: info Api 文档同步支持自定义分支
 
-支持特定分支，因为有些情况下master被保护不允许push
+支持特定分支，因为有些情况下 master 被保护不允许 push
 
 ![apiSyncSupportBranch](/img/2023.1.3/apiSyncSupportBranch.png)
 :::
 
 ::: info 工具栏
+
 1. 垂直工具栏支持
 2. 按钮位置调整和折叠
 
@@ -143,15 +151,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![toolbarSetting](/img/2023.1.3/toolbarSetting.png)
 :::
 
-::: info GET、POST、DELETE、PUT、PATCH图标
+::: info GET、POST、DELETE、PUT、PATCH 图标
 对图标进行了圆角处理，并且调整了背景色
 
 ![toolbar](/img/2023.1.3/apis.png)
 :::
 
+## 2023.1.2 <Badge text="免费试用" type="tip"/>
 
-
-## 2023.1.2 <Badge text="免费试用" type="tip"/>  
 - <Badge text="图片响应渲染" type="tip"/>
 - <Badge text="年度报告" type="tip"/>
 - <Badge text="Url解析逻辑" type="info"/>
@@ -169,14 +176,15 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ::: tip 年度报告
-统计了历年操作的数据，你是否要来**PK**一把。此处省略1个狗头
+统计了历年操作的数据，你是否要来**PK**一把。此处省略 1 个狗头
 ![annualReport](/img/2023.1.2/annualReport.png)
 :::
 
-::: info Url解析逻辑
-优化了url针对变量拼接的最终结果，例如几个变量拼接最终计算出一个url。
+::: info Url 解析逻辑
+优化了 url 针对变量拼接的最终结果，例如几个变量拼接最终计算出一个 url。
 
-插件将最终计算出url=`/test/a.htm`
+插件将最终计算出 url=`/test/a.htm`
+
 ```java
 public class MyConstant {
   public static final String MODULE_NAME = "a";
@@ -188,30 +196,32 @@ public class MyConstant {
   return "";
 }
 ```
+
 :::
 
-::: info cUrl导入
-1. 自动解析query param进入`Url params` tab页
-2. json解析优化
-3. 已知bug修复
+::: info cUrl 导入
+
+1. 自动解析 query param 进入`Url params` tab 页
+2. json 解析优化
+3. 已知 bug 修复
+   :::
+
+::: info Url 特殊字符编码
+针对带 query param 的 url 中的参数值待特殊字符进行了处理，不需要用户再额外进行特殊编码再传参
 :::
 
-::: info Url特殊字符编码
-针对带query param的url中的参数值待特殊字符进行了处理，不需要用户再额外进行特殊编码再传参
+::: info Url 输入框回车事件
+url 输入框点击回车，自动发送请求
 :::
-
-::: info Url输入框回车事件
-url输入框点击回车，自动发送请求
-:::
-
 
 ## 2023.1.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
 - <Badge text="项目级别域名配置" type="tip"/>
 - <Badge text="图标排版" type="info"/>
 - <Badge text="新UI工具窗口图标" type="info"/>
 - <Badge text="项目级别头参数可选" type="info"/>
-- <Badge text="Cookie取值" type="info"/>  
+- <Badge text="Cookie取值" type="info"/>
 - <Badge text="基础类型Swagger默认值解析" type="danger"/>
 - <Badge text="数组不解析" type="danger"/>
 
@@ -227,17 +237,18 @@ url输入框点击回车，自动发送请求
 对按钮进行了归类整理，让开发者更加容易找到和理解对应按钮的功能。
 :::
 
-::: info 新UI工具窗口图标
-新UI下工具窗口图标清晰度进行了优化。
+::: info 新 UI 工具窗口图标
+新 UI 下工具窗口图标清晰度进行了优化。
 :::
 
 ## 2022.3.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
 - <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
 - <Badge text="激活提示优化" type="info"/>
 - <Badge text="Kotlin和Java混编导致Navigate加载api失败" type="danger"/>
 
-::: tip 注释增加@parseIgnore用来忽略字段解析
+::: tip 注释增加@parseIgnore 用来忽略字段解析
 
 以下的代码，插件会忽略解析该字段，请使用`@parseIgnore`
 
@@ -248,12 +259,12 @@ url输入框点击回车，自动发送请求
  */
 private String someIgnoreField ;
 ```
+
 :::
 
-::: tip Script中增加rfr.currentDomain支持
+::: tip Script 中增加 rfr.currentDomain 支持
 在脚本中可以通过`rfr.currentDomain`获取当前作用的域名
 :::
-
 
 ## 2022.2.9 <Badge text="免费试用" type="tip"/>
 
@@ -275,7 +286,7 @@ private String someIgnoreField ;
 - <Badge text="检查更新报错" type="danger"/>
 
 ::: info 下载文件适配
-当response加了`content-disposition:attachment`，点击send自动适配下载
+当 response 加了`content-disposition:attachment`，点击 send 自动适配下载
 :::
 
 ## v2022.2.7 <Badge text="免费试用" type="tip"/>

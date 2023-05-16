@@ -18,4 +18,4 @@
 
 以下是 book 列表 3 种语言的查询,点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg>进行切换
 
-![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif  "切换分组")
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif "切换分组")

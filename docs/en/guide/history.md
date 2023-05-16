@@ -37,6 +37,7 @@ More details -> [Teamwork support](./teamwork.md)
 :::
 
 ## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+
 - <Badge text="Header batch edit" type="tip"/>
 - <Badge text="Idea hang when debug in post script" type="danger"/>
 
@@ -47,6 +48,7 @@ More details -> [Teamwork support](./teamwork.md)
 :::
 
 ## 2023.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+
 - <Badge text="Editor icon location" type="info"/>
 - <Badge text="SearchEveryWhere style confusion" type="danger"/>
 - <Badge text="URL variable replacing" type="danger"/>
@@ -59,21 +61,24 @@ Move from the original button where it is easy to block the text to the upper ri
 :::
 
 ::: danger SearchEveryWhere style confusion
-This issue accompanies many versions and this version completely fixes it. 
+This issue accompanies many versions and this version completely fixes it.
 
 SearchEveryWhere, from now on, will not have the problem of the tab width increasing and causing the tab to not be fully displayed.
 :::
 
-## v2023.1.4.2 <Badge text="Free trial" type="tip"/> 
+## v2023.1.4.2 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Domain edit error in project domain config" type="danger"/>
 - <Badge text="headers group load error" type="danger"/>
 
 ## v2023.1.4.1 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Fix Auto domain of multi-module project" type="danger"/>
 
 ## v2023.1.4 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Auto domain" type="tip"/>
-- <Badge text="SearchEveryWhere supports searching URLs in jar" type="tip"/>  
+- <Badge text="SearchEveryWhere supports searching URLs in jar" type="tip"/>
 - <Badge text="Set project header error in Script" type="danger"/>
 
 ::: tip Auto domain
@@ -81,6 +86,7 @@ Automatically identify or add a default domain,---->[More detail](./features/aut
 :::
 
 ## v2023.1.3.2 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Teamwork support" type="tip"/>
 - <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
@@ -129,6 +135,7 @@ Support custom branch, as in some cases the 'master' branch is protected and doe
 :::
 
 ::: info Toolbar
+
 1. Add vertical toolbar support.
 2. Button position adjustment
 
@@ -145,8 +152,8 @@ Rounded corners and adjusted background colour for icons.
 ![toolbar](/img/2023.1.3/apis.png)
 :::
 
-
 ## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+
 - <Badge text="Image render from response" type="tip"/>
 - <Badge text="Annual report" type="tip"/>
 - <Badge text="Url parse logic" type="info"/>
@@ -173,6 +180,7 @@ Statistics for previous years of operation.
 Optimised the final result of url splicing against variables. For example, splicing several variables finally calculates a url
 
 Plugin will calculate final url to `/test/a.htm`
+
 ```java
 public class MyConstant {
   public static final String MODULE_NAME = "a";
@@ -184,9 +192,11 @@ public class MyConstant {
   return "";
 }
 ```
+
 :::
 
 ::: info cUrl import
+
 1. automatic parsing of query param into `Url params` tab page
 2. json parsing optimization
 3. Known bug fixes
@@ -197,16 +207,17 @@ We have done some optimization, no longer need to encode special characters in u
 :::
 
 ::: info Add send request trigger to url field
-Add `Enter` key listener to url field that can send the request. 
+Add `Enter` key listener to url field that can send the request.
 :::
 
 ## v2023.1.1 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>
 - <Badge text="Icon alignment" type="info"/>
 - <Badge text="Tool window icon in new UI" type="info"/>
 - <Badge text="Make Project-level headers value optional" type="info"/>
-- <Badge text="Cookie fetch" type="info"/>  
+- <Badge text="Cookie fetch" type="info"/>
 - <Badge text="Swagger default value for basic type" type="danger"/>
 - <Badge text="Array not parse" type="danger"/>
 
@@ -228,6 +239,7 @@ The clarity of the tool window icons has been optimised under the new UI.
 :::
 
 ## v2022.3.1 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Add @parseIgnore comment support for parse" type="tip"/>
 - <Badge text="Add rfr.currentDomain in Script" type="tip"/>
 - <Badge text="Activation prompt optimization" type="info"/>
@@ -244,6 +256,7 @@ The following code, the plugin will ignore parsing this field. Please use `@pars
  */
 private String someIgnoreField ;
 ```
+
 :::
 
 ::: tip Add rfr.currentDomain in Script

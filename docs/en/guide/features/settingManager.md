@@ -6,5 +6,4 @@ Please use <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-
 
 Quickly locate the configuration management interface.
 
-
 ![settingManager](/img/settingManager_en.png)

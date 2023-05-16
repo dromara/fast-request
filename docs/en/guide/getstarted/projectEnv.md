@@ -2,6 +2,7 @@
 title: Project/Env/Domain
 icon: config2
 ---
+
 ::: danger Suggestion
 It is recommended to use [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](../features/projectLevelDomainConfig.md)，original config will be used as global config and will have a lower priority than project level config.
 

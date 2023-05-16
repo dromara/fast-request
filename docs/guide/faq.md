@@ -4,25 +4,29 @@ icon: faq
 ---
 
 > 关键字含义
-> <Badge text="S: 技巧" color="#087CFA" /> <Badge text="Q: 问题" color="#FE2857" /> <Badge text="A: 答案" color="#21D789" />  
->  ---
-> 我们将持续更新开发者遇到的问题以及解决方案 
+> <Badge text="S: 技巧" color="#087CFA" /> <Badge text="Q: 问题" color="#FE2857" /> <Badge text="A: 答案" color="#21D789" />
+>
+> ---
+>
+> 我们将持续更新开发者遇到的问题以及解决方案
 
 [[toc]]
+
 ## S: 快捷添加域名
+
 请参考 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目级别域名配置](./features/projectLevelDomainConfig.md)
 (插件版本>=**2023.1.1**)
 
-## S: APIs丢失
-非常抱歉，安装过2023.1.3版本的(已隐藏)会导致历史apis丢失，此时需要手动找回数据。==请不要回退插件版本==
+## S: APIs 丢失
+
+非常抱歉，安装过 2023.1.3 版本的(已隐藏)会导致历史 apis 丢失，此时需要手动找回数据。==请不要回退插件版本==
 
 0. 下载插件版本>=2023.1.3.2+的版本
-1. 找到项目下的.idea目录，右键并点击Local history(本地历史记录)，找到关于`.idea/FastRequestCollection.xml`的变更日志(标题包含了Deleting)，找到最后一个版本，把其中的内容拷贝到`.idea/fastRequest/fastRequestCollection.xml`中，
-2. 重启idea
-3. 在APIs tab下点击图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-dataTransfer"></use></svg>并确认数据转移
+1. 找到项目下的.idea 目录，右键并点击 Local history(本地历史记录)，找到关于`.idea/FastRequestCollection.xml`的变更日志(标题包含了 Deleting)，找到最后一个版本，把其中的内容拷贝到`.idea/fastRequest/fastRequestCollection.xml`中，
+2. 重启 idea
+3. 在 APIs tab 下点击图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-dataTransfer"></use></svg>并确认数据转移
 
 ![dataTransfer20231](/img/faq/dataTransfer202313.png)
-
 
 ## S: Url 错误
 
@@ -33,16 +37,18 @@ icon: faq
 2. 设置正确的url，例如需要将url上的变量{id}替换，可以在Path Param tab中替换变量
 
 ## S: 解析如何忽略某个字段
-方式1： 使用如下2种注解中的一种
+
+方式 1： 使用如下 2 种注解中的一种
+
 ```
 com.fasterxml.jackson.annotation.JsonIgnore
 
 com.alibaba.fastjson.annotation.JSONField(serialize = false)
 ```
 
-方式2： 给字段增加 `static` 修饰符
+方式 2： 给字段增加 `static` 修饰符
 
-方式3：注释上加@parseIgnore
+方式 3：注释上加@parseIgnore
 
 ```java
 /**
@@ -77,7 +83,9 @@ private String someIgnoreField ;
 参考[临时请求](./features/tempRequest.md)
 
 ## S: 写脚本时得到提示
+
 复制一下代码，完成脚本编辑后删除
+
 ```
 import cn.hutool.http.HttpUtil
 
@@ -85,45 +93,49 @@ def request = HttpUtil.createGet("shouldremove")
 def response = request.execute()
 ```
 
-## S: API文档同步
+## S: API 文档同步
 
-当你修改了你的接口参数，从APIs列表双击回来的api是你未更新前保存的API，此时你想保证在线API文档是你修改后的，
+当你修改了你的接口参数，从 APIs 列表双击回来的 api 是你未更新前保存的 API，此时你想保证在线 API 文档是你修改后的，
 需要再点一下 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(保存) 或者左侧图标 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> ,再进行同步。
 
-建议：不需要提前在Github、Gitee、Gitlab创建仓库，插件自动会帮助创建，开发者只需要提供仓库名就行
+建议：不需要提前在 Github、Gitee、Gitlab 创建仓库，插件自动会帮助创建，开发者只需要提供仓库名就行
 
-## S: APIs回显
+## S: APIs 回显
 
-针对保存后的api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([重新生成](/guide/features/regenerate.md))
+针对保存后的 api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([重新生成](/guide/features/regenerate.md))
 
 > 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
 
 # S: 最佳视觉效果
+
 调整工具窗口宽度至`610`+像素，达到最佳视觉效果
 
 ## Q: 操作按钮不可见
+
 点击 `Options` 勾选 `Show Toolbar`
 ![](/img/faq/showToolbar.png)
 
 ## Q: 生成参数、跳转错乱
-**A:** controller代码里面不要出现方法名一样的方法
 
-## Q: 新UI下SearchEveryWhere中Tab无法显示
+**A:** controller 代码里面不要出现方法名一样的方法
 
-**A:** 暂时先把IDEA的主题换成`Dark`，操作步骤：`打开SearchEveryWhere->输入theme->回车或者确定切换主题至Dark`，这是IDEA主题导致的bug。
+## Q: 新 UI 下 SearchEveryWhere 中 Tab 无法显示
+
+**A:** 暂时先把 IDEA 的主题换成`Dark`，操作步骤：`打开SearchEveryWhere->输入theme->回车或者确定切换主题至Dark`，这是 IDEA 主题导致的 bug。
 
 ![](/img/faq/searchEveryWhereError.png)
 
 ## Q: 左侧图标不显示
+
 左侧图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>不显示。
 
 **A:** 打开配置 `setting->Editor->Gutter icons->show gutter icon`
 
-**B:** 检查是否安装了forestx插件，该插件目前会引起Fast Request插件图标不展示
+**B:** 检查是否安装了 forestx 插件，该插件目前会引起 Fast Request 插件图标不展示
 
 ## Q: 输入参数后调用 API 发现无效
 
-**A:** 插件版本小于2022.2.3的在 table 控件编辑某个值的时候，需要在编辑完值后==先在空白处点一下==，再发送请求，该问题在 2022.2.3+版本得到修复
+**A:** 插件版本小于 2022.2.3 的在 table 控件编辑某个值的时候，需要在编辑完值后==先在空白处点一下==，再发送请求，该问题在 2022.2.3+版本得到修复
 
 ## Q: 为啥插件没反应
 
@@ -134,11 +146,11 @@ def response = request.execute()
 **A:** 你设计的实体类嵌套递归，插件不支持，比如说 A 实体类有 B 实体类的属性，B 实体类有 A 实体类的属性
 
 ```java
-public class A{
+public class A {
     private B b;
     private int xx;
 }
-public class B{
+public class B {
     private A a;
     private String xx;
 }
@@ -147,7 +159,7 @@ public class B{
 以上这种情况如果你不需要 B 属性，那么你可以在生成的时候手动给 B 加一个 static 属性
 
 ```java
-public class A{
+public class A {
     private static B b;
     private int xx;
 }

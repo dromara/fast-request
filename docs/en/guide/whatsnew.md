@@ -37,42 +37,49 @@ We also hope that developers will promote and share the Restful Fast Request plu
 More details -> [Teamwork support](./teamwork.md)
 
 :::
+
 ## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+
 - <Badge text="Header batch edit" type="tip"/>
 - <Badge text="Idea hang when debug in post script" type="danger"/>
 
 ## 2023.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+
 - <Badge text="Editor icon location" type="info"/>
 - <Badge text="SearchEveryWhere style confusion" type="danger"/>
 - <Badge text="URL variable replacing" type="danger"/>
 
 ## v2023.1.4.2 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Domain edit error in project domain config" type="danger"/>
 - <Badge text="headers group load error" type="danger"/>
 
 ## v2023.1.4.1 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Fix Auto domain of multi-module project" type="danger"/>
 
 ## v2023.1.4 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Auto domain" type="tip"/>
-- <Badge text="SearchEveryWhere supports searching URLs in jar" type="tip"/>  
+- <Badge text="SearchEveryWhere supports searching URLs in jar" type="tip"/>
 - <Badge text="Set project header error in Script" type="danger"/>
 
 ## v2023.1.3.2 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Teamwork support" type="tip"/>
 - <Badge text="OpenAI API Optimising fields support" type="tip"/>
 - <Badge text="API and API storage file jumps" type="tip"/>
 - <Badge text="Project config refresh" type="tip"/>
 - <Badge text="rfr.currentModuleName support" type="tip"/>
-- <Badge text="API doc sync supports custom branch" type="info"/>  
+- <Badge text="API doc sync supports custom branch" type="info"/>
 - <Badge text="Toolbar" type="info"/>
 - <Badge text="GET、POST、DELETE、PUT、PATCH icon" type="info"/>
 - <Badge text="LocalDateTime、LocalDate、LocalTime parse" type="info"/>
 - <Badge text="Random generate url from array url" type="danger"/>
 - <Badge text="Comment can not be generate in Kotlin" type="danger"/>
 
+## v2023.1.2 <Badge text="Free trial" type="tip"/>
 
-## v2023.1.2 <Badge text="Free trial" type="tip"/> 
 - <Badge text="Image render from response" type="tip"/>
 - <Badge text="Annual report" type="tip"/>
 - <Badge text="Url parse logic" type="info"/>
@@ -84,17 +91,18 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="API name saved error" type="danger"/>
 
 ## v2023.1.1 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Add support for quickly add domain from Yml or Properties config" type="tip"/>
 - <Badge text="Add project-level domain config" type="tip"/>
 - <Badge text="Icon alignment" type="info"/>
 - <Badge text="Tool window icon in new UI" type="info"/>
 - <Badge text="Make Project-level headers value optional" type="info"/>
-- <Badge text="Cookie fetch" type="info"/>  
+- <Badge text="Cookie fetch" type="info"/>
 - <Badge text="Swagger default value for basic type" type="danger"/>
 - <Badge text="Array not parse" type="danger"/>
 
-
 ## v2022.3.1 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="Add @parseIgnore comment support for parse" type="tip"/>
 - <Badge text="Add rfr.currentDomain in Script" type="tip"/>
 - <Badge text="Activation prompt optimization" type="info"/>

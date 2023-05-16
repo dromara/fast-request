@@ -36,6 +36,7 @@ If a new version comes out, please update to the latest version as soon as possi
 or fix bugs you didn't find during the upgrade process).
 
 ## About author
+
 ```card:json
 {
   "title": "Kings",

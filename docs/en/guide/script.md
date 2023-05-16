@@ -161,6 +161,7 @@ if(StringUtils.isNotBlank(debug)){
 ```
 
 ## Scope and order
+
 **Scope**: `Project-level` and `Single API level`，`Project-level` needs to click [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config](./features/projectValueConfig.md).
 
 `Project-level` will effort all APIs in the project, and `Single API level` only affects one API.
@@ -219,18 +220,17 @@ Note that the logic of obtaining the token must be handled in conjunction with t
 
 ```json
 {
-    "success":true,
-    "code":200,
-    "data":{
-        "token":"xxxxx"
-    }
+  "success": true,
+  "code": 200,
+  "data": {
+    "token": "xxxxx"
+  }
 }
 ```
 
 It needs to be written like this
 
 `String token = JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")`
-
 
 ```groovy
 import cn.hutool.core.util.CharsetUtil
@@ -257,8 +257,8 @@ if(myResponse.isOk()){
 - The built-in variable has been declared. For example, in Demo 2, if an additional request needs to be created, the variable name needs to be noted that it cannot be the same as the built-in variable.
 
 ## Skill
-In order to get method hints, if you need to use the built-in variables `request` and `response`, you can declare variable ```HttpRequest request or HttpResponse response``` first when writing a script, and then delete it after finish the script
 
+In order to get method hints, if you need to use the built-in variables `request` and `response`, you can declare variable `HttpRequest request or HttpResponse response` first when writing a script, and then delete it after finish the script
 
 ## Script contribute :star2:
 

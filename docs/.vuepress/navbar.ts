@@ -27,20 +27,19 @@ export const enNavbar = navbar([
     icon: "buy",
   },
   {
-      text: "Version",
-      link: "/en/guide/versionCompare",
-      icon: "versionCompare",
-    },
-    {
-        text: "🔥 Teamwork",
-        link: "/en/guide/teamwork",
-    //     icon: "teamwork",
-      },
-      {
-          text: "More",
-          children:["/en/guide/concatGroup","/guide/faq"]
-        },
-
+    text: "Version",
+    link: "/en/guide/versionCompare",
+    icon: "versionCompare",
+  },
+  {
+    text: "🔥 Teamwork",
+    link: "/en/guide/teamwork",
+    // icon: "teamwork",
+  },
+  {
+    text: "More",
+    children: ["/en/guide/concatGroup", "/guide/faq"],
+  },
 ]);
 
 export const zhNavbar = navbar([
@@ -82,7 +81,7 @@ export const zhNavbar = navbar([
   {
     text: "🔥 团队协作",
     link: "/guide/teamwork",
-//     icon: "teamwork",
+    // icon: "teamwork",
   },
   {
     text: "🎯 群聊",
@@ -90,6 +89,11 @@ export const zhNavbar = navbar([
   },
   {
     text: "更多",
-    children:["/guide/link","/guide/sponsorList","/guide/faq","/guide/activity"]
+    children: [
+      "/guide/link",
+      "/guide/sponsorList",
+      "/guide/faq",
+      "/guide/activity",
+    ],
   },
 ]);
