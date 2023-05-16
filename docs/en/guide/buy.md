@@ -74,5 +74,3 @@ Log in to your JetBrains account.
 :::
 
 **If you have some questions, please join [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) and contact me**
-
-

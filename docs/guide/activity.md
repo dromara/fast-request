@@ -4,7 +4,8 @@ icon: activity
 ---
 
 ## 20230524
-使用答疑，欢迎提出问题，还有免费License赠送
+
+使用答疑，欢迎提出问题，还有免费 License 赠送
 
 ![使用答疑](/img/bilibili/20230524.jpg)
 

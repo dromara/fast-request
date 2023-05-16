@@ -34,7 +34,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API document share](./shareApiDoc.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> Setting manager](./settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> Full screen](./fullScreen.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyse"></use></svg> Annual report](./annualReport.md) 
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyse"></use></svg> Annual report](./annualReport.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc1"></use></svg> Document / Contact](./docAndContact.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
 

@@ -5,16 +5,20 @@ icon: faq
 
 > Keywords meaning
 > <Badge text="S: Skill" color="#087CFA" /> <Badge text="Q: Question" color="#FE2857" /> <Badge text="A: Answer" color="#21D789" />
+>
 > ---
+>
 > We will constantly update the problems encountered by developers and the corresponding solutions.
 
 [[toc]]
 
 ## S: Quickly add domain
+
 Please refer [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./features/projectLevelDomainConfig.md)
 (Plugin version>=**2023.1.1**)
 
 ## S: APIs lost
+
 So sorry to inform you that installing the 2023.1.3 version of (have been hidden) will cause loss of historical APIs, and you will need to manually retrieve the data. Here's what you need to do:
 
 0. Download 2023.1.3.2+ version of plugin
@@ -34,7 +38,9 @@ So sorry to inform you that installing the 2023.1.3 version of (have been hidden
 2. Set the correct URL, for example, to replace the variable {id} on the URL, you can replace the variable in the Path Param tab
 
 ## S: How to ignore the field of the entity
+
 Way 1: Use one of the following 2 annotations.
+
 ```
 com.fasterxml.jackson.annotation.JsonIgnore
 
@@ -44,6 +50,7 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 Way 2: Add the `static` modifier to the field.
 
 Way 3: Add `@parseIgnore` in comment
+
 ```java
 /**
  * xxx description
@@ -77,7 +84,9 @@ Consider using add header by [`Common header`](./features/commonHeader.md)
 Refer to [Temporary request](./features/tempRequest.md)
 
 ## S: Get code hints while writing scripts
+
 Copy the code and delete it after finish the script
+
 ```
 import cn.hutool.http.HttpUtil
 
@@ -99,21 +108,26 @@ For the saved API, you modify it again, and you need manually fill in the parame
 > Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
 
 # S: Best Visual Effects
+
 Adjust tool window width to `610`+ pixel and will achieve the best visual effect
 
 ## Q: Action buttons are not visible
+
 Click `Options` and check `Show Toolbar`
 ![](/img/faq/showToolbar.png)
 
 ## Q: Generate parameters、jump error
+
 **A:** Do not have methods with the same method name in the controller code
 
 ## Q: Tab not displayed in SearchEveryWhere under new UI
+
 **A:** Change the theme of IDEA to`Dark`. Steps：`Open SearchEveryWhere -> Fill in 'theme' -> Enter or confirm and switch the theme to Dark`. This is a bug caused by the IDEA theme.
 
 ![](/img/faq/searchEveryWhereError.png)
 
 ## Q: Left icon missing
+
 Left icon <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> missing.
 
 **A:** Open config `setting->Editor->Gutter icons->show gutter icon`

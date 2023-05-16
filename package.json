@@ -12,17 +12,17 @@
     "packages:update": "pnpm dlx vp-update"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.61",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.61",
-    "@vuepress/utils": "2.0.0-beta.61",
-    "vue": "^3.2.47",
-    "vuepress": "2.0.0-beta.61",
-    "vuepress-theme-hope": "2.0.0-beta.206"
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.62",
+    "@vuepress/utils": "2.0.0-beta.62",
+    "vue": "^3.3.2",
+    "vuepress": "2.0.0-beta.62",
+    "vuepress-theme-hope": "2.0.0-beta.211"
   },
   "devDependencies": {
-    "prettier": "2.8.4"
+    "prettier": "2.8.8"
   },
-  "packageManager": "pnpm@7.29.1",
+  "packageManager": "pnpm@8.5.1",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [

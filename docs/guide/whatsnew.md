@@ -26,18 +26,20 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ::: tip 直播使用答疑
-**2023-05-25 20:30在Bilibili**直播答疑，欢迎提出问题，扫码预约不错过，还有免费License赠送
+
+**2023-05-25 20:30 在 Bilibili**直播答疑，欢迎提出问题，扫码预约不错过，还有免费 License 赠送
 
 ![使用答疑](/img/bilibili/20230524.jpg)
 
 :::
 
 ::: danger 重量级更新：团队协作支持
-我们费了非常大的精力，对插件进行了重大的重构，将原先的**单机版**改成了支持**团队协作版**，通过文件版本管理系统，实现部分配置及所有API的**共享**。
 
-但是可能也带来了一些bug，希望开发者能体谅！
+我们费了非常大的精力，对插件进行了重大的重构，将原先的**单机版**改成了支持**团队协作版**，通过文件版本管理系统，实现部分配置及所有 API 的**共享**。
 
-同时我们也希望开发者们能在团队中推广并分享Restful Fast Request插件，再次非常感谢！
+但是可能也带来了一些 bug，希望开发者能体谅！
+
+同时我们也希望开发者们能在团队中推广并分享 Restful Fast Request 插件，再次非常感谢！
 
 更多详情请看 -> [团队协作支持](./teamwork.md)
 
@@ -45,41 +47,48 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2023.1.6 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." color="LightPink"/>
+## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+
 - <Badge text="header批量编辑" type="tip"/>
 - <Badge text="后置脚本发起请求idea debug卡死" type="danger"/>
 
-## 2023.1.5 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.5 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+
 - <Badge text="编辑器图标位置" type="info"/>
 - <Badge text="SearchEveryWhere样式错乱" type="danger"/>
 - <Badge text="URL变量替换" type="danger"/>
 
 ## 2023.1.4.2 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="项目级配置域名编辑错误" type="danger"/>
 - <Badge text="headers分组加载错误" type="danger"/>
 
 ## 2023.1.4.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="修复多模块项目自动域名找不到配置文件" type="danger"/>
 
 ## 2023.1.4 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="自动域名" type="tip"/>
-- <Badge text="SearchEveryWhere支持搜索jar包中的url" type="tip"/>  
+- <Badge text="SearchEveryWhere支持搜索jar包中的url" type="tip"/>
 - <Badge text="Script项目级别头设置失败" type="danger"/>
 
 ## 2023.1.3.2 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="重量级更新：团队协作支持" type="tip"/>
 - <Badge text="OpenAI API接口优化字段支持" type="tip"/>
 - <Badge text="API与存储文件跳转" type="tip"/>
 - <Badge text="项目配置刷新" type="tip"/>
 - <Badge text="rfr.currentModuleName支持" type="tip"/>
-- <Badge text="Api文档同步支持自定义分支" type="info"/>  
-- <Badge text="工具栏" type="info"/>  
+- <Badge text="Api文档同步支持自定义分支" type="info"/>
+- <Badge text="工具栏" type="info"/>
 - <Badge text="LocalDateTime、LocalDate、LocalTime解析优化" type="info"/>
-- <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>  
+- <Badge text="GET、POST、DELETE、PUT、PATCH图标" type="info"/>
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
 - <Badge text="Kotlin字段注释未生成" type="danger"/>
 
-## 2023.1.2 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+
 - <Badge text="图片响应渲染" type="tip"/>
 - <Badge text="年度报告" type="tip"/>
 - <Badge text="Url解析逻辑" type="info"/>
@@ -91,16 +100,18 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="API名字保存错误" type="danger"/>
 
 ## 2023.1.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="Yml和Properties文件的域名解析支持" type="tip"/>
 - <Badge text="项目级别域名配置" type="tip"/>
 - <Badge text="图标排版" type="info"/>
 - <Badge text="新UI工具窗口图标" type="info"/>
 - <Badge text="项目级别头参数可选" type="info"/>
-- <Badge text="Cookie取值" type="info"/>  
+- <Badge text="Cookie取值" type="info"/>
 - <Badge text="基础类型Swagger默认值解析" type="danger"/>
 - <Badge text="数组不解析" type="danger"/>
 
 ## 2022.3.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
 - <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
 - <Badge text="激活提示优化" type="info"/>

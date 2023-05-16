@@ -8,6 +8,7 @@ Please do not install other similar plugins. It will cause conflicts or data los
 :::
 
 Click to install
+
 <iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
 
 ## Online install

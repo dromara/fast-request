@@ -25,9 +25,9 @@ icon: start1
 
 [comment]: <> (G-->I[选择环境名])
 
-[comment]: <> (H-->J[点击方法左侧火箭R字图标])
+[comment]: <> (H-->J[点击方法左侧火箭 R 字图标])
 
-[comment]: <> (I-->J[点击方法左侧火箭R字图标])
+[comment]: <> (I-->J[点击方法左侧火箭 R 字图标])
 
 [comment]: <> (J-->K[点击发送按钮])
 

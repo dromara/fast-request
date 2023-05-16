@@ -1,4 +1,4 @@
-# Project级别域名配置
+# Project 级别域名配置
 
 作用：本功能可以让开发者一键添加域名配置
 
@@ -16,10 +16,10 @@
 
 ![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog.png "域名列表")
 
-
 ::: tip 变量来源
+
 1. 针对带有环境名如`application-dev.properties`，插件将自动适配`-`与`.`之间的变量作为环境名。
 2. 项目名来源于模块名
 3. 域名=`http://localhost:port/context-path`
-:::
 
+:::

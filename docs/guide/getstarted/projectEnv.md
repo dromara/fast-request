@@ -2,6 +2,7 @@
 title: 项目/环境/域名
 icon: config2
 ---
+
 ::: danger 建议
 建议使用[<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目级别域名配置](../features/projectLevelDomainConfig.md)，原来的配置将作为全配置配置，并且优先级小于项目级别配置。
 

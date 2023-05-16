@@ -7,7 +7,7 @@ heroText: false
 tagline: 为简化调试API而生
 actions:
   - text: 🚀 快速上手
-    link: /guide/getstarted/start
+    link: /guide/getstarted/start.html
     type: primary
 
 features:
@@ -266,7 +266,6 @@ preview="/img/logo/homepage.png"
 
 感谢 OSCHINA 和 Gitee 官方平台对**RFR**项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC 年度最受欢迎个人项目" <span class="badge tip" style="vertical-align: middle;">Top 15</span> 殊荣。
 
-
 <div style="height:100px"></div>
 
 ::: chart API 工具对比
@@ -310,12 +309,10 @@ preview="/img/logo/homepage.png"
   }
 }
 ```
+
 :::
 
 <!-- @include: @src/contact.snippet.md -->
-
-
-
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA

@@ -5,6 +5,12 @@
   src: url("/fast-request/font/BOBOHEI-2.otf");
 }
 
+body {
+  @media (min-width: 1440px) {
+    font-size: 16px;
+  }
+}
+
 h1,
 h2 {
   font-family: bobohei, sans-serif;
@@ -104,34 +110,46 @@ h2 {
 // navbar
 .navbar {
 
+  .nav-links {
+    font-size: 0.7em;
+  }
+
   @media (min-width: 1200px) {
-      .site-name {
-          font-family: bobohei, sans-serif;
-          background-color: var(--theme-color);
-          position: relative;
-          color: transparent;
-          background-clip: text;
+    .site-name {
+      font-family: bobohei, sans-serif;
+      background-color: var(--theme-color);
+      position: relative;
+      color: transparent;
+      background-clip: text;
+    }
+    .site-name::after {
+      content: "Fast Request";
+      position: absolute;
+      font-family: bobohei, sans-serif;
+      left: 0;
+      top: -6px;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 1rem,
+        white 2rem,
+        transparent 3.15rem,
+        transparent 100%
+      );
+      background-clip: text;
+      background-size: 200% 120%;
+      background-repeat: no-repeat;
+      animation: shine 5s infinite linear;
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 50% 0;
       }
-      .site-name::after {
-          content: 'Fast Request';
-          position: absolute;
-          font-family: bobohei, sans-serif;
-          left: 0;
-          top: -6px;
-          background-image: linear-gradient(120deg, transparent 0%, transparent 1rem, white 2rem, transparent 3.15rem, transparent 100%);
-          background-clip: text;
-          background-size: 200% 120%;
-          background-repeat: no-repeat;
-          animation: shine 5s infinite linear;
+      100% {
+        background-position: -190% 0;
       }
-      @keyframes shine {
-        0% {
-            background-position: 50% 0;
-        }
-        100% {
-            background-position: -190% 0;
-        }
-      }
+    }
   }
 
   .nav-item > .nav-link {
@@ -144,17 +162,7 @@ h2 {
   font-family: bobohei, sans-serif;
 }
 
-.dropdown-wrapper .dropdown-title{
-    font-family: bobohei, sans-serif;
+.dropdown-wrapper .dropdown-title {
+  font-family: bobohei, sans-serif;
 }
 
-
-
-body {
-    @media (min-width: 1440px){
-        font-size: 16px;
-    }
-}
-.navbar .nav-links{
-    font-size: 0.7em;
-}

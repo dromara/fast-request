@@ -162,9 +162,10 @@ if(StringUtils.isNotBlank(debug)){
 ```
 
 ## 作用范围与顺序
+
 分为`项目级别`和`单API级别`，项目全局作用需要点击 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./features/projectValueConfig.md) 进行配置
 
-项目级别将作用项目中所有的API，单API级别只作用于单个API。
+项目级别将作用项目中所有的 API，单 API 级别只作用于单个 API。
 
 执行顺序：`项目级别`->`单API级别`
 
@@ -215,19 +216,20 @@ request.header("sign",sign)
 
 ::: tip 2. 利用某一个请求的响应充当请求的 Header 参数
 
-注意获取token的逻辑得结合接口返回的数据结构来处理。例如返回
+注意获取 token 的逻辑得结合接口返回的数据结构来处理。例如返回
+
 ```json
 {
-    "success":true,
-    "code":200,
-    "data":{
-        "token":"xxxxx"
-    }
+  "success": true,
+  "code": 200,
+  "data": {
+    "token": "xxxxx"
+  }
 }
 ```
+
 则需要这么写
 `JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")`
-
 
 ```groovy
 import cn.hutool.core.util.CharsetUtil
@@ -254,7 +256,8 @@ if(myResponse.isOk()){
 - 内置变量已被申明,例如 Demo2 中需要额外新建一个请求,变量命名需要注意不能与内置变量相同
 
 ## 技能点
-为了得到程序方法提示，如果需要利用内置变量request和response，可以在脚本上先声明```HttpRequest request或者HttpResponse response```变量，写完脚本后再删除
+
+为了得到程序方法提示，如果需要利用内置变量 request 和 response，可以在脚本上先声明`HttpRequest request或者HttpResponse response`变量，写完脚本后再删除
 
 ## 脚本投稿 :star2:
 
