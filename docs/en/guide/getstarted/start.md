@@ -5,33 +5,22 @@ icon: start1
 
 ![](/img/start_en.svg)
 
-[comment]: <> (```mermaid)
-
-[comment]: <> (flowchart TB)
-
-[comment]: <> (A[Start] -->B&#40;Config&#41;)
-
-[comment]: <> (B -->D[Add project name])
-
-[comment]: <> (B -->E[Add env name])
-
-[comment]: <> (D --> F[Set domain])
-
-[comment]: <> (E --> F[Set domain])
-
-[comment]: <> (F-->G[Return main interface])
-
-[comment]: <> (G-->H[Select project])
-
-[comment]: <> (G-->I[Select env])
-
-[comment]: <> (H-->J[Click R icon button on method left])
-
-[comment]: <> (I-->J[Click send button])
-
-[comment]: <> (J-->K[End])
-
-[comment]: <> (```)
+<div style="display:none">
+```mermaid
+    flowchart TB
+    A[Start] -->B(Config)
+    B -->D[Add project name]
+    B -->E[Add env name]
+    D --> F[Set domain]
+    E --> F[Set domain]
+    F-->G[Return main interface]
+    G-->H[Select project]
+    G-->I[Select env]
+    H-->J[Click R icon button on method left]
+    I-->J[Click send button]
+    J-->K[End]
+```
+</div>
 
 ::: tip How to
 
@@ -53,6 +42,6 @@ New logo icon <FontIcon icon="restfulFastRequest" />
 
 Join and follow us to solve your question ❤️❤️❤️
 
-| [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) | [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=28A8E8)](https://t.me/restful_fast_request) |
+| [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) |  [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![twitter](/img/twitter.png)                                                                                                                      | ![telegram](/img/telegram.png)                                                                                                                                |
+| ![telegram](/img/slack.png)                                                                                                                       | ![twitter](/img/twitter.png)                                                                                                                               |
