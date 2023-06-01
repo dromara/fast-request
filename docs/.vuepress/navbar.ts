@@ -37,9 +37,19 @@ export const enNavbar = navbar([
     // icon: "teamwork",
   },
   {
-    text: "More",
-    children: ["/en/guide/concatGroup", "/guide/faq"],
-  },
+      text: "Contact us",
+      link: "/en/guide/concatGroup",
+      // icon: "teamwork",
+    },
+    {
+          text: "Faq",
+          link: "/en/guide/faq",
+          // icon: "teamwork",
+        },
+//   {
+//     text: "More",
+//     children: [],
+//   },
 ]);
 
 export const zhNavbar = navbar([

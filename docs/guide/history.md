@@ -36,15 +36,36 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-::: tip 直播使用答疑
+## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+- <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
+- <Badge text="精简版http图标" type="tip"/>
+- <Badge text="脚本片段插入优化" type="info"/>
+- <Badge text="table与textarea优化" type="info"/>
+- <Badge text="自动域名解析优化" type="info"/>
+- <Badge text="批量导出api文档" type="danger"/>
 
-**2023-05-25 20:30 在 Bilibili**直播答疑，欢迎提出问题，扫码预约不错过，还有免费 License 赠送
+::: tip SearchEveryWhere加入过滤条件
+支持`module`、`methodType`、`library`搜索
 
-![使用答疑](/img/bilibili/20230524.jpg)
+![searchEveryWhere](/img/2023.1.7/searchEveryWhere.png)
+:::
+
+::: tip 精简版http图标
+
+同时支持在 `setting -> Restful Fast Request -> 使用精简http图标` 修改
+
+| 方法名 | 新图标 | 老图标 |
+|:-------:|:-----------------------------------------------:|:----------------------------------------:|
+| Get     | ![get_dark](/img/http/new/get_dark.svg)         | ![get_dark](/img/http/get_dark.svg)     |
+| Post    | ![post_dark](/img/http/new/post_dark.svg)       | ![post_dark](/img/http/post_dark.svg)     |
+| Delete  | ![delete_dark](/img/http/new/delete_dark.svg)   | ![delete_dark](/img/http/delete_dark.svg)     |
+| Put     | ![put_dark](/img/http/new/put_dark.svg)         | ![put_dark](/img/http/put_dark.svg)     |
+| Patch   | ![patch_dark](/img/http/new/get_dark.svg)       | ![patch_dark](/img/http/get_dark.svg)     |
 
 :::
 
-## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+
+## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 
 - <Badge text="Header批量编辑" type="tip"/>
 - <Badge text="后置脚本发起请求idea debug卡死" type="danger"/>
@@ -55,7 +76,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-## 2023.1.5 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.5 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="编辑器图标位置" type="info"/>
 - <Badge text="SearchEveryWhere样式错乱" type="danger"/>

@@ -54,33 +54,33 @@ export default hopeTheme({
         notice: [
           {
             path: "/",
-            title: "将于<b>2023-05-25 20:30在Bilibili</b>直播答疑",
+            title: "将在2023.1.7推出",
             content:
-              '<div>扫码预约不错过，还有免费License赠送</div><div class="addthis_inline_follow_toolbox_qssu"></div>',
+              '<ul><li>SearchEveryWhere增强</li><li>精简版Http图标</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
             actions: [
               {
                 text: "了解详情→",
-                link: "/guide/activity.html#_20230524",
+                link: "/guide/history.html#_2023-1-7",
                 type: "primary",
               },
             ],
             showOnce: false,
-            key: "20230524",
+            key: "2023.1.7",
           },
           {
             path: "/en",
-            title: "Coming in <b>2023.1.3</b>",
+            title: "Coming in <b>2023.1.7</b>",
             content:
-              '<ul><li>Teamwork support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+              '<ul><li>SearchEveryWhere enhance</li><li>Compact http icon</li></ul><div class="addthis_inline_follow_toolbox"></div>',
             actions: [
               {
                 text: "Learn more→",
-                link: "/en/guide/history.html#_2023-1-3",
+                link: "/en/guide/history.html#_2023-1-7",
                 type: "primary",
               },
             ],
             showOnce: true,
-            key: "2023.1.3",
+            key: "2023.1.7",
           },
         ],
       },

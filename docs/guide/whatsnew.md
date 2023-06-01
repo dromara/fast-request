@@ -25,13 +25,6 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-::: tip 直播使用答疑
-
-**2023-05-25 20:30 在 Bilibili**直播答疑，欢迎提出问题，扫码预约不错过，还有免费 License 赠送
-
-![使用答疑](/img/bilibili/20230524.jpg)
-
-:::
 
 ::: danger 重量级更新：团队协作支持
 
@@ -46,6 +39,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 [**务必查看变更详情----------------->**](./history.md)
+
+## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+- <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
+- <Badge text="精简版http图标" type="tip"/>
+- <Badge text="脚本片段插入优化" type="info"/>
+- <Badge text="table与textarea优化" type="info"/>
+- <Badge text="自动域名解析优化" type="info"/>
+- <Badge text="批量导出api文档" type="danger"/>
 
 ## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
 

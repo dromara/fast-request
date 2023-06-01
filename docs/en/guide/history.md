@@ -36,7 +36,45 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="SearchEveryWhere enhance" type="tip"/>
+- <Badge text="Slack support" type="tip"/>  
+- <Badge text="Compact http icon" type="tip"/>
+- <Badge text="Optimize the insertion of script snippets" type="info"/>
+- <Badge text="Optimize table and textarea" type="info"/>
+- <Badge text="Optimize automatic domain parse" type="info"/>
+- <Badge text="Batch export api doc" type="danger"/>
+
+::: tip SearchEveryWhere enhance
+Add `module`、`methodType`、`library` condition
+
+![searchEveryWhere](/img/2023.1.7/searchEveryWhere.png)
+:::
+
+::: tip Slack support
+
+If you have any question, please click [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) and join in.
+
+We will help you solve your problems. Thanks!
+
+:::
+
+::: tip Compact http icon
+
+You can also change it in `setting -> Restful Fast Request -> Use compact http icon`
+
+| Method | New Icon | Old Icon |
+|:-------:|:-----------------------------------------------:|:----------------------------------------:|
+| Get     | ![get_dark](/img/http/new/get_dark.svg)         | ![get_dark](/img/http/get_dark.svg)     |
+| Post    | ![post_dark](/img/http/new/post_dark.svg)       | ![post_dark](/img/http/post_dark.svg)     |
+| Delete  | ![delete_dark](/img/http/new/delete_dark.svg)   | ![delete_dark](/img/http/delete_dark.svg)     |
+| Put     | ![put_dark](/img/http/new/put_dark.svg)         | ![put_dark](/img/http/put_dark.svg)     |
+| Patch   | ![patch_dark](/img/http/new/get_dark.svg)       | ![patch_dark](/img/http/get_dark.svg)     |
+
+:::
+
+
+## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightGreen"/>
 
 - <Badge text="Header batch edit" type="tip"/>
 - <Badge text="Idea hang when debug in post script" type="danger"/>
@@ -47,7 +85,7 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## 2023.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## 2023.1.5 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Editor icon location" type="info"/>
 - <Badge text="SearchEveryWhere style confusion" type="danger"/>
