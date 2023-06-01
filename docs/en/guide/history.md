@@ -69,7 +69,7 @@ You can also change it in `setting -> Restful Fast Request -> Use compact http i
 | Post    | ![post_dark](/img/http/new/post_dark.svg)       | ![post_dark](/img/http/post_dark.svg)     |
 | Delete  | ![delete_dark](/img/http/new/delete_dark.svg)   | ![delete_dark](/img/http/delete_dark.svg)     |
 | Put     | ![put_dark](/img/http/new/put_dark.svg)         | ![put_dark](/img/http/put_dark.svg)     |
-| Patch   | ![patch_dark](/img/http/new/get_dark.svg)       | ![patch_dark](/img/http/get_dark.svg)     |
+| Patch   | ![patch_dark](/img/http/new/patch_dark.svg)       | ![patch_dark](/img/http/patch_dark.svg)     |
 
 :::
 
