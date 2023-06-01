@@ -98,11 +98,14 @@ export const zhNavbar = navbar([
     link: "/guide/concatGroup",
   },
   {
+      text: "FAQ",
+      link: "/guide/faq",
+    },
+  {
     text: "更多",
     children: [
       "/guide/link",
       "/guide/sponsorList",
-      "/guide/faq",
       "/guide/activity",
     ],
   },
