@@ -14,6 +14,6 @@ The original save operation will be classified into the Default group by default
 
 **Toggle parameter**
 
-The following is the query of the book list in 3 languages. Click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> to toggle
+The following is the query of the book list in 3 languages. Click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroupNew"></use></svg> to toggle
 
-![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif "Switch group")
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.png "Switch group")

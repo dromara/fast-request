@@ -12,10 +12,11 @@
 原保存操作将默认归类到 Default 分组
 :::
 
-![groupSave](/img/2022.2.1/groupSave_en.png "保存分组")
+
+![groupSave](/img/2022.2.1/groupSave.png "保存分组")
 
 **切换参数**
 
-以下是 book 列表 3 种语言的查询,点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg>进行切换
+以下是 book 列表 3 种语言的查询,点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroupNew"></use></svg>进行切换
 
-![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif "切换分组")
+![apiParamGroup](/img/2022.2.1/apiParamGroup.png "切换分组")
