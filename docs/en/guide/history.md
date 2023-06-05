@@ -44,6 +44,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Optimize table and textarea" type="info"/>
 - <Badge text="Optimize automatic domain parse" type="info"/>
 - <Badge text="Batch export api doc" type="danger"/>
+- <Badge text="History request echo data" type="danger"/>
 
 ::: tip SearchEveryWhere enhance
 Add `module`、`methodType`、`library` condition

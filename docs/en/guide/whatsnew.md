@@ -46,6 +46,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Optimize table and textarea" type="info"/>
 - <Badge text="Optimize automatic domain parse" type="info"/>
 - <Badge text="Batch export api doc" type="danger"/>
+- <Badge text="History request echo data" type="danger"/>
 
 ## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 

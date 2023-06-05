@@ -47,6 +47,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="table与textarea优化" type="info"/>
 - <Badge text="自动域名解析优化" type="info"/>
 - <Badge text="批量导出api文档" type="danger"/>
+- <Badge text="历史请求回显问题" type="danger"/>
 
 ## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
 
