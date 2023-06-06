@@ -35,7 +35,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-settings"></use></svg> Setting manager](./settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> Full screen](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyseNew"></use></svg> Annual report](./annualReport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc1"></use></svg> Document / Contact](./docAndContact.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc"></use></svg> Document / Contact](./docAndContact.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
 
 ---
@@ -44,7 +44,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> OpenAI API Optimising fields](./ai.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroupNew"></use></svg> Header group](./headerGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Common header](./commonHeader.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuthNew"></use></svg> Basei auth](./basicAuth.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-lock"></use></svg> Basei auth](./basicAuth.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./htmlPreview.md)
 
 ## Apis

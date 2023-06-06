@@ -37,6 +37,7 @@ More details -> [Teamwork support](./teamwork.md)
 :::
 
 ## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="Flat icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
 - <Badge text="Slack support" type="tip"/>  
 - <Badge text="Compact http icon" type="tip"/>
@@ -45,6 +46,10 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Optimize automatic domain parse" type="info"/>
 - <Badge text="Batch export api doc" type="danger"/>
 - <Badge text="History request echo data" type="danger"/>
+
+::: tip Flat icon
+![toolwindowNew](/img/toolwindowNew.png)
+:::
 
 ::: tip SearchEveryWhere enhance
 Add `module`、`methodType`、`library` condition

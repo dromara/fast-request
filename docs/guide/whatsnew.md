@@ -41,6 +41,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 [**务必查看变更详情----------------->**](./history.md)
 
 ## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+- <Badge text="全新扁平化图标" type="tip"/>
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
 - <Badge text="精简版http图标" type="tip"/>
 - <Badge text="脚本片段插入优化" type="info"/>

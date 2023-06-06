@@ -37,6 +37,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+- <Badge text="全新扁平化图标" type="tip"/>
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
 - <Badge text="精简版http图标" type="tip"/>
 - <Badge text="脚本片段插入优化" type="info"/>
@@ -44,6 +45,10 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="自动域名解析优化" type="info"/>
 - <Badge text="批量导出api文档" type="danger"/>
 - <Badge text="历史请求回显问题" type="danger"/>
+
+::: tip 全新扁平化图标
+![toolwindowNew](/img/toolwindowNew.png)
+:::
 
 ::: tip SearchEveryWhere加入过滤条件
 支持`module`、`methodType`、`library`搜索

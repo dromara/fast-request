@@ -138,7 +138,7 @@ preview="/img/logo/homepage.png"
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a class="task-list-item-label" href="/fast-request/guide/features/navigateCurrentMethod.html" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg>当前方法定位</a>
+            <a class="task-list-item-label" href="/fast-request/guide/features/navigateCurrentMethod.html" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScope"></use></svg>当前方法定位</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -146,15 +146,15 @@ preview="/img/logo/homepage.png"
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/guide/features/tempRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> 临时请求</a>
+            <a href="/fast-request/guide/features/tempRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveTemp"></use></svg> 临时请求</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/guide/features/clear.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-clear"></use></svg> 一键清除参数</a>
+            <a href="/fast-request/guide/features/clear.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-clearNew"></use></svg> 一键清除参数</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/guide/features/clear.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL 导入</a>
+            <a href="/fast-request/guide/features/curlImport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL 导入</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -162,7 +162,7 @@ preview="/img/logo/homepage.png"
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/guide/features/historyRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> 历史请求预览</a>
+            <a href="/fast-request/guide/features/historyRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-historyNew"></use></svg> 历史请求预览</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -170,7 +170,7 @@ preview="/img/logo/homepage.png"
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/guide/features/shareApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API 文档分享</a>
+            <a href="/fast-request/guide/features/shareApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-markdown"></use></svg> API 文档分享</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -190,7 +190,7 @@ preview="/img/logo/homepage.png"
         </li>
 <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/guide/features/batchExportApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> 批量导出 API 文档</a>
+            <a href="/fast-request/guide/features/batchExportApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-markdown"></use></svg> 批量导出 API 文档</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -214,7 +214,7 @@ preview="/img/logo/homepage.png"
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/guide/features/annualReport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyse"></use></svg> 年度报告</a>
+            <a href="/fast-request/guide/features/annualReport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyseNew"></use></svg> 年度报告</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">

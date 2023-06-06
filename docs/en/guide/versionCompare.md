@@ -69,7 +69,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a class="task-list-item-label" href="/fast-request/en/guide/features/navigateCurrentMethod.html" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method</a>
+            <a class="task-list-item-label" href="/fast-request/en/guide/features/navigateCurrentMethod.html" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScope"></use></svg> Navigate to current method</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -77,7 +77,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/en/guide/features/tempRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> Temporary request</a>
+            <a href="/fast-request/en/guide/features/tempRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveTemp"></use></svg> Temporary request</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -85,7 +85,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/en/guide/features/clear.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL import</a>
+            <a href="/fast-request/en/guide/features/curlImport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL import</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -93,7 +93,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/en/guide/features/historyRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> History request</a>
+            <a href="/fast-request/en/guide/features/historyRequest.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-historyNew"></use></svg> History request</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -101,7 +101,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/en/guide/features/shareApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API document share</a>
+            <a href="/fast-request/en/guide/features/shareApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-markdown"></use></svg> API document share</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -121,7 +121,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
 <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/en/guide/features/batchExportApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> Batch export API doc</a>
+            <a href="/fast-request/en/guide/features/batchExportApiDoc.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-markdown"></use></svg> Batch export API doc</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
@@ -145,7 +145,7 @@ The paid version will introduce more **excellent** and **user-friendly** functio
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">
-            <a href="/fast-request/en/guide/features/annualReport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyse"></use></svg> Annual report</a>
+            <a href="/fast-request/en/guide/features/annualReport.html" class="task-list-item-label" ><svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyseNew"></use></svg> Annual report</a>
         </li>
         <li class="task-list-item">
             <input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled">

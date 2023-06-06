@@ -46,7 +46,7 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-settings"></use></svg> 管理配置](./settingManager.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./fullScreen.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyseNew"></use></svg> 年度报告](./annualReport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc1"></use></svg> 文档/快速联系](./docAndContact.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc"></use></svg> 文档/快速联系](./docAndContact.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
 
 ---
@@ -55,7 +55,7 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> AI 字段替换](./ai.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroupNew"></use></svg> Headers 分组](./headerGroup.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数](./commonHeader.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuthNew"></use></svg> Basei auth](./basicAuth.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-lock"></use></svg> Basei auth](./basicAuth.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览](./htmlPreview.md)
 
 ## Apis
