@@ -43,7 +43,8 @@ The icon in the document corresponds to the button icon in the plugin
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Auto domain](./autoDomain.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> OpenAI API Optimising fields](./ai.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroupNew"></use></svg> Header group](./headerGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Common header](./commonHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-bulkEdit"></use></svg> Headers batch edit](./bulkEdit.md) 
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeaderNew"></use></svg> Common header](./commonHeader.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-lock"></use></svg> Basei auth](./basicAuth.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./htmlPreview.md)
 

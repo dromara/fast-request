@@ -54,7 +54,8 @@ icon: featuresNew
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 自动域名](./autoDomain.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> AI 字段替换](./ai.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroupNew"></use></svg> Headers 分组](./headerGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数](./commonHeader.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-bulkEdit"></use></svg> Headers批量编辑](./bulkEdit.md)
+- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeaderNew"></use></svg> 常用头参数](./commonHeader.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-lock"></use></svg> Basei auth](./basicAuth.md)
 - [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览](./htmlPreview.md)
 
