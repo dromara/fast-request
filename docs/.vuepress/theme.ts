@@ -56,7 +56,7 @@ export default hopeTheme({
             path: "/",
             title: "将在2023.1.7推出",
             content:
-              '<ul><li>SearchEveryWhere增强</li><li>新图标</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+              '<ul><li>SearchEveryWhere增强</li><li>全新扁平化图标</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
             actions: [
               {
                 text: "了解详情→",

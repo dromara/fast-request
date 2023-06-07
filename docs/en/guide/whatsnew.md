@@ -39,7 +39,7 @@ More details -> [Teamwork support](./teamwork.md)
 :::
 
 ## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
-- <Badge text="Flat icon" type="tip"/>
+- <Badge text="New icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
 - <Badge text="Slack support" type="tip"/>  
 - <Badge text="Compact http icon" type="tip"/>
