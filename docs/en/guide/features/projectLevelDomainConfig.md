@@ -5,13 +5,13 @@ This function allows developers to add a domain quickly.
 Version required: <Badge text="2023.1.1+"/>
 
 ::: danger Suggestion
-It is recommended to use project-level domain config，original config [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> Setting manager](./settingManager.md) will be used as global config and will have a lower priority than project level config.
+It is recommended to use project-level domain config，original config [<ColorIcon icon="tool" /> Setting manager](./settingManager.md) will be used as global config and will have a lower priority than project level config.
 
 The advantage of using project-level config is that when there are many projects, the drop-down box options will be reduced (excluding the config of other projects)
 
 :::
 
-**How to**: Select `application.properties` or `application.yml` in the project, go through the configuration file and click on the icon <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>.
+**How to**: Select `application.properties` or `application.yml` in the project, go through the configuration file and click on the icon <ColorIcon icon="restfulFastRequest" />.
 
 ![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig_en.png "Domain config")
 

@@ -25,14 +25,7 @@ h2 {
 }
 
 // home page
-.home.project {
-  top: 0;
-
-  width: 100%;
-  max-width: unset;
-  padding-right: 0;
-  padding-left: 0;
-
+.vp-project-home {
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -40,66 +33,53 @@ h2 {
     background: url("/img/bg1.svg") no-repeat;
   }
 
-  .hero-info-wrapper {
-    display: block;
-    max-width: 100%;
-    height: 90vh;
-    text-align: center;
-
-    img {
-      max-height: 300px;
-      margin: 50px auto 0;
-    }
-
-    h1 {
-      font-family: bobohei, sans-serif;
-    }
-
-    .description {
-      max-width: 100%;
-      font-size: 16px;
-      font-family: bobohei, sans-serif;
-    }
-
-    .actions {
-      margin-left: -10px;
-    }
-
-    .action-button.primary {
-      color: #fff;
-      font-family: bobohei, sans-serif;
-    }
-  }
-
-  .feature-panel {
-    max-width: 90%;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .feature-wrapper {
-    max-width: 100%;
-    margin: 0;
-    padding: 0 1rem;
-    border-top: none;
-  }
-
-  .feature-item {
-    &:hover {
-      background-color: transparent;
-    }
-
-    h2 {
-      font-family: bobohei, sans-serif;
-    }
-
-    p {
-      font-weight: 600;
-    }
-  }
-
   h2 {
     border-bottom: none;
+  }
+}
+
+.vp-hero-info {
+  display: block;
+  text-align: center;
+
+  .vp-hero-image {
+    max-height: 300px;
+    margin: 50px auto 0;
+  }
+}
+
+.vp-description {
+  max-width: 100%;
+  font-size: 16px;
+  font-family: bobohei, sans-serif;
+}
+
+.vp-actions {
+  margin-left: -10px;
+}
+
+.vp-action.primary {
+  color: #fff;
+  font-family: bobohei, sans-serif;
+}
+
+.vp-features {
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.vp-feature-item {
+  &:hover {
+    background-color: transparent;
+  }
+
+  .vp-feature-title {
+    font-family: bobohei, sans-serif;
+  }
+
+  .vp-feature-details {
+    font-weight: 600;
   }
 }
 
@@ -108,8 +88,7 @@ h2 {
 }
 
 // navbar
-.navbar {
-
+.vp-navbar {
   .nav-links {
     font-size: 0.7em;
   }
@@ -166,3 +145,37 @@ h2 {
   font-family: bobohei, sans-serif;
 }
 
+.compare-wrapper {
+  display: flex;
+  width: 100%;
+
+  .hint-container {
+    width: 50%;
+    border: none;
+    &.info .compare-title {
+      background: #087cfa;
+    }
+
+    &.tip .compare-title {
+      background: #21d789;
+    }
+  }
+
+  .compare-title {
+    font-size: 22px;
+    border-radius: 0.2rem;
+    font-weight: 900;
+    color: var(--black);
+    margin: 1rem 0;
+    padding: 0.5rem;
+
+    .icon {
+      margin: 0 0.25em;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}

@@ -4,7 +4,7 @@ Version required: <Badge text="2022.2.7+" />
 
 ## Introduction
 
-Used to synchronize API documents to <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> Github、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> Gitee、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> Gitlab,
+Used to synchronize API documents to <ColorIcon icon="github" /> Github、<ColorIcon icon="gitee" /> Gitee、<ColorIcon icon="gitlab" /> Gitlab,
 and generate online documents and share them with other partners.
 
 ![apiSync](/img/2022.2.7/apiSync_en.png)

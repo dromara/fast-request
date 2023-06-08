@@ -10,70 +10,70 @@ icon: featuresNew
 
 ## Request
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 让图标动起来](./makeIconMove.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目域名配置](./projectLevelDomainConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-refresh"></use></svg> 项目配置刷新](./projectConfigRefresh.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./projectValueConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./searchEveryWhere.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API 分组切换](./apiGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> 调试 API 发送请求](./debugApi.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> 下载文件](./downloadApi.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> 终止 API 请求功能](./stopRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> 当前方法定位](./navigateCurrentMethod.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-icon-Json"></use></svg> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> 保存请求](./saveRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg> API 分组保存](./apiGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> 临时请求](./tempRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg> 重新生成请求](./regenerate.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-clear"></use></svg> 清除](./clear.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL 导入](./curlImport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-curl1"></use></svg> cURL 拷贝](./copyCurl.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-urlCopy"></use></svg> 一键拷贝 Url](./copyUrl.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> 历史请求预览](./historyRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API 文档同步](./apiDocSync.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API 文档分享](./shareApiDoc.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> 管理配置](./settingManager.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> 全屏](./fullScreen.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyse"></use></svg> 年度报告](./annualReport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc1"></use></svg> 文档/快速联系](./docAndContact.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
+- [<ColorIcon icon="restfulFastRequest" /> 让图标动起来](./makeIconMove.md)
+- [<ColorIcon icon="domainConfig" /> 项目域名配置](./projectLevelDomainConfig.md)
+- [<ColorIcon icon="refresh" /> 项目配置刷新](./projectConfigRefresh.md)
+- [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](./projectValueConfig.md)
+- [<ColorIcon icon="search" /> SearchEveryWhere](./searchEveryWhere.md)
+- [<ColorIcon icon="apiParamGroup" /> API 分组切换](./apiGroup.md)
+- [<ColorIcon icon="send" /> 调试 API 发送请求](./debugApi.md)
+- [<ColorIcon icon="sendDownload" /> 下载文件](./downloadApi.md)
+- [<ColorIcon icon="stop" /> 终止 API 请求功能](./stopRequest.md)
+- [<ColorIcon icon="localScopeAction" /> 当前方法定位](./navigateCurrentMethod.md)
+- [<ColorIcon icon="icon-Json" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
+- [<ColorIcon icon="saveNew" /> 保存请求](./saveRequest.md)
+- [<ColorIcon icon="saveGroup" /> API 分组保存](./apiGroup.md)
+- [<ColorIcon icon="drafting" /> 临时请求](./tempRequest.md)
+- [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md)
+- [<ColorIcon icon="clear" /> 清除](./clear.md)
+- [<ColorIcon icon="import" /> cURL 导入](./curlImport.md)
+- [<ColorIcon icon="curl1" /> cURL 拷贝](./copyCurl.md)
+- [<ColorIcon icon="urlCopy" /> 一键拷贝 Url](./copyUrl.md)
+- [<ColorIcon icon="history" /> 历史请求预览](./historyRequest.md)
+- [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API 文档同步](./apiDocSync.md)
+- [<ColorIcon icon="shareDark" /> API 文档分享](./shareApiDoc.md)
+- [<ColorIcon icon="tool" /> 管理配置](./settingManager.md)
+- [<ColorIcon icon="fullScreen" /> 全屏](./fullScreen.md)
+- [<ColorIcon icon="analyse" /> 年度报告](./annualReport.md)
+- [<ColorIcon icon="doc1" /> 文档/快速联系](./docAndContact.md)
+- [<ColorIcon icon="license" /> EULA](../eula.md)
 
 ---
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 自动域名](./autoDomain.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> AI 字段替换](./ai.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Headers 分组](./headerGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> 常用头参数](./commonHeader.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuth"></use></svg> Basei auth](./basicAuth.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html 预览](./htmlPreview.md)
+- [<ColorIcon icon="restfulFastRequest" /> 自动域名](./autoDomain.md)
+- [<ColorIcon icon="openai" /> AI 字段替换](./ai.md)
+- [<ColorIcon icon="headerGroup" /> Headers 分组](./headerGroup.md)
+- [<ColorIcon icon="commonHeader" /> 常用头参数](./commonHeader.md)
+- [<ColorIcon icon="basicAuth" /> Basei auth](./basicAuth.md)
+- [<ColorIcon icon="chrome" /> Html 预览](./htmlPreview.md)
 
 ## Apis
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-ppLib"></use></svg> API 列表](./apiList.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-postman"></use></svg> API 导出到 Postman](./apiToPostman.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-export"></use></svg> APIs 导入导出](./apiImportExport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> 批量导出 API 文档](./batchExportApiDoc.md)
+- [<ColorIcon icon="ppLib" /> API 列表](./apiList.md)
+- [<ColorIcon icon="postman" /> API 导出到 Postman](./apiToPostman.md)
+- [<ColorIcon icon="export" /> APIs 导入导出](./apiImportExport.md)
+- [<ColorIcon icon="shareDark" /> 批量导出 API 文档](./batchExportApiDoc.md)
 
 ## Navigate
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> API 导航树](./apiNavigateTree.md)
+- [<ColorIcon icon="localScopeAction" /> API 导航树](./apiNavigateTree.md)
 
 ## Generate
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-swagger"></use></svg> Swagger 默认值](./swaggerDefaultValueParse.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-java"></use></svg> API 自动生成注释](./autoDescription.md)
+- [<ColorIcon icon="swagger" /> Swagger 默认值](./swaggerDefaultValueParse.md)
+- [<ColorIcon icon="java" /> API 自动生成注释](./autoDescription.md)
 
 ## Editor
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> 项目域名快速配置](./projectLevelDomainConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> API 一览表预览](./apiPreview.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api 注释预览](./apiCommentPreview.md)
+- [<ColorIcon icon="restfulFastRequest" /> 项目域名快速配置](./projectLevelDomainConfig.md)
+- [<ColorIcon icon="restfulFastRequest" /> API 一览表预览](./apiPreview.md)
+- [<ColorIcon icon="class" /> Api 注释预览](./apiCommentPreview.md)
 
 ## Script
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-script"></use></svg> 脚本](./script.md)
+- [<ColorIcon icon="script" /> 脚本](./script.md)
 
 ## Other
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-add1"></use></svg> 快速添加 header](./quickAddHeader.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-json"></use></svg> Json 语法检查](./jsonGrammarCheck.md)
+- [<ColorIcon icon="add1" /> 快速添加 header](./quickAddHeader.md)
+- [<ColorIcon icon="json" /> Json 语法检查](./jsonGrammarCheck.md)

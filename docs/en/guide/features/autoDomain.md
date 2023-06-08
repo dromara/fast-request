@@ -4,14 +4,14 @@ Version required: <Badge text="2023.1.4" />
 
 ## Trigger point
 
-When clicking <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> on the left side of the method,
+When clicking <ColorIcon icon="restfulFastRequest" /> on the left side of the method,
 if no domain is configured, it will be automatically created.
 
 ## Project name
 
 The project name is taken from the api `module name`
 
-Why? For example, there are two modules' APIs under the project, `Module-1` and `Module-2`. If the domain name value of `Module-1` is already stored and when clicking the <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> on the left of the API method under `Module-2`, the old version cannot automatically switch the project name.
+Why? For example, there are two modules' APIs under the project, `Module-1` and `Module-2`. If the domain name value of `Module-1` is already stored and when clicking the <ColorIcon icon="restfulFastRequest" /> on the left of the API method under `Module-2`, the old version cannot automatically switch the project name.
 
 It is recommended not to ==manually add the project name== later because the plugin cannot find the mapping relationship, which may easily result in using the domain name of `Module-1` instead of the domain name of `Module-2` when saving the API of `Module-2`.
 

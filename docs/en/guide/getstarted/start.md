@@ -5,26 +5,9 @@ icon: start1
 
 ![](/img/start_en.svg)
 
-<div style="display:none">
-```mermaid
-    flowchart TB
-    A[Start] -->B(Config)
-    B -->D[Add project name]
-    B -->E[Add env name]
-    D --> F[Set domain]
-    E --> F[Set domain]
-    F-->G[Return main interface]
-    G-->H[Select project]
-    G-->I[Select env]
-    H-->J[Click R icon button on method left]
-    I-->J[Click send button]
-    J-->K[End]
-```
-</div>
-
 ::: tip How to
 
-- Step1: Click Manager config then add project name[example:wx card] and env[example:local、dev], if plugin version >= **2023.1.1**, please refer to [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](../features/projectLevelDomainConfig.md), combine configuration files to quickly add domain configuration
+- Step1: Click Manager config then add project name[example:wx card] and env[example:local、dev], if plugin version >= **2023.1.1**, please refer to [<ColorIcon icon="domainConfig" /> Project-level domain config](../features/projectLevelDomainConfig.md), combine configuration files to quickly add domain configuration
 - Step2: set target domain
 - Step3: open toolwindow(at the top-right corner),select project and env
 - Step4: click <FontIcon icon="restfulFastRequest" />(fastRequest icon) on method left(Old icon<FontIcon icon="restfulFastRequest1" />)
@@ -42,6 +25,6 @@ New logo icon <FontIcon icon="restfulFastRequest" />
 
 Join and follow us to solve your question ❤️❤️❤️
 
-| [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) |  [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)|
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![telegram](/img/slack.png)                                                                                                                       | ![twitter](/img/twitter.png)                                                                                                                               |
+| [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![telegram](/img/slack.png)                                                                                                                                                                                      | ![twitter](/img/twitter.png)                                                                                                                      |

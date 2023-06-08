@@ -37,6 +37,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
 - <Badge text="精简版http图标" type="tip"/>
 - <Badge text="脚本片段插入优化" type="info"/>
@@ -44,26 +45,25 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="自动域名解析优化" type="info"/>
 - <Badge text="批量导出api文档" type="danger"/>
 
-::: tip SearchEveryWhere加入过滤条件
+::: tip SearchEveryWhere 加入过滤条件
 支持`module`、`methodType`、`library`搜索
 
 ![searchEveryWhere](/img/2023.1.7/searchEveryWhere.png)
 :::
 
-::: tip 精简版http图标
+::: tip 精简版 http 图标
 
 同时支持在 `setting -> Restful Fast Request -> 使用精简http图标` 修改
 
-| 方法名 | 新图标 | 老图标 |
-|:-------:|:-----------------------------------------------:|:----------------------------------------:|
-| Get     | ![get_dark](/img/http/new/get_dark.svg)         | ![get_dark](/img/http/get_dark.svg)     |
-| Post    | ![post_dark](/img/http/new/post_dark.svg)       | ![post_dark](/img/http/post_dark.svg)     |
-| Delete  | ![delete_dark](/img/http/new/delete_dark.svg)   | ![delete_dark](/img/http/delete_dark.svg)     |
-| Put     | ![put_dark](/img/http/new/put_dark.svg)         | ![put_dark](/img/http/put_dark.svg)     |
-| Patch   | ![patch_dark](/img/http/new/patch_dark.svg)       | ![patch_dark](/img/http/patch_dark.svg)     |
+| 方法名 |                    新图标                     |                  老图标                   |
+| :----: | :-------------------------------------------: | :---------------------------------------: |
+|  Get   |    ![get_dark](/img/http/new/get_dark.svg)    |    ![get_dark](/img/http/get_dark.svg)    |
+|  Post  |   ![post_dark](/img/http/new/post_dark.svg)   |   ![post_dark](/img/http/post_dark.svg)   |
+| Delete | ![delete_dark](/img/http/new/delete_dark.svg) | ![delete_dark](/img/http/delete_dark.svg) |
+|  Put   |    ![put_dark](/img/http/new/put_dark.svg)    |    ![put_dark](/img/http/put_dark.svg)    |
+| Patch  |  ![patch_dark](/img/http/new/patch_dark.svg)  |  ![patch_dark](/img/http/patch_dark.svg)  |
 
 :::
-
 
 ## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 
@@ -247,7 +247,7 @@ url 输入框点击回车，自动发送请求
 - <Badge text="数组不解析" type="danger"/>
 
 ::: tip 项目级别域名配置
-支持直接从`yml`和`properties`配置文件快速配置域名，更多详情请查看 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目域名配置](./features/projectLevelDomainConfig.md)
+支持直接从`yml`和`properties`配置文件快速配置域名，更多详情请查看 [<ColorIcon icon="domainConfig" /> 项目域名配置](./features/projectLevelDomainConfig.md)
 
 ![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig.png "域名配置")
 

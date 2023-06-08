@@ -10,70 +10,70 @@ The icon in the document corresponds to the button icon in the plugin
 
 ## Request
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Make icon move](./makeIconMove.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./projectLevelDomainConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-refresh"></use></svg> Project config refresh](./projectConfigRefresh.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> Project-level config](./projectValueConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-search"></use></svg> SearchEveryWhere](./searchEveryWhere.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> API group toggle](./apiGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-send"></use></svg> Debug API & send request](./debugApi.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg> Download file](./downloadApi.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-stop"></use></svg> Stop API request](./stopRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> Navigate to current method](./navigateCurrentMethod.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-icon-Json"></use></svg> Navigate current method stored data](./navigateCurrentMethodJson.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> Save request](./saveRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg> Save API group](./apiGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-drafting"></use></svg> Temporary request](./tempRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg> Re generate](./regenerate.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-clear"></use></svg> Clear](./clear.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-import"></use></svg> cURL import](./curlImport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-curl1"></use></svg> cURL copy](./copyCurl.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-urlCopy"></use></svg> Single url copy](./copyUrl.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-history"></use></svg> History request](./historyRequest.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> API document sync](./apiDocSync.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> API document share](./shareApiDoc.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-tool"></use></svg> Setting manager](./settingManager.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-fullScreen"></use></svg> Full screen](./fullScreen.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-analyse"></use></svg> Annual report](./annualReport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-doc1"></use></svg> Document / Contact](./docAndContact.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-license"></use></svg> EULA](../eula.md)
+- [<ColorIcon icon="restfulFastRequest" /> Make icon move](./makeIconMove.md)
+- [<ColorIcon icon="domainConfig" /> Project-level domain config](./projectLevelDomainConfig.md)
+- [<ColorIcon icon="refresh" /> Project config refresh](./projectConfigRefresh.md)
+- [<ColorIcon icon="quanjucanshu" /> Project-level config](./projectValueConfig.md)
+- [<ColorIcon icon="search" /> SearchEveryWhere](./searchEveryWhere.md)
+- [<ColorIcon icon="apiParamGroup" /> API group toggle](./apiGroup.md)
+- [<ColorIcon icon="send" /> Debug API & send request](./debugApi.md)
+- [<ColorIcon icon="sendDownload" /> Download file](./downloadApi.md)
+- [<ColorIcon icon="stop" /> Stop API request](./stopRequest.md)
+- [<ColorIcon icon="localScopeAction" /> Navigate to current method](./navigateCurrentMethod.md)
+- [<ColorIcon icon="icon-Json" /> Navigate current method stored data](./navigateCurrentMethodJson.md)
+- [<ColorIcon icon="saveNew" /> Save request](./saveRequest.md)
+- [<ColorIcon icon="saveGroup" /> Save API group](./apiGroup.md)
+- [<ColorIcon icon="drafting" /> Temporary request](./tempRequest.md)
+- [<ColorIcon icon="regenerate" /> Re generate](./regenerate.md)
+- [<ColorIcon icon="clear" /> Clear](./clear.md)
+- [<ColorIcon icon="import" /> cURL import](./curlImport.md)
+- [<ColorIcon icon="curl1" /> cURL copy](./copyCurl.md)
+- [<ColorIcon icon="urlCopy" /> Single url copy](./copyUrl.md)
+- [<ColorIcon icon="history" /> History request](./historyRequest.md)
+- [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API document sync](./apiDocSync.md)
+- [<ColorIcon icon="shareDark" /> API document share](./shareApiDoc.md)
+- [<ColorIcon icon="tool" /> Setting manager](./settingManager.md)
+- [<ColorIcon icon="fullScreen" /> Full screen](./fullScreen.md)
+- [<ColorIcon icon="analyse" /> Annual report](./annualReport.md)
+- [<ColorIcon icon="doc1" /> Document / Contact](./docAndContact.md)
+- [<ColorIcon icon="license" /> EULA](../eula.md)
 
 ---
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Auto domain](./autoDomain.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-openai"></use></svg> OpenAI API Optimising fields](./ai.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-headerGroup"></use></svg> Header group](./headerGroup.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-commonHeader"></use></svg> Common header](./commonHeader.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-basicAuth"></use></svg> Basei auth](./basicAuth.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-chrome"></use></svg> Html preview](./htmlPreview.md)
+- [<ColorIcon icon="restfulFastRequest" /> Auto domain](./autoDomain.md)
+- [<ColorIcon icon="openai" /> OpenAI API Optimising fields](./ai.md)
+- [<ColorIcon icon="headerGroup" /> Header group](./headerGroup.md)
+- [<ColorIcon icon="commonHeader" /> Common header](./commonHeader.md)
+- [<ColorIcon icon="basicAuth" /> Basei auth](./basicAuth.md)
+- [<ColorIcon icon="chrome" /> Html preview](./htmlPreview.md)
 
 ## Apis
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-ppLib"></use></svg> API list](./apiList.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-postman"></use></svg> APIs export to Postman](./apiToPostman.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-export"></use></svg> APIs import and export](./apiImportExport.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-shareDark"></use></svg> Batch export API doc](./batchExportApiDoc.md)
+- [<ColorIcon icon="ppLib" /> API list](./apiList.md)
+- [<ColorIcon icon="postman" /> APIs export to Postman](./apiToPostman.md)
+- [<ColorIcon icon="export" /> APIs import and export](./apiImportExport.md)
+- [<ColorIcon icon="shareDark" /> Batch export API doc](./batchExportApiDoc.md)
 
 ## Navigate
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-localScopeAction"></use></svg> API navigate tree](./apiNavigateTree.md)
+- [<ColorIcon icon="localScopeAction" /> API navigate tree](./apiNavigateTree.md)
 
 ## Generate
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-swagger"></use></svg> Swagger default value parsing support](./swaggerDefaultValueParse.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-java"></use></svg> Auto Description](./autoDescription.md)
+- [<ColorIcon icon="swagger" /> Swagger default value parsing support](./swaggerDefaultValueParse.md)
+- [<ColorIcon icon="java" /> Auto Description](./autoDescription.md)
 
 ## Editor
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> Project-level domain quick config](./projectLevelDomainConfig.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> API list preview](./apiPreview.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-class"></use></svg> Api comment preview](./apiCommentPreview.md)
+- [<ColorIcon icon="restfulFastRequest" /> Project-level domain quick config](./projectLevelDomainConfig.md)
+- [<ColorIcon icon="restfulFastRequest" /> API list preview](./apiPreview.md)
+- [<ColorIcon icon="class" /> Api comment preview](./apiCommentPreview.md)
 
 ## Script
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-script"></use></svg> Script](./script.md)
+- [<ColorIcon icon="script" /> Script](./script.md)
 
 ## Other
 
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-add1"></use></svg> Quickly add header](./quickAddHeader.md)
-- [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-json"></use></svg> Json grammar check](./jsonGrammarCheck.md)
+- [<ColorIcon icon="add1" /> Quickly add header](./quickAddHeader.md)
+- [<ColorIcon icon="json" /> Json grammar check](./jsonGrammarCheck.md)

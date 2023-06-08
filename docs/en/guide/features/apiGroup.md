@@ -4,7 +4,7 @@ Version required: <Badge text="2022.2.1" />
 
 Purpose: Save parameters of different combinations under one API
 
-How to: After entering the parameters, click Save group param request. <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveGroup"></use></svg>
+How to: After entering the parameters, click Save group param request. <ColorIcon icon="saveGroup" />
 
 :::tip
 The original save operation will be classified into the Default group by default==.
@@ -14,6 +14,6 @@ The original save operation will be classified into the Default group by default
 
 **Toggle parameter**
 
-The following is the query of the book list in 3 languages. Click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-apiParamGroup"></use></svg> to toggle
+The following is the query of the book list in 3 languages. Click <ColorIcon icon="apiParamGroup" /> to toggle
 
 ![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif "Switch group")

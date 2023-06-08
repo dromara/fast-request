@@ -37,19 +37,19 @@ export const enNavbar = navbar([
     // icon: "teamwork",
   },
   {
-      text: "Contact us",
-      link: "/en/guide/concatGroup",
-      // icon: "teamwork",
-    },
-    {
-          text: "Faq",
-          link: "/en/guide/faq",
-          // icon: "teamwork",
-        },
-//   {
-//     text: "More",
-//     children: [],
-//   },
+    text: "Contact us",
+    link: "/en/guide/concatGroup",
+    // icon: "teamwork",
+  },
+  {
+    text: "Faq",
+    link: "/en/guide/faq",
+    // icon: "teamwork",
+  },
+  //   {
+  //     text: "More",
+  //     children: [],
+  //   },
 ]);
 
 export const zhNavbar = navbar([
@@ -98,15 +98,11 @@ export const zhNavbar = navbar([
     link: "/guide/concatGroup",
   },
   {
-      text: "FAQ",
-      link: "/guide/faq",
-    },
+    text: "FAQ",
+    link: "/guide/faq",
+  },
   {
     text: "更多",
-    children: [
-      "/guide/link",
-      "/guide/sponsorList",
-      "/guide/activity",
-    ],
+    children: ["/guide/link", "/guide/sponsorList", "/guide/activity"],
   },
 ]);

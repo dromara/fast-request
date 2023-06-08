@@ -119,58 +119,18 @@ tool:
 
 Restful Fast Request 首页的 logo 及背景由 **森阳** 提供，感谢她的创作，如果要插画和 logo 商业化合作小伙伴可以找她
 
-```
+```text
 邮件：sssenyang@qq.com | 微信：ArtSenyang
 ```
 
 ## Dromara 组织成员项目
 
-<SiteInfo
-v-for="item in $frontmatter.docsDromara"
-:key="item.link"
-v-bind="item"
-/>
-
-[comment]: <> (<div>)
-
-[comment]: <> ( <a href="https://gitee.com/dromara/Raincat" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">)
-
-[comment]: <> ( <img style="height:40px;" :src="$withBase&#40;'/img/link/raincat-logo.png'&#41;" title="强一致性分布式事务解决方案。">)
-
-[comment]: <> ( </a>)
-
-[comment]: <> ( <a href="https://gitee.com/dromara/myth" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">)
-
-[comment]: <> ( <img style="height:40px;" :src="$withBase&#40;'/img/link/myth-logo.png'&#41;" title="可靠消息分布式事务解决方案。">)
-
-[comment]: <> ( </a>)
-
-[comment]: <> ( <a href="https://gitee.com/dromara/koalas-rpc" target="_blank" style="width:30%;  padding:10px 5px 10px 5px;display:inline-block">)
-
-[comment]: <> ( <img style="height:40px;" :src="$withBase&#40;'/img/link/koalas-logo.png'&#41;" title="企业生产级百亿日PV高可用可拓展的RPC框架。">)
-
-[comment]: <> ( </a>)
-
-[comment]: <> ( <a href="https://gitee.com/dromara/hmily" target="_blank" style="width:30%; height:40px;  padding:10px 5px 10px 5px;display:inline-block">)
-
-[comment]: <> ( <img style="height:40px;" :src="$withBase&#40;'/img/link/hmily-logo.png'&#41;" title="高性能一站式分布式事务解决方案。">)
-
-[comment]: <> ( </a>)
-
-[comment]: <> (</div>)
+<SiteInfo v-for="item in $frontmatter.docsDromara" :key="item.link" v-bind="item" />
 
 ## 低代码
 
-<SiteInfo
-   v-for="item in $frontmatter.lowCode"
-   :key="item.link"
-   v-bind="item"
-/>
+<SiteInfo v-for="item in $frontmatter.lowCode" :key="item.link" v-bind="item" />
 
 ## 工具
 
-<SiteInfo
-v-for="item in $frontmatter.tool"
-:key="item.link"
-v-bind="item"
-/>
+<SiteInfo v-for="item in $frontmatter.tool" :key="item.link" v-bind="item" />

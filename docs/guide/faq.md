@@ -14,7 +14,7 @@ icon: faq
 
 ## S: 快捷添加域名
 
-请参考 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目级别域名配置](./features/projectLevelDomainConfig.md)
+请参考 [<ColorIcon icon="domainConfig" /> 项目级别域名配置](./features/projectLevelDomainConfig.md)
 (插件版本>=**2023.1.1**)
 
 ## S: APIs 丢失
@@ -24,7 +24,7 @@ icon: faq
 0. 下载插件版本>=2023.1.3.2+的版本
 1. 找到项目下的.idea 目录，右键并点击 Local history(本地历史记录)，找到关于`.idea/FastRequestCollection.xml`的变更日志(标题包含了 Deleting)，找到最后一个版本，把其中的内容拷贝到`.idea/fastRequest/fastRequestCollection.xml`中，
 2. 重启 idea
-3. 在 APIs tab 下点击图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-dataTransfer"></use></svg>并确认数据转移
+3. 在 APIs tab 下点击图标<ColorIcon icon="dataTransfer" />并确认数据转移
 
 ![dataTransfer20231](/img/faq/dataTransfer202313.png)
 
@@ -96,15 +96,15 @@ def response = request.execute()
 ## S: API 文档同步
 
 当你修改了你的接口参数，从 APIs 列表双击回来的 api 是你未更新前保存的 API，此时你想保证在线 API 文档是你修改后的，
-需要再点一下 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(保存) 或者左侧图标 <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> ,再进行同步。
+需要再点一下 <ColorIcon icon="saveNew" />(保存) 或者左侧图标 <ColorIcon icon="restfulFastRequest" /> ,再进行同步。
 
 建议：不需要提前在 Github、Gitee、Gitlab 创建仓库，插件自动会帮助创建，开发者只需要提供仓库名就行
 
 ## S: APIs 回显
 
-针对保存后的 api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([重新生成](/guide/features/regenerate.md))
+针对保存后的 api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<ColorIcon icon="regenerate" />([重新生成](/guide/features/regenerate.md))
 
-> 请确保你每次修改参数后点击`保存`<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>按钮
+> 请确保你每次修改参数后点击`保存`<ColorIcon icon="saveNew" />按钮
 
 # S: 最佳视觉效果
 
@@ -127,7 +127,7 @@ def response = request.execute()
 
 ## Q: 左侧图标不显示
 
-左侧图标<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>不显示。
+左侧图标<ColorIcon icon="restfulFastRequest" />不显示。
 
 **A:** 打开配置 `setting->Editor->Gutter icons->show gutter icon`
 
