@@ -6,57 +6,70 @@ icon: featuresNew
 
 文档中的图标对应插件中的按钮图标，大标题对应 tab 以及功能
 
+* 新图标Plugin版本>=2021.1.7
+
+![toolwindowNew](/img/toolwindowNew.png)
+
+
+* 老图标Plugin版本<2021.1.7
+
 ![tool window](/img/toolwindow.png)
+
+
+
+
 
 ## Request
 
+
 - [<ColorIcon icon="restfulFastRequest" /> 让图标动起来](./makeIconMove.md)
-- [<ColorIcon icon="domainConfig" /> 项目域名配置](./projectLevelDomainConfig.md)
-- [<ColorIcon icon="refresh" /> 项目配置刷新](./projectConfigRefresh.md)
+- [<ColorIcon icon="domainConfigNew" /> 项目域名配置](./projectLevelDomainConfig.md)
+- [<ColorIcon icon="rcd-refresh" /> 项目配置刷新](./projectConfigRefresh.md)
 - [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](./projectValueConfig.md)
-- [<ColorIcon icon="search" /> SearchEveryWhere](./searchEveryWhere.md)
-- [<ColorIcon icon="apiParamGroup" /> API 分组切换](./apiGroup.md)
-- [<ColorIcon icon="send" /> 调试 API 发送请求](./debugApi.md)
-- [<ColorIcon icon="sendDownload" /> 下载文件](./downloadApi.md)
+- [<ColorIcon icon="searchApi" /> SearchEveryWhere](./searchEveryWhere.md)
+- [<ColorIcon icon="apiParamGroupNew" /> API 分组切换](./apiGroup.md)
+- [<ColorIcon icon="sendNew" /> 调试 API 发送请求](./debugApi.md)
+- [<ColorIcon icon="sendDownloadNew" /> 下载文件](./downloadApi.md)
 - [<ColorIcon icon="stop" /> 终止 API 请求功能](./stopRequest.md)
-- [<ColorIcon icon="localScopeAction" /> 当前方法定位](./navigateCurrentMethod.md)
-- [<ColorIcon icon="icon-Json" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
-- [<ColorIcon icon="saveNew" /> 保存请求](./saveRequest.md)
+- [<ColorIcon icon="localScope" /> 当前方法定位](./navigateCurrentMethod.md)
+- [<ColorIcon icon="storeData" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
+- [<ColorIcon icon="save" /> 保存请求](./saveRequest.md)
 - [<ColorIcon icon="saveGroup" /> API 分组保存](./apiGroup.md)
-- [<ColorIcon icon="drafting" /> 临时请求](./tempRequest.md)
+- [<ColorIcon icon="saveTemp" /> 临时请求](./tempRequest.md)
 - [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md)
-- [<ColorIcon icon="clear" /> 清除](./clear.md)
+- [<ColorIcon icon="clearNew" /> 清除](./clear.md)
 - [<ColorIcon icon="import" /> cURL 导入](./curlImport.md)
 - [<ColorIcon icon="curl1" /> cURL 拷贝](./copyCurl.md)
 - [<ColorIcon icon="urlCopy" /> 一键拷贝 Url](./copyUrl.md)
 - [<ColorIcon icon="history" /> 历史请求预览](./historyRequest.md)
 - [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API 文档同步](./apiDocSync.md)
-- [<ColorIcon icon="shareDark" /> API 文档分享](./shareApiDoc.md)
-- [<ColorIcon icon="tool" /> 管理配置](./settingManager.md)
+- [<ColorIcon icon="markdown" /> API 文档分享](./shareApiDoc.md)
+- [<ColorIcon icon="settings" /> 管理配置](./settingManager.md)
 - [<ColorIcon icon="fullScreen" /> 全屏](./fullScreen.md)
-- [<ColorIcon icon="analyse" /> 年度报告](./annualReport.md)
-- [<ColorIcon icon="doc1" /> 文档/快速联系](./docAndContact.md)
+- [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md)
+- [<ColorIcon icon="doc" /> 文档/快速联系](./docAndContact.md)
 - [<ColorIcon icon="license" /> EULA](../eula.md)
 
 ---
 
 - [<ColorIcon icon="restfulFastRequest" /> 自动域名](./autoDomain.md)
 - [<ColorIcon icon="openai" /> AI 字段替换](./ai.md)
-- [<ColorIcon icon="headerGroup" /> Headers 分组](./headerGroup.md)
-- [<ColorIcon icon="commonHeader" /> 常用头参数](./commonHeader.md)
-- [<ColorIcon icon="basicAuth" /> Basei auth](./basicAuth.md)
+- [<ColorIcon icon="headerGroupNew" /> Headers 分组](./headerGroup.md)
+- [<ColorIcon icon="commonHeaderNew" /> 常用头参数](./commonHeader.md)
+- [<ColorIcon icon="bulkEdit"/> Headers批量编辑](./bulkEdit.md)
+- [<ColorIcon icon="lock" /> Basei auth](./basicAuth.md)
 - [<ColorIcon icon="chrome" /> Html 预览](./htmlPreview.md)
 
 ## Apis
 
-- [<ColorIcon icon="ppLib" /> API 列表](./apiList.md)
+- [<ColorIcon icon="localScope" /> API 列表](./apiList.md)
 - [<ColorIcon icon="postman" /> API 导出到 Postman](./apiToPostman.md)
 - [<ColorIcon icon="export" /> APIs 导入导出](./apiImportExport.md)
-- [<ColorIcon icon="shareDark" /> 批量导出 API 文档](./batchExportApiDoc.md)
+- [<ColorIcon icon="markdown" /> 批量导出 API 文档](./batchExportApiDoc.md)
 
 ## Navigate
 
-- [<ColorIcon icon="localScopeAction" /> API 导航树](./apiNavigateTree.md)
+- [<ColorIcon icon="localScope" /> API 导航树](./apiNavigateTree.md)
 
 ## Generate
 
@@ -71,7 +84,9 @@ icon: featuresNew
 
 ## Script
 
-- [<ColorIcon icon="script" /> 脚本](./script.md)
+
+- [<ColorIcon icon="scriptNew" /> 脚本](./script.md)
+
 
 ## Other
 

@@ -4,6 +4,5 @@
 
 配置文件更新后，UI 实现项目级别配置更新
 
-![jumpToJsonData](/img/2023.1.3/jumpToJsonData.png)
+![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 
-![jump from apis](/img/2023.1.3/listJump2JsonData.png)

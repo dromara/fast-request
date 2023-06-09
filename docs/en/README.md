@@ -51,7 +51,9 @@ head:
 
 ## 🥇 Features
 
+
 <!-- @include: @src/en/compare.snippet.md -->
+
 
 ::: chart API tool comparison
 

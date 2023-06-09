@@ -10,4 +10,7 @@ Operation method：
 2. Switch the environment or project name directly, and then enter the corresponding key and value values in the headers form.
    :::
 
+![headerGroup](/img/headerGroup.png)
+
+
 ![headerSwitch](/img/headerSwitch.gif)

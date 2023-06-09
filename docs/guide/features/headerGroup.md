@@ -8,5 +8,6 @@
 1.在headers group里修改约束:输入的值必须是标准json格式
 2.直接切换环境，然后再headers表格中输入对应的key、value值
 ```
+![headerGroup](/img/headerGroup.png)
 
 ![headerSwitch](/img/headerSwitch.gif)
