@@ -94,14 +94,14 @@ h2 {
   }
 
   @media (min-width: 1200px) {
-    .site-name {
+    .vp-site-name {
       font-family: bobohei, sans-serif;
       background-color: var(--theme-color);
       position: relative;
       color: transparent;
       background-clip: text;
     }
-    .site-name::after {
+    .vp-site-name::after {
       content: "Fast Request";
       position: absolute;
       font-family: bobohei, sans-serif;

@@ -41,7 +41,7 @@ icon: featuresNew
 - [<ColorIcon icon="import" /> cURL 导入](./curlImport.md)
 - [<ColorIcon icon="curl1" /> cURL 拷贝](./copyCurl.md)
 - [<ColorIcon icon="urlCopy" /> 一键拷贝 Url](./copyUrl.md)
-- [<ColorIcon icon="history" /> 历史请求预览](./historyRequest.md)
+- [<ColorIcon icon="historyNew" /> 历史请求预览](./historyRequest.md)
 - [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API 文档同步](./apiDocSync.md)
 - [<ColorIcon icon="markdown" /> API 文档分享](./shareApiDoc.md)
 - [<ColorIcon icon="settings" /> 管理配置](./settingManager.md)

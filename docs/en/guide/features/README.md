@@ -30,7 +30,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="import" /> cURL import](./curlImport.md)
 - [<ColorIcon icon="curl1" /> cURL copy](./copyCurl.md)
 - [<ColorIcon icon="urlCopy" /> Single url copy](./copyUrl.md)
-- [<ColorIcon icon="history" /> History request](./historyRequest.md)
+- [<ColorIcon icon="historyNew" /> History request](./historyRequest.md)
 - [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API document sync](./apiDocSync.md)
 - [<ColorIcon icon="markdown" /> API document share](./shareApiDoc.md)
 - [<ColorIcon icon="tool" /> Setting manager](./settingManager.md)
