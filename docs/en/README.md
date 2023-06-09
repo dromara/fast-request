@@ -49,6 +49,34 @@ head:
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg =80x80)](https://www.jetbrains.com)
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg =80x80)](https://www.jetbrains.com/idea)
 
+<div style="height:400px"></div>
+
+## Advantage
+<iframe
+:src="$withBase('/html/showside_en.html')"
+width="100%"
+height="520px"
+frameborder="0"
+scrolling="No"
+leftmargin="0"
+topmargin="0"
+/>
+
+<style>
+    #more{
+        cursor: pointer;
+        font-size:16px;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        position: relative;
+        border-radius:8px;
+        color: #000;
+        text-decoration: none;
+    }
+</style>
+<a id="more" href="en/guide/features">More features</a>
+
 ## 🥇 Features
 
 

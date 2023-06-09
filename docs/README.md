@@ -65,6 +65,34 @@ head:
   style="max-width:400px"
 />
 
+<div style="height:100px"></div>
+
+## 优势
+<iframe
+  :src="$withBase('/html/showside.html')"
+  width="100%"
+  height="520px"
+  frameborder="0"
+  scrolling="No"
+  leftmargin="0"
+  topmargin="0"
+/>
+
+<style>
+    #more{
+        cursor: pointer;
+        font-size:16px;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        position: relative;
+        border-radius:8px;
+        color: #000;
+        text-decoration: none;
+    }
+</style>
+<a id="more" href="guide/features">更多功能</a>
+
 ## 🥇 功能
 
 

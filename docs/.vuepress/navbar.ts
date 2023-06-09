@@ -8,7 +8,7 @@ export const enNavbar = navbar([
   },
   {
     text: "Features",
-    link: "/en/guide/features",
+    link: "/en/guide/features/README.md",
     icon: "featuresNew",
   },
   {
@@ -60,7 +60,7 @@ export const zhNavbar = navbar([
   },
   {
     text: "功能",
-    link: "/guide/features",
+    link: "/guide/features/README.md",
     icon: "featuresNew",
   },
   {
