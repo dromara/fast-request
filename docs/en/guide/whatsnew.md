@@ -46,7 +46,8 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Optimize the insertion of script snippets" type="info"/>
 - <Badge text="Optimize table and textarea" type="info"/>
 - <Badge text="Optimize automatic domain parse" type="info"/>
-- <Badge text="FullScreen" type="info"/>  
+- <Badge text="FullScreen" type="info"/>
+- <Badge text="Remove the .main from the module name of a Gradle project" type="info"/>  
 - <Badge text="Batch export api doc" type="danger"/>
 - <Badge text="History request echo data" type="danger"/>
 
