@@ -1,5 +1,7 @@
 # 下载文件
 
-点击 Send and download <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownloadNew"></use></svg>
+
+点击 Send and download <ColorIcon icon="sendDownloadNew" />
+
 
 ![example_download](/img/downloadFile.png)

@@ -93,6 +93,7 @@ export default hopeTheme({
       container: true,
       flowchart: true,
       imgLazyload: true,
+      imgSize: true,
       mermaid: true,
       card: true,
       include: {

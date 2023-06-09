@@ -14,7 +14,7 @@ icon: faq
 
 ## S: Quickly add domain
 
-Please refer [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./features/projectLevelDomainConfig.md)
+Please refer [<ColorIcon icon="domainConfig" /> Project-level domain config](./features/projectLevelDomainConfig.md)
 (Plugin version>=**2023.1.1**)
 
 ## S: APIs lost
@@ -24,7 +24,7 @@ So sorry to inform you that installing the 2023.1.3 version of (have been hidden
 0. Download 2023.1.3.2+ version of plugin
 1. Go to the .idea directory in your project, right-click and click on "Local history", find the change log about `.idea/FastRequestCollection.xml` (the title contains "Deleting"), and locate the last version. Copy the contents of this version and paste them into `.idea/fastRequest/fastRequestCollection.xml`
 2. Restart IntelliJ IDEA.
-3. Click on the icon <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-dataTransfer"></use></svg> in the APIs tab and do transfer
+3. Click on the icon <ColorIcon icon="dataTransfer" /> in the APIs tab and do transfer
 
 ![dataTransfer20231](/img/faq/dataTransfer202313.png)
 
@@ -97,15 +97,15 @@ def response = request.execute()
 ## S: API doc sync
 
 When you modify your method, the API returned from the APIs list is the API saved before you update it. At this time, if you want to ensure that the online API document is your modified one,
-you need to click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg>(save) or click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> again and then sync api doc.
+you need to click <ColorIcon icon="saveNew" />(save) or click <ColorIcon icon="restfulFastRequest" /> again and then sync api doc.
 
 Recommendation: There is no need to create a repo in Github, Gitee, and Gitlab in advance. Plug-ins will automatically help create a repo. Developers only need to provide the repo name.
 
 ## S: APIs echo
 
-For the saved API, you modify it again, and you need manually fill in the parameters and save <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> it. If you don't want the parameters you saved before at all, you can just click <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-regenerate"></use></svg>([Re generate](/guide/features/regenerate.md)).
+For the saved API, you modify it again, and you need manually fill in the parameters and save <ColorIcon icon="saveNew" /> it. If you don't want the parameters you saved before at all, you can just click <ColorIcon icon="regenerate" />([Re generate](/guide/features/regenerate.md)).
 
-> Please ensure that click `save button` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-saveNew"></use></svg> every time you modify api params.
+> Please ensure that click `save button` <ColorIcon icon="saveNew" /> every time you modify api params.
 
 # S: Best Visual Effects
 
@@ -128,7 +128,7 @@ Click `Options` and check `Show Toolbar`
 
 ## Q: Left icon missing
 
-Left icon <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> missing.
+Left icon <ColorIcon icon="restfulFastRequest" /> missing.
 
 **A:** Open config `setting->Editor->Gutter icons->show gutter icon`
 

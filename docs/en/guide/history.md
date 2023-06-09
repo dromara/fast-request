@@ -12,9 +12,9 @@ icon: changelog
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
-|  [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw)|[![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|       ![slack](/img/slack.png)                                                                                                               | ![twitter](/img/twitter.png)                                                                                                                                 |
+| [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![slack](/img/slack.png)                                                                                                                                                                                         | ![twitter](/img/twitter.png)                                                                                                                      |
 
 Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 
@@ -37,9 +37,10 @@ More details -> [Teamwork support](./teamwork.md)
 :::
 
 ## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+
 - <Badge text="New icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
-- <Badge text="Slack support" type="tip"/>  
+- <Badge text="Slack support" type="tip"/>
 - <Badge text="Compact http icon" type="tip"/>
 - <Badge text="Optimize the insertion of script snippets" type="info"/>
 - <Badge text="Optimize table and textarea" type="info"/>
@@ -71,16 +72,15 @@ We will help you solve your problems. Thanks!
 
 You can also change it in `setting -> Restful Fast Request -> Use compact http icon`
 
-| Method | New Icon | Old Icon |
-|:-------:|:-----------------------------------------------:|:----------------------------------------:|
-| Get     | ![get_dark](/img/http/new/get_dark.svg)         | ![get_dark](/img/http/get_dark.svg)     |
-| Post    | ![post_dark](/img/http/new/post_dark.svg)       | ![post_dark](/img/http/post_dark.svg)     |
-| Delete  | ![delete_dark](/img/http/new/delete_dark.svg)   | ![delete_dark](/img/http/delete_dark.svg)     |
-| Put     | ![put_dark](/img/http/new/put_dark.svg)         | ![put_dark](/img/http/put_dark.svg)     |
-| Patch   | ![patch_dark](/img/http/new/patch_dark.svg)       | ![patch_dark](/img/http/patch_dark.svg)     |
+| Method |                   New Icon                    |                 Old Icon                  |
+| :----: | :-------------------------------------------: | :---------------------------------------: |
+|  Get   |    ![get_dark](/img/http/new/get_dark.svg)    |    ![get_dark](/img/http/get_dark.svg)    |
+|  Post  |   ![post_dark](/img/http/new/post_dark.svg)   |   ![post_dark](/img/http/post_dark.svg)   |
+| Delete | ![delete_dark](/img/http/new/delete_dark.svg) | ![delete_dark](/img/http/delete_dark.svg) |
+|  Put   |    ![put_dark](/img/http/new/put_dark.svg)    |    ![put_dark](/img/http/put_dark.svg)    |
+| Patch  |  ![patch_dark](/img/http/new/patch_dark.svg)  |  ![patch_dark](/img/http/patch_dark.svg)  |
 
 :::
-
 
 ## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightGreen"/>
 
@@ -268,7 +268,7 @@ Add `Enter` key listener to url field that can send the request.
 - <Badge text="Array not parse" type="danger"/>
 
 ::: tip Project-level domain config
-Supports fast config domain directly from the `yml` or `properties` file，for more detail, please see [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> Project-level domain config](./features/projectLevelDomainConfig.md)
+Supports fast config domain directly from the `yml` or `properties` file，for more detail, please see [<ColorIcon icon="domainConfig" /> Project-level domain config](./features/projectLevelDomainConfig.md)
 
 ![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig_en.png "Domain config")
 
@@ -317,7 +317,7 @@ You can get the current domain link in the Script through `rfr.currentDomain`
 - <Badge text="Navigate tab load error" type="danger"/>
 
 ::: tip Global animate config support
-You can close animate in this global config, if close, icon animation <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg> will stop
+You can close animate in this global config, if close, icon animation <ColorIcon icon="restfulFastRequest" /> will stop
 
 ![animateConfig](/img/2022.2.9/animateConfig_en.png)
 :::

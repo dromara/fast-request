@@ -1,5 +1,5 @@
 # Download file
 
-Click `Send and download` <svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-sendDownload"></use></svg>
+Click `Send and download` <ColorIcon icon="sendDownload" />
 
 ![example_download](/img/downloadFile.png)

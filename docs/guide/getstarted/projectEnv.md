@@ -4,7 +4,7 @@ icon: config2
 ---
 
 ::: danger 建议
-建议使用[<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-domainConfig"></use></svg> 项目级别域名配置](../features/projectLevelDomainConfig.md)，原来的配置将作为全配置配置，并且优先级小于项目级别配置。
+建议使用[<ColorIcon icon="domainConfig" /> 项目级别域名配置](../features/projectLevelDomainConfig.md)，原来的配置将作为全配置配置，并且优先级小于项目级别配置。
 
 使用项目级别配置的好处是当项目多的时候，下拉框选项将减少（排除了其他项目的配置)，只取本项目级别域名与全局域名配置的交集。
 :::

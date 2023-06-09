@@ -163,7 +163,7 @@ if(StringUtils.isNotBlank(debug)){
 
 ## 作用范围与顺序
 
-分为`项目级别`和`单API级别`，项目全局作用需要点击 [<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-quanjucanshu"></use></svg> 项目级别全局参数支持](./features/projectValueConfig.md) 进行配置
+分为`项目级别`和`单API级别`，项目全局作用需要点击 [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](./features/projectValueConfig.md) 进行配置
 
 项目级别将作用项目中所有的 API，单 API 级别只作用于单个 API。
 

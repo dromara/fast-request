@@ -4,13 +4,13 @@
 
 ## 触发点
 
-方法左侧点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>的时候，如果没有配置域名，则自动创建一个。
+方法左侧点击<ColorIcon icon="restfulFastRequest" />的时候，如果没有配置域名，则自动创建一个。
 
 ## 项目名取值
 
 自动生成的配置项目名取自当前 API 的模块名。
 
-为什么呢？因为比方说项目下有 2 个模块`Module-1`、`Module-2`的 API，如果`Module-1`的域名已存储，在`Module-2`下的 API 点击方法左侧点击<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-restfulFastRequest"></use></svg>的时候，
+为什么呢？因为比方说项目下有 2 个模块`Module-1`、`Module-2`的 API，如果`Module-1`的域名已存储，在`Module-2`下的 API 点击方法左侧点击<ColorIcon icon="restfulFastRequest" />的时候，
 **老版本**做不到自动切换项目名。
 
 ==建议后期不要手动添加项目名==，因为插件无法找到映射关系，这容易导致 API 保存的时候本该是用`Module-2`的域名，结果用了`Module-1`的域名。

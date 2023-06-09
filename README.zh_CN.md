@@ -2,9 +2,9 @@
 
 - Version before v2022.1.4
 
-<a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width = "10%" /></a>
-<a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width = "10%" /></a>
-<a href='https://gitee.com/dromara/fast-request'><img src='https://gitee.com/dromara/fast-request/widgets/widget_3.svg' width = "15%" alt='Fork me on Gitee'></img></a>
+<a href="https://www.jetbrains.com"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" width="10%" /></a>
+<a href="https://www.jetbrains.com/idea"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg" width="10%" /></a>
+<a href='https://gitee.com/dromara/fast-request'><img src='https://gitee.com/dromara/fast-request/widgets/widget_3.svg' width="15%" alt='Fork me on Gitee'></img></a>
 
 [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful-Fast-Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw)
 [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
@@ -17,7 +17,7 @@
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
 [![OSCS Status](https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small)](https://www.oscs1024.com/project/dromara/fast-request?ref=badge_small)
 
-[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是 idea 版 Postman，它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params。`Restful Fast Request = API调试工具+API管理工具+API搜索工具`。
+[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是 idea 版 Postman，它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params。`Restful Fast Request = API 调试工具 + API 管理工具 + API搜索工具`。
 它有一个漂亮的界面来完成请求、检查服务器响应、存储你的 api 请求和导出 api 请求，插件帮助你在 IDEA 界面内更快更高效得调试你的 API。
 
 对比于 HTTP Client，Fast Request 不仅拥有 HTTP Client 内置的功能，还提供了友好易懂直观的界面，让使用者调试 API 的时候能够更加方便、简捷。同时各种类型参数也提供了不同的定制方式，更加灵活。而且集成了搜索、Postman 集成，Swagger 支持等额外的功能。

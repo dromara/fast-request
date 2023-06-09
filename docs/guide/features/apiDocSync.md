@@ -4,7 +4,7 @@
 
 ## 介绍
 
-用于将 API 文档同步至<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-github"></use></svg> Github、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitee"></use></svg> Gitee、<svg class="icon svg-icon" aria-hidden="true"><use xlink:href="#icon-gitlab"></use></svg> Gitlab，
+用于将 API 文档同步至<ColorIcon icon="github" /> Github、<ColorIcon icon="gitee" /> Gitee、<ColorIcon icon="gitlab" /> Gitlab，
 生成在线文档，分享给其他的小伙伴看。
 
 ![apiSync](/img/2022.2.7/apiSync.png)
