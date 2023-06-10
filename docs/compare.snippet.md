@@ -1,6 +1,6 @@
 <div class="compare-wrapper">
 
-<div class="hint-container info">
+<div class="hint-container info" style="margin-right:15px;">
 
 <div class="compare-title">
   <ColorIcon icon="restfulFastRequest" />收费版
@@ -20,36 +20,36 @@
 - [x] [<ColorIcon icon="postman" /> API 导出到 Postman](/guide/features/apiToPostman.md)
 - [x] [<ColorIcon icon="restfulFastRequest" /> 团队协作](/guide/teamwork.md)
 - [x] [<ColorIcon icon="restfulFastRequest" /> 动态图标](/guide/features/makeIconMove.md)
-- [x] [<ColorIcon icon="script" /> 脚本支持](/guide/features/script.md)
+- [x] [<ColorIcon icon="scriptNew" /> 脚本支持](/guide/features/script.md)
 - [x] [<ColorIcon icon="openai" /> AI 字段替换](/guide/features/ai.md)
 - [x] [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](/guide/features/projectValueConfig.md)
-- [x] [<ColorIcon icon="domainConfig" /> Yaml、Properties 自动识别支持](/guide/features/projectLevelDomainConfig.md)
+- [x] [<ColorIcon icon="domainConfigNew" /> Yaml、Properties 自动识别支持](/guide/features/projectLevelDomainConfig.md)
 - [x] [<ColorIcon icon="stop" /> 终止 API 请求功能](/guide/features/stopRequest.md)
-- [x] [<ColorIcon icon="localScopeAction" />当前方法定位](/guide/features/navigateCurrentMethod.md)
-- [x] [<ColorIcon icon="saveGroup" /><ColorIcon icon="apiParamGroup" /> API 分组](/guide/features/apiGroup.md)
-- [x] [<ColorIcon icon="drafting" /> 临时请求](/guide/features/tempRequest.md)
-- [x] [<ColorIcon icon="clear" /> 一键清除参数](/guide/features/clear.md)
+- [x] [<ColorIcon icon="localScope" />当前方法定位](/guide/features/navigateCurrentMethod.md)
+- [x] [<ColorIcon icon="saveGroup" /><ColorIcon icon="apiParamGroupNew" /> API 分组](/guide/features/apiGroup.md)
+- [x] [<ColorIcon icon="saveTemp" /> 临时请求](/guide/features/tempRequest.md)
+- [x] [<ColorIcon icon="clearNew" /> 一键清除参数](/guide/features/clear.md)
 - [x] [<ColorIcon icon="import" /> cURL 导入](/guide/features/clear.md)
 - [x] [<ColorIcon icon="urlCopy" /> 一键拷贝 Url](/guide/features/copyUrl.md)
-- [x] [<ColorIcon icon="history" /> 历史请求预览](/guide/features/historyRequest.md)
+- [x] [<ColorIcon icon="historyNew" /> 历史请求预览](/guide/features/historyRequest.md)
 - [x] [<ColorIcon icon="github" /><ColorIcon icon="gitee" /><ColorIcon icon="gitlab" /> API 文档同步](/guide/features/apiDocSync.md)
-- [x] [<ColorIcon icon="shareDark" /> API 文档分享](/guide/features/shareApiDoc.md)
+- [x] [<ColorIcon icon="markdown" /> API 文档分享](/guide/features/shareApiDoc.md)
 - [x] [<ColorIcon icon="fullScreen" /> 全屏](/guide/features/fullScreen.md)
-- [x] [<ColorIcon icon="commonHeader" /> 常用头参数](/guide/features/commonHeader.md)
+- [x] [<ColorIcon icon="commonHeaderNew" /> 常用头参数](/guide/features/commonHeader.md)
 - [x] [<ColorIcon icon="chrome" /> Html 预览](/guide/features/htmlPreview.md)
 - [x] [<ColorIcon icon="export" /> APIs 导入导出](/guide/features/apiImportExport.md)
-- [x] [<ColorIcon icon="shareDark" /> 批量导出 API 文档](/guide/features/batchExportApiDoc.md)
+- [x] [<ColorIcon icon="markdown" /> 批量导出 API 文档](/guide/features/batchExportApiDoc.md)
 - [x] [<ColorIcon icon="swagger" /> Swagger 默认值解析](/guide/features/swaggerDefaultValueParse.md)
 - [x] [<ColorIcon icon="java" /> API 自动生成注释](/guide/features/autoDescription.md)
 - [x] [<ColorIcon icon="restfulFastRequest" /> API 一览表预览](/guide/features/apiPreview.md)
 - [x] [<ColorIcon icon="class" /> Api 注释预览](/guide/features/apiCommentPreview.md)
 - [x] [<ColorIcon icon="restfulFastRequest" /> 自动域名](/guide/features/autoDomain.md)
-- [x] [<ColorIcon icon="analyse" /> 年度报告](/guide/features/annualReport.md)
+- [x] [<ColorIcon icon="analyseNew" /> 年度报告](/guide/features/annualReport.md)
 - [x] [更多...](/guide/features/)
 
 </div>
 
-<div class="hint-container tip">
+<div class="hint-container tip" style="margin-left:15px;">
 
 <div class="compare-title">
   <ColorIcon icon="restfulFastRequest1" />免费版

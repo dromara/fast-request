@@ -3,6 +3,7 @@ home: true
 icon: restfulFastRequest
 title: Restful Fast Request
 heroImageDark: /img/logoDark.gif
+heroFullScreen: true
 heroText: false
 tagline: Born to simplify debugging APIs
 actions:
@@ -49,7 +50,6 @@ head:
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg =80x80)](https://www.jetbrains.com)
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg =80x80)](https://www.jetbrains.com/idea)
 
-<div style="height:400px"></div>
 
 ## Advantage
 <iframe
