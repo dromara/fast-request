@@ -30,7 +30,7 @@ h2 {
   background-repeat: no-repeat;
 
   @media (min-width: 959px) {
-    background: url("/img/bg1.svg") no-repeat;
+    background: url("/img/bg2.svg") no-repeat calc(50% + 400px)  0;
   }
 
   h2 {
@@ -41,9 +41,10 @@ h2 {
 .vp-hero-info {
   display: block;
   text-align: center;
+  margin-top: 280px;
 
   .vp-hero-image {
-    max-height: 270px;
+    max-height: 150px;
     margin: 0 auto;
   }
 }
@@ -51,6 +52,7 @@ h2 {
 .vp-description {
   max-width: 100%;
   font-size: 16px;
+  color:#fff;
   font-family: bobohei, sans-serif;
 }
 
@@ -75,16 +77,24 @@ h2 {
   }
 
   .vp-feature-title {
+    color:#fff;
     font-family: bobohei, sans-serif;
   }
 
   .vp-feature-details {
+    color:#fff;
     font-weight: 600;
   }
 }
 
 #{hope-config.$content-class}.custom {
   padding: 0 5rem;
+}
+
+#main-title{
+color:#ffffff;
+font-family:bobohei;
+-webkit-text-fill-color:#ffffff;
 }
 
 // navbar

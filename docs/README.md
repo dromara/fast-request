@@ -3,8 +3,8 @@ icon: restfulFastRequest
 home: true
 title: Restful Fast Request
 heroFullScreen: true
-heroImageDark: /img/logoDark.gif
-heroText: false
+heroImageDark: /img/logoLight1.gif
+heroText: Fast Request
 tagline: 为简化调试API而生
 actions:
   - text: 🚀 快速上手
@@ -104,6 +104,8 @@ head:
 **Restful Fast Request**简称**RFR**自从 2021 年上线以来获得了很多人的支持。目前微信社区群 1000 多人，下载超过 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
 
 感谢 OSCHINA 和 Gitee 官方平台对**RFR**项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC 年度最受欢迎个人项目" <Badge vertical="baseline">Top 15</Badge> 殊荣。
+
+设计师森阳`sssenyang@qq.com` logo设计
 
 ::: chart API 工具对比
 

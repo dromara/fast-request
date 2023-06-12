@@ -6,7 +6,7 @@ import { enSidebar, zhSidebar } from "./sidebar.js";
 const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
-  logo: "/img/logo/logo.svg",
+  logo: "/img/fastRequest.svg",
 
   repo: "https://github.com/dromara/fast-request",
   docsDir: "docs",
