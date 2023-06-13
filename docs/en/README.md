@@ -50,6 +50,7 @@ head:
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg =80x80)](https://www.jetbrains.com)
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg =80x80)](https://www.jetbrains.com/idea)
 
+<div class="home-advantage">
 
 ## Advantage
 <iframe
@@ -62,20 +63,8 @@ leftmargin="0"
 topmargin="0"
 />
 
-<style>
-    #more{
-        cursor: pointer;
-        font-size:16px;
-        padding: 10px;
-        margin-bottom: 20px;
-        background-color: #ffffff;
-        position: relative;
-        border-radius:8px;
-        color: #000;
-        text-decoration: none;
-    }
-</style>
-<a id="more" href="en/guide/features">More features</a>
+<a class="advantage-more" href="en/guide/features">More features</a>
+</div>
 
 ## 🥇 Features
 
@@ -133,6 +122,8 @@ topmargin="0"
 ```
 
 :::
+
+<!-- @include: @src/en/contact.snippet.md -->
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA

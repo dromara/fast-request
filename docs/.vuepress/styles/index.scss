@@ -155,12 +155,28 @@ font-family:bobohei;
   font-family: bobohei, sans-serif;
 }
 
+@media (max-width: 767px) {
+    .compare-wrapper {
+        display: block;
+    }
+    .hint-container {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .compare-wrapper {
+        display: flex;
+    }
+    .hint-container {
+        width: 50%;
+        margin-left:15px;
+    }
+}
+
 .compare-wrapper {
-  display: flex;
   width: 100%;
 
   .hint-container {
-    width: 50%;
     border: none;
     &.info .compare-title {
       background: #087cfa;
@@ -188,4 +204,27 @@ font-family:bobohei;
     list-style: none;
     padding: 0;
   }
+}
+
+.advantage-more{
+    cursor: pointer;
+    font-size:16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius:8px;
+    color: #000;
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+        .home-advantage {
+            display:none;
+        }
+    }
+@media (min-width: 768px) {
+    .home-advantage {
+        display:block;
+    }
 }
