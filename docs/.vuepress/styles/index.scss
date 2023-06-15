@@ -155,23 +155,6 @@ font-family:bobohei;
   font-family: bobohei, sans-serif;
 }
 
-@media (max-width: 767px) {
-    .compare-wrapper {
-        display: block;
-    }
-    .hint-container {
-        width: 100%;
-    }
-}
-@media (min-width: 768px) {
-    .compare-wrapper {
-        display: flex;
-    }
-    .hint-container {
-        width: 50%;
-        margin-left:15px;
-    }
-}
 
 .compare-wrapper {
   width: 100%;
