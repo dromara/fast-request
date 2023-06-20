@@ -25,7 +25,7 @@ export const enSidebar = sidebar({
       text: "Features",
       icon: "featuresNew",
       prefix: "features/",
-      link: "features/",
+      link: "features/README.md",
       collapsible: true,
       children: [
         "makeIconMove",
@@ -108,7 +108,7 @@ export const zhSidebar = sidebar({
       icon: "featuresNew",
       prefix: "features/",
       collapsible: true,
-      link: "/guide/features",
+      link: "/guide/features/README.md",
       children: [
         "makeIconMove",
         "projectLevelDomainConfig",
