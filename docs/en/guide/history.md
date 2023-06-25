@@ -42,11 +42,15 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
 - <Badge text="Slack support" type="tip"/>
 - <Badge text="Compact http icon" type="tip"/>
+- <Badge text="Duplicate field" type="tip"/>  
 - <Badge text="Optimize the insertion of script snippets" type="info"/>
 - <Badge text="Optimize table and textarea" type="info"/>
 - <Badge text="Optimize automatic domain parse" type="info"/>
+- <Badge text="cUrl import" type="info"/>
 - <Badge text="FullScreen" type="info"/>
-- <Badge text="Remove the .main from the module name of a Gradle project" type="info"/>  
+- <Badge text="Remove the .main from the module name of a Gradle project" type="info"/>
+- <Badge text="SearchEveryWhere keyword search with spaces" type="danger"/>
+- <Badge text="Optimizing numerous operational details" type="danger"/>  
 - <Badge text="Batch export api doc" type="danger"/>
 - <Badge text="History request echo data" type="danger"/>
 
@@ -80,6 +84,12 @@ You can also change it in `setting -> Restful Fast Request -> Use compact http i
 |  Put   |    ![put_dark](/img/http/new/put_dark.svg)    |    ![put_dark](/img/http/put_dark.svg)    |
 | Patch  |  ![patch_dark](/img/http/new/patch_dark.svg)  |  ![patch_dark](/img/http/patch_dark.svg)  |
 
+:::
+
+::: tip Duplicate field
+Support field line duplicate, mark key end with `-dup` for duplicate key, plugin will do not change key for collection field, developers need to modify manually.
+
+![fieldDup](/img/2023.1.7/fieldDup.png)
 :::
 
 ## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightGreen"/>

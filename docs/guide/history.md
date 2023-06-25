@@ -41,11 +41,15 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="全新扁平化图标" type="tip"/>
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
 - <Badge text="精简版http图标" type="tip"/>
+- <Badge text="字段拷贝" type="tip"/>
 - <Badge text="脚本片段插入优化" type="info"/>
 - <Badge text="table与textarea优化" type="info"/>
 - <Badge text="自动域名解析优化" type="info"/>
+- <Badge text="cUrl导入" type="info"/>
 - <Badge text="全屏操作" type="info"/>
-- <Badge text="Gradle项目的模块名去除.main" type="info"/>  
+- <Badge text="Gradle项目的模块名去除.main" type="info"/>
+- <Badge text="SearchEveryWhere关键字带空格搜索" type="danger"/>
+- <Badge text="众多操作细节优化" type="danger"/>
 - <Badge text="批量导出api文档" type="danger"/>
 - <Badge text="历史请求回显问题" type="danger"/>
 
@@ -71,6 +75,11 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 |  Put   |    ![put_dark](/img/http/new/put_dark.svg)    |    ![put_dark](/img/http/put_dark.svg)    |
 | Patch  |  ![patch_dark](/img/http/new/patch_dark.svg)  |  ![patch_dark](/img/http/patch_dark.svg)  |
 
+:::
+
+::: tip 字段拷贝
+支持字段行拷贝，key用`-dup`结尾标注。集合场景不变更key，开发者需要自行处理修改下标
+![fieldDup](/img/2023.1.7/fieldDup.png)
 :::
 
 ## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
