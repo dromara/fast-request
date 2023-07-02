@@ -49,6 +49,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="自动域名解析优化" type="info"/>
 - <Badge text="cUrl导入" type="info"/>
 - <Badge text="全屏操作" type="info"/>
+- <Badge text="参数解析" type="info"/>  
 - <Badge text="Gradle项目的模块名去除.main" type="info"/>
 - <Badge text="SearchEveryWhere关键字带空格搜索" type="danger"/>
 - <Badge text="众多操作细节优化" type="danger"/>

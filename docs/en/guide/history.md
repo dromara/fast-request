@@ -48,6 +48,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Optimize automatic domain parse" type="info"/>
 - <Badge text="cUrl import" type="info"/>
 - <Badge text="FullScreen" type="info"/>
+- <Badge text="Params parse" type="info"/>  
 - <Badge text="Remove the .main from the module name of a Gradle project" type="info"/>
 - <Badge text="SearchEveryWhere keyword search with spaces" type="danger"/>
 - <Badge text="Optimizing numerous operational details" type="danger"/>  
