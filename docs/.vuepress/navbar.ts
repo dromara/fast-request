@@ -74,7 +74,7 @@ export const zhNavbar = navbar([
     icon: "changelog",
   },
   {
-    text: "购买插件",
+    text: "购买",
     link: "/guide/buy",
     icon: "buy",
   },
@@ -102,7 +102,7 @@ export const zhNavbar = navbar([
     link: "/guide/faq",
   },
   {
-      text: "Java",
+      text: "Java资源",
       link: "/guide/java",
     },
   {
