@@ -102,6 +102,10 @@ export const zhNavbar = navbar([
     link: "/guide/faq",
   },
   {
+      text: "Java",
+      link: "/guide/java",
+    },
+  {
     text: "更多",
     children: ["/guide/link", "/guide/sponsorList", "/guide/activity"],
   },
