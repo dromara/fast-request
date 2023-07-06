@@ -8,6 +8,6 @@ icon: java
 
 大家可以根据自己的需求，进一步发掘和了解这些优秀的资源和平台，学到更多的技能。
 
-* [程序员DD](https://blog.didispace.com)
+* [程序员DD](https://didispace.com)
 * [JavaGuide](https://javaguide.cn)
 * [bugstack 虫洞栈](https://bugstack.cn/)
