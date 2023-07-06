@@ -1,6 +1,6 @@
-<div class="compare-wrapper">
+<div class="compare-wrapper" style="display:flex">
 
-<div class="hint-container info" style="margin-right:15px;">
+<div class="hint-container info" style="margin-right:15px;width:50%">
 
 <div class="compare-title">
   <ColorIcon icon="restfulFastRequest" />收费版
@@ -49,7 +49,7 @@
 
 </div>
 
-<div class="hint-container tip" style="margin-left:15px;">
+<div class="hint-container tip" style="margin-left:15px;width:50%">
 
 <div class="compare-title">
   <ColorIcon icon="restfulFastRequest1" />免费版
