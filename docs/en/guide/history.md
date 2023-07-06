@@ -36,7 +36,31 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="The main window pops up with configuration" type="info"/>
+- <Badge text="Param parse" type="info"/>
+- <Badge text="Table dragging problem" type="info"/>
+
+::: info The main window pops up with configuration
+Add a config `Show main tool window when action trigger` in `Setting->Request Fast Request->Other config`.
+:::
+
+::: info Param parse
+Parsing optimization for the input parameters with `@RequestBody Set<String>set`. By default, strings are enclosed in double quotation marks.
+
+::: code-tabs#shell
+
+@tab spring
+
+```java
+@PostMapping("test3")
+public Set<String> test3(@RequestBody Set<String>set) {
+    return set;
+}
+```
+:::
+
+## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightGreen"/>
 
 - <Badge text="New icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
@@ -93,7 +117,7 @@ Support field line duplicate, mark key end with `-dup` for duplicate key, plugin
 ![fieldDup](/img/2023.1.7/fieldDup.png)
 :::
 
-## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightGreen"/>
+## 2023.1.6 <Badge text="Free trial" type="tip"/> 
 
 - <Badge text="Header batch edit" type="tip"/>
 - <Badge text="Idea hang when debug in post script" type="danger"/>

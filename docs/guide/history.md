@@ -36,7 +36,32 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+## 2023.1.7.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+- <Badge text="主窗口弹出配置化" type="info"/>
+- <Badge text="参数解析" type="info"/>
+- <Badge text="table托拉拽问题" type="info"/>
+
+::: info 主窗口弹出配置化
+在`设置->Request Fast Request->其他配置中`增加了配置项`动作触发时显示主工具窗口`
+:::
+
+::: info 参数解析
+针对入参为`@RequestBody Set<String>set`的解析优化，默认给字符串加双引号
+
+::: code-tabs#shell
+
+@tab spring
+
+```java
+@PostMapping("test3")
+public Set<String> test3(@RequestBody Set<String>set) {
+    return set;
+}
+```
+:::
+
+
+## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 
 - <Badge text="全新扁平化图标" type="tip"/>
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
@@ -83,7 +108,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![fieldDup](/img/2023.1.7/fieldDup.png)
 :::
 
-## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.6 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="Header批量编辑" type="tip"/>
 - <Badge text="后置脚本发起请求idea debug卡死" type="danger"/>

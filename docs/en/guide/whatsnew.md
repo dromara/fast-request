@@ -37,8 +37,12 @@ We also hope that developers will promote and share the Restful Fast Request plu
 More details -> [Teamwork support](./teamwork.md)
 
 :::
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="The main window pops up with configuration" type="info"/>
+- <Badge text="Param parse" type="info"/>
+- <Badge text="Table dragging problem" type="info"/>
 
-## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="New icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
 - <Badge text="Slack support" type="tip"/>
