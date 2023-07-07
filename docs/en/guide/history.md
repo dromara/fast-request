@@ -37,9 +37,16 @@ More details -> [Teamwork support](./teamwork.md)
 :::
 
 ## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>
 - <Badge text="Param parse" type="info"/>
 - <Badge text="Table dragging problem" type="info"/>
+
+::: tip Add generate action in SearchEveryWhere
+After select Auto-generate icon, you can echo or automatically generate API-related URLs and parameter in SearchEveryWhere
+
+![searchEveryWhere](/img/2023.1.7.1/searchEveryWhere.png)
+:::
 
 ::: info The main window pops up with configuration
 Add a config `Show main tool window when action trigger` in `Setting->Request Fast Request->Other config`.
