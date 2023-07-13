@@ -251,6 +251,38 @@ if(myResponse.isOk()){
 
 :::
 
+
+::: tip 3. Set an environment variable
+If response returns
+```json
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "token": "xxxxx"
+  }
+}
+```
+
+You can add this code in the post-script
+```groovy
+import cn.hutool.core.util.CharsetUtil
+import cn.hutool.core.util.StrUtil
+import cn.hutool.crypto.digest.DigestUtil
+import cn.hutool.http.HttpRequest
+import cn.hutool.http.HttpResponse
+import cn.hutool.http.HttpUtil
+import com.alibaba.fastjson.JSON
+
+HttpRequest myRequest = HttpUtil.createPost("http://localhost:8081/api/v1.0/login")
+HttpResponse myResponse = myRequest.execute()
+if(myResponse.isOk()){
+    String token = JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")
+    rfr.environment.put("token",token)
+}
+```
+:::
+
 ## Note
 
 - Groovy scripts are not sensitive to `;`, Java uses `;` as the end of the statement code, Groovy uses a newline to indicate the end of a code

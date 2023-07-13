@@ -23,6 +23,7 @@
 - [x] [<ColorIcon icon="scriptNew" /> 脚本支持](/guide/features/script.md)
 - [x] [<ColorIcon icon="openai" /> AI 字段替换](/guide/features/ai.md)
 - [x] [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](/guide/features/projectValueConfig.md)
+- [x] [<ColorIcon icon="environment" /> Environment](/guide/features/environment.md)
 - [x] [<ColorIcon icon="domainConfigNew" /> Yaml、Properties 自动识别支持](/guide/features/projectLevelDomainConfig.md)
 - [x] [<ColorIcon icon="stop" /> 终止 API 请求功能](/guide/features/stopRequest.md)
 - [x] [<ColorIcon icon="localScope" />当前方法定位](/guide/features/navigateCurrentMethod.md)

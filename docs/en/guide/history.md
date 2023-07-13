@@ -36,7 +36,25 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="Environment" type="tip"/>
+- <Badge text="Method description length truncate" type="info"/>
+- <Badge text="Delete api directory error in Windows system" type="danger"/>
+
+::: tip Environment
+Add <ColorIcon icon="environment" /> nvironment variable support, [more detail](./features/environment.md)
+:::
+
+::: info Method description length truncate
+You can truncate the method description process when the method name is too long, resulting in display or data saving.
+
+Such as in `SearchEveryWhere`
+
+![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength_en.png)
+:::
+
+
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>
 - <Badge text="Param parse" type="info"/>
@@ -67,7 +85,7 @@ public Set<String> test3(@RequestBody Set<String>set) {
 ```
 :::
 
-## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightGreen"/>
+## 2023.1.7 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="New icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
@@ -240,7 +258,7 @@ Rounded corners and adjusted background colour for icons.
 ![toolbar](/img/2023.1.3/apis.png)
 :::
 
-## v2023.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## v2023.1.2 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Image render from response" type="tip"/>
 - <Badge text="Annual report" type="tip"/>
@@ -422,7 +440,7 @@ Note that the previous version of the update will still be a pop-up dialog, this
 ![fullScreen](/img/2022.2.7/commentPreview.png)
 :::
 
-## v2022.2.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="info"/>
+## v2022.2.6 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Clear params support" type="tip"/>
 - <Badge text="Api comment preview" type="tip"/>

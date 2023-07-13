@@ -37,13 +37,18 @@ We also hope that developers will promote and share the Restful Fast Request plu
 More details -> [Teamwork support](./teamwork.md)
 
 :::
-## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+- <Badge text="Environment" type="tip"/>
+- <Badge text="Method description length truncate" type="info"/>
+- <Badge text="Delete api directory error in Windows system" type="danger"/>
+
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 - <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>
 - <Badge text="Param parse" type="info"/>
 - <Badge text="Table dragging problem" type="info"/>
 
-## 2023.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## 2023.1.7 <Badge text="Free trial" type="tip"/>
 - <Badge text="New icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
 - <Badge text="Slack support" type="tip"/>
@@ -61,7 +66,7 @@ More details -> [Teamwork support](./teamwork.md)
 - <Badge text="Batch export api doc" type="danger"/>
 - <Badge text="History request echo data" type="danger"/>
 
-## 2023.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## 2023.1.6 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Header batch edit" type="tip"/>
 - <Badge text="Idea hang when debug in post script" type="danger"/>

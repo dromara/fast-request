@@ -36,7 +36,22 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-## 2023.1.7.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+- <Badge text="Environment" type="tip"/>
+- <Badge text="方法描述截断" type="info"/>
+- <Badge text="Windows系统APIs中目录删除" type="danger"/>
+
+::: tip Environment
+引入了 <ColorIcon icon="environment" /> nvironment变量，[详情](./features/environment.md)
+:::
+
+::: info 方法描述截断
+针对方法名过于长，导致显示或者数据保存的时候方法描述过程，可以进行截断设置。例如`SearchEveryWhere`
+
+![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength.png)
+:::
+
+## 2023.1.7.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="SearchEveryWhere增加自动生成策略" type="tip"/>
 - <Badge text="主窗口弹出配置化" type="info"/>
 - <Badge text="参数解析" type="info"/>
@@ -68,7 +83,7 @@ public Set<String> test3(@RequestBody Set<String>set) {
 :::
 
 
-## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.7 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="全新扁平化图标" type="tip"/>
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
@@ -407,7 +422,7 @@ private String someIgnoreField ;
 ![fullScreen](/img/2022.2.7/commentPreview.png)
 :::
 
-## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## v2022.2.6 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="一键清除参数" type="tip"/>
 - <Badge text="API注释预览" type="tip"/>

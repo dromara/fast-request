@@ -24,6 +24,7 @@ icon: featuresNew
 
 - [<ColorIcon icon="restfulFastRequest" /> 让图标动起来](./makeIconMove.md)
 - [<ColorIcon icon="domainConfigNew" /> 项目域名配置](./projectLevelDomainConfig.md)
+- [<ColorIcon icon="environment" /> Environment](./environment.md)
 - [<ColorIcon icon="rcd-refresh" /> 项目配置刷新](./projectConfigRefresh.md)
 - [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](./projectValueConfig.md)
 - [<ColorIcon icon="searchApi" /> SearchEveryWhere](./searchEveryWhere.md)

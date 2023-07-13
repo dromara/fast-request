@@ -38,13 +38,20 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 [**务必查看变更详情----------------->**](./history.md)
-## 2023.1.7.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+
+
+## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+- <Badge text="Environment" type="tip"/>
+- <Badge text="方法描述截断" type="info"/>
+- <Badge text="Windows系统APIs中目录删除" type="danger"/>
+
+## 2023.1.7.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="SearchEveryWhere增加自动生成策略" type="tip"/>
 - <Badge text="主窗口弹出配置化" type="info"/>
 - <Badge text="参数解析" type="info"/>
 - <Badge text="table托拉拽问题" type="info"/>
 
-## 2023.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+## 2023.1.7 <Badge text="免费试用" type="tip"/>
 - <Badge text="全新扁平化图标" type="tip"/>
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
 - <Badge text="精简版http图标" type="tip"/>
@@ -61,12 +68,12 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="批量导出api文档" type="danger"/>
 - <Badge text="历史请求回显问题" type="danger"/>
 
-## 2023.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+## 2023.1.6 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="header批量编辑" type="tip"/>
 - <Badge text="后置脚本发起请求idea debug卡死" type="danger"/>
 
-## 2023.1.5 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.5 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="编辑器图标位置" type="info"/>
 - <Badge text="SearchEveryWhere样式错乱" type="danger"/>
@@ -101,7 +108,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="Mapping为数组的时候URL随机生成" type="danger"/>
 - <Badge text="Kotlin字段注释未生成" type="danger"/>
 
-## 2023.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.2 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="图片响应渲染" type="tip"/>
 - <Badge text="年度报告" type="tip"/>

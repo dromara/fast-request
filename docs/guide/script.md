@@ -81,14 +81,14 @@ request.header("sign",sign)
 
 ```
 作用: 包含了项目级别头,可以通过修改来动态往UI里面设置值
-类型: java.util.LinkedHashMap
+类型: java.util.LinkedHashMap<String,String>
 ```
 
 #### rfr.moduleHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```
 作用: 包含了模块级别头,可以通过修改来动态往UI里面设置值
-类型: java.util.LinkedHashMap
+类型: java.util.LinkedHashMap<String,String>
 ```
 
 #### rfr.currentProjectName <Badge text="2022.2.5️" type="tip"/>
@@ -108,15 +108,22 @@ request.header("sign",sign)
 #### rfr.currentDomain <Badge text="2022.3.1️" type="tip"/>
 
 ```
-作用: 获取当前作用的域名
+作用: 当前作用的域名
 类型: java.lang.String
 ```
 
 #### rfr.currentModuleName <Badge text="2023.1.3️" type="tip"/>
 
 ```
-作用: 获取当前API的模块名
+作用: 当前API的模块名
 类型: java.lang.String
+```
+
+#### rfr.environment <Badge text="2023.1.8" type="tip"/>
+
+```
+作用: 当前环境的变量
+类型: java.util.LinkedHashMap<String,String>
 ```
 
 ## 引入第三方 Jar
@@ -248,6 +255,37 @@ if(myResponse.isOk()){
 }
 ```
 
+:::
+
+::: tip 3. 设置一个Environment变量
+假定响应报文格式
+```json
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "token": "xxxxx"
+  }
+}
+```
+
+在后置脚本中植入以下代码
+```groovy
+import cn.hutool.core.util.CharsetUtil
+import cn.hutool.core.util.StrUtil
+import cn.hutool.crypto.digest.DigestUtil
+import cn.hutool.http.HttpRequest
+import cn.hutool.http.HttpResponse
+import cn.hutool.http.HttpUtil
+import com.alibaba.fastjson.JSON
+
+HttpRequest myRequest = HttpUtil.createPost("http://localhost:8081/api/v1.0/login")
+HttpResponse myResponse = myRequest.execute()
+if(myResponse.isOk()){
+    String token = JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")
+    rfr.environment.put("token",token)
+}
+```
 :::
 
 ## 注意点

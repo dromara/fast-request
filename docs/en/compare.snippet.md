@@ -23,6 +23,7 @@
 - [x] [<ColorIcon icon="scriptNew" /> Script](/en/guide/features/script.md)
 - [x] [<ColorIcon icon="openai" /> OpenAI API Optimizing fields](/en/guide/features/ai.md)
 - [x] [<ColorIcon icon="quanjucanshu" /> Project-level config](/en/guide/features/projectValueConfig.md)
+- [x] [<ColorIcon icon="environment" /> Environment](/en/guide/features/environment.md)
 - [x] [<ColorIcon icon="domainConfigNew" /> Yaml、Properties domain parse](/en/guide/features/projectLevelDomainConfig.md)
 - [x] [<ColorIcon icon="stop" /> Stop API request](/en/guide/features/stopRequest.md)
 - [x] [<ColorIcon icon="localScope" /> Navigate to current method](/en/guide/features/navigateCurrentMethod.md)
