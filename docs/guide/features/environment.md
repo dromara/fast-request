@@ -4,6 +4,16 @@
 
 Environment中可以设置存储一些变量，并且在其他地方使用`{{key}}`来替换固定值或者魔法值。
 
+可以在以下场景中使用`{{key}}`
+* Url
+* Headers
+* Path Params
+* URL Params
+* Body
+    * JSON
+    * Form URL-Encoded
+    * Multipart
+
 ## 定义
 Environment的Tab值取自项目域名配置中的`环境`，key需要满足正则表达式`^[a-zA-Z_$][a-zA-Z0-9_$]*$`
 

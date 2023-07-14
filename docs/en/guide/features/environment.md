@@ -4,6 +4,16 @@ Version required: <Badge text="2023.1.8" />
 
 In Environment, you can store variables and use `{{key}}` to replace fixed or magic values elsewhere.
 
+You can use `{{key}}` in this places:
+* Url
+* Headers
+* Path Params
+* URL Params
+* Body
+    * JSON
+    * Form URL-Encoded
+    * Multipart
+
 ## Define
 The Tab value of Environment is taken from the project domain config. Key needs to satisfy the regular expression `^[a-z A-Z_][a-z A-Z 0-9_]`
 
