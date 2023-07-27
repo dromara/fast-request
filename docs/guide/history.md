@@ -39,6 +39,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
 - <Badge text="Environment" type="tip"/>
 - <Badge text="方法描述截断" type="info"/>
+- <Badge text="Instant类型解析" type="info"/>  
 - <Badge text="Windows系统APIs中目录删除" type="danger"/>
 
 ::: tip Environment

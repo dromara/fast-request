@@ -39,6 +39,7 @@ More details -> [Teamwork support](./teamwork.md)
 ## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
 - <Badge text="Environment" type="tip"/>
 - <Badge text="Method description length truncate" type="info"/>
+- <Badge text="Parse support for Instant" type="info"/>  
 - <Badge text="Delete api directory error in Windows system" type="danger"/>
 
 ::: tip Environment

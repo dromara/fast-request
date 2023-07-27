@@ -34,7 +34,7 @@ features:
 head:
   - - meta
     - name: keywords
-      content: Restful Fast Request,RestfulFastRequest,Best Rest Client,Fast Request,fast request,fast request官网,Postman,restful toolkit,idea插件,http client,Restful API,Restful,API
+      content: Restful Fast Request,RestfulFastRequest,Best Rest Client,Fast Request,fast request,fast request官网,Postman,restful toolkit,idea插件,http client,Restful API,Restful,API,API Buddy
   - - meta
     - name: description
       content: Restful Fast Request 一个基于 IDEA 的类似 postman 的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params，一个API调试工具+API管理工具，支持 springmvc、springboot、java-rs
