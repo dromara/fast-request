@@ -4,6 +4,8 @@ import NormalPage from "@theme-hope/components/NormalPage";
 import SkipLink from "@theme-hope/components/SkipLink";
 import FadeSlideY from "@theme-hope/components/transitions/FadeSlideY";
 
+declare const document: Document;
+
 let sidebarTopArray = [
   `<a href="https://jetbrains.com" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/IntelliJ_IDEA.svg">
