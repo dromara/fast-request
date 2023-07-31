@@ -1,7 +1,6 @@
 ---
 title: 历史变更
 icon: whats-new
-layout: RfrSlot
 ---
 
 ::: tip 公告
@@ -40,20 +39,22 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
-
 ## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+
 - <Badge text="Environment" type="tip"/>
 - <Badge text="方法描述截断" type="info"/>
-- <Badge text="Instant类型解析" type="info"/>  
+- <Badge text="Instant类型解析" type="info"/>
 - <Badge text="Windows系统APIs中目录删除" type="danger"/>
 
 ## 2023.1.7.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+
 - <Badge text="SearchEveryWhere增加自动生成策略" type="tip"/>
 - <Badge text="主窗口弹出配置化" type="info"/>
 - <Badge text="参数解析" type="info"/>
 - <Badge text="table托拉拽问题" type="info"/>
 
 ## 2023.1.7 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="全新扁平化图标" type="tip"/>
 - <Badge text="SearchEveryWhere加入过滤条件" type="tip"/>
 - <Badge text="精简版http图标" type="tip"/>
@@ -63,7 +64,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="自动域名解析优化" type="info"/>
 - <Badge text="cUrl导入" type="info"/>
 - <Badge text="全屏操作" type="info"/>
-- <Badge text="参数解析" type="info"/>  
+- <Badge text="参数解析" type="info"/>
 - <Badge text="Gradle项目的模块名去除.main" type="info"/>
 - <Badge text="SearchEveryWhere关键字带空格搜索" type="danger"/>
 - <Badge text="众多操作细节优化" type="danger"/>

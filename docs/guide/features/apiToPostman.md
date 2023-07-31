@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # API 导出到 Postman

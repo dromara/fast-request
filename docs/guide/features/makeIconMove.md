@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 让图标动起来

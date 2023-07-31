@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 重新生成请求

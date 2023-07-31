@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 临时请求保存支持

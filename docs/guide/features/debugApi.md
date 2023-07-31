@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 调试 API 发送请求
@@ -8,6 +7,6 @@ layout: RfrSlot
 
 ![sendRequest](/img/sendRequest.png)
 
-* 老版本
+- 老版本
 
 ![example](/img/example.gif)

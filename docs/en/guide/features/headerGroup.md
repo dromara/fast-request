@@ -12,5 +12,4 @@ Operation method：
 
 ![headerGroup](/img/headerGroup.png)
 
-
 ![headerSwitch](/img/headerSwitch.gif)

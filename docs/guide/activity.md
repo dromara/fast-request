@@ -1,7 +1,6 @@
 ---
 title: 活动
 icon: activity
-layout: RfrSlot
 ---
 
 ## 20230524

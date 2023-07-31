@@ -10,7 +10,6 @@ icon: buy
 - Account mode: Management via [JetBrains Account](https://account.jetbrains.com/licenses)(Recommend)
 - Email mode: Receive the license directly by email
 
-
 **Registering a JetBrains account to purchase can facilitate the follow-up to find the license, and it is not easy to lose.**
 
 [Documentation](https://plugins.jetbrains.com/docs/marketplace/how-to-buy-a-plugin.html) how to buy a plugin provided by JetBrains, or you can refer to the following steps.

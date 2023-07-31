@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 终止 API 请求功能

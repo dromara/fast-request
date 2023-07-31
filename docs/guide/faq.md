@@ -1,7 +1,6 @@
 ---
 title: FAQ
 icon: faq
-layout: RfrSlot
 ---
 
 > 关键字含义

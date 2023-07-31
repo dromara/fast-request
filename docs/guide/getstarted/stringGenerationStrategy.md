@@ -1,7 +1,6 @@
 ---
 title: String 生成策略
 icon: codestring
-layout: RfrSlot
 ---
 
 ## 策略

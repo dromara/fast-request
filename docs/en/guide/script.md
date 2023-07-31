@@ -251,9 +251,9 @@ if(myResponse.isOk()){
 
 :::
 
-
 ::: tip 3. Set an environment variable
 If response returns
+
 ```json
 {
   "success": true,
@@ -265,6 +265,7 @@ If response returns
 ```
 
 You can add this code in the post-script
+
 ```groovy
 import cn.hutool.core.util.CharsetUtil
 import cn.hutool.core.util.StrUtil
@@ -281,6 +282,7 @@ if(myResponse.isOk()){
     rfr.environment.put("token",token)
 }
 ```
+
 :::
 
 ## Note

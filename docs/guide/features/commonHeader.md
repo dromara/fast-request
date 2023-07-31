@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 常用头参数
