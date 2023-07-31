@@ -1,10 +1,9 @@
-<script setup lang="ts">
+<script setup lang="js">
 import CommonWrapper from "@theme-hope/components/CommonWrapper";
 import NormalPage from "@theme-hope/components/NormalPage";
 import SkipLink from "@theme-hope/components/SkipLink";
 import FadeSlideY from "@theme-hope/components/transitions/FadeSlideY";
 
-declare const document: Document;
 
 let sidebarTopArray = [
   `<a href="https://jetbrains.com" target="_blank">
