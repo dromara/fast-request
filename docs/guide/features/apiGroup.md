@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # API 分组
@@ -16,13 +15,10 @@ layout: RfrSlot
 原保存操作将默认归类到 Default 分组
 :::
 
-
 ![groupSave](/img/2022.2.1/groupSave.png "保存分组")
 
 **切换参数**
 
-
 以下是 book 列表 3 种语言的查询,点击<ColorIcon icon="apiParamGroup" />进行切换
-
 
 ![apiParamGroup](/img/2022.2.1/apiParamGroup.png "切换分组")

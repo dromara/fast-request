@@ -1,7 +1,6 @@
 ---
 title: 类型 Icon 映射
 icon: discoverfill
-layout: RfrSlot
 ---
 
 ## 图标和类型映射关系

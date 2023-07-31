@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 快速添加 header

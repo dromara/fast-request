@@ -1,7 +1,6 @@
 ---
 icon: install-fill
 title: 安装
-layout: RfrSlot
 ---
 
 ::: danger

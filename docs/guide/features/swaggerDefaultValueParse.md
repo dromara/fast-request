@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # Swagger 默认值

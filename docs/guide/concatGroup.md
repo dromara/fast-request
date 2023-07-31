@@ -1,7 +1,6 @@
 ---
 icon: contactGroup
 title: 群聊
-layout: RfrSlot
 ---
 
 1. **加入微信群购买享折扣️**， 教程已放群公告

@@ -1,6 +1,5 @@
 ---
 title: 友情链接
-layout: RfrSlot
 icon: youqinglianjie
 docsDromara:
   - name: Hutool

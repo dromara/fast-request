@@ -1,7 +1,6 @@
 ---
 title: 赞助
 icon: aixin
-layout: RfrSlot
 ---
 
 ## 优势
@@ -15,7 +14,6 @@ layout: RfrSlot
 
 ![为什么要赞助](/img/whySponsor.png)
 
-
 ## 赞助者福利
 
 1. 赞助达 <span class="badge danger" style="vertical-align: middle;">500</span> 元，您将获得 Restful Fast Request 左侧菜单上方赞助赞**广告展示**.并可**投放推广链接**（1年）。包月100/月
@@ -25,7 +23,7 @@ layout: RfrSlot
 
 ## 首页上墙需提供的资料
 
-提供 **Logo**(透明背景、220*50) 和**链接**
+提供 **Logo**(透明背景、220×50) 和**链接**
 
 ## 联系我们
 
@@ -33,4 +31,3 @@ layout: RfrSlot
 
 1. 扫码添加微信，添加好友时请备注：==赞助==
 1. 好友添加成功后请发送赞助支付截图
-

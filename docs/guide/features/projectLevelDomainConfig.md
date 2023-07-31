@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # Project 级别域名配置

@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 自动域名

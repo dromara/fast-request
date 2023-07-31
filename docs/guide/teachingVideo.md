@@ -1,7 +1,6 @@
 ---
 title: 视频教程
 icon: bilibili
-layout: RfrSlot
 ---
 
 B 站系列视频

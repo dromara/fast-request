@@ -65,7 +65,6 @@ head:
   style="max-width:400px"
 />
 
-
 <div class="home-advantage">
 
 ## 优势
@@ -84,9 +83,7 @@ head:
 
 ## 🥇 功能
 
-
 <!-- @include: @src/compare.snippet.md -->
-
 
 ## 🎉 致谢
 

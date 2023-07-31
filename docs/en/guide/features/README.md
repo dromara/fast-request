@@ -10,10 +10,9 @@ The icon in the document corresponds to the button icon in the plugin
 
 ## Request
 
-
 - [<ColorIcon icon="restfulFastRequest" /> Make icon move](./makeIconMove.md)
 - [<ColorIcon icon="domainConfigNew" /> Project-level domain config](./projectLevelDomainConfig.md)
-- [<ColorIcon icon="environment" /> Environment](./environment.md) 
+- [<ColorIcon icon="environment" /> Environment](./environment.md)
 - [<ColorIcon icon="rcd-refresh" /> Project config refresh](./projectConfigRefresh.md)
 - [<ColorIcon icon="quanjucanshu" /> Project-level config](./projectValueConfig.md)
 - [<ColorIcon icon="searchApi" /> SearchEveryWhere](./searchEveryWhere.md)
@@ -75,7 +74,6 @@ The icon in the document corresponds to the button icon in the plugin
 ## Script
 
 - [<ColorIcon icon="scriptNew" /> Script](./script.md)
-
 
 ## Other
 

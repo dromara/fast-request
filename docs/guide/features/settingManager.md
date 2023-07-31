@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 管理配置

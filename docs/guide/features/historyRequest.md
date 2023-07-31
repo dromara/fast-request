@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # 历史请求预览

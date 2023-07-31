@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # Json 语法检查

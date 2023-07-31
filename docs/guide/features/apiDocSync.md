@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # API 文档同步

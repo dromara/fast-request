@@ -1,7 +1,6 @@
 ---
 title: 项目/环境/域名
 icon: config2
-layout: RfrSlot
 ---
 
 ::: danger 建议

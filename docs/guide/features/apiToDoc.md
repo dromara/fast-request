@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # API 生成文档

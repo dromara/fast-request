@@ -37,33 +37,37 @@ We also hope that developers will promote and share the Restful Fast Request plu
 More details -> [Teamwork support](./teamwork.md)
 
 :::
+
 ## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+
 - <Badge text="Environment" type="tip"/>
 - <Badge text="Method description length truncate" type="info"/>
-- <Badge text="Parse support for Instant" type="info"/>  
+- <Badge text="Parse support for Instant" type="info"/>
 - <Badge text="Delete api directory error in Windows system" type="danger"/>
 
 ## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+
 - <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>
 - <Badge text="Param parse" type="info"/>
 - <Badge text="Table dragging problem" type="info"/>
 
 ## 2023.1.7 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="New icon" type="tip"/>
 - <Badge text="SearchEveryWhere enhance" type="tip"/>
 - <Badge text="Slack support" type="tip"/>
 - <Badge text="Compact http icon" type="tip"/>
-- <Badge text="Duplicate field" type="tip"/>  
+- <Badge text="Duplicate field" type="tip"/>
 - <Badge text="Optimize the insertion of script snippets" type="info"/>
 - <Badge text="Optimize table and textarea" type="info"/>
 - <Badge text="Optimize automatic domain parse" type="info"/>
 - <Badge text="cUrl import" type="info"/>
 - <Badge text="FullScreen" type="info"/>
-- <Badge text="Params parse" type="info"/>  
+- <Badge text="Params parse" type="info"/>
 - <Badge text="Remove the .main from the module name of a Gradle project" type="info"/>
 - <Badge text="SearchEveryWhere keyword search with spaces" type="danger"/>
-- <Badge text="Optimizing numerous operational details" type="danger"/>  
+- <Badge text="Optimizing numerous operational details" type="danger"/>
 - <Badge text="Batch export api doc" type="danger"/>
 - <Badge text="History request echo data" type="danger"/>
 

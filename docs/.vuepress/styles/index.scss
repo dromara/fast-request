@@ -30,7 +30,7 @@ h2 {
   background-repeat: no-repeat;
 
   @media (min-width: 959px) {
-    background: url("/img/bg2.svg") no-repeat calc(50% + 400px)  0;
+    background: url("/img/bg2.svg") no-repeat calc(50% + 400px) 0;
   }
 
   h2 {
@@ -52,7 +52,7 @@ h2 {
 .vp-description {
   max-width: 100%;
   font-size: 16px;
-  color:#fff;
+  color: #fff;
   font-family: bobohei, sans-serif;
 }
 
@@ -77,12 +77,12 @@ h2 {
   }
 
   .vp-feature-title {
-    color:#fff;
+    color: #fff;
     font-family: bobohei, sans-serif;
   }
 
   .vp-feature-details {
-    color:#fff;
+    color: #fff;
     font-weight: 600;
   }
 }
@@ -91,10 +91,10 @@ h2 {
   padding: 0 5rem;
 }
 
-#main-title{
-color:#ffffff;
-font-family:bobohei;
--webkit-text-fill-color:#ffffff;
+#main-title {
+  color: #ffffff;
+  font-family: bobohei;
+  -webkit-text-fill-color: #ffffff;
 }
 
 // navbar
@@ -155,7 +155,6 @@ font-family:bobohei;
   font-family: bobohei, sans-serif;
 }
 
-
 .compare-wrapper {
   width: 100%;
 
@@ -189,25 +188,25 @@ font-family:bobohei;
   }
 }
 
-.advantage-more{
-    cursor: pointer;
-    font-size:16px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    position: relative;
-    border-radius:8px;
-    color: #000;
-    text-decoration: none;
+.advantage-more {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 8px;
+  color: #000;
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {
-        .home-advantage {
-            display:none;
-        }
-    }
+  .home-advantage {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
-    .home-advantage {
-        display:block;
-    }
+  .home-advantage {
+    display: block;
+  }
 }

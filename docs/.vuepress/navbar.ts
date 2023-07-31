@@ -90,8 +90,8 @@ export const zhNavbar = navbar([
   },
   {
     text: "🔥 团队协作",
-    link: "/guide/teamwork",
     // icon: "teamwork",
+    link: "/guide/teamwork",
   },
   {
     text: "🎯 群聊",
@@ -102,9 +102,9 @@ export const zhNavbar = navbar([
     link: "/guide/faq",
   },
   {
-      text: "Java资源",
-      link: "/guide/java",
-    },
+    text: "Java资源",
+    link: "/guide/java",
+  },
   {
     text: "更多",
     children: ["/guide/link", "/guide/sponsorList", "/guide/activity"],

@@ -1,27 +1,20 @@
 ---
 icon: featuresNew
-layout: RfrSlot
 ---
 
 # 功能列表
 
 文档中的图标对应插件中的按钮图标，大标题对应 tab 以及功能
 
-* 新图标Plugin版本>=2021.1.7
+- 新图标Plugin版本>=2021.1.7
 
 ![toolwindowNew](/img/toolwindowNew.png)
 
-
-* 老图标Plugin版本<2021.1.7
+- 老图标Plugin版本<2021.1.7
 
 ![tool window](/img/toolwindow.png)
 
-
-
-
-
 ## Request
-
 
 - [<ColorIcon icon="restfulFastRequest" /> 让图标动起来](./makeIconMove.md)
 - [<ColorIcon icon="domainConfigNew" /> 项目域名配置](./projectLevelDomainConfig.md)
@@ -86,9 +79,7 @@ layout: RfrSlot
 
 ## Script
 
-
 - [<ColorIcon icon="scriptNew" /> 脚本](./script.md)
-
 
 ## Other
 

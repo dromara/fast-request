@@ -53,6 +53,7 @@ head:
 <div class="home-advantage">
 
 ## Advantage
+
 <iframe
 :src="$withBase('/html/showside_en.html')"
 width="100%"
@@ -64,13 +65,12 @@ topmargin="0"
 />
 
 <a class="advantage-more" href="en/guide/features">More features</a>
+
 </div>
 
 ## 🥇 Features
 
-
 <!-- @include: @src/en/compare.snippet.md -->
-
 
 ::: chart API tool comparison
 

@@ -2,7 +2,6 @@
 title: 脚本
 icon: code-box-fill
 headerDepth: 4
-layout: RfrSlot
 ---
 
 **脚本的作用**: 开发者可以利用 Groovy 脚本来自定义一些逻辑,从而使得 api 更加灵活,例如对参数进行动态加密签名,放入 header,而不是直接写死
@@ -260,6 +259,7 @@ if(myResponse.isOk()){
 
 ::: tip 3. 设置一个Environment变量
 假定响应报文格式
+
 ```json
 {
   "success": true,
@@ -271,6 +271,7 @@ if(myResponse.isOk()){
 ```
 
 在后置脚本中植入以下代码
+
 ```groovy
 import cn.hutool.core.util.CharsetUtil
 import cn.hutool.core.util.StrUtil
@@ -287,6 +288,7 @@ if(myResponse.isOk()){
     rfr.environment.put("token",token)
 }
 ```
+
 :::
 
 ## 注意点

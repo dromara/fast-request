@@ -1,7 +1,6 @@
 ---
 title: 快捷键
 icon: shortcut-fill
-layout: RfrSlot
 ---
 
 快捷键有利于提升操作的速度，熟练得使用会让操作变得更加简单。

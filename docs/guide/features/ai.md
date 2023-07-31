@@ -1,5 +1,4 @@
 ---
-layout: RfrSlot
 ---
 
 # AI 字段替换

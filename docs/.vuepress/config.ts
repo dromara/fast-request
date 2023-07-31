@@ -67,4 +67,11 @@ export default defineUserConfig({
   ],
 
   pagePatterns: ["**/*.md", "!*.snippet.md", "!.vuepress", "!node_modules"],
+
+  alias: {
+    "@theme-hope/layouts/Layout": path.resolve(
+      __dirname,
+      "./layouts/Layout.vue",
+    ),
+  },
 });

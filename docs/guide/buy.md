@@ -1,7 +1,6 @@
 ---
 title: 支持插件
 icon: buy
-layout: RfrSlot
 ---
 
 <Badge text="❤️插件的发展离不开各位开发者的支持，感谢您支持原创，支持正版️❤️" type="tip" vertical="middle"/>
