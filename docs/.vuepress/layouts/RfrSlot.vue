@@ -1,4 +1,4 @@
-<script setup lang="js">
+<script setup lang="ts">
 import CommonWrapper from "@theme-hope/components/CommonWrapper";
 import NormalPage from "@theme-hope/components/NormalPage";
 import SkipLink from "@theme-hope/components/SkipLink";
@@ -25,7 +25,7 @@ setTimeout(() => {
           return arr
         }
 
-        const sidebarTop = document.querySelector('.sidebar-slot-top')
+        const sidebarTop = globalThis.document.querySelector('.sidebar-slot-top')
         if (!sidebarTop) return
         sidebarTopArray = shuffle(sidebarTopArray);
         let _html = `<div style="width:230px;margin:0 auto">
