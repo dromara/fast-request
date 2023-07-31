@@ -25,7 +25,7 @@ setTimeout(() => {
           return arr
         }
 
-        const sidebarTop = window.document.querySelector('.sidebar-slot-top')
+        const sidebarTop = global.document.querySelector('.sidebar-slot-top')
         if (!sidebarTop) return
         sidebarTopArray = shuffle(sidebarTopArray);
         let _html = `<div style="width:230px;margin:0 auto">
