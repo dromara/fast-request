@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # CURL 拷贝
 
 版本要求： <Badge text="1.1.4" />

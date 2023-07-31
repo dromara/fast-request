@@ -1,6 +1,7 @@
 ---
 title: 其他配置
 icon: others1
+layout: RfrSlot
 ---
 
 控制器上的 url 固定变量可以由配置替换，例如类控制器上 url 写法如下:

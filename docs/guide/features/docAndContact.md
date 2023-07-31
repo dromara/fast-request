@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # 文档/快速联系
 
 - <ColorIcon icon="doc1" /> 快速打开文档功能页面,无需记忆

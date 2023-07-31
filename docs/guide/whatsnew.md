@@ -1,6 +1,7 @@
 ---
 title: 历史变更
 icon: whats-new
+layout: RfrSlot
 ---
 
 ::: tip 公告

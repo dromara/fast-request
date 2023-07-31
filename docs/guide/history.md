@@ -1,6 +1,7 @@
 ---
 title: 最新变化
 icon: changelog
+layout: RfrSlot
 ---
 
 ::: tip 公告

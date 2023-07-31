@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # API 分组自动关联
 
 版本要求: <Badge text="2.0.6" /> <Badge text="废弃" />

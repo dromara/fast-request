@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # Headers批量编辑
 
 版本要求: <Badge text="2023.1.6" />

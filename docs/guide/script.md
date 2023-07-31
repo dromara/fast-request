@@ -2,6 +2,7 @@
 title: 脚本
 icon: code-box-fill
 headerDepth: 4
+layout: RfrSlot
 ---
 
 **脚本的作用**: 开发者可以利用 Groovy 脚本来自定义一些逻辑,从而使得 api 更加灵活,例如对参数进行动态加密签名,放入 header,而不是直接写死

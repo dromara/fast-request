@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # SearchEveryWhere
 
 ```

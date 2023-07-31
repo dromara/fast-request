@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # 项目配置刷新
 
 版本要求: <Badge text="2023.1.3" />

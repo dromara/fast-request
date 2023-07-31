@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # cURL 导入
 
 版本要求: <Badge text="2022.2.1" />

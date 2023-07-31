@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # API 导航树
 
 版本要求: <Badge text="2.0.7"/>

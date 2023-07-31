@@ -1,6 +1,7 @@
 ---
 title: EULA
 icon: license
+layout: RfrSlot
 ---
 
 ## Restful Fast Request for JetBrains IDEs EULA

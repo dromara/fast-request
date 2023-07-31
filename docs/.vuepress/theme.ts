@@ -106,4 +106,4 @@ export default hopeTheme({
       tasklist: true,
     },
   },
-});
+},{ custom: true },);

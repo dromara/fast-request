@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # 常用头参数
 
 版本要求: <Badge text="2022.2.7" />

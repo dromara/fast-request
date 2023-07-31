@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # Json 语法检查
 
 版本要求: <Badge text="2.0.6"/>

@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # 快速添加 header
 
 版本要求: <Badge text="2.0.0" />

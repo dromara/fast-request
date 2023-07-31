@@ -1,6 +1,7 @@
 ---
 title: 价格调整
 icon: restfulFastRequest
+layout: RfrSlot
 ---
 
 自 Restful Fast Request 推出订阅以来，我们从未提高过插件的价格，并且我们一直在不断地更新新的功能，速度相当快，甚至有些人都跟不上更新的节奏，到此为止我们一共迭代了 19 个版本，加了许多许多非常实用的功能，例如 API 文档同步，是一个性价比非常高的插件。

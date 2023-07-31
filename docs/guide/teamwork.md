@@ -1,6 +1,7 @@
 ---
 title: 团队协作
 icon: teamwork
+layout: RfrSlot
 ---
 
 版本要求: <Badge text="2023.1.3"/>

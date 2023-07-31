@@ -1,6 +1,7 @@
 ---
 title: 快速开始
 icon: start1
+layout: RfrSlot
 ---
 
 ![](/img/start.svg)

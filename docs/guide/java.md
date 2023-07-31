@@ -1,6 +1,7 @@
 ---
 title: Java资源
 icon: java
+layout: RfrSlot
 ---
 
 ## 优秀博客社区

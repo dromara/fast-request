@@ -1,6 +1,7 @@
 ---
 title: 类型映射
 icon: dataMapping
+layout: RfrSlot
 ---
 
 ## 自定义类型映射

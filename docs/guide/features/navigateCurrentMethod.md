@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # 当前方法定位
 
 版本要求: <Badge text="2022.1.7" />

@@ -1,6 +1,7 @@
 ---
 title: 赞助列表
 icon: aixin
+layout: RfrSlot
 ---
 
 ## 如何赞助

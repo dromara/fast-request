@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # AI 字段替换
 
 版本要求: <Badge text="2023.1.3" />

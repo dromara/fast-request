@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # Headers 分组
 
 版本要求: <Badge text="2.0.7"/>

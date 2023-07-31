@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # 重新生成请求
 
 版本要求: <Badge text="2.0.0"/>

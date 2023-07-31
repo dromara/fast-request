@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # 自动域名
 
 版本要求: <Badge text="2023.1.4" />

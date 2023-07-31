@@ -1,6 +1,7 @@
 ---
 title: Environment
 icon: environment
+layout: RfrSlot
 ---
 
 版本要求: <Badge text="2023.1.8" />

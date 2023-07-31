@@ -1,5 +1,6 @@
 ---
 icon: featuresNew
+layout: RfrSlot
 ---
 
 # 功能列表

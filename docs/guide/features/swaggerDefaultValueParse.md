@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # Swagger 默认值
 
 版本要求: <Badge text="2022.1.4.0" />

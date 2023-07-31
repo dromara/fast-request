@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # Clear
 
 版本要求: <Badge text="2022.2.6" />

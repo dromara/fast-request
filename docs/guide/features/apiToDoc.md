@@ -1,3 +1,7 @@
+---
+layout: RfrSlot
+---
+
 # API 生成文档
 
 版本要求: <Badge text="2022.1.5" />

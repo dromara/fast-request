@@ -1,6 +1,7 @@
 ---
 title: 功能
 icon: tools
+layout: RfrSlot
 ---
 
 ==不再维护==，[请点击这边的文档](./features/README.md)
