@@ -1,8 +1,9 @@
 @use "@sass-palette/hope-config";
 
 @font-face {
-  font-family: bobohei;
-  src: url("/fast-request/font/BOBOHEI-2.otf");
+  font-family: "alimamaYuan";src: url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/ob91mwlGCFDW.woff2") format("woff2"),
+  url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/Sr0drwf08Wcd.woff") format("woff");
+  font-display: swap;
 }
 
 body {
@@ -13,7 +14,8 @@ body {
 
 h1,
 h2 {
-  font-family: bobohei, sans-serif;
+  font-family: alimamaYuan, sans-serif;
+  font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
 .svg-icon {
@@ -53,7 +55,8 @@ h2 {
   max-width: 100%;
   font-size: 16px;
   color: #fff;
-  font-family: bobohei, sans-serif;
+  font-family: alimamaYuan, sans-serif;
+  font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
 .vp-actions {
@@ -62,7 +65,8 @@ h2 {
 
 .vp-action.primary {
   color: #fff;
-  font-family: bobohei, sans-serif;
+  font-family: alimamaYuan, sans-serif;
+  font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
 .vp-features {
@@ -78,7 +82,8 @@ h2 {
 
   .vp-feature-title {
     color: #fff;
-    font-family: bobohei, sans-serif;
+    font-family: alimamaYuan, sans-serif;
+    font-variation-settings: "wght" 700,"BEVL" 100;
   }
 
   .vp-feature-details {
@@ -93,7 +98,8 @@ h2 {
 
 #main-title {
   color: #ffffff;
-  font-family: bobohei;
+  font-family: alimamaYuan;
+  font-variation-settings: "wght" 700,"BEVL" 100;
   -webkit-text-fill-color: #ffffff;
 }
 
@@ -105,7 +111,8 @@ h2 {
 
   @media (min-width: 1200px) {
     .vp-site-name {
-      font-family: bobohei, sans-serif;
+      font-family: alimamaYuan, sans-serif;
+      font-variation-settings: "wght" 700,"BEVL" 100;
       background-color: var(--theme-color);
       position: relative;
       color: transparent;
@@ -114,9 +121,9 @@ h2 {
     .vp-site-name::after {
       content: "Fast Request";
       position: absolute;
-      font-family: bobohei, sans-serif;
+      font-family: alimamaYuan, sans-serif;
+      font-variation-settings: "wght" 700,"BEVL" 100;
       left: 0;
-      top: -6px;
       background-image: linear-gradient(
         120deg,
         transparent 0%,
@@ -142,17 +149,20 @@ h2 {
   }
 
   .nav-item > .nav-link {
-    font-family: bobohei, sans-serif;
+    font-family: alimamaYuan, sans-serif;
+    font-variation-settings: "wght" 700,"BEVL" 100;
   }
 }
 
 // breadcrumb
 .breadcrumb a {
-  font-family: bobohei, sans-serif;
+  font-family: alimamaYuan, sans-serif;
+  font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
 .dropdown-wrapper .dropdown-title {
-  font-family: bobohei, sans-serif;
+  font-family: alimamaYuan, sans-serif;
+  font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
 .compare-wrapper {
