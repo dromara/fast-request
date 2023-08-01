@@ -57,7 +57,7 @@ export default hopeTheme(
               path: "/",
               title: "将在2023.1.8推出",
               content:
-                '<ul><li><li>Environment</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li>Environment</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",

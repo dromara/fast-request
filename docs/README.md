@@ -72,7 +72,7 @@ head:
 <iframe
   :src="$withBase('/html/showside.html')"
   width="100%"
-  height="520px"
+  height="600px"
   frameborder="0"
   scrolling="No"
   leftmargin="0"
