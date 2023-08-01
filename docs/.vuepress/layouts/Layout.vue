@@ -17,7 +17,7 @@ const route = useRoute();
 
 const sidebarTopArray = [
   `<a href="https://jetbrains.com" target="_blank">
-    <img className="no-zoom" height="50px" width="220px" src="/img/IntelliJ_IDEA.svg">
+    <img className="no-zoom" height="50px" width="220px" src="/fast-request/img/IntelliJ_IDEA.svg">
   </a>`,
 ];
 
