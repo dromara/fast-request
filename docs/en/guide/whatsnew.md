@@ -38,14 +38,14 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
 - <Badge text="Environment" type="tip"/>
 - <Badge text="Method description length truncate" type="info"/>
 - <Badge text="Parse support for Instant" type="info"/>
 - <Badge text="Delete api directory error in Windows system" type="danger"/>
 
-## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/> 
 
 - <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>

@@ -55,24 +55,24 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2023.1.7推出",
+              title: "将在2023.1.8推出",
               content:
-                '<ul><li><a href="https://www.bilibili.com/video/BV1gM4y177QU">更新视频预告</a></li><li>SearchEveryWhere增强</li><li>全新扁平化图标</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li><li>Environment</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2023-1-7",
+                  link: "/guide/history.html#_2023-1-8",
                   type: "primary",
                 },
               ],
               showOnce: false,
-              key: "2023.1.7.1",
+              key: "2023.1.8",
             },
             {
               path: "/en",
               title: "Coming in <b>2023.1.7</b>",
               content:
-                '<ul><li>SearchEveryWhere enhance</li><li>New icon</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+                '<ul><li>Environment</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
@@ -81,7 +81,7 @@ export default hopeTheme(
                 },
               ],
               showOnce: true,
-              key: "2023.1.7",
+              key: "2023.1.8",
             },
           ],
         },

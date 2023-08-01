@@ -36,7 +36,7 @@ More details -> [Teamwork support](./teamwork.md)
 
 :::
 
-## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="LightPink"/>
+## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
 - <Badge text="Environment" type="tip"/>
 - <Badge text="Method description length truncate" type="info"/>
@@ -55,7 +55,7 @@ Such as in `SearchEveryWhere`
 ![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength_en.png)
 :::
 
-## 2023.1.7.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/> 
 
 - <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>

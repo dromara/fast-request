@@ -36,7 +36,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 :::
 
-## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="LightPink"/>
+## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 
 - <Badge text="Environment" type="tip"/>
 - <Badge text="方法描述截断" type="info"/>
@@ -53,7 +53,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength.png)
 :::
 
-## 2023.1.7.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.7.1 <Badge text="免费试用" type="tip"/> 
 
 - <Badge text="SearchEveryWhere增加自动生成策略" type="tip"/>
 - <Badge text="主窗口弹出配置化" type="info"/>
