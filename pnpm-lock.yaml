@@ -17,6 +17,9 @@ dependencies:
   vue:
     specifier: ^3.3.4
     version: 3.3.4
+  vue-router:
+    specifier: ^4.2.4
+    version: 4.2.4(vue@3.3.4)
   vuepress:
     specifier: 2.0.0-beta.66
     version: 2.0.0-beta.66(@vuepress/client@2.0.0-beta.66)(vue@3.3.4)
