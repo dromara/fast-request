@@ -1,8 +1,14 @@
 @use "@sass-palette/hope-config";
 
 @font-face {
-  font-family: "alimamaYuan";src: url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/ob91mwlGCFDW.woff2") format("woff2"),
-  url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/Sr0drwf08Wcd.woff") format("woff");
+  font-family: "alimamaYuanMainTitle";src: url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/Q3WwpWfTtd6n.woff2") format("woff2"),
+  url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/fZdAkn5jCKJe.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "alimamaYuanMainDesc";src: url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/6yqLnXwdD2Tf.woff2") format("woff2"),
+  url("//at.alicdn.com/wf/webfont/jhT8CONmEHMF/vw5o5LROiBFq.woff") format("woff");
   font-display: swap;
 }
 
@@ -14,7 +20,7 @@ body {
 
 h1,
 h2 {
-  font-family: alimamaYuan, sans-serif;
+  font-family: alimamaYuanMainDesc, sans-serif;
   font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
@@ -55,7 +61,7 @@ h2 {
   max-width: 100%;
   font-size: 16px;
   color: #fff;
-  font-family: alimamaYuan, sans-serif;
+  font-family: alimamaYuanMainDesc, sans-serif;
   font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
@@ -65,8 +71,6 @@ h2 {
 
 .vp-action.primary {
   color: #fff;
-  font-family: alimamaYuan, sans-serif;
-  font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
 .vp-features {
@@ -82,7 +86,7 @@ h2 {
 
   .vp-feature-title {
     color: #fff;
-    font-family: alimamaYuan, sans-serif;
+    font-family: alimamaYuanMainDesc, sans-serif;
     font-variation-settings: "wght" 700,"BEVL" 100;
   }
 
@@ -98,7 +102,7 @@ h2 {
 
 #main-title {
   color: #ffffff;
-  font-family: alimamaYuan;
+  font-family: alimamaYuanMainTitle;
   font-variation-settings: "wght" 700,"BEVL" 100;
   -webkit-text-fill-color: #ffffff;
 }
@@ -111,7 +115,7 @@ h2 {
 
   @media (min-width: 1200px) {
     .vp-site-name {
-      font-family: alimamaYuan, sans-serif;
+      font-family: alimamaYuanMainTitle, sans-serif;
       font-variation-settings: "wght" 700,"BEVL" 100;
       background-color: var(--theme-color);
       position: relative;
@@ -121,7 +125,7 @@ h2 {
     .vp-site-name::after {
       content: "Fast Request";
       position: absolute;
-      font-family: alimamaYuan, sans-serif;
+      font-family: alimamaYuanMainTitle, sans-serif;
       font-variation-settings: "wght" 700,"BEVL" 100;
       left: 0;
       background-image: linear-gradient(
@@ -149,19 +153,19 @@ h2 {
   }
 
   .nav-item > .nav-link {
-    font-family: alimamaYuan, sans-serif;
+    font-family: alimamaYuanMainDesc, sans-serif;
     font-variation-settings: "wght" 700,"BEVL" 100;
   }
 }
 
 // breadcrumb
 .breadcrumb a {
-  font-family: alimamaYuan, sans-serif;
+  font-family: alimamaYuanMainDesc, sans-serif;
   font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
 .dropdown-wrapper .dropdown-title {
-  font-family: alimamaYuan, sans-serif;
+  font-family: alimamaYuanMainDesc, sans-serif;
   font-variation-settings: "wght" 700,"BEVL" 100;
 }
 
