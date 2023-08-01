@@ -74,4 +74,12 @@ export default defineUserConfig({
       "./layouts/Layout.vue",
     ),
   },
+
+  configureWebpack: (config, isServer) => {
+      if (!isServer) {
+        config.externals = {
+          'vue-router': 'VueRouter'
+        }
+      }
+    }
 });
