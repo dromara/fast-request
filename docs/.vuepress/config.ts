@@ -75,11 +75,4 @@ export default defineUserConfig({
     ),
   },
 
-  configureWebpack: (config, isServer) => {
-      if (!isServer) {
-        config.externals = {
-          'vue-router': 'VueRouter'
-        }
-      }
-    }
 });
