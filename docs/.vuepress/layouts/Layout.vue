@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { usePageData, usePageFrontmatter } from "@vuepress/client";
 import { ref, watch } from "vue";
-import { useRoute } from "vue-router";
 
 import CommonWrapper from "@theme-hope/components/CommonWrapper";
 import HomePage from "@theme-hope/components/HomePage";
@@ -13,7 +12,6 @@ import type { ThemePageFrontmatter } from "../../shared/index.js";
 
 const page = usePageData();
 const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
-const route = useRoute();
 
 const sidebarTopArray = [
   `<a href="https://jetbrains.com" target="_blank">
@@ -37,9 +35,9 @@ function shuffle(arr) {
 }
 
 watch(
-  () => route.path,
+  () => page.value.path,
   () => {
-    if (route.path.startsWith("/en/")) {
+    if (page.value.path.startsWith("/en/")) {
       sidebarContent.value = "";
 
       return;
@@ -56,7 +54,7 @@ ${sidebarTopArray.slice(0, 4).join("\n  ")}
   </span>
 </div>
 `;
-  },
+  }
 );
 </script>
 <template>
