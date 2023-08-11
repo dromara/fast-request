@@ -27,16 +27,6 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-::: danger Teamwork support
-We have done great jobs to refactor the plugin significantly, changing the original **standalone** version to support **teamwork** with a file version management system, enabling partial configuration and **sharing** of all APIs.
-
-But it may also bring some bugs, I hope the developers can understand! Thanks
-
-We also hope that developers will promote and share the Restful Fast Request plugin with the team, thank you very much!
-
-More details -> [Teamwork support](./teamwork.md)
-
-:::
 
 ## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 

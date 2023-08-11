@@ -10,6 +10,9 @@ B 站系列视频
 | <img alt="bilibili" src="/img/bilibili.jpg" width="" height=""/>                                                                                 |
 | ==关注我==获得视频更新文档，小伙伴们快来给我==一键三连==吧                                                                                       |
 
+
+<BiliBili bvid="BV1wu4y1d7c4" :ratio="5/4" />
+
 <BiliBili bvid="BV1Nk4y1M7Wu" :ratio="5/4" />
 
 <BiliBili bvid="BV1vt4y1M7rV" :ratio="5/4" />
