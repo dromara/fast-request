@@ -25,6 +25,29 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+## 2023.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntPink"/>
+
+- <Badge text="Quick add Environment variable support" type="tip"/>
+- <Badge text="Add、Delete、Modify support in Environment use view" type="tip"/>
+- <Badge text="Show apis trigger in Controller" type="tip"/>
+- <Badge text="API Name Saving Optimization" type="info"/>
+- <Badge text="Remove Accept-Language header when send request" type="danger"/>
+
+::: tip Quick add Environment variable support
+Click the "Add" button to select a line and add it to the environment variables, which can quickly save the variable to the current Env.
+
+![quickAddEnvironmentVariable](/img/2023.1.9/quickAddEnvironmentVariable.png)
+:::
+
+::: tip Add、Delete、Modify support in Environment use view
+![environmentVariableEditRemoveModify](/img/2023.1.9/environmentVariableEditRemoveModify_en.png)
+:::
+
+::: tip Show apis trigger in Controller
+Right-click in the Controller in any position to invoke  `Generate`, choose`Show apis` , all APIs in the current controller can be displayed.
+![showApis](/img/2023.1.9/showApis.gif)
+:::
+
 
 ## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 

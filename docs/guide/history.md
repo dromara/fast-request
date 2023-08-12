@@ -25,6 +25,34 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
+## 2023.1.9 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LigntPink"/>
+
+- <Badge text="快捷添加Environment变量" type="tip"/>
+- <Badge text="Environment使用界面增删改支持" type="tip"/>
+- <Badge text="Show apis快捷触发" type="tip"/>
+- <Badge text="Api名称保存优化" type="info"/>
+- <Badge text="发送请求移除默认请求头Accept-Language" type="danger"/>
+
+::: tip 快捷添加Environment变量
+选中一行需要添加到环境变量的点击添加按钮，可以快捷将该变量保存到当前Env中
+
+![quickAddEnvironmentVariable](/img/2023.1.9/quickAddEnvironmentVariable.png)
+:::
+
+::: tip Environment使用界面增删改支持
+![environmentVariableEditRemoveModify](/img/2023.1.9/environmentVariableEditRemoveModify.png)
+:::
+
+::: tip Show apis快捷触发
+在Controller中任意位置右键唤起 `Generate`，选择`Show apis` 即可展示当前控制器中的所有API 
+![showApis](/img/2023.1.9/showApis.gif)
+:::
+
+::: info Api名称保存优化
+详看Bilibili视频讲解 -> [IDEA插件Fast Request之API命名机制](https://www.bilibili.com/video/BV1wu4y1d7c4)
+:::
+
+
 
 ## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 

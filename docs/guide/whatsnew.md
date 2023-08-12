@@ -28,6 +28,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2023.1.9 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LigntPink"/>
+
+- <Badge text="快捷添加Environment变量" type="tip"/>
+- <Badge text="Environment使用界面增删改支持" type="tip"/>
+- <Badge text="Show apis快捷触发" type="tip"/>
+- <Badge text="Api名称保存优化" type="info"/>
+- <Badge text="发送请求移除默认请求头Accept-Language" type="danger"/>
+
 ## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 
 - <Badge text="Environment" type="tip"/>

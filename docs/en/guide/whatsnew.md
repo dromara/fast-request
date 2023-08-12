@@ -27,6 +27,13 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## 2023.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntPink"/>
+
+- <Badge text="Quick add Environment variable support" type="tip"/>
+- <Badge text="Add、Delete、Modify support in Environment use view" type="tip"/>
+- <Badge text="Show apis trigger in Controller" type="tip"/>
+- <Badge text="API Name Saving Optimization" type="info"/>
+- <Badge text="Remove Accept-Language header when send request" type="danger"/>
 
 ## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
