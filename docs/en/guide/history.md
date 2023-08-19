@@ -30,6 +30,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Quick add Environment variable support" type="tip"/>
 - <Badge text="Add、Delete、Modify support in Environment use view" type="tip"/>
 - <Badge text="Show apis trigger in Controller" type="tip"/>
+- <Badge text="Response adds Size property" type="tip"/>  
 - <Badge text="API Name Saving Optimization" type="info"/>
 - <Badge text="Input parameter trim optimization" type="info"/>  
 - <Badge text="Remove Accept-Language header when send request" type="danger"/>
@@ -48,6 +49,10 @@ Click the "Add" button to select a line and add it to the environment variables,
 ::: tip Show apis trigger in Controller
 Right-click in the Controller in any position to invoke  `Generate`, choose`Show apis` , all APIs in the current controller can be displayed.
 ![showApis](/img/2023.1.9/showApis.gif)
+:::
+
+::: tip Response adds Size property
+![responseSize.png](/img/2023.1.9/responseSize.png)
 :::
 
 
