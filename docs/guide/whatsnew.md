@@ -34,7 +34,9 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="Environment使用界面增删改支持" type="tip"/>
 - <Badge text="Show apis快捷触发" type="tip"/>
 - <Badge text="Api名称保存优化" type="info"/>
+- <Badge text="输入参数trim优化" type="info"/>  
 - <Badge text="发送请求移除默认请求头Accept-Language" type="danger"/>
+- <Badge text="curl拷贝form-data格式错误" type="danger"/>
 
 ## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 
