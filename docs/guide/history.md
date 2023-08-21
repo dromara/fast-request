@@ -32,9 +32,11 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="Show apis快捷触发" type="tip"/>
 - <Badge text="Response新增Size属性" type="tip"/>  
 - <Badge text="Api名称保存优化" type="info"/>
-- <Badge text="输入参数trim优化" type="info"/>  
+- <Badge text="输入参数trim优化" type="info"/>
+- <Badge text="缩减JSON tab展示树大小从5M->2M" type="info"/>
 - <Badge text="发送请求移除默认请求头Accept-Language" type="danger"/>
 - <Badge text="curl拷贝form-data格式错误" type="danger"/>
+- <Badge text="域名配置页修改回显逻辑错误" type="danger"/>
 
 ::: tip 快捷添加Environment变量
 选中一行需要添加到环境变量的点击添加按钮，可以快捷将该变量保存到当前Env中

@@ -34,9 +34,11 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Show apis trigger in Controller" type="tip"/>
 - <Badge text="Response adds Size property" type="tip"/>  
 - <Badge text="API Name Saving Optimization" type="info"/>
-- <Badge text="Input parameter trim optimization" type="info"/>  
+- <Badge text="Input parameter trim optimization" type="info"/>
+- <Badge text="Reduce JSON tree tab size from 5MB to 2MB" type="info"/>
 - <Badge text="Remove Accept-Language header when send request" type="danger"/>
 - <Badge text="cURL copy format error of form-data" type="danger"/>
+- <Badge text="Logic error of domain configuration page in some the case" type="danger"/>
 
 ## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
 
