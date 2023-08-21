@@ -55,28 +55,28 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2023.1.8推出",
+              title: "将在2023.1.9推出",
               content:
                 '<ul><li>Environment</li><a href="https://www.bilibili.com/video/BV1wu4y1d7c4" target="_blank">API命名保存机制优化</a></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2023-1-8",
+                  link: "/guide/history.html#_2023-1-9",
                   type: "primary",
                 },
               ],
               showOnce: false,
-              key: "2023.1.8",
+              key: "2023.1.9",
             },
             {
               path: "/en",
-              title: "Coming in <b>2023.1.7</b>",
+              title: "Coming in <b>2023.1.9</b>",
               content:
                 '<ul><li>Environment</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
-                  link: "/en/guide/history.html#_2023-1-7",
+                  link: "/en/guide/history.html#_2023-1-9",
                   type: "primary",
                 },
               ],
@@ -105,6 +105,7 @@ export default hopeTheme(
         },
         mark: true,
         tasklist: true,
+        tabs: true
       },
     },
   },
