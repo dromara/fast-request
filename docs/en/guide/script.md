@@ -230,7 +230,7 @@ Note that the logic of obtaining the token must be handled in conjunction with t
 
 It needs to be written like this
 
-`String token = JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")`
+`String token = JSON.parseObject(myResponse.body()).getJSONObject("data").getString("token")`
 
 ```groovy
 import cn.hutool.core.util.CharsetUtil
@@ -278,7 +278,7 @@ import com.alibaba.fastjson.JSON
 HttpRequest myRequest = HttpUtil.createPost("http://localhost:8081/api/v1.0/login")
 HttpResponse myResponse = myRequest.execute()
 if(myResponse.isOk()){
-    String token = JSON.parseObject(myResponse.body()).getJsonObject("data").getString("token")
+    String token = JSON.parseObject(myResponse.body()).getJSONObject("data").getString("token")
     rfr.environment.put("token",token)
 }
 ```
