@@ -46,7 +46,7 @@
 - [x] [<ColorIcon icon="class" /> Api 注释预览](/guide/features/apiCommentPreview.md)
 - [x] [<ColorIcon icon="restfulFastRequest" /> 自动域名](/guide/features/autoDomain.md)
 - [x] [<ColorIcon icon="analyseNew" /> 年度报告](/guide/features/annualReport.md)
-- [x] [更多...](/guide/features/)
+- [x] [更多...](./guide/features/)
 
 </div>
 

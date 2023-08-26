@@ -1,6 +1,6 @@
-<div class="compare-wrapper">
+<div class="compare-wrapper" style="display:flex">
 
-<div class="hint-container info" style="margin-right:15px;">
+<div class="hint-container info" style="margin-right:15px;width:50%">
 
 <div class="compare-title">
   <ColorIcon icon="restfulFastRequest" />Paid Version
@@ -46,11 +46,11 @@
 - [x] [<ColorIcon icon="class" /> Api 注释预览](/en/guide/features/apiCommentPreview.md)
 - [x] [<ColorIcon icon="restfulFastRequest" /> Auto domain](/en/guide/features/autoDomain.md)
 - [x] [<ColorIcon icon="analyseNew" /> Annual report](/en/guide/features/annualReport.md)
-- [x] [More...](/en/guide/features/)
+- [x] [More...](./guide/features/)
 
 </div>
 
-<div class="hint-container tip" style="margin-left:15px;">
+<div class="hint-container tip" style="margin-left:15px;width:50%">
 
 <div class="compare-title">
   <ColorIcon icon="restfulFastRequest1" />Free version
