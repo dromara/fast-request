@@ -10,13 +10,15 @@ icon: changelog
 
 [**Buy plugin**](./buy.md)
 
+Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
+
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 | [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![slack](/img/slack.png)                                                                                                                                                                                         | ![twitter](/img/twitter.png)                                                                                                                      |
 
-Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
+
 
 ---
 

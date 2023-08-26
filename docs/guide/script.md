@@ -34,21 +34,6 @@ headerDepth: 4
 
 [https://github.com/kings1990/fast-request-samples](https://github.com/kings1990/fast-request-samples)
 
-## 案例
-
-- [x] 往 header 塞入 md5 签名
-
-```groovy
-import cn.hutool.core.util.CharsetUtil
-import cn.hutool.core.util.StrUtil
-import cn.hutool.crypto.digest.DigestUtil
-
-String body = StrUtil.str(request.bodyBytes(), CharsetUtil.CHARSET_UTF_8)
-body = "xxx"//just for test
-String sign = DigestUtil.md5Hex(body)
-request.header("sign",sign)
-```
-
 ## 内置变量
 
 ::: danger 注意
@@ -139,6 +124,8 @@ com.google.guava:guava:30.1.1-jre
 Jar 的版本会不定期更新,如果发现 bug 请联系作者要求作者升级
 
 开发者可以利用以上 3 个 Jar 所提供的工具方法,直接在脚本中引用,不需要再依赖第三方的 Jar(hutool 就是香,已经加入许多工具类)
+
+前往[Demo](#demo)查看如何获得[Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html)功能
 :::
 
 - [x] 引入 jar(maven 形式)
@@ -182,7 +169,7 @@ if(StringUtils.isNotBlank(debug)){
 
 Console 帮助开发者打印一些你想要的信息
 
-```java
+``` groovy
 console.info("info")
 console.print("print info")
 console.warn("warn")
@@ -195,7 +182,44 @@ console.error("error")
 
 ## Demo
 
-::: tip 1. 签名参数
+::: tip Code completion支持
+
+在项目中加入如下依赖(如果没有),即可在编辑器脚本中处理针对插件核心类的[Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html)功能(快速导入类(import)、得到方法提示等操作)
+::: tabs
+
+@tab Maven
+``` xml
+    <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-http</artifactId>
+        <version>5.8.12</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>30.1.1-jre</version>
+    </dependency>
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.78</version>
+    </dependency>
+```
+
+
+@tab Gradle
+``` gradle
+dependencies {
+    implementation("com.google.guava:guava:30.1.1-jre")
+    implementation("com.alibaba:fastjson:1.2.78")
+    implementation("cn.hutool:hutool-all:5.8.12")
+}
+```
+
+:::
+
+
+### 1. 签名参数
 在你的本地新建一个 xxx.groovy 文件,粘贴以下代码,适当修改后,能保证本地可以正常运行,再把代码粘贴到脚本中
 
 - <Badge text="注意最终脚本需要删除这行代码" type="danger"/>
@@ -219,9 +243,8 @@ String sign = DigestUtil.md5Hex(body)
 request.header("sign",sign)
 ```
 
-:::
 
-::: tip 2. 利用某一个请求的响应充当请求的 Header 参数
+### 2. 利用某一个请求的响应充当请求的 Header 参数
 
 注意获取 token 的逻辑得结合接口返回的数据结构来处理。例如返回
 
@@ -255,9 +278,8 @@ if(myResponse.isOk()){
 }
 ```
 
-:::
 
-::: tip 3. 设置一个Environment变量
+### 3. 设置一个Environment变量
 假定响应报文格式
 
 ```json
@@ -289,7 +311,6 @@ if(myResponse.isOk()){
 }
 ```
 
-:::
 
 ## 注意点
 
@@ -302,8 +323,7 @@ if(myResponse.isOk()){
 
 ## 脚本投稿 :star2:
 
-为了将脚本做的更加强大,评论区开放社区脚本投递,将强大脚本通过**下方留言** 的形式上报,让更多人使用你开发的脚本,同时如果使用者觉得社区开发者投递的脚本不错,请给该脚本 ==点赞==,投票高且实用的脚本,
-将有机会==直接上墙到插件页面==,从而让你的主页获得更高的关注度:fire:
+为了将脚本做的更加强大,评论区开放社区脚本投递,欢迎将强大脚本通过**下方留言** 的形式上报,让更多人使用你开发的脚本
 
 - 格式
 

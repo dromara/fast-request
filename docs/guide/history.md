@@ -11,12 +11,14 @@ icon: changelog
 
 购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看==群公告==
 
+Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
+
 | ![微信](https://img.shields.io/static/v1?label=wechat&message=微信&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
 
-Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
+
 
 ---
 

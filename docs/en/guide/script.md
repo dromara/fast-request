@@ -33,21 +33,6 @@ The groovy syntax is almost identical to Java.
 
 [https://github.com/kings1990/fast-request-samples](https://github.com/kings1990/fast-request-samples)
 
-## Case
-
-- [x] Put md5 sign to header
-
-```groovy
-import cn.hutool.core.util.CharsetUtil
-import cn.hutool.core.util.StrUtil
-import cn.hutool.crypto.digest.DigestUtil
-
-String body = StrUtil.str(request.bodyBytes(), CharsetUtil.CHARSET_UTF_8)
-body = "xxx"//just for test
-String sign = DigestUtil.md5Hex(body)
-request.header("sign",sign)
-```
-
 ## Built-in variable
 
 ::: danger Notice
@@ -56,7 +41,7 @@ Developers should pay attention to the fact that the built-in variable has been 
 
 :::
 
-Plugin use [hutool](https://hutool.cn/)的`cn.hutool.http.HttpRequest` send request
+Plugin use [hutool](https://hutool.cn/) `cn.hutool.http.HttpRequest` to send request
 
 ### request <Badge text="2022.2.3️" type="tip"/>
 
@@ -131,6 +116,9 @@ com.google.guava:guava:30.1.1-jre
 The version of Jar will be updated from time to time. If you find a bug, please contact up to upgrade.
 
 Developers can use the tools and methods provided by the above three Jars to reference directly in the script without relying on third-party Jar.
+
+Go to [Demo](#demo) to learn how to get [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html).
+
 :::
 
 - [x] Import jar(maven style)
@@ -174,7 +162,7 @@ Execute order：`Project-level`->`Single API level`
 
 The console helps developers print some info you want.
 
-```java
+``` groovy
 console.info("info")
 console.print("print info")
 console.warn("warn")
@@ -187,7 +175,44 @@ console.error("error")
 
 ## Demo
 
-::: tip 1. Sign parameter
+::: tip Code completion support
+
+Add the following dependency to the project (if there is none),  then you can use [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) for the plugin's core classes in the editor (quickly importing classes, getting method hints, etc.).
+
+::: tabs
+
+@tab Maven
+``` xml
+    <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-http</artifactId>
+        <version>5.8.12</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>30.1.1-jre</version>
+    </dependency>
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.78</version>
+    </dependency>
+```
+
+
+@tab Gradle
+``` gradle
+dependencies {
+    implementation("com.google.guava:guava:30.1.1-jre")
+    implementation("com.alibaba:fastjson:1.2.78")
+    implementation("cn.hutool:hutool-all:5.8.12")
+}
+```
+
+:::
+
+### 1. Sign parameter
 
 Create a new xxx.groovy file in your local idea, paste the following code. After appropriate modification, it can ensure that the local can run normally and then paste the code into the script.
 
@@ -212,9 +237,7 @@ String sign = DigestUtil.md5Hex(body)
 request.header("sign",sign)
 ```
 
-:::
-
-::: tip 2. Use the response of a request as the Header parameter of the request.
+### 2. Use the response of a request as the Header parameter of the request.
 
 Note that the logic of obtaining the token must be handled in conjunction with the data structure returned by the http response. For example, if response returns
 
@@ -249,9 +272,7 @@ if(myResponse.isOk()){
 }
 ```
 
-:::
-
-::: tip 3. Set an environment variable
+### 3. Set an environment variable
 If response returns
 
 ```json
@@ -283,7 +304,6 @@ if(myResponse.isOk()){
 }
 ```
 
-:::
 
 ## Note
 
@@ -296,8 +316,7 @@ In order to get method hints, if you need to use the built-in variables `request
 
 ## Script contribute :star2:
 
-In order to make the script more powerful, community script are welcome, and developers can donate the script in comments, develop can ==vote== the script if you think the script help much,
-High-voted and practical scripts will have the opportunity to join to ==Plugin page==, so that your homepage gets more attention :fire:
+In order to make the script more powerful, community script are welcome, and developers can donate the script in comments
 
 - Format
 

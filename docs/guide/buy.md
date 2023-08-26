@@ -1,5 +1,5 @@
 ---
-title: 支持插件
+title: 购买
 icon: buy
 ---
 

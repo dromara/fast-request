@@ -6,7 +6,7 @@ icon: featuresNew
 
 The icon in the document corresponds to the button icon in the plugin
 
-![toolwindow](/img/toolwindow.png)
+![toolwindow](/img/toolwindowNew.png)
 
 ## Request
 

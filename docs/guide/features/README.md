@@ -6,13 +6,7 @@ icon: featuresNew
 
 文档中的图标对应插件中的按钮图标，大标题对应 tab 以及功能
 
-- 新图标Plugin版本>=2021.1.7
-
 ![toolwindowNew](/img/toolwindowNew.png)
-
-- 老图标Plugin版本<2021.1.7
-
-![tool window](/img/toolwindow.png)
 
 ## Request
 
