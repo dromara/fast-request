@@ -63,7 +63,7 @@ head:
 <SiteInfo
   name="Restful Fast Request"
   desc="为简化调试API而生"
-  url="https://plugins.sheng90.wang/fast-request/"
+  url="https://www.sheng90.wang/fast-request/"
   logo="/fast-request/img/logo/logo.svg"
   preview="/img/logo/homepage.png"
   style="max-width:400px"

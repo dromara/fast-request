@@ -37,7 +37,7 @@ more flexible.And it integrates additional features such as search, Postman inte
 
 # Document
 
-- [中文文档](https://plugins.sheng90.wang/fast-request)
+- [中文文档](https://www.sheng90.wang/fast-request)
 - [English Document](https://dromara.github.io/fast-request/en)
 
 ## Features
