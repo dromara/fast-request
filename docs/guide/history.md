@@ -27,7 +27,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## 2023.1.9 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LigntPink"/>
+## 2023.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
 
 - <Badge text="快捷添加Environment变量" type="tip"/>
 - <Badge text="Environment使用界面增删改支持" type="tip"/>
@@ -65,7 +65,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 
 
-## 2023.1.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.1.8 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="Environment" type="tip"/>
 - <Badge text="方法描述截断" type="info"/>

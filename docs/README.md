@@ -38,6 +38,10 @@ head:
   - - meta
     - name: description
       content: Restful Fast Request 一个基于 IDEA 的类似 postman 的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params，一个API调试工具+API管理工具，支持 springmvc、springboot、java-rs
+  - - meta
+    - name: wwads-cn-verify
+      content: 2f2b265625d76a6704b08093c652fd79
+
 ---
 
 [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw)

@@ -27,7 +27,7 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## 2023.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntPink"/>
+## 2023.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 
 - <Badge text="Quick add Environment variable support" type="tip"/>
 - <Badge text="Add、Delete、Modify support in Environment use view" type="tip"/>
@@ -60,7 +60,7 @@ Right-click in the Controller in any position to invoke  `Generate`, choose`Show
 :::
 
 
-## 2023.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LightGreen"/>
+## 2023.1.8 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Environment" type="tip"/>
 - <Badge text="Method description length truncate" type="info"/>
