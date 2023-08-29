@@ -1,0 +1,24 @@
+{
+	"dataList":[],
+	"envList":[],
+	"headerList":[],
+	"maxDescriptionLength":-1,
+	"postScript":"",
+	"preScript":"",
+	"projectList":[],
+	"syncModel":{
+		"branch":"master",
+		"domain":"https://github.com",
+		"enabled":false,
+		"namingPolicy":"byDoc",
+		"owner":"",
+		"repo":"",
+		"repoUrl":"",
+		"syncAfterRun":false,
+		"token":"",
+		"type":"github"
+	},
+	"urlEncodedKeyValueList":[],
+	"urlParamsKeyValueList":[],
+	"urlSuffix":""
+}
