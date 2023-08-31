@@ -106,9 +106,45 @@ def response = request.execute()
 
 > 请确保你每次修改参数后点击`保存`<ColorIcon icon="saveNew" />按钮
 
-# S: 最佳视觉效果
+## S: 最佳视觉效果
 
 调整工具窗口宽度至`610`+像素，达到最佳视觉效果
+
+## Q: Origin等请求头失效
+由于```sun.net.www.protocol.http.HttpURLConnection```设置了**受限标头**,以下一些请求头如果想使用,则需要给IDEA配置vm参数
+
+``` java
+private static final String[] restrictedHeaders = {
+        /* Restricted by XMLHttpRequest2 */
+        //"Accept-Charset",
+        //"Accept-Encoding",
+        "Access-Control-Request-Headers",
+        "Access-Control-Request-Method",
+        "Connection", /* close is allowed */
+        "Content-Length",
+        //"Cookie",
+        //"Cookie2",
+        "Content-Transfer-Encoding",
+        //"Date",
+        //"Expect",
+        "Host",
+        "Keep-Alive",
+        "Origin",
+        // "Referer",
+        // "TE",
+        "Trailer",
+        "Transfer-Encoding",
+        "Upgrade",
+        //"User-Agent",
+        "Via"
+    };
+```
+
+点击 **help->Edit Custom Vm Options...**,在 **idea.vmoptions**(linux) 或者 **idea64.exe.vmoptions** (windows)中加入加入如下配置
+
+```
+-Dsun.net.http.allowRestrictedHeaders=true
+```
 
 ## Q: 操作按钮不可见
 

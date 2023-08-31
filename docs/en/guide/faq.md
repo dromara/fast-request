@@ -51,12 +51,12 @@ Way 2: Add the `static` modifier to the field.
 
 Way 3: Add `@parseIgnore` in comment
 
-```java
+``` java
 /**
  * xxx description
  * @parseIgnore
  */
-private String someIgnoreField ;
+private String someIgnoreField;
 ```
 
 ## S: Quick locate
@@ -107,9 +107,45 @@ For the saved API, you modify it again, and you need manually fill in the parame
 
 > Please ensure that click `save button` <ColorIcon icon="saveNew" /> every time you modify api params.
 
-# S: Best Visual Effects
+## S: Best Visual Effects
 
 Adjust tool window width to `610`+ pixel and will achieve the best visual effect
+
+## Q: Header likes Origin not effect 
+Because the **restrictedHeaders** strategy of ```sun.net.www.protocol.http.HttpURLConnection``` . If you want to use the following headers, you need to configure vm parameters for IDEA
+
+``` java
+private static final String[] restrictedHeaders = {
+        /* Restricted by XMLHttpRequest2 */
+        //"Accept-Charset",
+        //"Accept-Encoding",
+        "Access-Control-Request-Headers",
+        "Access-Control-Request-Method",
+        "Connection", /* close is allowed */
+        "Content-Length",
+        //"Cookie",
+        //"Cookie2",
+        "Content-Transfer-Encoding",
+        //"Date",
+        //"Expect",
+        "Host",
+        "Keep-Alive",
+        "Origin",
+        // "Referer",
+        // "TE",
+        "Trailer",
+        "Transfer-Encoding",
+        "Upgrade",
+        //"User-Agent",
+        "Via"
+    };
+```
+
+Click **help->Edit Custom Vm Options...**,add the following config in **idea.vmoptions**(linux) or **idea64.exe.vmoptions**(windows)
+
+```
+-Dsun.net.http.allowRestrictedHeaders=true
+```
 
 ## Q: Action buttons are not visible
 
