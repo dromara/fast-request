@@ -25,7 +25,7 @@ export default hopeTheme(
     locales: {
       "/": {
         footer:
-          "主题使用 <a target='blank' href='https://theme-hope.vuejs.press/zh/'>vuepress-theme-hope</a>",
+          "主题使用 <a target='blank' href='https://theme-hope.vuejs.press/zh/'>vuepress-theme-hope</a><hr/><a target='blank' href='https://beian.miit.gov.cn/'>浙ICP备19016479号</a>",
 
         navbar: zhNavbar,
         sidebar: zhSidebar,
