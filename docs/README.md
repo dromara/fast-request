@@ -1,7 +1,7 @@
 ---
 icon: restfulFastRequest
 home: true
-title: 学习展示
+title: FastRequest文档
 heroFullScreen: true
 heroImageDark: /img/logoLight1.gif
 heroText: Fast Request
