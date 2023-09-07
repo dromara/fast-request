@@ -21,11 +21,7 @@ export const enNavbar = navbar([
         link: "/en/guide/history",
         icon: "changelog",
     },
-    {
-        text: "Buy",
-        icon: "buy",
-        children: ["/en/guide/buy","/en/guide/versionCompare"],
-      },
+    
     {
         text: "🔥 Teamwork",
         link: "/en/guide/teamwork",
@@ -68,25 +64,14 @@ export const zhNavbar = navbar([
         link: "/guide/history",
         icon: "changelog",
     },
-    {
-        text: "购买",
-        icon: "buy",
-        children: ["/guide/buy", "/guide/versionCompare"],
-    },
+    
     {
         text: "视频教程",
         link: "/guide/teachingVideo",
         icon: "bilibili",
     },
-    {
-        text: "🔥 团队协作",
-        // icon: "teamwork",
-        link: "/guide/teamwork",
-    },
-    {
-        text: "👥 群聊",
-        link: "/guide/concatGroup",
-    },
+    
+    
     {
         text: "🎯 FAQ",
         link: "/guide/faq",

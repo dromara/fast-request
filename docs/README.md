@@ -54,25 +54,10 @@ head:
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg =80x80)](https://www.jetbrains.com)
 [![](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg =80x80)](https://www.jetbrains.com/idea)
 
-## 🌈 赞助商
 
-1. [**赞助可以为您带来什么(必看)**](./guide/sponsor.md#优势)
-
-1. [成为赞助者](./guide/sponsor.md)
-
-<SiteInfo
-  name="Restful Fast Request"
-  desc="为简化调试API而生"
-  url="https://www.sheng90.wang/fast-request/"
-  logo="/fast-request/img/logo/logo.svg"
-  preview="/img/logo/homepage.png"
-  style="max-width:400px"
-/>
-
-<div class="home-advantage">
 
 ## 优势
-
+<div class="home-advantage">
 <iframe
   :src="$withBase('/html/showside.html')"
   width="100%"
@@ -85,9 +70,7 @@ head:
 <a class="advantage-more" href="guide/features">更多功能</a>
 </div>
 
-## 🥇 功能
 
-<!-- @include: @src/compare.snippet.md -->
 
 ## 🎉 致谢
 
