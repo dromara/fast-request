@@ -27,7 +27,41 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## 2023.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+## 2023.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+- <Badge text="UI简化" type="tip"/>
+- <Badge text="api文档支持保存和打开" type="tip"/>
+- <Badge text="bilibili视频教程直达" type="tip"/>
+- <Badge text="自动域名优化" type="info"/>
+- <Badge text="Map解析优化" type="info"/>
+- <Badge text="show apis放入到右键菜单" type="info"/>
+- <Badge text="统计页面加入了版本号" type="info"/>
+- <Badge text="众多细节优化" type="info"/>
+- <Badge text="url和curl拷贝有environment变量的时候url没替换变量" type="danger"/>
+- <Badge text="curl以form-urlencoded和-d形式导入解析错乱" type="danger"/>
+
+::: tip UI简化
+将老版本横向的3个组件(method下拉框,url输入框,响应下拉框)简化为1个,并且移除响应下拉框.增加简捷度
+
+![urlInputWithMethod](/img/2023.2.1/urlInputWithMethod.png)
+:::
+
+::: tip api文档支持保存和打开
+
+
+![openDoc](/img/2023.2.1/openDoc.png)
+:::
+
+::: info apis放入到右键菜单
+
+![openDoc](/img/2023.2.1/showApis.png)
+:::
+
+::: info 统计页面加入了版本号
+
+![pluginVersion](/img/2023.2.1/pluginVersion.png)
+:::
+
+## 2023.1.9 <Badge text="免费试用" type="tip"/> 
 
 - <Badge text="快捷添加Environment变量" type="tip"/>
 - <Badge text="Environment使用界面增删改支持" type="tip"/>

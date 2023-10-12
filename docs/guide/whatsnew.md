@@ -30,7 +30,19 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2023.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+## 2023.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+- <Badge text="UI简化" type="tip"/>
+- <Badge text="api文档支持保存和打开" type="tip"/>
+- <Badge text="bilibili视频教程直达" type="tip"/>
+- <Badge text="自动域名优化" type="info"/>
+- <Badge text="Map解析优化" type="info"/>
+- <Badge text="show apis放入到右键菜单" type="info"/>
+- <Badge text="统计页面加入了版本号" type="info"/>
+- <Badge text="众多细节优化" type="info"/>
+- <Badge text="url和curl拷贝有environment变量的时候url没替换变量" type="danger"/>
+- <Badge text="curl以form-urlencoded和-d形式导入解析错乱" type="danger"/>
+
+## 2023.1.9 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="快捷添加Environment变量" type="tip"/>
 - <Badge text="Environment使用界面增删改支持" type="tip"/>

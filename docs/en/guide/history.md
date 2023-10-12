@@ -27,7 +27,40 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-## 2023.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+## 2023.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+- <Badge text="UI predigestion" type="tip"/>
+- <Badge text="Support open API document in apis list" type="tip"/>
+- <Badge text="Auto domain" type="info"/>
+- <Badge text="Map parse" type="info"/>
+- <Badge text="Put show apis into right click menu" type="info"/>
+- <Badge text="Add plugin version to statistics page" type="info"/>
+- <Badge text="Many details optimized" type="info"/>
+- <Badge text="Url and cUrl copy can not replace environment variable" type="danger"/>
+- <Badge text="Curl import parsing error in form-urlencoded and -d forms" type="danger"/>
+
+::: tip UI predigestion
+Simplify the three horizontal components of the old version (method drop-down box, url input box, 
+and response drop-down box) into one, and remove the response drop-down box to increase simplicity.
+
+![urlInputWithMethod](/img/2023.2.1/urlInputWithMethod.png)
+:::
+
+::: tip Support open API document in apis list
+
+![openDoc](/img/2023.2.1/openDoc.png)
+:::
+
+::: info Put show apis into right click menu
+
+![openDoc](/img/2023.2.1/showApis.png)
+:::
+
+::: info Add plugin version to statistics page
+
+![pluginVersion](/img/2023.2.1/pluginVersion.png)
+:::
+
+## 2023.1.9 <Badge text="Free trial" type="tip"/> 
 
 - <Badge text="Quick add Environment variable support" type="tip"/>
 - <Badge text="Add、Delete、Modify support in Environment use view" type="tip"/>
