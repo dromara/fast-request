@@ -15,4 +15,4 @@ icon: aixin
 
 | 赞助人                                        | 金额 | 他的分享及留言                                                      | 赞助时间   |
 | --------------------------------------------- | ---- | ------------------------------------------------------------------- | ---------- |
-| [Kings](https://space.bilibili.com/370110042) | 100  | [Fast Request](https://www.sheng90.wang/fast-request)，API 调试神器 | 2022-08-21 |
+| [Kings](https://space.bilibili.com/370110042) | 100  | [Fast Request](https://api-buddy.cn)，API 调试神器 | 2022-08-21 |

@@ -33,12 +33,12 @@
 
 # Document
 
-- [中文文档](https://www.sheng90.wang/fast-request)
-- [English Document](https://dromara.github.io/fast-request/en/)
+- [中文文档](https://api-buddy.cn)
+- [English Document](https://api-buddy.com/en/)
 
 # 群聊
 
-[https://www.sheng90.wang/fast-request/guide/concatGroup.html](https://www.sheng90.wang/fast-request/guide/concatGroup.html)
+[https://api-buddy.cn/guide/concatGroup.html](https://api-buddy.cn/guide/concatGroup.html)
 
 更快速得回复问题，可以加入微信群，同时也可以一起探讨研究技术问题
 
