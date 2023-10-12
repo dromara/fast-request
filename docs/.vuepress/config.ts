@@ -6,7 +6,7 @@ import theme from "./theme.js";
 const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
-  base: "/fast-request/",
+  
 
   title: "Fast Request",
   description: "Intellij Restful Fast Request",
