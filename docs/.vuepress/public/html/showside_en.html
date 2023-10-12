@@ -7,7 +7,7 @@
     padding: 5px;
     width: 70%;
     height: 500px;
-    background-image: url(/fast-request/img/index/0.png);
+    background-image: url(/img/index/0.png);
     background-size: cover;
     background-position: center;
   }
@@ -169,7 +169,7 @@
       // 显示新的图片和进度条
       var imgName = items[index].getAttribute("imgName");
       image.style.backgroundImage =
-        "url(/fast-request/img/index/" + imgName + ")";
+        "url(/img/index/" + imgName + ")";
       image.style.opacity = "1";
 
       // 遍历所有的图片项，将除了当前图片项的描述元素都隐藏
@@ -251,7 +251,7 @@
         console.log(item);
         var imgName = item.getAttribute("imgName");
         image.style.backgroundImage =
-          "url(/fast-request/img/index/" + imgName + ")";
+          "url(/img/index/" + imgName + ")";
       });
     });
 

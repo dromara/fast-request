@@ -16,11 +16,11 @@ export default defineUserConfig({
       "link",
       {
         rel: "icon",
-        href: "/fast-request/img/fastRequest.svg",
+        href: "/img/fastRequest.svg",
       },
     ],
     ["script", { src: "//at.alicdn.com/t/c/font_2601581_dhvis4jtn7m.js" }],
-    ["script", { src: "/fast-request/js/baidu.js" }], 
+    ["script", { src: "/js/baidu.js" }], 
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],
 
