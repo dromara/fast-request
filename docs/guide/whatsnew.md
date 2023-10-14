@@ -32,7 +32,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ## 2023.2.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
 - <Badge text="Url输入框针对某些主题下的样式优化" type="tip"/>
-- <Badge text="项目级别请求头保存错误" type="tip"/>
+- <Badge text="项目级别请求头保存错误" type="danger"/>
 
 ## 2023.2.1 <Badge text="免费试用" type="tip"/>
 - <Badge text="UI简化" type="tip"/>
