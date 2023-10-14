@@ -27,6 +27,11 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+- <Badge text="Style optimization for Url textField in some themes" type="tip"/>
+- <Badge text="Project level header save error" type="danger"/>
+
+
 ## 2023.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 - <Badge text="UI predigestion" type="tip"/>
 - <Badge text="Support open API document in apis list" type="tip"/>

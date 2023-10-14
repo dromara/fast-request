@@ -27,7 +27,11 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-## 2023.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+## 2023.2.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+- <Badge text="Url输入框针对某些主题下的样式优化" type="tip"/>
+- <Badge text="项目级别请求头保存错误" type="tip"/>
+
+## 2023.2.1 <Badge text="免费试用" type="tip"/>
 - <Badge text="UI简化" type="tip"/>
 - <Badge text="api文档支持保存和打开" type="tip"/>
 - <Badge text="bilibili视频教程直达" type="tip"/>
