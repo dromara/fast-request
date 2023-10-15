@@ -50,7 +50,7 @@ ${sidebarTopArray.slice(0, 4).join("\n  ")}
 <br/>
 <!--  <span style='color: grey;font-size: 11px;'>广告采用随机方式显示</span>-->
   <span style='float: right;'>
-  <a href='/fast-request/guide/sponsor.html' style='color: var(--theme-color);font-size: 11px;font-weight: bolder;'>成为赞助商</a>
+  <a href='/guide/sponsor.html' style='color: var(--theme-color);font-size: 11px;font-weight: bolder;'>成为赞助商</a>
   </span>
 </div>
 `;
