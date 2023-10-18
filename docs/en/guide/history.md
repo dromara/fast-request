@@ -27,6 +27,11 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
+::: danger Performance issues caused by themes
+At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) has modified some of its own UI components,
+and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
+:::
+
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 - <Badge text="Style optimization for Url textField in some themes" type="tip"/>
 - <Badge text="Project level header save error" type="danger"/>

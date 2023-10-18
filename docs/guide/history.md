@@ -27,6 +27,12 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
+::: danger 主题导致的性能问题
+目前发现[Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)由于修改了一部分自带的UI组件,某些插件版本版本在某些系统(例如windows)下面渲染组件的时候存在性能问题,如果发现右键或者其他操作卡顿,则需要升级主题插件或者使用原生IDEA主题
+:::
+
+
+
 ## 2023.2.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
 - <Badge text="Url输入框针对某些主题下的样式优化" type="tip"/>
 - <Badge text="项目级别请求头保存错误" type="danger"/>
