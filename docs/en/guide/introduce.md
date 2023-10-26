@@ -38,7 +38,7 @@ or fix bugs you didn't find during the upgrade process).
 
 ## About author
 
-```card:json
+```card
 {
   "title": "Kings",
   "desc": "<b>Make it easier...faster...stronger...</b><br/>",

@@ -41,7 +41,6 @@ head:
   - - meta
     - name: wwads-cn-verify
       content: 2f2b265625d76a6704b08093c652fd79
-
 ---
 
 [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw)

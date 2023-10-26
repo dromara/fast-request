@@ -18,8 +18,6 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![slack](/img/slack.png)                                                                                                                                                                                         | ![twitter](/img/twitter.png)                                                                                                                      |
 
-
-
 ---
 
 feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
@@ -30,10 +28,12 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+
 - <Badge text="Style optimization for Url textField in some themes" type="tip"/>
 - <Badge text="Project level header save error" type="danger"/>
 
 ## 2023.2.1 <Badge text="Free trial" type="tip"/>
+
 - <Badge text="UI predigestion" type="tip"/>
 - <Badge text="Support open API document in apis list" type="tip"/>
 - <Badge text="Auto domain" type="info"/>
@@ -44,13 +44,12 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Url and cUrl copy can not replace environment variable" type="danger"/>
 - <Badge text="Curl import parsing error in form-urlencoded and -d forms" type="danger"/>
 
-
-## 2023.1.9 <Badge text="Free trial" type="tip"/> 
+## 2023.1.9 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Quick add Environment variable support" type="tip"/>
 - <Badge text="Add、Delete、Modify support in Environment use view" type="tip"/>
 - <Badge text="Show apis trigger in Controller" type="tip"/>
-- <Badge text="Response adds Size property" type="tip"/>  
+- <Badge text="Response adds Size property" type="tip"/>
 - <Badge text="API Name Saving Optimization" type="info"/>
 - <Badge text="Input parameter trim optimization" type="info"/>
 - <Badge text="Reduce JSON tree tab size from 5MB to 2MB" type="info"/>
@@ -65,7 +64,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Parse support for Instant" type="info"/>
 - <Badge text="Delete api directory error in Windows system" type="danger"/>
 
-## 2023.1.7.1 <Badge text="Free trial" type="tip"/> 
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>

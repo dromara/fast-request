@@ -8,7 +8,7 @@ import NormalPage from "@theme-hope/components/NormalPage";
 import SkipLink from "@theme-hope/components/SkipLink";
 import FadeSlideY from "@theme-hope/components/transitions/FadeSlideY";
 
-import type { ThemePageFrontmatter } from "../../shared/index.js";
+import type { ThemePageFrontmatter } from "vuepress-theme-hope";
 
 const page = usePageData();
 const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
@@ -54,7 +54,7 @@ ${sidebarTopArray.slice(0, 4).join("\n  ")}
   </span>
 </div>
 `;
-  }
+  },
 );
 </script>
 <template>

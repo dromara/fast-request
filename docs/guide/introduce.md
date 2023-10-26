@@ -33,7 +33,7 @@ Kotlin Spring体系框架
 
 ## 关于作者
 
-```card:json
+```card
 {
   "title": "Kings",
   "desc": "<b>Make it easier...faster...stronger...</b><br/>",

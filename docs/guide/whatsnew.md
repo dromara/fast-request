@@ -18,8 +18,6 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 | ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
 
-
-
 ---
 
 feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
@@ -27,14 +25,15 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
-
 [**务必查看变更详情----------------->**](./history.md)
 
 ## 2023.2.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+
 - <Badge text="Url输入框针对某些主题下的样式优化" type="tip"/>
 - <Badge text="项目级别请求头保存错误" type="danger"/>
 
 ## 2023.2.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="UI简化" type="tip"/>
 - <Badge text="api文档支持保存和打开" type="tip"/>
 - <Badge text="bilibili视频教程直达" type="tip"/>
@@ -51,7 +50,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="快捷添加Environment变量" type="tip"/>
 - <Badge text="Environment使用界面增删改支持" type="tip"/>
 - <Badge text="Show apis快捷触发" type="tip"/>
-- <Badge text="Response新增Size属性" type="tip"/>  
+- <Badge text="Response新增Size属性" type="tip"/>
 - <Badge text="Api名称保存优化" type="info"/>
 - <Badge text="输入参数trim优化" type="info"/>
 - <Badge text="缩减JSON tab展示树大小从5M->2M" type="info"/>
@@ -59,14 +58,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="curl拷贝form-data格式错误" type="danger"/>
 - <Badge text="域名配置页修改回显逻辑错误" type="danger"/>
 
-## 2023.1.8 <Badge text="免费试用" type="tip"/> 
+## 2023.1.8 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="Environment" type="tip"/>
 - <Badge text="方法描述截断" type="info"/>
 - <Badge text="Instant类型解析" type="info"/>
 - <Badge text="Windows系统APIs中目录删除" type="danger"/>
 
-## 2023.1.7.1 <Badge text="免费试用" type="tip"/> 
+## 2023.1.7.1 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="SearchEveryWhere增加自动生成策略" type="tip"/>
 - <Badge text="主窗口弹出配置化" type="info"/>

@@ -90,13 +90,11 @@ export default hopeTheme(
       mdEnhance: {
         align: true,
         chart: true,
+        card: true,
         codetabs: true,
         container: true,
-        flowchart: true,
         imgLazyload: true,
         imgSize: true,
-        mermaid: true,
-        card: true,
         include: {
           resolvePath: (file) =>
             file.startsWith("@src")
@@ -104,10 +102,10 @@ export default hopeTheme(
               : file,
         },
         mark: true,
+        tabs: true,
         tasklist: true,
-        tabs: true
       },
     },
   },
-  { custom: true },
+  { custom: true }
 );

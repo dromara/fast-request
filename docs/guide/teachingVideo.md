@@ -5,7 +5,7 @@ icon: bilibili
 
 [![Bilibili](https://img.shields.io/static/v1?label=BiliBili&message=BiliBili&logo=bilibili&color=FC8D34)](https://space.bilibili.com/370110042) 站系列视频,==关注我==最快时间获得视频更新文档，给我==一键三连==是对我最大的创作鼓励
 
-<img alt="bilibili" src="/img/bilibili.jpg" width="" height=""/>                                                                                    |
+<img alt="bilibili" src="/img/bilibili.jpg" width="" height=""/> |
 
 <hr/>
 
