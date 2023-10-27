@@ -43,7 +43,7 @@ head:
       content: 2f2b265625d76a6704b08093c652fd79
   - - meta
     - name: baidu-site-verification
-      content: codeva-OWrPlOc2wg      
+      content: codeva-CrZ94MmST2      
 
 ---
 
