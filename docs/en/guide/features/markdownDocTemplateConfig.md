@@ -2,7 +2,7 @@
 
 Version required: <Badge text="2023.2.2+"/>
 
-Provide a custom format for local markdown and [Online API](./apiDocSync.md) doc.
+Provides a custom format for local markdown and [Online API](./apiDocSync.md) doc.
 
 ## Tech stack
 

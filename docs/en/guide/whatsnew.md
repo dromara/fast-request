@@ -29,6 +29,9 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntGreen"/>
+- <Badge text="Markdown doc template config" type="tip"/>
+
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 - <Badge text="Style optimization for Url textField in some themes" type="tip"/>
 - <Badge text="Project level header save error" type="danger"/>
