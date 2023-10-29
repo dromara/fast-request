@@ -30,6 +30,13 @@ At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/p
 and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
 :::
 
+## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntGreen"/>
+- <Badge text="Markdown doc template config" type="tip"/>
+
+::: tip Markdown doc template config
+Provides a custom format for local markdown and [Online API](./features/apiDocSync.md) doc.View [more detail](./features/markdownDocTemplateConfig.md)
+:::
+
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 
 - <Badge text="Style optimization for Url textField in some themes" type="tip"/>

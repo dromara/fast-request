@@ -33,6 +33,7 @@ icon: featuresNew
 - [<ColorIcon icon="historyNew" /> 历史请求预览](./historyRequest.md)
 - [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API 文档同步](./apiDocSync.md)
 - [<ColorIcon icon="markdown" /> API 文档分享](./shareApiDoc.md)
+- [<ColorIcon icon="settings" /> Markdown文档模板配置](./markdownDocTemplateConfig.md)
 - [<ColorIcon icon="settings" /> 管理配置](./settingManager.md)
 - [<ColorIcon icon="fullScreen" /> 全屏](./fullScreen.md)
 - [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md)

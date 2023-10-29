@@ -29,6 +29,16 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 目前发现[Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)由于修改了一部分自带的UI组件,某些插件版本版本在某些系统(例如windows)下面渲染组件的时候存在性能问题,如果发现右键或者其他操作卡顿,则需要升级主题插件或者使用原生IDEA主题
 :::
 
+
+## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="开发中" color="LigntGreen"/>
+- <Badge text="Markdown文档模板配置" type="tip"/>
+
+::: tip Markdown文档模板配置
+提供了导出文档和[Api在线文档](./features/apiDocSync.md)的自定义格式实现.查看[更多详情](./features/markdownDocTemplateConfig.md)
+:::
+
+
+
 ## 2023.2.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
 
 - <Badge text="Url输入框针对某些主题下的样式优化" type="tip"/>
