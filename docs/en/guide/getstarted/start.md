@@ -7,7 +7,6 @@ icon: start1
 
 @tab Paid version
 
-
 1. Click <FontIcon icon="restfulFastRequest" /> on method left
 2. If the result of [Auto domain](../features/autoDomain.md) did not meet expectations，change the domain in [Project-level domain config](../features/projectLevelDomainConfig.md)
 3. Click send button for sending request
@@ -27,11 +26,10 @@ icon: start1
 ![](/img/howToUse_en.gif)
 :::
 
-
 ## Contacts
 
 Join and follow us to solve your question ❤️❤️❤️
 
 | [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![Slack](/img/slack.png)                                                                                                                                                                                      | ![twitter](/img/twitter.png)                                                                                                                      |
+| ![Slack](/img/slack.png)                                                                                                                                                                                         | ![twitter](/img/twitter.png)                                                                                                                      |

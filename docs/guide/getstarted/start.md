@@ -3,11 +3,9 @@ title: 快速开始
 icon: start1
 ---
 
-
 ::: tabs
 
 @tab 付费版
-
 
 1. 点击在方法左侧的 fastRequest 的图标 <FontIcon icon="restfulFastRequest" />
 2. 如果[自动域名](../features/autoDomain.md)的结果不符合预期，则在[Project 级别域名配置](../features/projectLevelDomainConfig.md)里面修改域名
@@ -29,7 +27,5 @@ icon: start1
 
 ![](/img/howToUse.gif)
 :::
-
-
 
 <!-- @include: @src/contact.snippet.md -->

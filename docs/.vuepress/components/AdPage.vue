@@ -1,23 +1,24 @@
 <template>
-  <div :class="`wwads-cn wwads-${mode} page-wwads-${content}`" data-id="274"></div>
+  <div
+    :class="`wwads-cn wwads-${mode} page-wwads-${content}`"
+    data-id="274"
+  ></div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
   props: {
     mode: {
       type: String,
-      default: 'horizontal',
+      default: "horizontal",
     },
     content: {
       type: String,
-      default: '',
+      default: "",
     },
-  }
-
+  },
 });
-
 </script>
 <style>
 @use "vuepress-shared/styles/wrapper";

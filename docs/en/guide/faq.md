@@ -51,7 +51,7 @@ Way 2: Add the `static` modifier to the field.
 
 Way 3: Add `@parseIgnore` in comment
 
-``` java
+```java
 /**
  * xxx description
  * @parseIgnore
@@ -111,10 +111,11 @@ For the saved API, you modify it again, and you need manually fill in the parame
 
 Adjust tool window width to `610`+ pixel and will achieve the best visual effect
 
-## Q: Header likes Origin not effect 
-Because the **restrictedHeaders** strategy of ```sun.net.www.protocol.http.HttpURLConnection``` . If you want to use the following headers, you need to configure vm parameters for IDEA
+## Q: Header likes Origin not effect
 
-``` java
+Because the **restrictedHeaders** strategy of `sun.net.www.protocol.http.HttpURLConnection` . If you want to use the following headers, you need to configure vm parameters for IDEA
+
+```java
 private static final String[] restrictedHeaders = {
         /* Restricted by XMLHttpRequest2 */
         //"Accept-Charset",

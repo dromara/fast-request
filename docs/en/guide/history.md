@@ -18,8 +18,6 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![slack](/img/slack.png)                                                                                                                                                                                         | ![twitter](/img/twitter.png)                                                                                                                      |
 
-
-
 ---
 
 feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
@@ -40,11 +38,12 @@ Provides a custom format for local markdown and [Online API](./features/apiDocSy
 :::
 
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+
 - <Badge text="Style optimization for Url textField in some themes" type="tip"/>
 - <Badge text="Project level header save error" type="danger"/>
 
-
 ## 2023.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+
 - <Badge text="UI predigestion" type="tip"/>
 - <Badge text="Support open API document in apis list" type="tip"/>
 - <Badge text="Auto domain" type="info"/>
@@ -56,7 +55,7 @@ Provides a custom format for local markdown and [Online API](./features/apiDocSy
 - <Badge text="Curl import parsing error in form-urlencoded and -d forms" type="danger"/>
 
 ::: tip UI predigestion
-Simplify the three horizontal components of the old version (method drop-down box, url input box, 
+Simplify the three horizontal components of the old version (method drop-down box, url input box,
 and response drop-down box) into one, and remove the response drop-down box to increase simplicity.
 
 ![urlInputWithMethod](/img/2023.2.1/urlInputWithMethod.png)
@@ -77,15 +76,15 @@ and response drop-down box) into one, and remove the response drop-down box to i
 ![pluginVersion](/img/2023.2.1/pluginVersion.png)
 :::
 
-## 2023.1.9 <Badge text="Free trial" type="tip"/> 
+## 2023.1.9 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Quick add Environment variable support" type="tip"/>
 - <Badge text="Add、Delete、Modify support in Environment use view" type="tip"/>
 - <Badge text="Show apis trigger in Controller" type="tip"/>
-- <Badge text="Response adds Size property" type="tip"/>  
+- <Badge text="Response adds Size property" type="tip"/>
 - <Badge text="API Name Saving Optimization" type="info"/>
 - <Badge text="Input parameter trim optimization" type="info"/>
-- <Badge text="Reduce JSON tree tab size from 5MB to 2MB" type="info"/>  
+- <Badge text="Reduce JSON tree tab size from 5MB to 2MB" type="info"/>
 - <Badge text="Remove Accept-Language header when send request" type="danger"/>
 - <Badge text="cURL copy format error of form-data" type="danger"/>
 - <Badge text="Logic error of domain configuration page in some the case" type="danger"/>
@@ -101,14 +100,13 @@ Click the "Add" button to select a line and add it to the environment variables,
 :::
 
 ::: tip Show apis trigger in Controller
-Right-click in the Controller in any position to invoke  `Generate`, choose`Show apis` , all APIs in the current controller can be displayed.
+Right-click in the Controller in any position to invoke `Generate`, choose`Show apis` , all APIs in the current controller can be displayed.
 ![showApis](/img/2023.1.9/showApis.gif)
 :::
 
 ::: tip Response adds Size property
 ![responseSize.png](/img/2023.1.9/responseSize.png)
 :::
-
 
 ## 2023.1.8 <Badge text="Free trial" type="tip"/>
 
@@ -129,7 +127,7 @@ Such as in `SearchEveryWhere`
 ![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength_en.png)
 :::
 
-## 2023.1.7.1 <Badge text="Free trial" type="tip"/> 
+## 2023.1.7.1 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Add generate action in SearchEveryWhere" type="tip"/>
 - <Badge text="The main window pops up with configuration" type="info"/>

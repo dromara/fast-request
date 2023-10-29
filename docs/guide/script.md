@@ -14,22 +14,6 @@ headerDepth: 4
 
 ![](/img/script.svg)
 
-[comment]: <> (```flow)
-
-[comment]: <> (st=>start: Start)
-
-[comment]: <> (op1=>inputoutput: 前置脚本)
-
-[comment]: <> (op2=>subroutine: Do request)
-
-[comment]: <> (op3=>operation: 后置脚本)
-
-[comment]: <> (e=>end: End)
-
-[comment]: <> (st&#40;bottom&#41;->op1&#40;right&#41;->op2&#40;right&#41;->op3->e)
-
-[comment]: <> (```)
-
 ## 测试项目
 
 [https://github.com/kings1990/fast-request-samples](https://github.com/kings1990/fast-request-samples)
@@ -169,7 +153,7 @@ if(StringUtils.isNotBlank(debug)){
 
 Console 帮助开发者打印一些你想要的信息
 
-``` groovy
+```groovy
 console.info("info")
 console.print("print info")
 console.warn("warn")
@@ -188,7 +172,8 @@ console.error("error")
 ::: tabs
 
 @tab Maven
-``` xml
+
+```xml
     <dependency>
         <groupId>cn.hutool</groupId>
         <artifactId>hutool-http</artifactId>
@@ -206,9 +191,9 @@ console.error("error")
     </dependency>
 ```
 
-
 @tab Gradle
-``` gradle
+
+```gradle
 dependencies {
     implementation("com.google.guava:guava:30.1.1-jre")
     implementation("com.alibaba:fastjson:1.2.78")
@@ -218,8 +203,8 @@ dependencies {
 
 :::
 
-
 ### 1. 签名参数
+
 在你的本地新建一个 xxx.groovy 文件,粘贴以下代码,适当修改后,能保证本地可以正常运行,再把代码粘贴到脚本中
 
 - <Badge text="注意最终脚本需要删除这行代码" type="danger"/>
@@ -242,7 +227,6 @@ body = "xxxx"//just for test
 String sign = DigestUtil.md5Hex(body)
 request.header("sign",sign)
 ```
-
 
 ### 2. 利用某一个请求的响应充当请求的 Header 参数
 
@@ -278,8 +262,8 @@ if(myResponse.isOk()){
 }
 ```
 
-
 ### 3. 设置一个Environment变量
+
 假定响应报文格式
 
 ```json
@@ -310,7 +294,6 @@ if(myResponse.isOk()){
     rfr.environment.put("token",token)
 }
 ```
-
 
 ## 注意点
 

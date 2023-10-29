@@ -6,8 +6,6 @@ import theme from "./theme.js";
 const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
-  
-
   title: "Fast Request",
   description: "Intellij Restful Fast Request",
 
@@ -20,7 +18,7 @@ export default defineUserConfig({
       },
     ],
     ["script", { src: "//at.alicdn.com/t/c/font_2601581_dhvis4jtn7m.js" }],
-    ["script", { src: "/js/baidu.js" }], 
+    ["script", { src: "/js/baidu.js" }],
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],
 
@@ -74,18 +72,17 @@ export default defineUserConfig({
       __dirname,
       "./layouts/Layout.vue",
     ),
-      // "@theme-hope/components/HomePage": path.resolve(
-      //     __dirname,
-      //     "./components/HomePage.vue"
-      // ),
-      // "@theme-hope/components/NormalPage": path.resolve(
-      //     __dirname,
-      //     "./components/NormalPage.vue"
-      // ),
-      // "@theme-hope/modules/sidebar/components/Sidebar": path.resolve(
-      //     __dirname,
-      //     "./components/Sidebar.vue"
-      // ),
+    // "@theme-hope/components/HomePage": path.resolve(
+    //     __dirname,
+    //     "./components/HomePage.vue"
+    // ),
+    // "@theme-hope/components/NormalPage": path.resolve(
+    //     __dirname,
+    //     "./components/NormalPage.vue"
+    // ),
+    // "@theme-hope/modules/sidebar/components/Sidebar": path.resolve(
+    //     __dirname,
+    //     "./components/Sidebar.vue"
+    // ),
   },
-
 });

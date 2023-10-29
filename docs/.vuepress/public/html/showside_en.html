@@ -80,9 +80,13 @@
     <div class="image-gallery__image"></div>
     <div class="image-gallery__list">
       <div class="image-gallery__item" imgName="0.png">
-        <div class="image-gallery__item-title">Generate URLs and parameters</div>
+        <div class="image-gallery__item-title">
+          Generate URLs and parameters
+        </div>
         <div class="image-gallery__item-description">
-          Just click the icon on the left side of the method to generate the method URL and corresponding parameters, Supports Spring, JAX-Rs frameworks, and Java and Kotlin languages, save your handwriting time.
+          Just click the icon on the left side of the method to generate the
+          method URL and corresponding parameters, Supports Spring, JAX-Rs
+          frameworks, and Java and Kotlin languages, save your handwriting time.
         </div>
         <div class="image-gallery__item-progress">
           <div class="image-gallery__item-progress__foreground"></div>
@@ -168,8 +172,7 @@
 
       // 显示新的图片和进度条
       var imgName = items[index].getAttribute("imgName");
-      image.style.backgroundImage =
-        "url(/img/index/" + imgName + ")";
+      image.style.backgroundImage = "url(/img/index/" + imgName + ")";
       image.style.opacity = "1";
 
       // 遍历所有的图片项，将除了当前图片项的描述元素都隐藏
@@ -250,8 +253,7 @@
         description.style.display = "block";
         console.log(item);
         var imgName = item.getAttribute("imgName");
-        image.style.backgroundImage =
-          "url(/img/index/" + imgName + ")";
+        image.style.backgroundImage = "url(/img/index/" + imgName + ")";
       });
     });
 

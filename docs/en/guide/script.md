@@ -13,22 +13,6 @@ The groovy syntax is almost identical to Java.
 
 ![](/img/script_en.svg)
 
-[comment]: <> (```flow)
-
-[comment]: <> (st=>start: Start)
-
-[comment]: <> (op1=>inputoutput: Pre-request script)
-
-[comment]: <> (op2=>subroutine: Do request)
-
-[comment]: <> (op3=>operation: Post-request script)
-
-[comment]: <> (e=>end: End)
-
-[comment]: <> (st&#40;bottom&#41;->op1&#40;right&#41;->op2&#40;right&#41;->op3->e)
-
-[comment]: <> (```)
-
 ## Test Project
 
 [https://github.com/kings1990/fast-request-samples](https://github.com/kings1990/fast-request-samples)
@@ -162,7 +146,7 @@ Execute order：`Project-level`->`Single API level`
 
 The console helps developers print some info you want.
 
-``` groovy
+```groovy
 console.info("info")
 console.print("print info")
 console.warn("warn")
@@ -177,12 +161,13 @@ console.error("error")
 
 ::: tip Code completion support
 
-Add the following dependency to the project (if there is none),  then you can use [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) for the plugin's core classes in the editor (quickly importing classes, getting method hints, etc.).
+Add the following dependency to the project (if there is none), then you can use [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) for the plugin's core classes in the editor (quickly importing classes, getting method hints, etc.).
 
 ::: tabs
 
 @tab Maven
-``` xml
+
+```xml
     <dependency>
         <groupId>cn.hutool</groupId>
         <artifactId>hutool-http</artifactId>
@@ -200,9 +185,9 @@ Add the following dependency to the project (if there is none),  then you can us
     </dependency>
 ```
 
-
 @tab Gradle
-``` gradle
+
+```gradle
 dependencies {
     implementation("com.google.guava:guava:30.1.1-jre")
     implementation("com.alibaba:fastjson:1.2.78")
@@ -273,6 +258,7 @@ if(myResponse.isOk()){
 ```
 
 ### 3. Set an environment variable
+
 If response returns
 
 ```json
@@ -303,7 +289,6 @@ if(myResponse.isOk()){
     rfr.environment.put("token",token)
 }
 ```
-
 
 ## Note
 

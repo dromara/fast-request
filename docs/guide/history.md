@@ -18,8 +18,6 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 | ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
 
-
-
 ---
 
 feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
@@ -31,6 +29,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 目前发现[Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)由于修改了一部分自带的UI组件,某些插件版本版本在某些系统(例如windows)下面渲染组件的时候存在性能问题,如果发现右键或者其他操作卡顿,则需要升级主题插件或者使用原生IDEA主题
 :::
 
+
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="开发中" color="LigntGreen"/>
 - <Badge text="Markdown文档模板配置" type="tip"/>
 
@@ -39,11 +38,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 
+
 ## 2023.2.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+
 - <Badge text="Url输入框针对某些主题下的样式优化" type="tip"/>
 - <Badge text="项目级别请求头保存错误" type="danger"/>
 
 ## 2023.2.1 <Badge text="免费试用" type="tip"/>
+
 - <Badge text="UI简化" type="tip"/>
 - <Badge text="api文档支持保存和打开" type="tip"/>
 - <Badge text="bilibili视频教程直达" type="tip"/>
@@ -63,7 +65,6 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ::: tip api文档支持保存和打开
 
-
 ![openDoc](/img/2023.2.1/openDoc.png)
 :::
 
@@ -77,12 +78,12 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![pluginVersion](/img/2023.2.1/pluginVersion.png)
 :::
 
-## 2023.1.9 <Badge text="免费试用" type="tip"/> 
+## 2023.1.9 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="快捷添加Environment变量" type="tip"/>
 - <Badge text="Environment使用界面增删改支持" type="tip"/>
 - <Badge text="Show apis快捷触发" type="tip"/>
-- <Badge text="Response新增Size属性" type="tip"/>  
+- <Badge text="Response新增Size属性" type="tip"/>
 - <Badge text="Api名称保存优化" type="info"/>
 - <Badge text="输入参数trim优化" type="info"/>
 - <Badge text="缩减JSON tab展示树大小从5M->2M" type="info"/>
@@ -101,7 +102,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ::: tip Show apis快捷触发
-在Controller中任意位置右键唤起 `Generate`，选择`Show apis` 即可展示当前控制器中的所有API 
+在Controller中任意位置右键唤起 `Generate`，选择`Show apis` 即可展示当前控制器中的所有API
 ![showApis](/img/2023.1.9/showApis.gif)
 :::
 
@@ -112,8 +113,6 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ::: info Api名称保存优化
 详看Bilibili视频讲解 -> [IDEA插件Fast Request之API命名机制](https://www.bilibili.com/video/BV1wu4y1d7c4)
 :::
-
-
 
 ## 2023.1.8 <Badge text="免费试用" type="tip"/>
 
@@ -132,7 +131,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength.png)
 :::
 
-## 2023.1.7.1 <Badge text="免费试用" type="tip"/> 
+## 2023.1.7.1 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="SearchEveryWhere增加自动生成策略" type="tip"/>
 - <Badge text="主窗口弹出配置化" type="info"/>
