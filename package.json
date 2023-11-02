@@ -22,6 +22,7 @@
     "vuepress-theme-hope": "2.0.0-beta.241"
   },
   "devDependencies": {
-    "prettier": "3.0.3"
+    "prettier": "3.0.3",
+    "vuepress-plugin-sitemap2": "2.0.0-beta.244"
   }
 }
