@@ -1,7 +1,7 @@
 ---
 icon: restfulFastRequest
 home: true
-title: FastRequest文档
+title: Api Buddy
 heroFullScreen: true
 heroImageDark: /img/logoLight1.gif
 heroText: Fast Request
@@ -34,10 +34,10 @@ features:
 head:
   - - meta
     - name: keywords
-      content: Restful Fast Request,RestfulFastRequest,Best Rest Client,Fast Request,fast request,fast request官网,Postman,restful toolkit,idea插件,http client,Restful API,Restful,API,API Buddy
+      content: API Buddy,Fast Request,RestfulFastRequest,fast request官网,api-buddy,Restful Fast Request
   - - meta
     - name: description
-      content: Restful Fast Request 一个基于 IDEA 的类似 postman 的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params，一个API调试工具+API管理工具，支持 springmvc、springboot、java-rs
+      content: Restful Fast Request是一个IntelliJ IDEA上的的类似postman的restful api工具插件，可以根据已有的方法帮助您快速生成url和params，一个API调试工具+API管理工具，支持springmvc、springboot、java-rs
   - - meta
     - name: wwads-cn-verify
       content: 2f2b265625d76a6704b08093c652fd79
