@@ -32,9 +32,17 @@ and some plug-in versions are rendering components under specific systems (such 
 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntGreen"/>
 - <Badge text="Markdown doc template config" type="tip"/>
+- <Badge text="JSON5 support" type="tip"/>
+- <Badge text="History requests list show errors" type="danger"/>
 
 ::: tip Markdown doc template config
 Provides a custom format for local markdown and [Online API](./features/apiDocSync.md) doc.View [more detail](./features/markdownDocTemplateConfig.md)
+:::
+
+::: tip JSON5 support
+JSON5 format support for Request body, JSON field comment support
+
+![json5](/img/2023.2.2/json5.png)
 :::
 
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>

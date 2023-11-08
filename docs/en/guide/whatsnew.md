@@ -29,6 +29,8 @@ Because developing version is still in development, the documentation of develop
 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntGreen"/>
 - <Badge text="Markdown doc template config" type="tip"/>
+- <Badge text="JSON5 support" type="tip"/>
+- <Badge text="History requests list show errors" type="danger"/>
 
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 
