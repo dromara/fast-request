@@ -33,6 +33,7 @@ and some plug-in versions are rendering components under specific systems (such 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntGreen"/>
 - <Badge text="Markdown doc template config" type="tip"/>
 - <Badge text="JSON5 support" type="tip"/>
+- <Badge text="Compatible with IDEA 2023.3" type="tip"/>  
 - <Badge text="History requests list show errors" type="danger"/>
 
 ::: tip Markdown doc template config

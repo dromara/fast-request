@@ -33,6 +33,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="开发中" color="LigntGreen"/>
 - <Badge text="Markdown文档模板配置" type="tip"/>
 - <Badge text="JSON5支持" type="tip"/>
+- <Badge text="兼容IDEA 2023.3" type="tip"/>  
 - <Badge text="历史请求显示错误" type="danger"/>
 
 
