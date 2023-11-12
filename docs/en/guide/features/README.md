@@ -26,6 +26,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="saveGroup" /> Save API group](./apiGroup.md)
 - [<ColorIcon icon="saveTemp" /> Temporary request](./tempRequest.md)
 - [<ColorIcon icon="regenerate" /> Re generate](./regenerate.md)
+- [<ColorIcon icon="postmanSync" /> Postman sync](./postmanSync.md)
 - [<ColorIcon icon="clearNew" /> Clear](./clear.md)
 - [<ColorIcon icon="import" /> cURL import](./curlImport.md)
 - [<ColorIcon icon="curl1" /> cURL copy](./copyCurl.md)

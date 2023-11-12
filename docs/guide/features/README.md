@@ -25,6 +25,7 @@ icon: featuresNew
 - [<ColorIcon icon="save" /> 保存请求](./saveRequest.md)
 - [<ColorIcon icon="saveGroup" /> API 分组保存](./apiGroup.md)
 - [<ColorIcon icon="saveTemp" /> 临时请求](./tempRequest.md)
+- [<ColorIcon icon="postmanSync" /> Postman同步](./postmanSync.md)
 - [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md)
 - [<ColorIcon icon="clearNew" /> 清除](./clear.md)
 - [<ColorIcon icon="import" /> cURL 导入](./curlImport.md)
