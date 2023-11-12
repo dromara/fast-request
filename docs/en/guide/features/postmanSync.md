@@ -14,7 +14,7 @@ Open [https://postman.co/settings/me/api-keys](https://postman.co/settings/me/ap
 The Workspace ID is the identifier for a Postman workspace. There are 2 strategies to create a workspace.
 
 
-1. Create one workspace for each project to differentiate.
+1. Create one workspace for each project.(Recommended)
 2. Create one workspace to represent a company, and use different collections to represent different projects within the company.
 
 ---

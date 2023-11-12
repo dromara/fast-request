@@ -12,7 +12,7 @@ Api key 用于使用 Postman 在线 API 执行一些手工行为.例如**创建C
 ## WorkspaceId
 Workspace id 是 Postman 工作空间的Id. 有2中策略来创建Workspace
 
-1. 每个项目来区分创建1Workspace
+1. 每个项目来区分创建1个Workspace(推荐)
 2. 创建1个Workspace表示某个公司的,不同的Collection来表示公司下面不同的项目
 
 ---
