@@ -27,7 +27,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="LigntGreen"/>
+## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>
 - <Badge text="Markdown doc template config" type="tip"/>
 - <Badge text="JSON5 support" type="tip"/>
 - <Badge text="Compatible with IDEA 2023.3" type="tip"/>
@@ -35,7 +35,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="History requests list show errors" type="danger"/>
 
 
-## 2023.2.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+## 2023.2.1.1 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Style optimization for Url textField in some themes" type="tip"/>
 - <Badge text="Project level header save error" type="danger"/>
