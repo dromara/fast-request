@@ -32,3 +32,23 @@ The Workspace ID is the identifier for a Postman workspace. There are 2 strategi
 3. Copy Workspace id
 
 ![workspaceInfo](/img/2023.2.3/workspaceInfo.png)
+
+## Initial value & Current value
+Variable in Environment contains **Initial value** and **Current value**,**Initial value** is shared with your team,but **Current value** only store in your local.
+Request will finally use **Current value**.
+
+==**Restful Fast Request in fact sync the Initial value of Environment**==.
+
+So, if the environment values are updated in the plugin and sync successfully to Postman,
+when executing a request, Postman will not immediately use the synchronized values.
+Instead, you will need to manually replace the values in the environment tab 
+or perform a complete replacement by clicking on "Reset All".
+
+![workspaceInfo](/img/2023.2.3/resetEnvironmentValue.png)
+
+## Pre and Post script
+Due to language differences, the plugin does not synchronize pre-request and post-request scripts.
+Therefore, when using the plugin, it is recommended to write common scripts in the [project-level config](./projectValueConfig.md).
+This way, after synchronizing with Postman, you only need to write pre-request and post-request scripts at the collection level in Postman.
+
+![postmanScript](/img/2023.2.3/postmanScript.png)
