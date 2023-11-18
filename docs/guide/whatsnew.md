@@ -27,6 +27,10 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="开发中" color="LigntPink"/>
+- <Badge text="API同步至Postman" type="tip"/>
+- <Badge text="Environment重构" type="info"/>
+
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="Markdown文档模板配置" type="tip"/>
 - <Badge text="JSON5支持" type="tip"/>

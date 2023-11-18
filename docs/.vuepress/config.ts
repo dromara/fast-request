@@ -18,7 +18,7 @@ export default defineUserConfig({
         href: "/img/fastRequest.svg",
       },
     ],
-    ["script", { src: "//at.alicdn.com/t/c/font_2601581_n5sa8o7zhm8.js" }],
+    ["script", { src: "//at.alicdn.com/t/c/font_2601581_sern1eshb.js" }],
     ["script", { src: "/js/baidu.js" }],
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],

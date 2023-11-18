@@ -29,8 +29,19 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 目前发现[Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)由于修改了一部分自带的UI组件,某些插件版本版本在某些系统(例如windows)下面渲染组件的时候存在性能问题,如果发现右键或者其他操作卡顿,则需要升级主题插件或者使用原生IDEA主题
 :::
 
+## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LigntPink"/>
+- <Badge text="API同步至Postman" type="tip"/>
+- <Badge text="Environment重构" type="info"/>
 
-## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+::: tip API同步至Postman
+仅需配置Postman的token和对应workspace的ID即可将API云上传到Postman.享受fast request不支持的功能.
+
+更多详情参考[Postman 同步](./features/postmanSync.md)
+:::
+
+
+
+## 2023.2.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
 - <Badge text="Markdown文档模板配置" type="tip"/>
 - <Badge text="JSON5支持" type="tip"/>
 - <Badge text="兼容IDEA 2023.3" type="tip"/>  

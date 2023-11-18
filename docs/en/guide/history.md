@@ -30,6 +30,16 @@ At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/p
 and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
 :::
 
+## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="developing" color="LigntPink"/>
+- <Badge text="Sync API to Postman" type="tip"/>
+- <Badge text="Environment refactoring" type="info"/>
+
+::: tip Sync API to Postman
+You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
+
+More details please refer [Postman sync](./features/postmanSync.md)
+:::
+
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>
 - <Badge text="Markdown doc template config" type="tip"/>
 - <Badge text="JSON5 support" type="tip"/>
