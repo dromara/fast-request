@@ -37,7 +37,16 @@ and some plug-in versions are rendering components under specific systems (such 
 ::: tip Sync API to Postman
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
 
+To improve the data synchronized to postman, it is recommended to select `sync after api save` option in the postman config of the plugin 
+then trigger the synchronization by save the api.
+
 More details please refer [Postman sync](./features/postmanSync.md)
+:::
+
+:::info Environment refactoring
+Environment contains Current value and Initial value. Initial value can be shared by submitting config fine in `.fastRequest/config/fastRequestCurrentProjectEnvironment.json`. 
+
+![environment](/img/2023.2.3/environment_en.png)
 :::
 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>

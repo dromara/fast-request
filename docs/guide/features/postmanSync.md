@@ -2,6 +2,11 @@
 
 版本要求: <Badge text="2023.2.3" />
 
+:::tip
+由于历史原因,历史保存的持久化数据丢失了一部分字段,为了能够将同步至postman的数据更完善,
+建议在插件postman配置中勾上`保存后同步`postman选项,通过保存操作来触发同步.
+:::
+
 ## Api key
 Api key 用于使用 Postman 在线 API 执行一些手工行为.例如**创建Collection**、**创建目录**、**创建 Request** 等行为.
 

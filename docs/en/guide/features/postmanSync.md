@@ -2,6 +2,11 @@
 
 Version required: <Badge text="2023.2.3" />
 
+::: tip
+To improve the data synchronized to postman, it is recommended to select `sync after api save` option in the postman config of the plugin
+then trigger the synchronization by save the api.
+:::
+
 ## Api key
 API key is used to perform manual actions using the Postman Online API. These actions include **creating collections**, **creating directories**, **creating requests**, and more.
 
