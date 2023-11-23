@@ -42,7 +42,7 @@
 
 更快速得回复问题，可以加入微信群，同时也可以一起探讨研究技术问题
 
-| ![微信](./screenshot/wechatGroup.png)    |
+| ![微信](./docs/.vuepress/public/img/wechatGroup.png)    |
 | ---------------------------------------- |
 | 如果扫码失败请直接搜微信号 FastRequest99 |
 
