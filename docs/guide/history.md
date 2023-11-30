@@ -30,6 +30,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LigntPink"/>
+
 - <Badge text="API同步至Postman" type="tip"/>
 - <Badge text="Environment重构" type="info"/>
 
@@ -50,14 +51,12 @@ Initial value可以通过提交 `.fastRequest/config/fastRequestCurrentProjectEn
 ![environment](/img/2023.2.3/environment.png)
 :::
 
-
-
 ## 2023.2.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+
 - <Badge text="Markdown文档模板配置" type="tip"/>
 - <Badge text="JSON5支持" type="tip"/>
-- <Badge text="兼容IDEA 2023.3" type="tip"/>  
+- <Badge text="兼容IDEA 2023.3" type="tip"/>
 - <Badge text="历史请求显示错误" type="danger"/>
-
 
 ::: tip Markdown文档模板配置
 提供了导出文档和[Api在线文档](./features/apiDocSync.md)的自定义格式实现.查看[更多详情](./features/markdownDocTemplateConfig.md)
@@ -68,7 +67,6 @@ Initial value可以通过提交 `.fastRequest/config/fastRequestCurrentProjectEn
 
 ![json5](/img/2023.2.2/json5.png)
 :::
-
 
 ## 2023.2.1.1 <Badge text="免费试用" type="tip"/>
 

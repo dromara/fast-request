@@ -20,7 +20,7 @@ export default hopeTheme(
 
     darkmode: "enable",
 
-    iconAssets: "//at.alicdn.com/t/c/font_2601581_dhvis4jtn7m.css",
+    iconAssets: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.css",
 
     locales: {
       "/": {
@@ -55,33 +55,33 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2023.2.2推出",
+              title: "将在2023.2.3推出",
               content:
-                '<ul><li>Markdown文档模板配置</li><li>JSON5 支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li>API同步至Postman</li><li>Environment重构</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2023-2-2",
+                  link: "/guide/history.html#_2023-2-3",
                   type: "primary",
                 },
               ],
               showOnce: false,
-              key: "2023.2.2",
+              key: "2023.2.3",
             },
             {
               path: "/en",
-              title: "Coming in <b>2023.2.2</b>",
+              title: "Coming in <b>2023.2.3</b>",
               content:
-                '<ul><li>Markdown doc template config</li><li>JSON5 support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+                '<ul><li>Sync API to Postman</li><li>Environment refactoring</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
-                  link: "/en/guide/history.html#_2023-2-2",
+                  link: "/en/guide/history.html#_2023-2-3",
                   type: "primary",
                 },
               ],
               showOnce: true,
-              key: "2023.2.2",
+              key: "2023.2.3",
             },
           ],
         },
@@ -107,5 +107,5 @@ export default hopeTheme(
       },
     },
   },
-  { custom: true }
+  { custom: true },
 );

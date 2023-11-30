@@ -31,28 +31,30 @@ and some plug-in versions are rendering components under specific systems (such 
 :::
 
 ## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="developing" color="LigntPink"/>
+
 - <Badge text="Sync API to Postman" type="tip"/>
 - <Badge text="Environment refactoring" type="info"/>
 
 ::: tip Sync API to Postman
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
 
-To improve the data synchronized to postman, it is recommended to select `sync after api save` option in the postman config of the plugin 
+To improve the data synchronized to postman, it is recommended to select `sync after api save` option in the postman config of the plugin
 then trigger the synchronization by save the api.
 
 More details please refer [Postman sync](./features/postmanSync.md)
 :::
 
 :::info Environment refactoring
-Environment contains Current value and Initial value. Initial value can be shared by submitting config fine in `.fastRequest/config/fastRequestCurrentProjectEnvironment.json`. 
+Environment contains Current value and Initial value. Initial value can be shared by submitting config fine in `.fastRequest/config/fastRequestCurrentProjectEnvironment.json`.
 
 ![environment](/img/2023.2.3/environment_en.png)
 :::
 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>
+
 - <Badge text="Markdown doc template config" type="tip"/>
 - <Badge text="JSON5 support" type="tip"/>
-- <Badge text="Compatible with IDEA 2023.3" type="tip"/>  
+- <Badge text="Compatible with IDEA 2023.3" type="tip"/>
 - <Badge text="History requests list show errors" type="danger"/>
 
 ::: tip Markdown doc template config

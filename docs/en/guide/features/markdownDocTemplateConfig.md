@@ -14,7 +14,7 @@ Provides a custom format for local markdown and [Online API](./apiDocSync.md) do
 ### Content variable
 
 | Key                    | Parameter type                | Description                                                                                                        |
-|:-----------------------|:------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| :--------------------- | :---------------------------- | :----------------------------------------------------------------------------------------------------------------- |
 | url                    | String                        | Final url                                                                                                          |
 | originUrl              | String                        | Origin url, contains the name of the original path variable                                                        |
 | namingPolicy           | String                        | API namingPolicy, fixed value[1.byMethodName:by java method name 2.byDoc:by JavaDoc or Swagger method description] |
@@ -34,7 +34,7 @@ Provides a custom format for local markdown and [Online API](./apiDocSync.md) do
 ### Syntax variables
 
 | Key | Description     |
-|:----|:----------------|
+| :-- | :-------------- |
 | H1  | Markdown #      |
 | H2  | Markdown ##     |
 | H3  | Markdown ###    |
@@ -47,7 +47,7 @@ Provides a custom format for local markdown and [Online API](./apiDocSync.md) do
 ### Header
 
 | Key     | Parameter type | Description     |
-|:--------|:---------------|:----------------|
+| :------ | :------------- | :-------------- |
 | enabled | Boolean        | Enable flag     |
 | type    | String         | Key of Header   |
 | value   | String         | Value of Header |
@@ -55,7 +55,7 @@ Provides a custom format for local markdown and [Online API](./apiDocSync.md) do
 ### KeyValue
 
 | Key     | Parameter type | Description                                                      |
-|:--------|:---------------|:-----------------------------------------------------------------|
+| :------ | :------------- | :--------------------------------------------------------------- |
 | enabled | Boolean        | Enable flag                                                      |
 | key     | String         | Parameter key                                                    |
 | type    | String         | Parameter type, fixed value [Object Array String Number Boolean] |
@@ -64,98 +64,96 @@ Provides a custom format for local markdown and [Online API](./apiDocSync.md) do
 
 ## Default template
 
-```velocity
+````velocity
     #if (${namingPolicy}=='byDoc')
     $H1 ${methodDescription}
     #else
     $H1 $!{methodName}
-    
+
     $H3 Method description
-    
+
     ```
     $!{methodDescription}
     ```
     #end
-    
+
     > URL: $!{url}
     >
     > Origin Url: $!{originUrl}
     >
     > Type: $!{methodType}
-    
-    
+
+
     $H3 Request headers
-    
+
     |Header Name| Header Value|
     |---------|------|
     #foreach( $h in ${headerList})
     |$h.type|$h.value|
     #end
-    
+
     $H3 Parameters
-    
+
     $H5 Path parameters
-    
+
     | Parameter | Type | Value | Description |
     |---------|------|------|------------|
     #foreach( $node in ${pathKeyValueList})
     |$node.key|$!{node.type}|$!{node.value}|$!{node.comment}|
     #end
-    
-    
+
+
     $H5 URL parameters
-    
+
     |Required| Parameter | Type | Value | Description |
     |---------|---------|------|------|------------|
     #foreach( $node in ${urlParamsKeyValueList})
     |$!{node.enabled}|$!{node.key}|$!{node.type}|$!{node.value}|$!{node.comment}|
     #end
-    
-    
+
+
     $H5 Body parameters
-    
+
     $H6 JSON
-    
+
     ```
     ${jsonParam}
     ```
-    
+
     $H6 JSON document
-    
+
     ```
     ${jsonParamDocument}
     ```
-    
-    
+
+
     $H5 Form URL-Encoded
     |Required| Parameter | Type | Value | Description |
     |---------|---------|------|------|------------|
     #foreach( $node in ${urlEncodedKeyValueList})
     |$!{node.enabled}|$!{node.key}|$!{node.type}|$!{node.value}|$!{node.comment}|
     #end
-    
-    
+
+
     $H5 Multipart
     |Required | Parameter | Type | Value | Description |
     |---------|---------|------|------|------------|
     #foreach( $node in ${multipartKeyValueList})
     |$!{node.enabled}|$!{node.key}|$!{node.type}|$!{node.value}|$!{node.comment}|
     #end
-    
-    
+
+
     $H3 Response
-    
+
     $H5 Response example
-    
+
     ```
     $!{responseExample}
     ```
-    
+
     $H5 Response document
     ```
     $!{returnDocument}
     ```
 
-```
-
-
+````
