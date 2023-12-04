@@ -20,6 +20,16 @@ export default defineUserConfig({
     ],
     ["script", { src: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.js" }],
     ["script", { src: "/js/baidu.js" }],
+    [
+      'script', {}, `
+        (function() {
+	       if (location.href.indexOf('gitee.io') > -1) {
+           		location.href = 'https://api-buddy.cn'
+           }
+        })();
+        `
+    ]
+
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],
 
