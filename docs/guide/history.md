@@ -29,6 +29,10 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 目前发现[Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)由于修改了一部分自带的UI组件,某些插件版本版本在某些系统(例如windows)下面渲染组件的时候存在性能问题,如果发现右键或者其他操作卡顿,则需要升级主题插件或者使用原生IDEA主题
 :::
 
+::: tip license抽奖回馈活动
+点击查看[详情](activity.md#_20231205)
+:::
+
 ## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LigntPink"/>
 
 - <Badge text="API同步至Postman" type="tip"/>
