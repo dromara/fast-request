@@ -2,7 +2,7 @@
 
 Version required: <Badge text="2022.2.1" />
 
-::: danger Note
+::: caution Note
 If you want to bind a method, you need to place the cursor on the method name.
 :::
 

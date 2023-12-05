@@ -70,7 +70,7 @@ icon: buy
 
 ## Tips💡
 
-::: danger License 信息
+::: caution License 信息
 
 **请妥善保存好您的激活码信息，不要泄露证书信息**
 ![](/img/buy/accountLicense.png)

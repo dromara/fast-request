@@ -1,7 +1,6 @@
 import { getDirname, path } from "@vuepress/utils";
 import { defineUserConfig } from "vuepress";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
-import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 import theme from "./theme.js";
 
 const __dirname = getDirname(import.meta.url);
@@ -21,14 +20,16 @@ export default defineUserConfig({
     ["script", { src: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.js" }],
     ["script", { src: "/js/baidu.js" }],
     [
-      'script', {}, `
+      "script",
+      {},
+      `
         (function() {
 	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
            		location.href = 'https://api-buddy.cn'
            }
         })();
-        `
-    ]
+        `,
+    ],
 
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],
@@ -74,9 +75,6 @@ export default defineUserConfig({
         },
       },
     }),
-    sitemapPlugin({
-      hostname: "https://api-buddy.cn",
-    }),
   ],
 
   pagePatterns: ["**/*.md", "!*.snippet.md", "!.vuepress", "!node_modules"],
@@ -84,7 +82,7 @@ export default defineUserConfig({
   alias: {
     "@theme-hope/layouts/Layout": path.resolve(
       __dirname,
-      "./layouts/Layout.vue",
+      "./layouts/Layout.vue"
     ),
     // "@theme-hope/components/HomePage": path.resolve(
     //     __dirname,

@@ -25,7 +25,7 @@ feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</sp
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
 
-::: danger Performance issues caused by themes
+::: caution Performance issues caused by themes
 At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) has modified some of its own UI components,
 and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
 :::
@@ -271,7 +271,7 @@ Move from the original button where it is easy to block the text to the upper ri
 
 :::
 
-::: danger SearchEveryWhere style confusion
+::: caution SearchEveryWhere style confusion
 This issue accompanies many versions and this version completely fixes it.
 
 SearchEveryWhere, from now on, will not have the problem of the tab width increasing and causing the tab to not be fully displayed.

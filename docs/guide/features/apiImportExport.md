@@ -7,7 +7,7 @@
 
 利用该功能，你可以非常方便得将自己已有的 APIs 分享给别的开发者，或者导入到其他设备上的 IDEA。
 
-::: danger 注意点
+::: caution 注意点
 
 - 导出的时候会新增一个名为 fastRequestCollection.xml 的 xml 文件，你不能重命名它， 默认导出到当前项目路径下。
 

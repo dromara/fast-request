@@ -4,7 +4,7 @@ Version Required: <Badge text="2022.1.4" />
 
 Using this function, you can easily share your existing APIs with other developers or import them to IDEA on other devices.
 
-::: danger Attention
+::: caution Attention
 
 - A new file named fastRequestCollection.xml will be added when exporting. You should not rename it. The plugin will export it to the current project path by default.
 

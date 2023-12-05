@@ -65,7 +65,7 @@ Log in to your JetBrains account.
 
 ## Tips💡
 
-::: danger License info
+::: caution License info
 
 **Please keep your activation code information safe and do not leak the License information.**
 ![](/img/buy/accountLicense.png)

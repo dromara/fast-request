@@ -188,7 +188,7 @@ Operation method：
 
 Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
 
-::: danger Attention
+::: caution Attention
 
 - A new file named fastRequestCollection.xml will be added when exporting,You can't rename it, it is exported to the current project path by default.
 
