@@ -23,7 +23,7 @@ export default defineUserConfig({
     [
       'script', {}, `
         (function() {
-	       if (location.href.indexOf('gitee.io') > -1) {
+	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
            		location.href = 'https://api-buddy.cn'
            }
         })();
