@@ -1,7 +1,7 @@
-import { getDirname, path } from "@vuepress/utils";
-import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar.js";
-import { enSidebar, zhSidebar } from "./sidebar.js";
+import {getDirname, path} from "@vuepress/utils";
+import {hopeTheme} from "vuepress-theme-hope";
+import {enNavbar, zhNavbar} from "./navbar.js";
+import {enSidebar, zhSidebar} from "./sidebar.js";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -57,7 +57,7 @@ export default hopeTheme(
               path: "/",
               title: "将在2023.2.3推出",
               content:
-                '<ul><li>API同步至Postman</li><li>Environment重构</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li><a href="https://api-buddy.cn/guide/activity.html#_20231205">B站抽奖赠送插件license</a></li><li>API同步至Postman</li><li>Environment重构</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
@@ -66,7 +66,7 @@ export default hopeTheme(
                 },
               ],
               showOnce: false,
-              key: "2023.2.3",
+              key: "2023.2.3-",
             },
             {
               path: "/en",
