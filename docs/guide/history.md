@@ -439,19 +439,19 @@ url 输入框点击回车，自动发送请求
 
 ## 2022.3.1 <Badge text="免费试用" type="tip"/>
 
-- <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
+- <Badge text="注释增加@fastRequestParseIgnore用来忽略字段解析" type="tip"/>
 - <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
 - <Badge text="激活提示优化" type="info"/>
 - <Badge text="Kotlin和Java混编导致Navigate加载api失败" type="danger"/>
 
-::: tip 注释增加@parseIgnore 用来忽略字段解析
+::: tip 注释增加@fastRequestParseIgnore 用来忽略字段解析
 
-以下的代码，插件会忽略解析该字段，请使用`@parseIgnore`
+以下的代码，插件会忽略解析该字段，请使用`@fastRequestParseIgnore`
 
 ```java
 /**
  * xxx description
- * @parseIgnore
+ * @fastRequestParseIgnore
  */
 private String someIgnoreField ;
 ```

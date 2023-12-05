@@ -49,12 +49,12 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 
 Way 2: Add the `static` modifier to the field.
 
-Way 3: Add `@parseIgnore` in comment
+Way 3: Add `@fastRequestParseIgnore` in comment
 
 ```java
 /**
  * xxx description
- * @parseIgnore
+ * @fastRequestParseIgnore
  */
 private String someIgnoreField;
 ```

@@ -168,7 +168,7 @@ Because developing version is still in development, the documentation of develop
 
 ## v2022.3.1 <Badge text="Free trial" type="tip"/>
 
-- <Badge text="Add @parseIgnore comment support for parse" type="tip"/>
+- <Badge text="Add @fastRequestParseIgnore comment support for parse" type="tip"/>
 - <Badge text="Add rfr.currentDomain in Script" type="tip"/>
 - <Badge text="Activation prompt optimization" type="info"/>
 - <Badge text="Reload api error in navigate when using Kotlin and Java in one project" type="danger"/>

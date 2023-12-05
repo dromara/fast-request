@@ -451,19 +451,19 @@ The clarity of the tool window icons has been optimised under the new UI.
 
 ## v2022.3.1 <Badge text="Free trial" type="tip"/>
 
-- <Badge text="Add @parseIgnore comment support for parse" type="tip"/>
+- <Badge text="Add @fastRequestParseIgnore comment support for parse" type="tip"/>
 - <Badge text="Add rfr.currentDomain in Script" type="tip"/>
 - <Badge text="Activation prompt optimization" type="info"/>
 - <Badge text="Reload api error in navigate when using Kotlin and Java in one project" type="danger"/>
 
-::: tip Add @parseIgnore comment support for parse
+::: tip Add @fastRequestParseIgnore comment support for parse
 
-The following code, the plugin will ignore parsing this field. Please use `@parseIgnore`
+The following code, the plugin will ignore parsing this field. Please use `@fastRequestParseIgnore`
 
 ```java
 /**
  * xxx description
- * @parseIgnore
+ * @fastRequestParseIgnore
  */
 private String someIgnoreField ;
 ```

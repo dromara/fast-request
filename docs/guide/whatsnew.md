@@ -167,7 +167,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 ## 2022.3.1 <Badge text="免费试用" type="tip"/>
 
-- <Badge text="注释增加@parseIgnore用来忽略字段解析" type="tip"/>
+- <Badge text="注释增加@fastRequestParseIgnore用来忽略字段解析" type="tip"/>
 - <Badge text="Script中增加rfr.currentDomain支持" type="tip"/>
 - <Badge text="激活提示优化" type="info"/>
 - <Badge text="Kotlin和Java混编导致Navigate加载api失败" type="danger"/>

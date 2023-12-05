@@ -48,12 +48,12 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
 
 方式 2： 给字段增加 `static` 修饰符
 
-方式 3：注释上加@parseIgnore
+方式 3：注释上加@fastRequestParseIgnore
 
 ```java
 /**
  * xxx description
- * @parseIgnore
+ * @fastRequestParseIgnore
  */
 private String someIgnoreField ;
 ```
