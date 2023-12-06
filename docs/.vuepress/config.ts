@@ -1,7 +1,7 @@
-import { getDirname, path } from "@vuepress/utils";
-import { defineUserConfig } from "vuepress";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
-import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import {getDirname, path} from "@vuepress/utils";
+import {defineUserConfig} from "vuepress";
+import {docsearchPlugin} from "@vuepress/plugin-docsearch";
+import {sitemapPlugin} from "vuepress-plugin-sitemap2";
 import theme from "./theme.js";
 
 const __dirname = getDirname(import.meta.url);
@@ -20,6 +20,7 @@ export default defineUserConfig({
     ],
     ["script", { src: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.js" }],
     ["script", { src: "/js/baidu.js" }],
+    ["script", { src: "/js/gtag.js" }],
     [
       'script', {}, `
         (function() {
@@ -28,8 +29,15 @@ export default defineUserConfig({
            }
         })();
         `
+    ],
+    [
+    'script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Y8G30ZWCYE');
+    `
     ]
-
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],
 
