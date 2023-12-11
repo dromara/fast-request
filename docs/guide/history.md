@@ -36,7 +36,15 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="LigntPink"/>
 
 - <Badge text="API同步至Postman" type="tip"/>
+- <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>  
 - <Badge text="Environment重构" type="info"/>
+- <Badge text="项目域名添加优化" type="info"/>
+- <Badge text="api文档同步触发在api保存的时候" type="info"/>
+- <Badge text="忽略字段使用 @fastRequestParseIgnore" type="info"/>
+- <Badge text="SearchEveryWhere 兼容 idea2023.3" type="danger"/>
+- <Badge text="body中传非json报错" type="danger"/>
+
+
 
 ::: tip API同步至Postman
 仅需配置Postman的token和对应workspace的ID即可将API云上传到Postman.享受fast request不支持的功能.
@@ -53,6 +61,19 @@ Environment区分为本地值(Current value)和共享值(Initial value)
 Initial value可以通过提交 `.fastRequest/config/fastRequestCurrentProjectEnvironment.json` 实现共享
 
 ![environment](/img/2023.2.3/environment.png)
+:::
+
+::: info 忽略字段使用@fastRequestParseIgnore
+针对实体类字段忽略解析,可以在注释中添加`@fastRequestParseIgnore`来实现,原来的注解`@parseIgnore`依然适用
+
+```java
+/**
+ * xxx description
+ * @fastRequestParseIgnore
+ */
+private String someIgnoreField ;
+```
+
 :::
 
 ## 2023.2.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntGreen"/>

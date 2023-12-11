@@ -30,10 +30,16 @@ At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/p
 and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
 :::
 
-## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="developing" color="LigntPink"/>
+## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="developing" color="LigntPink"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
+- <Badge text="Project name drop-down box automatically switches" type="tip"/>  
 - <Badge text="Environment refactoring" type="info"/>
+- <Badge text="Project domain name addition optimization" type="info"/>
+- <Badge text="Change API document sync trigger to API is saved" type="info"/>
+- <Badge text="Add @fastRequestParseIgnore support for ignore parse field" type="info"/>
+- <Badge text="SearchEveryWhere compatible idea2023.3" type="danger"/>
+- <Badge text="Error when passing non-json in body param" type="danger"/>
 
 ::: tip Sync API to Postman
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
@@ -48,6 +54,19 @@ More details please refer [Postman sync](./features/postmanSync.md)
 Environment contains Current value and Initial value. Initial value can be shared by submitting config fine in `.fastRequest/config/fastRequestCurrentProjectEnvironment.json`.
 
 ![environment](/img/2023.2.3/environment_en.png)
+:::
+
+::: info Add @fastRequestParseIgnore support for ignore parse field
+To ignore parsing for entity field, you can add `@fast Request Parse Ignore` to the annotation. The original annotation `@parse Ignore` is still applicable.
+
+```java
+/**
+ * xxx description
+ * @fastRequestParseIgnore
+ */
+private String someIgnoreField ;
+```
+
 :::
 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>

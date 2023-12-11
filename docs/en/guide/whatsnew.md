@@ -30,7 +30,13 @@ Because developing version is still in development, the documentation of develop
 ## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="developing" color="LigntPink"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
+- <Badge text="Project name drop-down box automatically switches" type="tip"/>  
 - <Badge text="Environment refactoring" type="info"/>
+- <Badge text="Project domain name addition optimization" type="info"/>
+- <Badge text="Change API document sync trigger to API is saved" type="info"/>
+- <Badge text="Add @fastRequestParseIgnore support for ignore parse field" type="info"/>
+- <Badge text="SearchEveryWhere compatible idea2023.3" type="danger"/>
+- <Badge text="Error when passing non-json in body param" type="danger"/>
 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>
 
