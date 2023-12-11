@@ -8,6 +8,7 @@ icon: bilibili
 <img alt="bilibili" src="/img/bilibili.jpg" width="" height=""/> |
 
 <hr/>
+<BiliBili bvid="BV1Ju4y1A7Qi" :ratio="5/4" />
 
 <BiliBili bvid="BV13N4y1R7B4" :ratio="5/4" />
 
