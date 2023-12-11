@@ -147,9 +147,21 @@ private static final String[] restrictedHeaders = {
 -Dsun.net.http.allowRestrictedHeaders=true
 ```
 
+## Q: 响应返回Unexpected end of file from server
+
+```
+1. 网络连接丢失
+2. 服务器决定关闭连接
+3. 客户端和服务器之间的某些东西（nginx、路由器等）终止了请求
+4. 服务端 api 需要代理但是 IDEA 没有配置,尤其是一些内网项目
+```
+
+IDEA配置代理: `Setting-> Appearance & Behavior->System Settings->HTTP Proxy`
+
 ## Q: 操作按钮不可见
 
 点击 `Options` 勾选 `Show Toolbar`
+
 ![](/img/faq/showToolbar.png)
 
 ## Q: 生成参数、跳转错乱

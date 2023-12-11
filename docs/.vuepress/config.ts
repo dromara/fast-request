@@ -9,7 +9,7 @@ const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   title: "Fast Request",
   description: "Intellij Restful Fast Request",
-
+  shouldPrefetch:false,
   head: [
     [
       "link",

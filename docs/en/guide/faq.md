@@ -147,10 +147,22 @@ Click **help->Edit Custom Vm Options...**,add the following config in **idea.vmo
 ```
 -Dsun.net.http.allowRestrictedHeaders=true
 ```
+## Q: Response return Unexpected end of file from server
+
+```
+1. Network connection was lost
+2. The server decided to close the connection
+3. Something in between the client and the server (nginx, router, etc) terminated the request
+4. The server-side api requires a proxy but IDEA is not configured, especially for some intranet projects
+```
+
+How to set IDEA proxy: `Setting-> Appearance & Behavior->System Settings->HTTP Proxy`
+
 
 ## Q: Action buttons are not visible
 
 Click `Options` and check `Show Toolbar`
+
 ![](/img/faq/showToolbar.png)
 
 ## Q: Generate parameters、jump error
