@@ -49,10 +49,14 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 ::: tip API同步至Postman
 仅需配置Postman的token和对应workspace的ID即可将API云上传到Postman.享受fast request不支持的功能.
 
-由于历史原因,历史保存的持久化数据丢失了一部分字段,为了能够将同步至postman的数据更完善,
+由于历史原因,历史保存的持久化数据丢失了一部分字段,为了能够将同步至postman的数据更完整,
 建议在插件postman配置中勾上保存后同步postman选项,通过保存操作来触发同步.
 
 更多详情参考[Postman 同步](./features/postmanSync.md)
+:::
+
+::: tip 自动域名切换项目名下拉框自动切换
+不同 Module 下的 API 生成参数的时候，如果开启了自动域名,自动切换项目名下拉框
 :::
 
 ::: info Environment重构
@@ -62,6 +66,14 @@ Initial value可以通过提交 `.fastRequest/config/fastRequestCurrentProjectEn
 
 ![environment](/img/2023.2.3/environment.png)
 :::
+
+::: info 项目域名添加优化
+
+自动识别 module 名称作为下拉框选项,也可以自定义输入.
+
+![projectName](/img/2023.2.3/projectName.png)
+:::
+
 
 ::: info 忽略字段使用@fastRequestParseIgnore
 针对实体类字段忽略解析,可以在注释中添加`@fastRequestParseIgnore`来实现,原来的注解`@parseIgnore`依然适用

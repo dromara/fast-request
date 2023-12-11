@@ -3,11 +3,14 @@
 Version required: <Badge text="2023.2.3" />
 
 ::: tip
-To improve the data synchronized to postman, it is recommended to select `sync after api save` option in the postman config of the plugin
-then trigger the synchronization by save the api.
+To  make the data synchronised to Postman more complete, it is recommended to select the `sync after API save` option in the Postman config of the plugin
+then trigger the synchronization by saving the API.
 
 It is also recommended to use this function to synchronize the API instead of exporting
 :::
+
+![postmanSync](/img/2023.2.3/postmanSync_en.png)
+
 
 ## Api key
 

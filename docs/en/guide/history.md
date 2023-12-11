@@ -44,16 +44,27 @@ and some plug-in versions are rendering components under specific systems (such 
 ::: tip Sync API to Postman
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
 
-To improve the data synchronized to postman, it is recommended to select `sync after api save` option in the postman config of the plugin
-then trigger the synchronization by save the api.
+To  make the data synchronised to Postman more complete, it is recommended to select the `sync after API save` option in the Postman config of the plugin
+then trigger the synchronisation by saving the API.
 
 More details please refer [Postman sync](./features/postmanSync.md)
+:::
+
+::: tip Project name drop-down box automatically switches
+When generating parameters for APIs under different modules, if auto domain name is enabled, the project name drop-down box will automatically switch
 :::
 
 :::info Environment refactoring
 Environment contains Current value and Initial value. Initial value can be shared by submitting config fine in `.fastRequest/config/fastRequestCurrentProjectEnvironment.json`.
 
 ![environment](/img/2023.2.3/environment_en.png)
+:::
+
+::: info Project domain name addition optimization
+
+The module name is automatically recognized as a drop-down box option, and you can also customize it.
+
+![projectName](/img/2023.2.3/projectName.png)
 :::
 
 ::: info Add @fastRequestParseIgnore support for ignore parse field
@@ -475,14 +486,14 @@ The clarity of the tool window icons has been optimised under the new UI.
 - <Badge text="Activation prompt optimization" type="info"/>
 - <Badge text="Reload api error in navigate when using Kotlin and Java in one project" type="danger"/>
 
-::: tip Add @fastRequestParseIgnore comment support for parse
+::: tip Add @parseIgnore comment support for parse
 
-The following code, the plugin will ignore parsing this field. Please use `@fastRequestParseIgnore`
+The following code, the plugin will ignore parsing this field. Please use `@parseIgnore`
 
 ```java
 /**
  * xxx description
- * @fastRequestParseIgnore
+ * @parseIgnore
  */
 private String someIgnoreField ;
 ```
