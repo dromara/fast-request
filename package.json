@@ -10,19 +10,18 @@
     "docs:clean-dev": "vuepress dev docs --no-cache",
     "packages:update": "pnpm dlx vp-update"
   },
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.11.0",
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.67",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.67",
-    "@vuepress/utils": "2.0.0-beta.67",
-    "chart.js": "^4.4.0",
-    "vue": "^3.3.7",
+    "@vuepress/client": "2.0.0-rc.0",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.0",
+    "@vuepress/utils": "2.0.0-rc.0",
+    "chart.js": "^4.4.1",
+    "vue": "^3.3.10",
     "vue-router": "^4.2.5",
-    "vuepress": "2.0.0-beta.67",
-    "vuepress-theme-hope": "2.0.0-beta.241"
+    "vuepress": "2.0.0-rc.0",
+    "vuepress-theme-hope": "2.0.0-rc.2"
   },
   "devDependencies": {
-    "prettier": "3.0.3",
-    "vuepress-plugin-sitemap2": "2.0.0-beta.244"
+    "prettier": "3.1.0"
   }
 }

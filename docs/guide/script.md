@@ -20,7 +20,7 @@ headerDepth: 4
 
 ## 内置变量
 
-::: danger 注意
+::: caution 注意
 
 开发者在自己编辑的脚本中,应该注意内置变量已被声明,而不是再去 new 一个 Request 或者 Response 对象,对象名是 request 或者 response,否则可能会造成不可预期的错误
 

@@ -22,13 +22,15 @@ export default defineUserConfig({
     ["script", { src: "/js/baidu.js" }],
     ["script", { src: "/js/gtag.js" }],
     [
-      'script', {}, `
+      "script",
+      {},
+      `
         (function() {
 	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
            		location.href = 'https://api-buddy.cn'
            }
         })();
-        `
+        `,
     ],
     [
     'script', {}, `
@@ -82,9 +84,6 @@ export default defineUserConfig({
         },
       },
     }),
-    sitemapPlugin({
-      hostname: "https://api-buddy.cn",
-    }),
   ],
 
   pagePatterns: ["**/*.md", "!*.snippet.md", "!.vuepress", "!node_modules"],
@@ -92,7 +91,7 @@ export default defineUserConfig({
   alias: {
     "@theme-hope/layouts/Layout": path.resolve(
       __dirname,
-      "./layouts/Layout.vue",
+      "./layouts/Layout.vue"
     ),
     // "@theme-hope/components/HomePage": path.resolve(
     //     __dirname,

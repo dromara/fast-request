@@ -4,7 +4,7 @@ This function allows developers to add a domain quickly.
 
 Version required: <Badge text="2023.1.1+"/>
 
-::: danger Suggestion
+::: caution Suggestion
 It is recommended to use project-level domain config，original config [<ColorIcon icon="tool" /> Setting manager](./settingManager.md) will be used as global config and will have a lower priority than project level config.
 
 The advantage of using project-level config is that when there are many projects, the drop-down box options will be reduced (excluding the config of other projects)

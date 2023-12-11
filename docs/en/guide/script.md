@@ -19,7 +19,7 @@ The groovy syntax is almost identical to Java.
 
 ## Built-in variable
 
-::: danger Notice
+::: caution Notice
 
 Developers should pay attention to the fact that the built-in variable has been declared in the script edited by themselves instead of creating a new Request or Response object. Otherwise, it may cause unexpected errors.
 
