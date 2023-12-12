@@ -11,14 +11,14 @@ icon: teamwork
 
 ## 特性
 
-<span class="badge" style="vertical-align: middle;background: #21D789">零部署</span><br/>
-<span class="badge" style="vertical-align: middle;background: #087CFA">私有化</span><br/>
-<span class="badge" style="vertical-align: middle;background: #FE2857">不限人数</span><br/>
-<span class="badge" style="vertical-align: middle;background: #FC801D">不限 API 数</span><br/>
-<span class="badge" style="vertical-align: middle;background: #6B57FF">不限项目数</span><br/>
-<span class="badge" style="vertical-align: middle;background: #3DEA62">不限功能</span><br/>
-<span class="badge" style="vertical-align: middle;background: #FDB60D">离线运转</span><br/>
-<span class="badge" style="vertical-align: middle;background: #21D789">安全</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #FE2857">零部署</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #087CFA">私有化</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #FE2857">不限人数</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #FC801D">不限 API 数</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #6B57FF">不限项目数</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #3DEA62">不限功能</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #FDB60D">离线运转</span><br/>
+<span class="vp-badge" style="vertical-align: middle;background: #21D789">安全</span><br/>
 
 ## 如何使用
 

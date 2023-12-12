@@ -3,7 +3,7 @@ title: 最新变化
 icon: changelog
 ---
 
-::: tip 公告
+::: important 公告
 
 插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金)，对比氪金版和免费有什么更强大的功能，只需要看更新日志>=2021.1.4+的，或者简单看一下以下的对比。
 
@@ -29,7 +29,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 目前发现[Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui)由于修改了一部分自带的UI组件,某些插件版本版本在某些系统(例如windows)下面渲染组件的时候存在性能问题,如果发现右键或者其他操作卡顿,则需要升级主题插件或者使用原生IDEA主题
 :::
 
-::: tip license抽奖回馈活动
+::: info license抽奖回馈活动
 点击查看[详情](activity.md#_20231205)
 :::
 
