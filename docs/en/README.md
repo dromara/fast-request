@@ -25,7 +25,7 @@ features:
   - title: Rich features
     icon: features
     details: Generate url and parameters、Script support、API export to postman、SearchEveryWhere support、send/download request、Store request...
-    link: /en/guide/features
+    link: /en/guide/features/
 
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
@@ -47,14 +47,12 @@ head:
 
 [![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA)
 
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg =80x80)](https://www.jetbrains.com)
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg =80x80)](https://www.jetbrains.com/idea)
-
 <div class="home-advantage">
 
 ## Advantage
 
 <iframe
+title="Advantage"
 :src="$withBase('/html/showside_en.html')"
 width="100%"
 height="520px"
@@ -72,56 +70,6 @@ topmargin="0"
 
 <!-- @include: @src/en/compare.snippet.md -->
 
-::: chart API tool comparison
-
-```json
-{
-  "type": "radar",
-  "data": {
-    "labels": [
-      "Usability",
-      "Swagger",
-      "Java",
-      "Kotlin",
-      "Pressure test",
-      "Integrations"
-    ],
-    "datasets": [
-      {
-        "label": "Fast Request",
-        "data": [95, 90, 90, 70, 40, 60],
-        "fill": true,
-        "backgroundColor": "rgba(0, 250, 154, 0.2)",
-        "borderColor": "rgb(0, 250, 154)",
-        "pointBackgroundColor": "rgb(0, 250, 154)",
-        "pointBorderColor": "#fff",
-        "pointHoverBackgroundColor": "#fff",
-        "pointHoverBorderColor": "rgb(0, 250, 154)"
-      },
-      {
-        "label": "Postman",
-        "data": [80, 80, 80, 50, 90, 100],
-        "fill": true,
-        "backgroundColor": "rgba(54, 162, 235, 0.2)",
-        "borderColor": "rgb(54, 162, 235)",
-        "pointBackgroundColor": "rgb(54, 162, 235)",
-        "pointBorderColor": "#fff",
-        "pointHoverBackgroundColor": "#fff",
-        "pointHoverBorderColor": "rgb(54, 162, 235)"
-      }
-    ]
-  },
-  "options": {
-    "elements": {
-      "line": {
-        "borderWidth": 3
-      }
-    }
-  }
-}
-```
-
-:::
 
 <!-- @include: @src/en/contact.snippet.md -->
 

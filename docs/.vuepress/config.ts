@@ -1,7 +1,6 @@
 import {getDirname, path} from "@vuepress/utils";
 import {defineUserConfig} from "vuepress";
 import {docsearchPlugin} from "@vuepress/plugin-docsearch";
-import {sitemapPlugin} from "vuepress-plugin-sitemap2";
 import theme from "./theme.js";
 
 const __dirname = getDirname(import.meta.url);
@@ -18,9 +17,9 @@ export default defineUserConfig({
         href: "/img/fastRequest.svg",
       },
     ],
-    ["script", { src: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.js" }],
-    ["script", { src: "/js/baidu.js" }],
-    ["script", { src: "/js/gtag.js" }],
+    ["script", { src: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.js","async":true }],
+    ["script", { src: "/js/baidu.js" ,"async":true}],
+    ["script", { src: "/js/gtag.js" ,"async":true}],
     [
       "script",
       {},

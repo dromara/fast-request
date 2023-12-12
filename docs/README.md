@@ -3,7 +3,7 @@ icon: restfulFastRequest
 home: true
 title: Api Buddy
 heroFullScreen: true
-heroImageDark: /img/logoLight1.gif
+#heroImageDark: /img/logoLight1.gif
 heroText: Fast Request
 tagline: 为简化调试API而生
 actions:
@@ -25,7 +25,7 @@ features:
   - title: 功能丰富
     icon: features
     details: 一键生成 URL 和参数、脚本、API 导出到 Postman、SearchEveryWhere 搜索、发送 API 请求、下载文件、存储历史请求，各种功能一应俱全
-    link: /guide/features
+    link: /guide/features/
 
   - title: 轻量、界面友好
     icon: code-box-fill
@@ -54,9 +54,6 @@ head:
 
 [![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988)
 
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg =80x80)](https://www.jetbrains.com)
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA_icon.svg =80x80)](https://www.jetbrains.com/idea)
-
 ## 🌈 赞助商
 
 1. [**赞助可以为您带来什么(必看)**](./guide/sponsor.md#优势)
@@ -77,6 +74,7 @@ head:
 ## 优势
 
 <iframe
+  title="优势"
   :src="$withBase('/html/showside.html')"
   width="100%"
   height="550px"
@@ -100,49 +98,6 @@ head:
 
 设计师森阳`sssenyang@qq.com` logo设计
 
-::: chart API 工具对比
-
-```json
-{
-  "type": "radar",
-  "data": {
-    "labels": ["易用性", "Swagger", "Java", "Kotlin", "压测", "集成"],
-    "datasets": [
-      {
-        "label": "Fast Request",
-        "data": [95, 90, 90, 70, 40, 60],
-        "fill": true,
-        "backgroundColor": "rgba(0, 250, 154, 0.2)",
-        "borderColor": "rgb(0, 250, 154)",
-        "pointBackgroundColor": "rgb(0, 250, 154)",
-        "pointBorderColor": "#fff",
-        "pointHoverBackgroundColor": "#fff",
-        "pointHoverBorderColor": "rgb(0, 250, 154)"
-      },
-      {
-        "label": "Postman",
-        "data": [80, 80, 80, 50, 90, 100],
-        "fill": true,
-        "backgroundColor": "rgba(54, 162, 235, 0.2)",
-        "borderColor": "rgb(54, 162, 235)",
-        "pointBackgroundColor": "rgb(54, 162, 235)",
-        "pointBorderColor": "#fff",
-        "pointHoverBackgroundColor": "#fff",
-        "pointHoverBorderColor": "rgb(54, 162, 235)"
-      }
-    ]
-  },
-  "options": {
-    "elements": {
-      "line": {
-        "borderWidth": 3
-      }
-    }
-  }
-}
-```
-
-:::
 
 <!-- @include: @src/contact.snippet.md -->
 

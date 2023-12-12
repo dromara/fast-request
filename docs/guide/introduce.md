@@ -27,6 +27,50 @@ JAX-RS
 Kotlin Spring体系框架
 ```
 
+::: chart API 工具对比
+
+```json
+{
+  "type": "radar",
+  "data": {
+    "labels": ["易用性", "Swagger", "Java", "Kotlin", "压测", "集成"],
+    "datasets": [
+      {
+        "label": "Fast Request",
+        "data": [95, 90, 90, 70, 40, 60],
+        "fill": true,
+        "backgroundColor": "rgba(0, 250, 154, 0.2)",
+        "borderColor": "rgb(0, 250, 154)",
+        "pointBackgroundColor": "rgb(0, 250, 154)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(0, 250, 154)"
+      },
+      {
+        "label": "Postman",
+        "data": [80, 80, 80, 50, 90, 100],
+        "fill": true,
+        "backgroundColor": "rgba(54, 162, 235, 0.2)",
+        "borderColor": "rgb(54, 162, 235)",
+        "pointBackgroundColor": "rgb(54, 162, 235)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(54, 162, 235)"
+      }
+    ]
+  },
+  "options": {
+    "elements": {
+      "line": {
+        "borderWidth": 3
+      }
+    }
+  }
+}
+```
+
+:::
+
 ## 建议
 
 如果有新版本出来，请尽快更新到最新的版本。(插件往往在升级过程中会加入新的功能或者修复你未发现的 bug)

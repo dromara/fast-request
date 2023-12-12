@@ -50,7 +50,7 @@
 <stop offset="1" stop-color="#07C3F2"/>
 </linearGradient>
 <linearGradient id="paint2_linear_84_553"  x1="264.5" y1="972.5" x2="804" y2="-23.5002"  gradientUnits="userSpaceOnUse">
-    <stop stop-color="#FCF84A"/>
+    <stop stop-color="#FCBF4A"/>
     <stop offset="0.547" stop-color="#81E376"/>
     <stop offset="0.733571" stop-color="#5CDD80"/>
     <stop offset="1" stop-color="#07C3F2"/>
@@ -59,7 +59,7 @@
 <stop stop-color="#FB1E58"/>
     <stop offset="0.369" stop-color="#FC1E58"/>
 <stop offset="0.569" stop-color="#FC378C"/>
-<stop offset="0.95" stop-color="#FCF84A"/>
+<stop offset="0.95" stop-color="#FCBF4A"/>
 </linearGradient>
 
 </defs>
