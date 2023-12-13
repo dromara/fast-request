@@ -30,6 +30,7 @@ features:
   - title: 轻量、界面友好
     icon: code-box-fill
     details: 轻量，仅 16M 大小，并且提供一个非常直观的界面，好操作易上手
+    link: /guide/install.html
 
 head:
   - - meta
@@ -53,7 +54,7 @@ head:
 [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666)
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request) [![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
 
-<div style="margin-top: 80px;"></div>
+<div style="margin-top: 20px;"></div>
 
 ## 🌈 赞助商
 
@@ -70,21 +71,23 @@ head:
   style="max-width:400px"
 />
 
-<div class="home-advantage">
-
 ## 优势
 
-<iframe
-  title="优势"
-  :src="$withBase('/html/showside.html')"
-  width="100%"
-  height="550px"
-  frameborder="0"
-  scrolling="No"
-  leftmargin="0"
-  topmargin="0"
-/>
-<a class="advantage-more" href="guide/features">更多功能</a>
+<div class="home-advantage">
+  <div style="border-radius: 10px;overflow: hidden">
+    <iframe
+      title="优势"
+      :src="$withBase('/html/showside.html')"
+      width="100%"
+      height="515px"
+      frameborder="0"
+      scrolling="No"
+      leftmargin="0"
+      topmargin="0"
+    />
+  </div>
+  <div style="margin-top: 20px"></div>
+  <a class="advantage-more" href="guide/features">更多功能</a>
 </div>
 
 ## 🥇 功能

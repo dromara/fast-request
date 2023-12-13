@@ -30,6 +30,7 @@ features:
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
     details: Only 16 MB size. Plugin provides a very intuitive interface
+    link: /en/guide/install.html
 
 head:
   - - meta
@@ -47,25 +48,27 @@ head:
 [![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
  [![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
 
-<div style="margin-top: 80px;"></div>
+<div style="margin-top: 20px;"></div>
 
-<div class="home-advantage">
 
 ## Advantage
 
-<iframe
-title="Advantage"
-:src="$withBase('/html/showside_en.html')"
-width="100%"
-height="520px"
-frameborder="0"
-scrolling="No"
-leftmargin="0"
-topmargin="0"
-/>
+<div class="home-advantage">
+ <div style="border-radius: 10px;overflow: hidden">
+  <iframe
+  title="Advantage"
+  :src="$withBase('/html/showside_en.html')"
+  width="100%"
+  height="525px"
+  frameborder="0"
+  scrolling="No"
+  leftmargin="0"
+  topmargin="0"
+  />
+ </div>
 
-<a class="advantage-more" href="en/guide/features">More features</a>
-
+ <div style="margin-top: 20px"></div>
+ <a class="advantage-more" href="en/guide/features">More features</a>
 </div>
 
 ## 🥇 Features
