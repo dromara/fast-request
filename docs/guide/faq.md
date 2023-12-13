@@ -12,6 +12,15 @@ icon: faq
 
 [[toc]]
 
+## S: 发送按钮被禁用,但是没有任何提示
+
+需要手动开启通知消息。如果通知消息不开启,很多提示都不能被展现,所以需要配置 IDEA 的消息通知设置。其他情况类同处理。
+
+需要前往 `Setting-> Appearance & Behavior->Nofications` 选中 `Display ballon notifications`和`Enable system notifications`. 如果`Don't ask again nofications`勾选了FastRequest,则需要移除条目。
+
+![enableNotifications](/img/faq/enableNotifications.png)
+
+
 ## S: 快捷添加域名
 
 请参考 [<ColorIcon icon="domainConfig" /> 项目级别域名配置](./features/projectLevelDomainConfig.md)

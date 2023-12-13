@@ -68,7 +68,7 @@ head:
  </div>
 
  <div style="margin-top: 20px"></div>
- <a class="advantage-more" href="en/guide/features">More features</a>
+ <a class="advantage-more" href="en/guide/features/">More features</a>
 </div>
 
 ## 🥇 Features

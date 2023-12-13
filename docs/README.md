@@ -87,7 +87,7 @@ head:
     />
   </div>
   <div style="margin-top: 20px"></div>
-  <a class="advantage-more" href="guide/features">更多功能</a>
+  <a class="advantage-more" href="guide/features/">更多功能</a>
 </div>
 
 ## 🥇 功能

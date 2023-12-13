@@ -12,6 +12,15 @@ icon: faq
 
 [[toc]]
 
+## S: Send button is disabled, but there is no notification message
+
+You need to manually turn on the notification message. If notification messages are not turned on, many messages cannot be displayed, so IDEA's message notification settings need to be configured. Other situations are handled similarly.
+
+Go to `Setting-> Appearance & Behavior->Nofications` , check `Display ballon notifications` and `Enable system notifications`. If  Fast Request is checked in `Don't ask again nofications`, this item needs to be removed.
+
+![enableNotifications](/img/faq/enableNotifications.png)
+
+
 ## S: Quickly add domain
 
 Please refer [<ColorIcon icon="domainConfig" /> Project-level domain config](./features/projectLevelDomainConfig.md)
