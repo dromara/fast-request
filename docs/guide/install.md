@@ -3,7 +3,7 @@ icon: install-fill
 title: 安装
 ---
 
-::: caution
+::: important
 请不要安装其他类似插件，引起冲突或者数据丢失概不负责！
 :::
 

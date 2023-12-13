@@ -19,7 +19,7 @@ provides a friendly, easy-to-understand and intuitive interface, which makes it 
 debug the API. At the same time, various types of parameters also provide different customization methods to make them
 more flexible. And it integrates additional features such as search, Postman integration, Swagger support and so on.
 
-::: tip PURPOSE  
+::: important PURPOSE  
 The purpose of the plugin is to simplify development and improve efficiency. Our vision is to become the best partner of IDEA, just like Contra's 1P, 2P, base-friend collocation, and double the efficiency.
 :::
 
