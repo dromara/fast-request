@@ -2,12 +2,12 @@
 home: true
 icon: restfulFastRequest
 title: Api Buddy
-heroImageDark: /img/logoLight1.gif
+heroImageDark: /img/fastRequest.svg
 heroText: Fast Request
 heroFullScreen: true
 tagline: Born to simplify debugging APIs
 actions:
-  - text: 🚀 Get Started
+  - text: Get Started
     link: /en/guide/getstarted/start
     type: primary
 

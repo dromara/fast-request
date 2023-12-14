@@ -34,6 +34,17 @@ h2 {
     "BEVL" 100;
 }
 
+.vp-hero-action.primary:hover{
+    background-color: #264D67;
+    color: #fff;
+}
+.vp-hero-action.primary{
+    font-family: alimamaYuanMainTitle, sans-serif;
+    margin-top: 30px;
+    border-color: #27282C;
+    background-color: #27282C;
+    color: #fff;
+}
 .svg-icon {
   width: 1em;
   height: 1em;
@@ -48,7 +59,7 @@ h2 {
   background-repeat: no-repeat;
 
   @media (min-width: 959px) {
-    background: url("/img/bg2.svg") no-repeat calc(50% + 400px) 0;
+    background: url("/img/bg3.svg") no-repeat calc(50% + 420px) -90px;
   }
 
   h2 {
@@ -59,7 +70,6 @@ h2 {
 .vp-hero-info {
   display: block;
   text-align: center;
-  margin-top: 280px;
 
   .vp-hero-image {
     max-height: 150px;

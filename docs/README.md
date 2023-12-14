@@ -3,11 +3,11 @@ icon: restfulFastRequest
 home: true
 title: Api Buddy
 heroFullScreen: true
-heroImageDark: /img/logoLight1.gif
+heroImageDark: /img/fastRequest.svg
 heroText: Fast Request
 tagline: 为简化调试API而生
 actions:
-  - text: 🚀 快速上手
+  - text: 快速上手
     link: /guide/getstarted/start.html
     type: primary
 

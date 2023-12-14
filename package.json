@@ -10,7 +10,7 @@
     "docs:clean-dev": "vuepress dev docs --no-cache",
     "packages:update": "pnpm dlx vp-update"
   },
-  "packageManager": "pnpm@8.11.0",
+  "packageManager": "pnpm@8.5.1",
   "dependencies": {
     "@vuepress/client": "2.0.0-rc.0",
     "@vuepress/plugin-docsearch": "2.0.0-rc.0",
