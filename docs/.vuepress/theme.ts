@@ -50,7 +50,7 @@ export default hopeTheme(
       },
 
       components: {
-        components: ["Badge", "BiliBili", "SiteInfo"],
+        components: ["Badge", "BiliBili", "SiteInfo","VPCard"],
         rootComponents: {
           addThis: "ra-617a48e0d1826cc4",
           notice: [

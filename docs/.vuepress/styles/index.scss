@@ -35,14 +35,14 @@ h2 {
 }
 
 .vp-hero-action.primary:hover{
-    background-color: #264D67;
+    background-color: #303033;
     color: #fff;
 }
 .vp-hero-action.primary{
     font-family: alimamaYuanMainTitle, sans-serif;
     margin-top: 30px;
-    border-color: #27282C;
-    background-color: #27282C;
+    border-color: #0B1117;
+    background-color: #0B1117;
     color: #fff;
 }
 .svg-icon {
@@ -103,7 +103,7 @@ h2 {
 
 .vp-feature-item {
   &:hover {
-    background-color: transparent;
+    background-color: #30303360;
   }
 
   .vp-feature-title {
