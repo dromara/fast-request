@@ -2,6 +2,8 @@ import {getDirname, path} from "@vuepress/utils";
 import {defineUserConfig} from "vuepress";
 import {docsearchPlugin} from "@vuepress/plugin-docsearch";
 import theme from "./theme.js";
+import {componentsPlugin} from "vuepress-plugin-components";
+
 
 const __dirname = getDirname(import.meta.url);
 
@@ -82,6 +84,9 @@ export default defineUserConfig({
           },
         },
       },
+    }),
+    componentsPlugin({
+      components:["VPCard"]
     }),
   ],
 
