@@ -40,6 +40,7 @@ and some plug-in versions are rendering components under specific systems (such 
 - <Badge text="Add @fastRequestParseIgnore support for ignore parse field" type="info"/>
 - <Badge text="SearchEveryWhere compatible idea2023.3" type="danger"/>
 - <Badge text="Error when passing non-json in body param" type="danger"/>
+- <Badge text="curl import parsing\' error" type="danger"/>
 
 ::: tip Sync API to Postman
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.

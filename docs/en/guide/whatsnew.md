@@ -37,6 +37,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Add @fastRequestParseIgnore support for ignore parse field" type="info"/>
 - <Badge text="SearchEveryWhere compatible idea2023.3" type="danger"/>
 - <Badge text="Error when passing non-json in body param" type="danger"/>
+- <Badge text="curl import parsing\' error" type="danger"/>
 
 ## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>
 

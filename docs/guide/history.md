@@ -43,6 +43,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="忽略字段使用 @fastRequestParseIgnore" type="info"/>
 - <Badge text="SearchEveryWhere 兼容 idea2023.3" type="danger"/>
 - <Badge text="body中传非json报错" type="danger"/>
+- <Badge text="curl导入解析\'错误" type="danger"/>
 
 
 
