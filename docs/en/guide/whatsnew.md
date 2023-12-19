@@ -27,7 +27,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="developing" color="LigntPink"/>
+## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
 - <Badge text="Project name drop-down box automatically switches" type="tip"/>  
@@ -39,7 +39,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Error when passing non-json in body param" type="danger"/>
 - <Badge text="curl import parsing\' error" type="danger"/>
 
-## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntGreen"/>
+## 2023.2.2 <Badge text="Free trial" type="tip"/> 
 
 - <Badge text="Markdown doc template config" type="tip"/>
 - <Badge text="JSON5 support" type="tip"/>

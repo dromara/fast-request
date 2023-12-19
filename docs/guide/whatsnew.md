@@ -27,7 +27,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="开发中" color="LigntPink"/>
+## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="最新版" color="LigntPink"/>
 
 - <Badge text="API同步至Postman" type="tip"/>
 - <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>  
@@ -39,7 +39,7 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 - <Badge text="body中传非json报错" type="danger"/>
 - <Badge text="curl导入解析\'错误" type="danger"/>
 
-## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="最新版" color="LigntGreen"/>
+## 2023.2.2 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Markdown文档模板配置" type="tip"/>
 - <Badge text="JSON5支持" type="tip"/>
