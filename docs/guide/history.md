@@ -34,6 +34,9 @@ feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 :::
 
 ## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+- <Badge text="JSON5 支持错误" type="danger"/>
+
+## 2023.2.3 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="API同步至Postman" type="tip"/>
 - <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>  

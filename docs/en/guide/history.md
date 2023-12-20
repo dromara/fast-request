@@ -30,7 +30,10 @@ At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/p
 and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
 :::
 
-## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+- <Badge text="JSON5 support error" type="danger"/>
+
+## 2023.2.3 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
 - <Badge text="Project name drop-down box automatically switches" type="tip"/>  

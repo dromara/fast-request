@@ -27,6 +27,9 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+- <Badge text="JSON5 support error" type="danger"/>
+
 ## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
