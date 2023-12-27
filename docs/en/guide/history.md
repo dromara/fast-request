@@ -20,7 +20,9 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ---
 
-feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
+important: <Badge text="Important function" color="orange"/> 
+
+feat: <Badge text="New function" type="tip"/>  perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
@@ -30,7 +32,14 @@ At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/p
 and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
 :::
 
-## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+## 2023.2.4 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
+- <Badge text="SearchEveryWhere support classname search" color="orange"/>
+- <Badge text="Do not generate .fastRequest directory if plugin not used" color="orange"/>
+- <Badge text="ignore field name parse support" type="tip"/>
+- <Badge text="Content-Disposition support optimization" type="info"/>
+
+
+## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />
 - <Badge text="JSON5 support error" type="danger"/>
 
 ## 2023.2.3 <Badge text="Free trial" type="tip"/>

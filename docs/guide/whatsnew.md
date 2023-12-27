@@ -20,19 +20,26 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 ---
 
-feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
+important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="LigntPink"/>
+## 2023.2.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="pink"/>
+- <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
+- <Badge text="只有操作插件才生成.fastRequest目录" color="orange"/>
+- <Badge text="忽略字段名解析支持" type="tip"/>
+- <Badge text="Content-Disposition支持优化" type="info"/>
+
+
+## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" />
 - <Badge text="JSON5 支持错误" type="danger"/>
 
 ## 2023.2.3 <Badge text="Free trial" type="tip"/>
 
-- <Badge text="API同步至Postman" type="tip"/>
+- <Badge text="API同步至Postman" color="orange"/>
 - <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>  
 - <Badge text="Environment重构" type="info"/>
 - <Badge text="项目域名添加优化" type="info"/>
