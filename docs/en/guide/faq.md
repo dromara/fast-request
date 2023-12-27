@@ -20,6 +20,15 @@ Go to `Setting-> Appearance & Behavior->Nofications` , check `Display ballon not
 
 ![enableNotifications](/img/faq/enableNotifications.png)
 
+## S: Timeout setting
+
+Default: 60 s
+
+Click the plug-in settings button **Manage Configuration** and set the values of Connect Timeout and Read Timeout.
+
+![manageConfig](/img/manageConfig_en.png)
+
+![timeout](/img/faq/timeout_en.png)
 
 ## S: Quickly add domain
 

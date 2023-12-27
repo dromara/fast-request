@@ -20,6 +20,15 @@ icon: faq
 
 ![enableNotifications](/img/faq/enableNotifications.png)
 
+## S: 超时时间设置
+
+默认: 60 秒
+
+点击插件设置按钮**管理配置**,设置ConnectTimeout和ReadTimeout的值。
+
+![manageConfig](/img/manageConfig.png)
+
+![timeout](/img/faq/timeout.png)
 
 ## S: 快捷添加域名
 
