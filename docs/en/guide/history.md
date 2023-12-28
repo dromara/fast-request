@@ -35,7 +35,8 @@ and some plug-in versions are rendering components under specific systems (such 
 ## 2023.2.4 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Do not generate .fastRequest directory if plugin not used" color="orange"/>
-- <Badge text="ignore field name parse support" type="tip"/>
+- <Badge text="Ignore field name parse support" type="tip"/>
+- <Badge text="SearchEveryWhere performance optimization" type="info"/>  
 - <Badge text="Content-Disposition support optimization" type="info"/>
 
 

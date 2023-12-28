@@ -9,7 +9,7 @@ icon: changelog
 
 [**收费版 VS 免费版->**](./versionCompare.md)
 
-购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看==群公告==
+购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**
 
 Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
@@ -37,6 +37,7 @@ important: <Badge text="重要功能" color="orange"/><span>&nbsp;&nbsp;&nbsp;&n
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text="只有操作插件才生成.fastRequest目录" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
+- <Badge text="SearchEveryWhere性能优化" type="info"/>  
 - <Badge text="Content-Disposition支持优化" type="info"/>
 
 
