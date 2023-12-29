@@ -40,6 +40,36 @@ and some plug-in versions are rendering components under specific systems (such 
 - <Badge text="Content-Disposition support optimization" type="info"/>
 
 
+::: tip SearchEveryWhere support classname search
+Support enter the class name where the Url is located to search for all APIs under this class
+:::
+
+::: tip Do not generate .fastRequest directory if plugin not used
+When Project is opened by default, the .fastRequest directory will no longer be generated. Only the operation plugin will generate it.
+:::
+
+::: tip Ignore field name parse support
+Only need to add field names in the configuration to ignore target fields in the entity class.
+
+:::
+
+::: info SearchEveryWhere performance optimization
+The SearchEveryWhere search logic has been optimized to greatly improve the search performance of large projects. 
+
+We tested a project with 7000 APIs and the search response was very fast
+:::
+
+::: info Content-Disposition support optimization
+
+Content-Disposition supports the following 2 formats, and also supports file name transcoding.
+
+```
+Content-Disposition:attachment; filename*=UTF-8''fastRequest%20.txt
+Content-Disposition:attachment; filename=fastRequest.txt
+```
+
+:::
+
 ## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />
 - <Badge text="JSON5 support error" type="danger"/>
 

@@ -40,6 +40,33 @@ important: <Badge text="重要功能" color="orange"/><span>&nbsp;&nbsp;&nbsp;&n
 - <Badge text="SearchEveryWhere性能优化" type="info"/>  
 - <Badge text="Content-Disposition支持优化" type="info"/>
 
+::: tip SearchEveryWhere 支持类名搜索
+输入 Url 所在的类名，即可搜索该类下面的所有 API
+:::
+
+::: tip 只有操作插件才生成.fastRequest目录
+默认打开 Project 不再生成.fastRequest目录，只有操作插件才生成
+:::
+
+::: tip 忽略字段名解析支持
+只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
+:::
+
+::: info SearchEveryWhere性能优化
+优化了SearchEveryWhere搜索逻辑，大大提生大项目的搜索性能。我们测试了拥有 7000个 API 的项目，搜索响应非常快
+:::
+
+::: info Content-Disposition支持优化
+
+文件下载支持针对一下 2 种格式的支持，同时支持文件名转码
+
+```
+Content-Disposition:attachment; filename*=UTF-8''fastRequest%20.txt
+Content-Disposition:attachment; filename=fastRequest.txt
+```
+
+:::
+
 
 ## 2023.2.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" />
 - <Badge text="JSON5 支持错误" type="danger"/>
