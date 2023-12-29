@@ -20,9 +20,9 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ---
 
-important: <Badge text="Important function" color="orange"/> 
+important: <Badge text="Important function" color="orange"/>
 
-feat: <Badge text="New function" type="tip"/>  perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
+feat: <Badge text="New function" type="tip"/> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
 Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
 :::
@@ -33,28 +33,31 @@ and some plug-in versions are rendering components under specific systems (such 
 :::
 
 ## 2023.2.4 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
+
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Do not generate .fastRequest directory if plugin not used" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
-- <Badge text="SearchEveryWhere performance optimization" type="info"/>  
+- <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
 
-
 ::: tip SearchEveryWhere support classname search
-Support enter the class name where the Url is located to search for all APIs under this class
+Support enters the class name where the Url is located to search for all APIs under this class.
+
+![searchEveryWhere](/img/2023.2.4/searchEveryWhere_en.png)
 :::
 
-::: tip Do not generate .fastRequest directory if plugin not used
+::: tip Do not generate .fastRequest directory if plugin is not used.
 When Project is opened by default, the .fastRequest directory will no longer be generated. Only the operation plugin will generate it.
 :::
 
 ::: tip Ignore field name parse support
 Only need to add field names in the configuration to ignore target fields in the entity class.
 
+![ignoreFiled](/img/2023.2.4/ignoreFiled_en.png)
 :::
 
 ::: info SearchEveryWhere performance optimization
-The SearchEveryWhere search logic has been optimized to greatly improve the search performance of large projects. 
+The SearchEveryWhere search logic has been optimized to greatly improve the search performance of large projects.
 
 We tested a project with 7000 APIs and the search response was very fast
 :::
@@ -71,12 +74,13 @@ Content-Disposition:attachment; filename=fastRequest.txt
 :::
 
 ## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />
+
 - <Badge text="JSON5 support error" type="danger"/>
 
 ## 2023.2.3 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
-- <Badge text="Project name drop-down box automatically switches" type="tip"/>  
+- <Badge text="Project name drop-down box automatically switches" type="tip"/>
 - <Badge text="Environment refactoring" type="info"/>
 - <Badge text="Project domain name addition optimization" type="info"/>
 - <Badge text="Change API document sync trigger to API is saved" type="info"/>
@@ -88,7 +92,7 @@ Content-Disposition:attachment; filename=fastRequest.txt
 ::: tip Sync API to Postman
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
 
-To  make the data synchronised to Postman more complete, it is recommended to select the `sync after API save` option in the Postman config of the plugin
+To make the data synchronised to Postman more complete, it is recommended to select the `sync after API save` option in the Postman config of the plugin
 then trigger the synchronisation by saving the API.
 
 More details please refer [Postman sync](./features/postmanSync.md)

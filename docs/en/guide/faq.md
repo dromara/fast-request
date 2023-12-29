@@ -16,7 +16,7 @@ icon: faq
 
 You need to manually turn on the notification message. If notification messages are not turned on, many messages cannot be displayed, so IDEA's message notification settings need to be configured. Other situations are handled similarly.
 
-Go to `Setting-> Appearance & Behavior->Nofications` , check `Display ballon notifications` and `Enable system notifications`. If  Fast Request is checked in `Don't ask again nofications`, this item needs to be removed.
+Go to `Setting-> Appearance & Behavior->Nofications` , check `Display ballon notifications` and `Enable system notifications`. If Fast Request is checked in `Don't ask again nofications`, this item needs to be removed.
 
 ![enableNotifications](/img/faq/enableNotifications.png)
 
@@ -165,6 +165,7 @@ Click **help->Edit Custom Vm Options...**,add the following config in **idea.vmo
 ```
 -Dsun.net.http.allowRestrictedHeaders=true
 ```
+
 ## Q: Response return Unexpected end of file from server
 
 ```
@@ -175,7 +176,6 @@ Click **help->Edit Custom Vm Options...**,add the following config in **idea.vmo
 ```
 
 How to set IDEA proxy: `Setting-> Appearance & Behavior->System Settings->HTTP Proxy`
-
 
 ## Q: Action buttons are not visible
 

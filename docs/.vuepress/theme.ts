@@ -1,7 +1,7 @@
-import {getDirname, path} from "@vuepress/utils";
-import {hopeTheme} from "vuepress-theme-hope";
-import {enNavbar, zhNavbar} from "./navbar.js";
-import {enSidebar, zhSidebar} from "./sidebar.js";
+import { getDirname, path } from "@vuepress/utils";
+import { hopeTheme } from "vuepress-theme-hope";
+import { enNavbar, zhNavbar } from "./navbar.js";
+import { enSidebar, zhSidebar } from "./sidebar.js";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -50,7 +50,7 @@ export default hopeTheme(
       },
 
       components: {
-        components: ["Badge", "BiliBili", "SiteInfo","VPCard"],
+        components: ["Badge", "BiliBili", "SiteInfo", "VPCard"],
         rootComponents: {
           addThis: "ra-617a48e0d1826cc4",
           notice: [
@@ -108,5 +108,5 @@ export default hopeTheme(
       },
     },
   },
-  { custom: true }
+  { custom: true },
 );

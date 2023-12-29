@@ -34,14 +34,18 @@ important: <Badge text="重要功能" color="orange"/><span>&nbsp;&nbsp;&nbsp;&n
 :::
 
 ## 2023.2.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="pink"/>
+
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text="只有操作插件才生成.fastRequest目录" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
-- <Badge text="SearchEveryWhere性能优化" type="info"/>  
+- <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Content-Disposition支持优化" type="info"/>
 
 ::: tip SearchEveryWhere 支持类名搜索
 输入 Url 所在的类名，即可搜索该类下面的所有 API
+
+![searchEveryWhere](/img/2023.2.4/searchEveryWhere.png)
+
 :::
 
 ::: tip 只有操作插件才生成.fastRequest目录
@@ -50,6 +54,8 @@ important: <Badge text="重要功能" color="orange"/><span>&nbsp;&nbsp;&nbsp;&n
 
 ::: tip 忽略字段名解析支持
 只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
+
+![ignoreFiled](/img/2023.2.4/ignoreFiled.png)
 :::
 
 ::: info SearchEveryWhere性能优化
@@ -67,14 +73,14 @@ Content-Disposition:attachment; filename=fastRequest.txt
 
 :::
 
-
 ## 2023.2.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" />
+
 - <Badge text="JSON5 支持错误" type="danger"/>
 
 ## 2023.2.3 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="API同步至Postman" color="orange"/>
-- <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>  
+- <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>
 - <Badge text="Environment重构" type="info"/>
 - <Badge text="项目域名添加优化" type="info"/>
 - <Badge text="api文档同步触发在api保存的时候" type="info"/>
@@ -82,8 +88,6 @@ Content-Disposition:attachment; filename=fastRequest.txt
 - <Badge text="SearchEveryWhere 兼容 idea2023.3" type="danger"/>
 - <Badge text="body中传非json报错" type="danger"/>
 - <Badge text="curl导入解析\'错误" type="danger"/>
-
-
 
 ::: tip API同步至Postman
 仅需配置Postman的token和对应workspace的ID即可将API云上传到Postman.享受fast request不支持的功能.
@@ -112,7 +116,6 @@ Initial value可以通过提交 `.fastRequest/config/fastRequestCurrentProjectEn
 
 ![projectName](/img/2023.2.3/projectName.png)
 :::
-
 
 ::: info 忽略字段使用@fastRequestParseIgnore
 针对实体类字段忽略解析,可以在注释中添加`@fastRequestParseIgnore`来实现,原来的注解`@parseIgnore`依然适用

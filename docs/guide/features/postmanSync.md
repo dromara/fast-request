@@ -11,7 +11,6 @@
 
 ![postmanSync](/img/2023.2.3/postmanSync.png)
 
-
 ## Api key
 
 Api key 用于使用 Postman 在线 API 执行一些手工行为.例如**创建Collection**、**创建目录**、**创建 Request** 等行为.

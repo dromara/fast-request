@@ -1,6 +1,6 @@
-import {getDirname, path} from "@vuepress/utils";
-import {defineUserConfig} from "vuepress";
-import {docsearchPlugin} from "@vuepress/plugin-docsearch";
+import { getDirname, path } from "@vuepress/utils";
+import { defineUserConfig } from "vuepress";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 import theme from "./theme.js";
 
 const __dirname = getDirname(import.meta.url);
@@ -8,7 +8,7 @@ const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   title: "Fast Request",
   description: "Intellij Restful Fast Request",
-  shouldPrefetch:false,
+  shouldPrefetch: false,
   head: [
     [
       "link",
@@ -17,9 +17,12 @@ export default defineUserConfig({
         href: "/img/fastRequest.svg",
       },
     ],
-    ["script", { src: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.js","async":true }],
+    [
+      "script",
+      { src: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.js", async: true },
+    ],
     // ["script", { src: "/js/baidu.js" ,"async":true}],
-    ["script", { src: "/js/gtag.js" ,"async":true}],
+    ["script", { src: "/js/gtag.js", async: true }],
     [
       "script",
       {},
@@ -32,13 +35,15 @@ export default defineUserConfig({
         `,
     ],
     [
-    'script', {}, `
+      "script",
+      {},
+      `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-Y8G30ZWCYE');
-    `
-    ]
+    `,
+    ],
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],
 
@@ -90,7 +95,7 @@ export default defineUserConfig({
   alias: {
     "@theme-hope/layouts/Layout": path.resolve(
       __dirname,
-      "./layouts/Layout.vue"
+      "./layouts/Layout.vue",
     ),
     // "@theme-hope/components/HomePage": path.resolve(
     //     __dirname,

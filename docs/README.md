@@ -102,7 +102,6 @@ head:
 
 设计师森阳`sssenyang@qq.com` logo设计
 
-
 <!-- @include: @src/contact.snippet.md -->
 
 [plugin]: https://plugins.jetbrains.com/plugin/16988
