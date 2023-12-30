@@ -1,26 +1,21 @@
-<template>
-  <div
-    :class="`wwads-cn wwads-${mode} page-wwads-${content}`"
-    data-id="274"
-  ></div>
-</template>
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  props: {
-    mode: {
-      type: String,
-      default: "horizontal",
-    },
-    content: {
-      type: String,
-      default: "",
-    },
+<script setup lang="ts">
+defineProps({
+  mode: {
+    type: String,
+    default: "horizontal",
+  },
+  content: {
+    type: String,
+    default: "",
   },
 });
 </script>
-<style>
+
+<template>
+  <div :class="`wwads-cn wwads-${mode} page-wwads-${content}`" data-id="274" />
+</template>
+
+<style lang="scss">
 @use "vuepress-shared/styles/wrapper";
 
 .page-wwads-content {

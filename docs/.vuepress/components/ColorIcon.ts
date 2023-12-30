@@ -4,5 +4,5 @@ export const ColorIcon: FunctionalComponent<{ icon: string }> = ({ icon }) =>
   h(
     "svg",
     { class: "icon svg-icon", "aria-hidden": "true" },
-    h("use", { "xlink:href": `#icon-${icon}` }),
+    h("use", { "xlink:href": `#icon-${icon}` })
   );
