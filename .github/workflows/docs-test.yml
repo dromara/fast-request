@@ -22,7 +22,7 @@ jobs:
           cache: pnpm
 
       - name: Install deps
-        run: pnpm install --forzen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build docs
         run: pnpm docs:build
