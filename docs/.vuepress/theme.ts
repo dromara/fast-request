@@ -55,33 +55,33 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2023.2.3推出",
+              title: "将在2023.2.4推出",
               content:
-                '<ul><li><a href="https://api-buddy.cn/guide/activity.html#_20231205">B站抽奖赠送插件license</a></li><li>API同步至Postman</li><li>Environment重构</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li>SearchEveryWhere支持类名搜索</li><li>忽略字段名解析支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2023-2-3",
+                  link: "/guide/history.html#_2023-2-4",
                   type: "primary",
                 },
               ],
               showOnce: false,
-              key: "2023.2.3-",
+              key: "2023.2.4",
             },
             {
               path: "/en",
-              title: "Coming in <b>2023.2.3</b>",
+              title: "Coming in <b>2023.2.4</b>",
               content:
-                '<ul><li>Sync API to Postman</li><li>Environment refactoring</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+                '<ul><li>SearchEveryWhere support classname search</li><li>Ignore field name parse support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
-                  link: "/en/guide/history.html#_2023-2-3",
+                  link: "/en/guide/history.html#_2023-2-4",
                   type: "primary",
                 },
               ],
               showOnce: true,
-              key: "2023.2.3",
+              key: "2023.2.4",
             },
           ],
         },
