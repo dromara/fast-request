@@ -52,7 +52,6 @@ export default hopeTheme(
       components: {
         components: ["Badge", "BiliBili", "SiteInfo", "VPCard"],
         rootComponents: {
-          addThis: "ra-617a48e0d1826cc4",
           notice: [
             {
               path: "/",
@@ -85,6 +84,22 @@ export default hopeTheme(
               key: "2023.2.3",
             },
           ],
+        },
+      },
+
+      docsearch: {
+        appId: "8FRYEU6KK8",
+        apiKey: "84f513df1e83406ba42179da778d87b4",
+        indexName: "dromara-fast-request",
+        locales: {
+          "/en/": {
+            placeholder: "Search Documentation",
+            translations: {
+              button: {
+                buttonText: "Search Documentation",
+              },
+            },
+          },
         },
       },
 
