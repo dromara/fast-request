@@ -1,6 +1,7 @@
-import { getDirname, path } from "@vuepress/utils";
-import { defineUserConfig } from "vuepress";
+import {getDirname, path} from "@vuepress/utils";
+import {defineUserConfig} from "vuepress";
 import theme from "./theme.js";
+import {container} from "@mdit/plugin-container";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -82,5 +83,21 @@ export default defineUserConfig({
     //     __dirname,
     //     "./components/Sidebar.vue"
     // ),
+  },
+  extendsMarkdown: (md) => {
+    md.use(container, {
+      name: "hint",
+      openRender: (tokens, index, _options) => {
+        const info = tokens[index].info.trim().slice(4).trim();
+        let style = "background:#262626";
+        if (info.indexOf("style") > -1) {
+          style = info.split("style=")[1].split('"')[1];
+        }
+        const title = info.replace('style="'+style+'"',"") || 'Hint';
+        return `<div class="custom-container hint" style="${style}">\n<p class="custom-container-title">${title}</p>\n`;
+        
+        
+      },
+    });
   },
 });

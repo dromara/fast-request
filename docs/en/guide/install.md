@@ -3,10 +3,6 @@ icon: install-fill
 title: Install
 ---
 
-::: caution
-Please do not install other similar plugins. It will cause conflicts or data loss, and we are not responsible for this.
-:::
-
 Click to install
 
 <iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>

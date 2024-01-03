@@ -4,11 +4,10 @@ icon: changelog
 ---
 
 ::: important Announcement
-**2022.1.4+** is free trial version, you will have a 30 days free trial, if you want to compare the difference from free and paid version, you can see the release log from 2022.1.4.
+**2022.1.4+** is free trial version, you will have a 30 days free trial, if you want to compare the difference from free and paid version, you can see the release log from 2022.1.4+.
 
-[**Paid vs Free->**](./versionCompare.md)
+[**Paid vs Free->**](./versionCompare.md) ｜ [**Buy plugin**](./buy.md)
 
-[**Buy plugin**](./buy.md)
 
 Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 
@@ -20,16 +19,8 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ---
 
-important: <Badge text="Important function" color="orange"/>
+**Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
-feat: <Badge text="New function" type="tip"/> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
-
-Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.
-:::
-
-::: caution Performance issues caused by themes
-At present, it is found that [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) has modified some of its own UI components,
-and some plug-in versions are rendering components under specific systems (such as Windows). There are performance issues. If you find right-clicking or other operations stuck, upgrade the theme plug-in or use the native IDEA theme.
 :::
 
 ## 2023.2.4 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
@@ -40,29 +31,31 @@ and some plug-in versions are rendering components under specific systems (such 
 - <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
 
-::: tip SearchEveryWhere support classname search
+::: hint SearchEveryWhere support classname search <Badge vertical="top" text="Important feature" color="orange"/>
+![searchEveryWhere](/img/2023.2.4/searchEveryWhere_en.png)
+
 Support enters the class name where the Url is located to search for all APIs under this class.
 
-![searchEveryWhere](/img/2023.2.4/searchEveryWhere_en.png)
 :::
 
-::: tip Do not generate .fastRequest directory if plugin is not used.
+::: hint Do not generate .fastRequest directory if plugin is not used <Badge vertical="top" text="Important feature" color="orange"/>
 When Project is opened by default, the .fastRequest directory will no longer be generated. Only the operation plugin will generate it.
 :::
 
-::: tip Ignore field name parse support
+::: hint Ignore field name parse support <Badge vertical="top" text="New feature" type="tip"/>
+![ignoreFiled](/img/2023.2.4/ignoreFiled_en.png)
+
 Only need to add field names in the configuration to ignore target fields in the entity class.
 
-![ignoreFiled](/img/2023.2.4/ignoreFiled_en.png)
 :::
 
-::: info SearchEveryWhere performance optimization
+::: hint SearchEveryWhere performance optimization <Badge vertical="top" text="Optimization" type="info"/>
 The SearchEveryWhere search logic has been optimized to greatly improve the search performance of large projects.
 
 We tested a project with 7000 APIs and the search response was very fast
 :::
 
-::: info Content-Disposition support optimization
+::: hint Content-Disposition support optimization <Badge vertical="top" text="Optimization" type="info"/>
 
 Content-Disposition supports the following 2 formats, and also supports file name transcoding.
 
@@ -89,7 +82,7 @@ Content-Disposition:attachment; filename=fastRequest.txt
 - <Badge text="Error when passing non-json in body param" type="danger"/>
 - <Badge text="curl import parsing\' error" type="danger"/>
 
-::: tip Sync API to Postman
+::: hint Sync API to Postman <Badge vertical="top" text="Important feature" color="orange"/>
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
 
 To make the data synchronised to Postman more complete, it is recommended to select the `sync after API save` option in the Postman config of the plugin
@@ -98,24 +91,25 @@ then trigger the synchronisation by saving the API.
 More details please refer [Postman sync](./features/postmanSync.md)
 :::
 
-::: tip Project name drop-down box automatically switches
+::: hint Project name drop-down box automatically switches <Badge vertical="top" text="New feature" type="tip"/>
 When generating parameters for APIs under different modules, if auto domain name is enabled, the project name drop-down box will automatically switch
 :::
 
-:::info Environment refactoring
+::: hint Environment refactoring <Badge vertical="top" text="Optimization" type="info"/>
+![environment](/img/2023.2.3/environment_en.png)
+
 Environment contains Current value and Initial value. Initial value can be shared by submitting config fine in `.fastRequest/config/fastRequestCurrentProjectEnvironment.json`.
 
-![environment](/img/2023.2.3/environment_en.png)
 :::
 
-::: info Project domain name addition optimization
+::: hint Project domain name addition optimization <Badge vertical="top" text="Optimization" type="info"/>
 
 The module name is automatically recognized as a drop-down box option, and you can also customize it.
 
 ![projectName](/img/2023.2.3/projectName.png)
 :::
 
-::: info Add @fastRequestParseIgnore support for ignore parse field
+::: hint Add @fastRequestParseIgnore support for ignore parse field <Badge vertical="top" text="Optimization" type="info"/>
 To ignore parsing for entity field, you can add `@fast Request Parse Ignore` to the annotation. The original annotation `@parse Ignore` is still applicable.
 
 ```java
@@ -135,14 +129,14 @@ private String someIgnoreField ;
 - <Badge text="Compatible with IDEA 2023.3" type="tip"/>
 - <Badge text="History requests list show errors" type="danger"/>
 
-::: tip Markdown doc template config
+::: hint Markdown doc template config <Badge vertical="top" text="New feature" type="tip"/>
 Provides a custom format for local markdown and [Online API](./features/apiDocSync.md) doc.View [more detail](./features/markdownDocTemplateConfig.md)
 :::
 
-::: tip JSON5 support
+::: hint JSON5 support <Badge vertical="top" text="New feature" type="tip"/>
+![json5](/img/2023.2.2/json5.png)
 JSON5 format support for Request body, JSON field comment support
 
-![json5](/img/2023.2.2/json5.png)
 :::
 
 ## 2023.2.1.1 <Badge text="Free trial" type="tip"/>
@@ -162,24 +156,24 @@ JSON5 format support for Request body, JSON field comment support
 - <Badge text="Url and cUrl copy can not replace environment variable" type="danger"/>
 - <Badge text="Curl import parsing error in form-urlencoded and -d forms" type="danger"/>
 
-::: tip UI predigestion
+::: hint UI predigestion <Badge vertical="top" text="New feature" type="tip"/>
+![urlInputWithMethod](/img/2023.2.1/urlInputWithMethod.png)
 Simplify the three horizontal components of the old version (method drop-down box, url input box,
 and response drop-down box) into one, and remove the response drop-down box to increase simplicity.
 
-![urlInputWithMethod](/img/2023.2.1/urlInputWithMethod.png)
 :::
 
-::: tip Support open API document in apis list
+::: hint Support open API document in apis list <Badge vertical="top" text="New feature" type="tip"/>
 
 ![openDoc](/img/2023.2.1/openDoc.png)
 :::
 
-::: info Put show apis into right click menu
+::: hint Put show apis into right click menu <Badge vertical="top" text="Optimization" type="info"/>
 
 ![openDoc](/img/2023.2.1/showApis.png)
 :::
 
-::: info Add plugin version to statistics page
+::: hint Add plugin version to statistics page <Badge vertical="top" text="Optimization" type="info"/>
 
 ![pluginVersion](/img/2023.2.1/pluginVersion.png)
 :::
@@ -197,22 +191,23 @@ and response drop-down box) into one, and remove the response drop-down box to i
 - <Badge text="cURL copy format error of form-data" type="danger"/>
 - <Badge text="Logic error of domain configuration page in some the case" type="danger"/>
 
-::: tip Quick add Environment variable support
-Click the "Add" button to select a line and add it to the environment variables, which can quickly save the variable to the current Env.
+::: hint Quick add Environment variable support <Badge vertical="top" text="New feature" type="tip"/>
 
 ![quickAddEnvironmentVariable](/img/2023.1.9/quickAddEnvironmentVariable.png)
+Click the "Add" button to select a line and add it to the environment variables, which can quickly save the variable to the current Env.
 :::
 
-::: tip Add、Delete、Modify support in Environment use view
+::: hint Add、Delete、Modify support in Environment use view <Badge vertical="top" text="New feature" type="tip"/>
 ![environmentVariableEditRemoveModify](/img/2023.1.9/environmentVariableEditRemoveModify_en.png)
 :::
 
-::: tip Show apis trigger in Controller
-Right-click in the Controller in any position to invoke `Generate`, choose`Show apis` , all APIs in the current controller can be displayed.
+::: hint Show apis trigger in Controller <Badge vertical="top" text="New feature" type="tip"/>
 ![showApis](/img/2023.1.9/showApis.gif)
+Right-click in the Controller in any position to invoke `Generate`, choose`Show apis` , all APIs in the current controller can be displayed.
+
 :::
 
-::: tip Response adds Size property
+::: hint Response adds Size property <Badge vertical="top" text="New feature" type="tip"/>
 ![responseSize.png](/img/2023.1.9/responseSize.png)
 :::
 
@@ -223,16 +218,17 @@ Right-click in the Controller in any position to invoke `Generate`, choose`Show 
 - <Badge text="Parse support for Instant" type="info"/>
 - <Badge text="Delete api directory error in Windows system" type="danger"/>
 
-::: tip Environment
+::: hint Environment <Badge vertical="top" text="New feature" type="tip"/>
 Add <ColorIcon icon="environment" /> nvironment variable support, [more detail](./features/environment.md)
 :::
 
-::: info Method description length truncate
+::: hint Method description length truncate <Badge vertical="top" text="Optimization" type="info"/>
+![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength_en.png)
+
 You can truncate the method description process when the method name is too long, resulting in display or data saving.
 
 Such as in `SearchEveryWhere`
 
-![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength_en.png)
 :::
 
 ## 2023.1.7.1 <Badge text="Free trial" type="tip"/>
@@ -242,17 +238,17 @@ Such as in `SearchEveryWhere`
 - <Badge text="Param parse" type="info"/>
 - <Badge text="Table dragging problem" type="info"/>
 
-::: tip Add generate action in SearchEveryWhere
+::: hint Add generate action in SearchEveryWhere <Badge vertical="top" text="New feature" type="tip"/>
+![searchEveryWhere](/img/2023.1.7.1/searchEveryWhere.png)
 After select Auto-generate icon, you can echo or automatically generate API-related URLs and parameter in SearchEveryWhere
 
-![searchEveryWhere](/img/2023.1.7.1/searchEveryWhere.png)
 :::
 
-::: info The main window pops up with configuration
+::: hint The main window pops up with configuration <Badge vertical="top" text="Optimization" type="info"/>
 Add a config `Show main tool window when action trigger` in `Setting->Request Fast Request->Other config`.
 :::
 
-::: info Param parse
+::: hint Param parse <Badge vertical="top" text="Optimization" type="info"/>
 Parsing optimization for the input parameters with `@RequestBody Set<String>set`. By default, strings are enclosed in double quotation marks.
 
 ::: code-tabs#shell
@@ -287,17 +283,16 @@ public Set<String> test3(@RequestBody Set<String>set) {
 - <Badge text="Batch export api doc" type="danger"/>
 - <Badge text="History request echo data" type="danger"/>
 
-::: tip New icon
+::: hint New icon <Badge vertical="top" text="New feature" type="tip"/>
 ![toolwindowNew](/img/toolwindowNew.png)
 :::
 
-::: tip SearchEveryWhere enhance
-Add `module`、`methodType`、`library` condition
-
+::: hint SearchEveryWhere enhance <Badge vertical="top" text="New feature" type="tip"/>
 ![searchEveryWhere](/img/2023.1.7/searchEveryWhere.png)
+Add `module`、`methodType`、`library` condition
 :::
 
-::: tip Slack support
+::: hint Slack support <Badge vertical="top" text="New feature" type="tip"/>
 
 If you have any question, please click [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) and join in.
 
@@ -305,7 +300,7 @@ We will help you solve your problems. Thanks!
 
 :::
 
-::: tip Compact http icon
+::: hint Compact http icon <Badge vertical="top" text="New feature" type="tip"/>
 
 You can also change it in `setting -> Restful Fast Request -> Use compact http icon`
 
@@ -319,10 +314,10 @@ You can also change it in `setting -> Restful Fast Request -> Use compact http i
 
 :::
 
-::: tip Duplicate field
+::: hint Duplicate field <Badge vertical="top" text="New feature" type="tip"/>
+![fieldDup](/img/2023.1.7/fieldDup.png)
 Support field line duplicate, mark key end with `-dup` for duplicate key, plugin will do not change key for collection field, developers need to modify manually.
 
-![fieldDup](/img/2023.1.7/fieldDup.png)
 :::
 
 ## 2023.1.6 <Badge text="Free trial" type="tip"/>
@@ -330,7 +325,7 @@ Support field line duplicate, mark key end with `-dup` for duplicate key, plugin
 - <Badge text="Header batch edit" type="tip"/>
 - <Badge text="Idea hang when debug in post script" type="danger"/>
 
-::: tip Header batch edit
+::: hint Header batch edit <Badge vertical="top" text="New feature" type="tip"/>
 
 ![batchEdit](/img/2023.1.6/batchEdit_en.png)
 
@@ -342,10 +337,10 @@ Support field line duplicate, mark key end with `-dup` for duplicate key, plugin
 - <Badge text="SearchEveryWhere style confusion" type="danger"/>
 - <Badge text="URL variable replacing" type="danger"/>
 
-::: info Editor icon location
-Move from the original button where it is easy to block the text to the upper right corner of the editor
+::: hint Editor icon location <Badge vertical="top" text="Optimization" type="info"/>
 
 ![editorAction](/img/2023.1.5/editorAction.png)
+Move from the original button where it is easy to block the text to the upper right corner of the editor
 
 :::
 
@@ -370,7 +365,7 @@ SearchEveryWhere, from now on, will not have the problem of the tab width increa
 - <Badge text="SearchEveryWhere supports searching URLs in jar" type="tip"/>
 - <Badge text="Set project header error in Script" type="danger"/>
 
-::: tip Auto domain
+::: hint Auto domain <Badge vertical="top" text="New feature" type="tip"/>
 Automatically identify or add a default domain,---->[More detail](./features/autoDomain.md)
 :::
 
@@ -391,54 +386,53 @@ Automatically identify or add a default domain,---->[More detail](./features/aut
 
 [FAQ:API data lost after install 2023.1.3](./faq.md#s-apis-lost)
 
-::: tip OpenAI API Optimising fields support
-
+::: hint OpenAI API Optimising fields support <Badge vertical="top" text="New feature" type="tip"/>
+![ai](/img/2023.1.3/ai.gif)
 Replace some random fields with the [OpenAI API](https://platform.openai.com/docs/api-reference/chat)
 
-![ai](/img/2023.1.3/ai.gif)
 :::
 
-::: tip API and API storage file jumps
-Implementation of the API and the saved json data for associative jumping
+::: hint API and API storage file jumps <Badge vertical="top" text="New feature" type="tip"/>
 
 ![jumpToJsonData](/img/2023.1.3/jumpToJsonData.png)
 
 ![jump from apis](/img/2023.1.3/listJump2JsonData.png)
+Implementation of the API and the saved json data for associative jumping
+
 :::
 
-::: tip Project config refresh
-When the configuration file is updated, this function allows the UI to refresh the configuration as well.
+::: hint Project config refresh <Badge vertical="top" text="New feature" type="tip"/>
 
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
+When the configuration file is updated, this function allows the UI to refresh the configuration as well.
 :::
 
-::: tip rfr.currentModuleName support
+::: hint rfr.currentModuleName support <Badge vertical="top" text="New feature" type="tip"/>
 Get the module name of the current API. Please see it in [script](./script.md#rfr).
 :::
 
-::: info API doc sync supports custom branch
-
+::: hint API doc sync supports custom branch <Badge vertical="top" text="Optimization" type="info"/>
+![apiSyncSupportBranch](/img/2023.1.3/apiSyncSupportBranch.png)
 Support custom branch, as in some cases the 'master' branch is protected and does not allow push
 
-![apiSyncSupportBranch](/img/2023.1.3/apiSyncSupportBranch.png)
 :::
 
-::: info Toolbar
-
-1. Add vertical toolbar support.
-2. Button position adjustment
+::: hint Toolbar <Badge vertical="top" text="Optimization" type="info"/>
 
 ![htoolbar](/img/2023.1.3/htoolbar.png)
 
 ![vtoolbar](/img/2023.1.3/vtoolbar.png)
 
 ![toolbarSetting](/img/2023.1.3/toolbarSetting.png)
+
+1. Add vertical toolbar support.
+2. Button position adjustment
 :::
 
-::: info GET、POST、DELETE、PUT、PATCH icon
-Rounded corners and adjusted background colour for icons.
+::: hint GET、POST、DELETE、PUT、PATCH icon <Badge vertical="top" text="Optimization" type="info"/>
 
 ![toolbar](/img/2023.1.3/apis.png)
+Rounded corners and adjusted background colour for icons.
 :::
 
 ## v2023.1.2 <Badge text="Free trial" type="tip"/>
@@ -453,19 +447,18 @@ Rounded corners and adjusted background colour for icons.
 - <Badge text="Patch request error in jdk11+" type="danger"/>
 - <Badge text="API name saved error" type="danger"/>
 
-::: tip Image render from response
-Automatically render images for requests that respond to image.
+::: hint Image render from response <Badge vertical="top" text="New feature" type="tip"/>
 
 ![imageRender](/img/2023.1.2/imageRender.png)
+Automatically render images for requests that respond to image.
 :::
 
-::: tip Annual report
-Statistics for previous years of operation.
-
+::: hint Annual report <Badge vertical="top" text="New feature" type="tip"/>
 ![annualReport](/img/2023.1.2/annualReport_en.png)
+Statistics for previous years of operation.
 :::
 
-::: info Url parse logic
+::: hint Url parse logic <Badge vertical="top" text="Optimization" type="info"/>
 Optimised the final result of url splicing against variables. For example, splicing several variables finally calculates a url
 
 Plugin will calculate final url to `/test/a.htm`
@@ -484,18 +477,18 @@ public class MyConstant {
 
 :::
 
-::: info cUrl import
+::: hint cUrl import <Badge vertical="top" text="Optimization" type="info"/>
 
 1. automatic parsing of query param into `Url params` tab page
 2. json parsing optimization
 3. Known bug fixes
    :::
 
-::: info Url special character parameter encoding
+::: hint Url special character parameter encoding <Badge vertical="top" text="Optimization" type="info"/>
 We have done some optimization, no longer need to encode special characters in url params.
 :::
 
-::: info Add send request trigger to url field
+::: hint Add send request trigger to url field <Badge vertical="top" text="Optimization" type="info"/>
 Add `Enter` key listener to url field that can send the request.
 :::
 
@@ -510,20 +503,19 @@ Add `Enter` key listener to url field that can send the request.
 - <Badge text="Swagger default value for basic type" type="danger"/>
 - <Badge text="Array not parse" type="danger"/>
 
-::: tip Project-level domain config
-Supports fast config domain directly from the `yml` or `properties` file，for more detail, please see [<ColorIcon icon="domainConfig" /> Project-level domain config](./features/projectLevelDomainConfig.md)
+::: hint Project-level domain config <Badge vertical="top" text="New feature" type="tip"/>
 
 ![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig_en.png "Domain config")
 
 ![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog_en.png "Domain list")
-
+Supports fast config domain directly from the `yml` or `properties` file，for more detail, please see [<ColorIcon icon="domainConfig" /> Project-level domain config](./features/projectLevelDomainConfig.md)
 :::
 
-::: info Icon alignment
+::: hint Icon alignment <Badge vertical="top" text="Optimization" type="info"/>
 The buttons have been categorised to make it easier for developers to find and understand the function of the corresponding button.
 :::
 
-::: info Tool window icon in new UI
+::: hint Tool window icon in new UI <Badge vertical="top" text="Optimization" type="info"/>
 The clarity of the tool window icons has been optimised under the new UI.
 :::
 
@@ -534,7 +526,7 @@ The clarity of the tool window icons has been optimised under the new UI.
 - <Badge text="Activation prompt optimization" type="info"/>
 - <Badge text="Reload api error in navigate when using Kotlin and Java in one project" type="danger"/>
 
-::: tip Add @parseIgnore comment support for parse
+::: hint Add @parseIgnore comment support for parse <Badge vertical="top" text="New feature" type="tip"/>
 
 The following code, the plugin will ignore parsing this field. Please use `@parseIgnore`
 
@@ -548,7 +540,7 @@ private String someIgnoreField ;
 
 :::
 
-::: tip Add rfr.currentDomain in Script
+::: hint Add rfr.currentDomain in Script <Badge vertical="top" text="New feature" type="tip"/>
 You can get the current domain link in the Script through `rfr.currentDomain`
 :::
 
@@ -559,10 +551,9 @@ You can get the current domain link in the Script through `rfr.currentDomain`
 - <Badge text="Cookie bug" type="danger"/>
 - <Badge text="Navigate tab load error" type="danger"/>
 
-::: tip Global animate config support
-You can close animate in this global config, if close, icon animation <ColorIcon icon="restfulFastRequest" /> will stop
-
+::: hint Global animate config support <Badge vertical="top" text="New feature" type="tip"/>
 ![animateConfig](/img/2022.2.9/animateConfig_en.png)
+You can close animate in this global config, if close, icon animation <ColorIcon icon="restfulFastRequest" /> will stop
 :::
 
 ## v2022.2.8 <Badge text="Free trial" type="tip"/>
@@ -571,7 +562,7 @@ You can close animate in this global config, if close, icon animation <ColorIcon
 - <Badge text="@RequestParam support name attribute" type="info"/>
 - <Badge text="Error when check update" type="info"/>
 
-::: tip Directory download file support
+::: hint Directory download file support <Badge vertical="top" text="New feature" type="tip"/>
 When response contains `content-disposition:attachment`, click send will automatically adapt the download
 :::
 
@@ -587,39 +578,41 @@ When response contains `content-disposition:attachment`, click send will automat
 - <Badge text="Parse bug" type="danger"/>
 - <Badge text="Error when use string param in body" type="danger"/>
 
-::: tip Api sync
-Online Api doc sync---->[More detail](./features/apiDocSync.md)
+::: hint Api sync <Badge vertical="top" text="New feature" type="tip"/>
 
 ![apiSync](/img/2022.2.7/apiSync_en.png)
 
 ![apiSyncSetting](/img/2022.2.7/apiSyncSetting_en.png)
+Online Api doc sync---->[More detail](./features/apiDocSync.md)
 :::
 
 :::tip Api doc show return type document
 ![returnValueDoc](/img/2022.2.7/returnValueDoc.png)
 :::
 
-::: tip Plugin update notification mechanism
+::: hint Plugin update notification mechanism <Badge vertical="top" text="New feature" type="tip"/>
+![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
+
 Change from an explicit dialog box to a notification, at the same time automatic updates have been changed to ==turn on==, if you want to turn it off, please go to the configuration page and turn it off manually.
 But I recommend ==turning it on==, so that you can receive updates in time.
 
 Note that the previous version of the update will still be a pop-up dialog, this version onwards will be a message notification.
 
-![upgradeNotice](/img/2022.2.7/upgradeNotice_en.png)
 :::
 
-::: tip Common header
+::: hint Common header <Badge vertical="top" text="New feature" type="tip"/>
 
-[---->More detail](./features/commonHeader.md)
 ![commonHeader](/img/2022.2.7/commonHeader.gif)
+[---->More detail](./features/commonHeader.md)
 :::
 
-::: tip Full screen
----->[More detail](./features/fullScreen.md)
+::: hint Full screen <Badge vertical="top" text="New feature" type="tip"/>
+
 ![fullScreen](/img/2022.2.7/fullScreen.png)
+[---->More detail](./features/fullScreen.md)
 :::
 
-::: info Comment preview
+::: hint Comment preview <Badge vertical="top" text="Optimization" type="info"/>
 ![fullScreen](/img/2022.2.7/commentPreview.png)
 :::
 
@@ -633,21 +626,23 @@ Note that the previous version of the update will still be a pop-up dialog, this
 - <Badge text="Long delay when first open tool window" type="info"/>
 - <Badge text="Multi print when use pre-script" type="danger"/>
 
-::: tip Clear params support
-clear all
-![clear](/img/2022.2.6/clear.png)
+::: hint Clear params support <Badge vertical="top" text="New feature" type="tip"/>
 
-batch clean column value
+![clear](/img/2022.2.6/clear.png)
+clear all
+
+
 ![clearColumnValue](/img/2022.2.6/clearColumnValue.png)
+batch clean column value
 :::
 
-::: tip Api comment preview
+::: hint Api comment preview <Badge vertical="top" text="New feature" type="tip"/>
 ![showCommentConfig](/img/2022.2.6/showCommentConfig.png)
 ![showCommentInClass](/img/2022.2.6/showCommentInClass.png)
 ![showCommentInNavigate](/img/2022.2.6/showCommentInNavigate.png)
 :::
 
-::: tip Sort param column by key
+::: hint Sort param column by key <Badge vertical="top" text="New feature" type="tip"/>
 ![sortColumn](/img/2022.2.6/sortColumn.png)
 :::
 
@@ -669,29 +664,29 @@ batch clean column value
 - <Badge text="Add twitter in doc action group" type="tip"/>
 - <Badge text="Post script not execute when response is success but code for example is 401" type="danger"/>
 
-::: tip Console support
+::: hint Console support <Badge vertical="top" text="New feature" type="tip"/>
+
+![console](/img/2022.2.5/console_en.png)
 Console helps developers print some info you wanted
 
 More info please see [script->console](./script.md#console)
 
-![console](/img/2022.2.5/console_en.png)
-
 :::
 
-::: tip Add currentProjectName and currentEnvName property in build-in property
+::: hint Add currentProjectName and currentEnvName property in build-in property <Badge vertical="top" text="New feature" type="tip"/>
 You can use these 2 variables for some judgment
 
 More info please see [script->Built-in variable->rfr](./script.md#rfr)
 :::
 
-::: tip Get description from javadoc for path and request param
-Parse parameter comments in the form of Javadoc, suitable for path parameters and request param is a parameter of non-entity class
+::: hint Get description from javadoc for path and request param <Badge vertical="top" text="New feature" type="tip"/>
 
 ![parseDocDesc](/img/2022.2.5/parseDocDesc.png)
+Parse parameter comments in the form of Javadoc, suitable for path parameters and request param is a parameter of non-entity class
 :::
 
-::: tip twitter
-有推特账号的请关注我,感谢
+::: hint twitter <Badge vertical="top" text="New feature" type="tip"/>
+If you have a Twitter account, please follow me, thank you
 
 ![](/img/twitter.png)
 
@@ -712,28 +707,30 @@ Parse parameter comments in the form of Javadoc, suitable for path parameters an
 - <Badge text="Parse error when map not contains generics" type="danger"/>
 - <Badge text="Post script can not add or remove header" type="danger"/>
 
-::: tip New logo
-Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
+::: hint New logo <Badge vertical="top" text="New feature" type="tip"/>
 
 ![newLogo](/img/2022.2.4/newLogo.gif)
 
 ![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
 
 ![newLogo](/img/2022.2.4/newLogo.png)
+Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
 
 :::
 
-::: tip Support parse date by DateTimeFormat annotation pattern
+::: hint Support parse date by DateTimeFormat annotation pattern <Badge vertical="top" text="New feature" type="tip"/>
 ![dateTimeFormat](/img/2022.2.4/dateTimeFormat.png)
 :::
 
-::: tip Support parse url of BaseController
+::: hint Support parse url of BaseController <Badge vertical="top" text="New feature" type="tip"/>
 ![baseController](/img/2022.2.4/baseController.png)
 :::
 
-::: info Change auto update configurable
-If you don't need to receive automatic updates, you can turn it off and update it manually (recommend open)
+::: hint Change auto update configurable <Badge vertical="top" text="Optimization" type="info"/>
+
 ![autoUpdate](/img/2022.2.4/autoUpdate.png)
+If you don't need to receive automatic updates, you can turn it off and update it manually (recommend open)
+
 :::
 
 ## v2022.2.3.1 <Badge text="Free trial" type="tip"/>
@@ -751,20 +748,21 @@ If you don't need to receive automatic updates, you can turn it off and update i
 - <Badge text="Url can not generate after close tool window and reopen" type="danger"/>
 - <Badge text="Jax-rs PATCH not supported" type="danger"/>
 
-::: tip Script support
-Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
-Please refer to [Script](./script.md)
+::: hint Script support <Badge vertical="top" text="New feature" type="tip"/>
 
 ![scriptProject](/img/2022.2.3/scriptProject_en.png)
 
 ![scriptModule](/img/2022.2.3/scriptModule_en.png)
+
+Scripts allow developers to more flexibly, dynamically and easily modify some input parameters of the request process and the processing of responses.
+Please refer to [Script](./script.md)
 :::
 
-::: tip One-click copy Url
+::: hint One-click copy Url <Badge vertical="top" text="New feature" type="tip"/>
 ![copyUrl](/img/2022.2.3/copyUrl.png)
 :::
 
-::: info Apply table cell value change when click send request
+::: hint Apply table cell value change when click send request <Badge vertical="top" text="Optimization" type="info"/>
 Before ==2022.2.3==, when entering the parameters in the table, if the cursor is still inside the table, click the action button at this time, and in some scenarios, an error will be reported or the value cannot be modified, and the problem is solved in this version.
 
 How the old version deals with it: [FAQ:After entering the parameters, the API call found that the parameters were invalid](./faq.md)
@@ -781,11 +779,11 @@ How the old version deals with it: [FAQ:After entering the parameters, the API c
 - <Badge text="Error when modify number param in Multipart" type="danger"/>
 - <Badge text="History request delete operation error in some cases" type="danger"/>
 
-::: tip Add stop API request function
+::: hint Add stop API request function <Badge vertical="top" text="New feature" type="tip"/>
 ![stopApi](/img/2022.2.2/stopApi.gif)
 :::
 
-::: tip Batch export API doc
+::: hint Batch export API doc <Badge vertical="top" text="New feature" type="tip"/>
 ![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)
 :::
 
@@ -800,7 +798,7 @@ How the old version deals with it: [FAQ:After entering the parameters, the API c
 - <Badge text="Optimize shortcut keys" type="info"/>
 - <Badge text="Fix Word export bug" type="danger"/>
 
-::: tip API grouping parameter save support
+::: hint API grouping parameter save support <Badge vertical="top" text="New feature" type="tip"/>
 Purpose: Save parameters of different combinations under one API
 
 ==The original save operation will be classified into the Default group by default==
@@ -816,38 +814,38 @@ The following is the query of the book list in 3 languages
 ![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif)
 :::
 
-::: tip Temporary request save support
+::: hint Temporary request save support <Badge vertical="top" text="New feature" type="tip"/>
+
+![tempSave](/img/2022.2.1/tempSave_en.png)
 
 Purpose: Save any request that does not belong to this project for temporary invocation, not associated with the current project code
 
 The Url of the Request saved by the temporary request must start with ==http== or ==https==
 
-![tempSave](/img/2022.2.1/tempSave_en.png)
-
 :::
 
-::: tip cURL import
+::: hint cURL import <Badge vertical="top" text="New feature" type="tip"/>
 
 ![importByCurl](/img/2022.2.1/importByCurl_en.gif)
 
 ==Note that if you need to bind a method, you need to place the cursor on the method name==
 :::
 
-::: tip Add Response Header in response
+::: hint Add Response Header in response <Badge vertical="top" text="New feature" type="tip"/>
 
 ![responseHeader](/img/2022.2.1/responseHeader.png)
 
 :::
 
-::: tip Add support for Url suffix
-
-Purpose: Some requests need to add .do at the end of the url
+::: hint Add support for Url suffix <Badge vertical="top" text="New feature" type="tip"/>
 
 ![responseHeader](/img/2022.2.1/urlSuffix.png)
 
+Purpose: Some requests need to add .do at the end of the url
+
 :::
 
-::: info Optimized parameter parsing
+::: hint Optimized parameter parsing <Badge vertical="top" text="Optimization" type="info"/>
 Optimized parsing of `List<Entity>`
 :::
 
@@ -861,22 +859,22 @@ Optimized parsing of `List<Entity>`
 - <Badge text="Curl output format optimization" type="info"/>
 - <Badge text="Optimization @Consumes(APPLICATION_JSON) ineffective problem(JAX-RS)" type="info"/>
 
-::: tip Add support for history request preview
-Hidden skills: Double-click the record to display details
+::: hint Add support for history request preview <Badge vertical="top" text="New feature" type="tip"/>
 ![history](/img/history.png)
+Hidden skills: Double-click the record to display details
 :::
 
-::: info Add support for description search in SearchEveryWhere
-Support description search API
+::: hint Add support for description search in SearchEveryWhere <Badge vertical="top" text="Optimization" type="info"/>
 ![searchEveryWhereDescription](/img/searchEveryWhereDescription.png)
+Support description search API
 :::
 
-::: tip Add request timeout settings
-Default value: 60 seconds
+::: hint Add request timeout settings <Badge vertical="top" text="New feature" type="tip"/>
 ![timeoutSetting](/img/timeoutSetting.png)
+Default value: 60 seconds
 :::
 
-::: info Optimization
+::: hint Optimization <Badge vertical="top" text="Optimization" type="info"/>
 
 - Shortcut key conflict optimization
   - Added Shift to the three shortcut keys for opening windows
@@ -899,31 +897,31 @@ Default value: 60 seconds
 - <Badge text="Optimized export preview" type="info"/>
 - <Badge text="Fixed bug when editing params at the same time delete param" type="danger"/>
 
-::: tip Add shortcut keys for tool window jump
-Provides shortcut keys to jump quickly, you can change it in `setting -> Keymap`
+::: hint Add shortcut keys for tool window jump <Badge vertical="top" text="New feature" type="tip"/>
 ![toolwindowShortcut](/img/toolwindowShortcut.png)
+Provides shortcut keys to jump quickly, you can change it in `setting -> Keymap`
 :::
 
-::: tip Add auto add cookie support
+::: hint Add auto add cookie support <Badge vertical="top" text="New feature" type="tip"/>
+![autoStoreCookie](/img/autoStoreCookie.png)
 Then automatically stored in == project global parameters ==
 If enable this configuration,cookie will automatically store in ==Project Global Config== -> `cookies`,This configuration is enabled by default.
-![autoStoreCookie](/img/autoStoreCookie.png)
 :::
 
-::: info Add support for html preview in response raw
-The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
+::: hint Add support for html preview in response raw <Badge vertical="top" text="Optimization" type="info"/>
 
 ![rawHtmlPreview](/img/rawHtmlPreview.png)
+The response of the html return type is no longer truncated in raw, and the html can be previewed at the same time
 :::
 
-::: info Ignore field parsing optimizations
+::: hint Ignore field parsing optimizations <Badge vertical="top" text="Optimization" type="info"/>
 
 - <Badge text="Ignore parsing annotated by `@JsonIgnore`、`@JSONField(serialize = false)` fields" type="info"/>
 - <Badge text="Ignore parsing`transient` keyword-decorated fields" type="info"/>
 
 :::
 
-::: info Generic parameter parsing support
+::: hint Generic parameter parsing support <Badge vertical="top" text="Optimization" type="info"/>
 Support for such generic parameter parsing
 
 ```java
@@ -944,9 +942,9 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 :::
 
-::: info Improve project global config
-Added `URL Params`、`URL-Encoded Params`、`Cookies`
+::: hint Improve project global config <Badge vertical="top" text="Optimization" type="info"/>
 ![projectConfigParam](/img/projectGlobalParam.png)
+Added `URL Params`、`URL-Encoded Params`、`Cookies`
 :::
 
 ::: note Optimization
@@ -958,9 +956,9 @@ Added `URL Params`、`URL-Encoded Params`、`Cookies`
 
 :::
 
-::: tip APIs list view optimization
-The rendering of the APIs interface has been optimized,Newly saved api icons are automatically optimized by default,The API saved in history can be right-clicked to select and change
+::: hint APIs list view optimization <Badge vertical="top" text="New feature" type="tip"/>
 ![apisList](/img/apisList.png)
+The rendering of the APIs interface has been optimized,Newly saved api icons are automatically optimized by default,The API saved in history can be right-clicked to select and change
 :::
 
 ## v2022.1.8 <Badge text="Free trial" type="warn"/>
@@ -972,24 +970,24 @@ The rendering of the APIs interface has been optimized,Newly saved api icons are
 - <Badge text="Fix navigate tree scan bug" type="danger"/>
 - <Badge text="Fix some bug" type="danger"/>
 
-::: tip Project-level global parameters support
+::: hint Project-level global parameters support <Badge vertical="top" text="New feature" type="tip"/>
+![projectConfigParam](/img/projectConfigParam.png)
 
 Support global parameters within the project level, not affected by multiple modules.
 
 Configure priority `api header > project header>global header`
 
-![projectConfigParam](/img/projectConfigParam.png)
 :::
 
-::: info Quickly add to header parameters
+::: hint Quickly add to header parameters <Badge vertical="top" text="Optimization" type="info"/>
+![add2projectConfig](/img/add2projectConfig.png)
+
+![cookie2projectConfig](/img/cookie2projectConfig.png)
 
 Change ~~add params to global header~~ to `add params to project global header`
 
 Cookie is also like this
 
-![add2projectConfig](/img/add2projectConfig.png)
-
-![cookie2projectConfig](/img/cookie2projectConfig.png)
 :::
 
 ## v2022.1.7 <Badge text="Free trial" type="warn"/>
@@ -1001,15 +999,15 @@ Cookie is also like this
 - <Badge text="Add support for navigating to the current method" type="tip"/>
 - <Badge text="Optimize automatic binding projectName for saved api under multiple modules" type="info"/>
 
-::: tip Kotlin spring framework support
+::: hint Kotlin spring framework support <Badge vertical="top" text="New feature" type="tip"/>
 ![kotlinSupport](/img/kotlinSupport.png)
 :::
 
-::: info Add SearchEveryWhere scope search strategy
+::: hint Add SearchEveryWhere scope search strategy <Badge vertical="top" text="Optimization" type="info"/>
+![searchEveryWhereStrategy](/img/searchEveryWhereStrategy.png)
 The 2022.1.7 version can search for mapping in SpringBoot feign or controller by default
 
 The default search strategy is to search based on annotations, and two options are provided. If you need to exclude interfaces similar in SpringBoot feign interface during the search process, you can remove the check of Interface to deal with it.
-![searchEveryWhereStrategy](/img/searchEveryWhereStrategy.png)
 :::
 
 ::: note Add toggleUseSoftWrap support in editor
@@ -1017,19 +1015,19 @@ The default search strategy is to search based on annotations, and two options a
 ![toggleUseSoftWrap](/img/toggleUseSoftWrap.png)
 :::
 
-::: tip Add support for add to Global Header from response
-It is recommended to use in multi-module projects, because Add to Headers can only be added to the current module project
+::: hint Add support for add to Global Header from response <Badge vertical="top" text="New feature" type="tip"/>
 
 ![add2GlobalHeader](/img/add2GlobalHeader.png)
+It is recommended to use in multi-module projects, because Add to Headers can only be added to the current module project
 :::
 
 ::: note Add support for navigating to the current method
-After you generate the url of the method, sometimes you will switch to another place in the code, and then want to start debugging the API method, you can use this function to quickly locate the code
 
 ![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
+After you generate the url of the method, sometimes you will switch to another place in the code, and then want to start debugging the API method, you can use this function to quickly locate the code
 :::
 
-::: info Optimize automatic binding projectName for saved api under multiple modules
+::: hint Optimize automatic binding projectName for saved api under multiple modules <Badge vertical="top" text="Optimization" type="info"/>
 Optimized the need to manually switch the project drop-down box for the saved api echo under the multi-module
 :::
 
@@ -1040,18 +1038,17 @@ Optimized the need to manually switch the project drop-down box for the saved ap
 - <Badge text="Fix bug for `Basic Authorization` don't carry Basic" type="danger"/>
 - <Badge text="Removes the drag function in APIs tab" type="danger"/>
 
-::: tip Add support for one click to add cookie to header
+::: hint Add support for one click to add cookie to header <Badge vertical="top" text="New feature" type="tip"/>
 
-For those that require cookie support for login, you can quickly add the cookie in the response to the Header to achieve this
 
 ![addCookie2Header](/img/addCookie2Header.png)
+For those that require cookie support for login, you can quickly add the cookie in the response to the Header to achieve this
 :::
 
-::: tip Add support for sharing API to Word and html
-
-Please note that the API in word form is implemented in html, so don't feel strange, just export it
+::: hint Add support for sharing API to Word and html <Badge vertical="top" text="New feature" type="tip"/>
 
 ![shareApi](/img/shareApi_en.png)
+Please note that the API in word form is implemented in html, so don't feel strange, just export it
 :::
 
 ## v2022.1.5 <Badge text="Free trial" type="warn"/>
@@ -1062,28 +1059,25 @@ Please note that the API in word form is implemented in html, so don't feel stra
 - <Badge text="Remove text/html in Accept param in default header" type="danger"/>
 - <Badge text="Fix some bugs" type="danger"/>
 
-::: tip Add support for automatically generating parameter descriptions
-
-You can hide or show description by toggle click
+::: hint Add support for automatically generating parameter descriptions <Badge vertical="top" text="New feature" type="tip"/>
 
 ![paramDescription](/img/paramDescription.png)
+You can hide or show description by toggle click
 :::
 
-::: tip Add support for generate API documentation
-
-After generating parameters, you can generate a Markdown document directly by sharing
+::: hint Add support for generate API documentation <Badge vertical="top" text="New feature" type="tip"/>
 
 ![shareDocButton](/img/shareDocButton.png)
 
 ![apiDocExample](/img/apiDocExample.png)
+After generating parameters, you can generate a Markdown document directly by sharing
 
 :::
 
-::: tip Add support for single class API list preview
-
-After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
+::: hint Add support for single class API list preview <Badge vertical="top" text="New feature" type="tip"/>
 
 ![apiDocExample](/img/apiPreview.gif)
+After focusing on the window, enter the keyword, and you can quickly search according to the path keyword of the API
 :::
 
 ## v2022.1.4 <Badge text="Free trial" type="warn"/>
@@ -1104,35 +1098,35 @@ After focusing on the window, enter the keyword, and you can quickly search acco
 - <Badge text="Url generation optimization" type="info"/>
 - <Badge text="Fix Light files should have PSI only in one project" type="danger"/>
 
-::: info SearchEveryWhere highlight optimization
-Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
+::: hint SearchEveryWhere highlight optimization <Badge vertical="top" text="Optimization" type="info"/>
 
 ![help](/img/searchEveryWhereHighlight.png)
+Highlight search keywords to speed up the search for the API you really want to find.At the same time, the javadoc corresponding to the api is displayed
 :::
 
-::: tip Add support for import and export APIs
-Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
+::: hint Add support for import and export APIs <Badge vertical="top" text="New feature" type="tip"/>
 ![exportImportApis](/img/exportImportApis.gif)
+Using this function, you can easily share your existing APIs with other developers, or import to IDEA on other devices
 
 More info **[Features->APIs import and export](./feature.md#apis-import-and-export)**
 :::
 
-::: tip Add support for run APIs
+::: hint Add support for run APIs <Badge vertical="top" text="New feature" type="tip"/>
+![runInApiManagement](/img/runInApiManagement.png)
 You can run your saved requests directly in the APIs tab
 
-![runInApiManagement](/img/runInApiManagement.png)
 :::
 
-::: info Automatically generate parameter optionals
+::: hint Automatically generate parameter optionals <Badge vertical="top" text="Optimization" type="info"/>
 ![generateSwitch](/img/generateSwitch_en.png)
 :::
 
-::: info Merged Send and Send and Download buttons
-The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
+::: hint Merged Send and Send and Download buttons <Badge vertical="top" text="Optimization" type="info"/>
 ![mergeRunAndDownload](/img/mergeRunAndDownload.png)
+The buttons have been merged, because we usually use Send but not Send and Download, which reduces the number of toolbar buttons and looks simpler
 :::
 
-::: tip Swagger default value parsing support
+::: hint Swagger default value parsing support <Badge vertical="top" text="New feature" type="tip"/>
 Added the parsing of the default value of swagger annotations, which is more user-friendly of input parameters
 
 - @ApiParam(swagger2)
@@ -1144,15 +1138,15 @@ Added the parsing of the default value of swagger annotations, which is more use
 More info **[Features->swagger default value parsing support](./feature.md#swagger-default-value-parsing-support)**
 :::
 
-::: tip Optimize the user guide of features
+::: hint Optimize the user guide of features <Badge vertical="top" text="New feature" type="tip"/>
+![help](/img/help.png)
 We have added a ? option in different windows to display some guidelines. For first-time users, it's easier to operate
 
 And with the iteration of the version, more prompt operation guidelines may be added in the future
 
-![help](/img/help.png)
 :::
 
-::: info Url generation optimization
+::: hint Url generation optimization <Badge vertical="top" text="Optimization" type="info"/>
 Historical logic will only take the first url, that is, test1, considering that in actual use, it is possible that you need another url, so random support has been added.
 
 The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click <FontIcon icon="restfulFastRequest" />
@@ -1186,7 +1180,7 @@ public class MultiUrlController {
 
 :::
 
-::: info API Navigate rename to Navigate in tab  
+::: hint API Navigate rename to Navigate in tab   <Badge vertical="top" text="Optimization" type="info"/>
 In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
 :::
 
@@ -1205,7 +1199,7 @@ In the case where the tool window is relatively small, the API Navigate will be 
 - Optimize the group when save api
 - Global header params support
 
-::: tip Optimize URL parsing
+::: hint Optimize URL parsing <Badge vertical="top" text="New feature" type="tip"/>
 support parse like following example
 
 no longer need to configure the URL Replace Config separately
@@ -1239,17 +1233,17 @@ public class UrlTestController {
 
 :::
 
-::: tip Add support for export api to Postman
+::: hint Add support for export api to Postman <Badge vertical="top" text="New feature" type="tip"/>
 
 ![export2postman](/img/export2postman.gif)
 :::
 
-::: tip SearchEveryWhere show module
+::: hint SearchEveryWhere show module <Badge vertical="top" text="New feature" type="tip"/>
 
 ![searchEveryWhereModule](/img/searchEveryWhereModule.png)
 :::
 
-::: tip Optimize the group when save api
+::: hint Optimize the group when save api <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 when saving the api,it will save to a group named controller's name
@@ -1259,7 +1253,7 @@ when saving the api,it will save to a group named controller's name
 ![save2ControllerGroup](/img/save2ControllerGroup.png)
 :::
 
-::: tip Global header params support
+::: hint Global header params support <Badge vertical="top" text="New feature" type="tip"/>
 
 ![globalRequestHeader](/img/globalRequestHeader.png)
 :::
@@ -1271,7 +1265,7 @@ when saving the api,it will save to a group named controller's name
 - Optimize the parsing of enum
 - Add support for http redirect
 
-::: tip SearchEveryWhere support
+::: hint SearchEveryWhere support <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 example
@@ -1283,7 +1277,7 @@ post /save        (used for search post method)
 ![searchEveryWhere](/img/searchEveryWhere.gif)
 :::
 
-::: tip Quick view of the latest version
+::: hint Quick view of the latest version <Badge vertical="top" text="New feature" type="tip"/>
 ![whatsnewNotifcation](/img/whatsnewNotifcation.png)
 :::
 
@@ -1310,7 +1304,7 @@ post /save        (used for search post method)
 - Add project-level configuration,env and project will not change while switch project
 - Add format action icon to textEditor
 
-::: tip Add headers from response
+::: hint Add headers from response <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 if your api need token in header,you can do like this to add params to header from response
@@ -1319,7 +1313,7 @@ if your api need token in header,you can do like this to add params to header fr
 ![format](/img/quickAddHeaders.gif)
 :::
 
-::: tip Add format action icon to textEditor
+::: hint Add format action icon to textEditor <Badge vertical="top" text="New feature" type="tip"/>
 ![format](/img/format.gif)
 :::
 
@@ -1339,7 +1333,7 @@ if your api need token in header,you can do like this to add params to header fr
 - Send/sendDownload button support for custom shortcut keys
 - Fix response text not show in 2021.3
 
-::: tip send/sendDownload button support for custom shortcut keys
+::: hint send/sendDownload button support for custom shortcut keys <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 shortcut is available anywhere to trigger the event,No longer need to focus on the tool window
@@ -1348,7 +1342,7 @@ shortcut is available anywhere to trigger the event,No longer need to focus on t
 ![shortcutSendAndDownload](/img/shortcutSendAndDownload.png)
 :::
 
-::: tip Add support for filter by methodType in Api navigate
+::: hint Add support for filter by methodType in Api navigate <Badge vertical="top" text="New feature" type="tip"/>
 ![shortcutSendAndDownload](/img/methodFilter.png)
 :::
 
@@ -1365,7 +1359,7 @@ shortcut is available anywhere to trigger the event,No longer need to focus on t
 - Fix the order of json field output is disrupted
 - Move send button to toolbar and support keyboard shortcut
 
-::: tip API navigate tree
+::: hint API navigate tree <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 Select the tree and enter keywords
@@ -1377,7 +1371,7 @@ Hover the mouse to display the doc of the api
 ![apinavi](/img/apinav.gif)
 :::
 
-::: tip Headers Automatic switching
+::: hint Headers Automatic switching <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 Scenes:Multi-module projects such as SpringBoot have different header parameters in different projects and different environments.
@@ -1390,12 +1384,12 @@ Operation method：
 ![headerSwitch](/img/headerSwitch.gif)
 :::
 
-::: tip Optimize the parameter parse of @RequestParam
+::: hint Optimize the parameter parse of @RequestParam <Badge vertical="top" text="New feature" type="tip"/>
 @RequestParam parameters will be prioritized according to the alias  
 `@RequestParam("nameAlias")List<String> nameList` param name will be nameAlias
 :::
 
-::: tip Move send button to toolbar and support keyboard shortcut
+::: hint Move send button to toolbar and support keyboard shortcut <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 send request: alt =
@@ -1406,7 +1400,7 @@ Prerequisites:Tool window needs to be focused
 ![toolbarSend](/img/toolbarSend.png)
 :::
 
-::: tip Optimize tool window project and env drop-down box and layout
+::: hint Optimize tool window project and env drop-down box and layout <Badge vertical="top" text="New feature" type="tip"/>
 
 ```
 Icon p represents project
@@ -1430,22 +1424,22 @@ Icon e represents environment
 
 Without affecting the use, sometimes it will pop up "_Light files should have PSI only in one project"_.This has fixed in 2.0.6
 
-::: tip json grammar check
+::: hint json grammar check <Badge vertical="top" text="New feature" type="tip"/>
 ![json](/img/json_en.png)
 :::
 
-::: tip API group automatic association
+::: hint API group automatic association <Badge vertical="top" text="New feature" type="tip"/>
 ![apiGroup](/img/apiGroup_en.gif)
 
 Module supports quick search
 ![apiGroup](/img/moduleSearch.gif)
 :::
 
-::: tip JAX-RS support
+::: hint JAX-RS support <Badge vertical="top" text="New feature" type="tip"/>
 ![apiGroup](/img/jaxrs.gif)
 :::
 
-::: tip Show what's new  
+::: hint Show what's new   <Badge vertical="top" text="New feature" type="tip"/>
 Will only be shown once
 ![apiGroup](/img/whatsnew_en.png)
 :::

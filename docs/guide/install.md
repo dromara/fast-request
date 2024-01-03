@@ -3,10 +3,6 @@ icon: install-fill
 title: 安装
 ---
 
-::: important
-请不要安装其他类似插件，引起冲突或者数据丢失概不负责！
-:::
-
 点击安装
 
 <iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/16988"></iframe>
