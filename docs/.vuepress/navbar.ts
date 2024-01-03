@@ -33,6 +33,7 @@ export const enNavbar = navbar([
   },
   {
     text: "Contact us",
+    icon: "team",  
     link: "/en/guide/concatGroup",
     // icon: "teamwork",
   },
@@ -84,7 +85,8 @@ export const zhNavbar = navbar([
     link: "/guide/teamwork",
   },
   {
-    text: "👥 群聊",
+    text: "群聊",
+    icon: "team",
     link: "/guide/concatGroup",
   },
   {
@@ -92,11 +94,7 @@ export const zhNavbar = navbar([
     link: "/guide/faq",
   },
   {
-    text: "友链",
-    link: "/guide/link",
-  },
-  {
     text: "更多",
-    children: ["/guide/sponsorList", "/guide/activity", "/guide/java"],
+    children: ["/guide/link","/guide/sponsorList", "/guide/activity", "/guide/java"],
   },
 ]);

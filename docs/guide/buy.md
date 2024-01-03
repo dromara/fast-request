@@ -3,11 +3,7 @@ title: 购买
 icon: buy
 ---
 
-<Badge text="❤️插件的发展离不开各位开发者的支持，感谢您支持原创，支持正版️❤️" type="tip" vertical="middle"/>
-<br/>
-<Badge text="加入微信群购买享折扣，教程已放群公告" type="danger" vertical="middle"/>
-
-[加入群聊](./concatGroup.md)
+<Badge text="❤️插件的发展离不开各位开发者的支持，感谢您支持原创，支持正版️❤️" color="pink" vertical="middle"/>
 
 **购买分为 2 种方式**
 

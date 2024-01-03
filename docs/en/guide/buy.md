@@ -3,9 +3,9 @@ title: Buy Plugin
 icon: buy
 ---
 
-<Badge text="❤️Thanks for supporting the original, support official edition.❤️" type="tip" vertical="middle"/>
+<Badge text="❤️Thanks for supporting the original, support official edition.❤️" color="pink" vertical="middle"/>
 
-**Tow ways to buy**
+**Two ways to buy**
 
 - Account mode: Management via [JetBrains Account](https://account.jetbrains.com/licenses)(Recommend)
 - Email mode: Receive the license directly by email

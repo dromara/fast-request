@@ -17,11 +17,13 @@ export default hopeTheme(
     copyright: "Copyright © 2021-present Kings",
     displayFooter: true,
 
-    pageInfo: false,
+    pageInfo: false, 
+    fullscreen: true,
 
-    darkmode: "enable",
 
-    iconAssets: "//at.alicdn.com/t/c/font_2601581_144d8yxi3ht.css",
+      darkmode: "enable",
+
+    iconAssets: "//at.alicdn.com/t/c/font_2601581_d17fm4nxa97.css",
 
     locales: {
       "/": {
@@ -93,10 +95,10 @@ export default hopeTheme(
         indexName: "dromara-fast-request",
         locales: {
           "/en/": {
-            placeholder: "Search Documentation",
+            placeholder: "Search docs",
             translations: {
               button: {
-                buttonText: "Search Documentation",
+                buttonText: "Search docs",
               },
             },
           },
