@@ -19,6 +19,7 @@
     "chart.js": "^4.4.1",
     "vue": "^3.4.1",
     "vue-router": "^4.2.5",
+    "vue3-carousel": "^0.3.1",
     "vuepress": "2.0.0-rc.0",
     "vuepress-theme-hope": "2.0.0-rc.10"
   },

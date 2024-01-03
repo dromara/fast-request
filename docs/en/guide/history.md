@@ -580,9 +580,8 @@ When response contains `content-disposition:attachment`, click send will automat
 
 ::: hint Api sync <Badge vertical="top" text="New feature" type="tip"/>
 
-![apiSync](/img/2022.2.7/apiSync_en.png)
+<MyCarousel :imgList="['/img/2022.2.7/apiSync_en.png','/img/2022.2.7/apiSyncSetting_en.png']" />
 
-![apiSyncSetting](/img/2022.2.7/apiSyncSetting_en.png)
 Online Api doc sync---->[More detail](./features/apiDocSync.md)
 :::
 
@@ -709,11 +708,8 @@ If you have a Twitter account, please follow me, thank you
 
 ::: hint New logo <Badge vertical="top" text="New feature" type="tip"/>
 
-![newLogo](/img/2022.2.4/newLogo.gif)
+<MyCarousel :imgList="['/img/2022.2.4/newLogo.gif','/img/2022.2.4/newLogoConfig.png','/img/2022.2.4/newLogo.png']"/>
 
-![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
-
-![newLogo](/img/2022.2.4/newLogo.png)
 Developers can freely choose and switch the color you want in the drop-down box, and can make it moving
 
 :::

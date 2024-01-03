@@ -596,10 +596,7 @@ private String someIgnoreField ;
 
 ::: hint Api 文档同步 <Badge vertical="top" text="新功能" type="tip"/>
 
-
-![apiSync](/img/2022.2.7/apiSync.png)
-
-![apiSyncSetting](/img/2022.2.7/apiSyncSetting.png)
+<MyCarousel :imgList="['/img/2022.2.7/apiSync.png','/img/2022.2.7/apiSyncSetting.png']" />
 
 在线文档同步---->[详情](./features/apiDocSync.md)
 
@@ -732,12 +729,7 @@ Console 帮助开发者打印一些你想要的信息
 
 ::: hint 全新的 Logo <Badge vertical="top" text="新功能" type="tip"/>
 
-![newLogo](/img/2022.2.4/newLogo.gif)
-
-![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
-
-![newLogo](/img/2022.2.4/newLogo.png)
-
+<MyCarousel :imgList="['/img/2022.2.4/newLogo.gif','/img/2022.2.4/newLogoConfig.png','/img/2022.2.4/newLogo.png']"/>
 开发者可以在下拉框里面自由选择并切换你想要的颜色，并且可以让它==动起来==(性能佳)
 
 :::
