@@ -32,8 +32,10 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text="只有操作插件才生成.fastRequest目录" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
+- <Badge text="apis 弹框打开支持" type="tip"/>
 - <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Content-Disposition支持优化" type="info"/>
+- <Badge text="集合泛型解析错误" type="danger"/>
 
 ## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" />
 

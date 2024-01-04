@@ -34,8 +34,10 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Do not generate .fastRequest directory if plugin not used" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
+- <Badge text="Support open apis in popup" type="tip"/>  
 - <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
+- <Badge text="Collection generic parsing error" type="danger"/>
 
 ## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />
 

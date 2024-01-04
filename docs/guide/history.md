@@ -31,8 +31,10 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text="只有操作插件才生成.fastRequest目录" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
+- <Badge text="apis 弹框打开支持" type="tip"/>
 - <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Content-Disposition支持优化" type="info"/>
+- <Badge text="集合泛型解析错误" type="danger"/>
 
 ::: hint SearchEveryWhere 支持类名搜索 <Badge vertical="top" text="重要功能" color="orange"/>
 
@@ -50,6 +52,10 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 ![ignoreFiled](/img/2023.2.4/ignoreFiled.png)
 
 只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
+:::
+
+::: hint apis 弹框打开支持 <Badge vertical="top" text="新功能" type="tip"/>
+
 :::
 
 ::: hint SearchEveryWhere性能优化 <Badge vertical="top" text="优化" type="info"/>

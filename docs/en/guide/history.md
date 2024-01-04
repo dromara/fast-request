@@ -28,8 +28,10 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Do not generate .fastRequest directory if plugin not used" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
+- <Badge text="Support open apis in popup" type="tip"/>  
 - <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
+- <Badge text="Collection generic parsing error" type="danger"/>
 
 ::: hint SearchEveryWhere support classname search <Badge vertical="top" text="Important feature" color="orange"/>
 ![searchEveryWhere](/img/2023.2.4/searchEveryWhere_en.png)
@@ -46,6 +48,10 @@ When Project is opened by default, the .fastRequest directory will no longer be 
 ![ignoreFiled](/img/2023.2.4/ignoreFiled_en.png)
 
 Only need to add field names in the configuration to ignore target fields in the entity class.
+
+:::
+
+::: hint Support open apis in popup <Badge vertical="top" text="New feature" type="tip"/>
 
 :::
 
