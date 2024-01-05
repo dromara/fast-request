@@ -26,11 +26,13 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 ## 2023.2.4 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
 
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
-- <Badge text="Do not generate .fastRequest directory if plugin not used" color="orange"/>
+- <Badge text="Generate .fastRequest directory strategy" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
-- <Badge text="Support open apis in popup" type="tip"/>  
+- <Badge text="Apis and Navigate in popup" type="tip"/>  
 - <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
+- <Badge text="Markdown doc add return value doc" type="info"/>
+- <Badge text="Optimize API loading performance in Navigate" type="info"/>  
 - <Badge text="Collection generic parsing error" type="danger"/>
 
 ::: hint SearchEveryWhere support classname search <Badge vertical="top" text="Important feature" color="orange"/>
@@ -40,8 +42,9 @@ Support enters the class name where the Url is located to search for all APIs un
 
 :::
 
-::: hint Do not generate .fastRequest directory if plugin is not used <Badge vertical="top" text="Important feature" color="orange"/>
-When Project is opened by default, the .fastRequest directory will no longer be generated. Only the operation plugin will generate it.
+::: hint Generate .fastRequest directory strategy <Badge vertical="top" text="Important feature" color="orange"/>
+When Project is opened by default, the .fastRequest directory will no longer be generated.
+Only when you operate plugin, it will be generated.
 :::
 
 ::: hint Ignore field name parse support <Badge vertical="top" text="New feature" type="tip"/>
@@ -51,8 +54,10 @@ Only need to add field names in the configuration to ignore target fields in the
 
 :::
 
-::: hint Support open apis in popup <Badge vertical="top" text="New feature" type="tip"/>
-
+::: hint Apis and Navigate in popup <Badge vertical="top" text="New feature" type="tip"/>
+<MyCarousel :imgList="['/img/2023.2.4/apis_en.png','/img/2023.2.4/navigate_en.png']" />
+You can quickly open the Apis and Navigate window to view information through shortcut keys.
+When the window is open, press the shortcut key or ESC again to close the window.
 :::
 
 ::: hint SearchEveryWhere performance optimization <Badge vertical="top" text="Optimization" type="info"/>
@@ -72,11 +77,12 @@ Content-Disposition:attachment; filename=fastRequest.txt
 
 :::
 
-## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />
+
+## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" /> <Badge text="2023-12-20" color="SandyBrown"/>
 
 - <Badge text="JSON5 support error" type="danger"/>
 
-## 2023.2.3 <Badge text="Free trial" type="tip"/>
+## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="2023-12-19" color="SandyBrown"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
 - <Badge text="Project name drop-down box automatically switches" type="tip"/>
@@ -128,7 +134,7 @@ private String someIgnoreField ;
 
 :::
 
-## 2023.2.2 <Badge text="Free trial" type="tip"/>
+## 2023.2.2 <Badge text="Free trial" type="tip"/> <Badge text="2023-11-24" color="SandyBrown"/>
 
 - <Badge text="Markdown doc template config" type="tip"/>
 - <Badge text="JSON5 support" type="tip"/>

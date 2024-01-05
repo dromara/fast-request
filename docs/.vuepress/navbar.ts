@@ -12,14 +12,14 @@ export const enNavbar = navbar([
     icon: "featuresNew",
   },
   {
-    text: "Script",
-    link: "/en/guide/script",
-    icon: "code-box-fill",
-  },
-  {
     text: "What's New",
     link: "/en/guide/history",
     icon: "changelog",
+  },    
+  {
+    text: "Script",
+    link: "/en/guide/script",
+    icon: "code-box-fill",
   },
   {
     text: "Buy",
@@ -58,16 +58,16 @@ export const zhNavbar = navbar([
     text: "功能",
     link: "/guide/features/README.md",
     icon: "featuresNew",
+  }, 
+  {
+    text: "最新变化",
+    link: "/guide/history",
+    icon: "changelog",
   },
   {
     text: "脚本",
     link: "/guide/script",
     icon: "code-box-fill",
-  },
-  {
-    text: "最新变化",
-    link: "/guide/history",
-    icon: "changelog",
   },
   {
     text: "购买",

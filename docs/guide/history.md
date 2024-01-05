@@ -31,9 +31,11 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text="只有操作插件才生成.fastRequest目录" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
-- <Badge text="apis 弹框打开支持" type="tip"/>
+- <Badge text="Apis,Navigate弹框打开支持" type="tip"/>
 - <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Content-Disposition支持优化" type="info"/>
+- <Badge text="Markdown文档批量api导出增加返回值文档" type="info"/>
+- <Badge text="Navigate中的api加载性能优化" type="info"/>
 - <Badge text="集合泛型解析错误" type="danger"/>
 
 ::: hint SearchEveryWhere 支持类名搜索 <Badge vertical="top" text="重要功能" color="orange"/>
@@ -54,8 +56,9 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
 :::
 
-::: hint apis 弹框打开支持 <Badge vertical="top" text="新功能" type="tip"/>
-
+::: hint Apis,Navigate弹框打开支持 <Badge vertical="top" text="新功能" type="tip"/>
+<MyCarousel :imgList="['/img/2023.2.4/apis.png','/img/2023.2.4/navigate.png']" />
+可以通过快捷键快速打开 Apis 和 Navigate 窗口查看信息, 窗口打开的情况下再按快捷键或者 ESC 可以关闭窗口
 :::
 
 ::: hint SearchEveryWhere性能优化 <Badge vertical="top" text="优化" type="info"/>
@@ -73,11 +76,11 @@ Content-Disposition:attachment; filename=fastRequest.txt
 
 :::
 
-## 2023.2.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" />
+## 2023.2.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" /> <Badge text="2023-12-20" color="SandyBrown"/>
 
 - <Badge text="JSON5 支持错误" type="danger"/>
 
-## 2023.2.3 <Badge text="免费试用" type="tip"/>
+## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="2023-12-19" color="SandyBrown"/>
 
 - <Badge text="API同步至Postman" color="orange"/>
 - <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>
@@ -131,7 +134,7 @@ private String someIgnoreField ;
 
 :::
 
-## 2023.2.2 <Badge text="免费试用" type="tip"/>
+## 2023.2.2 <Badge text="免费试用" type="tip"/> <Badge text="2023-11-24" color="SandyBrown"/>
 
 - <Badge text="Markdown文档模板配置" type="tip"/>
 - <Badge text="JSON5支持" type="tip"/>
