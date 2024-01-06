@@ -57,33 +57,33 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2023.2.4推出",
+              title: "将在2024.1.1推出",
               content:
                 '<ul><li>SearchEveryWhere支持类名搜索</li><li>忽略字段名解析支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2023-2-4",
+                  link: "/guide/history.html#_2024-1-1",
                   type: "primary",
                 },
               ],
               showOnce: false,
-              key: "2023.2.4",
+              key: "2024.1.1",
             },
             {
               path: "/en",
-              title: "Coming in <b>2023.2.4</b>",
+              title: "Coming in <b>2024.1.1</b>",
               content:
                 '<ul><li>SearchEveryWhere support classname search</li><li>Ignore field name parse support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
-                  link: "/en/guide/history.html#_2023-2-4",
+                  link: "/en/guide/history.html#_2024-1-1",
                   type: "primary",
                 },
               ],
               showOnce: true,
-              key: "2023.2.4",
+              key: "2024.1.1",
             },
           ],
         },

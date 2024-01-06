@@ -36,7 +36,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Collection generic parsing error" type="danger"/>
 
 ::: hint SearchEveryWhere support classname search <Badge vertical="top" text="Important feature" color="orange"/>
-![searchEveryWhere](/img/2023.2.4/searchEveryWhere_en.png)
+![searchEveryWhere](/img/2024.1.1/searchEveryWhere_en.png)
 
 Support enters the class name where the Url is located to search for all APIs under this class.
 
@@ -48,14 +48,14 @@ Only when you operate plugin, it will be generated.
 :::
 
 ::: hint Ignore field name parse support <Badge vertical="top" text="New feature" type="tip"/>
-![ignoreFiled](/img/2023.2.4/ignoreFiled_en.png)
+![ignoreFiled](/img/2024.1.1/ignoreFiled_en.png)
 
 Only need to add field names in the configuration to ignore target fields in the entity class.
 
 :::
 
 ::: hint Apis and Navigate in popup <Badge vertical="top" text="New feature" type="tip"/>
-<MyCarousel :imgList="['/img/2023.2.4/apis_en.png','/img/2023.2.4/navigate_en.png']" />
+<MyCarousel :imgList="['/img/2024.1.1/apis_en.png','/img/2024.1.1/navigate_en.png']" />
 You can quickly open the Apis and Navigate window to view information through shortcut keys.
 When the window is open, press the shortcut key or ESC again to close the window.
 :::

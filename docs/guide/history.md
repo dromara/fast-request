@@ -40,7 +40,7 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 ::: hint SearchEveryWhere 支持类名搜索 <Badge vertical="top" text="重要功能" color="orange"/>
 
-![searchEveryWhere](/img/2023.2.4/searchEveryWhere.png)
+![searchEveryWhere](/img/2024.1.1/searchEveryWhere.png)
 
 输入 Url 所在的类名，即可搜索该类下面的所有 API
 :::
@@ -51,13 +51,13 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 :::
 
 ::: hint 忽略字段名解析支持 <Badge vertical="top" text="新功能" type="tip"/>
-![ignoreFiled](/img/2023.2.4/ignoreFiled.png)
+![ignoreFiled](/img/2024.1.1/ignoreFiled.png)
 
 只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
 :::
 
 ::: hint Apis,Navigate弹框打开支持 <Badge vertical="top" text="新功能" type="tip"/>
-<MyCarousel :imgList="['/img/2023.2.4/apis.png','/img/2023.2.4/navigate.png']" />
+<MyCarousel :imgList="['/img/2024.1.1/apis.png','/img/2024.1.1/navigate.png']" />
 可以通过快捷键快速打开 Apis 和 Navigate 窗口查看信息, 窗口打开的情况下再按快捷键或者 ESC 可以关闭窗口
 :::
 
