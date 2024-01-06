@@ -58,7 +58,7 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 ::: hint Apis,Navigate弹框打开支持 <Badge vertical="top" text="新功能" type="tip"/>
 <MyCarousel :imgList="['/img/2024.1.1/apis.png','/img/2024.1.1/navigate.png']" />
-可以通过快捷键快速打开 Apis 和 Navigate 窗口查看信息, 窗口打开的情况下再按快捷键或者 ESC 可以关闭窗口
+可以通过快捷键快速打开 Apis 和 Navigate 窗口查看信息, 窗口打开的情况下再按 ESC 可以关闭窗口
 :::
 
 ::: hint SearchEveryWhere性能优化 <Badge vertical="top" text="优化" type="info"/>

@@ -57,7 +57,7 @@ Only need to add field names in the configuration to ignore target fields in the
 ::: hint Apis and Navigate in popup <Badge vertical="top" text="New feature" type="tip"/>
 <MyCarousel :imgList="['/img/2024.1.1/apis_en.png','/img/2024.1.1/navigate_en.png']" />
 You can quickly open the Apis and Navigate window to view information through shortcut keys.
-When the window is open, press the shortcut key or ESC again to close the window.
+When the window is open, press ESC to close the window.
 :::
 
 ::: hint SearchEveryWhere performance optimization <Badge vertical="top" text="Optimization" type="info"/>
