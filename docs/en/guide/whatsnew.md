@@ -29,16 +29,16 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2023.2.4 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
+## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
 
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
-- <Badge text="Apis and Navigate in popup" type="tip"/>  
-- <Badge text="SearchEveryWhere performance optimization" type="info"/>
+- <Badge text="Apis and Navigate in popup" type="tip"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
+- <Badge text="SearchEveryWhere performance optimization" type="info"/>
+- <Badge text="API loading performance in Navigate optimization" type="info"/>
 - <Badge text="Markdown doc add return value doc" type="info"/>
-- <Badge text="Optimize API loading performance in Navigate" type="info"/>  
 - <Badge text="Collection generic parsing error" type="danger"/>
 
 ## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />

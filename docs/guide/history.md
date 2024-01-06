@@ -26,16 +26,16 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 
 
-## 2023.2.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="pink"/>
+## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="pink"/>
 
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
-- <Badge text="只有操作插件才生成.fastRequest目录" color="orange"/>
+- <Badge text=".fastRequest目录生成策略" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
 - <Badge text="Apis,Navigate弹框打开支持" type="tip"/>
-- <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Content-Disposition支持优化" type="info"/>
-- <Badge text="Markdown文档批量api导出增加返回值文档" type="info"/>
+- <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Navigate中的api加载性能优化" type="info"/>
+- <Badge text="Markdown文档批量api导出增加返回值文档" type="info"/>
 - <Badge text="集合泛型解析错误" type="danger"/>
 
 ::: hint SearchEveryWhere 支持类名搜索 <Badge vertical="top" text="重要功能" color="orange"/>
@@ -46,7 +46,7 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 :::
 
 
-::: hint 只有操作插件才生成.fastRequest目录 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint .fastRequest目录生成策略 <Badge vertical="top" text="重要功能" color="orange"/>
 默认打开 Project 不再生成.fastRequest目录，只有操作插件才生成
 :::
 
