@@ -72,6 +72,7 @@ icon: featuresNew
 - [<ColorIcon icon="restfulFastRequest" /> 项目域名快速配置](./projectLevelDomainConfig.md)
 - [<ColorIcon icon="restfulFastRequest" /> API 一览表预览](./apiPreview.md)
 - [<ColorIcon icon="class" /> Api 注释预览](./apiCommentPreview.md)
+- [<ColorIcon icon="field_dark" /> 解析策略](./parseStrategy.md)
 
 ## Script
 

@@ -77,6 +77,11 @@ Way 3: Add `@fastRequestParseIgnore` in comment
 private String someIgnoreField;
 ```
 
+Way 4: Ignore field name 
+![ignoreFiled](/img/2024.1.1/ignoreFiled_en.png)
+
+Only need to add field names in the configuration to ignore target fields in the entity class.
+
 ## S: Quick locate
 
 After getting the focus of the window or pop-up box, enter the letters to position, then use the `↑` arrow or the `↓` arrow for jump position

@@ -72,7 +72,8 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="restfulFastRequest" /> Project-level domain quick config](./projectLevelDomainConfig.md)
 - [<ColorIcon icon="restfulFastRequest" /> API list preview](./apiPreview.md)
 - [<ColorIcon icon="class" /> Api comment preview](./apiCommentPreview.md)
-
+- [<ColorIcon icon="field_dark" /> Parse strategy](./parseStrategy.md)
+- 
 ## Script
 
 - [<ColorIcon icon="scriptNew" /> Script](./script.md)
