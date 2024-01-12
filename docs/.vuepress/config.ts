@@ -11,6 +11,19 @@ export default defineUserConfig({
   shouldPrefetch: false,
   head: [
     [
+      "script",
+      {},
+      `
+        (function() {
+	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1 || location.href.indexOf('localhost') > -1) {
+           		window.location.href = 'https://api-buddy.cn';
+           		// window.location.replace("https://api-buddy.cn");
+
+           }
+        })();
+        `,
+    ],
+    [
       "link",
       {
         rel: "icon",
@@ -23,17 +36,6 @@ export default defineUserConfig({
     ],
     // ["script", { src: "/js/baidu.js" ,"async":true}],
     ["script", { src: "/js/gtag.js", async: true }],
-    [
-      "script",
-      {},
-      `
-        (function() {
-	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
-           		location.href = 'https://api-buddy.cn'
-           }
-        })();
-        `,
-    ],
     [
       "script",
       {},

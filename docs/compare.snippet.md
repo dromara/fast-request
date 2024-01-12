@@ -8,9 +8,10 @@
 
 **深度优化的领先的智能 API 调试插件**
 
-<Badge vertical="baseline" color="#FC801D">IDEA 2021.2</Badge>
-<Badge vertical="baseline" color="#21D789">人性化</Badge>
-<Badge vertical="baseline" color="#FF318C">高阶</Badge>
+<Badge vertical="baseline" color="#FC801D">IDEA 2021.2+</Badge>
+<Badge vertical="baseline" color="#45b787">人性化</Badge>
+<Badge vertical="baseline" color="#eea2a4">功能丰富</Badge>
+<Badge vertical="baseline" color="#087CFA">高阶</Badge>
 
 - [x] API 一键生成(**更加人性化的参数生成策略**)
 - [x] API 保存、管理
@@ -58,7 +59,7 @@
 
 **基础 API 调试插件**
 
-<Badge vertical="baseline" color="#FE2857">IDEA 2020.3~2021.1.3</Badge>
+<Badge vertical="baseline" color="#FC801D">IDEA 2020.3~2021.1.3</Badge>
 <Badge vertical="baseline" color="#07C3F2">基础使用</Badge>
 
 - [x] API 一键生成
