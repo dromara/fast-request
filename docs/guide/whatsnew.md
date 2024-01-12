@@ -33,6 +33,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text=".fastRequest目录生成策略" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
 - <Badge text="Apis,Navigate弹框打开支持" type="tip"/>
+- <Badge text="手动更新检测" type="tip"/>  
 - <Badge text="Content-Disposition支持优化" type="info"/>
 - <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Navigate中的api加载性能优化" type="info"/>

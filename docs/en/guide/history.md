@@ -29,6 +29,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
 - <Badge text="Apis and Navigate in popup" type="tip"/>
+- <Badge text="Manual update check" type="tip"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
 - <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="API loading performance in Navigate optimization" type="info"/>
@@ -58,6 +59,12 @@ Only need to add field names in the configuration to ignore target fields in the
 <MyCarousel :imgList="['/img/2024.1.1/apis_en.png','/img/2024.1.1/navigate_en.png']" />
 You can quickly open the Apis and Navigate window to view information through shortcut keys.
 When the window is open, press ESC to close the window.
+:::
+
+::: hint Manual update check <Badge vertical="top" text="New feature" type="tip"/>
+![manualUpdateCheck](/img/2024.1.1/manualUpdateCheck.png)
+
+Click to check for plugin updates
 :::
 
 ::: hint SearchEveryWhere performance optimization <Badge vertical="top" text="Optimization" type="info"/>

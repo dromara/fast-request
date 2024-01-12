@@ -35,6 +35,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
 - <Badge text="Apis and Navigate in popup" type="tip"/>
+- <Badge text="Manual update check" type="tip"/>  
 - <Badge text="Content-Disposition support optimization" type="info"/>
 - <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="API loading performance in Navigate optimization" type="info"/>

@@ -32,6 +32,7 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 - <Badge text=".fastRequest目录生成策略" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
 - <Badge text="Apis,Navigate弹框打开支持" type="tip"/>
+- <Badge text="手动更新检测" type="tip"/>
 - <Badge text="Content-Disposition支持优化" type="info"/>
 - <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Navigate中的api加载性能优化" type="info"/>
@@ -59,6 +60,12 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 ::: hint Apis,Navigate弹框打开支持 <Badge vertical="top" text="新功能" type="tip"/>
 <MyCarousel :imgList="['/img/2024.1.1/apis.png','/img/2024.1.1/navigate.png']" />
 可以通过快捷键快速打开 Apis 和 Navigate 窗口查看信息, 窗口打开的情况下再按 ESC 可以关闭窗口
+:::
+
+::: hint 手动更新检测 <Badge vertical="top" text="新功能" type="tip"/>
+![manualUpdateCheck](/img/2024.1.1/manualUpdateCheck.png)
+
+点击检查插件更新
 :::
 
 ::: hint SearchEveryWhere性能优化 <Badge vertical="top" text="优化" type="info"/>

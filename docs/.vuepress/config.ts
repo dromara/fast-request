@@ -15,10 +15,8 @@ export default defineUserConfig({
       {},
       `
         (function() {
-	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1 || location.href.indexOf('localhost') > -1) {
+	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
            		window.location.href = 'https://api-buddy.cn';
-           		// window.location.replace("https://api-buddy.cn");
-
            }
         })();
         `,
