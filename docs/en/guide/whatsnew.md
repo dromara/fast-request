@@ -29,7 +29,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
+## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
@@ -42,11 +42,11 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Markdown doc add return value doc" type="info"/>
 - <Badge text="Collection generic parsing error" type="danger"/>
 
-## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />
+## 2023.2.3.1 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="JSON5 support error" type="danger"/>
 
-## 2023.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" />
+## 2023.2.3 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="Sync API to Postman" type="tip"/>
 - <Badge text="Project name drop-down box automatically switches" type="tip"/>

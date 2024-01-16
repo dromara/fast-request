@@ -23,7 +23,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 :::
 
-## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing" color="pink"/>
+## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
@@ -85,7 +85,7 @@ Content-Disposition:attachment; filename=fastRequest.txt
 :::
 
 
-## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" /> <Badge text="2023-12-20" color="SandyBrown"/>
+## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="2023-12-20" color="SandyBrown"/>
 
 - <Badge text="JSON5 support error" type="danger"/>
 
@@ -163,7 +163,7 @@ JSON5 format support for Request body, JSON field comment support
 - <Badge text="Style optimization for Url textField in some themes" type="tip"/>
 - <Badge text="Project level header save error" type="danger"/>
 
-## 2023.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="LigntPink"/>
+## 2023.2.1 <Badge text="Free trial" type="tip"/>
 
 - <Badge text="UI predigestion" type="tip"/>
 - <Badge text="Support open API document in apis list" type="tip"/>

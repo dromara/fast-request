@@ -27,7 +27,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="pink"/>
+## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text=".fastRequest目录生成策略" color="orange"/>
@@ -40,7 +40,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text="Markdown文档批量api导出增加返回值文档" type="info"/>
 - <Badge text="集合泛型解析错误" type="danger"/>
 
-## 2023.2.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" />
+## 2023.2.3.1 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="JSON5 支持错误" type="danger"/>
 

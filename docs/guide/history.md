@@ -26,7 +26,7 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 
 
-## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中" color="pink"/>
+## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text=".fastRequest目录生成策略" color="orange"/>
@@ -83,7 +83,7 @@ Content-Disposition:attachment; filename=fastRequest.txt
 
 :::
 
-## 2023.2.3.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" /> <Badge text="2023-12-20" color="SandyBrown"/>
+## 2023.2.3.1 <Badge text="免费试用" type="tip"/> <Badge text="2023-12-20" color="SandyBrown"/>
 
 - <Badge text="JSON5 支持错误" type="danger"/>
 
