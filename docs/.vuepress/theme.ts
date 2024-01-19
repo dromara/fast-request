@@ -1,7 +1,7 @@
-import { getDirname, path } from "@vuepress/utils";
-import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar.js";
-import { enSidebar, zhSidebar } from "./sidebar.js";
+import {getDirname, path} from "@vuepress/utils";
+import {hopeTheme} from "vuepress-theme-hope";
+import {enNavbar, zhNavbar} from "./navbar.js";
+import {enSidebar, zhSidebar} from "./sidebar.js";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -57,13 +57,13 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2024.1.1推出",
+              title: "将在2024.1.2推出",
               content:
-                '<ul><li>SearchEveryWhere支持类名搜索</li><li>忽略字段名解析支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li>自定义工具栏</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2024-1-1",
+                  link: "/guide/history.html#_2024-1-2",
                   type: "primary",
                 },
               ],
@@ -74,11 +74,11 @@ export default hopeTheme(
               path: "/en",
               title: "Coming in <b>2024.1.1</b>",
               content:
-                '<ul><li>SearchEveryWhere support classname search</li><li>Ignore field name parse support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+                '<ul><li>Custom toolbar</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
-                  link: "/en/guide/history.html#_2024-1-1",
+                  link: "/en/guide/history.html#_2024-1-2",
                   type: "primary",
                 },
               ],

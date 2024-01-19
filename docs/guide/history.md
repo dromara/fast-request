@@ -24,9 +24,11 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 :::
 
+## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
+- <Badge text="自定义工具栏" color="orange"/>
 
 
-## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
+## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
 - <Badge text=".fastRequest目录生成策略" color="orange"/>

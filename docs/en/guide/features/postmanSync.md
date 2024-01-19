@@ -9,6 +9,10 @@ then trigger the synchronization by saving the API.
 It is also recommended to use this function to synchronize the API instead of exporting
 :::
 
+::: caution Postman API usage
+The plugin uses the Postman API to sync data. So it should be noted that Postman resource [usage](https://fastrequest.postman.co/billing/add-ons/overview) has a limit，click the link and pay attention to the **Postman API Usage** column, which can be used free of charge up to 1,000 times per month. Exceeding the quota will cause sync to fail!
+:::
+
 ![postmanSync](/img/2023.2.3/postmanSync_en.png)
 
 ## Api key

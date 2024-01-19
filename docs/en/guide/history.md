@@ -23,7 +23,11 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 :::
 
-## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
+## 2024.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
+- <Badge text="Custom toolbar" color="orange"/>
+
+
+## 2024.1.1 <Badge text="Free trial" type="tip"/>  <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>

@@ -9,6 +9,10 @@
 同时推荐使用该功能来同步api而不是导出
 :::
 
+::: caution Postman API 用量问题
+插件使用 Postman API 来同步数据，需要注意的是 Postman 同步涉及到 Postman API 的[用量](https://fastrequest.postman.co/billing/add-ons/overview)问题，点击链接需要注意 **Postman API Usage** 这一栏，每月最多免费使用 1000次。超过额度会导致同步失败！
+:::
+
 ![postmanSync](/img/2023.2.3/postmanSync.png)
 
 ## Api key
