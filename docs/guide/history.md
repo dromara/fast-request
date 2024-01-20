@@ -27,6 +27,13 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 ## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
 - <Badge text="自定义工具栏" color="orange"/>
 
+::: hint 自定义工具栏 <Badge vertical="top" text="重要功能" color="orange"/>
+
+![customToolbar](/img/2024.1.2/customToolbar.png)
+
+使用自定义工具栏，选择自己需要使用的功能，将其他功能按钮进行隐藏，设置完成需要重启 IDEA
+:::
+
 
 ## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
