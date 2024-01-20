@@ -11,6 +11,12 @@ body:
       label: Checklist
       description: Make sure that you follow these statements.
       options:
+        - label: I have updated the plugin to the **latest version**
+          required: true
+
+        - label: I have the valid **license** of **Restful Fast Request**
+          required: true
+
         - label: I searched the [Docs](https://api-buddy.com/en/guide/features/) and I did not find the feature.
           required: true
 
@@ -34,3 +40,8 @@ body:
     attributes:
       label: Additional context
       placeholder: Add any other context or screenshots about the feature request here.
+
+  - type: markdown
+    attributes:
+      value: |
+        Join our [slack](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) channel to communicate more effectively    

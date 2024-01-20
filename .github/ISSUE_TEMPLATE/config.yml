@@ -6,7 +6,7 @@ contact_links:
 
   - name: Slack
     url: https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw
-    about: Join our slack channel to talk with us.
+    about: Join our slack channel to communicate more effectively
 
   - name: 常见问题
     url: https://api-buddy.cn/guide/faq.html
@@ -14,4 +14,4 @@ contact_links:
     
   - name: 微信群技术群
     url: https://api-buddy.cn/guide/faq.html
-    about: 加入微信技术群，更快得联系作者
+    about: 加入微信技术群，更快更有效地联系作者

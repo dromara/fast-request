@@ -16,10 +16,10 @@ body:
       description: |-
         Make SURE that you follow these statements.
       options:
-        - label: I use plugin version 2021.1.4+
+        - label: I have updated the plugin to the **latest version**
           required: true
 
-        - label: I have the **license** of **Restful Fast Request**
+        - label: I have the valid **license** of **Restful Fast Request**
           required: true
 
         - label: I followed the [docs](https://api-buddy.com) and the [features](https://api-buddy.com/en/guide/features/) introduction and I double checked my configuration.
@@ -78,4 +78,4 @@ body:
   - type: markdown
     attributes:
       value: |
-        Join our [slack](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) channel to talk with us.
+        Join our [slack](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) channel to communicate more effectively

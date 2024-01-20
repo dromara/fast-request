@@ -11,7 +11,13 @@ body:
       label: 检查项
       description: 确保您遵守以下声明
       options:
-        - label: 我查阅了[功能文档](https://api-buddy.com/en/guide/features/)并且没有发现该功能
+        - label: 我已经将插件更新为**最新版**
+          required: true
+
+        - label: 我拥有有效的 **Restful Fast Request** **许可证**
+          required: true
+
+        - label: 我查阅了 [功能文档](https://api-buddy.com/en/guide/features/) 并且没有发现该功能
           required: true
 
         - label: 我搜索了现有问题，没有其他人提出类似的功能
@@ -34,3 +40,8 @@ body:
     attributes:
       label: 其他描述
       placeholder: 在此处添加有关功能请求的任何其他上下文或屏幕截图
+
+  - type: markdown
+    attributes:
+      value: |
+        更快速有效的联系作者并沟通，请加入我们的 [微信技术群](https://api-buddy.cn/guide/concatGroup.html)    
