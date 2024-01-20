@@ -1,0 +1,81 @@
+name: Bug Report【中文】
+description: 创建 bug 以帮助我们改进
+title: "[Bug]:"
+labels: [ "bug" ]
+assignees:
+  - kings1990
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **感谢您花时间填写此错误报告！**
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 检查项
+      description: |-
+        请务必遵守一下声明
+      options:
+        - label: 我已经将插件更新为最新版
+          required: true
+
+        - label: 我拥有 **Restful Fast Request** 的 **许可证**
+          required: true
+
+        - label: 我查阅了[文档](https://api-buddy.cn)以及[功能](https://api-buddy.cn/guide/features/)相关介绍，并仔细检查了我的配置。
+          required: true
+
+        - label: 我查阅 [FAQ](https://api-buddy.com/guide/faq.html) 并且不知道如何解决
+          required: true
+
+        - label: 我搜索了已关闭的Issue，但没有找到答案
+          required: true
+  - type: checkboxes
+    id: operating-systems
+    attributes:
+      label: 您使用的是以下哪个操作系统
+      options:
+        - label: macOS
+        - label: Windows
+        - label: Linux
+
+  - type: input
+    id: ideaVersion
+    attributes:
+      label: IDEA 版本号
+      value:
+    validations:
+      required: true
+  - type: input
+    id: pluginVersion
+    attributes:
+      label: 插件版本号
+      value:
+      placeholder: Restful Fast Request插件版本号
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 开始描述 Bug
+
+        > 如果可以，请添加屏幕截图或者录屏以帮助更好得解释您的问题。                
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug 详情
+      description: 对错误内容的清晰简洁的描述
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error log
+      description: 请复制并粘贴关于插件的错误日志，这将有助于我们更好地发现问题、解决问题
+
+  - type: markdown
+    attributes:
+      value: |
+        更快速的联系作者并解决问题，请加入我们的[微信技术群](https://api-buddy.cn/guide/concatGroup.html)

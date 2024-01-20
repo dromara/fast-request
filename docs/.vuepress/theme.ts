@@ -19,6 +19,8 @@ export default hopeTheme(
 
     pageInfo: false, 
     fullscreen: true,
+      editLink: false,
+      contributors: false,
 
 
       darkmode: "enable",
@@ -43,13 +45,13 @@ export default hopeTheme(
     },
 
     plugins: {
-      comment: {
-        provider: "Giscus",
-        repo: "kings1990/giscus-fastrequest",
-        repoId: "R_kgDOHLlUsg",
-        category: "fastRequest",
-        categoryId: "DIC_kwDOHLlUss4COlsW",
-      },
+      // comment: {
+      //   provider: "Giscus",
+      //   repo: "kings1990/giscus-fastrequest",
+      //   repoId: "R_kgDOHLlUsg",
+      //   category: "fastRequest",
+      //   categoryId: "DIC_kwDOHLlUss4COlsW",
+      // },
 
       components: {
         components: ["Badge", "BiliBili", "SiteInfo", "VPCard"],

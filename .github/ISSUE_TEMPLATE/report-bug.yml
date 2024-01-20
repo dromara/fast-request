@@ -1,0 +1,81 @@
+name: Bug Report
+description: Create a report to help us improve
+title: "[Bug]:"
+labels: [ "bug" ]
+assignees:
+  - kings1990
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: |-
+        Make SURE that you follow these statements.
+      options:
+        - label: I use plugin version 2021.1.4+
+          required: true
+
+        - label: I have the **license** of **Restful Fast Request**
+          required: true
+
+        - label: I followed the [docs](https://api-buddy.com) and the [features](https://api-buddy.com/en/guide/features/) introduction and I double checked my configuration.
+          required: true
+
+        - label: I have searched [FAQ](https://api-buddy.com/guide/faq.html) and I did not find the answer.
+          required: true
+
+        - label: I have searched closed issue and I did not find the answer.
+          required: true
+  - type: checkboxes
+    id: operating-systems
+    attributes:
+      label: Which operating system are you using?
+      options:
+        - label: macOS
+        - label: Windows
+        - label: Linux
+
+  - type: input
+    id: ideaVersion
+    attributes:
+      label: IDEA version
+      value:
+    validations:
+      required: true
+  - type: input
+    id: pluginVersion
+    attributes:
+      label: Plugin version
+      value:
+      placeholder: version of Restful Fast Request
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Describe the bug
+
+        > If applicable, add screenshots or record screen to help explain your problem.                
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error log
+      description: Please copy and paste the error log of plugin. This will help us better to find and solve problems
+
+  - type: markdown
+    attributes:
+      value: |
+        Join our [slack](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) channel to talk with us.

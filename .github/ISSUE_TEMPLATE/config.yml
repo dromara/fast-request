@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: FAQ
+    url: https://api-buddy.com/en/guide/faq.html
+    about: Please refer to FAQ for some known questions
+
+  - name: Slack
+    url: https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw
+    about: Join our slack channel to talk with us.
+
+  - name: 常见问题
+    url: https://api-buddy.cn/guide/faq.html
+    about: 查阅 FAQ 获取一些已知问题的解决方案
+    
+  - name: 微信群技术群
+    url: https://api-buddy.cn/guide/faq.html
+    about: 加入微信技术群，更快得联系作者
