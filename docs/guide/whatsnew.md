@@ -27,6 +27,12 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+- <Badge text="点击send and download无响应" type="danger"/>
+
+## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
+- <Badge text="自定义工具栏" color="orange"/>
+
 ## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>

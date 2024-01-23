@@ -24,7 +24,11 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 :::
 
-## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
+## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+- <Badge text="点击send and download无响应" type="danger"/>
+
+
+## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
 - <Badge text="自定义工具栏" color="orange"/>
 
 ::: hint 自定义工具栏 <Badge vertical="top" text="重要功能" color="orange"/>
