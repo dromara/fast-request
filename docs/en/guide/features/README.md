@@ -6,27 +6,26 @@ icon: featuresNew
 
 The icon in the document corresponds to the button icon in the plugin
 
-![toolwindow](/img/toolwindowNew.png)
+![toolwindow](/img/toolwindowNew_en.png)
 
 ## Request
 
 - [<ColorIcon icon="restfulFastRequest" /> Make icon move](./makeIconMove.md)
 - [<ColorIcon icon="domainConfigNew" /> Project-level domain config](./projectLevelDomainConfig.md)
 - [<ColorIcon icon="environment" /> Environment](./environment.md)
-- [<ColorIcon icon="rcd-refresh" /> Project config refresh](./projectConfigRefresh.md)
 - [<ColorIcon icon="quanjucanshu" /> Project-level config](./projectValueConfig.md)
 - [<ColorIcon icon="searchApi" /> SearchEveryWhere](./searchEveryWhere.md)
-- [<ColorIcon icon="apiParamGroupNew" /> API group toggle](./apiGroup.md)
 - [<ColorIcon icon="sendNew" /> Debug API & send request](./debugApi.md)
 - [<ColorIcon icon="sendDownloadNew" /> Download file](./downloadApi.md)
 - [<ColorIcon icon="stop" /> Stop API request](./stopRequest.md)
-- [<ColorIcon icon="localScope" /> Navigate to current method](./navigateCurrentMethod.md)
-- [<ColorIcon icon="storeData" /> Navigate current method stored data](./navigateCurrentMethodJson.md)
 - [<ColorIcon icon="save" /> Save request](./saveRequest.md)
 - [<ColorIcon icon="saveGroup" /> Save API group](./apiGroup.md)
 - [<ColorIcon icon="saveTemp" /> Temporary request](./tempRequest.md)
-- [<ColorIcon icon="regenerate" /> Re generate](./regenerate.md)
 - [<ColorIcon icon="postmanNew" /> Postman sync](./postmanSync.md)
+- [<ColorIcon icon="apiParamGroupNew" /> API group toggle](./apiGroup.md)
+- [<ColorIcon icon="locate" /> Navigate to current method](./navigateCurrentMethod.md)
+- [<ColorIcon icon="storeData" /> Navigate current method stored data](./navigateCurrentMethodJson.md) 
+- [<ColorIcon icon="regenerate" /> Re generate](./regenerate.md)
 - [<ColorIcon icon="clearNew" /> Clear](./clear.md)
 - [<ColorIcon icon="import" /> cURL import](./curlImport.md)
 - [<ColorIcon icon="curl1" /> cURL copy](./copyCurl.md)
@@ -35,9 +34,14 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API document sync](./apiDocSync.md)
 - [<ColorIcon icon="markdown" /> API document share](./shareApiDoc.md)
 - [<ColorIcon icon="settings" /> Markdown doc template config](./markdownDocTemplateConfig.md)
+- [<ColorIcon icon="rcd-refresh" /> Project config refresh](./projectConfigRefresh.md)
+- [<ColorIcon icon="analyseNew" /> Annual report](./annualReport.md)
+- [<ColorIcon icon="customToolbar" /> Custom toolbar](./customToolbar.md)
+
+---
+
 - [<ColorIcon icon="settings" /> Setting manager](./settingManager.md)
 - [<ColorIcon icon="fullScreen" /> Full screen](./fullScreen.md)
-- [<ColorIcon icon="analyseNew" /> Annual report](./annualReport.md)
 - [<ColorIcon icon="doc" /> Document / Contact](./docAndContact.md)
 - [<ColorIcon icon="license" /> EULA](../eula.md)
 
@@ -60,7 +64,7 @@ The icon in the document corresponds to the button icon in the plugin
 
 ## Navigate
 
-- [<ColorIcon icon="localScope" /> API navigate tree](./apiNavigateTree.md)
+- [<ColorIcon icon="locateNavigate" /> API navigate tree](./apiNavigateTree.md)
 
 ## Generate
 
@@ -73,7 +77,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="restfulFastRequest" /> API list preview](./apiPreview.md)
 - [<ColorIcon icon="class" /> Api comment preview](./apiCommentPreview.md)
 - [<ColorIcon icon="field_dark" /> Parse strategy](./parseStrategy.md)
-- 
+
 ## Script
 
 - [<ColorIcon icon="scriptNew" /> Script](./script.md)

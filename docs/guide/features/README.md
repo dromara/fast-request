@@ -13,20 +13,19 @@ icon: featuresNew
 - [<ColorIcon icon="restfulFastRequest" /> 让图标动起来](./makeIconMove.md)
 - [<ColorIcon icon="domainConfigNew" /> 项目域名配置](./projectLevelDomainConfig.md)
 - [<ColorIcon icon="environment" /> Environment](./environment.md)
-- [<ColorIcon icon="rcd-refresh" /> 项目配置刷新](./projectConfigRefresh.md)
 - [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](./projectValueConfig.md)
 - [<ColorIcon icon="searchApi" /> SearchEveryWhere](./searchEveryWhere.md)
-- [<ColorIcon icon="apiParamGroupNew" /> API 分组切换](./apiGroup.md)
 - [<ColorIcon icon="sendNew" /> 调试 API 发送请求](./debugApi.md)
 - [<ColorIcon icon="sendDownloadNew" /> 下载文件](./downloadApi.md)
 - [<ColorIcon icon="stop" /> 终止 API 请求功能](./stopRequest.md)
-- [<ColorIcon icon="localScope" /> 当前方法定位](./navigateCurrentMethod.md)
-- [<ColorIcon icon="storeData" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
 - [<ColorIcon icon="save" /> 保存请求](./saveRequest.md)
 - [<ColorIcon icon="saveGroup" /> API 分组保存](./apiGroup.md)
 - [<ColorIcon icon="saveTemp" /> 临时请求](./tempRequest.md)
 - [<ColorIcon icon="postmanNew" /> Postman同步](./postmanSync.md)
-- [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md)
+- [<ColorIcon icon="apiParamGroupNew" /> API 分组切换](./apiGroup.md)
+- [<ColorIcon icon="locate" /> 当前方法定位](./navigateCurrentMethod.md)
+- [<ColorIcon icon="storeData" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
+- [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md) 
 - [<ColorIcon icon="clearNew" /> 清除](./clear.md)
 - [<ColorIcon icon="import" /> cURL 导入](./curlImport.md)
 - [<ColorIcon icon="curl1" /> cURL 拷贝](./copyCurl.md)
@@ -35,9 +34,14 @@ icon: featuresNew
 - [<ColorIcon icon="github" /> <ColorIcon icon="gitee" /> <ColorIcon icon="gitlab" /> API 文档同步](./apiDocSync.md)
 - [<ColorIcon icon="markdown" /> API 文档分享](./shareApiDoc.md)
 - [<ColorIcon icon="settings" /> Markdown文档模板配置](./markdownDocTemplateConfig.md)
+- [<ColorIcon icon="rcd-refresh" /> 项目配置刷新](./projectConfigRefresh.md)
+- [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md) 
+- [<ColorIcon icon="customToolbar" /> 自定义工具栏](./customToolbar.md)
+
+---
+
 - [<ColorIcon icon="settings" /> 管理配置](./settingManager.md)
 - [<ColorIcon icon="fullScreen" /> 全屏](./fullScreen.md)
-- [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md)
 - [<ColorIcon icon="doc" /> 文档/快速联系](./docAndContact.md)
 - [<ColorIcon icon="license" /> EULA](../eula.md)
 
@@ -53,14 +57,14 @@ icon: featuresNew
 
 ## Apis
 
-- [<ColorIcon icon="localScope" /> API 列表](./apiList.md)
+- [<ColorIcon icon="apis" /> API 列表](./apiList.md)
 - [<ColorIcon icon="postman" /> API 导出到 Postman](./apiToPostman.md)
 - [<ColorIcon icon="export" /> APIs 导入导出](./apiImportExport.md)
 - [<ColorIcon icon="markdown" /> 批量导出 API 文档](./batchExportApiDoc.md)
 
 ## Navigate
 
-- [<ColorIcon icon="localScope" /> API 导航树](./apiNavigateTree.md)
+- [<ColorIcon icon="locateNavigate" /> API 导航树](./apiNavigateTree.md)
 
 ## Generate
 
