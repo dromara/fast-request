@@ -23,7 +23,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 :::
 
-## 2024.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
+## 2024.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/> 
 - <Badge text="Custom toolbar" color="orange"/>
 
 
