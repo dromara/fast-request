@@ -1,8 +1,11 @@
 # Parse strategy
+
 ## Data mapping
+
 [Learn more](../getstarted/dataMapping.md)
 
 ## How to ignore the field
+
 Way 1: Use one of the following 2 annotations.
 
 ```

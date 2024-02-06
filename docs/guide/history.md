@@ -14,8 +14,8 @@ icon: changelog
 Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 | ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-|---------------------------------------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechat group](/img/wechatGroup.png)                                                       | ![twitter](/img/twitter.png)                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![wechat group](/img/wechatGroup.png)                                                                    | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 欢迎关注官方 Twitter                                                                                                                              |
 
 ---
@@ -25,10 +25,11 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 :::
 
 ## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+
 - <Badge text="点击send and download无响应" type="danger"/>
 
-
 ## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
+
 - <Badge text="自定义工具栏" color="orange"/>
 
 ::: hint 自定义工具栏 <Badge vertical="top" text="重要功能" color="orange"/>
@@ -37,7 +38,6 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 使用自定义工具栏，选择自己需要使用的功能，将其他功能按钮进行隐藏，设置完成需要重启 IDEA
 :::
-
 
 ## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
@@ -58,7 +58,6 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 输入 Url 所在的类名，即可搜索该类下面的所有 API
 :::
-
 
 ::: hint .fastRequest目录生成策略 <Badge vertical="top" text="重要功能" color="orange"/>
 默认打开 Project 不再生成.fastRequest目录，只有操作插件才生成
@@ -373,7 +372,6 @@ public Set<String> test3(@RequestBody Set<String>set) {
 
 从原先按钮容易挡住文本的位置移至编辑器右上角
 
-
 :::
 
 ::: caution SearchEveryWhere 样式错乱
@@ -545,11 +543,9 @@ url 输入框点击回车，自动发送请求
 
 ::: hint 项目级别域名配置 <Badge vertical="top" text="新功能" type="tip"/>
 
-
 ![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig.png "域名配置")
 
 ![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog.png "域名列表")
-
 
 支持直接从`yml`和`properties`配置文件快速配置域名，更多详情请查看 [<ColorIcon icon="domainConfig" /> 项目域名配置](./features/projectLevelDomainConfig.md)
 :::
@@ -798,7 +794,6 @@ Console 帮助开发者打印一些你想要的信息
 
 脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理  
 具体请参考-------> [脚本](./script.md)
-
 
 :::
 
@@ -1282,7 +1277,7 @@ public class MultiUrlController {
 
 :::
 
-::: hint Tab 页 API Navigate 重命名 Navigate   <Badge vertical="top" text="优化" type="info"/>
+::: hint Tab 页 API Navigate 重命名 Navigate <Badge vertical="top" text="优化" type="info"/>
 在工具窗口比较小的情况下，API Navigate 会被隐藏，为了在尽可能小的工具窗口展示更多内容，所以命名更加简短
 :::
 
@@ -1538,7 +1533,7 @@ send and download: alt -
 ![apiGroup](/img/jaxrs.gif)
 :::
 
-::: hint 最新功能展示   <Badge vertical="top" text="新功能" type="tip"/>
+::: hint 最新功能展示 <Badge vertical="top" text="新功能" type="tip"/>
 只会展示一次
 ![apiGroup](/img/whatsnew.png)
 :::

@@ -24,7 +24,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="postmanNew" /> Postman sync](./postmanSync.md)
 - [<ColorIcon icon="apiParamGroupNew" /> API group toggle](./apiGroup.md)
 - [<ColorIcon icon="locate" /> Navigate to current method](./navigateCurrentMethod.md)
-- [<ColorIcon icon="storeData" /> Navigate current method stored data](./navigateCurrentMethodJson.md) 
+- [<ColorIcon icon="storeData" /> Navigate current method stored data](./navigateCurrentMethodJson.md)
 - [<ColorIcon icon="regenerate" /> Re generate](./regenerate.md)
 - [<ColorIcon icon="clearNew" /> Clear](./clear.md)
 - [<ColorIcon icon="import" /> cURL import](./curlImport.md)

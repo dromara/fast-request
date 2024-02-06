@@ -7,7 +7,7 @@ withDefaults(
   {
     mode: "horizontal",
     content: "",
-  }
+  },
 );
 </script>
 

@@ -3,6 +3,7 @@
 Version required: <Badge text="2.0.7"/>
 
 ::: tip
+
 1. Select the tree, enter keywords, and press Enter again or double-click the left mouse button to locate the API.
 
 2. Hover the mouse to display the doc of the API.

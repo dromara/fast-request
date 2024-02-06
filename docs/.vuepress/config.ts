@@ -73,7 +73,7 @@ export default defineUserConfig({
   alias: {
     "@theme-hope/layouts/Layout": path.resolve(
       __dirname,
-      "./layouts/Layout.vue"
+      "./layouts/Layout.vue",
     ),
     // "@theme-hope/components/HomePage": path.resolve(
     //     __dirname,

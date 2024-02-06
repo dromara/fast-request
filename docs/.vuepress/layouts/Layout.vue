@@ -54,7 +54,7 @@ ${sidebarTopArray.slice(0, 4).join("\n  ")}
   </span>
 </div>
 `;
-  }
+  },
 );
 </script>
 <template>
