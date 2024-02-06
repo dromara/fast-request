@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { usePageData, usePageFrontmatter } from "@vuepress/client";
+import { usePageData, usePageFrontmatter } from "vuepress/client";
 import { ref, watch } from "vue";
 
 import CommonWrapper from "@theme-hope/components/CommonWrapper";
@@ -54,7 +54,7 @@ ${sidebarTopArray.slice(0, 4).join("\n  ")}
   </span>
 </div>
 `;
-  },
+  }
 );
 </script>
 <template>

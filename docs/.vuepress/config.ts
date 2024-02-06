@@ -1,7 +1,9 @@
-import {getDirname, path} from "@vuepress/utils";
-import {defineUserConfig} from "vuepress";
+import { container } from "@mdit/plugin-container";
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
+import { getDirname, path } from "vuepress/utils";
+
 import theme from "./theme.js";
-import {container} from "@mdit/plugin-container";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -15,9 +17,9 @@ export default defineUserConfig({
       {},
       `
         (function() {
-	       if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
-           		window.location.href = 'https://api-buddy.cn';
-           }
+          if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
+            window.location.href = 'https://api-buddy.cn';
+          }
         })();
         `,
     ],
@@ -62,6 +64,8 @@ export default defineUserConfig({
     },
   },
 
+  bundler: viteBundler(),
+
   theme,
 
   pagePatterns: ["**/*.md", "!*.snippet.md", "!.vuepress", "!node_modules"],
@@ -69,7 +73,7 @@ export default defineUserConfig({
   alias: {
     "@theme-hope/layouts/Layout": path.resolve(
       __dirname,
-      "./layouts/Layout.vue",
+      "./layouts/Layout.vue"
     ),
     // "@theme-hope/components/HomePage": path.resolve(
     //     __dirname,
@@ -90,13 +94,13 @@ export default defineUserConfig({
       openRender: (tokens, index, _options) => {
         const info = tokens[index].info.trim().slice(4).trim();
         let style = "background:#262626";
+
         if (info.indexOf("style") > -1) {
           style = info.split("style=")[1].split('"')[1];
         }
-        const title = info.replace('style="'+style+'"',"") || 'Hint';
+
+        const title = info.replace('style="' + style + '"', "") || "Hint";
         return `<div class="custom-container hint" style="${style}">\n<p class="custom-container-title">${title}</p>\n`;
-        
-        
       },
     });
   },
