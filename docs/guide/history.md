@@ -24,6 +24,11 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 :::
 
+## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/>
+- <Badge text="AI支持优化" color="orange"/>
+- <Badge text="超大响应结果性能优化" type="info"/>
+- <Badge text="Map入参类型解析优化" type="info"/>
+
 ## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
 
 - <Badge text="点击send and download无响应" type="danger"/>
