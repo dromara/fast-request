@@ -15,7 +15,7 @@ export const enNavbar = navbar([
     text: "What's New",
     link: "/en/guide/history",
     icon: "changelog",
-  },    
+  },
   {
     text: "Script",
     link: "/en/guide/script",
@@ -33,7 +33,7 @@ export const enNavbar = navbar([
   },
   {
     text: "Contact us",
-    icon: "team",  
+    icon: "team",
     link: "/en/guide/concatGroup",
     // icon: "teamwork",
   },
@@ -58,7 +58,7 @@ export const zhNavbar = navbar([
     text: "功能",
     link: "/guide/features/README.md",
     icon: "featuresNew",
-  }, 
+  },
   {
     text: "最新变化",
     link: "/guide/history",
@@ -95,6 +95,11 @@ export const zhNavbar = navbar([
   },
   {
     text: "更多",
-    children: ["/guide/link","/guide/sponsorList", "/guide/activity", "/guide/java"],
+    children: [
+      "/guide/link",
+      "/guide/sponsorList",
+      "/guide/activity",
+      "/guide/java",
+    ],
   },
 ]);

@@ -14,9 +14,9 @@ icon: whats-new
 Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 | ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechat group](/img/wechatGroup.png)                                                        | ![twitter](/img/twitter.png)                                                                                                                      |
-| 如果扫码失败请直接搜微信号==FastRequest99==                                                  | 欢迎关注官方 Twitter                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![wechat group](/img/wechatGroup.png)                                                                    | ![twitter](/img/twitter.png)                                                                                                                      |
+| 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 欢迎关注官方 Twitter                                                                                                                              |
 
 ---
 
@@ -28,9 +28,11 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 [**务必查看变更详情----------------->**](./history.md)
 
 ## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+
 - <Badge text="点击send and download无响应" type="danger"/>
 
 ## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
+
 - <Badge text="自定义工具栏" color="orange"/>
 
 ## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
@@ -39,7 +41,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text=".fastRequest目录生成策略" color="orange"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
 - <Badge text="Apis,Navigate弹框打开支持" type="tip"/>
-- <Badge text="手动更新检测" type="tip"/>  
+- <Badge text="手动更新检测" type="tip"/>
 - <Badge text="Content-Disposition支持优化" type="info"/>
 - <Badge text="SearchEveryWhere性能优化" type="info"/>
 - <Badge text="Navigate中的api加载性能优化" type="info"/>

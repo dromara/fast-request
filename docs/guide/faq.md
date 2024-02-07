@@ -75,6 +75,7 @@ com.alibaba.fastjson.annotation.JSONField(serialize = false)
  */
 private String someIgnoreField ;
 ```
+
 方式 4: 忽略字段名解析配置
 
 ![ignoreFiled](/img/2024.1.1/ignoreFiled.png)

@@ -1,7 +1,7 @@
-import {getDirname, path} from "@vuepress/utils";
-import {hopeTheme} from "vuepress-theme-hope";
-import {enNavbar, zhNavbar} from "./navbar.js";
-import {enSidebar, zhSidebar} from "./sidebar.js";
+import { getDirname, path } from "vuepress/utils";
+import { hopeTheme } from "vuepress-theme-hope";
+import { enNavbar, zhNavbar } from "./navbar.js";
+import { enSidebar, zhSidebar } from "./sidebar.js";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -17,13 +17,12 @@ export default hopeTheme(
     copyright: "Copyright © 2021-present Kings",
     displayFooter: true,
 
-    pageInfo: false, 
+    pageInfo: false,
     fullscreen: true,
-      editLink: false,
-      contributors: false,
+    editLink: false,
+    contributors: false,
 
-
-      darkmode: "enable",
+    darkmode: "enable",
 
     iconAssets: "//at.alicdn.com/t/c/font_2601581_d17fm4nxa97.css",
 
@@ -110,9 +109,9 @@ export default hopeTheme(
       mdEnhance: {
         align: true,
         chart: true,
-        card: true,
         codetabs: true,
-        container: true,
+        component: true,
+        hint: true,
         imgLazyload: true,
         imgSize: true,
         include: {

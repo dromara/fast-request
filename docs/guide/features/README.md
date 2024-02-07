@@ -25,7 +25,7 @@ icon: featuresNew
 - [<ColorIcon icon="apiParamGroupNew" /> API 分组切换](./apiGroup.md)
 - [<ColorIcon icon="locate" /> 当前方法定位](./navigateCurrentMethod.md)
 - [<ColorIcon icon="storeData" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
-- [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md) 
+- [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md)
 - [<ColorIcon icon="clearNew" /> 清除](./clear.md)
 - [<ColorIcon icon="import" /> cURL 导入](./curlImport.md)
 - [<ColorIcon icon="curl1" /> cURL 拷贝](./copyCurl.md)
@@ -35,7 +35,7 @@ icon: featuresNew
 - [<ColorIcon icon="markdown" /> API 文档分享](./shareApiDoc.md)
 - [<ColorIcon icon="settings" /> Markdown文档模板配置](./markdownDocTemplateConfig.md)
 - [<ColorIcon icon="rcd-refresh" /> 项目配置刷新](./projectConfigRefresh.md)
-- [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md) 
+- [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md)
 - [<ColorIcon icon="customToolbar" /> 自定义工具栏](./customToolbar.md)
 
 ---

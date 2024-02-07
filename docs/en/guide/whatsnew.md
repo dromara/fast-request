@@ -30,9 +30,11 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 ## 2024.1.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+
 - <Badge text="No response when click send and download" type="danger"/>
 
-## 2024.1.2 <Badge text="Free trial" type="tip"/>  color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
+## 2024.1.2 <Badge text="Free trial" type="tip"/> color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
+
 - <Badge text="Custom toolbar" color="orange"/>
 
 ## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
@@ -41,7 +43,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
 - <Badge text="Apis and Navigate in popup" type="tip"/>
-- <Badge text="Manual update check" type="tip"/>  
+- <Badge text="Manual update check" type="tip"/>
 - <Badge text="Content-Disposition support optimization" type="info"/>
 - <Badge text="SearchEveryWhere performance optimization" type="info"/>
 - <Badge text="API loading performance in Navigate optimization" type="info"/>

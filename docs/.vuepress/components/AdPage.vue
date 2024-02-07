@@ -1,14 +1,14 @@
 <script setup lang="ts">
-defineProps({
-  mode: {
-    type: String,
-    default: "horizontal",
+withDefaults(
+  defineProps<{
+    mode?: string;
+    content?: string;
+  }>(),
+  {
+    mode: "horizontal",
+    content: "",
   },
-  content: {
-    type: String,
-    default: "",
-  },
-});
+);
 </script>
 
 <template>

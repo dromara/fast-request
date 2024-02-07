@@ -8,7 +8,6 @@ icon: changelog
 
 [**Paid vs Free->**](./versionCompare.md) ｜ [**Buy plugin**](./buy.md)
 
-
 Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
@@ -24,9 +23,11 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 :::
 
 ## 2024.1.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+
 - <Badge text="No response when click send and download" type="danger"/>
 
-## 2024.1.2 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/> 
+## 2024.1.2 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
+
 - <Badge text="Custom toolbar" color="orange"/>
 
 ::: hint Custom toolbar <Badge vertical="top" text="Important feature" color="orange"/>
@@ -36,7 +37,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 Using the custom toolbar option, select the functionalities you want to use and hide other function buttons. Then restart IDEA.
 :::
 
-## 2024.1.1 <Badge text="Free trial" type="tip"/>  <Badge text="2024-01-15" color="SandyBrown"/>
+## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
@@ -96,7 +97,6 @@ Content-Disposition:attachment; filename=fastRequest.txt
 ```
 
 :::
-
 
 ## 2023.2.3.1 <Badge text="Free trial" type="tip"/> <Badge text="2023-12-20" color="SandyBrown"/>
 
@@ -459,7 +459,7 @@ Support custom branch, as in some cases the 'master' branch is protected and doe
 
 1. Add vertical toolbar support.
 2. Button position adjustment
-:::
+   :::
 
 ::: hint GET、POST、DELETE、PUT、PATCH icon <Badge vertical="top" text="Optimization" type="info"/>
 
@@ -661,7 +661,6 @@ Note that the previous version of the update will still be a pop-up dialog, this
 
 ![clear](/img/2022.2.6/clear.png)
 clear all
-
 
 ![clearColumnValue](/img/2022.2.6/clearColumnValue.png)
 batch clean column value
@@ -1068,7 +1067,6 @@ Optimized the need to manually switch the project drop-down box for the saved ap
 
 ::: hint Add support for one click to add cookie to header <Badge vertical="top" text="New feature" type="tip"/>
 
-
 ![addCookie2Header](/img/addCookie2Header.png)
 For those that require cookie support for login, you can quickly add the cookie in the response to the Header to achieve this
 :::
@@ -1208,7 +1206,7 @@ public class MultiUrlController {
 
 :::
 
-::: hint API Navigate rename to Navigate in tab   <Badge vertical="top" text="Optimization" type="info"/>
+::: hint API Navigate rename to Navigate in tab <Badge vertical="top" text="Optimization" type="info"/>
 In the case where the tool window is relatively small, the API Navigate will be hidden. In order to display more content in the smallest tool window as possible, the name is shorter.
 :::
 
@@ -1467,7 +1465,7 @@ Module supports quick search
 ![apiGroup](/img/jaxrs.gif)
 :::
 
-::: hint Show what's new   <Badge vertical="top" text="New feature" type="tip"/>
+::: hint Show what's new <Badge vertical="top" text="New feature" type="tip"/>
 Will only be shown once
 ![apiGroup](/img/whatsnew_en.png)
 :::
