@@ -4,23 +4,18 @@ icon: changelog
 ---
 
 ::: important Announcement
-**2022.1.4+** is free trial version, you will have a 30 days free trial, if you want to compare the difference from free and paid version, you can see the release log from 2022.1.4+.
+[**Paid vs Free**](./versionCompare.md) ｜ [**Buy plugin**](./buy.md)
 
-[**Paid vs Free->**](./versionCompare.md) ｜ [**Buy plugin**](./buy.md)
-
-Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
+Issue report please refer to [Github](https://github.com/dromara/fast-request/issues)
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 | [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![slack](/img/slack.png)                                                                                                                                                                                         | ![twitter](/img/twitter.png)                                                                                                                      |
-
----
-
-**Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
-
 :::
+
+> **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>
 - <Badge text="AI support optimization" color="orange"/>

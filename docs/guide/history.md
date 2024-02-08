@@ -5,24 +5,20 @@ icon: changelog
 
 ::: important 公告
 
-插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金)，对比氪金版和免费有什么更强大的功能，只需要看更新日志2021.1.4+的，或者简单看一下以下的对比。
+[**收费版 VS 免费版**](./versionCompare.md)
 
-[**收费版 VS 免费版->**](./versionCompare.md)
+购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**，Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
-购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**
 
-Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 | ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![wechat group](/img/wechatGroup.png)                                                                    | ![twitter](/img/twitter.png)                                                                                                                      |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 欢迎关注官方 Twitter                                                                                                                              |
 
----
-
-**由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
-
 :::
+
+> **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
 ## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/>
 - <Badge text="AI支持优化" color="orange"/>

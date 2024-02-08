@@ -3,6 +3,18 @@ title: Get started
 icon: start1
 ---
 
+<VPBanner
+content="If you are already familiar with the basic operations of Fast Request, you can go directly to the features page."
+background="url('/img/banner/bg1.svg') no-repeat -2100px -80px"
+color="#eee"
+:actions='[
+{
+text: "功能",
+link:"/guide/features/",
+}
+]'
+/>
+
 ::: tabs
 
 @tab Paid version
