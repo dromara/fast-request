@@ -12,6 +12,14 @@ icon: faq
 
 [[toc]]
 
+## S: Slow operations are prohibited on EDT
+`Slow operations are prohibited on EDT` error.
+
+Fill into the keywords `ide.slow.operations.assertion` in **SearchEveryWhere** and uncheck them like following. 
+
+![slowOperationsConfig](/img/faq/slowOperationsConfig.png)
+
+
 ## S: Send button is disabled, but there is no notification message
 
 You need to manually turn on the notification message. If notification messages are not turned on, many messages cannot be displayed, so IDEA's message notification settings need to be configured. Other situations are handled similarly.

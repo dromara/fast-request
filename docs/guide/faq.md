@@ -12,6 +12,13 @@ icon: faq
 
 [[toc]]
 
+## S: Slow operations are prohibited on EDT
+报错`Slow operations are prohibited on EDT`相关错误。
+
+在 SearchEveryWhere 中输入关键字 `ide.slow.operations.assertion` ,并将下图所示的关闭。
+
+![slowOperationsConfig](/img/faq/slowOperationsConfig.png)
+
 ## S: 发送按钮被禁用,但是没有任何提示
 
 需要手动开启通知消息。如果通知消息不开启,很多提示都不能被展现,所以需要配置 IDEA 的消息通知设置。其他情况类同处理。
