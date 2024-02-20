@@ -33,6 +33,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Performance optimization for large response results" type="info"/>
 - <Badge text="Map type parse optimization" type="info"/>
+- <Badge text="Download does not respond in Windows system" type="danger"/>
 
 ## 2024.1.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
 
