@@ -26,6 +26,14 @@ icon: changelog
 - <Badge text="Map入参类型解析优化" type="info"/>
 - <Badge text="windows系统下载文件无响应" type="danger"/>
 
+::: hint AI支持优化 <Badge vertical="top" text="Important feature" color="orange"/>
+<MyCarousel :imgList="['/img/2024.1.3/aiManagenemt.png','/img/2024.1.3/aiPromptEdit.png','/img/2024.1.3/aiPromptChoose.png']" />
+
+增加了 OpenAi、CodeGeeX、自定义三种形式的 AI 支持，通过可配置化的指令，可将选中的文本替换成目标文本。
+
+可以在 `Body -> JSON`, `Body -> Form URL-Encoded -> Text`,`URL Params -> Text` 3个 Tab 下操作。
+:::
+
 ## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
 
 - <Badge text="点击send and download无响应" type="danger"/>

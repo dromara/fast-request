@@ -23,6 +23,14 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Map type parse optimization" type="info"/>
 - <Badge text="Download does not respond in Windows system" type="danger"/>
 
+::: hint AI support optimization <Badge vertical="top" text="Important feature" color="orange"/>
+<MyCarousel :imgList="['/img/2024.1.3/aiManagenemt_en.png','/img/2024.1.3/aiPromptEdit_en.png','/img/2024.1.3/aiPromptChoose_en.png']" />
+
+Added three forms of AI support: OpenAi, CodeGeeX, and Private deployment AI. Through prompt, selected text can be replaced with another text 
+
+AI action has added the following tabs: `Body -> JSON`, `Body -> Form URL-Encoded -> Text`,`URL Params -> Text`
+:::
+
 ## 2024.1.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
 
 - <Badge text="No response when click send and download" type="danger"/>

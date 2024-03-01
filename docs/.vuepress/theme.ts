@@ -58,33 +58,33 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2024.1.2推出",
+              title: "将在2024.1.3推出",
               content:
-                '<ul><li>自定义工具栏</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li>AI支持优化</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2024-1-2",
-                  type: "primary",
-                },
-              ],
-              showOnce: false,
-              key: "2024.1.1",
-            },
-            {
-              path: "/en",
-              title: "Coming in <b>2024.1.1</b>",
-              content:
-                '<ul><li>Custom toolbar</li></ul><div class="addthis_inline_follow_toolbox"></div>',
-              actions: [
-                {
-                  text: "Learn more→",
-                  link: "/en/guide/history.html#_2024-1-2",
+                  link: "/guide/history.html#_2024-1-3",
                   type: "primary",
                 },
               ],
               showOnce: true,
-              key: "2024.1.1",
+              key: "2024.1.3",
+            },
+            {
+              path: "/en",
+              title: "Coming in <b>2024.1.3</b>",
+              content:
+                '<ul><li>AI support optimization</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+              actions: [
+                {
+                  text: "Learn more→",
+                  link: "/en/guide/history.html#_2024-1-3",
+                  type: "primary",
+                },
+              ],
+              showOnce: true,
+              key: "2024.1.3",
             },
           ],
         },
