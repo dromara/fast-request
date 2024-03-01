@@ -26,7 +26,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 ::: hint AI support optimization <Badge vertical="top" text="Important feature" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.3/aiManagenemt_en.png','/img/2024.1.3/aiPromptEdit_en.png','/img/2024.1.3/aiPromptChoose_en.png']" />
 
-Added three forms of AI support: OpenAi, CodeGeeX, and Private deployment AI. Through prompt, selected text can be replaced with another text 
+Added three forms of AI support: OpenAi, CodeGeeX, and Private deployment AI. Through prompt, selected text can be replaced with another text.
 
 AI action has added the following tabs: `Body -> JSON`, `Body -> Form URL-Encoded -> Text`,`URL Params -> Text`
 :::
