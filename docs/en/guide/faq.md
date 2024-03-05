@@ -190,6 +190,32 @@ Click **help->Edit Custom Vm Options...**,add the following config in **idea.vmo
 
 How to set IDEA proxy: `Setting-> Appearance & Behavior->System Settings->HTTP Proxy`
 
+## Q: Spring Get request with array/collection parameter reports 400 error
+
+For example Url = `http://localhost:8081/test?a[0].b[0].token=xxx&a[0].b[0].name=yyy`
+
+Add the following configuration:
+
+```java
+import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class WebConfig {
+    
+    @Bean
+    public ConfigurableServletWebServerFactory webServerFactory() {
+        TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+        factory.addConnectorCustomizers((TomcatConnectorCustomizer) connector -> connector.setProperty("relaxedQueryChars", "|{}[]\\"));
+        return factory;
+    }
+
+}
+```
+
 ## Q: Action buttons are not visible
 
 Click `Options` and check `Show Toolbar`

@@ -189,6 +189,32 @@ private static final String[] restrictedHeaders = {
 
 IDEA配置代理: `Setting-> Appearance & Behavior->System Settings->HTTP Proxy`
 
+## Q: Spring Get参数带数组/集合参数报 400错误
+
+例如Url `http://localhost:8081/test?a[0].b[0].token=xxx&a[0].b[0].name=yyy`
+
+加入如下配置
+
+```java
+import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class WebConfig {
+    
+    @Bean
+    public ConfigurableServletWebServerFactory webServerFactory() {
+        TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+        factory.addConnectorCustomizers((TomcatConnectorCustomizer) connector -> connector.setProperty("relaxedQueryChars", "|{}[]\\"));
+        return factory;
+    }
+
+}
+```
+
 ## Q: 操作按钮不可见
 
 点击 `Options` 勾选 `Show Toolbar`
