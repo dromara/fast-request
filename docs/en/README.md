@@ -3,6 +3,7 @@ home: true
 icon: restfulFastRequest
 title: Api Buddy
 heroImageDark: /img/fastRequest.svg
+bgImage: /img/bg4.svg
 heroText: Fast Request
 heroFullScreen: true
 tagline: Born to simplify debugging APIs

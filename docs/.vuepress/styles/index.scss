@@ -42,7 +42,7 @@ h2 {
   font-family: alimamaYuanMainTitle, sans-serif;
   margin-top: 30px;
   border-color: #0b1117;
-  background-color: #0b1117;
+  background-color: #303033;
   color: #fff;
 }
 .svg-icon {
@@ -57,11 +57,7 @@ h2 {
 .vp-project-home {
   background-size: contain;
   background-repeat: no-repeat;
-
-  @media (min-width: 959px) {
-    background: url("/img/bg3.svg") no-repeat calc(50% + 420px) -90px;
-  }
-
+  
   h2 {
     border-bottom: none;
   }

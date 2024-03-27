@@ -4,6 +4,7 @@ home: true
 title: Api Buddy
 heroFullScreen: true
 heroImageDark: /img/fastRequest.svg
+bgImage: /img/bg4.svg
 heroText: Fast Request
 tagline: 为简化调试API而生
 actions:
