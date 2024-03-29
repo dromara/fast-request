@@ -52,7 +52,7 @@ Remark: Contains project-level headers, which can be modified to dynamically set
 Type: java.util.LinkedHashMap
 ```
 
-#### rfr.moduleHeader <Badge text="2022.2.3️" type="tip"/>
+#### rfr.apiHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```
 Remark: Contains module level headers, which can be modified to dynamically set values in the UI

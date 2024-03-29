@@ -20,7 +20,63 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
-## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/>
+## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/>
+- <Badge text="Apifox 集成" color="orange"/>
+- <Badge text="AI支持优化" color="orange"/>
+- <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
+- <Badge text="实体解析优化" type="info"/>
+- <Badge text="API 导出文件后缀错误" type="danger"/>
+
+::: hint Apifox 集成 <Badge vertical="top" text="Important feature" color="orange"/>
+
+<MyCarousel :imgList="['/img/2024.1.4/apifoxIntegration.png','/img/2024.1.4/apifoxConfig.png']" />
+
+Apifox集成，支持同步 API、环境变量、域名信息等。只要配置一个 `API key`，并设定项目映射关系即可进行同步。
+:::
+
+::: hint AI支持优化 <Badge vertical="top" text="Important feature" color="orange"/>
+![AI](/img/2024.1.4/ai.png)
+
+为了将 AI 的回复更加精准，我们将 AI 的 设置更加精细化，加入了3个维度，加入了`概述`、`提问范例`、`提问范例结果`。此设计即让 AI 先训练一次问答，从而使得结果更加符合预期
+
+我们可以在`概述`中尽量表述问题的各种可能，并在`提问范例`和`提问范例结果`中给于`概述`中描述的样本。
+
+以下是一个让 AI 帮忙优化 JSON 报文的案例
+
+::: code-tabs
+
+@tab 概述
+
+```
+你是一位优秀的 JSON 处理程序。每当用户向您发送 JSON 时，您都应该以固定的 JSON 格式响应用户，并根据 
+JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只需修改 JSON 中的值，而无需更改其结构。
+```
+
+@tab 提问范例
+```
+{"id":1,"title":"title_ahska","simpleDesc":"simpleDesc_ohga1","content":"content_yujga"}
+```
+
+@tab 提问范例结果
+```
+{"id":1,"title":"书画标题","simpleDesc":"简介内容","content":"整体内容"}
+```
+
+:::
+
+::: hint 变更 moduleHeader 为 apiHeader <Badge vertical="top" text="优化" type="info"/>
+
+![Header](/img/2024.1.4/header.png)
+
+1. 前置、后置脚本中的变量 `moduleHeader` 变更 `为apiHeader`。
+2. 主界面 Header 选项卡作用域变更为仅面向 API 级别，
+即每个 API 可以拥有不同的 Header，如果需要公共 Header，请前往[项目级别 Header](/guide/features/projectValueConfig.md) 设置。
+
+:::
+
+
+
+## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="超大响应结果性能优化" type="info"/>
 - <Badge text="Map入参类型解析优化" type="info"/>
@@ -34,7 +90,7 @@ icon: changelog
 可以在 `Body -> JSON`, `Body -> Form URL-Encoded -> Text`,`URL Params -> Text` 3个 Tab 下操作。
 :::
 
-## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+## 2024.1.2.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-24" color="SandyBrown"/>
 
 - <Badge text="点击send and download无响应" type="danger"/>
 

@@ -17,7 +17,70 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
-## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>
+## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>
+- <Badge text="Apifox integration" color="orange"/>
+- <Badge text="AI support optimization" color="orange"/>
+- <Badge text="Change moduleHeader to apiHeader" type="info"/>
+- <Badge text="Entity parse optimization" type="info"/>
+- <Badge text="API export file suffix error" type="danger"/>
+
+::: hint Apifox integration <Badge vertical="top" text="Important feature" color="orange"/>
+
+<MyCarousel :imgList="['/img/2024.1.4/apifoxIntegration_en.png','/img/2024.1.4/apifoxConfig_en.png']" />
+
+Apifox integration supports synchronization of APIs, environment variables, domain name information, etc. Just configure an `API key` and set the project mapping relationship to synchronize.
+:::
+
+::: hint AI support optimization <Badge vertical="top" text="Important feature" color="orange"/>
+![AI](/img/2024.1.4/ai_en.png)
+
+In order to make AI's responses more accurate, we have made AI settings more refined and added 3 dimensions:
+`Summary`、`Example question`、`Example question's answer`.
+This design allows the AI to train a question and answer session so that the results are more in line with expectations.
+
+We can try to express various possibilities of the question in the `Summary`, and the give an example in `Example question` and `Example question's answer`.
+
+The following is a case of using AI to help optimize JSON messages
+
+::: code-tabs
+
+@tab Summary
+
+```
+You are an excellent JSON handler. Whenever a user sends you a JSON, you should respond to 
+the user in a fixed JSON formatand replace the values in the JSON fields with 
+human-readable content according to the meaning of the JSON keys. You will only modify 
+the values in the JSON without changing its structure.
+```
+
+@tab Example question
+```json
+{"id":1,"title":"title_ahska","simpleDesc":"simpleDesc_ohga1"}
+```
+
+@tab Example question's answer
+```json
+{
+  "id":1,
+  "title":"Harry Potter and the Philosopher's Stone",
+  "simpleDesc":"Join Harry Potter on a thrilling adventure at Hogwarts School of Witchcraft and Wizardry as he uncovers dangerous secrets and saves the rewarding world."
+}
+```
+
+:::
+
+::: hint Change moduleHeader to apiHeader <Badge vertical="top" text="Optimization" type="info"/>
+
+![Header](/img/2024.1.4/header.png)
+
+1. The variable `moduleHeader` in the pre-script and post-script is changed to `apiHeader`.
+2. The scope of the Header tab in the main interface has been changed to only face the API level.
+   That is, each API can have different Headers. If you need a public Header, please go to [Project Level Header](/guide/features/projectValueConfig.md) setting.
+
+:::
+
+
+## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Performance optimization for large response results" type="info"/>
 - <Badge text="Map type parse optimization" type="info"/>
@@ -31,7 +94,7 @@ Added three forms of AI support: OpenAi, CodeGeeX, and Private deployment AI. Th
 AI action has added the following tabs: `Body -> JSON`, `Body -> Form URL-Encoded -> Text`,`URL Params -> Text`
 :::
 
-## 2024.1.2.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-24" color="SandyBrown"/>
+## 2024.1.2.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-24" color="SandyBrown"/>
 
 - <Badge text="No response when click send and download" type="danger"/>
 

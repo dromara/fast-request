@@ -53,7 +53,7 @@ headerDepth: 4
 类型: java.util.LinkedHashMap<String,String>
 ```
 
-#### rfr.moduleHeader <Badge text="2022.2.3️" type="tip"/>
+#### rfr.apiHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```
 作用: 包含了模块级别头,可以通过修改来动态往UI里面设置值

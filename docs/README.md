@@ -66,10 +66,10 @@ head:
 <SiteInfo
   name="引迈信息"
   desc="一键生成表单信息"
-  url="https://www.jnpfsoft.com/"
+  url="https://www.jnpfsoft.com/index.html?from=fast-request"
   logo="/img/sponsor/jnpfsoft-logo.png"
   preview="/img/sponsor/jnpfsoft-home.png"
-  style="max-width:400px"
+  style="max-width:370px"
 />
 
 <SiteInfo
@@ -78,7 +78,7 @@ desc="为简化调试API而生"
 url="https://api-buddy.cn/"
 logo="/img/logo/logo.svg"
 preview="/img/logo/homepage.png"
-style="max-width:400px"
+style="max-width:370px"
 />
 
 ## 优势

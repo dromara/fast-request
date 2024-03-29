@@ -17,7 +17,7 @@ const sidebarTopArray = [
   `<a href="https://jetbrains.com" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/IntelliJ_IDEA.svg">
   </a>`,
-  `<a href="https://www.jnpfsoft.com" target="_blank">
+  `<a href="https://www.jnpfsoft.com/index.html?from=fast-request" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/jnpfsoft.png">
   </a>`,
 ];
