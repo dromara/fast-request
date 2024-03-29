@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { usePageData, usePageFrontmatter } from "vuepress/client";
-import { ref, watch } from "vue";
+import {usePageData, usePageFrontmatter} from "vuepress/client";
+import {ref, watch} from "vue";
 
 import CommonWrapper from "@theme-hope/components/CommonWrapper";
 import HomePage from "@theme-hope/components/HomePage";
@@ -8,7 +8,7 @@ import NormalPage from "@theme-hope/components/NormalPage";
 import SkipLink from "@theme-hope/components/SkipLink";
 import FadeSlideY from "@theme-hope/components/transitions/FadeSlideY";
 
-import type { ThemePageFrontmatter } from "vuepress-theme-hope";
+import type {ThemePageFrontmatter} from "vuepress-theme-hope";
 
 const page = usePageData();
 const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
@@ -16,6 +16,9 @@ const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 const sidebarTopArray = [
   `<a href="https://jetbrains.com" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/IntelliJ_IDEA.svg">
+  </a>`,
+  `<a href="https://www.jnpfsoft.com" target="_blank">
+    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/jnpfsoft.png">
   </a>`,
 ];
 

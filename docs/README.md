@@ -64,12 +64,21 @@ head:
 1. [成为赞助者](./guide/sponsor.md)
 
 <SiteInfo
-  name="Restful Fast Request"
-  desc="为简化调试API而生"
-  url="https://api-buddy.cn/"
-  logo="/img/logo/logo.svg"
-  preview="/img/logo/homepage.png"
+  name="引迈信息"
+  desc="一键生成表单信息"
+  url="https://www.jnpfsoft.com/"
+  logo="/img/sponsor/jnpfsoft-logo.png"
+  preview="/img/sponsor/jnpfsoft-home.png"
   style="max-width:400px"
+/>
+
+<SiteInfo
+name="Restful Fast Request"
+desc="为简化调试API而生"
+url="https://api-buddy.cn/"
+logo="/img/logo/logo.svg"
+preview="/img/logo/homepage.png"
+style="max-width:400px"
 />
 
 ## 优势
