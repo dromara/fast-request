@@ -13,11 +13,13 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 | [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![slack](/img/slack.png)                                                                                                                                                                                         | ![twitter](/img/twitter.png)                                                                                                                      |
+
 :::
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
-## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>  <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
@@ -47,23 +49,25 @@ The following is a case of using AI to help optimize JSON messages
 @tab Summary
 
 ```
-You are an excellent JSON handler. Whenever a user sends you a JSON, you should respond to 
-the user in a fixed JSON formatand replace the values in the JSON fields with 
-human-readable content according to the meaning of the JSON keys. You will only modify 
+You are an excellent JSON handler. Whenever a user sends you a JSON, you should respond to
+the user in a fixed JSON formatand replace the values in the JSON fields with
+human-readable content according to the meaning of the JSON keys. You will only modify
 the values in the JSON without changing its structure.
 ```
 
 @tab Example question
+
 ```json
-{"id":1,"title":"title_ahska","simpleDesc":"simpleDesc_ohga1"}
+{ "id": 1, "title": "title_ahska", "simpleDesc": "simpleDesc_ohga1" }
 ```
 
 @tab Example question's answer
+
 ```json
 {
-  "id":1,
-  "title":"Harry Potter and the Philosopher's Stone",
-  "simpleDesc":"Join Harry Potter on a thrilling adventure at Hogwarts School of Witchcraft and Wizardry as he uncovers dangerous secrets and saves the rewarding world."
+  "id": 1,
+  "title": "Harry Potter and the Philosopher's Stone",
+  "simpleDesc": "Join Harry Potter on a thrilling adventure at Hogwarts School of Witchcraft and Wizardry as he uncovers dangerous secrets and saves the rewarding world."
 }
 ```
 
@@ -79,8 +83,8 @@ the values in the JSON without changing its structure.
 
 :::
 
-
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
+
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Performance optimization for large response results" type="info"/>
 - <Badge text="Map type parse optimization" type="info"/>

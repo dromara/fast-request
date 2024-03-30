@@ -20,13 +20,14 @@
 
 当我们正确设置好 Api access token 之后，需要对 IDEA 项目与 Apifox 的项目进行一个映射关联，点击刷新项目，当项目加载完毕以后，点开团队选项，勾选对应的项目即可。
 
-
 ## 3. 同步 Environment
+
 ![apifoxSyncEnvironment](/img/features/apifoxSyncEnvironment.png)
 
 同步 Environment 会将项目的不同环境的域名、变量、全局参数全部同步至 Apifox，作为 Apifox 的服务参数、变量以及全局参数。这一步建议放在 API 同步之前**先执行**
 
 ## 4. 同步 API
+
 ![apifoxSyncApi](/img/features/apifoxSyncApi.png)
 
 同步 API 需要先将 API 进行保存，可以手动触发，也可以自动触发，自动触发需要在 Apifox 同步设置中勾选`保存 API 后同步 Apifox`选项。

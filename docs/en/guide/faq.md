@@ -13,12 +13,12 @@ icon: faq
 [[toc]]
 
 ## S: Slow operations are prohibited on EDT
+
 `Slow operations are prohibited on EDT` error.
 
-Fill into the keywords `ide.slow.operations.assertion` in **SearchEveryWhere** and uncheck them like following. 
+Fill into the keywords `ide.slow.operations.assertion` in **SearchEveryWhere** and uncheck them like following.
 
 ![slowOperationsConfig](/img/faq/slowOperationsConfig.png)
-
 
 ## S: Send button is disabled, but there is no notification message
 
@@ -205,7 +205,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class WebConfig {
-    
+
     @Bean
     public ConfigurableServletWebServerFactory webServerFactory() {
         TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();

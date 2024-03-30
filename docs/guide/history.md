@@ -9,8 +9,6 @@ icon: changelog
 
 购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**，Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
-
-
 | ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![wechat group](/img/wechatGroup.png)                                                                    | ![twitter](/img/twitter.png)                                                                                                                      |
@@ -21,6 +19,7 @@ icon: changelog
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
 ## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Apifox 集成" color="orange"/>
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
@@ -50,16 +49,18 @@ Apifox集成，支持同步 API、环境变量、域名信息等。只要配置�
 @tab 概述
 
 ```
-你是一位优秀的 JSON 处理程序。每当用户向您发送 JSON 时，您都应该以固定的 JSON 格式响应用户，并根据 
+你是一位优秀的 JSON 处理程序。每当用户向您发送 JSON 时，您都应该以固定的 JSON 格式响应用户，并根据
 JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只需修改 JSON 中的值，而无需更改其结构。
 ```
 
 @tab 提问范例
+
 ```
 {"id":1,"title":"title_ahska","simpleDesc":"simpleDesc_ohga1","content":"content_yujga"}
 ```
 
 @tab 提问范例结果
+
 ```
 {"id":1,"title":"书画标题","simpleDesc":"简介内容","content":"整体内容"}
 ```
@@ -72,13 +73,12 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 
 1. 前置、后置脚本中的变量 `moduleHeader` 变更 `为apiHeader`。
 2. 主界面 Header 选项卡作用域变更为仅面向 API 级别，
-即每个 API 可以拥有不同的 Header，如果需要公共 Header，请前往[项目级别 Header](/guide/features/projectValueConfig.md) 设置。
+   即每个 API 可以拥有不同的 Header，如果需要公共 Header，请前往[项目级别 Header](/guide/features/projectValueConfig.md) 设置。
 
 :::
 
-
-
 ## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
+
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="超大响应结果性能优化" type="info"/>
 - <Badge text="Map入参类型解析优化" type="info"/>

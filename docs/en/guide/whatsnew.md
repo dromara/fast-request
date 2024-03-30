@@ -30,6 +30,7 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 ## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>
+
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
@@ -37,6 +38,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="API export file suffix error" type="danger"/>
 
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
+
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Performance optimization for large response results" type="info"/>
 - <Badge text="Map type parse optimization" type="info"/>

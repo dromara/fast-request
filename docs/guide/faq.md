@@ -13,6 +13,7 @@ icon: faq
 [[toc]]
 
 ## S: Slow operations are prohibited on EDT
+
 报错`Slow operations are prohibited on EDT`相关错误。
 
 在 SearchEveryWhere 中输入关键字 `ide.slow.operations.assertion` ,并将下图所示的关闭。
@@ -204,7 +205,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class WebConfig {
-    
+
     @Bean
     public ConfigurableServletWebServerFactory webServerFactory() {
         TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
