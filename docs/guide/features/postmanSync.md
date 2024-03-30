@@ -1,4 +1,4 @@
-# Postman 同步
+# Postman 集成
 
 版本要求: <Badge text="2023.2.3" />
 
