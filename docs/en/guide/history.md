@@ -17,7 +17,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
-## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>
+## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>

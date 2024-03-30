@@ -20,7 +20,7 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
-## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/>
+## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Apifox 集成" color="orange"/>
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
