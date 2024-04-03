@@ -34,7 +34,9 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
+- <Badge text="cURL import Optimization" type="info"/>  
 - <Badge text="Entity parse optimization" type="info"/>
+- <Badge text="Compatible with IDEA 2024" type="info"/>  
 - <Badge text="API export file suffix error" type="danger"/>
 
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>

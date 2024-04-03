@@ -23,7 +23,9 @@ icon: changelog
 - <Badge text="Apifox 集成" color="orange"/>
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
+- <Badge text="cURL导入优化" type="info"/>
 - <Badge text="实体解析优化" type="info"/>
+- <Badge text="兼容 IDEA 2024" type="info"/>  
 - <Badge text="API 导出文件后缀错误" type="danger"/>
 
 ::: hint Apifox 集成 <Badge vertical="top" text="Important feature" color="orange"/>
@@ -75,6 +77,11 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 2. 主界面 Header 选项卡作用域变更为仅面向 API 级别，
    即每个 API 可以拥有不同的 Header，如果需要公共 Header，请前往[项目级别 Header](/guide/features/projectValueConfig.md) 设置。
 
+:::
+
+
+::: hint cURL导入优化 <Badge vertical="top" text="优化" type="info"/>
+在去除域名后，如果 Url 与项目中方法的 Url 一致则自动绑定。
 :::
 
 ## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>

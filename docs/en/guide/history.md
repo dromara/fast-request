@@ -23,7 +23,9 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
+- <Badge text="cURL import Optimization" type="info"/>
 - <Badge text="Entity parse optimization" type="info"/>
+- <Badge text="Compatible with IDEA 2024" type="info"/>  
 - <Badge text="API export file suffix error" type="danger"/>
 
 ::: hint Apifox integration <Badge vertical="top" text="Important feature" color="orange"/>
@@ -81,6 +83,10 @@ the values in the JSON without changing its structure.
 2. The scope of the Header tab in the main interface has been changed to only face the API level.
    That is, each API can have different Headers. If you need a public Header, please go to [Project Level Header](/guide/features/projectValueConfig.md) setting.
 
+:::
+
+::: hint cURL import Optimization <Badge vertical="top" text="Optimization" type="info"/>
+在去除域名后，如果 Url 与项目中方法的 Url 一致则自动绑定。
 :::
 
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
