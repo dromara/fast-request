@@ -18,7 +18,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
-## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
@@ -89,7 +89,7 @@ the values in the JSON without changing its structure.
 在去除域名后，如果 Url 与项目中方法的 Url 一致则自动绑定。
 :::
 
-## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
+## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Performance optimization for large response results" type="info"/>

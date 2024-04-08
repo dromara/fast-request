@@ -18,7 +18,7 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
-## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox 集成" color="orange"/>
 - <Badge text="AI支持优化" color="orange"/>
@@ -84,7 +84,7 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 在去除域名后，如果 Url 与项目中方法的 Url 一致则自动绑定。
 :::
 
-## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
+## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="超大响应结果性能优化" type="info"/>

@@ -27,7 +27,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/>
+## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox 集成" color="orange"/>
 - <Badge text="AI支持优化" color="orange"/>
@@ -37,7 +37,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text="兼容 IDEA 2024" type="info"/>
 - <Badge text="API 导出文件后缀错误" type="danger"/>
 
-## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
+## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="超大响应结果性能优化" type="info"/>

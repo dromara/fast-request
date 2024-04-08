@@ -29,7 +29,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="developing" type="info"/>
+## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
@@ -39,7 +39,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Compatible with IDEA 2024" type="info"/>  
 - <Badge text="API export file suffix error" type="danger"/>
 
-## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-03-04" color="SandyBrown"/>
+## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Performance optimization for large response results" type="info"/>
