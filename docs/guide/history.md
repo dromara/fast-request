@@ -35,6 +35,9 @@ icon: changelog
 Apifox集成，支持同步 API、环境变量、域名信息等。只要配置一个 `API key`，并设定项目映射关系即可进行同步。
 
 更多信息请点击 [Apifox 集成](/guide/features/apifox.md)
+
+[Bilibili视频教程](https://www.bilibili.com/video/BV1pM4m1Q7c5)
+
 :::
 
 ::: hint AI支持优化 <Badge vertical="top" text="Important feature" color="orange"/>
