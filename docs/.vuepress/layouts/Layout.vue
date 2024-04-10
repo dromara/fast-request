@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { usePageData, usePageFrontmatter } from "vuepress/client";
-import { ref, watch } from "vue";
+import {usePageData, usePageFrontmatter} from "vuepress/client";
+import {ref, watch} from "vue";
 
 import CommonWrapper from "@theme-hope/components/CommonWrapper";
 import HomePage from "@theme-hope/components/HomePage";
@@ -8,14 +8,14 @@ import NormalPage from "@theme-hope/components/NormalPage";
 import SkipLink from "@theme-hope/components/SkipLink";
 import FadeSlideY from "@theme-hope/components/transitions/FadeSlideY";
 
-import type { ThemePageFrontmatter } from "vuepress-theme-hope";
+import type {ThemePageFrontmatter} from "vuepress-theme-hope";
 
 const page = usePageData();
 const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 
 const sidebarTopArray = [
-  `<a href="https://jetbrains.com" target="_blank">
-    <img className="no-zoom" height="50px" width="220px" src="/img/IntelliJ_IDEA.svg">
+  `<a href="http://apifox.com/?utm_source=pay&utm_medium=fast-request" target="_blank">
+    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/apifox-line.png">
   </a>`,
   `<a href="https://www.jnpfsoft.com/index.html?from=fast-request" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/jnpfsoft.png">
@@ -48,7 +48,7 @@ watch(
     shuffle(sidebarTopArray);
 
     sidebarContent.value = `\
-<div style="width:230px;margin:0 auto">
+<div style="width:230px;margin:5px auto;">
 ${sidebarTopArray.slice(0, 4).join("\n  ")}
 <br/>
 <!--  <span style='color: grey;font-size: 11px;'>广告采用随机方式显示</span>-->

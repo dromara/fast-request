@@ -64,6 +64,15 @@ head:
 1. [成为赞助者](./guide/sponsor.md)
 
 <SiteInfo
+name="Apifox"
+desc="API 设计、开发、测试一体化协作平台"
+url="http://apifox.com/?utm_source=pay&utm_medium=fast-request"
+logo="/img/sponsor/apifox.png"
+preview="/img/sponsor/apifox-home.png"
+style="max-width:370px"
+/>
+
+<SiteInfo
   name="引迈信息"
   desc="一键生成表单信息"
   url="https://www.jnpfsoft.com/index.html?from=fast-request"
@@ -72,14 +81,6 @@ head:
   style="max-width:370px"
 />
 
-<SiteInfo
-name="Restful Fast Request"
-desc="为简化调试API而生"
-url="https://api-buddy.cn/"
-logo="/img/logo/logo.svg"
-preview="/img/logo/homepage.png"
-style="max-width:370px"
-/>
 
 ## 优势
 

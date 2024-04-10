@@ -5,9 +5,13 @@ icon: bilibili
 
 [![Bilibili](https://img.shields.io/static/v1?label=BiliBili&message=BiliBili&logo=bilibili&color=FC8D34)](https://space.bilibili.com/370110042) 站系列视频,==关注我==最快时间获得视频更新文档，给我==一键三连==是对我最大的创作鼓励
 
-![bilibili][/img/bilibili.jpg]
+![bilibili](/img/bilibili.jpg)
 
----
+
+```component BiliBili
+bvid: BV1pM4m1Q7c5
+ratio: 5/4
+```
 
 ```component BiliBili
 bvid: BV1Ju4y1A7Qi
