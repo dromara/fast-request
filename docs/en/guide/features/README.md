@@ -49,7 +49,7 @@ The icon in the document corresponds to the button icon in the plugin
 ---
 
 - [<ColorIcon icon="restfulFastRequest" /> Auto domain](./autoDomain.md)
-- [<ColorIcon icon="openai" /> OpenAI API Optimising fields](./ai.md)
+- [<ColorIcon icon="openai" /> AI](./ai.md)
 - [<ColorIcon icon="headerGroupNew" /> Header group](./headerGroup.md)
 - [<ColorIcon icon="commonHeaderNew" /> Common header](./commonHeader.md)
 - [<ColorIcon icon="bulkEdit" /> Headers batch edit](./commonHeader.md)

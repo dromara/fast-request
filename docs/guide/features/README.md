@@ -49,7 +49,7 @@ icon: featuresNew
 ---
 
 - [<ColorIcon icon="restfulFastRequest" /> 自动域名](./autoDomain.md)
-- [<ColorIcon icon="openai" /> AI 字段替换](./ai.md)
+- [<ColorIcon icon="openai" /> AI](./ai.md)
 - [<ColorIcon icon="headerGroupNew" /> Headers 分组](./headerGroup.md)
 - [<ColorIcon icon="commonHeaderNew" /> 常用头参数](./commonHeader.md)
 - [<ColorIcon icon="bulkEdit"/> Headers批量编辑](./bulkEdit.md)

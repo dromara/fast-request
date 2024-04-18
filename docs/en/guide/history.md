@@ -44,7 +44,7 @@ This design allows the AI to train a question and answer session so that the res
 
 We can try to express various possibilities of the question in the `Summary`, and the give an example in `Example question` and `Example question's answer`.
 
-The following is a case of using AI to help optimize JSON messages
+The following is a case of using AI to help optimize JSON messages. For more details, please refer to [AI](/en/guide/features/ai.md).
 
 ::: code-tabs
 
