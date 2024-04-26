@@ -92,7 +92,7 @@ export default hopeTheme(
 
       docsearch: {
         appId: "6CYP6DKPIT",
-        apiKey: "b0e807748b96530b35071a2652b273c4",
+        apiKey: "35f9f152a5203e42231a73eb0de1546d",
         indexName: "api-buddy",
         locales: {
           "/en/": {
