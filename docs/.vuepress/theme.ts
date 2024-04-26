@@ -1,7 +1,7 @@
-import { getDirname, path } from "vuepress/utils";
-import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar.js";
-import { enSidebar, zhSidebar } from "./sidebar.js";
+import {getDirname, path} from "vuepress/utils";
+import {hopeTheme} from "vuepress-theme-hope";
+import {enNavbar, zhNavbar} from "./navbar.js";
+import {enSidebar, zhSidebar} from "./sidebar.js";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -91,9 +91,9 @@ export default hopeTheme(
       },
 
       docsearch: {
-        appId: "8FRYEU6KK8",
-        apiKey: "84f513df1e83406ba42179da778d87b4",
-        indexName: "dromara-fast-request",
+        appId: "6CYP6DKPIT",
+        apiKey: "b0e807748b96530b35071a2652b273c4",
+        indexName: "api-buddy",
         locales: {
           "/en/": {
             placeholder: "Search docs",
