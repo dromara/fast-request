@@ -1,7 +1,7 @@
-import { container } from "@mdit/plugin-container";
-import { viteBundler } from "@vuepress/bundler-vite";
-import { defineUserConfig } from "vuepress";
-import { getDirname, path } from "vuepress/utils";
+import {container} from "@mdit/plugin-container";
+import {viteBundler} from "@vuepress/bundler-vite";
+import {defineUserConfig} from "vuepress";
+import {getDirname, path} from "vuepress/utils";
 
 import theme from "./theme.js";
 
@@ -17,8 +17,8 @@ export default defineUserConfig({
       {},
       `
         (function() {
-          if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1) {
-            window.location.href = 'https://api-buddy.cn';
+          if (location.href.indexOf('gitee.io') > -1 || location.href.indexOf('sheng90.wang') > -1 || || location.href.indexOf('api-buddy.cn') > -1) {
+            window.location.href = 'https://api-buddy.com';
           }
         })();
         `,
