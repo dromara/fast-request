@@ -27,12 +27,22 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="脚本增加 Add script library支持" type="tip"/>
+- <Badge text="类型下拉框优化" type="info"/>  
+- <Badge text="原始url展示优化" type="info"/>  
+- <Badge text="Apifox目录同步优化" type="info"/>  
+- <Badge text="Url输入框样式优化" type="info"/>  
+- <Badge text="参数 Tab 自动跳转优化" type="info"/>  
+- <Badge text="cUrl 同一 url 匹配 method type优化" type="info"/>  
+- <Badge text="Api doc同步成功但是提示报错" type="danger"/>
+
 ## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox 集成" color="orange"/>
 - <Badge text="AI支持优化" color="orange"/>
 - <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
-- <Badge text="cURL导入优化" type="info"/>  
+- <Badge text="cURL导入优化" type="info"/>
 - <Badge text="实体解析优化" type="info"/>
 - <Badge text="兼容 IDEA 2024" type="info"/>
 - <Badge text="API 导出文件后缀错误" type="danger"/>

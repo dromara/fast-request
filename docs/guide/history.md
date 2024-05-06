@@ -18,6 +18,32 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
+## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="脚本增加 Add script library支持" type="tip"/>
+- <Badge text="类型下拉框优化" type="info"/>
+- <Badge text="原始url展示优化" type="info"/>  
+- <Badge text="Apifox目录同步优化" type="info"/>  
+- <Badge text="Url输入框样式优化" type="info"/>  
+- <Badge text="参数 Tab 自动跳转优化" type="info"/>  
+- <Badge text="cUrl 同一 url 匹配 method type优化" type="info"/>  
+- <Badge text="Api doc同步成功但是提示报错" type="danger"/>
+
+::: hint 脚本增加 Add script library支持 <Badge vertical="top" text="新功能" type="tip"/>
+提示脚本库增加 library 支持，使得具备 [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) 功能
+:::
+
+::: hint 类型下拉框优化 <Badge vertical="top" text="优化" type="info"/>
+
+:::
+
+::: hint 原始url展示优化 <Badge vertical="top" text="优化" type="info"/>
+调试界面 Url 输入框和 APIs 界面 url 展示成原始 url，不对路径参数进行替换。
+:::
+
+::: hint cUrl 同一 url 匹配 method type优化 <Badge vertical="top" text="优化" type="info"/>
+针对匹配到的 url 一样，但是方法的类型(Get、Post等)不一样的绑定配对进行了优化，使得他们可以正确的匹配。
+:::
+
 ## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox 集成" color="orange"/>

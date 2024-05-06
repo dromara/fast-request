@@ -18,6 +18,32 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
+## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="Add library support in pre and post script" type="tip"/>
+- <Badge text="Type drop-down box optimization" type="info"/>  
+- <Badge text="Original url display optimization" type="info"/>  
+- <Badge text="Apifox directory sync optimization" type="info"/>  
+- <Badge text="Url input style optimization" type="info"/>  
+- <Badge text="Parameter Tab automatic jump optimization" type="info"/>  
+- <Badge text="cUrl import optimization" type="info"/>  
+- <Badge text="Fix Api doc synchronization is successful but prompts an error" type="danger"/>
+
+::: hint Add library support in pre and post script <Badge vertical="top" text="New feature" type="tip"/>
+Add a button to allow adding script library to get the [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) function.
+:::
+
+::: hint Type drop-down box optimization <Badge vertical="top" text="Optimization" type="info"/>
+
+:::
+
+::: hint Original url display optimization <Badge vertical="top" text="Optimization" type="info"/>
+Url in run tab, and APIs tab is displayed as the original URL, and the path parameters will not replace.
+:::
+
+::: hint cUrl import optimization <Badge vertical="top" text="Optimization" type="info"/>
+Url is the same, but the method type (Get, Post, etc.) is different, the binding pairs are optimized so that they can match correctly.
+:::
+
 ## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox integration" color="orange"/>
