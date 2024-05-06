@@ -7,9 +7,9 @@ icon: activity
 
 B站粉丝突破**1000**，我决定抽个奖,感谢开发者的支持。==关注+点赞+留言==下方视频，进行抽奖，赠送1年license，已购买的开发者可以延长插件license到期时间1年
 
-官网: [https://api-buddy.cn/guide/activity.html#\_20231205](https://api-buddy.cn/guide/activity.html#_20231205)
+官网: [https://api-buddy.com/guide/activity.html#\_20231205](https://api-buddy.com/guide/activity.html#_20231205)
 
-抽奖程序：[https://injectrl.github.io/BiliCLOnline/](https://api-buddy.cn/guide/activity.html)
+抽奖程序：[https://injectrl.github.io/BiliCLOnline/](https://api-buddy.com/guide/activity.html)
 
 规则如下:
 

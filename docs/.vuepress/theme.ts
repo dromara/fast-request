@@ -7,7 +7,7 @@ const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme(
   {
-    hostname: "https://api-buddy.cn",
+    hostname: "https://api-buddy.com",
     logo: "/img/fastRequest.svg",
 
     repo: "https://github.com/dromara/fast-request",
