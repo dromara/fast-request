@@ -29,15 +29,23 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Fix Api doc synchronization is successful but prompts an error" type="danger"/>
 
 ::: hint Add library support in pre and post script <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2024.1.5/addLibrary_en.png)
+
 Add a button to allow adding script library to get the [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) function.
 :::
 
 ::: hint Type drop-down box optimization <Badge vertical="top" text="Optimization" type="info"/>
+![](/img/2024.1.5/typeDropdown.png)
+
+The drop-down box uses a more clear English type and uses different colors to distinguish different types.
 
 :::
 
 ::: hint Original url display optimization <Badge vertical="top" text="Optimization" type="info"/>
-Url in run tab, and APIs tab is displayed as the original URL, and the path parameters will not replace.
+
+![](/img/2024.1.5/originUrl.png)
+
+Url in run tab, and APIs tab is displayed as the original URL, the path parameters will no longer replace.
 :::
 
 ::: hint cUrl import optimization <Badge vertical="top" text="Optimization" type="info"/>

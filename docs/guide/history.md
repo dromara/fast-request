@@ -29,14 +29,21 @@ icon: changelog
 - <Badge text="Api doc同步成功但是提示报错" type="danger"/>
 
 ::: hint 脚本增加 Add script library支持 <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2024.1.5/addLibrary.png)
+
 提示脚本库增加 library 支持，使得具备 [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) 功能
 :::
 
 ::: hint 类型下拉框优化 <Badge vertical="top" text="优化" type="info"/>
+![](/img/2024.1.5/typeDropdown.png)
 
+下拉框使用更加明确的英文类型，并使用不同颜色区分不同的类型
 :::
 
 ::: hint 原始url展示优化 <Badge vertical="top" text="优化" type="info"/>
+![](/img/2024.1.5/originUrl.png)
+
 调试界面 Url 输入框和 APIs 界面 url 展示成原始 url，不对路径参数进行替换。
 :::
 
