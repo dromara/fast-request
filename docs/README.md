@@ -36,7 +36,7 @@ features:
 head:
   - - meta
     - name: keywords
-      content: API Buddy,Fast Request,RestfulFastRequest,fast request官网,api-buddy,Restful Fast Request
+      content: API Buddy,Fast Request,RestfulFastRequest,fast request官网,api-buddy,Restful Fast Request,Fast Request激活码
   - - meta
     - name: description
       content: Restful Fast Request是一个IntelliJ IDEA上的的类似postman的restful api工具插件，可以根据已有的方法帮助您快速生成url和params，一个API调试工具+API管理工具，支持springmvc、springboot、java-rs
