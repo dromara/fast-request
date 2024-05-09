@@ -23,7 +23,7 @@ link:"/guide/features/",
 2. If the result of [Auto domain](../features/autoDomain.md) did not meet expectations，change the domain in [Project-level domain config](../features/projectLevelDomainConfig.md)
 3. Click send button for sending request
 
-![](/img/newLogoIcon.png)
+![](/img/start.png)
 
 @tab Free version
 

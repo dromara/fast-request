@@ -23,6 +23,11 @@ color="#eee"
 2. 如果[自动域名](../features/autoDomain.md)的结果不符合预期，则在[Project 级别域名配置](../features/projectLevelDomainConfig.md)里面修改域名
 3. 点击发送请求按钮发送请求
 
+![](/img/start.png)
+
+
+>视频教程↓↓↓
+
 ```component BiliBili
 bvid: BV1V84y1f7uQ
 ratio: 5/4
