@@ -20,6 +20,9 @@ const sidebarTopArray = [
   `<a href="https://www.jnpfsoft.com/index.html?from=fast-request" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/jnpfsoft.png">
   </a>`,
+  `<a href="https://t.zsxq.com/hqBj7" target="_blank">
+    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/mnhs.svg">
+  </a>`,
 ];
 
 const sidebarContent = ref("");
