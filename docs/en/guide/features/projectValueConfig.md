@@ -6,4 +6,4 @@ Support global parameters within the project level, not affected by multiple mod
 
 **Configure priority**: `api header > project header>global header`
 
-![projectConfigParam](/img/projectConfigParam.png)
+![projectConfigParam](/img/projectConfigParam_en.png)
