@@ -18,7 +18,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
-## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Add library support in pre and post script" type="tip"/>
 - <Badge text="Type drop-down box optimization" type="info"/>  
 - <Badge text="Original url display optimization" type="info"/>  
@@ -52,7 +52,7 @@ Url in run tab, and APIs tab is displayed as the original URL, the path paramete
 Url is the same, but the method type (Get, Post, etc.) is different, the binding pairs are optimized so that they can match correctly.
 :::
 
-## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>

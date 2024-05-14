@@ -18,7 +18,7 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
-## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="info"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="脚本增加 Add script library支持" type="tip"/>
 - <Badge text="类型下拉框优化" type="info"/>
 - <Badge text="原始url展示优化" type="info"/>  
@@ -51,7 +51,7 @@ icon: changelog
 针对匹配到的 url 一样，但是方法的类型(Get、Post等)不一样的绑定配对进行了优化，使得他们可以正确的匹配。
 :::
 
-## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox 集成" color="orange"/>
 - <Badge text="AI支持优化" color="orange"/>

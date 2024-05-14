@@ -29,7 +29,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Add library support in pre and post script" type="tip"/>
 - <Badge text="Type drop-down box optimization" type="info"/>  
 - <Badge text="Original url display optimization" type="info"/>  
@@ -39,7 +39,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="cUrl import optimization" type="info"/>  
 - <Badge text="Fix Api doc synchronization is successful but prompts an error" type="danger"/>
 
-## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
@@ -64,7 +64,7 @@ Because developing version is still in development, the documentation of develop
 
 - <Badge text="Custom toolbar" color="orange"/>
 
-## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-01-15" color="SandyBrown"/>
+## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
 - <Badge text="SearchEveryWhere support classname search" color="orange"/>
 - <Badge text="Generate .fastRequest directory strategy" color="orange"/>
