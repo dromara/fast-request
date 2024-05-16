@@ -29,7 +29,10 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="Entity parse" type="danger"/>
+
+## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Add library support in pre and post script" type="tip"/>
 - <Badge text="Type drop-down box optimization" type="info"/>  
 - <Badge text="Original url display optimization" type="info"/>  

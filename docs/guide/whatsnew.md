@@ -27,7 +27,10 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="实体类解析" type="danger"/>
+
+## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="脚本增加 Add script library支持" type="tip"/>
 - <Badge text="类型下拉框优化" type="info"/>  
 - <Badge text="原始url展示优化" type="info"/>  
