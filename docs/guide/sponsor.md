@@ -14,13 +14,6 @@ icon: aixin
 
 ![为什么要赞助](/img/whySponsor.png)
 
-## 赞助者福利
-
-1. 赞助达 <span class="badge danger" style="vertical-align: middle;">500</span> 元，您将获得 Restful Fast Request 左侧菜单上方赞助赞**广告展示**.并可**投放推广链接**（1年）。包月100/月
-1. 赞助达 <span class="badge tip" style="vertical-align: middle;">1000</span> 元，您将获得 Restful Fast Request [首页](../README.md) 的赞助商**广告展示**栏位，以及左侧菜单上方赞助商**广告展示**。（1年）。包月200/月
-
-首页赞助商**排序规则**:按照 ==赞助费从大到小，赞助时间最新== 排序
-
 ## 首页上墙需提供的资料
 
 提供 **Logo**(透明背景最佳、256×256px) 、**链接**、横向 logo(660*150px)、背景主页(宽度370px下显示清晰即可，提供超过尺寸的会被压缩)
