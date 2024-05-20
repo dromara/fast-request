@@ -14,6 +14,9 @@ const page = usePageData();
 const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 
 const sidebarTopArray = [
+  `<a href="https://brucege.com/pay/view?code=fastRequest" target="_blank">
+    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/mybatisCodeHelperPro.svg">
+  </a>`,
   `<a href="http://apifox.com/?utm_source=pay&utm_medium=fast-request" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/apifox-line.png">
   </a>`,
