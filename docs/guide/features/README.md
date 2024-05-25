@@ -25,7 +25,7 @@ icon: featuresNew
 - [<ColorIcon icon="postmanNew" /> Postman 集成](./postmanSync.md)
 - [<ColorIcon icon="apiParamGroupNew" /> API 分组切换](./apiGroup.md)
 - [<ColorIcon icon="locate" /> 当前方法定位](./navigateCurrentMethod.md)
-- [<ColorIcon icon="storeData" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)
+- [<ColorIcon icon="storeData" /> 多窗口 Tab](./navigateCurrentMethodJson.md)
 - [<ColorIcon icon="regenerate" /> 重新生成请求](./regenerate.md)
 - [<ColorIcon icon="clearNew" /> 清除](./clear.md)
 - [<ColorIcon icon="import" /> cURL 导入](./curlImport.md)

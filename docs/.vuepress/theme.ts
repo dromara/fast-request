@@ -58,24 +58,24 @@ export default hopeTheme(
           notice: [
             {
               path: "/",
-              title: "将在2024.1.3推出",
+              title: "将在2024.1.6推出",
               content:
-                '<ul><li>AI支持优化</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li>多 Tab 支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2024-1-3",
+                  link: "/guide/history.html#_2024-1-6",
                   type: "primary",
                 },
               ],
               showOnce: true,
-              key: "2024.1.3",
+              key: "2024.1.6",
             },
             {
               path: "/en",
-              title: "Coming in <b>2024.1.3</b>",
+              title: "Coming in <b>2024.1.6</b>",
               content:
-                '<ul><li>AI support optimization</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+                '<ul><li>Multi tab support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
@@ -84,7 +84,7 @@ export default hopeTheme(
                 },
               ],
               showOnce: true,
-              key: "2024.1.3",
+              key: "2024.1.6",
             },
           ],
         },

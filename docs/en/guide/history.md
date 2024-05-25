@@ -18,6 +18,32 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
+## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="Multi Tab window" color="orange"/>
+- <Badge text="Apis mark" type="tip"/>
+- <Badge text="Url copy in Apis & Navigate" type="tip"/>
+
+::: hint Multi Tab window <Badge vertical="top" text="Important feature" color="orange"/>
+<MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis_en.png']" />
+
+Open `rapi` file to display the debugging interface and supports multi-Tab opening. More detail please refer [**Multi-tab window**](/en/guide/features/navigateCurrentMethodJson.md)
+
+:::
+
+
+::: hint Apis mark <Badge vertical="top" text="New feature" type="tip"/>
+<MyCarousel :imgList="['/img/2024.1.6/mark1_en.png','/img/2024.1.6/mark2.png']" />
+
+Added support for mark APIs in the Apis tab, marking them with red highlight dots, and added mark Api searche condation. Developers can mark the important APIs to make them more visible
+:::
+
+::: hint Url copy in Apis & Navigate <Badge vertical="top" text="New feature" type="tip"/>
+<MyCarousel :imgList="['/img/2024.1.6/urlCopyInApis_en.png','/img/2024.1.6/urlCopyInNav_en.png']" />
+
+Right-click option supports copying original URL
+:::
+
+
 ## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Entity parse" type="danger"/>
 

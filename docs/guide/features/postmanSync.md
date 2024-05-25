@@ -70,4 +70,4 @@ Postman中实际Request使用的是**Current value**.
 1. 推荐勾选保存后即同步到Postman,如果没有勾选,则在手动触发的时候需要先保存,再点击同步
 2. 多方协作,如果发现同一个workspace出现多个相同的collection,只需使用其中一方的collection id在配置中手动替换即可
 3. 多方协作,如果发现同一个collection出现多个相同的folder,只需使用其中一方的`.fastRequest/collections/ROOT/模块名/类名/directory.json`中的`pmFolderId`属性即可
-4. 多方协作,如果发现同一个api在postman上有2份,则可以通过修改其中一份数据的`pmRequestId`和`pmResponseId`来是他们保持统一,可以通过[<ColorIcon icon="storeData" /> 导航当前方法存储数据](./navigateCurrentMethodJson.md)来定位存储的文件.最好的方式是通过git管理提交`rapi`文件使api底层存储数据保持一致
+4. 多方协作,如果发现同一个api在postman上有2份,则可以通过修改其中一份数据的`pmRequestId`和`pmResponseId`来是他们保持统一,可以通过[<ColorIcon icon="storeData" /> 多窗口 Tab](./navigateCurrentMethodJson.md)来定位存储的文件.最好的方式是通过git管理提交`rapi`文件使api底层存储数据保持一致

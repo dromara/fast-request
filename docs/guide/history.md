@@ -18,6 +18,31 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
+## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="多 Tab 窗口" color="orange"/>
+- <Badge text="Apis 标记" type="tip"/>
+- <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
+
+::: hint 多 Tab 窗口 <Badge vertical="top" text="重要功能" color="orange"/>
+<MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis.png']" />
+
+`rapi`文件打开展现调试界面，支持多 Tab 打开。更多请查阅[**多 Tab 窗口**](/guide/features/navigateCurrentMethodJson.md)
+
+:::
+
+::: hint Apis 标记 <Badge vertical="top" text="新功能" type="tip"/>
+<MyCarousel :imgList="['/img/2024.1.6/mark1.png','/img/2024.1.6/mark2.png']" />
+
+增加了对 Apis 标签页中对 Api 的标记支持，使其标记红色高亮圆点，并增加了标记 Api 搜索。 可将一些常用的 Api 标记，便于后续的查找。
+:::
+
+::: hint Apis 与 Navigate 标签页 Url 复制 <Badge vertical="top" text="新功能" type="tip"/>
+<MyCarousel :imgList="['/img/2024.1.6/urlCopyInApis.png','/img/2024.1.6/urlCopyInNav.png']" />
+
+右键选项支持复制原始 Url
+:::
+
+
 ## 2024.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="实体类解析" type="danger"/>
 
@@ -64,7 +89,7 @@ icon: changelog
 - <Badge text="兼容 IDEA 2024" type="info"/>  
 - <Badge text="API 导出文件后缀错误" type="danger"/>
 
-::: hint Apifox 集成 <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Apifox 集成 <Badge vertical="top" text="重要功能" color="orange"/>
 
 <MyCarousel :imgList="['/img/2024.1.4/apifoxIntegration.png','/img/2024.1.4/apifoxConfig.png']" />
 
@@ -76,7 +101,7 @@ Apifox集成，支持同步 API、环境变量、域名信息等。只要配置�
 
 :::
 
-::: hint AI支持优化 <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint AI支持优化 <Badge vertical="top" text="重要功能" color="orange"/>
 ![AI](/img/2024.1.4/ai.png)
 
 为了将 AI 的回复更加精准，我们将 AI 的 设置更加精细化，加入了3个维度，加入了`概述`、`提问范例`、`提问范例结果`。此设计即让 AI 先训练一次问答，从而使得结果更加符合预期
@@ -130,7 +155,7 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 - <Badge text="Map入参类型解析优化" type="info"/>
 - <Badge text="windows系统下载文件无响应" type="danger"/>
 
-::: hint AI支持优化 <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint AI支持优化 <Badge vertical="top" text="重要功能" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.3/aiManagenemt.png','/img/2024.1.3/aiPromptEdit.png','/img/2024.1.3/aiPromptChoose.png']" />
 
 增加了 OpenAi、CodeGeeX、自定义三种形式的 AI 支持，通过可配置化的指令，可将选中的文本替换成目标文本。
