@@ -1,6 +1,6 @@
 # APIs import and export
 
-Version Required: <Badge text="2022.1.4" />
+Version Required: <Badge text="2022.1.4" /> <Badge text="Deprecated" type="danger"/>
 
 Using this function, you can easily share your existing APIs with other developers or import them to IDEA on other devices.
 

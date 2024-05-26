@@ -169,37 +169,8 @@ console.error("error")
 ::: tip Code completion支持
 
 在项目中加入如下依赖(如果没有),即可在编辑器脚本中处理针对插件核心类的[Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html)功能(快速导入类(import)、得到方法提示等操作)
-::: tabs
 
-@tab Maven
-
-```xml
-    <dependency>
-        <groupId>cn.hutool</groupId>
-        <artifactId>hutool-http</artifactId>
-        <version>5.8.12</version>
-    </dependency>
-    <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>30.1.1-jre</version>
-    </dependency>
-    <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>fastjson</artifactId>
-        <version>1.2.78</version>
-    </dependency>
-```
-
-@tab Gradle
-
-```gradle
-dependencies {
-    implementation("com.google.guava:guava:30.1.1-jre")
-    implementation("com.alibaba:fastjson:1.2.78")
-    implementation("cn.hutool:hutool-all:5.8.12")
-}
-```
+![](/img/2024.1.5/addLibrary.png)
 
 :::
 
@@ -217,9 +188,6 @@ import cn.hutool.core.util.StrUtil
 import cn.hutool.crypto.digest.DigestUtil
 import cn.hutool.http.HttpRequest
 import cn.hutool.http.HttpUtil
-
-//注意、注意、注意,脚本中需要删除此行代码
-HttpRequest request = HttpUtil.createPost("http://localhost:8081/book/add")
 
 //脚本逻辑正式开始
 String body = StrUtil.str(request.bodyBytes(), CharsetUtil.CHARSET_UTF_8)
@@ -299,10 +267,6 @@ if(myResponse.isOk()){
 
 - Groovy 脚本对 ==;== 不敏感,Java 用;作为语句代码的结束,Groovy 用换行表示一句代码的结束
 - 内置变量已被申明,例如 Demo2 中需要额外新建一个请求,变量命名需要注意不能与内置变量相同
-
-## 技能点
-
-为了得到程序方法提示，如果需要利用内置变量 request 和 response，可以在脚本上先声明`HttpRequest request或者HttpResponse response`变量，写完脚本后再删除
 
 ## 脚本投稿 :star2:
 

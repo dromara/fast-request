@@ -7,7 +7,7 @@ Version required: <Badge text="2022.2.7+" />
 Used to synchronize API documents to <ColorIcon icon="github" /> Github、<ColorIcon icon="gitee" /> Gitee、<ColorIcon icon="gitlab" /> Gitlab,
 and generate online documents and share them with other partners.
 
-![apiSync](/img/2022.2.7/apiSync_en.png)
+![apiSync](/img/2022.2.7/apiSync.png)
 
 ## Attention
 

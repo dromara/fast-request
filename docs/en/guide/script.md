@@ -163,37 +163,7 @@ console.error("error")
 
 Add the following dependency to the project (if there is none), then you can use [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) for the plugin's core classes in the editor (quickly importing classes, getting method hints, etc.).
 
-::: tabs
-
-@tab Maven
-
-```xml
-    <dependency>
-        <groupId>cn.hutool</groupId>
-        <artifactId>hutool-http</artifactId>
-        <version>5.8.12</version>
-    </dependency>
-    <dependency>
-        <groupId>com.google.guava</groupId>
-        <artifactId>guava</artifactId>
-        <version>30.1.1-jre</version>
-    </dependency>
-    <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>fastjson</artifactId>
-        <version>1.2.78</version>
-    </dependency>
-```
-
-@tab Gradle
-
-```gradle
-dependencies {
-    implementation("com.google.guava:guava:30.1.1-jre")
-    implementation("com.alibaba:fastjson:1.2.78")
-    implementation("cn.hutool:hutool-all:5.8.12")
-}
-```
+![](/img/2024.1.5/addLibrary.png)
 
 :::
 
@@ -211,9 +181,6 @@ import cn.hutool.core.util.StrUtil
 import cn.hutool.crypto.digest.DigestUtil
 import cn.hutool.http.HttpRequest
 import cn.hutool.http.HttpUtil
-
-//Note, note, note, this line of code needs to be deleted in the script
-HttpRequest request = HttpUtil.createPost("http://localhost:8081/book/add")
 
 //Script logic begins
 String body = StrUtil.str(request.bodyBytes(), CharsetUtil.CHARSET_UTF_8)
@@ -294,10 +261,6 @@ if(myResponse.isOk()){
 
 - Groovy scripts are not sensitive to `;`, Java uses `;` as the end of the statement code, Groovy uses a newline to indicate the end of a code
 - The built-in variable has been declared. For example, in Demo 2, if an additional request needs to be created, the variable name needs to be noted that it cannot be the same as the built-in variable.
-
-## Skill
-
-In order to get method hints, if you need to use the built-in variables `request` and `response`, you can declare variable `HttpRequest request or HttpResponse response` first when writing a script, and then delete it after finish the script
 
 ## Script contribute :star2:
 

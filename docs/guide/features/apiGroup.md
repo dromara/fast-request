@@ -19,6 +19,6 @@
 
 **切换参数**
 
-以下是 book 列表 3 种语言的查询,点击<ColorIcon icon="apiParamGroup" />进行切换
+以下是 book 列表 3 种语言的查询,点击<ColorIcon icon="apiParamGroupNew" />进行切换
 
 ![apiParamGroup](/img/2022.2.1/apiParamGroup.png "切换分组")
