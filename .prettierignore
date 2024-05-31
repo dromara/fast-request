@@ -1,0 +1,6 @@
+**/.vuepress/.cache/**
+**/.vuepress/.temp/**
+**/.vuepress/dist/**
+**/node_modules/**
+
+docs/.vuepress/public/js/gtag.js
