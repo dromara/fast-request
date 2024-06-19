@@ -9,7 +9,7 @@ background="url('/img/banner/bg1.svg') no-repeat -2100px -80px"
 color="#eee"
 :actions='[
 {
-text: "功能",
+text: "Features",
 link:"/guide/features/",
 }
 ]'
