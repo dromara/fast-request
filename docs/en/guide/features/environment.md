@@ -44,6 +44,6 @@ After focusing on the table, you can enter the key value to quickly locate the r
 
 ## Script
 
-参考 [Script -> demo -> Set an Environment variable](../script.md#demo)
+Please refer to [Script -> demo -> Set an Environment variable](../script.md#demo)
 
-![environmentScript](/img/2023.1.8/environmentScript.png)
+![environmentScript](/img/2023.1.8/environmentScript_en.png)
