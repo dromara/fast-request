@@ -24,6 +24,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
 - <Badge text="Json path support" type="tip"/>
 - <Badge text="Url generation supports extends BaseController interface" type="info"/>
+- <Badge text="Fixed some known bugs" type="danger"/>
 
 ::: hint Multi Tab window <Badge vertical="top" text="Important feature" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis_en.png']" />

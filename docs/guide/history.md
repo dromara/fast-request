@@ -24,6 +24,7 @@ icon: changelog
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
 - <Badge text="Json path" type="tip"/>
 - <Badge text="Url生成支持继承BaseController是接口" type="info"/>
+- <Badge text="修复了一些已知 bug" type="danger"/>
 
 ::: hint 多 Tab 窗口 <Badge vertical="top" text="重要功能" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis.png']" />

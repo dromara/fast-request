@@ -35,7 +35,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
 - <Badge text="Json path support" type="tip"/>
 - <Badge text="Url generation supports extends BaseController interface" type="info"/>
-
+- <Badge text="Fixed some known bugs" type="danger"/>
 
 ## 2024.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Entity parse" type="danger"/>
