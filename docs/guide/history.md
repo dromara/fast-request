@@ -47,6 +47,8 @@ icon: changelog
 
 ::: hint Json path <Badge vertical="top" text="新功能" type="tip"/>
 
+![jsonPath](/img/2024.1.6/jsonPath.png)
+
 在 `Body->Raw` 和 `Response->Pretty` tab下支持 Json 路径查找，但是这依赖于 [JSONPath](https://plugins.jetbrains.com/plugin/22044-jsonpath) 插件.
 :::
 

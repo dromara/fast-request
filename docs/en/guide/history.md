@@ -48,6 +48,8 @@ Right-click option supports copying original URL
 
 ::: hint Json path support <Badge vertical="top" text="New feature" type="tip"/>
 
+![jsonPath](/img/2024.1.6/jsonPath.png)
+
 Support json path search In `Body->Raw` and `Response->Pretty` tab, but this depends on [JSONPath](https://plugins.jetbrains.com/plugin/22044-jsonpath) plugin.
 :::
 
