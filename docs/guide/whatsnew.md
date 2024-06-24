@@ -30,6 +30,9 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 ## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="多 Tab 窗口" color="orange"/>
 - <Badge text="Apis 标记" type="tip"/>
+- <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
+- <Badge text="Json path" type="tip"/>
+- <Badge text="Url生成支持继承BaseController是接口" type="info"/>
 
 ## 2024.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="实体类解析" type="danger"/>

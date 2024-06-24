@@ -22,6 +22,8 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Multi Tab window" color="orange"/>
 - <Badge text="Apis mark" type="tip"/>
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
+- <Badge text="Json path support" type="tip"/>
+- <Badge text="Url generation supports extends BaseController interface" type="info"/>
 
 ::: hint Multi Tab window <Badge vertical="top" text="Important feature" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis_en.png']" />
@@ -43,8 +45,13 @@ Added support for mark APIs in the Apis tab, marking them with red highlight dot
 Right-click option supports copying original URL
 :::
 
+::: hint Json path support <Badge vertical="top" text="New feature" type="tip"/>
 
-## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+Support json path search In `Body->Raw` and `Response->Pretty` tab, but this depends on [JSONPath](https://plugins.jetbrains.com/plugin/22044-jsonpath) plugin.
+:::
+
+
+## 2024.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Entity parse" type="danger"/>
 
 ## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>

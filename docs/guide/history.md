@@ -22,6 +22,8 @@ icon: changelog
 - <Badge text="多 Tab 窗口" color="orange"/>
 - <Badge text="Apis 标记" type="tip"/>
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
+- <Badge text="Json path" type="tip"/>
+- <Badge text="Url生成支持继承BaseController是接口" type="info"/>
 
 ::: hint 多 Tab 窗口 <Badge vertical="top" text="重要功能" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis.png']" />
@@ -40,6 +42,11 @@ icon: changelog
 <MyCarousel :imgList="['/img/2024.1.6/urlCopyInApis.png','/img/2024.1.6/urlCopyInNav.png']" />
 
 右键选项支持复制原始 Url
+:::
+
+::: hint Json path <Badge vertical="top" text="新功能" type="tip"/>
+
+在 `Body->Raw` 和 `Response->Pretty` tab下支持 Json 路径查找，但是这依赖于 [JSONPath](https://plugins.jetbrains.com/plugin/22044-jsonpath) 插件.
 :::
 
 
