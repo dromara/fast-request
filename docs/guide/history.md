@@ -18,7 +18,7 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
-## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="多 Tab 窗口" color="orange"/>
 - <Badge text="Apis 标记" type="tip"/>
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
@@ -53,7 +53,7 @@ icon: changelog
 :::
 
 
-## 2024.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="实体类解析" type="danger"/>
 
 ## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>

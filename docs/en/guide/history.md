@@ -6,7 +6,7 @@ icon: changelog
 ::: important Announcement
 [**Paid vs Free**](./versionCompare.md) ｜ [**Buy plugin**](./buy.md)
 
-Issue report please refer to [Github](https://github.com/dromara/fast-request/issues)
+Issue report please refer to [GitHub](https://github.com/dromara/fast-request/issues)
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
@@ -18,7 +18,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
-## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="pink"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-16" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Multi Tab window" color="orange"/>
 - <Badge text="Apis mark" type="tip"/>
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
@@ -54,7 +54,7 @@ Support json path search In `Body->Raw` and `Response->Pretty` tab, but this dep
 :::
 
 
-## 2024.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Entity parse" type="danger"/>
 
 ## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
