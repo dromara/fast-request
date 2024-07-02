@@ -23,6 +23,7 @@
     "vuepress-theme-hope": "2.0.0-rc.22"
   },
   "devDependencies": {
-    "prettier": "3.2.5"
+    "prettier": "3.2.5",
+    "vidstack": "^1.11.24"
   }
 }

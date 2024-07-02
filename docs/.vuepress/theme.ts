@@ -53,7 +53,7 @@ export default hopeTheme(
       // },
 
       components: {
-        components: ["Badge", "BiliBili", "SiteInfo", "VPCard", "VPBanner"],
+        components: ["Badge", "BiliBili", "SiteInfo", "VPCard", "VPBanner","VidStack"],
         rootComponents: {
           notice: [
             {
