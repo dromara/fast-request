@@ -28,8 +28,12 @@ Because developing version is still in development, the documentation of develop
 :::
 
 [**More detail ---------------->**](./history.md)
+## 2024.1.6.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-07-30" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="Combined annotation support" type="tip"/>
+- <Badge text="Message Optimization" type="info"/>  
+- <Badge text="After the pre-script is executed, the data not used in the current request" type="danger"/>
 
-## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-06-24" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Multi Tab window" color="orange"/>
 - <Badge text="Apis mark" type="tip"/>
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>

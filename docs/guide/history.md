@@ -9,16 +9,44 @@ icon: changelog
 
 购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**，Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
-| ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![wechat group](/img/wechatGroup.png)                                                                    | ![twitter](/img/twitter.png)                                                                                                                      |
-| 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 欢迎关注官方 Twitter                                                                                                                              |
+| ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | ![插件开发技术群](https://img.shields.io/static/v1?label=wechat&message=插件开发技术群&logo=wechat&color=087CFA)                                                            |
+| -------------------------------------------------------------------------------------------------------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![wechat group](/img/wechatGroup.png)                                                                    | ![插件开发技术群](/img/pluginDevelopGroup.png)                                                                                                                       |
+| 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 开发出类似的[iBlog](https://plugins.jetbrains.com/plugin/24920-iblog)、[Bean Assistant](https://plugins.jetbrains.com/plugin/24576-bean-assistant)<br/>的插件教学，如果你也想开发插件请进群 |
 
 :::
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
-## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.6.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-07-30" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="组合注解支持" type="tip"/>
+- <Badge text="消息提示优化" type="info"/>  
+- <Badge text="前置脚本执行后无法在当前请求获取到数据" type="danger"/>
+
+::: hint 组合注解支持 <Badge vertical="top" text="新功能" type="tip"/>
+
+针对如下类型的自定义 RestController 注解在 Controller 类中的扫描支持
+
+```java
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@RestController
+@RequestMapping
+public @interface CustomRestController {
+
+    @AliasFor(annotation = RequestMapping.class)
+    String name() default "";
+
+    @AliasFor(annotation = RequestMapping.class)
+    String[] value() default {};
+}
+```
+:::
+
+
+
+## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="多 Tab 窗口" color="orange"/>
 - <Badge text="Apis 标记" type="tip"/>
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
