@@ -28,10 +28,24 @@ Because developing version is still in development, the documentation of develop
 :::
 
 [**More detail ---------------->**](./history.md)
+
+## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Functions and environment code completion support" color="orange"/>
+- <Badge text="JSON filter support" type="tip"/>
+- <Badge text="Default file path for mlutipart" type="tip"/>
+- <Badge text="Script interface optimition" type="info"/>
+- <Badge text="Map parse" type="info"/>
+- <Badge text="Several known issue optimizations" type="info"/>
+
+## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="Compatible with IDEA 2024.2+" type="info"/>
+
 ## 2024.1.6.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-07-30" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Combined annotation support" type="tip"/>
 - <Badge text="Message Optimization" type="info"/>  
 - <Badge text="After the pre-script is executed, the data not used in the current request" type="danger"/>
+
+
 
 ## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Multi Tab window" color="orange"/>

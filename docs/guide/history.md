@@ -18,7 +18,38 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
-## 2024.1.6.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-07-30" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="函数与变量支持代码补全" color="orange"/>
+- <Badge text="JSON filter支持" type="tip"/>
+- <Badge text="文件默认值支持" type="tip"/>
+- <Badge text="Script界面优化" type="info"/>
+- <Badge text="Map 解析优化" type="info"/>
+- <Badge text="若干已知问题优化" type="info"/>
+
+::: hint 函数与变量支持代码补全 <Badge vertical="top" text="重要功能" color="orange"/>
+<MyCarousel :imgList="['/img/2024.1.7/function.png','/img/2024.1.7/functionInBody.png','/img/2024.1.7/functionConfig.png']" />
+
+支持变量 ``{{xx}}`` 与 ``{@函数名}``的代码补全
+
+函数支持更多信息请参考---->[函数](/guide/features/function.md)
+:::
+
+::: hint JSON filter支持 <Badge vertical="top" text="新功能" type="tip"/>
+![jsonFilter](/img/2024.1.7/jsonFilter.png)
+
+当 JSON 字段较多，但是只需要一部分的时候，可以通过该功能对 JSON进行字段过滤
+:::
+
+::: hint 文件默认值支持 <Badge vertical="top" text="新功能" type="tip"/>
+![jsonFilter](/img/2024.1.7/defaultMultipartFile.png)
+
+Multipart 类型字段可以通过该配置设置默认文件路径
+:::
+
+## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="兼容 IDEA 2024.2+" type="info"/>
+
+## 2024.1.6.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-07-30" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="组合注解支持" type="tip"/>
 - <Badge text="消息提示优化" type="info"/>  
 - <Badge text="前置脚本执行后无法在当前请求获取到数据" type="danger"/>

@@ -22,6 +22,7 @@ icon: featuresNew
 - [<ColorIcon icon="saveGroup" /> API 分组保存](./apiGroup.md)
 - [<ColorIcon icon="saveTemp" /> 临时请求](./tempRequest.md)
 - [<ColorIcon icon="apifox" /> Apifox 集成](./apifox.md)
+- [<ColorIcon icon="function" /> 函数](./function.md) 
 - [<ColorIcon icon="postmanNew" /> Postman 集成](./postmanSync.md)
 - [<ColorIcon icon="apiParamGroupNew" /> API 分组切换](./apiGroup.md)
 - [<ColorIcon icon="locate" /> 当前方法定位](./navigateCurrentMethod.md)

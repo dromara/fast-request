@@ -32,7 +32,7 @@ export default defineUserConfig({
     ],
     [
       "script",
-      { src: "//at.alicdn.com/t/c/font_2601581_j5ywre6kshm.js", async: true },
+      { src: "//at.alicdn.com/t/c/font_2601581_g29rpml51c7.js", async: true },
     ],
     // ["script", { src: "/js/baidu.js" ,"async":true}],
     ["script", { src: "/js/gtag.js", async: true }],

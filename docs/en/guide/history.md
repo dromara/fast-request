@@ -18,7 +18,37 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
+## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Functions and environment code completion support" color="orange"/>
+- <Badge text="JSON filter support" type="tip"/>
+- <Badge text="Default file path for multipart" type="tip"/>
+- <Badge text="Script interface optimition" type="info"/>
+- <Badge text="Map parse" type="info"/>
+- <Badge text="Several known issue optimizations" type="info"/>
 
+::: hint Functions and environment code completion support <Badge vertical="top" text="Important feature" color="orange"/>
+<MyCarousel :imgList="['/img/2024.1.7/functionEn.png','/img/2024.1.7/functionInBodyEn.png','/img/2024.1.7/functionConfig.png']" />
+
+Support environment value like ``{{xx}}`` and function value ``{@functionName}`` code completion
+
+
+For more information about function support, see ----> [Function](/en/guide/features/function.md)
+:::
+
+::: hint JSON filter support <Badge vertical="top" text="New feature" type="tip"/>
+![jsonFilter](/img/2024.1.7/jsonFilterEn.png)
+
+When there are many fields in JSON, but only part of them are needed, this feature can help filter the JSON fields.
+:::
+
+::: hint Default file path for multipart <Badge vertical="top" text="New feature" type="tip"/>
+![jsonFilter](/img/2024.1.7/defaultMultipartFile.png)
+
+Multipart type fields can be set default path by this setting.
+:::
+
+## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+- <Badge text="Compatible with IDEA 2024.2+" type="info"/>
 
 ## 2024.1.6.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-07-30" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Combined annotation support" type="tip"/>
