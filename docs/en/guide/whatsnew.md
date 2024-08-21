@@ -32,7 +32,9 @@ Because developing version is still in development, the documentation of develop
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Functions and environment code completion support" color="orange"/>
 - <Badge text="JSON filter support" type="tip"/>
-- <Badge text="Default file path for mlutipart" type="tip"/>
+- <Badge text="Common Header code completion support" type="tip"/>  
+- <Badge text="Default file path for multipart" type="tip"/>
+- <Badge text="SearchEveryWhere result sorting optimization" type="info"/>  
 - <Badge text="Script interface optimition" type="info"/>
 - <Badge text="Map parse" type="info"/>
 - <Badge text="Several known issue optimizations" type="info"/>

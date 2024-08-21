@@ -30,7 +30,9 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="函数与变量支持代码补全" color="orange"/>
 - <Badge text="JSON filter支持" type="tip"/>
+- <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="文件默认值支持" type="tip"/>
+- <Badge text="SearchEveryWhere 结果排序优化" type="info"/>  
 - <Badge text="Script界面优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
 - <Badge text="若干已知问题优化" type="info"/>

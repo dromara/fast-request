@@ -21,7 +21,9 @@ icon: changelog
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="函数与变量支持代码补全" color="orange"/>
 - <Badge text="JSON filter支持" type="tip"/>
+- <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="文件默认值支持" type="tip"/>
+- <Badge text="SearchEveryWhere 结果排序优化" type="info"/>  
 - <Badge text="Script界面优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
 - <Badge text="若干已知问题优化" type="info"/>
@@ -40,10 +42,22 @@ icon: changelog
 当 JSON 字段较多，但是只需要一部分的时候，可以通过该功能对 JSON进行字段过滤
 :::
 
+::: hint Header 常用值支持代码补全 <Badge vertical="top" text="新功能" type="tip"/>
+![header](/img/2024.1.7/header.png)
+
+对于一些例如 `Authorization` 的请求头支持代码补全
+:::
+
 ::: hint 文件默认值支持 <Badge vertical="top" text="新功能" type="tip"/>
 ![jsonFilter](/img/2024.1.7/defaultMultipartFile.png)
 
 Multipart 类型字段可以通过该配置设置默认文件路径
+:::
+
+::: hint SearchEveryWhere 结果排序优化 <Badge vertical="top" text="优化" type="info"/>
+![searchEveryWhere](/img/2024.1.7/searchEveryWhere.png)
+
+按照Url 路径优化了匹配的排序规则，将匹配度高的排在前面
 :::
 
 ## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>

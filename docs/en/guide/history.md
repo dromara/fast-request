@@ -21,7 +21,9 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Functions and environment code completion support" color="orange"/>
 - <Badge text="JSON filter support" type="tip"/>
+- <Badge text="Common Header code completion support" type="tip"/>  
 - <Badge text="Default file path for multipart" type="tip"/>
+- <Badge text="SearchEveryWhere result sorting optimization" type="info"/>  
 - <Badge text="Script interface optimition" type="info"/>
 - <Badge text="Map parse" type="info"/>
 - <Badge text="Several known issue optimizations" type="info"/>
@@ -41,10 +43,22 @@ For more information about function support, see ----> [Function](/en/guide/feat
 When there are many fields in JSON, but only part of them are needed, this feature can help filter the JSON fields.
 :::
 
+:::hint Common Header code completion support <Badge vertical="top" text="New feature" type="tip"/>
+![header](/img/2024.1.7/header.png)
+
+Code completion is supported for some common header keys, such as `Authorization`
+:::
+
 ::: hint Default file path for multipart <Badge vertical="top" text="New feature" type="tip"/>
 ![jsonFilter](/img/2024.1.7/defaultMultipartFile.png)
 
 Multipart type fields can be set default path by this setting.
+:::
+
+::: hint SearchEveryWhere result sorting optimization <Badge vertical="top" text="Optimization" type="info"/>
+![searchEveryWhere](/img/2024.1.7/searchEveryWhere.png)
+
+Optimized the collation for matching by URL path
 :::
 
 ## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
