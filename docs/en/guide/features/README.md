@@ -21,7 +21,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="save" /> Save request](./saveRequest.md)
 - [<ColorIcon icon="saveGroup" /> Save API group](./apiGroup.md)
 - [<ColorIcon icon="saveTemp" /> Temporary request](./tempRequest.md)
-- [<ColorIcon icon="function" /> Function](./function.md) 
+- [<ColorIcon icon="function" /> Function](./function.md)
 - [<ColorIcon icon="apifox" /> Apifox integration](./apifox.md)
 - [<ColorIcon icon="postmanNew" /> Postman integration](./postmanSync.md)
 - [<ColorIcon icon="apiParamGroupNew" /> API group toggle](./apiGroup.md)

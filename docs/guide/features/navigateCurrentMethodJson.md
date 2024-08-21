@@ -18,4 +18,3 @@
 你可以右键 Apis 中的条目后选择 Tab 中打开
 
 ![openTabInApis](/img/2024.1.6/openTabInApis.png)
-

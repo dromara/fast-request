@@ -28,24 +28,28 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 [**务必查看变更详情----------------->**](./history.md)
 
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="函数与变量支持代码补全" color="orange"/>
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="文件默认值支持" type="tip"/>
-- <Badge text="SearchEveryWhere 结果排序优化" type="info"/>  
+- <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
 - <Badge text="Script界面优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
 - <Badge text="若干已知问题优化" type="info"/>
 
 ## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="兼容 IDEA 2024.2+" type="info"/>
 
 ## 2024.1.6.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-07-30" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="组合注解支持" type="tip"/>
-- <Badge text="消息提示优化" type="info"/>  
+- <Badge text="消息提示优化" type="info"/>
 - <Badge text="前置脚本执行后无法在当前请求获取到数据" type="danger"/>
 
 ## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="多 Tab 窗口" color="orange"/>
 - <Badge text="Apis 标记" type="tip"/>
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
@@ -54,16 +58,18 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text="修复了一些已知 bug" type="danger"/>
 
 ## 2024.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="实体类解析" type="danger"/>
 
 ## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="脚本增加 Add script library支持" type="tip"/>
-- <Badge text="类型下拉框优化" type="info"/>  
-- <Badge text="原始url展示优化" type="info"/>  
-- <Badge text="Apifox目录同步优化" type="info"/>  
-- <Badge text="Url输入框样式优化" type="info"/>  
-- <Badge text="参数 Tab 自动跳转优化" type="info"/>  
-- <Badge text="cUrl 同一 url 匹配 method type优化" type="info"/>  
+- <Badge text="类型下拉框优化" type="info"/>
+- <Badge text="原始url展示优化" type="info"/>
+- <Badge text="Apifox目录同步优化" type="info"/>
+- <Badge text="Url输入框样式优化" type="info"/>
+- <Badge text="参数 Tab 自动跳转优化" type="info"/>
+- <Badge text="cUrl 同一 url 匹配 method type优化" type="info"/>
 - <Badge text="Api doc同步成功但是提示报错" type="danger"/>
 
 ## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>

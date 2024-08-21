@@ -9,9 +9,9 @@ icon: changelog
 
 购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**，Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
-| ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | ![插件开发技术群](https://img.shields.io/static/v1?label=wechat&message=插件开发技术群&logo=wechat&color=087CFA)                                                            |
-| -------------------------------------------------------------------------------------------------------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![wechat group](/img/wechatGroup.png)                                                                    | ![插件开发技术群](/img/pluginDevelopGroup.png)                                                                                                                       |
+| ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | ![插件开发技术群](https://img.shields.io/static/v1?label=wechat&message=插件开发技术群&logo=wechat&color=087CFA)                                                                            |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![wechat group](/img/wechatGroup.png)                                                                    | ![插件开发技术群](/img/pluginDevelopGroup.png)                                                                                                                                              |
 | 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 开发出类似的[iBlog](https://plugins.jetbrains.com/plugin/24920-iblog)、[Bean Assistant](https://plugins.jetbrains.com/plugin/24576-bean-assistant)<br/>的插件教学，如果你也想开发插件请进群 |
 
 :::
@@ -19,11 +19,12 @@ icon: changelog
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="函数与变量支持代码补全" color="orange"/>
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="文件默认值支持" type="tip"/>
-- <Badge text="SearchEveryWhere 结果排序优化" type="info"/>  
+- <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
 - <Badge text="Script界面优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
 - <Badge text="若干已知问题优化" type="info"/>
@@ -31,7 +32,7 @@ icon: changelog
 ::: hint 函数与变量支持代码补全 <Badge vertical="top" text="重要功能" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.7/function.png','/img/2024.1.7/functionInBody.png','/img/2024.1.7/functionConfig.png']" />
 
-支持变量 ``{{xx}}`` 与 ``{@函数名}``的代码补全
+支持变量 `{{xx}}` 与 `{@函数名}`的代码补全
 
 函数支持更多信息请参考---->[函数](/guide/features/function.md)
 :::
@@ -61,11 +62,13 @@ Multipart 类型字段可以通过该配置设置默认文件路径
 :::
 
 ## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="兼容 IDEA 2024.2+" type="info"/>
 
 ## 2024.1.6.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-07-30" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="组合注解支持" type="tip"/>
-- <Badge text="消息提示优化" type="info"/>  
+- <Badge text="消息提示优化" type="info"/>
 - <Badge text="前置脚本执行后无法在当前请求获取到数据" type="danger"/>
 
 ::: hint 组合注解支持 <Badge vertical="top" text="新功能" type="tip"/>
@@ -87,11 +90,11 @@ public @interface CustomRestController {
     String[] value() default {};
 }
 ```
+
 :::
 
-
-
 ## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="多 Tab 窗口" color="orange"/>
 - <Badge text="Apis 标记" type="tip"/>
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
@@ -125,18 +128,19 @@ public @interface CustomRestController {
 在 `Body->Raw` 和 `Response->Pretty` tab下支持 Json 路径查找，但是这依赖于 [JSONPath](https://plugins.jetbrains.com/plugin/22044-jsonpath) 插件.
 :::
 
-
 ## 2024.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="实体类解析" type="danger"/>
 
 ## 2024.1.5 <Badge text="免费试用" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="脚本增加 Add script library支持" type="tip"/>
 - <Badge text="类型下拉框优化" type="info"/>
-- <Badge text="原始url展示优化" type="info"/>  
-- <Badge text="Apifox目录同步优化" type="info"/>  
-- <Badge text="Url输入框样式优化" type="info"/>  
-- <Badge text="参数 Tab 自动跳转优化" type="info"/>  
-- <Badge text="cUrl 同一 url 匹配 method type优化" type="info"/>  
+- <Badge text="原始url展示优化" type="info"/>
+- <Badge text="Apifox目录同步优化" type="info"/>
+- <Badge text="Url输入框样式优化" type="info"/>
+- <Badge text="参数 Tab 自动跳转优化" type="info"/>
+- <Badge text="cUrl 同一 url 匹配 method type优化" type="info"/>
 - <Badge text="Api doc同步成功但是提示报错" type="danger"/>
 
 ::: hint 脚本增加 Add script library支持 <Badge vertical="top" text="新功能" type="tip"/>
@@ -169,7 +173,7 @@ public @interface CustomRestController {
 - <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
 - <Badge text="cURL导入优化" type="info"/>
 - <Badge text="实体解析优化" type="info"/>
-- <Badge text="兼容 IDEA 2024" type="info"/>  
+- <Badge text="兼容 IDEA 2024" type="info"/>
 - <Badge text="API 导出文件后缀错误" type="danger"/>
 
 ::: hint Apifox 集成 <Badge vertical="top" text="重要功能" color="orange"/>
@@ -225,7 +229,6 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
    即每个 API 可以拥有不同的 Header，如果需要公共 Header，请前往[项目级别 Header](/guide/features/projectValueConfig.md) 设置。
 
 :::
-
 
 ::: hint cURL导入优化 <Badge vertical="top" text="优化" type="info"/>
 在去除域名后，如果 Url 与项目中方法的 Url 一致则自动绑定。

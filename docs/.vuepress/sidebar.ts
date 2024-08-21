@@ -62,7 +62,7 @@ export const enSidebar = sidebar({
         "apiPreview",
         "apiCommentPreview",
         "script",
-        "function",  
+        "function",
         "quickAddHeader",
         "autoDomain",
         "ai",

@@ -30,26 +30,28 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
-- <Badge text="Functions and environment code completion support" color="orange"/>
-- <Badge text="JSON filter support" type="tip"/>
-- <Badge text="Common Header code completion support" type="tip"/>  
+
+- <Badge text="Functions and environment code completion" color="orange"/>
+- <Badge text="JSON filter" type="tip"/>
+- <Badge text="Common Header code completion" type="tip"/>
 - <Badge text="Default file path for multipart" type="tip"/>
-- <Badge text="SearchEveryWhere result sorting optimization" type="info"/>  
+- <Badge text="SearchEveryWhere result sorting optimization" type="info"/>
 - <Badge text="Script interface optimition" type="info"/>
 - <Badge text="Map parse" type="info"/>
 - <Badge text="Several known issue optimizations" type="info"/>
 
 ## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Compatible with IDEA 2024.2+" type="info"/>
 
-## 2024.1.6.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-07-30" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.6.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-07-30" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Combined annotation support" type="tip"/>
-- <Badge text="Message Optimization" type="info"/>  
+- <Badge text="Message Optimization" type="info"/>
 - <Badge text="After the pre-script is executed, the data not used in the current request" type="danger"/>
 
+## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-
-## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Multi Tab window" color="orange"/>
 - <Badge text="Apis mark" type="tip"/>
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
@@ -58,16 +60,18 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Fixed some known bugs" type="danger"/>
 
 ## 2024.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Entity parse" type="danger"/>
 
 ## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Add library support in pre and post script" type="tip"/>
-- <Badge text="Type drop-down box optimization" type="info"/>  
-- <Badge text="Original url display optimization" type="info"/>  
-- <Badge text="Apifox directory sync optimization" type="info"/>  
-- <Badge text="Url input style optimization" type="info"/>  
-- <Badge text="Parameter Tab automatic jump optimization" type="info"/>  
-- <Badge text="cUrl import optimization" type="info"/>  
+- <Badge text="Type drop-down box optimization" type="info"/>
+- <Badge text="Original url display optimization" type="info"/>
+- <Badge text="Apifox directory sync optimization" type="info"/>
+- <Badge text="Url input style optimization" type="info"/>
+- <Badge text="Parameter Tab automatic jump optimization" type="info"/>
+- <Badge text="cUrl import optimization" type="info"/>
 - <Badge text="Fix Api doc synchronization is successful but prompts an error" type="danger"/>
 
 ## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2022.3+" color="pink"/>
@@ -75,9 +79,9 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Apifox integration" color="orange"/>
 - <Badge text="AI support optimization" color="orange"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
-- <Badge text="cURL import Optimization" type="info"/>  
+- <Badge text="cURL import Optimization" type="info"/>
 - <Badge text="Entity parse optimization" type="info"/>
-- <Badge text="Compatible with IDEA 2024" type="info"/>  
+- <Badge text="Compatible with IDEA 2024" type="info"/>
 - <Badge text="API export file suffix error" type="danger"/>
 
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>

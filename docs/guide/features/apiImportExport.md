@@ -3,7 +3,7 @@
 
 # APIs 导入导出
 
-版本要求: <Badge text="2022.1.4.0" /> <Badge text="废弃" type="danger"/> 
+版本要求: <Badge text="2022.1.4.0" /> <Badge text="废弃" type="danger"/>
 
 利用该功能，你可以非常方便得将自己已有的 APIs 分享给别的开发者，或者导入到其他设备上的 IDEA。
 

@@ -23,7 +23,6 @@
 
 ## 自动域名 or 配置文件快速生成
 
-
 1. 自动域名：参考此[文档](./autoDomain.md)，最后根据实际情况只需要修改域名值
 
 2. 配置文件快速生成：选择项目中的`application.properties`或者`application.yml`，通过配置文件，点击图标<ColorIcon icon="restfulFastRequest" />，可以快捷添加配置。
@@ -31,14 +30,12 @@
 ![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig.png "域名配置")
 
 > 变量来源
+
 ```
 a. 针对带有环境名如`application-dev.properties`，插件将自动适配`-`与`.`之间的变量作为环境名。
 b. 项目名来源于模块名
 c. 域名=`http://localhost:port/context-path`
 ```
-
-
-
 
 ## 2.手动配置域名
 

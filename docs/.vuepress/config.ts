@@ -1,7 +1,7 @@
-import {container} from "@mdit/plugin-container";
-import {viteBundler} from "@vuepress/bundler-vite";
-import {defineUserConfig} from "vuepress";
-import {getDirname, path} from "vuepress/utils";
+import { container } from "@mdit/plugin-container";
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
+import { getDirname, path } from "vuepress/utils";
 
 import theme from "./theme.js";
 
@@ -32,7 +32,7 @@ export default defineUserConfig({
     ],
     [
       "script",
-      { src: "//at.alicdn.com/t/c/font_2601581_g29rpml51c7.js", async: true },
+      { src: "//at.alicdn.com/t/c/font_2601581_fv1e32dalkn.js", async: true },
     ],
     // ["script", { src: "/js/baidu.js" ,"async":true}],
     ["script", { src: "/js/gtag.js", async: true }],

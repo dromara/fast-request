@@ -8,7 +8,6 @@ The `rapi` file ultimately stores data in `json` format and is displayed in the 
 
 ![openInTabAction](/img/2024.1.6/multiTab.png)
 
-
 The current API can be opened in Tab through the following Action options.
 
 ![openInTabAction](/img/2024.1.6/openInTabAction.png)

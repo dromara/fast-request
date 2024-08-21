@@ -25,8 +25,7 @@ color="#eee"
 
 ![](/img/start.png)
 
-
->视频教程↓↓↓
+> 视频教程↓↓↓
 
 ```component BiliBili
 bvid: BV1V84y1f7uQ

@@ -19,31 +19,31 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="blue"/> <Badge text="IDEA 2023.3+" color="pink"/>
-- <Badge text="Functions and environment code completion support" color="orange"/>
-- <Badge text="JSON filter support" type="tip"/>
-- <Badge text="Common Header code completion support" type="tip"/>  
+
+- <Badge text="Functions and environment code completion" color="orange"/>
+- <Badge text="JSON filter" type="tip"/>
+- <Badge text="Common Header code completion" type="tip"/>
 - <Badge text="Default file path for multipart" type="tip"/>
-- <Badge text="SearchEveryWhere result sorting optimization" type="info"/>  
+- <Badge text="SearchEveryWhere result sorting optimization" type="info"/>
 - <Badge text="Script interface optimition" type="info"/>
 - <Badge text="Map parse" type="info"/>
 - <Badge text="Several known issue optimizations" type="info"/>
 
-::: hint Functions and environment code completion support <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Functions and environment code completion <Badge vertical="top" text="Important feature" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.7/functionEn.png','/img/2024.1.7/functionInBodyEn.png','/img/2024.1.7/functionConfig.png']" />
 
-Support environment value like ``{{xx}}`` and function value ``{@functionName}`` code completion
-
+Support environment value like `{{xx}}` and function value `{@functionName}` code completion
 
 For more information about function support, see ----> [Function](/en/guide/features/function.md)
 :::
 
-::: hint JSON filter support <Badge vertical="top" text="New feature" type="tip"/>
+::: hint JSON filter <Badge vertical="top" text="New feature" type="tip"/>
 ![jsonFilter](/img/2024.1.7/jsonFilterEn.png)
 
 When there are many fields in JSON, but only part of them are needed, this feature can help filter the JSON fields.
 :::
 
-:::hint Common Header code completion support <Badge vertical="top" text="New feature" type="tip"/>
+:::hint Common Header code completion <Badge vertical="top" text="New feature" type="tip"/>
 ![header](/img/2024.1.7/header.png)
 
 Code completion is supported for some common header keys, such as `Authorization`
@@ -62,11 +62,13 @@ Optimized the collation for matching by URL path
 :::
 
 ## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Compatible with IDEA 2024.2+" type="info"/>
 
-## 2024.1.6.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-07-30" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.6.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="pink"/> <Badge text="2024-07-30" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Combined annotation support" type="tip"/>
-- <Badge text="Message Optimization" type="info"/>  
+- <Badge text="Message Optimization" type="info"/>
 - <Badge text="After the pre-script is executed, the data not used in the current request" type="danger"/>
 
 ::: hint Combined annotation support <Badge vertical="top" text="New feature" type="tip"/>
@@ -88,11 +90,11 @@ public @interface CustomRestController {
     String[] value() default {};
 }
 ```
+
 :::
 
+## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-
-## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/>  <Badge text="IDEA 2022.3+" color="pink"/>
 - <Badge text="Multi Tab window" color="orange"/>
 - <Badge text="Apis mark" type="tip"/>
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
@@ -106,7 +108,6 @@ public @interface CustomRestController {
 Open `rapi` file to display the debugging interface and supports multi-Tab opening. More detail please refer [**Multi-tab window**](/en/guide/features/navigateCurrentMethodJson.md)
 
 :::
-
 
 ::: hint Apis mark <Badge vertical="top" text="New feature" type="tip"/>
 <MyCarousel :imgList="['/img/2024.1.6/mark1_en.png','/img/2024.1.6/mark2.png']" />
@@ -127,18 +128,19 @@ Right-click option supports copying original URL
 Support json path search In `Body->Raw` and `Response->Pretty` tab, but this depends on [JSONPath](https://plugins.jetbrains.com/plugin/22044-jsonpath) plugin.
 :::
 
-
 ## 2024.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-16" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Entity parse" type="danger"/>
 
 ## 2024.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2024-05-14" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+
 - <Badge text="Add library support in pre and post script" type="tip"/>
-- <Badge text="Type drop-down box optimization" type="info"/>  
-- <Badge text="Original url display optimization" type="info"/>  
-- <Badge text="Apifox directory sync optimization" type="info"/>  
-- <Badge text="Url input style optimization" type="info"/>  
-- <Badge text="Parameter Tab automatic jump optimization" type="info"/>  
-- <Badge text="cUrl import optimization" type="info"/>  
+- <Badge text="Type drop-down box optimization" type="info"/>
+- <Badge text="Original url display optimization" type="info"/>
+- <Badge text="Apifox directory sync optimization" type="info"/>
+- <Badge text="Url input style optimization" type="info"/>
+- <Badge text="Parameter Tab automatic jump optimization" type="info"/>
+- <Badge text="cUrl import optimization" type="info"/>
 - <Badge text="Fix Api doc synchronization is successful but prompts an error" type="danger"/>
 
 ::: hint Add library support in pre and post script <Badge vertical="top" text="New feature" type="tip"/>
@@ -172,7 +174,7 @@ Url is the same, but the method type (Get, Post, etc.) is different, the binding
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
 - <Badge text="cURL import Optimization" type="info"/>
 - <Badge text="Entity parse optimization" type="info"/>
-- <Badge text="Compatible with IDEA 2024" type="info"/>  
+- <Badge text="Compatible with IDEA 2024" type="info"/>
 - <Badge text="API export file suffix error" type="danger"/>
 
 ::: hint Apifox integration <Badge vertical="top" text="Important feature" color="orange"/>

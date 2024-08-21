@@ -1,7 +1,7 @@
-import {getDirname, path} from "vuepress/utils";
-import {hopeTheme} from "vuepress-theme-hope";
-import {enNavbar, zhNavbar} from "./navbar.js";
-import {enSidebar, zhSidebar} from "./sidebar.js";
+import { getDirname, path } from "vuepress/utils";
+import { hopeTheme } from "vuepress-theme-hope";
+import { enNavbar, zhNavbar } from "./navbar.js";
+import { enSidebar, zhSidebar } from "./sidebar.js";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -24,7 +24,7 @@ export default hopeTheme(
 
     darkmode: "enable",
 
-    iconAssets: "//at.alicdn.com/t/c/font_2601581_g29rpml51c7.css",
+    iconAssets: "//at.alicdn.com/t/c/font_2601581_fv1e32dalkn.css",
 
     locales: {
       "/": {
@@ -53,38 +53,45 @@ export default hopeTheme(
       // },
 
       components: {
-        components: ["Badge", "BiliBili", "SiteInfo", "VPCard", "VPBanner","VidStack"],
+        components: [
+          "Badge",
+          "BiliBili",
+          "SiteInfo",
+          "VPCard",
+          "VPBanner",
+          "VidStack",
+        ],
         rootComponents: {
           notice: [
             {
               path: "/",
-              title: "将在2024.1.6推出",
+              title: "将在2024.1.7推出",
               content:
-                '<ul><li>多 Tab 支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+                '<ul><li>函数与变量支持代码补全</li><li>JSON filter支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
               actions: [
                 {
                   text: "了解详情→",
-                  link: "/guide/history.html#_2024-1-6",
+                  link: "/guide/history.html#_2024-1-7",
                   type: "primary",
                 },
               ],
               showOnce: true,
-              key: "2024.1.6",
+              key: "2024.1.7",
             },
             {
               path: "/en",
-              title: "Coming in <b>2024.1.6</b>",
+              title: "Coming in <b>2024.1.7</b>",
               content:
-                '<ul><li>Multi tab support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+                '<ul><li>Functions and environment code completion</li><li>JSON filter</li></ul><div class="addthis_inline_follow_toolbox"></div>',
               actions: [
                 {
                   text: "Learn more→",
-                  link: "/en/guide/history.html#_2024-1-3",
+                  link: "/en/guide/history.html#_2024-1-7",
                   type: "primary",
                 },
               ],
               showOnce: true,
-              key: "2024.1.6",
+              key: "2024.1.7",
             },
           ],
         },

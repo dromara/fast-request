@@ -7,7 +7,6 @@ icon: bilibili
 
 ![bilibili](/img/bilibili.jpg)
 
-
 ```component BiliBili
 bvid: BV1pM4m1Q7c5
 ratio: 5/4

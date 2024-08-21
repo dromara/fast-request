@@ -3,6 +3,7 @@
 Version required: <Badge text="2024.1.4+" />
 
 ## 1. Introduce
+
 ![AI](/img/2024.1.4/ai_en.png)
 
 In order to make AI's responses more accurate, we have made AI settings more refined and added 3 dimensions:
@@ -42,7 +43,6 @@ the values in the JSON without changing its structure.
 
 :::
 
-
 ::: tip
 The value selected in the editor needs to be replaced with **${SELECTION}**. The complete example is as following.
 
@@ -51,7 +51,6 @@ The value selected in the editor needs to be replaced with **${SELECTION}**. The
 :::
 
 ![](/img/features/aiPromptExample_en.png)
-
 
 ## 2. Api key configuration
 

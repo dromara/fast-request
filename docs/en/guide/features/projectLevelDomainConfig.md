@@ -21,8 +21,6 @@ The advantage of using project-level config is that when there are many projects
 
 ## Auto domain or Generate by config file
 
-
-
 1. Refer to this [document](./autoDomain.md) for auth domain, and finally only need to modify the domain name value if not the value you want.
 2. Generate by config file: Select `application.properties` or `application.yml` in the project, click on the icon <ColorIcon icon="restfulFastRequest" />.
 
