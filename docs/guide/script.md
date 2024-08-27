@@ -28,14 +28,18 @@ headerDepth: 4
 
 插件底层采用[hutool](https://hutool.cn/)的`cn.hutool.http.HttpRequest`来实现请求的发送
 
-### request <Badge text="2022.2.3️" type="tip"/>
+### request <Badge text="2022.2.3️" type="tip"/> <Badge text="废弃️" type="danger"/>
+
+废弃: **使用 `rfr.request` 代替**
 
 - 作用: 包含了请求相关的信息,例如 url、header、body、各种参数
 - 类型: cn.hutool.http.HttpRequest
 
 可以通过修改 request 值来动态调整参数
 
-### response <Badge text="2022.2.3️" type="tip"/>
+### response <Badge text="2022.2.3️" type="tip"/> <Badge text="废弃️" type="danger"/>
+
+废弃: **使用 `rfr.response` 代替**
 
 - 作用: 包含了请求响应的信息
 - 类型: cn.hutool.http.HttpResponse
@@ -45,6 +49,20 @@ headerDepth: 4
 ### rfr <Badge text="2022.2.3️" type="tip"/>
 
 - 作用: 包含了跟插件交互相关的一些属性,用于后期定制
+
+
+#### rfr.request <Badge text="2024.1.7️" type="tip"/>
+
+- 作用: 包含了请求相关的信息,例如 url、header、body、各种参数
+- 类型: cn.hutool.http.HttpRequest
+
+可以通过修改 request 值来动态调整参数
+
+#### rfr.response <Badge text="2024.1.7️" type="tip"/>
+
+- 作用: 包含了请求响应的信息
+- 类型: cn.hutool.http.HttpResponse
+
 
 #### rfr.projectHeader <Badge text="2022.2.3️" type="tip"/>
 

@@ -35,8 +35,9 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="JSON filter" type="tip"/>
 - <Badge text="Common Header code completion" type="tip"/>
 - <Badge text="Default file path for multipart" type="tip"/>
+- <Badge text="Error report support" type="tip"/>    
 - <Badge text="SearchEveryWhere result sorting optimization" type="info"/>
-- <Badge text="Script interface optimition" type="info"/>
+- <Badge text="Script grammar hints optimization" type="info"/>
 - <Badge text="Map parse" type="info"/>
 - <Badge text="Several known issue optimizations" type="info"/>
 

@@ -27,14 +27,18 @@ Developers should pay attention to the fact that the built-in variable has been 
 
 Plugin use [hutool](https://hutool.cn/) `cn.hutool.http.HttpRequest` to send request
 
-### request <Badge text="2022.2.3️" type="tip"/>
+### request <Badge text="2022.2.3️" type="tip"/> <Badge text="Deprecated" type="danger"/>
+
+**Please use `rfr.request` instead.**
 
 - Remark: Contains request-related information, such as url, header, body, parameters
 - Type: cn.hutool.http.HttpRequest
 
 Parameters can be dynamically adjusted by modifying the request value.
 
-### response <Badge text="2022.2.3️" type="tip"/>
+### response <Badge text="2022.2.3️" type="tip"/> <Badge text="Deprecated" type="danger"/>
+
+**Please use `rfr.response` instead.**
 
 - Remark: Contains response information
 - Type: cn.hutool.http.HttpResponse
@@ -44,6 +48,19 @@ You can get the result of the response through the response value.
 ### rfr <Badge text="2022.2.3️" type="tip"/>
 
 - Remark: Contains some properties related to plugin interaction
+
+#### request <Badge text="2024.1.7️" type="tip"/>
+
+- Remark: Contains request-related information, such as url, header, body, parameters
+- Type: cn.hutool.http.HttpRequest
+
+Parameters can be dynamically adjusted by modifying the request value.
+
+#### response <Badge text="2024.1.7️" type="tip"/>
+
+- Remark: Contains response information
+- Type: cn.hutool.http.HttpResponse
+
 
 #### rfr.projectHeader <Badge text="2022.2.3️" type="tip"/>
 

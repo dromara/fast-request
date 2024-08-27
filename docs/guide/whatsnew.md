@@ -33,8 +33,9 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="文件默认值支持" type="tip"/>
+- <Badge text="内置异常上报" type="tip"/>  
 - <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
-- <Badge text="Script界面优化" type="info"/>
+- <Badge text="Script语法提示优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
 - <Badge text="若干已知问题优化" type="info"/>
 

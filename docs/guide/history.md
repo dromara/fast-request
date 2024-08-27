@@ -24,8 +24,9 @@ icon: changelog
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="文件默认值支持" type="tip"/>
+- <Badge text="异常上报支持" type="tip"/>  
 - <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
-- <Badge text="Script界面优化" type="info"/>
+- <Badge text="Script语法提示优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
 - <Badge text="若干已知问题优化" type="info"/>
 
@@ -55,11 +56,29 @@ icon: changelog
 Multipart 类型字段可以通过该配置设置默认文件路径
 :::
 
+::: hint 异常上报支持 <Badge vertical="top" text="新功能" type="tip"/>
+![errorReport](/img/2024.1.7/errorReport.png)
+
+更加方便得上报错误，这可以使得作者可以更好得修复和定位 bug。
+:::
+
 ::: hint SearchEveryWhere 结果排序优化 <Badge vertical="top" text="优化" type="info"/>
 ![searchEveryWhere](/img/2024.1.7/searchEveryWhere.png)
 
 按照Url 路径优化了匹配的排序规则，将匹配度高的排在前面
 :::
+
+::: hint Script 语法提示优化 <Badge vertical="top" text="优化" type="info"/>
+
+![scriptHint](/img/2024.1.7/scriptHint.png)
+
+前提是需要点击安装依赖 lib，使用`rfr.request`、`rfr.response` 替换以获得代码补全提示。
+
+原先的内置变量 `request`、`response` 依然可以使用，但是代码补全提示不友好。
+
+更多内置变量请参考 [Script->rfr](./script.md#rfr)
+:::
+
 
 ## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
