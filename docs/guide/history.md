@@ -23,11 +23,13 @@ icon: changelog
 - <Badge text="函数与变量支持代码补全" color="orange"/>
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
+- <Badge text="@FeignClient 扫描支持" type="tip"/>  
 - <Badge text="文件默认值支持" type="tip"/>
 - <Badge text="异常上报支持" type="tip"/>  
 - <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
 - <Badge text="Script语法提示优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
+- <Badge text="修复 Jar 中的 url 扫描结果展示为空" type="info"/>
 - <Badge text="若干已知问题优化" type="info"/>
 
 ::: hint 函数与变量支持代码补全 <Badge vertical="top" text="重要功能" color="orange"/>
@@ -47,7 +49,13 @@ icon: changelog
 ::: hint Header 常用值支持代码补全 <Badge vertical="top" text="新功能" type="tip"/>
 ![header](/img/2024.1.7/header.png)
 
-对于一些例如 `Authorization` 的请求头支持代码补全
+对于一些例如 `Authorization`、`token` 的请求头支持代码补全
+:::
+
+::: hint @FeignClient 扫描 <Badge vertical="top" text="New feature" type="tip"/>
+![feignClientSupport](/img/2024.1.7/feignClientSupport.png)
+
+支持对 `org.springframework.cloud.openfeign.FeignClient` 的扫描，优化 path 路径解析结果
 :::
 
 ::: hint 文件默认值支持 <Badge vertical="top" text="新功能" type="tip"/>

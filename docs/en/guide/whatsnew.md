@@ -34,11 +34,13 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Functions and environment code completion" color="orange"/>
 - <Badge text="JSON filter" type="tip"/>
 - <Badge text="Common Header code completion" type="tip"/>
+- <Badge text="@FeignClient scan support" type="tip"/>
 - <Badge text="Default file path for multipart" type="tip"/>
-- <Badge text="Error report support" type="tip"/>    
+- <Badge text="Error report support" type="tip"/>
 - <Badge text="SearchEveryWhere result sorting optimization" type="info"/>
 - <Badge text="Script grammar hints optimization" type="info"/>
 - <Badge text="Map parse" type="info"/>
+- <Badge text="Fix URL scan in jar is displayed as empty" type="info"/>
 - <Badge text="Several known issue optimizations" type="info"/>
 
 ## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>

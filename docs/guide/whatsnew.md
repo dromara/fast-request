@@ -32,11 +32,13 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 - <Badge text="函数与变量支持代码补全" color="orange"/>
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
+- <Badge text="@FeignClient 扫描支持" type="tip"/>  
 - <Badge text="文件默认值支持" type="tip"/>
 - <Badge text="内置异常上报" type="tip"/>  
 - <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
 - <Badge text="Script语法提示优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
+- <Badge text="修复 Jar 中的 url 扫描结果展示为空" type="info"/>  
 - <Badge text="若干已知问题优化" type="info"/>
 
 ## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
