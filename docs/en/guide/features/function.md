@@ -4,9 +4,9 @@
 
 Path：`Project Global Config -> Functions`
 
-Use `{@functionName}` to replace the fixed value. ==Methods must be paramaterless==, otherwise it won't work.
+Use `{{$functionName}}` to replace the fixed value. ==Methods must be paramaterless==, otherwise it won't work.
 
-Pressing the shortcut key after typing `{@`, it will invoke the auto-completion action.
+Pressing the shortcut key after typing `{{$`, it will invoke the auto-completion action.
 
 Developers can use the built-in api in the JDK to write own custom functions, such as 5-length random strings.
 

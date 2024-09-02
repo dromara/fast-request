@@ -35,7 +35,7 @@ icon: changelog
 ::: hint 函数与变量支持代码补全 <Badge vertical="top" text="重要功能" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.7/function.png','/img/2024.1.7/functionInBody.png','/img/2024.1.7/functionConfig.png']" />
 
-支持变量 `{{xx}}` 与 `{@函数名}`的代码补全
+支持变量 `{{xx}}` 与 `{{$函数名}}`的代码补全
 
 函数支持更多信息请参考---->[函数](/guide/features/function.md)
 :::

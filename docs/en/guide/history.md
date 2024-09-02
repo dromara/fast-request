@@ -36,7 +36,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 ::: hint Functions and environment code completion <Badge vertical="top" text="Important feature" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.7/functionEn.png','/img/2024.1.7/functionInBodyEn.png','/img/2024.1.7/functionConfig.png']" />
 
-Support environment value like `{{xx}}` and function value `{@functionName}` code completion
+Support environment value like `{{xx}}` and function value `{{$functionName}}` code completion
 
 For more information about function support, see ----> [Function](/en/guide/features/function.md)
 :::
