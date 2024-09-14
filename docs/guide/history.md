@@ -29,8 +29,8 @@ icon: changelog
 - <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
 - <Badge text="Script语法提示优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
-- <Badge text="修复 Jar 中的 url 扫描结果展示为空" type="info"/>
-- <Badge text="若干已知问题优化" type="info"/>
+- <Badge text="修复 Jar 中的 url 扫描结果展示为空" type="danger"/>
+- <Badge text="若干已知问题优化" type="danger"/>
 
 ::: hint 函数与变量支持代码补全 <Badge vertical="top" text="重要功能" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.7/function.png','/img/2024.1.7/functionInBody.png','/img/2024.1.7/functionConfig.png']" />
@@ -59,7 +59,7 @@ icon: changelog
 :::
 
 ::: hint 文件默认值支持 <Badge vertical="top" text="新功能" type="tip"/>
-![jsonFilter](/img/2024.1.7/defaultMultipartFile.png)
+![defaultMultipartFile](/img/2024.1.7/defaultMultipartFile.png)
 
 Multipart 类型字段可以通过该配置设置默认文件路径
 :::

@@ -40,8 +40,8 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="SearchEveryWhere result sorting optimization" type="info"/>
 - <Badge text="Script grammar hints optimization" type="info"/>
 - <Badge text="Map parse" type="info"/>
-- <Badge text="Fix URL scan in jar is displayed as empty" type="info"/>
-- <Badge text="Several known issue optimizations" type="info"/>
+- <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>
+- <Badge text="Several known issue optimizations" type="danger"/>
 
 ## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 

@@ -30,8 +30,8 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Script interface optimition" type="info"/>
 - <Badge text="Script grammar hints optimization" type="info"/>  
 - <Badge text="Map parse" type="info"/>
-- <Badge text="Fix URL scan in jar is displayed as empty" type="info"/>  
-- <Badge text="Several known issue optimizations" type="info"/>
+- <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>  
+- <Badge text="Several known issue optimizations" type="danger"/>
 
 ::: hint Functions and environment code completion <Badge vertical="top" text="Important feature" color="orange"/>
 <MyCarousel :imgList="['/img/2024.1.7/functionEn.png','/img/2024.1.7/functionInBodyEn.png','/img/2024.1.7/functionConfig.png']" />
@@ -60,7 +60,7 @@ Support scan `org.springframework.cloud.openfeign.FeignClient`, optimized the pa
 :::
 
 ::: hint Default file path for multipart <Badge vertical="top" text="New feature" type="tip"/>
-![jsonFilter](/img/2024.1.7/defaultMultipartFile.png)
+![defaultMultipartFile](/img/2024.1.7/defaultMultipartFile.png)
 
 Multipart type fields can be set default path by this setting.
 :::
