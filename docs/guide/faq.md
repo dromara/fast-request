@@ -142,6 +142,12 @@ def response = request.execute()
 
 调整工具窗口宽度至`610`+像素，达到最佳视觉效果
 
+## S: 如何忽略.fastRequest目录
+
+有些开发者不希望看到`.fastRequest`目录，可以前往 idea 设置中的`File Types`，在`Ignore files and folders`中添加`.fastRequest`即可
+
+![ignoreFastRequestDir](/img/faq/ignoreFastRequestDir.png)
+
 ## Q: Origin等请求头失效
 
 由于 `sun.net.www.protocol.http.HttpURLConnection` 设置了**受限标头**,以下一些请求头如果想使用,则需要给IDEA配置vm参数

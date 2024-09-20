@@ -142,6 +142,14 @@ For the saved API, you modify it again, and you need manually fill in the parame
 
 Adjust tool window width to `610`+ pixel and will achieve the best visual effect
 
+## S: How to ignore .fastRequest directory
+
+Some developers don't want to `.fastRequest` directory exist in the project, 
+then you can go to idea settings `File Types`, add `.fastRequest` in `Ignore files and folders`
+
+![ignoreFastRequestDir](/img/faq/ignoreFastRequestDir.png)
+
+
 ## Q: Header likes Origin not effect
 
 Because the **restrictedHeaders** strategy of `sun.net.www.protocol.http.HttpURLConnection` . If you want to use the following headers, you need to configure vm parameters for IDEA
