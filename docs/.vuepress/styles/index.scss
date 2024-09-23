@@ -116,7 +116,7 @@ h2 {
   }
 }
 
-#{hope-config.$content-class}.custom {
+[vp-content].custom {
   padding: 0 5rem;
 }
 
@@ -143,7 +143,7 @@ h2 {
       font-variation-settings:
         "wght" 700,
         "BEVL" 100;
-      background-color: var(--theme-color);
+      background-color: var(--vp-c-accent-bg);
       position: relative;
       color: transparent;
       background-clip: text;
@@ -221,7 +221,7 @@ h2 {
     font-size: 22px;
     border-radius: 0.2rem;
     font-weight: 900;
-    color: var(--black);
+    color: var(--vp-c-black);
     margin: 1rem 0;
     padding: 0.5rem;
 
@@ -248,14 +248,9 @@ h2 {
   text-decoration: none;
 }
 
-@media (max-width: 767px) {
-  .home-advantage {
+.home-advantage {
+  @media (max-width: 767px) {
     display: none;
-  }
-}
-@media (min-width: 768px) {
-  .home-advantage {
-    display: block;
   }
 }
 

@@ -43,7 +43,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>
 - <Badge text="Several known issue optimizations" type="danger"/>
 
-## 2024.1.6.3 <Badge text="Free trial" type="tip"/>  <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
+## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
 - <Badge text="Compatible with IDEA 2024.2+" type="info"/>
 

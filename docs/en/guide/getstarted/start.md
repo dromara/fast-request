@@ -3,17 +3,14 @@ title: Get started
 icon: start1
 ---
 
-<VPBanner
-content="If you are already familiar with the basic operations of Fast Request, you can go directly to the features page."
-background="url('/img/banner/bg1.svg') no-repeat -2100px -80px"
-color="#eee"
-:actions='[
-{
-text: "Features",
-link:"/guide/features/",
-}
-]'
-/>
+```component VPBanner
+content: If you are already familiar with the basic operations of Fast Request, you can go directly to the features page.
+background: url('/img/banner/bg1.svg') no-repeat -2100px -80px
+color: "#eee"
+actions:
+  - text: Features
+    link: /en/guide/features/
+```
 
 ::: tabs
 
@@ -23,10 +20,10 @@ link:"/guide/features/",
 2. If the result of [Auto domain](../features/autoDomain.md) did not meet expectations，change the domain in [Project-level domain config](../features/projectLevelDomainConfig.md)
 3. Click send button for sending request
 
-<VidStack
-src="youtube/FiLfA8GKCoI"
-title="Search and run api in Fast Request"
-/>
+```component VidStack
+src: youtube/FiLfA8GKCoI
+title: Search and run api in Fast Request
+```
 
 ![](/img/start.png)
 

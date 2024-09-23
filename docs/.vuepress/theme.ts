@@ -57,44 +57,10 @@ export default hopeTheme(
           "Badge",
           "BiliBili",
           "SiteInfo",
-          "VPCard",
           "VPBanner",
+          "VPCard",
           "VidStack",
         ],
-        rootComponents: {
-          notice: [
-            {
-              path: "/",
-              title: "将在2024.1.7推出",
-              content:
-                '<ul><li>函数与变量支持代码补全</li><li>JSON filter支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
-              actions: [
-                {
-                  text: "了解详情→",
-                  link: "/guide/history.html#_2024-1-7",
-                  type: "primary",
-                },
-              ],
-              showOnce: true,
-              key: "2024.1.7",
-            },
-            {
-              path: "/en",
-              title: "Coming in <b>2024.1.7</b>",
-              content:
-                '<ul><li>Functions and environment code completion</li><li>JSON filter</li></ul><div class="addthis_inline_follow_toolbox"></div>',
-              actions: [
-                {
-                  text: "Learn more→",
-                  link: "/en/guide/history.html#_2024-1-7",
-                  type: "primary",
-                },
-              ],
-              showOnce: true,
-              key: "2024.1.7",
-            },
-          ],
-        },
       },
 
       docsearch: {
@@ -113,14 +79,17 @@ export default hopeTheme(
         },
       },
 
+      markdownImage: {
+        lazyload: true,
+        size: true,
+      },
+
+      markdownTab: true,
+
       mdEnhance: {
         align: true,
         chart: true,
-        codetabs: true,
         component: true,
-        hint: true,
-        imgLazyload: true,
-        imgSize: true,
         include: {
           resolvePath: (file) =>
             file.startsWith("@src")
@@ -128,9 +97,46 @@ export default hopeTheme(
               : file,
         },
         mark: true,
-        tabs: true,
         tasklist: true,
       },
+
+      notice: [
+        {
+          path: "/",
+          title: "将在2024.1.7推出",
+          content:
+            '<ul><li>函数与变量支持代码补全</li><li>JSON filter支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+          actions: [
+            {
+              text: "了解详情→",
+              link: "/guide/history.html#_2024-1-7",
+              type: "primary",
+            },
+          ],
+          showOnce: true,
+          key: "2024.1.7",
+        },
+        {
+          path: "/en",
+          title: "Coming in <b>2024.1.7</b>",
+          content:
+            '<ul><li>Functions and environment code completion</li><li>JSON filter</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+          actions: [
+            {
+              text: "Learn more→",
+              link: "/en/guide/history.html#_2024-1-7",
+              type: "primary",
+            },
+          ],
+          showOnce: true,
+          key: "2024.1.7",
+        },
+      ],
+
+      shiki: {
+        lineNumbers: 10,
+        theme: 'one-dark-pro',
+      }
     },
   },
   { custom: true },

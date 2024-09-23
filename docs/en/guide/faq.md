@@ -144,11 +144,10 @@ Adjust tool window width to `610`+ pixel and will achieve the best visual effect
 
 ## S: How to ignore .fastRequest directory
 
-Some developers don't want to `.fastRequest` directory exist in the project, 
+Some developers don't want to `.fastRequest` directory exist in the project,
 then you can go to idea settings `File Types`, add `.fastRequest` in `Ignore files and folders`
 
 ![ignoreFastRequestDir](/img/faq/ignoreFastRequestDir.png)
-
 
 ## Q: Header likes Origin not effect
 

@@ -23,14 +23,14 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Functions and environment code completion" color="orange"/>
 - <Badge text="JSON filter" type="tip"/>
 - <Badge text="Common Header code completion" type="tip"/>
-- <Badge text="@FeignClient scan support" type="tip"/>  
+- <Badge text="@FeignClient scan support" type="tip"/>
 - <Badge text="Default file path for multipart" type="tip"/>
-- <Badge text="Error report support" type="tip"/>  
+- <Badge text="Error report support" type="tip"/>
 - <Badge text="SearchEveryWhere result sorting optimization" type="info"/>
 - <Badge text="Script interface optimition" type="info"/>
-- <Badge text="Script grammar hints optimization" type="info"/>  
+- <Badge text="Script grammar hints optimization" type="info"/>
 - <Badge text="Map parse" type="info"/>
-- <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>  
+- <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>
 - <Badge text="Several known issue optimizations" type="danger"/>
 
 ::: hint Functions and environment code completion <Badge vertical="top" text="Important feature" color="orange"/>
@@ -53,7 +53,7 @@ When there are many fields in JSON, but only part of them are needed, this featu
 Code completion is supported for some common header keys, such as `Authorization`
 :::
 
-::: hint @FeignClient scan support  <Badge vertical="top" text="New feature" type="tip"/>
+::: hint @FeignClient scan support <Badge vertical="top" text="New feature" type="tip"/>
 ![feignClientSupport](/img/2024.1.7/feignClientSupport.png)
 
 Support scan `org.springframework.cloud.openfeign.FeignClient`, optimized the path parse result

@@ -6,7 +6,7 @@ import CommonWrapper from "@theme-hope/components/CommonWrapper";
 import HomePage from "@theme-hope/components/HomePage";
 import NormalPage from "@theme-hope/components/NormalPage";
 import SkipLink from "@theme-hope/components/SkipLink";
-import FadeSlideY from "@theme-hope/components/transitions/FadeSlideY";
+import { FadeSlideY } from "@theme-hope/components/transitions/index";
 
 import type { ThemePageFrontmatter } from "vuepress-theme-hope";
 
@@ -59,7 +59,7 @@ ${sidebarTopArray.slice(0, 4).join("\n  ")}
 <br/>
 <!--  <span style='color: grey;font-size: 11px;'>广告采用随机方式显示</span>-->
   <span style='float: right;'>
-  <a href='/guide/sponsor.html' style='color: var(--theme-color);font-size: 11px;font-weight: bolder;'>成为赞助商</a>
+  <a href='/guide/sponsor.html' style='color: var(--vp-c-accent-bg);font-size: 11px;font-weight: bolder;'>成为赞助商</a>
   </span>
 </div>
 `;

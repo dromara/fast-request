@@ -34,7 +34,7 @@ defineProps({
 .carousel__prev,
 .carousel__next {
   box-sizing: content-box;
-  color: var(--theme-color);
+  color: var(--vp-c-accent-bg);
 }
 .carousel__pagination-button::after {
   background-color: #fff;
@@ -42,7 +42,7 @@ defineProps({
 
 .carousel__pagination-button:hover::after,
 .carousel__pagination-button--active::after {
-  background-color: var(--theme-color);
+  background-color: var(--vp-c-accent-bg);
 }
 .carousel__track {
   margin-top: 0;

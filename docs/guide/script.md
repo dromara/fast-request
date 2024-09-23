@@ -50,7 +50,6 @@ headerDepth: 4
 
 - 作用: 包含了跟插件交互相关的一些属性,用于后期定制
 
-
 #### rfr.request <Badge text="2024.1.7️" type="tip"/>
 
 - 作用: 包含了请求相关的信息,例如 url、header、body、各种参数
@@ -62,7 +61,6 @@ headerDepth: 4
 
 - 作用: 包含了请求响应的信息
 - 类型: cn.hutool.http.HttpResponse
-
 
 #### rfr.projectHeader <Badge text="2022.2.3️" type="tip"/>
 

@@ -77,13 +77,13 @@ Kotlin Spring体系框架
 
 ## 关于作者
 
-<VPCard 
-  title="Kings"
-  desc="<b>Make it easier...faster...stronger...</b><br/>"
-  logo="/img/fastRequest.svg"
-  link="https://github.com/kings1990"
-  background="rgb(39 117 182 / 38%)"
-/>
+```component VPCard
+title: Kings
+desc: <b>Make it easier...faster...stronger...</b><br/>
+logo: /img/fastRequest.svg
+link: https://github.com/kings1990
+background: rgb(39 117 182 / 38%)
+```
 
 职务: 从事 java 软件开发。Restful Fast Request 作者、设计师、星推官
 
