@@ -20,7 +20,7 @@ Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 ---
 
-important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
+important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
 由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
 :::
@@ -29,7 +29,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
-- <Badge text="函数与变量支持代码补全" color="orange"/>
+- <Badge text="函数与变量支持代码补全" type="important"/>
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="@FeignClient 扫描支持" type="tip"/>
@@ -53,7 +53,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 ## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="多 Tab 窗口" color="orange"/>
+- <Badge text="多 Tab 窗口" type="important"/>
 - <Badge text="Apis 标记" type="tip"/>
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
 - <Badge text="Json path" type="tip"/>
@@ -77,8 +77,8 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 ## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="Apifox 集成" color="orange"/>
-- <Badge text="AI支持优化" color="orange"/>
+- <Badge text="Apifox 集成" type="important"/>
+- <Badge text="AI支持优化" type="important"/>
 - <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
 - <Badge text="cURL导入优化" type="info"/>
 - <Badge text="实体解析优化" type="info"/>
@@ -87,7 +87,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 ## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
-- <Badge text="AI支持优化" color="orange"/>
+- <Badge text="AI支持优化" type="important"/>
 - <Badge text="超大响应结果性能优化" type="info"/>
 - <Badge text="Map入参类型解析优化" type="info"/>
 - <Badge text="windows系统下载文件无响应" type="danger"/>
@@ -98,12 +98,12 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 ## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
 
-- <Badge text="自定义工具栏" color="orange"/>
+- <Badge text="自定义工具栏" type="important"/>
 
 ## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
-- <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
-- <Badge text=".fastRequest目录生成策略" color="orange"/>
+- <Badge text="SearchEveryWhere 支持类名搜索" type="important"/>
+- <Badge text=".fastRequest目录生成策略" type="important"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
 - <Badge text="Apis,Navigate弹框打开支持" type="tip"/>
 - <Badge text="手动更新检测" type="tip"/>
@@ -119,7 +119,7 @@ important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&
 
 ## 2023.2.3 <Badge text="Free trial" type="tip"/>
 
-- <Badge text="API同步至Postman" color="orange"/>
+- <Badge text="API同步至Postman" type="important"/>
 - <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>
 - <Badge text="Environment重构" type="info"/>
 - <Badge text="项目域名添加优化" type="info"/>

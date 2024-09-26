@@ -18,13 +18,13 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 > **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
 > <br/><br/>
-> important: <Badge text="Important function" color="orange"/> feat: <Badge text="New function" type="tip"/>
+> important: <Badge text="Important function" type="important"/> feat: <Badge text="New function" type="tip"/>
 > 
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
-- <Badge text="Functions and environment code completion" color="orange"/>
+- <Badge text="Functions and environment code completion" type="important"/>
 - <Badge text="JSON filter" type="tip"/>
 - <Badge text="Common Header code completion" type="tip"/>
 - <Badge text="@FeignClient scan support" type="tip"/>
@@ -37,7 +37,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>
 - <Badge text="Several known issue optimizations" type="danger"/>
 
-::: hint Functions and environment code completion <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Functions and environment code completion <Badge vertical="top" text="Important feature" type="important"/>
 <MyCarousel :imgList="['/img/2024.1.7/functionEn.png','/img/2024.1.7/functionInBodyEn.png','/img/2024.1.7/functionConfig.png']" />
 
 Support environment value like `{{xx}}` and function value `{{$functionName}}` code completion
@@ -126,14 +126,14 @@ public @interface CustomRestController {
 
 ## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="Multi Tab window" color="orange"/>
+- <Badge text="Multi Tab window" type="important"/>
 - <Badge text="Apis mark" type="tip"/>
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
 - <Badge text="Json path support" type="tip"/>
 - <Badge text="Url generation supports extends BaseController interface" type="info"/>
 - <Badge text="Fixed some known bugs" type="danger"/>
 
-::: hint Multi Tab window <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Multi Tab window <Badge vertical="top" text="Important feature" type="important"/>
 <MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis_en.png']" />
 
 Open `rapi` file to display the debugging interface and supports multi-Tab opening. More detail please refer [**Multi-tab window**](/en/guide/features/navigateCurrentMethodJson.md)
@@ -200,22 +200,22 @@ Url is the same, but the method type (Get, Post, etc.) is different, the binding
 
 ## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="Apifox integration" color="orange"/>
-- <Badge text="AI support optimization" color="orange"/>
+- <Badge text="Apifox integration" type="important"/>
+- <Badge text="AI support optimization" type="important"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
 - <Badge text="cURL import Optimization" type="info"/>
 - <Badge text="Entity parse optimization" type="info"/>
 - <Badge text="Compatible with IDEA 2024" type="info"/>
 - <Badge text="API export file suffix error" type="danger"/>
 
-::: hint Apifox integration <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Apifox integration <Badge vertical="top" text="Important feature" type="important"/>
 
 <MyCarousel :imgList="['/img/2024.1.4/apifoxIntegration_en.png','/img/2024.1.4/apifoxConfig_en.png']" />
 
 Apifox integration supports synchronization of APIs, environment variables, domain name information, etc. Just configure an `API key` and set the project mapping relationship to synchronize.
 :::
 
-::: hint AI support optimization <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint AI support optimization <Badge vertical="top" text="Important feature" type="important"/>
 ![AI](/img/2024.1.4/ai_en.png)
 
 In order to make AI's responses more accurate, we have made AI settings more refined and added 3 dimensions:
@@ -271,12 +271,12 @@ the values in the JSON without changing its structure.
 
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
-- <Badge text="AI support optimization" color="orange"/>
+- <Badge text="AI support optimization" type="important"/>
 - <Badge text="Performance optimization for large response results" type="info"/>
 - <Badge text="Map type parse optimization" type="info"/>
 - <Badge text="Download does not respond in Windows system" type="danger"/>
 
-::: hint AI support optimization <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint AI support optimization <Badge vertical="top" text="Important feature" type="important"/>
 <MyCarousel :imgList="['/img/2024.1.3/aiManagenemt_en.png','/img/2024.1.3/aiPromptEdit_en.png','/img/2024.1.3/aiPromptChoose_en.png']" />
 
 Added three forms of AI support: OpenAi, CodeGeeX, and Private deployment AI. Through prompt, selected text can be replaced with another text.
@@ -290,9 +290,9 @@ AI action has added the following tabs: `Body -> JSON`, `Body -> Form URL-Encode
 
 ## 2024.1.2 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
 
-- <Badge text="Custom toolbar" color="orange"/>
+- <Badge text="Custom toolbar" type="important"/>
 
-::: hint Custom toolbar <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Custom toolbar <Badge vertical="top" text="Important feature" type="important"/>
 
 ![customToolbar](/img/2024.1.2/customToolbar_en.png)
 
@@ -301,8 +301,8 @@ Using the custom toolbar option, select the functionalities you want to use and 
 
 ## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
-- <Badge text="SearchEveryWhere support classname search" color="orange"/>
-- <Badge text="Generate .fastRequest directory strategy" color="orange"/>
+- <Badge text="SearchEveryWhere support classname search" type="important"/>
+- <Badge text="Generate .fastRequest directory strategy" type="important"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
 - <Badge text="Apis and Navigate in popup" type="tip"/>
 - <Badge text="Manual update check" type="tip"/>
@@ -312,14 +312,14 @@ Using the custom toolbar option, select the functionalities you want to use and 
 - <Badge text="Markdown doc add return value doc" type="info"/>
 - <Badge text="Collection generic parsing error" type="danger"/>
 
-::: hint SearchEveryWhere support classname search <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint SearchEveryWhere support classname search <Badge vertical="top" text="Important feature" type="important"/>
 ![searchEveryWhere](/img/2024.1.1/searchEveryWhere_en.png)
 
 Support enters the class name where the Url is located to search for all APIs under this class.
 
 :::
 
-::: hint Generate .fastRequest directory strategy <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Generate .fastRequest directory strategy <Badge vertical="top" text="Important feature" type="important"/>
 When Project is opened by default, the .fastRequest directory will no longer be generated.
 Only when you operate plugin, it will be generated.
 :::
@@ -376,7 +376,7 @@ Content-Disposition:attachment; filename=fastRequest.txt
 - <Badge text="Error when passing non-json in body param" type="danger"/>
 - <Badge text="curl import parsing\' error" type="danger"/>
 
-::: hint Sync API to Postman <Badge vertical="top" text="Important feature" color="orange"/>
+::: hint Sync API to Postman <Badge vertical="top" text="Important feature" type="important"/>
 You only need to configure the token of Postman and the ID of the workspace to upload the API to Postman.Enjoy what fast request do not support.
 
 To make the data synchronised to Postman more complete, it is recommended to select the `sync after API save` option in the Postman config of the plugin

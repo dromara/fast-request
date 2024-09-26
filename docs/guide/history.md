@@ -18,11 +18,11 @@ icon: changelog
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
 > <br/><br/>
-> important: <Badge text="重要功能" color="orange"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
+> important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
-- <Badge text="函数与变量支持代码补全" color="orange"/>
+- <Badge text="函数与变量支持代码补全" type="important"/>
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
 - <Badge text="@FeignClient 扫描支持" type="tip"/>
@@ -34,7 +34,7 @@ icon: changelog
 - <Badge text="修复 Jar 中的 url 扫描结果展示为空" type="danger"/>
 - <Badge text="若干已知问题优化" type="danger"/>
 
-::: hint 函数与变量支持代码补全 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint 函数与变量支持代码补全 <Badge vertical="top" text="重要功能" type="important"/>
 <MyCarousel :imgList="['/img/2024.1.7/function.png','/img/2024.1.7/functionInBody.png','/img/2024.1.7/functionConfig.png']" />
 
 支持变量 `{{xx}}` 与 `{{$函数名}}`的代码补全
@@ -123,14 +123,14 @@ public @interface CustomRestController {
 
 ## 2024.1.6 <Badge text="免费试用" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="多 Tab 窗口" color="orange"/>
+- <Badge text="多 Tab 窗口" type="important"/>
 - <Badge text="Apis 标记" type="tip"/>
 - <Badge text="Apis 与 Navigate 标签页 Url 复制" type="tip"/>
 - <Badge text="Json path" type="tip"/>
 - <Badge text="Url生成支持继承BaseController是接口" type="info"/>
 - <Badge text="修复了一些已知 bug" type="danger"/>
 
-::: hint 多 Tab 窗口 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint 多 Tab 窗口 <Badge vertical="top" text="重要功能" type="important"/>
 <MyCarousel :imgList="['/img/2024.1.6/multiTab.png','/img/2024.1.6/openInTabAction.png','/img/2024.1.6/openTabInApis.png']" />
 
 `rapi`文件打开展现调试界面，支持多 Tab 打开。更多请查阅[**多 Tab 窗口**](/guide/features/navigateCurrentMethodJson.md)
@@ -196,15 +196,15 @@ public @interface CustomRestController {
 
 ## 2024.1.4 <Badge text="免费试用" type="tip"/> <Badge text="2024-04-08" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="Apifox 集成" color="orange"/>
-- <Badge text="AI支持优化" color="orange"/>
+- <Badge text="Apifox 集成" type="important"/>
+- <Badge text="AI支持优化" type="important"/>
 - <Badge text="变更 moduleHeader 为 apiHeader" type="info"/>
 - <Badge text="cURL导入优化" type="info"/>
 - <Badge text="实体解析优化" type="info"/>
 - <Badge text="兼容 IDEA 2024" type="info"/>
 - <Badge text="API 导出文件后缀错误" type="danger"/>
 
-::: hint Apifox 集成 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint Apifox 集成 <Badge vertical="top" text="重要功能" type="important"/>
 
 <MyCarousel :imgList="['/img/2024.1.4/apifoxIntegration.png','/img/2024.1.4/apifoxConfig.png']" />
 
@@ -216,7 +216,7 @@ Apifox集成，支持同步 API、环境变量、域名信息等。只要配置�
 
 :::
 
-::: hint AI支持优化 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint AI支持优化 <Badge vertical="top" text="重要功能" type="important"/>
 ![AI](/img/2024.1.4/ai.png)
 
 为了将 AI 的回复更加精准，我们将 AI 的 设置更加精细化，加入了3个维度，加入了`概述`、`提问范例`、`提问范例结果`。此设计即让 AI 先训练一次问答，从而使得结果更加符合预期
@@ -264,12 +264,12 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 
 ## 2024.1.3 <Badge text="免费试用" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
-- <Badge text="AI支持优化" color="orange"/>
+- <Badge text="AI支持优化" type="important"/>
 - <Badge text="超大响应结果性能优化" type="info"/>
 - <Badge text="Map入参类型解析优化" type="info"/>
 - <Badge text="windows系统下载文件无响应" type="danger"/>
 
-::: hint AI支持优化 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint AI支持优化 <Badge vertical="top" text="重要功能" type="important"/>
 <MyCarousel :imgList="['/img/2024.1.3/aiManagenemt.png','/img/2024.1.3/aiPromptEdit.png','/img/2024.1.3/aiPromptChoose.png']" />
 
 增加了 OpenAi、CodeGeeX、自定义三种形式的 AI 支持，通过可配置化的指令，可将选中的文本替换成目标文本。
@@ -283,9 +283,9 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 
 ## 2024.1.2 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-19" color="SandyBrown"/>
 
-- <Badge text="自定义工具栏" color="orange"/>
+- <Badge text="自定义工具栏" type="important"/>
 
-::: hint 自定义工具栏 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint 自定义工具栏 <Badge vertical="top" text="重要功能" type="important"/>
 
 ![customToolbar](/img/2024.1.2/customToolbar.png)
 
@@ -294,8 +294,8 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 
 ## 2024.1.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
-- <Badge text="SearchEveryWhere 支持类名搜索" color="orange"/>
-- <Badge text=".fastRequest目录生成策略" color="orange"/>
+- <Badge text="SearchEveryWhere 支持类名搜索" type="important"/>
+- <Badge text=".fastRequest目录生成策略" type="important"/>
 - <Badge text="忽略字段名解析支持" type="tip"/>
 - <Badge text="Apis,Navigate弹框打开支持" type="tip"/>
 - <Badge text="手动更新检测" type="tip"/>
@@ -305,14 +305,14 @@ JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只
 - <Badge text="Markdown文档批量api导出增加返回值文档" type="info"/>
 - <Badge text="集合泛型解析错误" type="danger"/>
 
-::: hint SearchEveryWhere 支持类名搜索 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint SearchEveryWhere 支持类名搜索 <Badge vertical="top" text="重要功能" type="important"/>
 
 ![searchEveryWhere](/img/2024.1.1/searchEveryWhere.png)
 
 输入 Url 所在的类名，即可搜索该类下面的所有 API
 :::
 
-::: hint .fastRequest目录生成策略 <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint .fastRequest目录生成策略 <Badge vertical="top" text="重要功能" type="important"/>
 默认打开 Project 不再生成.fastRequest目录，只有操作插件才生成
 :::
 
@@ -354,7 +354,7 @@ Content-Disposition:attachment; filename=fastRequest.txt
 
 ## 2023.2.3 <Badge text="免费试用" type="tip"/> <Badge text="2023-12-19" color="SandyBrown"/>
 
-- <Badge text="API同步至Postman" color="orange"/>
+- <Badge text="API同步至Postman" type="important"/>
 - <Badge text="自动域名切换项目名下拉框自动切换" type="tip"/>
 - <Badge text="Environment重构" type="info"/>
 - <Badge text="项目域名添加优化" type="info"/>
@@ -364,7 +364,7 @@ Content-Disposition:attachment; filename=fastRequest.txt
 - <Badge text="body中传非json报错" type="danger"/>
 - <Badge text="curl导入解析\'错误" type="danger"/>
 
-::: hint API同步至Postman <Badge vertical="top" text="重要功能" color="orange"/>
+::: hint API同步至Postman <Badge vertical="top" text="重要功能" type="important"/>
 仅需配置Postman的token和对应workspace的ID即可将API云上传到Postman.享受fast request不支持的功能.
 
 由于历史原因,历史保存的持久化数据丢失了一部分字段,为了能够将同步至postman的数据更完整,

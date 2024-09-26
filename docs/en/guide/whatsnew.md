@@ -20,7 +20,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ---
 
-important: <Badge text="Important function" color="orange"/>
+important: <Badge text="Important function" type="important"/>
 
 feat: <Badge text="New function" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
@@ -31,7 +31,7 @@ Because developing version is still in development, the documentation of develop
 
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
-- <Badge text="Functions and environment code completion" color="orange"/>
+- <Badge text="Functions and environment code completion" type="important"/>
 - <Badge text="JSON filter" type="tip"/>
 - <Badge text="Common Header code completion" type="tip"/>
 - <Badge text="@FeignClient scan support" type="tip"/>
@@ -55,7 +55,7 @@ Because developing version is still in development, the documentation of develop
 
 ## 2024.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2024-06-24" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="Multi Tab window" color="orange"/>
+- <Badge text="Multi Tab window" type="important"/>
 - <Badge text="Apis mark" type="tip"/>
 - <Badge text="Url copy in Apis & Navigate" type="tip"/>
 - <Badge text="Json path support" type="tip"/>
@@ -79,8 +79,8 @@ Because developing version is still in development, the documentation of develop
 
 ## 2024.1.4 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2022.3+" color="pink"/>
 
-- <Badge text="Apifox integration" color="orange"/>
-- <Badge text="AI support optimization" color="orange"/>
+- <Badge text="Apifox integration" type="important"/>
+- <Badge text="AI support optimization" type="important"/>
 - <Badge text="Change moduleHeader to apiHeader" type="info"/>
 - <Badge text="cURL import Optimization" type="info"/>
 - <Badge text="Entity parse optimization" type="info"/>
@@ -89,7 +89,7 @@ Because developing version is still in development, the documentation of develop
 
 ## 2024.1.3 <Badge text="Free trial" type="tip"/> <Badge text="2024-03-04" color="SandyBrown"/>
 
-- <Badge text="AI support optimization" color="orange"/>
+- <Badge text="AI support optimization" type="important"/>
 - <Badge text="Performance optimization for large response results" type="info"/>
 - <Badge text="Map type parse optimization" type="info"/>
 - <Badge text="Download does not respond in Windows system" type="danger"/>
@@ -100,12 +100,12 @@ Because developing version is still in development, the documentation of develop
 
 ## 2024.1.2 <Badge text="Free trial" type="tip"/> color="pink"/> <Badge text="2024-01-19" color="SandyBrown"/>
 
-- <Badge text="Custom toolbar" color="orange"/>
+- <Badge text="Custom toolbar" type="important"/>
 
 ## 2024.1.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-01-15" color="SandyBrown"/>
 
-- <Badge text="SearchEveryWhere support classname search" color="orange"/>
-- <Badge text="Generate .fastRequest directory strategy" color="orange"/>
+- <Badge text="SearchEveryWhere support classname search" type="important"/>
+- <Badge text="Generate .fastRequest directory strategy" type="important"/>
 - <Badge text="Ignore field name parse support" type="tip"/>
 - <Badge text="Apis and Navigate in popup" type="tip"/>
 - <Badge text="Manual update check" type="tip"/>
