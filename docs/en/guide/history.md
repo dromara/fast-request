@@ -1517,6 +1517,9 @@ public class UrlTestController {
     value = {"/v1/save"},
     method = {RequestMethod.POST}
 )
+public Integer testUrl(){
+   return 1;
+}
 ```
 
 :::

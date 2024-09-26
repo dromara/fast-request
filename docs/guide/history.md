@@ -1233,7 +1233,7 @@ raw 中不再截断 html 返回类型的响应，同时可以对 html 进行预�
 
 ```java
 @Data
-public class CommonDTO<T，R> implements Serializable {
+public class CommonDTO<T,R> implements Serializable {
     private String accessToken;
     private String appKey;
     private String clientId;
@@ -1242,7 +1242,7 @@ public class CommonDTO<T，R> implements Serializable {
 }
 
 @PostMapping(value = "/apply")
-public Integer loanApply(@RequestBody CommonDTO<Book， TestDTO> req){
+public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
     return 1;
 }
 ```
@@ -1579,6 +1579,9 @@ public class UrlTestController {
     value = {"/v1/save"},
     method = {RequestMethod.POST}
 )
+public Integer testUrl(){
+   return 1;
+}
 ```
 
 :::
