@@ -15,7 +15,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/plugin-docsearch": "2.0.0-rc.47",
     "chart.js": "^4.4.4",
-    "sass-embedded": "^1.79.3",
+    "sass": "^1.79.3",
     "vidstack": "^1.12.11",
     "vue": "^3.5.8",
     "vue3-carousel": "^0.3.4",
