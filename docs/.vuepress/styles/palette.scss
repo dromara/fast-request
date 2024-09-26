@@ -1,22 +1,16 @@
-$theme-color: #21d789;
-
-$text-color: (
+$vp-c-text: (
   light: #2c3e50,
   dark: #9e9e9e,
 );
-
-$bg-color: (
+$vp-c-bg: (
   light: #fff,
   dark: #0c1117,
 );
-
-$bg-color-secondary: (
+$vp-c-bg-alt: (
   light: #f8f8f8,
   dark: #333,
 );
-
-// shadow
-$box-shadow: (
+$vp-c-shadow: (
   light: #f0f1f2,
   dark: #303030,
 );

@@ -23,9 +23,9 @@ icon: changelog
 - <Badge text="函数与变量支持代码补全" color="orange"/>
 - <Badge text="JSON filter支持" type="tip"/>
 - <Badge text="Header 常用值支持代码补全" type="tip"/>
-- <Badge text="@FeignClient 扫描支持" type="tip"/>  
+- <Badge text="@FeignClient 扫描支持" type="tip"/>
 - <Badge text="文件默认值支持" type="tip"/>
-- <Badge text="异常上报支持" type="tip"/>  
+- <Badge text="异常上报支持" type="tip"/>
 - <Badge text="SearchEveryWhere 结果排序优化" type="info"/>
 - <Badge text="Script语法提示优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
@@ -86,7 +86,6 @@ Multipart 类型字段可以通过该配置设置默认文件路径
 
 更多内置变量请参考 [Script->rfr](./script.md#rfr)
 :::
-
 
 ## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 

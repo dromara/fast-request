@@ -61,7 +61,6 @@ Parameters can be dynamically adjusted by modifying the request value.
 - Remark: Contains response information
 - Type: cn.hutool.http.HttpResponse
 
-
 #### rfr.projectHeader <Badge text="2022.2.3️" type="tip"/>
 
 ```

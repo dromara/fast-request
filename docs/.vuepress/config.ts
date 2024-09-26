@@ -49,12 +49,6 @@ export default defineUserConfig({
     // ["script", { src: "https://cdn.wwads.cn/js/makemoney.js" }],
   ],
 
-  markdown: {
-    code: {
-      lineNumbers: 10,
-    },
-  },
-
   locales: {
     "/": {
       lang: "zh-CN",
