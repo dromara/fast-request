@@ -29,6 +29,11 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## 2024.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Header Preset" type="tip"/>
+- <Badge text="Fix several known issue" type="danger"/>
+
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Functions and environment code completion" type="important"/>
@@ -41,7 +46,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Script grammar hints optimization" type="info"/>
 - <Badge text="Map parse" type="info"/>
 - <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>
-- <Badge text="Several known issue optimizations" type="danger"/>
+- <Badge text="Fix several known issue" type="danger"/>
 
 ## 2024.1.6.3 <Badge text="Free trial" type="tip"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 

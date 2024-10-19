@@ -53,6 +53,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="openai" /> AI](./ai.md)
 - [<ColorIcon icon="headerGroupNew" /> Header group](./headerGroup.md)
 - [<ColorIcon icon="commonHeaderNew" /> Common header](./commonHeader.md)
+- [<ColorIcon icon="headersPreset" /> Headers Preset](./headersPreset.md)
 - [<ColorIcon icon="bulkEdit" /> Headers batch edit](./commonHeader.md)
 - [<ColorIcon icon="lock" /> Basei auth](./basicAuth.md)
 - [<ColorIcon icon="chrome" /> Html preview](./htmlPreview.md)

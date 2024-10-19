@@ -22,6 +22,19 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 > 
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
+## 2024.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Header Preset" type="tip"/>
+- <Badge text="Fix several known issue" type="danger"/>
+
+::: hint Header Preset <Badge vertical="top" text="New feature" type="tip"/>
+<MyCarousel :imgList="['/img/2024.1.8/headersPreset_en.png','/img/2024.1.8/headersPresetManage_en.png']" />
+
+Header presets allow you to create different header groups, manage headers in group, 
+and add all preset header easily by select the dropping down item.
+
+:::
+
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Functions and environment code completion" type="important"/>
@@ -35,7 +48,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Script grammar hints optimization" type="info"/>
 - <Badge text="Map parse" type="info"/>
 - <Badge text="Fix URL scan in jar is displayed as empty" type="danger"/>
-- <Badge text="Several known issue optimizations" type="danger"/>
+- <Badge text="Fix several known issue" type="danger"/>
 
 ::: hint Functions and environment code completion <Badge vertical="top" text="Important feature" type="important"/>
 <MyCarousel :imgList="['/img/2024.1.7/functionEn.png','/img/2024.1.7/functionInBodyEn.png','/img/2024.1.7/functionConfig.png']" />

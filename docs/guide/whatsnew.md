@@ -27,6 +27,11 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Header 预设" type="tip"/>
+- <Badge text="若干已知问题修复" type="danger"/>
+
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="函数与变量支持代码补全" type="important"/>
@@ -39,7 +44,7 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 - <Badge text="Script语法提示优化" type="info"/>
 - <Badge text="Map 解析优化" type="info"/>
 - <Badge text="修复 Jar 中的 url 扫描结果展示为空" type="danger"/>
-- <Badge text="若干已知问题优化" type="danger"/>
+- <Badge text="若干已知问题修复" type="danger"/>
 
 ## 2024.1.6.3 <Badge text="免费试用" type="tip"/> <Badge text="2024-08-15" color="SandyBrown"/> <Badge text="IDEA 2022.3+" color="pink"/>
 

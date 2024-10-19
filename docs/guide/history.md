@@ -20,6 +20,18 @@ icon: changelog
 > <br/><br/>
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
+## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Header 预设" type="tip"/>
+- <Badge text="若干已知问题优化" type="danger"/>
+
+::: hint Header 预设 <Badge vertical="top" text="新功能" type="tip"/>
+<MyCarousel :imgList="['/img/2024.1.8/headersPreset.png','/img/2024.1.8/headersPresetManage.png']" />
+
+Header 预设支持创建不同的 Header 分组，管理各自的请求头，通过下拉选择轻松快捷得添加预设的 Header 参数。
+
+:::
+
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="函数与变量支持代码补全" type="important"/>
