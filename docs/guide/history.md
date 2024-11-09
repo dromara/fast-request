@@ -23,12 +23,21 @@ icon: changelog
 ## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Header 预设" type="tip"/>
+- <Badge text="Binary 支持" type="tip"/>
+- <Badge text="实体类解析优化" type="info"/>  
 - <Badge text="若干已知问题优化" type="danger"/>
 
 ::: hint Header 预设 <Badge vertical="top" text="新功能" type="tip"/>
 <MyCarousel :imgList="['/img/2024.1.8/headersPreset.png','/img/2024.1.8/headersPresetManage.png']" />
 
 Header 预设支持创建不同的 Header 分组，管理各自的请求头，通过下拉选择轻松快捷得添加预设的 Header 参数。
+
+:::
+
+::: hint Binary 支持 <Badge vertical="top" text="新功能" type="tip"/>
+![](/img/2024.1.8/binary.png)
+
+支持 Binary 格式上传
 
 :::
 

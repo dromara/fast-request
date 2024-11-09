@@ -25,6 +25,8 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 ## 2024.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Header Preset" type="tip"/>
+- <Badge text="Binary support" type="tip"/>
+- <Badge text="Entity parse optimization" type="info"/>  
 - <Badge text="Fix several known issue" type="danger"/>
 
 ::: hint Header Preset <Badge vertical="top" text="New feature" type="tip"/>
@@ -32,6 +34,13 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 Header presets allow you to create different header groups, manage headers in group, 
 and add all preset header easily by select the dropping down item.
+
+:::
+
+::: hint Binary support <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2024.1.8/binary.png)
+
+Support binary upload.
 
 :::
 

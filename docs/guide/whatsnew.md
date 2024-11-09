@@ -30,6 +30,8 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 ## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Header 预设" type="tip"/>
+- <Badge text="Binary 支持" type="tip"/>
+- <Badge text="实体类解析优化" type="info"/>  
 - <Badge text="若干已知问题修复" type="danger"/>
 
 ## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
