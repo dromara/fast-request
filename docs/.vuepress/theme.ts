@@ -120,7 +120,7 @@ export default hopeTheme(
           path: "/en",
           title: "Coming in <b>2024.1.8</b>",
           content:
-            '<ul><li>Header Preset</li>=</ul><div class="addthis_inline_follow_toolbox"></div>',
+            '<ul><li>Header Preset</li></ul><div class="addthis_inline_follow_toolbox"></div>',
           actions: [
             {
               text: "Learn more→",
