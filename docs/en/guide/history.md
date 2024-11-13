@@ -22,7 +22,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 > 
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
-## 2024.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Header Preset" type="tip"/>
 - <Badge text="Binary support" type="tip"/>
@@ -44,7 +44,7 @@ Support binary upload.
 
 :::
 
-## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Functions and environment code completion" type="important"/>
 - <Badge text="JSON filter" type="tip"/>

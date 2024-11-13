@@ -103,13 +103,13 @@ export default hopeTheme(
       notice: [
         {
           path: "/",
-          title: "将在2024.1.7推出",
+          title: "将在2024.1.8推出",
           content:
-            '<ul><li>函数与变量支持代码补全</li><li>JSON filter支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+            '<ul><li>Header预设</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
           actions: [
             {
               text: "了解详情→",
-              link: "/guide/history.html#_2024-1-7",
+              link: "/guide/history.html#_2024-1-8",
               type: "primary",
             },
           ],
@@ -118,18 +118,18 @@ export default hopeTheme(
         },
         {
           path: "/en",
-          title: "Coming in <b>2024.1.7</b>",
+          title: "Coming in <b>2024.1.8</b>",
           content:
-            '<ul><li>Functions and environment code completion</li><li>JSON filter</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+            '<ul><li>Header Preset</li>=</ul><div class="addthis_inline_follow_toolbox"></div>',
           actions: [
             {
               text: "Learn more→",
-              link: "/en/guide/history.html#_2024-1-7",
+              link: "/en/guide/history.html#_2024-1-8",
               type: "primary",
             },
           ],
           showOnce: true,
-          key: "2024.1.7",
+          key: "2024.1.8",
         },
       ],
 

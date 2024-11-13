@@ -27,14 +27,14 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Header 预设" type="tip"/>
 - <Badge text="Binary 支持" type="tip"/>
 - <Badge text="实体类解析优化" type="info"/>  
 - <Badge text="若干已知问题修复" type="danger"/>
 
-## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.7 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="函数与变量支持代码补全" type="important"/>
 - <Badge text="JSON filter支持" type="tip"/>
@@ -301,7 +301,7 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 - <Badge text="解析bug" type="danger"/>
 - <Badge text="body中传string参数报错" type="danger"/>
 
-## v2022.2.6 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="info"/>
+## v2022.2.6 <Badge text="免费试用" type="tip"/>
 
 - <Badge text="一键清除参数" type="tip"/>
 - <Badge text="API注释预览" type="tip"/>
