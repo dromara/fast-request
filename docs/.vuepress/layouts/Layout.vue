@@ -21,7 +21,7 @@ const sidebarTopArray = [
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/apifox-line.png">
   </a>`,
   `<a href="https://www.jnpfsoft.com/index.html?from=fast-request" target="_blank">
-    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/jnpfsoft.png">
+    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/jnpfsoft.jpg">
   </a>`,
   `<a href="https://t.zsxq.com/hqBj7" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/mnhs.svg">
