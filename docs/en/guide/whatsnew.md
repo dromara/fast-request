@@ -29,14 +29,18 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2024.1.8 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Fix the pre-script execution logic" type="danger"/>
+
+## 2024.1.8 <Badge text="Free trial" type="tip"/> <Badge text="2024-11-12" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Header Preset" type="tip"/>
 - <Badge text="Binary support" type="tip"/>
 - <Badge text="Entity parse optimization" type="info"/>  
 - <Badge text="Fix several known issue" type="danger"/>
 
-## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="2024-09-18" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Functions and environment code completion" type="important"/>
 - <Badge text="JSON filter" type="tip"/>
