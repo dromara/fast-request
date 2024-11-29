@@ -103,33 +103,33 @@ export default hopeTheme(
       notice: [
         {
           path: "/",
-          title: "将在2024.1.8推出",
+          title: "将在2024.1.9推出",
           content:
-            '<ul><li>Header预设</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+            '<ul><li>OpenAPI 导出支持</li><li>Solon 框架解析支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
           actions: [
             {
               text: "了解详情→",
-              link: "/guide/history.html#_2024-1-8",
+              link: "/guide/history.html#_2024-1-9",
               type: "primary",
             },
           ],
           showOnce: true,
-          key: "2024.1.7",
+          key: "2024.1.9",
         },
         {
           path: "/en",
-          title: "Coming in <b>2024.1.8</b>",
+          title: "Coming in <b>2024.1.9</b>",
           content:
-            '<ul><li>Header Preset</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+            '<ul><li>OpenAPI export support</li><li>Solon framework support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
           actions: [
             {
               text: "Learn more→",
-              link: "/en/guide/history.html#_2024-1-8",
+              link: "/en/guide/history.html#_2024-1-9",
               type: "primary",
             },
           ],
           showOnce: true,
-          key: "2024.1.8",
+          key: "2024.1.9",
         },
       ],
 

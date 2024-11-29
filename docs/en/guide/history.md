@@ -22,6 +22,41 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 > 
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
+## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="OpenAPI export support" type="tip"/>
+- <Badge text="Run switch tab configurable" type="tip"/>
+- <Badge text="Response document" type="tip"/>
+- <Badge text="Solon framework support" type="tip"/>
+
+::: hint OpenAPI export support <Badge vertical="top" text="New feature" type="tip"/>
+
+
+Support export [OpenAPI](https://spec.openapis.org/oas/latest.html) document of the current request.
+
+:::
+
+::: hint Run switch tab configurable <Badge vertical="top" text="New feature" type="tip"/>
+
+
+You can run the API directly in the APIs tab without switching to the run tab, this is configurable.
+This makes it possible to run one API on the APIs tab and then run the next.
+
+:::
+
+::: hint Response document <Badge vertical="top" text="New feature" type="tip"/>
+
+
+In the response tab, you can view the field meaning.
+
+:::
+
+::: hint Solon Solon framework support <Badge vertical="top" text="New feature" type="tip"/>
+
+
+Support [Solon](https://solon.noear.org/) framework.
+
+:::
+
 ## 2024.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Fix the pre-script execution logic" type="danger"/>

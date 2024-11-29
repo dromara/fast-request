@@ -20,6 +20,41 @@ icon: changelog
 > <br/><br/>
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
+## 2024.1.9 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Solon 框架解析支持" type="tip"/>
+- <Badge text="OpenAPI 导出支持" type="tip"/>
+- <Badge text="运行后切换 Tab 可配置化" type="tip"/>
+- <Badge text="响应文档展示支持" type="tip"/>
+
+::: hint Solon 框架解析支持 <Badge vertical="top" text="新功能" type="tip"/>
+
+
+支持国产 [Solon](https://solon.noear.org/) 框架的解析。
+
+:::
+
+::: hint OpenAPI 导出支持 <Badge vertical="top" text="新功能" type="tip"/>
+
+
+可在将 API 导出成 [OpenAPI](https://spec.openapis.org/oas/latest.html) 格式。
+
+:::
+
+::: hint 运行后切换 Tab 可配置化 <Badge vertical="top" text="新功能" type="tip"/>
+
+
+可以在 APIs 列表直接运行 API 并且不切换到运行界面，可配置化。这使得在 APIs 页面运行一个 API 以后可以再运行下一个 API。
+
+:::
+
+::: hint 响应文档展示支持 <Badge vertical="top" text="新功能" type="tip"/>
+
+
+可以在 Response 页签下查看响应的字段含义。
+
+:::
+
+
 ## 2024.1.8.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="修复前置脚本执行逻辑" type="danger"/>
 
