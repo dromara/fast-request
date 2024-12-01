@@ -27,28 +27,28 @@ icon: changelog
 - <Badge text="响应文档展示支持" type="tip"/>
 
 ::: hint Solon 框架解析支持 <Badge vertical="top" text="新功能" type="tip"/>
-
+![](/img/2024.1.9/solon.png)
 
 支持国产 [Solon](https://solon.noear.org/) 框架的解析。
 
 :::
 
 ::: hint OpenAPI 导出支持 <Badge vertical="top" text="新功能" type="tip"/>
-
+![](/img/2024.1.9/openApiExport_en.png)
 
 可在将 API 导出成 [OpenAPI](https://spec.openapis.org/oas/latest.html) 格式。
 
 :::
 
 ::: hint 运行后切换 Tab 可配置化 <Badge vertical="top" text="新功能" type="tip"/>
-
+![](/img/2024.1.9/runSwitchTab.png)
 
 可以在 APIs 列表直接运行 API 并且不切换到运行界面，可配置化。这使得在 APIs 页面运行一个 API 以后可以再运行下一个 API。
 
 :::
 
 ::: hint 响应文档展示支持 <Badge vertical="top" text="新功能" type="tip"/>
-
+![](/img/2024.1.9/responseDocument.png)
 
 可以在 Response 页签下查看响应的字段含义。
 

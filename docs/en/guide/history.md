@@ -29,14 +29,14 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Solon framework support" type="tip"/>
 
 ::: hint OpenAPI export support <Badge vertical="top" text="New feature" type="tip"/>
-
+![](/img/2024.1.9/openApiExport_en.png)
 
 Support export [OpenAPI](https://spec.openapis.org/oas/latest.html) document of the current request.
 
 :::
 
 ::: hint Run switch tab configurable <Badge vertical="top" text="New feature" type="tip"/>
-
+![](/img/2024.1.9/runSwitchTab.png)
 
 You can run the API directly in the APIs tab without switching to the run tab, this is configurable.
 This makes it possible to run one API on the APIs tab and then run the next.
@@ -44,14 +44,14 @@ This makes it possible to run one API on the APIs tab and then run the next.
 :::
 
 ::: hint Response document <Badge vertical="top" text="New feature" type="tip"/>
-
+![](/img/2024.1.9/responseDocument.png)
 
 In the response tab, you can view the field meaning.
 
 :::
 
 ::: hint Solon Solon framework support <Badge vertical="top" text="New feature" type="tip"/>
-
+![](/img/2024.1.9/solon.png)
 
 Support [Solon](https://solon.noear.org/) framework.
 
