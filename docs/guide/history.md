@@ -25,6 +25,7 @@ icon: changelog
 - <Badge text="OpenAPI 导出支持" type="tip"/>
 - <Badge text="运行后切换 Tab 可配置化" type="tip"/>
 - <Badge text="响应文档展示支持" type="tip"/>
+- <Badge text="文件导出默认目录支持自定义" type="tip"/>
 
 ::: hint Solon 框架解析支持 <Badge vertical="top" text="新功能" type="tip"/>
 ![](/img/2024.1.9/solon.png)
@@ -51,6 +52,13 @@ icon: changelog
 ![](/img/2024.1.9/responseDocument.png)
 
 可以在 Response 页签下查看响应的字段含义。
+
+:::
+
+::: hint 文件导出默认目录支持自定义 <Badge vertical="top" text="新功能" type="tip"/>
+![](/img/2024.1.9/exportPath.png)
+
+文件导出例如将 API 导出成 markdown 、html、word、openapi 等文档的默认目录地址支持自定义。
 
 :::
 

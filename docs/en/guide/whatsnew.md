@@ -34,6 +34,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Run switch tab configurable" type="tip"/>
 - <Badge text="Response document" type="tip"/>
 - <Badge text="Solon framework support" type="tip"/>
+- <Badge text="File export" type="tip"/>
 
 ## 2024.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
