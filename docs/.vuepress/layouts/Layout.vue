@@ -15,7 +15,7 @@ const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
 
 const sidebarTopArray = [
   `<a href="https://codegeex.cn/?utm_source=pay&utm_medium=fast-request" target="_blank">
-    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/codeGeex-line.svg">
+    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/codegeex-line.svg">
   </a>`,
   `<a href="https://brucege.com/pay/view?code=fastRequest" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/mybatisCodeHelperPro.svg">
