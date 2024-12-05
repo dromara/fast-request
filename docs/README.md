@@ -64,6 +64,15 @@ head:
 1. [成为赞助者](./guide/sponsor.md)
 
 <SiteInfo
+name="CodeGeeX"
+desc="免费必装的智能编程助手"
+url="https://codegeex.cn/?utm_source=pay&utm_medium=fast-request"
+logo="/img/sponsor/codegeex.svg"
+preview="/img/sponsor/codegeex-home.png"
+style="max-width:370px"
+/>
+
+<SiteInfo
 name="Apifox"
 desc="API 设计、开发、测试一体化协作平台"
 url="http://apifox.com/?utm_source=pay&utm_medium=fast-request"
