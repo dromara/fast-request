@@ -61,7 +61,7 @@ head:
 
 1. [**赞助可以为您带来什么(必看)**](./guide/sponsor.md#优势)
 
-1. [成为赞助者](./guide/sponsor.md)
+2. [成为赞助者](./guide/sponsor.md)
 
 <SiteInfo
 name="CodeGeeX"
