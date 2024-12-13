@@ -29,14 +29,14 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="OpenAPI export support" type="tip"/>
 - <Badge text="Run switch tab configurable" type="tip"/>
 - <Badge text="Response document" type="tip"/>
 - <Badge text="Solon framework support" type="tip"/>
 - <Badge text="File export" type="tip"/>
 
-## 2024.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Fix the pre-script execution logic" type="danger"/>
 

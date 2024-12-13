@@ -27,14 +27,14 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2024.1.9 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Solon 框架解析支持" type="tip"/>
 - <Badge text="OpenAPI 导出支持" type="tip"/>
 - <Badge text="运行后切换 Tab 可配置化" type="tip"/>
 - <Badge text="响应文档展示支持" type="tip"/>
 - <Badge text="文件导出默认目录支持自定义" type="tip"/>
 
-## 2024.1.8.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.8.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="修复前置脚本执行逻辑" type="danger"/>
 
 ## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="2024-11-12" color="SandyBrown"/> <Badge text="最新版" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>

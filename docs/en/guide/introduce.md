@@ -25,13 +25,13 @@ The purpose of the plugin is to simplify development and improve efficiency. Our
 
 ## Supported framework
 
-```
-Spring framework (Spring MVC / Spring Boot)
-JAX-RS
-Kotlin Spring framework
-```
+* Spring framework (Spring MVC / Spring Boot)
+* JAX-RS
+* Kotlin Spring framework
+* Solon
 
-::: chart API tool comparison
+## API tool comparison
+::: chart 
 
 ```json
 {
@@ -82,11 +82,6 @@ Kotlin Spring framework
 
 :::
 
-## Recommendation
-
-If a new version comes out, please update to the latest version as soon as possible(Plugins will always add new features
-or fix bugs you didn't find during the upgrade process).
-
 ## About author
 
 ```component VPCard
@@ -96,6 +91,8 @@ logo: /img/fastRequest.svg
 link: https://github.com/kings1990
 background: rgb(39 117 182 / 38%)
 ```
+
+Java software developer. Fast Request Author, Designer. [Bean Assistant](https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper) Author
 
 ## Platform support
 

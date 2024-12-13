@@ -22,7 +22,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 > 
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
-## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="OpenAPI export support" type="tip"/>
 - <Badge text="Run switch tab configurable" type="tip"/>
 - <Badge text="Response document" type="tip"/>
@@ -65,7 +65,7 @@ The default export directory, for example, markdown、html、word、openapi expo
 
 :::
 
-## 2024.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Fix the pre-script execution logic" type="danger"/>
 

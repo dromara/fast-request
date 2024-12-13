@@ -21,13 +21,13 @@ icon: restfulFastRequest
 
 ## 支持的框架
 
-```
-Spring体系框架 (Spring MVC / Spring Boot)
-JAX-RS
-Kotlin Spring体系框架
-```
+* Spring体系框架 (Spring MVC / Spring Boot)
+* JAX-RS
+* Kotlin Spring体系框架
+* Solon
 
-::: chart API 工具对比
+## API 工具对比
+::: chart 
 
 ```json
 {
@@ -71,10 +71,6 @@ Kotlin Spring体系框架
 
 :::
 
-## 建议
-
-如果有新版本出来，请尽快更新到最新的版本。(插件往往在升级过程中会加入新的功能或者修复你未发现的 bug)
-
 ## 关于作者
 
 ```component VPCard
@@ -85,7 +81,7 @@ link: https://github.com/kings1990
 background: rgb(39 117 182 / 38%)
 ```
 
-职务: 从事 java 软件开发。Restful Fast Request 作者、设计师、星推官
+职务: 从事 java 软件开发。Fast Request 作者、设计师、星推官。[Bean Assistant](https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper)作者
 
 <!-- @include: @src/contact.snippet.md -->
 
