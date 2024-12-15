@@ -21,13 +21,14 @@ icon: restfulFastRequest
 
 ## 支持的框架
 
-* Spring体系框架 (Spring MVC / Spring Boot)
-* JAX-RS
-* Kotlin Spring体系框架
-* Solon
+- Spring体系框架 (Spring MVC / Spring Boot)
+- JAX-RS
+- Kotlin Spring体系框架
+- Solon
 
 ## API 工具对比
-::: chart 
+
+::: chartjs
 
 ```json
 {

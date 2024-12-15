@@ -1,7 +1,7 @@
 name: Bug Report
 description: Create a report to help us improve
 title: "[Bug]:"
-labels: [ "bug" ]
+labels: ["bug"]
 assignees:
   - kings1990
 body:
@@ -60,7 +60,7 @@ body:
       value: |
         ## Describe the bug
 
-        > If applicable, add screenshots or record screen to help explain your problem.                
+        > If applicable, add screenshots or record screen to help explain your problem.
   - type: textarea
     id: description
     attributes:

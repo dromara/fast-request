@@ -1,9 +1,7 @@
-import { getDirname, path } from "vuepress/utils";
+import { path } from "vuepress/utils";
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar.js";
 import { enSidebar, zhSidebar } from "./sidebar.js";
-
-const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme(
   {
@@ -43,15 +41,30 @@ export default hopeTheme(
       },
     },
 
-    plugins: {
-      // comment: {
-      //   provider: "Giscus",
-      //   repo: "kings1990/giscus-fastrequest",
-      //   repoId: "R_kgDOHLlUsg",
-      //   category: "fastRequest",
-      //   categoryId: "DIC_kwDOHLlUss4COlsW",
-      // },
+    markdown: {
+      highlighter: {
+        type: "shiki",
+        lineNumbers: 10,
+        theme: "one-dark-pro",
+      },
+      align: true,
+      chartjs: true,
+      component: true,
+      include: {
+        resolvePath: (file) =>
+          file.startsWith("@src")
+            ? file.replace("@src", path.resolve(import.meta.dirname, ".."))
+            : file,
+      },
+      mark: true,
+      tasklist: true,
+      imgLazyload: true,
+      imgSize: true,
+      tabs: true,
+      codeTabs: true,
+    },
 
+    plugins: {
       components: {
         components: [
           "Badge",
@@ -77,27 +90,6 @@ export default hopeTheme(
             },
           },
         },
-      },
-
-      markdownImage: {
-        lazyload: true,
-        size: true,
-      },
-
-      markdownTab: true,
-
-      mdEnhance: {
-        align: true,
-        chart: true,
-        component: true,
-        include: {
-          resolvePath: (file) =>
-            file.startsWith("@src")
-              ? file.replace("@src", path.resolve(__dirname, ".."))
-              : file,
-        },
-        mark: true,
-        tasklist: true,
       },
 
       notice: [
@@ -132,11 +124,6 @@ export default hopeTheme(
           key: "2024.1.9",
         },
       ],
-
-      shiki: {
-        lineNumbers: 10,
-        theme: 'one-dark-pro',
-      }
     },
   },
   { custom: true },

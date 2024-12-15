@@ -11,18 +11,18 @@ Issue report please refer to [GitHub](https://github.com/dromara/fast-request/is
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 | [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![slack](/img/slack.png =300x300)                                                                                                                                                                                        | ![twitter](/img/twitter.png =300x300)                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![slack](/img/slack.png =300x300)                                                                                                                                                                                | ![twitter](/img/twitter.png =300x300)                                                                                                             |
 
 :::
 
-> **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.**
-> <br/><br/>
+> **Because developing version is still in development, the documentation of developing version may not be entirely accurate and is subject to change.** > <br/><br/>
 > important: <Badge text="Important function" type="important"/> feat: <Badge text="New function" type="tip"/>
-> 
+>
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
 ## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="OpenAPI export support" type="tip"/>
 - <Badge text="Run switch tab configurable" type="tip"/>
 - <Badge text="Response document" type="tip"/>
@@ -73,13 +73,13 @@ The default export directory, for example, markdown、html、word、openapi expo
 
 - <Badge text="Header Preset" type="tip"/>
 - <Badge text="Binary support" type="tip"/>
-- <Badge text="Entity parse optimization" type="info"/>  
+- <Badge text="Entity parse optimization" type="info"/>
 - <Badge text="Fix several known issue" type="danger"/>
 
 ::: hint Header Preset <Badge vertical="top" text="New feature" type="tip"/>
 <MyCarousel :imgList="['/img/2024.1.8/headersPreset_en.png','/img/2024.1.8/headersPresetManage_en.png']" />
 
-Header presets allow you to create different header groups, manage header groups, 
+Header presets allow you to create different header groups, manage header groups,
 and add all preset headers easily by selecting the dropping down item.
 
 :::
