@@ -39,6 +39,9 @@ importers:
         specifier: 2.0.0-rc.64
         version: 2.0.0-rc.64(@vuepress/plugin-docsearch@2.0.0-rc.66(@algolia/client-search@5.17.1)(search-insights@2.13.0)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.10.2)(sass@1.83.0))(vue@3.5.13)))(chart.js@4.4.7)(markdown-it@14.1.0)(sass@1.83.0)(vidstack@1.12.12)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.10.2)(sass@1.83.0))(vue@3.5.13))
     devDependencies:
+      markdownlint-cli2:
+        specifier: ^0.16.0
+        version: 0.16.0
       prettier:
         specifier: 3.4.2
         version: 3.4.2
@@ -1659,6 +1662,9 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
+  jsonc-parser@3.3.1:
+    resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
+
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
 
@@ -1708,6 +1714,24 @@ packages:
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
+
+  markdownlint-cli2-formatter-default@0.0.5:
+    resolution: {integrity: sha512-4XKTwQ5m1+Txo2kuQ3Jgpo/KmnG+X90dWt4acufg6HVGadTUG5hzHF/wssp9b5MBYOMCnZ9RMPaU//uHsszF8Q==}
+    peerDependencies:
+      markdownlint-cli2: '>=0.0.4'
+
+  markdownlint-cli2@0.16.0:
+    resolution: {integrity: sha512-oy5dJdOxGMKSwrlouxdEGf6N4O2Iz8oJ4/HO2Ix67o4vTK1AQNGjZUNwTIzfa5x+XbJ++dfgR1gLfILajsW+1Q==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  markdownlint-micromark@0.1.12:
+    resolution: {integrity: sha512-RlB6EwMGgc0sxcIhOQ2+aq7Zw1V2fBnzbXKGgYK/mVWdT7cz34fteKSwfYeo4rL6+L/q2tyC9QtD/PgZbkdyJQ==}
+    engines: {node: '>=18'}
+
+  markdownlint@0.36.1:
+    resolution: {integrity: sha512-s73fU2CQN7WCgjhaQUQ8wYESQNzGRNOKDd+3xgVqu8kuTEhmwepd/mxOv1LR2oV046ONrTLBFsM7IoKWNvmy5g==}
+    engines: {node: '>=18'}
 
   mdast-util-to-hast@13.2.0:
     resolution: {integrity: sha512-QGYKEuUsYT9ykKBCMOEDLsU5JRObWQusAolFMeko/tYPufNkRffBAQjIE+99jbA87xv6FgmjLtwjh9wBWajwAA==}
@@ -4067,6 +4091,8 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
+  jsonc-parser@3.3.1: {}
+
   jsonfile@6.1.0:
     dependencies:
       universalify: 2.0.1
@@ -4129,6 +4155,26 @@ snapshots:
       mdurl: 2.0.0
       punycode.js: 2.3.1
       uc.micro: 2.1.0
+
+  markdownlint-cli2-formatter-default@0.0.5(markdownlint-cli2@0.16.0):
+    dependencies:
+      markdownlint-cli2: 0.16.0
+
+  markdownlint-cli2@0.16.0:
+    dependencies:
+      globby: 14.0.2
+      js-yaml: 4.1.0
+      jsonc-parser: 3.3.1
+      markdownlint: 0.36.1
+      markdownlint-cli2-formatter-default: 0.0.5(markdownlint-cli2@0.16.0)
+      micromatch: 4.0.8
+
+  markdownlint-micromark@0.1.12: {}
+
+  markdownlint@0.36.1:
+    dependencies:
+      markdown-it: 14.1.0
+      markdownlint-micromark: 0.1.12
 
   mdast-util-to-hast@13.2.0:
     dependencies:
