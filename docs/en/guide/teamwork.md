@@ -11,14 +11,14 @@ Based on version control systems, share **configurations** and **API data**.
 
 ## Features
 
-<span class="vp-badge" style="vertical-align: middle;background: #21D789">No deployment required</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #087CFA">Privatisation</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #FE2857">Unlimited developers</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #FC801D">Unlimited APIs</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #6B57FF">Unlimited projects</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #3DEA62">Unlimited features</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #FDB60D">Offline work</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #21D789">Safe</span><br/>
+- <Badge bgColor="#fe2857">No deployment required</Badge>
+- <Badge bgColor="#087CFA">Privatisation</Badge>
+- <Badge bgColor="#FE2857">Unlimited developers</Badge>
+- <Badge bgColor="#FC801D">Unlimited APIs</Badge>
+- <Badge bgColor="#6B57FF">Unlimited projects</Badge>
+- <Badge bgColor="#3DEA62">Unlimited features</Badge>
+- <Badge bgColor="#FDB60D">Offline work</Badge>
+- <Badge bgColor="#21D789">Safe</Badge>
 
 ## How to use
 

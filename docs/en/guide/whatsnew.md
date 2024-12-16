@@ -15,8 +15,8 @@ Issue please refer to [Github](https://github.com/dromara/fast-request/issues)
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 | [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![slack](/img/slack.png =300x300)                                                                                                                                                                                        | ![twitter](/img/twitter.png =300x300)                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![slack](/img/slack.png =300x300)                                                                                                                                                                                | ![twitter](/img/twitter.png =300x300)                                                                                                             |
 
 ---
 
@@ -30,6 +30,7 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 ## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="OpenAPI export support" type="tip"/>
 - <Badge text="Run switch tab configurable" type="tip"/>
 - <Badge text="Response document" type="tip"/>
@@ -44,7 +45,7 @@ Because developing version is still in development, the documentation of develop
 
 - <Badge text="Header Preset" type="tip"/>
 - <Badge text="Binary support" type="tip"/>
-- <Badge text="Entity parse optimization" type="info"/>  
+- <Badge text="Entity parse optimization" type="info"/>
 - <Badge text="Fix several known issue" type="danger"/>
 
 ## 2024.1.7 <Badge text="Free trial" type="tip"/> <Badge text="2024-09-18" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>

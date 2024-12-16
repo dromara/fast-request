@@ -11,14 +11,14 @@ icon: teamwork
 
 ## 特性
 
-<span class="vp-badge" style="vertical-align: middle;background: #FE2857">零部署</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #087CFA">私有化</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #FE2857">不限人数</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #FC801D">不限 API 数</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #6B57FF">不限项目数</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #3DEA62">不限功能</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #FDB60D">离线运转</span><br/>
-<span class="vp-badge" style="vertical-align: middle;background: #21D789">安全</span><br/>
+- <Badge bgColor="#fe2857">零部署</Badge>
+- <Badge bgColor="#087CFA">私有化</Badge>
+- <Badge bgColor="#FE2857">不限人数</Badge>
+- <Badge bgColor="#FC801D">不限 API 数</Badge>
+- <Badge bgColor="#6B57FF">不限项目数</Badge>
+- <Badge bgColor="#3DEA62">不限功能</Badge>
+- <Badge bgColor="#FDB60D">离线运转</Badge>
+- <Badge bgColor="#21D789">安全</Badge>
 
 ## 如何使用
 
@@ -26,13 +26,13 @@ icon: teamwork
 
 ### 更新配置
 
-版本控制系统 pull 后，例如`Git pull`，点击刷新项目配置按钮，即可获取其他成员提交的配置
+版本控制系统 pull 后，例如 `Git pull`，点击刷新项目配置按钮，即可获取其他成员提交的配置
 
 ![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
 
 ## 更新 API
 
-版本控制系统 pull 后，例如`Git pull`，点击 API 刷新按钮，即可获取其他成员提交的 API
+版本控制系统 pull 后，例如 `Git pull`，点击 API 刷新按钮，即可获取其他成员提交的 API
 
 ![refreshProjectConfig](/img/2023.1.3/refreshAPI.png)
 

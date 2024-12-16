@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 MD041 -->
+
 <div class="compare-wrapper" style="display:flex">
 
 <div class="hint-container info" style="margin-right:15px;width:50%">
@@ -24,7 +26,7 @@
 - [x] [<ColorIcon icon="openai" /> OpenAI API Optimizing fields](/en/guide/features/ai.md)
 - [x] [<ColorIcon icon="quanjucanshu" /> Project-level config](/en/guide/features/projectValueConfig.md)
 - [x] [<ColorIcon icon="environment" /> Environment](/en/guide/features/environment.md)
-- [x] [<ColorIcon icon="function" /> Function](/en/guide/features/function.md) 
+- [x] [<ColorIcon icon="function" /> Function](/en/guide/features/function.md)
 - [x] [<ColorIcon icon="domainConfigNew" /> Yaml、Properties domain parse](/en/guide/features/projectLevelDomainConfig.md)
 - [x] [<ColorIcon icon="stop" /> Stop API request](/en/guide/features/stopRequest.md)
 - [x] [<ColorIcon icon="localScope" /> Navigate to current method](/en/guide/features/navigateCurrentMethod.md)
@@ -32,14 +34,14 @@
 - [x] [<ColorIcon icon="saveGroup" /><ColorIcon icon="apiParamGroupNew" /> API grouping](/en/guide/features/apiGroup.md)
 - [x] [<ColorIcon icon="saveTemp" /> Temporary request](/en/guide/features/tempRequest.md)
 - [x] [<ColorIcon icon="apifox" /> Apifox integration](/en/guide/features/apifox.md)
-- [x] [<ColorIcon icon="postmanNew" /> Postman integration](/en/guide/features/postmanSync.md) 
+- [x] [<ColorIcon icon="postmanNew" /> Postman integration](/en/guide/features/postmanSync.md)
 - [x] [<ColorIcon icon="clearNew" /> Clear params](/en/guide/features/clear.md)
 - [x] [<ColorIcon icon="import" /> cURL import](/en/guide/features/clear.md)
 - [x] [<ColorIcon icon="urlCopy" /> Url copy](/en/guide/features/copyUrl.md)
 - [x] [<ColorIcon icon="historyNew" /> History request](/en/guide/features/historyRequest.md)
 - [x] [<ColorIcon icon="github" /><ColorIcon icon="gitee" /><ColorIcon icon="gitlab" /> API document sync](/en/guide/features/apiDocSync.md)
 - [x] [<ColorIcon icon="markdown" /> API export](/en/guide/features/shareApiDoc.md)
-- [x] [<ColorIcon icon="openApi" /> OpenAPI export](/en/guide/features/openApi.md) 
+- [x] [<ColorIcon icon="openApi" /> OpenAPI export](/en/guide/features/openApi.md)
 - [x] [<ColorIcon icon="fullScreen" /> FullScreen](/en/guide/features/fullScreen.md)
 - [x] [<ColorIcon icon="commonHeaderNew" /> Common header](/en/guide/features/commonHeader.md)
 - [x] [<ColorIcon icon="chrome" /> Html preview](/en/guide/features/htmlPreview.md)
@@ -50,7 +52,7 @@
 - [x] [<ColorIcon icon="restfulFastRequest" /> API list preview<](/en/guide/features/apiPreview.md)
 - [x] [<ColorIcon icon="class" /> Api 注释预览](/en/guide/features/apiCommentPreview.md)
 - [x] [<ColorIcon icon="restfulFastRequest" /> Auto domain](/en/guide/features/autoDomain.md)
-- [x] [<ColorIcon icon="headersPreset" /> Headers Preset](/en/guide/features/headersPreset.md) 
+- [x] [<ColorIcon icon="headersPreset" /> Headers Preset](/en/guide/features/headersPreset.md)
 - [x] [<ColorIcon icon="analyseNew" /> Annual report](/en/guide/features/annualReport.md)
 - [x] [More...](./guide/features/)
 

@@ -13,23 +13,23 @@ Provides a custom format for local markdown and [Online API](./apiDocSync.md) do
 
 ### Content variable
 
-| Key                    | Parameter type                | Description                                                                                                        |
-| :--------------------- | :---------------------------- | :----------------------------------------------------------------------------------------------------------------- |
-| url                    | String                        | Final url                                                                                                          |
-| originUrl              | String                        | Origin url, contains the name of the original path variable                                                        |
-| namingPolicy           | String                        | API namingPolicy, fixed value[1.byMethodName:by java method name 2.byDoc:by JavaDoc or Swagger method description] |
-| methodName             | String                        | Java method name                                                                                                   |
-| methodDescription      | String                        | Method description, comes from javadoc or Swagger method description                                               |
-| methodType             | String                        | Method type, for example Get,Post,Put,Delete,Patch                                                                 |
-| headerList             | List\<[Header](#header)\>     | Header params                                                                                                      |
-| pathKeyValueList       | List\<[KeyValue](#keyvalue)\> | Url Path params                                                                                                    |
-| urlParamsKeyValueList  | List\<[KeyValue](#keyvalue)\> | Url Query params                                                                                                   |
-| multipartKeyValueList  | List\<[KeyValue](#keyvalue)\> | Multipart params                                                                                                   |
-| urlEncodedKeyValueList | List\<[KeyValue](#keyvalue)\> | Form Url-Encoded params                                                                                            |
-| jsonParam              | String                        | Json params                                                                                                        |
-| jsonParamDocument      | String                        | Json params document                                                                                               |
-| responseExample        | String                        | Response                                                                                                           |
-| returnDocument         | String                        | Response params document                                                                                           |
+| Key                    | Parameter type                | Description                                                                                                          |
+| :--------------------- | :---------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| url                    | String                        | Final url                                                                                                            |
+| originUrl              | String                        | Origin url, contains the name of the original path variable                                                          |
+| namingPolicy           | String                        | API namingPolicy, fixed value \[1.byMethodName:by java method name 2.byDoc:by JavaDoc or Swagger method description] |
+| methodName             | String                        | Java method name                                                                                                     |
+| methodDescription      | String                        | Method description, comes from javadoc or Swagger method description                                                 |
+| methodType             | String                        | Method type, for example Get,Post,Put,Delete,Patch                                                                   |
+| headerList             | List\<[Header](#header)\>     | Header params                                                                                                        |
+| pathKeyValueList       | List\<[KeyValue](#keyvalue)\> | Url Path params                                                                                                      |
+| urlParamsKeyValueList  | List\<[KeyValue](#keyvalue)\> | Url Query params                                                                                                     |
+| multipartKeyValueList  | List\<[KeyValue](#keyvalue)\> | Multipart params                                                                                                     |
+| urlEncodedKeyValueList | List\<[KeyValue](#keyvalue)\> | Form Url-Encoded params                                                                                              |
+| jsonParam              | String                        | Json params                                                                                                          |
+| jsonParamDocument      | String                        | Json params document                                                                                                 |
+| responseExample        | String                        | Response                                                                                                             |
+| returnDocument         | String                        | Response params document                                                                                             |
 
 ### Syntax variables
 
@@ -54,13 +54,13 @@ Provides a custom format for local markdown and [Online API](./apiDocSync.md) do
 
 ### KeyValue
 
-| Key     | Parameter type | Description                                                      |
-| :------ | :------------- | :--------------------------------------------------------------- |
-| enabled | Boolean        | Enable flag                                                      |
-| key     | String         | Parameter key                                                    |
-| type    | String         | Parameter type, fixed value [Object Array String Number Boolean] |
-| value   | Object         | Parameter value                                                  |
-| comment | String         | Parameter description                                            |
+| Key     | Parameter type | Description                                                       |
+| :------ | :------------- | :---------------------------------------------------------------- |
+| enabled | Boolean        | Enable flag                                                       |
+| key     | String         | Parameter key                                                     |
+| type    | String         | Parameter type, fixed value \[Object Array String Number Boolean] |
+| value   | Object         | Parameter value                                                   |
+| comment | String         | Parameter description                                             |
 
 ## Default template
 

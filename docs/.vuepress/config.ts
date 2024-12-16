@@ -1,11 +1,9 @@
 import { container } from "@mdit/plugin-container";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
-import { getDirname, path } from "vuepress/utils";
+import { path } from "vuepress/utils";
 
 import theme from "./theme.js";
-
-const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   title: "Fast Request",
@@ -66,7 +64,7 @@ export default defineUserConfig({
 
   alias: {
     "@theme-hope/layouts/Layout": path.resolve(
-      __dirname,
+      import.meta.dirname,
       "./layouts/Layout.vue",
     ),
     // "@theme-hope/components/HomePage": path.resolve(

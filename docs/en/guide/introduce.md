@@ -25,13 +25,14 @@ The purpose of the plugin is to simplify development and improve efficiency. Our
 
 ## Supported framework
 
-* Spring framework (Spring MVC / Spring Boot)
-* JAX-RS
-* Kotlin Spring framework
-* Solon
+- Spring framework (Spring MVC / Spring Boot)
+- JAX-RS
+- Kotlin Spring framework
+- Solon
 
 ## API tool comparison
-::: chart 
+
+::: chartjs
 
 ```json
 {

@@ -54,7 +54,7 @@ icon: featuresNew
 - [<ColorIcon icon="openai" /> AI](./ai.md)
 - [<ColorIcon icon="headerGroupNew" /> Headers 分组](./headerGroup.md)
 - [<ColorIcon icon="commonHeaderNew" /> 常用头参数](./commonHeader.md)
-- [<ColorIcon icon="headersPreset" /> Headers 预设](./headersPreset.md) 
+- [<ColorIcon icon="headersPreset" /> Headers 预设](./headersPreset.md)
 - [<ColorIcon icon="bulkEdit"/> Headers批量编辑](./bulkEdit.md)
 - [<ColorIcon icon="lock" /> Basei auth](./basicAuth.md)
 - [<ColorIcon icon="chrome" /> Html 预览](./htmlPreview.md)

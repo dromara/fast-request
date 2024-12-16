@@ -1,15 +1,13 @@
-- # Terms of Service of Restful Fast Request
+# Terms of Service of Restful Fast Request
 
-  #### Last Updated: Mar 21, 2022
+#### Last Updated: Mar 21, 2022
+
 Note: the open source version of Restful Fast Request Free usings the Apache2 license which can be found in file [LICENSE](LICENSE) which doesen't applys to this paid version plugin: Restful Fast Request.
 
-
-
-  Welcome and thank you for using KingsSoft's Restful Fast Request (“**FastRequest**”, “**we**”)! FastRequest enables users to be more efficient and productive in working with send http request. These Terms of Service (“**Terms**”), along with our DMCA Policy, Privacy Policy, and Acceptable Use Policy (collectively with Terms, the “**Agreement**”), cover your use of and access to our services, software, technology, and support websites (“**Services**”). By using our Services, you’re agreeing to be bound by the terms of this Agreement.
+Welcome and thank you for using KingsSoft's Restful Fast Request (“**FastRequest**”, “**we**”)! FastRequest enables users to be more efficient and productive in working with send http request. These Terms of Service (“**Terms**”), along with our DMCA Policy, Privacy Policy, and Acceptable Use Policy (collectively with Terms, the “**Agreement**”), cover your use of and access to our services, software, technology, and support websites (“**Services**”). By using our Services, you’re agreeing to be bound by the terms of this Agreement.
 
 Unless required by applicable law or agreed to in writing, FastRequest is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 
 PLEASE READ THIS AGREEMENT CAREFULLY AS IT INCLUDES TERMS REGARDING PRIVACY, FUTURE CHANGES TO THE AGREEMENT, FEES, LIMITATIONS OF LIABILITY, INDEMNITY, RESOLUTION OF DISPUTES BY ARBITRATION INSTEAD OF IN COURT, AND WAIVER OF CLASS ACTIONS.
 
@@ -31,7 +29,7 @@ The Services are protected by copyright, trademark, and other Chinese and foreig
 
 Copyright Agent
 
-darkings1990@gmail.com
+<darkings1990@gmail.com>
 
 Zhejiang Ningbo, China
 
@@ -68,8 +66,6 @@ OTHER THAN FOR THE TYPES OF LIABILITY WE CANNOT LIMIT BY LAW, WE LIMIT OUR LIABI
 **Indemnification**
 
 To the fullest extent permitted by law, you agree to release, indemnify, and hold FastRequest and its affiliates and subsidiaries, and its respective officers, employees, directors, and agents harmless from any from any and all losses, damages, expenses, including costs and reasonable attorneys’ fees, rights, claims, and actions of any kind and injury (including death) arising out of or relating to your use of the Services, your connection to the Services, your violation of this Agreement or your violation of any rights of another. FastRequest reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which event you will cooperate with FastRequest in asserting any available defenses.
-
-
 
 ##### **Controlling Law**
 

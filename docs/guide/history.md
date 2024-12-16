@@ -10,17 +10,18 @@ icon: changelog
 购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**，Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
 | ![微信技术群](https://img.shields.io/static/v1?label=wechat&message=微信技术群&logo=wechat&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![wechat group](/img/wechatGroup.png  =300x300)                                                         | ![twitter](/img/twitter.png  =300x300)                                                                                                                     |
-| 如果扫码失败请直接搜微信号==FastRequest99==                                                                 | 欢迎关注官方 Twitter                                                                                                                                    | 
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![wechat group](/img/wechatGroup.png =300x300)                                                           | ![twitter](/img/twitter.png =300x300)                                                                                                             |
+| 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 欢迎关注官方 Twitter                                                                                                                              |
 
 :::
 
 > **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
-> <br/><br/>
+>
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
 ## 2024.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="Solon 框架解析支持" type="tip"/>
 - <Badge text="OpenAPI 导出支持" type="tip"/>
 - <Badge text="运行后切换 Tab 可配置化" type="tip"/>
@@ -62,16 +63,15 @@ icon: changelog
 
 :::
 
-
 ## 2024.1.8.1 <Badge text="免费试用" type="tip"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
-- <Badge text="修复前置脚本执行逻辑" type="danger"/>
 
+- <Badge text="修复前置脚本执行逻辑" type="danger"/>
 
 ## 2024.1.8 <Badge text="免费试用" type="tip"/> <Badge text="2024-11-12" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Header 预设" type="tip"/>
 - <Badge text="Binary 支持" type="tip"/>
-- <Badge text="实体类解析优化" type="info"/>  
+- <Badge text="实体类解析优化" type="info"/>
 - <Badge text="若干已知问题优化" type="danger"/>
 
 ::: hint Header 预设 <Badge vertical="top" text="新功能" type="tip"/>

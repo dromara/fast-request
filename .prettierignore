@@ -4,3 +4,5 @@
 **/node_modules/**
 
 docs/.vuepress/public/js/gtag.js
+
+pnpm-lock.yaml

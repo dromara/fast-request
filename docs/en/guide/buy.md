@@ -18,28 +18,29 @@ icon: buy
 
 Click **Activate Plugin**. Of course, you can also try the plugin first. It's free for 30 days. Please click start trial.
 
-![](/img/buy/activate_en.png)
+![activation page](/img/buy/activate_en.png)
 
 ## Step1: Click Buy license
 
-![](/img/buy/step1.png)
+![step1](/img/buy/step1.png)
 
 ## step2: Choose a package
 
 - package 1: Monthly Subscription
 - package 2: Yearly Subscription(Recommended)
-  ![](/img/buy/step2.png)
+
+![step2](/img/buy/step2.png)
 
 ## Step3: Email confirmation(Email mode)
 
 If you have not registered a JetBrains account and logged in, you will enter this page, where you need to enter the email address that accepts the license.
 Click next to enter the purchase confirmation page.
 
-![](/img/buy/step3.png)
+![step3](/img/buy/step3.png)
 
 ## Step4: Type in the information and pay
 
-![](/img/buy/step4.png)
+![step4](/img/buy/step4.png)
 
 ## Step5: Type in the License information to activate the plugin
 
@@ -49,17 +50,17 @@ Click **help->Register Plugins...->Add New License**
 
 Log in to your JetBrains account.
 
-![](/img/buy/step5.png)
+![step5](/img/buy/step5.png)
 
 > Offline activation
 
-- 1.[Download activation code](https://account.jetbrains.com/licenses)
+- 1. [Download activation code](https://account.jetbrains.com/licenses)
 
-![](/img/buy/offlineCodeDownload.png)
+  ![Download](/img/buy/offlineCodeDownload.png)
 
-- 2.Enter the activation code in the Activation code
+- 1. Enter the activation code in the Activation code
 
-![](/img/buy/offline.png)
+  ![Offline](/img/buy/offline.png)
 
 <a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>Buy</a>
 
@@ -68,7 +69,9 @@ Log in to your JetBrains account.
 ::: caution License info
 
 **Please keep your activation code information safe and do not leak the License information.**
-![](/img/buy/accountLicense.png)
+
+![License](/img/buy/accountLicense.png)
+
 :::
 
 **If you have some questions, please join [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) and contact me**
