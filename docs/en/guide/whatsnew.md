@@ -29,9 +29,17 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="OpenAPI batch export" type="tip"/>
+- <Badge text="Export notice optimization" type="info"/>
+- <Badge text="Editor performance optimization" type="info"/>
+- <Badge text="Fixed User Agent could't be overwritten" type="danger"/>
+
+
+
 ## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
-- <Badge text="OpenAPI export support" type="tip"/>
+- <Badge text="OpenAPI export support" type="important"/>
 - <Badge text="Run switch tab configurable" type="tip"/>
 - <Badge text="Response document" type="tip"/>
 - <Badge text="Solon framework support" type="tip"/>
