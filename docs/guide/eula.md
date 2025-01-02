@@ -3,7 +3,7 @@ title: EULA
 icon: license
 ---
 
-## Restful Fast Request for JetBrains IDEs EULA
+## Fast Request for JetBrains IDEs EULA
 
 “**开发者**”指 DKingSoft。
 
