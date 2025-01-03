@@ -37,7 +37,7 @@ icon: changelog
 ::: hint OpenAPI 导出支持 <Badge vertical="top" text="重要功能" type="important"/>
 ![](/img/2024.1.9/openApiExport_en.png)
 
-可在将 API 导出成 [OpenAPI](https://spec.openapis.org/oas/latest.html) 格式。
+可以将 API 导出成 [OpenAPI](https://spec.openapis.org/oas/latest.html) 格式。
 
 :::
 
