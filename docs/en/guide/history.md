@@ -27,6 +27,13 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Editor performance optimization" type="info"/>
 - <Badge text="Fixed User Agent could't be overwritten" type="danger"/>
 
+::: hint OpenAPI batch export <Badge vertical="top" text="New feature" type="important"/>
+![](/img/2025.1.1/openApiBatch.png)
+
+Support export [OpenAPI](https://spec.openapis.org/oas/latest.html) batch for saved apis.
+
+:::
+
 ## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="OpenAPI export support" type="important"/>
@@ -35,7 +42,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Solon framework support" type="tip"/>
 - <Badge text="File export" type="tip"/>
 
-::: hint OpenAPI export support <Badge vertical="top" text="New feature" type="important"/>
+::: hint OpenAPI export support <Badge vertical="top" text="Important feature" type="important"/>
 ![](/img/2024.1.9/openApiExport_en.png)
 
 Support export [OpenAPI](https://spec.openapis.org/oas/latest.html) document of the current request.

@@ -21,10 +21,18 @@ icon: changelog
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
 ## 2025.1.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
-- <Badge text="OpenAPI批量导出" type="tip"/>
+- <Badge text="OpenAPI 批量导出" type="tip"/>
 - <Badge text="导出提示优化" type="info"/>
 - <Badge text="性能优化" type="info"/>
-- <Badge text="修复User Agent 无法被覆盖" type="danger"/>
+- <Badge text="修复 User Agent 无法被覆盖" type="danger"/>
+
+::: hint OpenAPI 批量导出 <Badge vertical="top" text="新功能" type="tip"/>
+![](/img/2025.1.1/openApiBatch.png)
+
+支持保存的 API 的 [OpenAPI](https://spec.openapis.org/oas/latest.html) 批量导出
+
+:::
+
 
 ## 2024.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 

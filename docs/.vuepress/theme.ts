@@ -97,7 +97,7 @@ export default hopeTheme(
           path: "/",
           title: "将在2024.1.9推出",
           content:
-            '<ul><li>OpenAPI 导出支持</li><li>Solon 框架解析支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+            '<ul><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">免费插件Bean Assistant实现快速注入 Bean</a></li></li><li>OpenAPI 导出支持</li><li>Solon 框架解析支持</li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
           actions: [
             {
               text: "了解详情→",
@@ -112,7 +112,7 @@ export default hopeTheme(
           path: "/en",
           title: "Coming in <b>2024.1.9</b>",
           content:
-            '<ul><li>OpenAPI export support</li><li>Solon framework support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+            '<ul><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">Another plugin Bean Assistant help injected bean easily</a></li><li>OpenAPI export support</li><li>Solon framework support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
           actions: [
             {
               text: "Learn more→",
