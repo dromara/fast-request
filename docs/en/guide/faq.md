@@ -69,17 +69,6 @@ Click the plug-in settings button **Manage Configuration** and set the values of
 Please refer [<ColorIcon icon="domainConfig" /> Project-level domain config](./features/projectLevelDomainConfig.md)
 (Plugin version>=**2023.1.1**)
 
-## S: APIs lost
-
-So sorry to inform you that installing the 2023.1.3 version of (have been hidden) will cause loss of historical APIs, and you will need to manually retrieve the data. Here's what you need to do:
-
-0. Download 2023.1.3.2+ version of plugin
-1. Go to the .idea directory in your project, right-click and click on "Local history", find the change log about `.idea/FastRequestCollection.xml` (the title contains "Deleting"), and locate the last version. Copy the contents of this version and paste them into `.idea/fastRequest/fastRequestCollection.xml`
-2. Restart IntelliJ IDEA.
-3. Click on the icon <ColorIcon icon="dataTransfer" /> in the APIs tab and do transfer
-
-![dataTransfer20231](/img/faq/dataTransfer202313.png)
-
 ## S: Url error
 
 ![urlError](/img/skill/urlError_en.png)
@@ -160,7 +149,10 @@ Recommendation: There is no need to create a repo in Github, Gitee, and Gitlab i
 
 ## S: APIs echo
 
-For the saved API, you modify it again, and you need manually fill in the parameters and save <ColorIcon icon="saveNew" /> it. If you don't want the parameters you saved before at all, you can just click <ColorIcon icon="regenerate" />([Re generate](/guide/features/regenerate.md)).
+For the saved API, you modify it again,
+and you need to manually fill in the parameters and save <ColorIcon icon="save" /> it.
+If you don't want the parameters you saved before at all,
+you can click <ColorIcon icon="regenerate" />([Re generate](/guide/features/regenerate.md)).
 
 > Please ensure that click `save button` <ColorIcon icon="saveNew" /> every time you modify api params.
 
@@ -207,6 +199,8 @@ Click **help->Edit Custom Vm Options...**,add the following config in **idea.vmo
 
 ## Q: Response return Unexpected end of file from server
 
+It maybe caused by as follows
+
 ```
 1. Network connection was lost
 2. The server decided to close the connection
@@ -242,7 +236,7 @@ public class WebConfig {
 }
 ```
 
-## Q: Action buttons are not visible
+## Q: Action buttons not visible
 
 Click `Options` and check `Show Toolbar`
 
@@ -257,6 +251,8 @@ Click `Options` and check `Show Toolbar`
 Left icon <ColorIcon icon="restfulFastRequest" /> missing.
 
 **A:** Open config `setting->Editor->Gutter icons->show gutter icon`
+
+**B:** Copy the file content then delete it and recreate it and paste it back. 
 
 ## Q: After entering the parameters, the API call found that the parameters were invalid
 
@@ -289,3 +285,14 @@ public class A{
     private int xx;
 }
 ```
+
+## S: APIs data lost
+
+So sorry to inform you that installing the 2023.1.3 version of (have been hidden) will cause loss of historical APIs, and you will need to manually retrieve the data. Here's what you need to do:
+
+0. Download 2023.1.3.2+ version of plugin
+1. Go to the .idea directory in your project, right-click and click on "Local history", find the change log about `.idea/FastRequestCollection.xml` (the title contains "Deleting"), and locate the last version. Copy the contents of this version and paste them into `.idea/fastRequest/fastRequestCollection.xml`
+2. Restart IntelliJ IDEA.
+3. Click on the icon <ColorIcon icon="dataTransfer" /> in the APIs tab and do transfer
+
+![dataTransfer20231](/img/faq/dataTransfer202313.png)

@@ -25,12 +25,12 @@ features:
 
   - title: 功能丰富
     icon: features
-    details: 一键生成 URL 和参数、脚本、API 导出到 Postman、SearchEveryWhere 搜索、发送 API 请求、下载文件、存储历史请求，各种功能一应俱全
+    details: 一键生成 URL 和参数、脚本、SearchEveryWhere 搜索、API 导出到 Postman、发送 API 请求、下载文件、存储历史请求，各种功能一应俱全
     link: /guide/features/
 
   - title: 轻量、界面友好
     icon: code-box-fill
-    details: 轻量，仅 16M 大小，并且提供一个非常直观的界面，好操作易上手
+    details: 轻量，仅 20M 大小，并且提供一个非常直观的界面，好操作易上手
     link: /guide/install.html
 
 head:
@@ -114,11 +114,9 @@ style="max-width:370px"
 
 ## 🎉 致谢
 
-**Restful Fast Request**简称**RFR**自从 2021 年上线以来获得了很多人的支持。目前微信社区群 1000 多人，下载超过 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
+**Fast Request** 简称 **FR** 。自从 2021 年上线以来获得了很多人的支持。目前微信社区群 1000 多人，下载超过 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
 
-感谢 OSCHINA 和 Gitee 官方平台对**RFR**项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC 年度最受欢迎个人项目" <Badge vertical="baseline">Top 15</Badge> 殊荣。
-
-设计师森阳`sssenyang@qq.com` logo设计
+感谢 OSCHINA 和 Gitee 官方平台对 **FR** 项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC 年度最受欢迎个人项目" <Badge vertical="baseline">Top 15</Badge> 殊荣。
 
 <!-- @include: @src/contact.snippet.md -->
 

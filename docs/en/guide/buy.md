@@ -18,6 +18,8 @@ icon: buy
 
 Click **Activate Plugin**. Of course, you can also try the plugin first. It's free for 30 days. Please click start trial.
 
+Path: `Help(Menu) -> Register... -> Fast Request`
+
 ![activation page](/img/buy/activate_en.png)
 
 ## Step1: Click Buy license
@@ -27,7 +29,9 @@ Click **Activate Plugin**. Of course, you can also try the plugin first. It's fr
 ## step2: Choose a package
 
 - package 1: Monthly Subscription
-- package 2: Yearly Subscription(Recommended)
+- package 2: Yearly Subscription (Recommended)
+
+Directly links：[https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing](https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing)
 
 ![step2](/img/buy/step2.png)
 
@@ -46,7 +50,7 @@ Click next to enter the purchase confirmation page.
 
 > Online activation
 
-Click **help->Register Plugins...->Add New License**
+Click **Help(Menu) -> Register... -> Manage License**
 
 Log in to your JetBrains account.
 
@@ -68,7 +72,7 @@ Log in to your JetBrains account.
 
 ::: caution License info
 
-**Please keep your activation code information safe and do not leak the License information.**
+**Ensure keep your activation code information safe and don't leak the License information.**
 
 ![License](/img/buy/accountLicense.png)
 

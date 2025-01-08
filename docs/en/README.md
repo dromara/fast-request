@@ -30,7 +30,7 @@ features:
 
   - title: Lightweight、User-friendly interface
     icon: code-box-fill
-    details: Only 16 MB size. Plugin provides a very intuitive interface
+    details: Only 20 MB size. Plugin provides a very intuitive interface
     link: /en/guide/install.html
 
 head:

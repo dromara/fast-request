@@ -20,6 +20,8 @@ icon: buy
 
 点击**激活插件**，当然你也可以先免费试用插件 30 天，点击 start trial。
 
+路径： `Help(菜单栏) -> Register... -> Fast Request` 
+
 ![](/img/buy/activate.png)
 
 ## Step1: 点击 Buy license
@@ -30,6 +32,8 @@ icon: buy
 
 - 套餐 1: 按月计费订阅
 - 套餐 2: 按年计费订阅(推荐)
+
+直走链接：[https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing](https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing)
 
 ![](/img/buy/step2.png)
 
@@ -44,11 +48,20 @@ icon: buy
 
 ![](/img/buy/step4.png)
 
+::: tip
+场景：支付页面发现只能用信用卡支付，无法使用微信、支付宝
+
+解决方案：打开链接 [https://account.jetbrains.com/profile-details](https://account.jetbrains.com/profile-details)
+
+`country/Region` 修改为 `China Mainland` 中国大陆再返回点击购买即可
+如果没有这个选项，可以换个账号用购买并使用离线激活来激活插件，或者邮件联系 <a href="mailto:Sales.cn@jetbrains.com">Sales.cn@jetbrains.com</a> 声明修改账号的 country/Region 成 `China Mainland` 中国大陆
+:::
+
 ## Step5: 填写 License 信息激活插件
 
 > 在线激活
 
-点击 **help->Register Plugins...->Add New License**
+点击 **Help(菜单栏) -> Register... -> Add New License**
 
 需要登录 Jetbrains 账号
 

@@ -9,7 +9,7 @@ icon: whats-new
 
 [**收费版 VS 免费版->**](./versionCompare.md)
 
-购买**License**流程请参考[**购买插件**](./buy.md) 或者进入微信群里查看**群公告**
+购买**License**流程请参考[**购买插件**](./buy.md)
 
 Issue 提报请到[_Github_](https://github.com/dromara/fast-request/issues)
 
