@@ -22,6 +22,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
 ## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="OpenAPI batch export" type="tip"/>
 - <Badge text="Export notice optimization" type="info"/>
 - <Badge text="Editor performance optimization" type="info"/>
@@ -1519,7 +1520,7 @@ And with the iteration of the version, more prompt operation guidelines may be a
 ::: hint Url generation optimization <Badge vertical="top" text="Optimization" type="info"/>
 Historical logic will only take the first url, that is, test1, considering that in actual use, it is possible that you need another url, so random support has been added.
 
-The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click <FontIcon icon="restfulFastRequest" />
+The following method url will be randomly generated to **/url1/test1,/url1/test2,/url2/test1,/url2/test2** by click ::restfulFastRequest::
 
 ```java
 @RequestMapping({"url1","url2"})
