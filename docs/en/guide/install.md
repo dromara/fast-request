@@ -9,7 +9,7 @@ Click to install
 
 ## Online install
 
-Search **Restful Fast Request** in idea plugin marketplace
+Search `Restful Fast Request` in idea plugin marketplace
 
 ![download](/img/download.png)
 
@@ -17,7 +17,7 @@ Search **Restful Fast Request** in idea plugin marketplace
 
 > Applicable to intranet use or trial version usage
 
-a. Go to [https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions) and download zip file
+a. Go to [https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/versions](https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/versions) and download zip file
 
 b. Go to `setting -> plugins -> Install plugin from disk`
 

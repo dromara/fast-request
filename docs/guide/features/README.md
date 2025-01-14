@@ -11,6 +11,7 @@ icon: featuresNew
 ## Request
 
 - [<ColorIcon icon="restfulFastRequest" /> 让图标动起来](./makeIconMove.md)
+- [<ColorIcon icon="customToolbar" /> 自定义工具栏](./customToolbar.md)
 - [<ColorIcon icon="domainConfigNew" /> 项目域名配置](./projectLevelDomainConfig.md)
 - [<ColorIcon icon="environment" /> Environment](./environment.md)
 - [<ColorIcon icon="quanjucanshu" /> 项目级别全局参数支持](./projectValueConfig.md)
@@ -39,7 +40,7 @@ icon: featuresNew
 - [<ColorIcon icon="settings" /> Markdown 文档模板配置](./markdownDocTemplateConfig.md)
 - [<ColorIcon icon="rcd-refresh" /> 项目配置刷新](./projectConfigRefresh.md)
 - [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md)
-- [<ColorIcon icon="customToolbar" /> 自定义工具栏](./customToolbar.md)
+
 
 ---
 

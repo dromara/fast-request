@@ -11,6 +11,7 @@ The icon in the document corresponds to the button icon in the plugin
 ## Request
 
 - [<ColorIcon icon="restfulFastRequest" /> Make icon move](./makeIconMove.md)
+- [<ColorIcon icon="customToolbar" /> Custom toolbar](./customToolbar.md)
 - [<ColorIcon icon="domainConfigNew" /> Project-level domain config](./projectLevelDomainConfig.md)
 - [<ColorIcon icon="environment" /> Environment](./environment.md)
 - [<ColorIcon icon="quanjucanshu" /> Project-level config](./projectValueConfig.md)
@@ -39,7 +40,7 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="settings" /> Markdown doc template config](./markdownDocTemplateConfig.md)
 - [<ColorIcon icon="rcd-refresh" /> Project config refresh](./projectConfigRefresh.md)
 - [<ColorIcon icon="analyseNew" /> Annual report](./annualReport.md)
-- [<ColorIcon icon="customToolbar" /> Custom toolbar](./customToolbar.md)
+
 
 ---
 

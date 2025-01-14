@@ -9,7 +9,7 @@ title: 安装
 
 ## 在线安装(推荐)
 
-IDEA 插件市场搜索 Restful Fast Request 并安装
+IDEA 插件市场搜索 `Restful Fast Request` 并安装
 
 ![download](/img/download.png)
 
@@ -17,7 +17,7 @@ IDEA 插件市场搜索 Restful Fast Request 并安装
 
 > 适用内网使用或者体验版使用
 
-1. 前往 [https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions) 下载安装包
+1. 前往 [https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/versions](https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/versions) 下载安装包
 2. 前往 setting → plugins → Install plugin from disk
 3. 选择下载好的安装包并重启 (==请不要解压压缩包==)
 
