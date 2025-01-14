@@ -21,7 +21,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
-## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-01-15" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="OpenAPI batch export" type="tip"/>
 - <Badge text="Export notice optimization" type="info"/>
@@ -35,7 +35,7 @@ Support export [OpenAPI](https://spec.openapis.org/oas/latest.html) batch for sa
 
 :::
 
-## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="OpenAPI export support" type="important"/>
 - <Badge text="Run switch tab configurable" type="tip"/>
