@@ -16,7 +16,7 @@ actions:
 
 @tab Paid version
 
-1. Click <FontIcon icon="restfulFastRequest" /> on method left
+1. Click ::restfulFastRequest:: on method left
 2. If the result of [Auto domain](../features/autoDomain.md) did not meet expectations，change the domain in [Project-level domain config](../features/projectLevelDomainConfig.md)
 3. Click send button for sending request
 
@@ -32,7 +32,7 @@ title: Search and run api in Fast Request
 1. Click Manager config then add project name[example:wx card] and env[example:local、dev]
 2. Set target domain
 3. Open toolwindow(at the top-right corner),select project and env
-4. Click <FontIcon icon="restfulFastRequest1" /> on method left
+4. Click ::restfulFastRequest1:: on method left
 5. Click send button for sending request
 
 ![](/img/start_en.svg)

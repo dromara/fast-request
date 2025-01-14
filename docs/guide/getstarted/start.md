@@ -16,7 +16,7 @@ actions:
 
 @tab 付费版
 
-1. 点击在方法左侧的 fastRequest 的图标 <FontIcon icon="restfulFastRequest" />
+1. 点击在方法左侧的 fastRequest 的图标 ::restfulFastRequest::
 2. 如果[自动域名](../features/autoDomain.md)的结果不符合预期，则在[Project 级别域名配置](../features/projectLevelDomainConfig.md)里面修改域名
 3. 点击发送请求按钮发送请求
 
@@ -36,7 +36,7 @@ ratio: 5/4
 1. 点击配置添加项目名 (如微信卡片) 和环境名 (如 local、dev)
 2. 设置对应项目及环境的域名
 3. 打开工具窗口(右上角位置)，选择当前项目想要启用的环境
-4. 点击在方法左侧的 fastRequest 的图标 <FontIcon icon="restfulFastRequest1" />
+4. 点击在方法左侧的 fastRequest 的图标 ::restfulFastRequest1::
 5. 点击发送请求按钮发送请求
 
 ![](/img/start.svg)

@@ -1,7 +1,7 @@
 # Debug API & send request
 
 :::tip
-In the new version, send button has moved to the toolbar, and the left icon has been changed from <FontIcon icon="restfulFastRequest1" /> to <FontIcon icon="restfulFastRequest" />
+In the new version, send button has moved to the toolbar, and the left icon has been changed from ::restfulFastRequest1:: to ::restfulFastRequest::
 :::
 
 ![sendRequest](/img/sendRequest.png "New version")

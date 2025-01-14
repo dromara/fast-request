@@ -21,6 +21,7 @@ icon: changelog
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
 ## 2025.1.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="OpenAPI 批量导出" type="tip"/>
 - <Badge text="导出提示优化" type="info"/>
 - <Badge text="性能优化" type="info"/>
@@ -32,7 +33,6 @@ icon: changelog
 支持保存的 API 的 [OpenAPI](https://spec.openapis.org/oas/latest.html) 批量导出
 
 :::
-
 
 ## 2024.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2024-12-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
@@ -1581,7 +1581,7 @@ public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
 
 历史逻辑只会取第一个 url 即 test1，考虑到实际使用中，有可能你需要的是另外一个 url，所以添加了随机支持
 
-以下 demo，url 将随着点击<FontIcon icon="restfulFastRequest" />随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+以下 demo，url 将随着点击::restfulFastRequest::随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
 
 ```java
 @RequestMapping({"url1","url2"})
