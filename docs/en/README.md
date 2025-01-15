@@ -57,9 +57,9 @@ head:
  <div style="border-radius: 10px;overflow: hidden">
   <iframe
   title="Advantage"
-  :src="$withBase('/html/showside_en.html')"
+  :src="$withBase('/html/showsideNew_en.html')"
   width="100%"
-  height="525px"
+  height="550px"
   frameborder="0"
   scrolling="No"
   leftmargin="0"

@@ -95,9 +95,9 @@ style="max-width:370px"
   <div style="border-radius: 10px;overflow: hidden">
     <iframe
       title="优势"
-      :src="$withBase('/html/showside.html')"
+      :src="$withBase('/html/showsideNew.html')"
       width="100%"
-      height="515px"
+      height="500px"
       frameborder="0"
       scrolling="No"
       leftmargin="0"
