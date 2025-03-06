@@ -1,266 +1,272 @@
 <style>
+  .carousel-container {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+  }
 
-    .carousel-container {
-        display: flex;
-        gap: 1rem;
-        margin: 0 auto;
-    }
+  .right-section {
+    flex: 1;
+  }
 
-    .right-section {
-        flex: 1;
-    }
+  .item {
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 8px; /* 添加圆角 */
+    background: #ffffff; /* 白色背景 */
+    overflow: hidden; /* 确保内容不会超出圆角 */
+  }
 
-    .item {
-        margin-bottom: 1rem;
-        position: relative;
-        border-radius: 8px; /* 添加圆角 */
-        background: #ffffff; /* 白色背景 */
-        overflow: hidden; /* 确保内容不会超出圆角 */
-    }
+  .content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    color: #333333; /* 深色文字，因为现在是白色背景 */
+    padding: 0 20px; /* 添加左右内边距 */
+  }
 
-    .content {
-        height: 0;
-        overflow: hidden;
-        transition: height 0.3s ease;
-        color: #333333; /* 深色文字，因为现在是白色背景 */
-        padding: 0 20px; /* 添加左右内边距 */
-    }
+  .item.active .content {
+    height: auto;
+    padding: 5px;
+  }
 
-    .item.active .content {
-        height: auto;
-        padding: 5px;
-    }
+  .title {
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bolder;
+    //background: #f5f5f5; /* 浅灰色背景 */
+    margin: 0; /* 移除可能的默认边距 */
+    font-size: 18px;
+  }
 
-    .title {
-        cursor: pointer;
-        padding: 10px;
-        font-weight: bolder;
-        //background: #f5f5f5; /* 浅灰色背景 */
-        margin: 0; /* 移除可能的默认边距 */
-        font-size:18px;
-    }
+  .left-section {
+    flex: 2;
+    position: relative;
+  }
 
-    .left-section {
-        flex: 2;
-        position: relative;
-    }
+  .image-container {
+    width: 100%;
+    padding-bottom: 60%;
+    position: relative;
+    overflow: hidden;
+  }
 
-    .image-container {
-        width: 100%;
-        padding-bottom: 60%;
-        position: relative;
-        overflow: hidden;
-    }
+  .image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-    .image-container img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
+  .image-container img.show {
+    opacity: 1;
+  }
 
-    .image-container img.show {
-        opacity: 1;
-    }
+  /* 添加进度条蒙版样式 */
+  .progress-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* 初始宽度为0 */
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(144, 238, 144, 0.3),
+      rgba(144, 238, 144, 0.1)
+    );
+    z-index: 1;
+    transition: width 3s linear; /* 与轮播时间相同 */
+  }
 
-    /* 添加进度条蒙版样式 */
-    .progress-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0; /* 初始宽度为0 */
-        height: 100%;
-        background: linear-gradient(to right, rgba(144, 238, 144, 0.3), rgba(144, 238, 144, 0.1));
-        z-index: 1;
-        transition: width 3s linear; /* 与轮播时间相同 */
-    }
+  /* 激活状态下的进度条动画 */
+  .progress-overlay.active {
+    width: 100%;
+  }
 
-    /* 激活状态下的进度条动画 */
-    .progress-overlay.active {
-        width: 100%;
-    }
+  /* 修改进度条样式 */
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(31, 214, 140, 0.5);
+    pointer-events: none;
+    z-index: 1;
+    transition: width 5s linear;
+  }
 
-    /* 修改进度条样式 */
-    .progress-bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background: rgba(31, 214, 140, 0.5);
-        pointer-events: none;
-        z-index: 1;
-        transition: width 5s linear;
-    }
+  /* 移除激活状态时立即消失 */
+  .item:not(.active) .progress-bar {
+    transition: none;
+  }
 
-    /* 移除激活状态时立即消失 */
-    .item:not(.active) .progress-bar {
-        transition: none;
-    }
-
-    .item.active .progress-bar {
-        width: 100%;
-    }
+  .item.active .progress-bar {
+    width: 100%;
+  }
 </style>
 <body style="margin: 0; background: #0c1117">
-<div class="carousel-container">
+  <div class="carousel-container">
     <div class="left-section">
-        <!-- 添加图片容器 -->
-        <div class="image-container">
-            <img src="/img/index/0.png" data-index="0" class="active show">
-            <img src="/img/index/2.png" data-index="1">
-            <img src="/img/index/3.png" data-index="2">
-            <img src="/img/index/4.png" data-index="3">
-            <img src="/img/index/5.png" data-index="4">
-            <img src="/img/index/6.png" data-index="5">
-        </div>
+      <!-- 添加图片容器 -->
+      <div class="image-container">
+        <img src="/img/index/0.png" data-index="0" class="active show" />
+        <img src="/img/index/2.png" data-index="1" />
+        <img src="/img/index/3.png" data-index="2" />
+        <img src="/img/index/4.png" data-index="3" />
+        <img src="/img/index/5.png" data-index="4" />
+        <img src="/img/index/6.png" data-index="5" />
+      </div>
     </div>
 
     <div class="right-section">
-        <div class="item-list">
-            <div class="item active" data-index="0">
-                <div class="title">一键生成 URL 和参数</div>
-                <div class="content">
-                    只需点击方法左侧图标即可生成方法URL和对应的参数，支持 Spring、JAX-Rs 框架以及 Java 和 Kotlin 两种语言，省去手写操作。
-                </div>
-            </div>
-
-            <div class="item" data-index="1">
-                <div class="title">SearchEveryWhere</div>
-                <div class="content">
-                    根据 Module、Method、Library、注释等快速地搜索 API
-                </div>
-            </div>
-
-            <div class="item" data-index="2">
-                <div class="title">APIs</div>
-                <div class="content">
-                    列举了保存后的 API，可以按策略进行搜索，也可以快速定位到 API 对应的方法，或者直接运行API
-                </div>
-            </div>
-
-            <div class="item" data-index="3">
-                <div class="title">脚本支持</div>
-                <div class="content">
-                    加入了 Groovy 脚本支持，可以用来写前置脚本或者后置脚本，灵活地修改 API 的一些行为。支持全局和单API范围
-                </div>
-            </div>
-
-            <div class="item" data-index="4">
-                <div class="title">自动域名</div>
-                <div class="content">
-                    自动识别 properties、yml 文件，形成本地域名，减少手动操作
-                </div>
-            </div>
-            <div class="item" data-index="5">
-                <div class="title">API 文档同步</div>
-                <div class="content">
-                    可以将 API 文档同步至 Github、Gitlab、Gitee 仓库，支持运行 API 后自动同步，让开发者可以共享 API 文档
-                </div>
-            </div>
+      <div class="item-list">
+        <div class="item active" data-index="0">
+          <div class="title">一键生成 URL 和参数</div>
+          <div class="content">
+            只需点击方法左侧图标即可生成方法URL和对应的参数，支持 Spring、JAX-Rs
+            框架以及 Java 和 Kotlin 两种语言，省去手写操作。
+          </div>
         </div>
+
+        <div class="item" data-index="1">
+          <div class="title">SearchEveryWhere</div>
+          <div class="content">
+            根据 Module、Method、Library、注释等快速地搜索 API
+          </div>
+        </div>
+
+        <div class="item" data-index="2">
+          <div class="title">APIs</div>
+          <div class="content">
+            列举了保存后的 API，可以按策略进行搜索，也可以快速定位到 API
+            对应的方法，或者直接运行API
+          </div>
+        </div>
+
+        <div class="item" data-index="3">
+          <div class="title">脚本支持</div>
+          <div class="content">
+            加入了 Groovy 脚本支持，可以用来写前置脚本或者后置脚本，灵活地修改
+            API 的一些行为。支持全局和单API范围
+          </div>
+        </div>
+
+        <div class="item" data-index="4">
+          <div class="title">自动域名</div>
+          <div class="content">
+            自动识别 properties、yml 文件，形成本地域名，减少手动操作
+          </div>
+        </div>
+        <div class="item" data-index="5">
+          <div class="title">API 文档同步</div>
+          <div class="content">
+            可以将 API 文档同步至 Github、Gitlab、Gitee 仓库，支持运行 API
+            后自动同步，让开发者可以共享 API 文档
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- 引入 JavaScript -->
-<script>
-
+  <!-- 引入 JavaScript -->
+  <script>
     class Carousel {
-        constructor() {
-            this.items = document.querySelectorAll('.item');
-            this.images = document.querySelectorAll('.image-container img');
+      constructor() {
+        this.items = document.querySelectorAll(".item");
+        this.images = document.querySelectorAll(".image-container img");
+        this.currentIndex = 0;
+        this.interval = 5000; // 3秒
+        this.timer = null; // 添加计时器引用
+        this.isAutoPlaying = true; // 添加标记来区分自动播放和手动点击
+
+        this.init();
+      }
+
+      init() {
+        // 为每个内容项添加进度条
+        this.items.forEach((item, index) => {
+          const progressBar = document.createElement("div");
+          progressBar.className = "progress-bar";
+          item.appendChild(progressBar);
+
+          // 添加点击事件
+          item.addEventListener("click", () => {
+            this.isAutoPlaying = false; // 标记为手动模式
+            this.stopAutoPlay();
+            this.setActive(index, true); // 传入 true 表示需要进度条动画
+          });
+        });
+
+        // 确保 DOM 更新后再开始动画
+        Promise.resolve().then(() => {
+          this.setActive(0, true);
+
+          // 启动自动播放，从索引1开始
+          setTimeout(() => {
             this.currentIndex = 0;
-            this.interval = 5000; // 3秒
-            this.timer = null; // 添加计时器引用
-            this.isAutoPlaying = true; // 添加标记来区分自动播放和手动点击
+            this.autoPlay();
+          }, this.interval);
+        });
+      }
 
-            this.init();
+      stopAutoPlay() {
+        // 清除定时器
+        if (this.timer) {
+          clearInterval(this.timer);
+          this.timer = null;
         }
+      }
 
-        init() {
-            // 为每个内容项添加进度条
-            this.items.forEach((item, index) => {
-                const progressBar = document.createElement('div');
-                progressBar.className = 'progress-bar';
-                item.appendChild(progressBar);
+      setActive(index, showProgress = false) {
+        // 移除当前激活项
+        this.items.forEach((item) => {
+          item.classList.remove("active");
+          // 重置进度条
+          const progressBar = item.querySelector(".progress-bar");
+          progressBar.style.width = "0";
+        });
+        this.images.forEach((img) => {
+          img.classList.remove("active");
+          img.classList.remove("show");
+        });
 
-                // 添加点击事件
-                item.addEventListener('click', () => {
-                    this.isAutoPlaying = false; // 标记为手动模式
-                    this.stopAutoPlay();
-                    this.setActive(index, true); // 传入 true 表示需要进度条动画
-                });
-            });
+        // 设置新的激活项
+        const activeItem = this.items[index];
+        const activeImage = this.images[index];
+        activeItem.classList.add("active");
+        activeImage.classList.add("active");
+        activeImage.classList.add("show");
 
-            // 确保 DOM 更新后再开始动画
-            Promise.resolve().then(() => {
-                this.setActive(0, true);
+        // 更新当前索引
+        this.currentIndex = index;
 
-                // 启动自动播放，从索引1开始
-                setTimeout(() => {
-                    this.currentIndex = 0;
-                    this.autoPlay();
-                }, this.interval);
-            });
+        // 如果需要显示进度条动画
+        if (showProgress) {
+          const progressBar = activeItem.querySelector(".progress-bar");
+          progressBar.offsetWidth;
+          progressBar.style.width = "100%";
         }
+      }
 
-        stopAutoPlay() {
-            // 清除定时器
-            if (this.timer) {
-                clearInterval(this.timer);
-                this.timer = null;
-            }
-        }
+      autoPlay() {
+        // 先执行一次，确保从索引1开始
+        this.currentIndex = (this.currentIndex + 1) % this.items.length;
+        this.setActive(this.currentIndex, true);
 
-        setActive(index, showProgress = false) {
-            // 移除当前激活项
-            this.items.forEach(item => {
-                item.classList.remove('active');
-                // 重置进度条
-                const progressBar = item.querySelector('.progress-bar');
-                progressBar.style.width = '0';
-            });
-            this.images.forEach(img => {
-                img.classList.remove('active');
-                img.classList.remove('show');
-            });
-
-            // 设置新的激活项
-            const activeItem = this.items[index];
-            const activeImage = this.images[index];
-            activeItem.classList.add('active');
-            activeImage.classList.add('active');
-            activeImage.classList.add('show');
-
-            // 更新当前索引
-            this.currentIndex = index;
-
-            // 如果需要显示进度条动画
-            if (showProgress) {
-                const progressBar = activeItem.querySelector('.progress-bar');
-                progressBar.offsetWidth;
-                progressBar.style.width = '100%';
-            }
-        }
-
-        autoPlay() {
-            // 先执行一次，确保从索引1开始
-            this.currentIndex = (this.currentIndex + 1) % this.items.length;
-            this.setActive(this.currentIndex, true);
-
-            // 然后开始定时循环
-            this.timer = setInterval(() => {
-                this.currentIndex = (this.currentIndex + 1) % this.items.length;
-                this.setActive(this.currentIndex, true);
-            }, this.interval);
-        }
+        // 然后开始定时循环
+        this.timer = setInterval(() => {
+          this.currentIndex = (this.currentIndex + 1) % this.items.length;
+          this.setActive(this.currentIndex, true);
+        }, this.interval);
+      }
     }
 
     // 初始化
-    document.addEventListener('DOMContentLoaded', () => {
-        new Carousel();
+    document.addEventListener("DOMContentLoaded", () => {
+      new Carousel();
     });
-</script>
+  </script>
 </body>

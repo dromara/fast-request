@@ -13,6 +13,7 @@ icon: faq
 [[toc]]
 
 ## S: How to ignore .fastRequest directory
+
 > Solution 1: Invisible in IDEA
 
 Some developers don't want to `.fastRequest` directory exist in the project,
@@ -24,16 +25,20 @@ then you can go to idea settings `File Types`, add `.fastRequest` in `Ignore fil
 
 When you want to ignore the `.fastRequest` directory in a project managed by git, you can set a global gitignore file.
 
-1. Create a global .gitignore file: Choose a location to store the global .gitignore file, for example, create a file named .gitignore_global in your home directory.  
+1. Create a global .gitignore file: Choose a location to store the global .gitignore file, for example, create a file named .gitignore_global in your home directory.
 
-``` shell
+```shell
 touch ~/.gitignore_global
 ```
-2. Configure Git to use the global .gitignore file: Use the Git command to set this file as the global .gitignore file.  
+
+2. Configure Git to use the global .gitignore file: Use the Git command to set this file as the global .gitignore file.
+
 ```shell
 git config --global core.excludesFile ~/.gitignore_global
 ```
+
 3. Edit the global .gitignore file: Add the file or directory patterns you want to ignore in the ~/.gitignore_global file.
+
 ```
 .fastRequest
 ```
@@ -252,7 +257,7 @@ Left icon <ColorIcon icon="restfulFastRequest" /> missing.
 
 **A:** Open config `setting->Editor->Gutter icons->show gutter icon`
 
-**B:** Copy the file content then delete it and recreate it and paste it back. 
+**B:** Copy the file content then delete it and recreate it and paste it back.
 
 ## Q: After entering the parameters, the API call found that the parameters were invalid
 

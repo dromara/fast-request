@@ -11,4 +11,4 @@ title: 群聊
 
 ![wechat group](/img/wechatGroup.png)
 
-如果扫码失败，请直接搜微信号==FastRequest99== 
+如果扫码失败，请直接搜微信号==FastRequest99==

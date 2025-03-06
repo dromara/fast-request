@@ -30,12 +30,11 @@ Because developing version is still in development, the documentation of develop
 [**More detail ---------------->**](./history.md)
 
 ## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-01-15" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
 - <Badge text="OpenAPI batch export" type="tip"/>
 - <Badge text="Export notice optimization" type="info"/>
 - <Badge text="Editor performance optimization" type="info"/>
 - <Badge text="Fixed User Agent could't be overwritten" type="danger"/>
-
-
 
 ## 2024.1.9 <Badge text="Free trial" type="tip"/> <Badge text="2024-11-28" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 

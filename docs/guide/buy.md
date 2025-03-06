@@ -20,7 +20,7 @@ icon: buy
 
 点击**激活插件**，当然你也可以先免费试用插件 30 天，点击 start trial。
 
-路径： `Help(菜单栏) -> Register... -> Fast Request` 
+路径： `Help(菜单栏) -> Register... -> Fast Request`
 
 ![](/img/buy/activate.png)
 

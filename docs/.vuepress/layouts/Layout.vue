@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { usePageData, usePageFrontmatter } from "vuepress/client";
+import { usePageData, usePageFrontmatter, useRoutePath } from "vuepress/client";
 import { ref, watch } from "vue";
 
 import CommonWrapper from "@theme-hope/components/CommonWrapper";
@@ -10,8 +10,9 @@ import { FadeSlideY } from "@theme-hope/components/transitions/index";
 
 import type { ThemePageFrontmatter } from "vuepress-theme-hope";
 
-const page = usePageData();
 const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
+const routePath = useRoutePath();
+const page = usePageData();
 
 const sidebarTopArray = [
   `<a href="https://codegeex.cn/?utm_source=pay&utm_medium=fast-request" target="_blank">
@@ -49,17 +50,15 @@ function shuffle(arr) {
   return arr;
 }
 
-watch(
-  () => page.value.path,
-  () => {
-    if (page.value.path.startsWith("/en/")) {
-      sidebarContent.value = "";
+watch(routePath, () => {
+  if (page.value.path.startsWith("/en/")) {
+    sidebarContent.value = "";
 
-      return;
-    }
-    shuffle(sidebarTopArray);
+    return;
+  }
+  shuffle(sidebarTopArray);
 
-    sidebarContent.value = `\
+  sidebarContent.value = `\
 <div style="width:230px;margin:5px auto;">
 ${sidebarTopArray.slice(0, 4).join("\n  ")}
 <br/>
@@ -69,8 +68,7 @@ ${sidebarTopArray.slice(0, 4).join("\n  ")}
   </span>
 </div>
 `;
-  },
-);
+});
 </script>
 <template>
   <SkipLink />
