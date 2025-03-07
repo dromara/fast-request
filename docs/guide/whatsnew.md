@@ -27,6 +27,13 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2025.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="默认不开启非核心功能" type="info"/>
+- <Badge text="OpenApi导出增加了标签" type="info"/>
+- <Badge text="历史请求开放到 50个" type="info"/>
+- <Badge text="API 导出默认文档格式优化" type="info"/>  
+- <Badge text="修复API一览表未展示" type="danger"/>
+
 ## 2025.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-01-15" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="OpenAPI 批量导出" type="tip"/>
 - <Badge text="导出提示优化" type="info"/>

@@ -21,6 +21,32 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
+
+## 2025.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Some non-core function disabled by default" type="info"/>
+- <Badge text="Add tags element for OpenApi doc" type="info"/>
+- <Badge text="History requests increased to 50" type="info"/>
+- <Badge text="Optimize the default document format for API export" type="info"/>  
+- <Badge text="Fixed API list preview was not displayed" type="danger"/>
+
+
+::: hint Some non-core function disabled by default <Badge vertical="top" text="Optimization" type="info"/>
+![](/img/2025.1.2/customToolbar_en.png)
+
+For new devices, the non-core API debugging function is not enabled by default. For old devices, you need to manually check the configuration to remove it,
+and it will take effect after restarting.
+
+:::
+
+
+::: hint Fixed API list preview was not displayed <Badge vertical="top" text="Fix" type="danger"/>
+![](/img/2025.1.2/apiPreview.png)
+
+Fixed the issue that the API list preview was not displayed in previous versions
+
+:::
+
+
 ## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-01-15" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="OpenAPI batch export" type="tip"/>

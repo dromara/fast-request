@@ -29,6 +29,14 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## 2025.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Some non-core function disabled by default" type="info"/>
+- <Badge text="Add tags element for OpenApi doc" type="info"/>
+- <Badge text="History requests increased to 50" type="info"/>
+- <Badge text="Optimize the default document format for API export" type="info"/>  
+- <Badge text="Fixed API list preview was not displayed" type="danger"/>
+
+
 ## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-01-15" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="OpenAPI batch export" type="tip"/>
 - <Badge text="Export notice optimization" type="info"/>
