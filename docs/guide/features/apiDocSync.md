@@ -30,19 +30,19 @@
 
 生成的 token 需要勾选对应的最小权限来支持 api 同步，同时需要确保 token 在有时间效期内
 
-* Gitee
+- Gitee
 
 **必须勾选 projects**
 
 ![giteeToken](/img/2022.2.7/giteeToken.png "Gitee token")
 
-* GitHub
+- GitHub
 
 **必须勾选 repo**
 
 ![githubToken](/img/2022.2.7/githubToken.png "Github token")
 
-* Gitlab
+- Gitlab
 
 **必须勾选 api**
 

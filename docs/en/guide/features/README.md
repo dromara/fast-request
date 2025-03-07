@@ -41,7 +41,6 @@ The icon in the document corresponds to the button icon in the plugin
 - [<ColorIcon icon="rcd-refresh" /> Project config refresh](./projectConfigRefresh.md)
 - [<ColorIcon icon="analyseNew" /> Annual report](./annualReport.md)
 
-
 ---
 
 - [<ColorIcon icon="settings" /> Setting manager](./settingManager.md)

@@ -32,11 +32,11 @@ Gitlab:must check 'api'
 Gitee:must check 'projects'
 ```
 
-* GitHub
-![githubToken](/img/2022.2.7/githubToken.png "Github token")
+- GitHub
+  ![githubToken](/img/2022.2.7/githubToken.png "Github token")
 
-* Gitlab
-![gitlabToken](/img/2022.2.7/gitlabToken.png "Gitlab token")
+- Gitlab
+  ![gitlabToken](/img/2022.2.7/gitlabToken.png "Gitlab token")
 
-* Gitee
-![giteeToken](/img/2022.2.7/giteeToken.png "Gitee token")
+- Gitee
+  ![giteeToken](/img/2022.2.7/giteeToken.png "Gitee token")

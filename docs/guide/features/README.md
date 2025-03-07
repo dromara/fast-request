@@ -41,7 +41,6 @@ icon: featuresNew
 - [<ColorIcon icon="rcd-refresh" /> 项目配置刷新](./projectConfigRefresh.md)
 - [<ColorIcon icon="analyseNew" /> 年度报告](./annualReport.md)
 
-
 ---
 
 - [<ColorIcon icon="settings" /> 管理配置](./settingManager.md)

@@ -13,26 +13,31 @@ icon: faq
 [[toc]]
 
 ## S: 如何忽略 .fastRequest 目录
->方式 1：在 IDEA 中不可见
+
+> 方式 1：在 IDEA 中不可见
 
 有些开发者不希望看到`.fastRequest`目录，可以前往 idea 设置中的`File Types`，在`Ignore files and folders`中添加`.fastRequest`即可
 
 ![ignoreFastRequestDir](/img/faq/ignoreFastRequestDir.png)
->方式 2：设置全局 gitignore
+
+> 方式 2：设置全局 gitignore
 
 当你想要在 git 管理的项目中忽略`.fastRequest`目录，可以设置全局 gitignore 文件。
 
-1. 创建全局 .gitignore 文件： 选择一个位置来存储全局 .gitignore 文件，例如在你的主目录中创建一个名为 .gitignore_global 的文件。  
+1. 创建全局 .gitignore 文件： 选择一个位置来存储全局 .gitignore 文件，例如在你的主目录中创建一个名为 .gitignore_global 的文件。
+
 ```shell
 touch ~/.gitignore_global
 ```
 
-2. 配置 Git 使用全局 .gitignore 文件： 使用 Git 命令将这个文件设置为全局 .gitignore 文件。  
+2. 配置 Git 使用全局 .gitignore 文件： 使用 Git 命令将这个文件设置为全局 .gitignore 文件。
+
 ```shell
 git config --global core.excludesFile ~/.gitignore_global
 ```
 
 3. 编辑全局 .gitignore 文件： 在 ~/.gitignore_global 文件中添加你想要忽略的文件或目录模式。
+
 ```
 .fastRequest
 ```
@@ -283,6 +288,7 @@ public class A {
     private int xx;
 }
 ```
+
 ## S: APIs 丢失
 
 非常抱歉，安装过 2023.1.3 版本的(已隐藏)会导致历史 apis 丢失，此时需要手动找回数据。==请不要回退插件版本==
