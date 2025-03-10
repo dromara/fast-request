@@ -30,7 +30,7 @@ icon: changelog
 ::: hint 默认不开启非核心功能 <Badge vertical="top" text="优化" type="info"/>
 ![](/img/2025.1.2/customToolbar.png)
 
-针对新设备，讲默认不开启非核心 API 调试的功能。老设备需要手动勾选配置去除，重启后有效
+默认将禁用非核心功能，可以通过可配置化自定义勾选开启需要的非核心功能。重启后将生效。
 
 :::
 

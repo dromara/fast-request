@@ -36,6 +36,8 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 For new devices, the non-core API debugging function is not enabled by default. For old devices, you need to manually check the configuration to remove it,
 and it will take effect after restarting.
 
+Non-core functions will be disabled by default, and you can enable it by check the config and restart the IDE.
+
 :::
 
 
