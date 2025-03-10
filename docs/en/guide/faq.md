@@ -43,6 +43,15 @@ git config --global core.excludesFile ~/.gitignore_global
 .fastRequest
 ```
 
+> Solution 3: Folder has been committed to git, but wants to ignore it later
+
+``` shell
+git rm --cached .fastRequest
+git commit -m "rm ignore folder"
+```
+
+Then refer to Solution 1 or Solution 2 to ignore it.
+
 ## S: Slow operations are prohibited on EDT
 
 `Slow operations are prohibited on EDT` error.

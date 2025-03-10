@@ -42,6 +42,14 @@ git config --global core.excludesFile ~/.gitignore_global
 .fastRequest
 ```
 
+> 方式 3：针对已经提交到 git，但是后面想忽略该目录
+
+``` shell
+git rm --cached .fastRequest
+git commit -m "rm ignore folder"
+```
+后面再参考方式 1 或者方式 2 进行忽略
+
 ## S: Slow operations are prohibited on EDT
 
 报错`Slow operations are prohibited on EDT`相关错误。
