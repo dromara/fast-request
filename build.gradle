@@ -1,0 +1,288 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.6.5'
+}
+
+group 'io.github.kings1990'
+version '2022.0.2'
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    maven { name "Alibaba"; url "https://maven.aliyun.com/repository/public" }
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:30.1.1-jre'
+    compile 'com.alibaba:fastjson:1.2.78'
+    compile 'cn.hutool:hutool-all:5.7.9'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    plugins = ['java', "org.intellij.plugins.markdown"]
+    version '2021.1'//2021.3、2021.1、2020.3.4
+    updateSinceUntilBuild false
+    downloadSources true
+}
+
+
+patchPluginXml {
+    changeNotes """
+
+    <h3>v2022.0.2</h3>
+    <ul>
+        <li>Fix some bugs</li>
+    </ul>
+    
+    <h3>v2022.0.1</h3>
+    <ul>
+        <li>English
+            <ul>
+                <li>Fix save API project drop-down selection error</li>
+                <li>Fix some bugs</li>
+            </ul>
+        </li>
+        <li>中文
+            <ul>
+                <li>修复保存API项目下拉框选择错误</li>
+                <li>修复了一些bug</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h3>v2.1.3</h3>
+    <ul>
+        <li>English
+            <ul>
+                <li>Add encode support for special symbol in parameter</li>
+            </ul>
+        </li>
+        <li>中文
+            <ul>
+                <li>参数特殊符号编码支持</li>
+            </ul>
+        </li>
+    </ul>
+    
+    
+    <h3>v2.1.2</h3>
+    <ul>
+        <li>Add support for export api to Postman(添加对导出api到Postman的支持)</li>
+        <li>Open the idea lazy loading API Navigate tree for the first time(首次打开idea懒加载API Navigate树)</li>
+        <li>SearchEveryWhere show module(SearchEveryWhere module标识)</li>
+        <li>Optimize URL parsing(Url解析优化)</li>
+        <li>Optimize the display of api navigate tree(API navigate tree展示优化)</li>
+        <li>Optimize the group when save api(API保存分组优化)</li>
+        <li>Global header params support(全局请求头支持)</li>
+    </ul>
+    
+    <h3>v2.1.1</h3>
+    <ul>
+        <li>SearchEveryWhere support(SearchEveryWhere支持)</li>
+        <li>Add a what's new button to view the latest version at any time(增加一个最新变化按钮可以随时查看最新版本)</li>
+        <li>Optimize the parsing of enum(优化枚举的解析)</li>
+        <li>Add support for http redirect(增加对http重定向的支持)</li>
+    </ul>
+    
+    <h3>v2.1.0.2</h3>
+    <ul>
+        <li>Url link to organization(url调整至组织)</li>
+    </ul>
+    
+    <h3>v2.1.0.1</h3>
+    <ul>
+        <li>Fix get param error(修复Get参数错误)</li>
+    </ul>
+    
+    <h3>v2.1.0</h3>
+    <ul>
+        <li>Fix post api parse error when using @RequestBody and @RequestParam(修复POST形式的API中@RequestBody、@RequestParam混合使用参数解析导致请求400异常)</li>
+        <li>Parsing support for nested classes(对嵌套类的解析支持)</li>
+        <li>Add support for url parse from the path property of the @RequestMapping in controller class level (增加支持对控制器类级别@RequestMapping(path="/xxx")path的解析</li>
+        <li>Added support for Api Tree scanning with @RequestMapping class(Api tree针对带@RequestMapping类的扫描支持)</li>
+    </ul>
+    
+    <h3>v2.0.9</h3>
+    <ul>
+        <li>Fix "Slow operations are prohibited on EDT" for 2021.3+(2021.3+版本修复"Slow operations are prohibited on EDT")</li>
+        <li>Fix add headers from response(修复快速从response添加Headers)</li>
+        <li>Add project-level configuration,env and project will not change while switch project(添加项目级别的配置,切换项目env和project不受变化)</li>
+        <li>Add format action icon to textEditor(文本编辑器添加了快捷格式化按钮)</li>
+    </ul>
+        
+    <h3>v2.0.8.1</h3>
+    <ul>
+        <li>Fix conflicting error when searchEveryWhere(修复searchEveryWhere冲突警告)</li>
+        <li>Adjust position of toolbar action button(调整低版本idea工具栏操作按钮至工具栏顶部位置)</li>
+        <li>remove unnecessary dependence,size 11.1M->5.9M(移除多余依赖,插件从11.1M降至5.9M)</li>
+    </ul>
+    
+    <h3>v2.0.8</h3>
+    <ul>
+        <li>Fix npe when first add project/env(修复初次添加项目或环境npe)</li>
+        <li>Json tree response character rendering maximum limit(json树响应字符渲染最大限制)</li>
+        <li>Add support for filter by methodType in Api navigate(添加Api navigate对methodType的支持)</li>
+        <li>Add support for ignoring parameter parsing(添加对忽略参数解析的支持)</li>
+        <li>Fix some EDT problem(线程导致的EDT问题)</li>
+        <li>Send/sendDownload button support for custom shortcut keys(send/sendDownload支持自定义快捷键)</li>
+        <li>fix response text not show in 2021.3(修复2021.3响应不显示)</li>
+    </ul>
+    
+    <h3>v2.0.7</h3>
+    <ul>
+        <li>Add support for api navigate tree(添加API导航树)</li>
+        <li>Add support for automatic switching of Headers with project and environment switching(添加Headers随项目和环境切换自动切换的支持)</li>
+        <li>Optimized windows system. In some cases, downloading files cannot pop up the directory(优化windows系统某些情况下下载文件无法弹出目录)</li>
+        <li>Optimize the parameter parse of @RequestParam(优化@RequestParam的参数解析)</li>
+        <li>Optimize tool window project and env drop-down components and layout(优化工具窗口project和env下拉组件及布局)</li>
+        <li>Optimize the prompt message of curl copy(curl拷贝提示优化)</li>
+        <li>Optimize the prompt message of curl regenerate(regenerate提示优化)</li>
+        <li>Add confirm operation when delete Delete project and env config(删除project和env配置增加确认操作)</li>
+        <li>Fix the order of json field output is disrupted(修复json字段输出循序被打乱)</li>
+        <li>Move send button to toolbar and support keyboard shortcut(将发送请求按钮至工具栏同时支持快捷键)</li>
+    </ul>
+    
+    <h3>v2.0.6</h3>
+    <ul>
+        <li>Fix "Light files should have PSI only in one project"</li>
+        <li>Add support for json syntax check(添加对json的语法支持)</li>
+        <li>Add support for PATCH method(添加对PATCH的支持)</li>
+        <li>Add support for saving the API to the corresponding module group(添加API保存时候存入对应的模块分组的支持)</li>
+        <li>Fix null value in response not output(修复响应中null值不输出的问题)</li>
+        <li>Add support for JAX-RS(添加对JAX-RS的支持)</li>
+        <li>Show what's new(展示最新功能)</li>
+    </ul>
+    
+    <h3>v2.0.5</h3>
+    <ul>
+        <li>JSON built-in editor support(JSON内置编辑器支持)</li>
+        <li>Fix checkbox hidden when change param by text(修复全选参数框隐藏问题)</li>
+        <li>Fix headers param show error when reshow the api(修复API回显Headers参数异常)</li>
+        <li>Optimized the request progress bar display(优化了请求进度条显示)</li>
+    </ul>
+    
+    <h3>v2.0.4</h3>
+    <ul>
+        <li>Fix the interface confusion caused by the response content aisle(修复因response内容过道导致的界面错乱问题)</li>
+        <li>Optimization of response JSON ultra long display(Response json超长显示优化)</li>
+        <li>Optimized icon size(优化图标尺寸)</li>
+        <li>Migrate Chinese documents to Gitee(中文文档迁移至gitee)</li>
+    </ul>
+    
+    <h3>v2.0.3</h3>
+    <ul>
+        <li>Add confirmation when deleting api(删除API的时候增加了确认)</li>
+        <li>Added the support of selecting all parameters and inverting selection(添加了参数全选反选的功能)</li>
+        <li>Fix param parse for java.util.Set(修复java.util.Set参数解析问题)</li>
+        <li>Fix parse like 【@RequestParam(value="address[]") Set<String> address】(修复诸如【@RequestParam(value="address[]") Set<String> address】的参数解析)</li>
+        <li>Fix the confusion of the quick add header interface(修复快速添加headers界面错乱)</li>
+    </ul>
+    
+    <h3>v2.0.2</h3>
+    <ul>
+        <li>Fix that the A request is displayed to the B project in the case of multiple open projects(修复项目多开情况下A请求显示到B项目)</li>
+        <li>Fix array and list param parse error decorate by @ResponseBody(修复@ResponseBody修饰的数组与集合解析问题)</li>
+        <li>Fix List without generic parse error(修复List参数无泛型解析问题)</li>
+        <li>Add support for send and download(添加对文件下载的支持)</li>
+        <li>Show progressbar while sending request(发送请求时展示进度条)</li>
+        <li>Brand new document[click the doc icon in the toolbar](全新的document,点击工具栏doc图标)</li>
+        <li>fix url not generated decorate by @PostMapping that url in path attribute(修复url在@PostMapping中的path属性中获取失败)</li>
+        <li>fix duplicate key error in headers(修复headers中有重复key报错)</li>
+        <li>Some optimization(一些优化)</li>
+    </ul>
+    
+    <h3>v2.0.1</h3>
+    <ul>
+        <li>rename from Fast Request to Restful Fast Request</li>
+        <li>merge Json、Form URL-Encoded、Multipart to Body Tab to reduce the tool window width(Json、Form URL-Encoded、Multipart Tab合并减小工具窗口宽度)</li>
+        <li>fix bug when modify config in global mode(修复全局配置下修改配置报错)</li>
+        <li>add get、post、delete、put icon to saved request(将get、post、delete、put图标添加到保存的请求)</li>
+        <li>saved request support more search strategy(保存的请求支持更多搜索策略)</li>
+        <li>rename tab name from collection to APIs(tab重命名collection->APIs)</li>
+        <li>support parse java.time.YearMonth(YearMonth解析支持)</li>
+    </ul>
+    
+    <h3>v2.0.0</h3>
+    <ul>
+        <li>support store request(支持请求的存储)</li>
+        <li>support params optional(支持参数可选)</li>
+        <li>optimal iu(优化了UI)</li>
+        <li>fix some bugs(修复了一些bug)</li>
+    </ul>
+    
+    <h3>v1.1.5</h3>
+    <ul>
+        <li>support modify basic type value(基础类型默认值支持修改)</li>
+        <li>fix response scroll issue(修复response滚动问题)</li>
+        <li>add three string generate strategy(新增了3中string类型参数生成策略)</li>
+        <li>optimal configuration guidance(优化配置引导)</li>
+        <li>optimized the display of icons in dark and light themes(优化了暗色和淡色主题下图标的显示)</li>
+        <li>18n support(国际化支持)</li>
+        <li>optimal tool window layout(优化了工具窗口布局)</li>
+        <li>fix stuck when debug(修复调试时卡死问题)</li>
+    </ul>
+    
+    <h3>v1.1.4</h3>
+    <ul>
+        <li>curl support(支持curl拷贝)</li>
+        <li>fix send request return error response parse error(修复发送消息异常情况下响应的解析)</li>
+        <li>remove domain from url(移除了url上的域名)</li>
+        <li>support add params to header from (支持了将参数从response添加到header)</li>
+        <li>support pretty and raw response(响应支持美化和原文输出)</li>
+        <li>optimize the interaction add/remove json params (优化了添加和删除json参数的交互)</li>
+        <li>support expand and collapse json params(支持json参数的展开和收缩)</li>
+        <li>support toggle request and response panel(支持伸缩请求和响应面板)</li>
+        <li>fix some bugs(修复了一些bug)</li>
+    </ul>
+    
+    <h3>v1.1.3</h3>
+    <ul>
+        <li>multipartFile support(文件上传支持)</li>
+        <li>fix parameters alias bug(参数别名bug修复)</li>
+        <li>fix generate array parameters(数组参数生成bug修复)</li>
+        <li>controller url fixed variable can replace by config(控制器上的url支持变量替换)</li>
+        <li>show tool window when click generate icon(点击图标弹出工具窗口)</li>
+        <li>add shortcut to modify config(增加快速跳转至配置页面)</li>
+        <li>beautify ui(美化ui)</li>
+    </ul>
+    
+    <h3>v1.1.2</h3>
+    <ul>
+        <li>add line icon for method</li>
+        <li>limit send button click frequency</li>
+        <li>optimize response show large text</li>
+    </ul>
+    
+    <h3>v1.1.1</h3>
+    <ul>
+        <li>fix some bugs</li>
+        <li>params can delete batch</li>
+    </ul>
+    
+    <h3>v1.1.0</h3>
+    <ul>
+        <li>support http request</li>
+        <li>support modify and add params</li>
+        <li>beautify ui</li>
+        <li>fix some bugs</li>
+    </ul>
+    
+    <h3>v1.0.0</h3>
+    <ul>
+        <li>support Springmvc/SpringBoot</li>
+        <li>support custom domain</li>
+        <li>support custom params</li>
+    </ul>
+    """
+}
+test {
+    useJUnitPlatform()
+}
+
+runIde {
+    jvmArgs '--add-exports', 'java.base/jdk.internal.vm=ALL-UNNAMED'
+    jvmArgs '-Dfile.encoding=utf-8'
+    defaultCharacterEncoding 'UTF-8'
+}

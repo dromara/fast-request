@@ -1,0 +1,259 @@
+<!--
+  ~ /*
+  ~  * End-User License Agreement (EULA) of Restful Fast Request
+  ~  * This End-User License Agreement ("EULA") is a legal agreement between you and Kings(darkings1990@gmail.com). Our EULA was created by EULA Template for Restful Fast Request.
+  ~  *
+  ~  * This EULA agreement governs your acquisition and use of our Restful Fast Request software ("Software") directly from Kings(darkings1990@gmail.com) or indirectly through a Kings(darkings1990@gmail.com) authorized reseller or distributor (a "Reseller").
+  ~  *
+  ~  * Please read this EULA agreement carefully before completing the installation process and using the Restful Fast Request software. It provides a license to use the Restful Fast Request software and contains warranty information and liability disclaimers.
+  ~  *
+  ~  * If you register for a free trial of the Restful Fast Request software, this EULA agreement will also govern that trial. By clicking "accept" or installing and/or using the Restful Fast Request software, you are confirming your acceptance of the Software and agreeing to become bound by the terms of this EULA agreement.
+  ~  *
+  ~  * If you are entering into this EULA agreement on behalf of a company or other legal entity, you represent that you have the authority to bind such entity and its affiliates to these terms and conditions. If you do not have such authority or if you do not agree with the terms and conditions of this EULA agreement, do not install or use the Software, and you must not accept this EULA agreement.
+  ~  *
+  ~  * This EULA agreement shall apply only to the Software supplied by Kings(darkings1990@gmail.com) herewith regardless of whether other software is referred to or described herein. The terms also apply to any Kings(darkings1990@gmail.com) updates, supplements, Internet-based services, and support services for the Software, unless other terms accompany those items on delivery. If so, those terms apply.
+  ~  *
+  ~  * License Grant
+  ~  * Kings(darkings1990@gmail.com) hereby grants you a personal, non-transferable, non-exclusive licence to use the Restful Fast Request software on your devices in accordance with the terms of this EULA agreement.
+  ~  *
+  ~  * You are permitted to load the Restful Fast Request software (for example a PC, laptop, mobile or tablet) under your control. You are responsible for ensuring your device meets the minimum requirements of the Restful Fast Request software.
+  ~  *
+  ~  * You are not permitted to:
+  ~  *
+  ~  * Edit, alter, modify, adapt, translate or otherwise change the whole or any part of the Software nor permit the whole or any part of the Software to be combined with or become incorporated in any other software, nor decompile, disassemble or reverse engineer the Software or attempt to do any such things
+  ~  * Reproduce, copy, distribute, resell or otherwise use the Software for any commercial purpose
+  ~  * Allow any third party to use the Software on behalf of or for the benefit of any third party
+  ~  * Use the Software in any way which breaches any applicable local, national or international law
+  ~  * use the Software for any purpose that Kings(darkings1990@gmail.com) considers is a breach of this EULA agreement
+  ~  * Intellectual Property and Ownership
+  ~  * Kings(darkings1990@gmail.com) shall at all times retain ownership of the Software as originally downloaded by you and all subsequent downloads of the Software by you. The Software (and the copyright, and other intellectual property rights of whatever nature in the Software, including any modifications made thereto) are and shall remain the property of Kings(darkings1990@gmail.com).
+  ~  *
+  ~  * Kings(darkings1990@gmail.com) reserves the right to grant licences to use the Software to third parties.
+  ~  *
+  ~  * Termination
+  ~  * This EULA agreement is effective from the date you first use the Software and shall continue until terminated. You may terminate it at any time upon written notice to Kings(darkings1990@gmail.com).
+  ~  *
+  ~  * It will also terminate immediately if you fail to comply with any term of this EULA agreement. Upon such termination, the licenses granted by this EULA agreement will immediately terminate and you agree to stop all access and use of the Software. The provisions that by their nature continue and survive will survive any termination of this EULA agreement.
+  ~  *
+  ~  * Governing Law
+  ~  * This EULA agreement, and any dispute arising out of or in connection with this EULA agreement, shall be governed by and construed in accordance with the laws of cn.
+  ~  */
+  -->
+
+<idea-plugin>
+    <id>io.github.kings1990.FastRequest</id>
+    <name>Restful Fast Request</name>
+    <vendor email="darkings1990@gmail.com" url="http://www.github.com/kings1990">kings1990</vendor>
+
+    <description><![CDATA[
+    <p><a href="https://dromara.org/fast-request/en"><strong>Restful Fast Request</strong></a> is an IDEA plugin similar to Postman that helps developers debug apis efficiently. It is a powerful restful api toolkit plugin that help you quickly generate url and params by exist method. Plugin = API debug tool + API manager tool + API search tool<br/>
+    Plugin has a beautiful interface to compose requests,inspect server responses,store your api request and export api request<br/>
+
+    <h2>The plugin is intended to</h2>
+    <ul>
+        <li>Lower barrier to entry into debug API</li>
+        <li>Boost developer’s productivity</li>
+        <li>Make sure your api follows best practices</li>
+    </ul>
+
+    <h2>Support framework</h2>
+    <ul>
+        <li>Spring framework (Spring MVC / Spring Boot)</li>
+        <li>JAX-RS</li>
+    </ul>
+    <br/>
+
+    中文:<br/>
+    收费版要求IDEA版本>=2021.2,<a href="https://dromara.gitee.io/fast-request/guide/concatGroup.html">收费版加入群聊6折</a><br/><br/>
+
+    Restful Fast Request 是一个强大的restful api工具包插件，可以根据已有的方法帮助您快速生成url和params。<br/>
+    Restful Fast Request = API调试工具+API管理工具。<br/>
+    它有一个漂亮的界面来完成请求、检查服务器响应、存储你的api请求和导出api请求<br/>
+    插件帮助你在IDEA界面内更快更高效得调试你的API<br/>
+    支持 Spring 体系 (Spring MVC / Spring Boot)<br/>
+    支持 JAX-RS 体系<br/>
+    <br/>
+    <a href="https://github.com/dromara/fast-request">Github</a> | <a href="https://gitee.com/dromara/fast-request">Gitee</a> Welcome to star(欢迎star)
+    <br/><br/>
+    <a href="https://plugins.sheng90.wang/fast-request">详细文档</a> | <a href="https://github.com/dromara/fast-request/issues">问题反馈</a> | <a href="https://dromara.gitee.io/fast-request/guide/whatsnew/">历史变更</a> <br/>
+    <a href="https://dromara.github.io/fast-request/en">Documentation</a> | <a href="https://github.com/dromara/fast-request/issues">Issues Tracker</a> | <a href="https://dromara.github.io/fast-request/en/guide/whatsnew/">change log</a> | <a href="https://fastrequest.slack.com">Slack</a><br/>
+    <br/>
+
+    Features:
+    <ul>
+        <li>API navigate tree</li>
+        <li>SearchEveryWhere for api</li>
+        <li>APIs export to Postman</li>
+        <li>Generate url and parameters in one click</li>
+        <li>Send request to debug API</li>
+        <li>Send request and download</li>
+        <li>Domain customization and switching</li>
+        <li>Custom parameter parse</li>
+        <li>String generation strategy</li>
+        <li>Save api</li>
+        <li>Management API (search filter, modify API name)</li>
+        <li>One click location history save api to method</li>
+        <li>Api to curl</li>
+        <li>Automatically associate APIs to module groups</li>
+        <li>Built-in Json parameter editor</li>
+    </ul>
+
+    功能:
+    <ul>
+        <li>API导航树</li>
+        <li>SearchEveryWhere搜索API</li>
+        <li>API导出到Postman</li>
+        <li>一键生成url和参数</li>
+        <li>发送请求调试API</li>
+        <li>发送请求并下载文件</li>
+        <li>域名定制及切换</li>
+        <li>自定义参数解析</li>
+        <li>字符串生成策略化</li>
+        <li>保存API</li>
+        <li>管理API(搜索过滤、修改API名称)</li>
+        <li>一键定位历史保存的API到方法</li>
+        <li>API转curl</li>
+        <li>自动将API关联到模块分组</li>
+        <li>内置Json参数编辑器</li>
+    </ul>
+    <br/>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/example.png" />
+    <h2>SearchEveryWhere for API</h2>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/searchEveryWhere.png" /><br/>
+    <h2>API manager</h2>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apis.png" /><br/>
+    <h2>API navigate</h2>
+    <img src="https://raw.githubusercontent.com/dromara/fast-request/master/screenshot/apiNavigate.png" /><br/>
+
+    <h3>v2022.0.1</h3>
+    <ul>
+        <li>English
+            <ul>
+                <li>Fix save API project drop-down selection error</li>
+            </ul>
+        </li>
+        <li>中文
+            <ul>
+                <li>修复保存API项目下拉框选择错误</li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    ]]>
+    </description>
+
+    <!--    2019.2-->
+    <idea-version since-build="203" until-build="211.*"/>
+    <!--    <idea-version since-build="192"/>-->
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.java</depends>
+    <depends>org.intellij.plugins.markdown</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestComponent"
+                            order="first"/>
+        <projectService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCollectionComponent"/>
+        <projectService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.config.FastRequestCurrentProjectConfigComponent"/>
+        <applicationService serviceImplementation="io.github.kings1990.plugin.fastrequest.service.GeneratorUrlService"/>
+        <applicationService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.generator.impl.JaxRsGenerator"/>
+        <applicationService
+                serviceImplementation="io.github.kings1990.plugin.fastrequest.generator.impl.SpringMethodUrlGenerator"/>
+        <applicationConfigurable id="p" displayName="Restful Fast Request"
+                                 instance="io.github.kings1990.plugin.fastrequest.configurable.CommonConfigurable">
+            <configurable parentId="p"
+                          instance="io.github.kings1990.plugin.fastrequest.configurable.DataMappingConfigurable"/>
+            <configurable parentId="p"
+                          instance="io.github.kings1990.plugin.fastrequest.configurable.OtherConfigConfigurable"/>
+        </applicationConfigurable>
+        <toolWindow id="Fast Request" anchor="right" icon="PluginIcons.fastRequest_toolwindow"
+                    factoryClass="io.github.kings1990.plugin.fastrequest.configurable.FastRequestToolWindowFactory"
+                    secondary="false"/>
+
+        <codeInsight.lineMarkerProvider language="JAVA"
+                                        implementationClass="io.github.kings1990.plugin.fastrequest.view.linemarker.FastRequestLineMarkerProvider"/>
+
+        <!--兼容性处理code-->
+        <notificationGroup id="toolWindowNotificationGroup" displayType="TOOL_WINDOW"/>
+
+        <postStartupActivity implementation="io.github.kings1990.plugin.fastrequest.update.WhatsNewActivity"/>
+
+        <!--        <iw.actionProvider implementation="io.github.kings1990.plugin.fastrequest.action.FormatActionProvider"/>-->
+
+        <!--        <editorFloatingToolbarProvider-->
+        <!--                order="after DefaultFloatingToolbarProvider"-->
+        <!--                implementation="io.github.kings1990.plugin.fastrequest.editor.FastRequestFloatingToolbarProvider"-->
+        <!--                id="fastRequestEditorFloatingToolbarProvider"/>-->
+
+        <errorHandler
+                implementation="io.github.kings1990.plugin.fastrequest.diagnostic.FastRequestErrorReportSubmitter"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="generateUrlAndParam" text="FastRequest" description="FastRequest" popup="true">
+            <separator/>
+            <group id="generateSubGroup"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="fastRequest.generator" class="io.github.kings1990.plugin.fastrequest.action.GenerateUrlAction"
+                    text="Generate URL and Param"
+                    description="Generate URL and Param">
+                <add-to-group group-id="JavaGenerateGroup1" anchor="before" relative-to-action="GenerateEquals"/>
+                <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="Default for XWin" first-keystroke="ctrl BACK_SLASH"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl BACK_SLASH"/>
+            </action>
+
+            <action id="fastRequest.sendAction"
+                    class="io.github.kings1990.plugin.fastrequest.action.ToolbarSendRequestAction">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt EQUALS"/>
+            </action>
+
+            <action id="fastRequest.sendDownloadAction"
+                    class="io.github.kings1990.plugin.fastrequest.action.ToolbarSendAndDownloadRequestAction">
+                <keyboard-shortcut keymap="$default" first-keystroke="alt MINUS"/>
+            </action>
+        </group>
+
+        <group id="fastRequest.editor.floatGroup">
+            <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction">
+                <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            </action>
+
+        </group>
+
+        <action id="fastRequest.gotoFastRequest"
+                class="io.github.kings1990.plugin.fastrequest.action.GotoFastRequestAction">
+            <keyboard-shortcut first-keystroke="alt F" keymap="$default"/>
+        </action>
+
+    </actions>
+
+    <extensionPoints>
+        <extensionPoint name="requestMappingContributor" interface="com.intellij.navigation.ChooseByNameContributor"
+                        dynamic="true"/>
+    </extensionPoints>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <searchEverywhereContributor
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.FastRequestGotoContributor$Factory"/>
+        <searchEverywhereResultsEqualityProvider
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.FastRequestEqualityProvider"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="io.github.kings1990.FastRequest">
+        <requestMappingContributor
+                implementation="io.github.kings1990.plugin.fastrequest.contributor.JavaRequestMappingContributor"/>
+
+    </extensions>
+
+
+</idea-plugin>
