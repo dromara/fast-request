@@ -21,8 +21,36 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
+## 2025.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Support scan api of super class" type="tip"/>
+- <Badge text="Api navigate not jump to method support" type="tip"/>
+- <Badge text="Batch sync api to Apifox support" type="tip"/>
+- <Badge text="Export Openapi error for collection type" type="danger"/>  
 
-## 2025.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+::: hint Support scan Api of super class <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2025.1.3/apiPreviewSuperClass.png)
+
+Api preview supports scanning of super class, supports generating parent API in Api preview, and supports saving.
+
+:::
+
+::: hint Api navigate not jump to method support <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2025.1.3/apisJumpMethodConfig.png)
+
+With this configuration, code navigate will not be executed, which can effectively avoid opening multiple code tabs when executing the saved API.
+
+:::
+
+::: hint Batch sync api to Apifox support <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2025.1.3/apifoxBatchSync.png)
+
+After selecting a directory, you can synchronize the APIs in the directory to Apifox in batches.
+
+
+:::
+
+
+## 2025.1.2 <Badge text="Free trial" type="tip"/> Newest version <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Some non-core function disabled by default" type="info"/>
 - <Badge text="Add tags element for OpenApi doc" type="info"/>
 - <Badge text="History requests increased to 50" type="info"/>
@@ -49,7 +77,7 @@ Fixed the issue that the API list preview was not displayed in previous versions
 :::
 
 
-## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-01-15" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.1 <Badge text="Free trial" type="tip"/> <Badge text="2025-01-15" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="OpenAPI batch export" type="tip"/>
 - <Badge text="Export notice optimization" type="info"/>

@@ -20,6 +20,35 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
+## 2025.1.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Api预览支持父类 api 的扫描" type="tip"/>
+- <Badge text="Apis 配置化可以不跳转到方法" type="tip"/>
+- <Badge text="批量同步 API 到 Apifox" type="tip"/>
+- <Badge text="Openapi导出参数是集合类型的报错" type="danger"/>  
+
+::: hint Api预览支持父类 api 的扫描 <Badge vertical="top" text="新功能" type="tip"/>
+![](/img/2025.1.3/apiPreviewSuperClass.png)
+
+Api预览支持父类 api 的扫描，支持在Api预览中生成父类 API 相关信息的生成，支持保存
+
+:::
+
+::: hint Apis 配置化可以不跳转到方法 <Badge vertical="top" text="新功能" type="tip"/>
+![](/img/2025.1.3/apisJumpMethodConfig.png)
+
+通过该配置，在执行 API 的时候可以使代码跳转不再执行，可以有效地避免已保存的 API 执行的时候打开多个代码标签页。
+
+:::
+
+::: hint 批量同步 API 到 Apifox <Badge vertical="top" text="新功能" type="tip"/>
+![](/img/2025.1.3/apifoxBatchSync.png)
+
+选择目录后，即可将目录下的 API 批量同步到 Apifox 中。
+
+:::
+
+
+
 ## 2025.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="默认不开启非核心功能" type="info"/>
 - <Badge text="OpenApi导出增加了标签" type="info"/>
