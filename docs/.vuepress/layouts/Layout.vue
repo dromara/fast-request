@@ -50,28 +50,33 @@ function shuffle(arr) {
   return arr;
 }
 
-watch(routePath, () => {
+
+
+function renderSponsor(){
   if (page.value.path.startsWith("/en/")) {
     sidebarContent.value = "";
-
-    return;
+    return
+  } else {
+    shuffle(sidebarTopArray);
+    sidebarContent.value = `\
+    <div style="width:230px;margin:5px auto;">
+    ${sidebarTopArray.slice(0, 4).join("\n  ")}
+    <br/>
+    <!--  <span style='color: grey;font-size: 11px;'>广告采用随机方式显示</span>-->
+      <span style='float: right;'>
+      <a href='/guide/sponsor.html' style='color: var(--vp-c-accent-bg);font-size: 11px;font-weight: bolder;'>成为赞助商</a>
+      </span>
+    </div>
+    `;
   }
-  shuffle(sidebarTopArray);
-
-  sidebarContent.value = `\
-<div style="width:230px;margin:5px auto;">
-${sidebarTopArray.slice(0, 4).join("\n  ")}
-<br/>
-<!--  <span style='color: grey;font-size: 11px;'>广告采用随机方式显示</span>-->
-  <span style='float: right;'>
-  <a href='/guide/sponsor.html' style='color: var(--vp-c-accent-bg);font-size: 11px;font-weight: bolder;'>成为赞助商</a>
-  </span>
-</div>
-`;
+}
+renderSponsor();
+watch(routePath, () => {
+  renderSponsor();
 });
 </script>
 <template>
-  <SkipLink />
+<!--  <SkipLink />-->
   <CommonWrapper>
     <template #default>
       <HomePage v-if="frontmatter.home" />
