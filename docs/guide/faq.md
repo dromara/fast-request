@@ -14,13 +14,13 @@ icon: faq
 
 ## S: 如何忽略 .fastRequest 目录
 
-> 方式 1：在 IDEA 中不可见
+- 方式 1：在 IDEA 中不可见
 
 有些开发者不希望看到`.fastRequest`目录，可以前往 idea 设置中的`File Types`，在`Ignore files and folders`中添加`.fastRequest`即可
 
 ![ignoreFastRequestDir](/img/faq/ignoreFastRequestDir.png)
 
-> 方式 2：设置全局 gitignore
+- 方式 2：设置全局 gitignore
 
 当你想要在 git 管理的项目中忽略`.fastRequest`目录，可以设置全局 gitignore 文件。
 
@@ -42,7 +42,7 @@ git config --global core.excludesFile ~/.gitignore_global
 .fastRequest
 ```
 
-> 方式 3：针对已经提交到 git，但是后面想忽略该目录
+- 方式 3：针对已经提交到 git，但是后面想忽略该目录
 
 ``` shell
 git rm --cached .fastRequest
@@ -163,7 +163,7 @@ def response = request.execute()
 
 针对保存后的 api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击<ColorIcon icon="regenerate" />([重新生成](/guide/features/regenerate.md))
 
-> 请确保你每次修改参数后点击`保存`<ColorIcon icon="save" />按钮
+**请确保你每次修改参数后点击`保存`<ColorIcon icon="save" />按钮**
 
 ## S: 最佳视觉效果
 

@@ -13,6 +13,15 @@ The groovy syntax is almost identical to Java.
 
 ![](/img/script_en.svg)
 
+## Pre-request script
+The pre-request script is executed before the request is sent. You can process the request parameters here, such as encryption, signing, dynamic modification of headers, etc.
+
+## Post-request script
+The post-request script is executed after the request is completed. You can process the response result here, such as extracting tokens, dynamically modifying headers, etc.
+
+## Execution priority
+Project-level pre-request script > Single API pre-request script -> Project-level post-request script -> Single API post-request script
+
 ## Test Project
 
 [https://github.com/kings1990/fast-request-samples](https://github.com/kings1990/fast-request-samples)
