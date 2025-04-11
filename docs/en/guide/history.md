@@ -36,7 +36,6 @@ Api preview supports scanning of super class, supports generating parent API in 
 :::
 
 ::: hint Quickly make filed as ignore field <Badge vertical="top" text="New feature" type="tip"/>
-![](/img/2025.1.3/apiPreviewSuperClass.png)
 
 <MyCarousel :imgList="['/img/2025.1.3/ignoreField1.png','/img/2025.1.3/ignoreField2.png']" />
 
