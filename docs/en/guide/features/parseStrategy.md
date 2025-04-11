@@ -27,6 +27,7 @@ private String someIgnoreField;
 ```
 
 Way 4: Ignore field name
+
 ![ignoreFiled](/img/2024.1.1/ignoreFiled_en.png)
 
 Only need to add field names in the configuration to ignore target fields in the entity class.

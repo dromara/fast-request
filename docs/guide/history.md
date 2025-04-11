@@ -22,6 +22,7 @@ icon: changelog
 
 ## 2025.1.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Api预览支持父类 api 的扫描" type="tip"/>
+- <Badge text="快捷忽略字段解析" type="tip"/>  
 - <Badge text="Apis 配置化可以不跳转到方法" type="tip"/>
 - <Badge text="批量同步 API 到 Apifox" type="tip"/>
 - <Badge text="Openapi导出参数是集合类型的报错" type="danger"/>  
@@ -30,6 +31,13 @@ icon: changelog
 ![](/img/2025.1.3/apiPreviewSuperClass.png)
 
 Api预览支持父类 api 的扫描，支持在Api预览中生成父类 API 相关信息的生成，支持保存
+
+:::
+
+::: hint 快捷忽略字段解析 <Badge vertical="top" text="新功能" type="tip"/>
+<MyCarousel :imgList="['/img/2025.1.3/ignoreField1.png','/img/2025.1.3/ignoreField2.png']" />
+
+针对一些全局都不希望生成参数的字段，可以通过选择并快速添加到忽略字段解析配置。更多字段忽略字段的方法，请查看[字段解析](/guide/features/parseStrategy)
 
 :::
 

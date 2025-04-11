@@ -23,6 +23,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ## 2025.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Support scan api of super class" type="tip"/>
+- <Badge text="Quickly make filed as ignore field" type="tip"/>  
 - <Badge text="Api navigate not jump to method support" type="tip"/>
 - <Badge text="Batch sync api to Apifox support" type="tip"/>
 - <Badge text="Export Openapi error for collection type" type="danger"/>  
@@ -31,6 +32,15 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 ![](/img/2025.1.3/apiPreviewSuperClass.png)
 
 Api preview supports scanning of super class, supports generating parent API in Api preview, and supports saving.
+
+:::
+
+::: hint Quickly make filed as ignore field <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2025.1.3/apiPreviewSuperClass.png)
+
+<MyCarousel :imgList="['/img/2025.1.3/ignoreField1.png','/img/2025.1.3/ignoreField2.png']" />
+
+For some fields that you do not want to generate parameters globally, you can select and quickly add them to the Ignore Field configuration. More ways to ignore fields please refer [Parse strategy](/en/guide/features/parseStrategy)
 
 :::
 
