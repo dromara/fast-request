@@ -27,14 +27,14 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2025.1.3 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-04-16" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Api预览支持父类 api 的扫描" type="tip"/>
 - <Badge text="快捷忽略字段解析" type="tip"/>  
 - <Badge text="Apis 配置化可以不跳转到方法" type="tip"/>
 - <Badge text="批量同步 API 到 Apifox" type="tip"/>
 - <Badge text="Openapi导出参数是集合类型的报错" type="danger"/>  
 
-## 2025.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.2 <Badge text="免费试用" type="tip"/> <Badge text="2025-03-11" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="默认不开启非核心功能" type="info"/>
 - <Badge text="OpenApi导出增加了标签" type="info"/>
 - <Badge text="历史请求开放到 50个" type="info"/>
