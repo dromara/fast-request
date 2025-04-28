@@ -282,6 +282,18 @@ if(myResponse.isOk()){
 }
 ```
 
+### 4.Call SpringBoot class's method <Badge text="2025.1.4️" type="tip"/>
+
+```groovy
+def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+```
+
+After the SpringBoot project is compiled, a `classes` directory will be generated in the `target` directory of the module. 
+
+You can use `FrLocalClassLoader` to load the classes in this directory and call the methods directly.
+
+Note that you need to replace `path/to/classes` with the absolute path and `some.package.XxxUtil` with the full name of the class.
+
 ## Note
 
 - Groovy scripts are not sensitive to `;`, Java uses `;` as the end of the statement code, Groovy uses a newline to indicate the end of a code

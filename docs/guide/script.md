@@ -288,6 +288,17 @@ if(myResponse.isOk()){
 }
 ```
 
+### 4.SpringBoot 项目中的类调用 <Badge text="2025.1.4️" type="tip"/>
+
+```groovy
+def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+```
+
+SpringBoot 项目编译后会在模块 target 目录下生成一个 classes 目录。使用 `FrLocalClassLoader` 可以加载这个目录下的类,并且可以直接调用类中的方法。
+
+注意需要将 `path/to/classes` 替换成 classes 目录的绝对路径，将 `some.package.XxxUtil` 替换成你要调用的类的全名。
+
+
 ## 注意点
 
 - Groovy 脚本对 ==;== 不敏感,Java 用;作为语句代码的结束,Groovy 用换行表示一句代码的结束
