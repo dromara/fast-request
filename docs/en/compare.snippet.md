@@ -10,7 +10,7 @@
 
 **Deeply optimized leading smart API debugging plugin**
 
-<Badge vertical="baseline" color="#FC801D">IDEA 2021.2</Badge>
+<Badge vertical="baseline" color="#FC801D">IDEA 2021.2+</Badge>
 <Badge vertical="baseline" color="#21D789">Humanize</Badge>
 <Badge vertical="baseline" color="#FF318C">Advanced</Badge>
 
