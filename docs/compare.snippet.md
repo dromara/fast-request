@@ -57,6 +57,7 @@
 - [x] [<ColorIcon icon="analyseNew" /> 年度报告](/guide/features/annualReport.md)
 - [x] [更多...](./guide/features/)
 
+<button class="buyBtn" onclick="window.open('https://plugins.jetbrains.com/plugin/16988/pricing')">购买</button>
 </div>
 
 <div class="hint-container tip" style="margin-left:15px;width:50%">
@@ -79,3 +80,16 @@
 
 </div>
 </div>
+
+<style>
+.buyBtn{
+    width:100%;
+    color: #fff;
+    background:#0C71F9;
+    border:none;
+    border-radius: 5px;
+    padding: 3px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
