@@ -21,6 +21,30 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
+
+## 2025.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Delevoping..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Script supports calling local project class method" type="tip"/>
+- <Badge text="Fixed dynamic Function compilation error" type="danger"/>
+
+
+::: hint Script supports calling local project class method <Badge vertical="top" text="New feature" type="tip"/>
+
+![](/img/2025.1.4/script_en.png)
+
+You can click on the code snippet shortcut to quickly generate code.
+
+```groovy
+def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+```
+
+After the SpringBoot project is compiled, a `classes` directory will be generated in the `target` directory of the module.
+
+You can use `FrLocalClassLoader` to load the classes in this directory and call the methods directly.
+
+Note that you need to replace `path/to/classes` with the absolute path and `some.package.XxxUtil` with the full name of the class.
+
+:::
+
 ## 2025.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-04-16" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Support scan api of super class" type="tip"/>
 - <Badge text="Quickly make filed as ignore field" type="tip"/>  

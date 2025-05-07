@@ -20,6 +20,29 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
+
+## 2025.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Script 支持调用本地项目 Class 的方法" type="tip"/>
+- <Badge text="修复动态 Function 编译问题" type="danger"/>  
+
+:::hint Script 支持调用本地项目 Class <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2025.1.4/script.png)
+
+可以点击代码片段快捷方式快速生成代码。
+
+```groovy
+def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+```
+
+SpringBoot 项目编译后会在模块 target 目录下生成一个 classes 目录。使用 `FrLocalClassLoader` 可以加载这个目录下的类,并且可以直接调用类中的方法。
+
+注意需要将 `path/to/classes` 替换成 classes 目录的绝对路径，将 `some.package.XxxUtil` 替换成你要调用的类的全名。
+
+
+
+:::
+
 ## 2025.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-04-16" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Api预览支持父类 api 的扫描" type="tip"/>
 - <Badge text="快捷忽略字段解析" type="tip"/>  

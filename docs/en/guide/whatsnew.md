@@ -29,6 +29,10 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
+## 2025.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Delevoping..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Script supports calling local project class method" type="tip"/>
+- <Badge text="Fixed dynamic Function compilation error" type="danger"/>
+
 ## 2025.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-04-16" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Support scan api of super class" type="tip"/>
 - <Badge text="Quickly make filed as ignore field" type="tip"/>  

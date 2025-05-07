@@ -27,6 +27,10 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
+## 2025.1.4 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Script 支持调用本地项目 Class 的方法" type="tip"/>
+- <Badge text="修复动态 Function 编译问题" type="danger"/>
+
 ## 2025.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-04-16" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Api预览支持父类 api 的扫描" type="tip"/>
 - <Badge text="快捷忽略字段解析" type="tip"/>  
