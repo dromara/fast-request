@@ -31,7 +31,7 @@ Path: `Help(Menu) -> Register... -> Fast Request`
 - package 1: Monthly Subscription
 - package 2: Yearly Subscription (Recommended)
 
-Directly links：[https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing](https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing)
+Directly links：[https://plugins.jetbrains.com/plugin/16988/pricing](https://plugins.jetbrains.com/plugin/16988/pricing)
 
 ![step2](/img/buy/step2.png)
 
@@ -66,7 +66,7 @@ Log in to your JetBrains account.
 
   ![Offline](/img/buy/offline.png)
 
-<a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>Buy</a>
+<a href="https://plugins.jetbrains.com/plugin/16988/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>Buy</a>
 
 ## Tips💡
 

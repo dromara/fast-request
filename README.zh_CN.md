@@ -17,7 +17,7 @@
 [![Slack](https://img.shields.io/badge/Slack-%23Fast--Request-DD1265?logo=Slack)](https://fastrequest.slack.com)
 [![OSCS Status](https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small)](https://www.oscs1024.com/project/dromara/fast-request?ref=badge_small)
 
-[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) 是 idea 版 Postman，它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params。`Restful Fast Request = API 调试工具 + API 管理工具 + API搜索工具`。
+[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988) 是 idea 版 Postman，它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params。`Restful Fast Request = API 调试工具 + API 管理工具 + API搜索工具`。
 它有一个漂亮的界面来完成请求、检查服务器响应、存储你的 api 请求和导出 api 请求，插件帮助你在 IDEA 界面内更快更高效得调试你的 API。
 
 对比于 HTTP Client，Fast Request 不仅拥有 HTTP Client 内置的功能，还提供了友好易懂直观的界面，让使用者调试 API 的时候能够更加方便、简捷。同时各种类型参数也提供了不同的定制方式，更加灵活。而且集成了搜索、Postman 集成，Swagger 支持等额外的功能。

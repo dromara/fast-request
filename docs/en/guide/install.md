@@ -17,7 +17,7 @@ Search `Restful Fast Request` in idea plugin marketplace
 
 > Applicable to intranet use or trial version usage
 
-a. Go to [https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/versions](https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/versions) and download zip file
+a. Go to [https://plugins.jetbrains.com/plugin/16988/versions](https://plugins.jetbrains.com/plugin/16988/versions) and download zip file
 
 b. Go to `setting -> plugins -> Install plugin from disk`
 
@@ -33,7 +33,7 @@ The EAP version is a pre-release and may be relatively unstable, but many users 
 
 To install the EAP version, you need to download the corresponding EAP package. Please refer to **Offline install** and ignore the first step.
 
-[Download eap package](https://plugins.jetbrains.com/plugin/16988-restful-fast-request/versions/eap)
+[Download eap package](https://plugins.jetbrains.com/plugin/16988/versions/eap)
 
 ::: caution Note
 When using EAP versions, it is essential to note that upgrading from a lower version to a higher version of EAP will not cause any problems,

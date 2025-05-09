@@ -18,7 +18,7 @@
 [![Telegram](https://img.shields.io/static/v1?label=Telegram&message=Restful%20Fast%20Request&logo=telegram&color=32CD32)](https://t.me/restful_fast_request)
 [![OSCS Status](https://www.oscs1024.com/platform/badge/dromara/fast-request.svg?size=small)](https://www.oscs1024.com/project/dromara/fast-request?ref=badge_small)
 
-[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988-fast-request) is the IDEA version of Postman,it is a powerful restful api toolkit plugin(http client) help you quickly generate url and params by exist method.`Plugin = API debug tool + API manager tool + API search tool`<br/>
+[**Restful Fast Request**](https://plugins.jetbrains.com/plugin/16988) is the IDEA version of Postman,it is a powerful restful api toolkit plugin(http client) help you quickly generate url and params by exist method.`Plugin = API debug tool + API manager tool + API search tool`<br/>
 It has a beautiful interface to compose requests,inspect server responses,store your api request and export api request.Plugin help you debug request just in Intellij frame
 
 Compared with the HTTP Client, Restful Fast Request not only has the built-in functions of the HTTP Client, but also

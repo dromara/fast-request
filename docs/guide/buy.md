@@ -33,7 +33,7 @@ icon: buy
 - 套餐 1: 按月计费订阅
 - 套餐 2: 按年计费订阅(推荐)
 
-直走链接：[https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing](https://plugins.jetbrains.com/plugin/16988-fast-request--api-buddy/pricing)
+直走链接：[https://plugins.jetbrains.com/plugin/16988/pricing](https://plugins.jetbrains.com/plugin/16988/pricing)
 
 ![](/img/buy/step2.png)
 
@@ -90,4 +90,4 @@ icon: buy
 
 ![wechat group](/img/wechatGroup.png)
 
-<a href="https://plugins.jetbrains.com/plugin/16988-restful-fast-request/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>入正</a>
+<a href="https://plugins.jetbrains.com/plugin/16988/pricing" style="font-size:30px;"><i class="icon iconfont icon-buy" style="font-size:30px"></i>入正</a>
