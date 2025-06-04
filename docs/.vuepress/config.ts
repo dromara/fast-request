@@ -61,9 +61,9 @@ export default defineUserConfig({
                },
                auth: {
                  type: 'token',
-                 token: 'pat_FbW3NVyjQ65eP9EZYtfcGoFRcjrmFgsHp1TAoK8LKBV80xriXwfCnXZHlCegzmWP',
+                 token: 'pat_ZuLnUQbGqdwEGHW1GXdmoieLGuOmoGkQdd6rrxAMcqYWgx8ktK2TpZ8PvC2zh8En',
                  onRefreshToken: function () {
-                   return 'pat_FbW3NVyjQ65eP9EZYtfcGoFRcjrmFgsHp1TAoK8LKBV80xriXwfCnXZHlCegzmWP'
+                   return 'pat_ZuLnUQbGqdwEGHW1GXdmoieLGuOmoGkQdd6rrxAMcqYWgx8ktK2TpZ8PvC2zh8En'
                  }
                }
              });
