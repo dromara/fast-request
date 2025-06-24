@@ -29,7 +29,11 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2025.1.4 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-05-20" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-05-20" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Formatting performance optimization" type="tip"/>
+- <Badge text="Function compilation encoding error" type="danger"/>
+
+## 2025.1.4 <Badge text="Free trial" type="tip"/> <Badge text="2025-05-20" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Script supports calling local project class method" type="tip"/>
 - <Badge text="Fixed dynamic Function compilation error" type="danger"/>
 
