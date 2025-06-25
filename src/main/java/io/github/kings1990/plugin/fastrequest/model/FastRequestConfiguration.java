@@ -113,6 +113,11 @@ public class FastRequestConfiguration implements Serializable {
 
     private List<DataMapping> globalHeaderList = new ArrayList<>();
 
+    private List<AiPromptConfig> aiPromptList = new ArrayList<>();
+
+    private AiSetting aiSetting = new AiSetting(1,"https://api.openai.com/v1/chat/completions","","gpt-3.5-turbo");
+    
+
     public List<String> getProjectList() {
         return projectList;
     }
@@ -247,5 +252,21 @@ public class FastRequestConfiguration implements Serializable {
 
     public void setGlobalHeaderList(List<DataMapping> globalHeaderList) {
         this.globalHeaderList = globalHeaderList;
+    }
+    
+    public List<AiPromptConfig> getAiPromptList() {
+        return aiPromptList;
+    }
+    
+    public void setAiPromptList(List<AiPromptConfig> aiPromptList) {
+        this.aiPromptList = aiPromptList;
+    }
+    
+    public AiSetting getAiSetting() {
+        return aiSetting;
+    }
+    
+    public void setAiSetting(AiSetting aiSetting) {
+        this.aiSetting = aiSetting;
     }
 }

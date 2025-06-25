@@ -265,4 +265,5 @@ public class Constant {
     public static final String EN_DOC_DOMAIN = "https://dromara.org/fast-request/en";
 
     public static Key<Integer> KEY_FASTREQUEST = Key.create("FastRequest");
+    public static Key<List<String>> KEY_FASTREQUEST_ACTION_LIST = Key.create("FastRequest.actionList");
 }

@@ -227,7 +227,9 @@
             <action id="fastRequest.format" class="io.github.kings1990.plugin.fastrequest.action.FormatAction">
                 <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
             </action>
-
+            <group id="fastRequest.aiPromptAction" class="io.github.kings1990.plugin.fastrequest.action.AiPromptAction">
+                <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            </group>
         </group>
 
         <action id="fastRequest.gotoFastRequest"
@@ -235,6 +237,14 @@
             <keyboard-shortcut first-keystroke="alt F" keymap="$default"/>
         </action>
 
+        <group id="fastRequest.ai">
+            <action id="fastRequest.addYourPromptsAction" class="io.github.kings1990.plugin.fastrequest.action.AddYourPromptsAction"/>
+            <action id="fastRequest.aiSettingAction" class="io.github.kings1990.plugin.fastrequest.action.AiSettingAction"/>
+            <action id="fastRequest.aiEditorAddParamAction" class="io.github.kings1990.plugin.fastrequest.action.AiEditorAddParamAction">
+                <add-to-group group-id="EditorContextBarMenu" anchor="last"/>
+            </action>
+
+        </group>
     </actions>
 
     <extensionPoints>

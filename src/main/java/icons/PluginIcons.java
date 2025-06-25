@@ -69,4 +69,16 @@ public interface PluginIcons {
 
     Icon ICON_POSTMAN = IconLoader.getIcon("/icon/postman.svg", PluginIcons.class);
     Icon ICON_LOCAL_SCOPE = IconLoader.getIcon("/icon/localScope.svg", PluginIcons.class);
+
+    Icon ICON_OPEN_AI = IconLoader.getIcon("/icon/openai.svg", PluginIcons.class);
+
+    Icon SETTING = IconLoader.getIcon("/icon/setting.svg", PluginIcons.class);
+
+    Icon ICON_OPEN_AI_BLUE = IconLoader.getIcon("/icon/openai_blue.svg", PluginIcons.class);
+    Icon CODEGEEX = IconLoader.getIcon("/icon/codegeex.svg", PluginIcons.class);
+    Icon AI_CUSTOM = IconLoader.getIcon("/icon/aiCustom.svg", PluginIcons.class);
+    Icon DEEPSEEKD = IconLoader.getIcon("/icon/deepseek.svg", PluginIcons.class);
+    Icon ADD = IconLoader.getIcon("/icon/add.svg", PluginIcons.class);
+    Icon COPY = IconLoader.getIcon("/icon/copy.svg", PluginIcons.class);
+    Icon ICON_JSON = IconLoader.getIcon("/icon/json.svg", PluginIcons.class);
 }

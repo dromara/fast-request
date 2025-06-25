@@ -170,6 +170,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
     private JProgressBar requestProgressBar;
     private JPanel prettyJsonEditorPanel;
     private JPanel responseTextAreaPanel;
+    private JProgressBar otherRequestProgressBar;
 
 
     private MyLanguageTextField prettyJsonLanguageTextField;
@@ -297,6 +298,7 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         prettyJsonEditorPanel = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
         responseTextAreaPanel = new MyLanguageTextField(myProject, PlainTextLanguage.INSTANCE, PlainTextFileType.INSTANCE);
         jsonParamsTextArea = new MyLanguageTextField(myProject, JsonLanguage.INSTANCE, JsonFileType.INSTANCE);
+        ((MyLanguageTextField)jsonParamsTextArea).setActionFlagList(Lists.newArrayList("fastRequest.aiPromptAction"));
         //设置高度固定搜索框
         prettyJsonEditorPanel.setMinimumSize(new Dimension(-1, 120));
         prettyJsonEditorPanel.setPreferredSize(new Dimension(-1, 120));
@@ -611,8 +613,19 @@ public class FastRequestToolWindow extends SimpleToolWindowPanel {
         //2秒内不允许狂点
         requestProgressBar.setIndeterminate(true);
         requestProgressBar.setVisible(false);
+        otherRequestProgressBar.setIndeterminate(true);
+        otherRequestProgressBar.setVisible(false);
+        otherRequestProgressBar.setForeground(ColorProgressBar.RED);
     }
 
+    public void runOtherStart() {
+        otherRequestProgressBar.setVisible(true);
+    }
+
+    public void runOtherStop() {
+        otherRequestProgressBar.setVisible(false);
+    }
+    
     private void changeUrlParamsText() {
         String paramStr = conventDataToString(urlParamsKeyValueList);
         urlParamsTextArea.setText(paramStr);

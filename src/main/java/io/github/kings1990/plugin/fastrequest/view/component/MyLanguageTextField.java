@@ -25,6 +25,7 @@ import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.EditorSettings;
 import com.intellij.openapi.editor.ex.EditorEx;
+import com.intellij.openapi.editor.highlighter.EditorHighlighter;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiDocumentManager;
@@ -36,12 +37,38 @@ import io.github.kings1990.plugin.fastrequest.config.Constant;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
+
 public class MyLanguageTextField extends LanguageTextField {
 
     private Project myProject;
     private FileType fileType;
     private Language language;
+    private List<String> actionFlagList;
 
+    private EditorHighlighter editorHighlighter;
+
+    public List<String> getActionFlagList() {
+        return actionFlagList;
+    }
+
+    public void setActionFlagList(List<String> actionFlagList) {
+        this.actionFlagList = actionFlagList;
+    }
+
+    public void setEditorHighlighter(EditorHighlighter editorHighlighter) {
+        this.editorHighlighter = editorHighlighter;
+    }
+
+
+    public MyLanguageTextField(Project myProject, Language language, FileType fileType,List<String> actionFlagList) {
+        super(language, myProject, "", false);
+        this.myProject = myProject;
+        this.fileType = fileType;
+        this.language = language;
+        this.actionFlagList = actionFlagList;
+    }
+    
     public MyLanguageTextField(Project myProject, Language language, FileType fileType) {
         super(language, myProject, "", false);
         this.myProject = myProject;
@@ -54,6 +81,10 @@ public class MyLanguageTextField extends LanguageTextField {
         EditorEx editor = super.createEditor();
         setUpEditor(editor);
         editor.putUserData(Constant.KEY_FASTREQUEST,1);
+        editor.putUserData(Constant.KEY_FASTREQUEST_ACTION_LIST, getActionFlagList());
+        if(editorHighlighter != null){
+            editor.setHighlighter(editorHighlighter);
+        }
         return editor;
     }
 
