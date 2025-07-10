@@ -97,6 +97,25 @@
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA
 
+## 文档优化
+欢迎开发者帮忙优化文档内容 [api-buddy.cn](api-buddy.cn)，文档所有代码在 [docs](./docs) 目录下，由 [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/) 主题实现。
+
+[运行环境](https://theme-hope.vuejs.press/zh/get-started/env.html)建议 
+
+```
+node版本: >20
+pnpm >= 10.5.2
+```
+
+运行主题
+
+```
+pnpm i
+pnpm docs:dev
+```
+
+运行成功以后可以在运行日志中查看访问端口，例如localhost:8080
+
 ## 特别鸣谢
 
 [vuepress-theme-hope 主题](https://vuepress-theme-hope.github.io/v2/) 作者 [Mister-Hope](https://github.com/Mister-Hope) 提供文档支持

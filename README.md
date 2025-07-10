@@ -86,6 +86,27 @@ more flexible.And it integrates additional features such as search, Postman inte
 
 ![](./screenshot/download.png)
 
+Here’s the translated Markdown in English, with the links preserved as-is:
+
+## Documentation Optimization
+We welcome developers to help optimize the documentation content [api-buddy.cn](api-buddy.cn). All code for the documentation is located in the [docs](./docs) directory, implemented using the [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/) theme.
+
+[Recommended Environment](https://theme-hope.vuejs.press/get-started/env.html):
+
+```
+Node version: >20  
+PNPM >= 10.5.2  
+```  
+
+To run the theme:
+
+```
+pnpm i  
+pnpm docs:dev  
+```  
+
+After successful execution, you can check the access port in the logs (e.g., `localhost:8080`).
+
 [latest-release]: https://github.com/dromara/fast-request/releases/latest
 [plugin]: https://plugins.jetbrains.com/plugin/16988
 [plugin-img]: https://img.shields.io/badge/plugin-Restful_Fast_Request-x.svg?logo=IntelliJ%20IDEA
