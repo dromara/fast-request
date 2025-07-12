@@ -89,7 +89,7 @@ more flexible.And it integrates additional features such as search, Postman inte
 Here’s the translated Markdown in English, with the links preserved as-is:
 
 ## Documentation Optimization
-We welcome developers to help optimize the documentation content [api-buddy.cn](api-buddy.cn). All code for the documentation is located in the [docs](./docs) directory, implemented using the [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/) theme.
+We welcome developers to help optimize the documentation content [api-buddy.com](api-buddy.com). All code for the documentation is located in the [docs](./docs) directory, implemented using the [vuepress-theme-hope](https://theme-hope.vuejs.press/zh/) theme.
 
 [Recommended Environment](https://theme-hope.vuejs.press/get-started/env.html):
 
