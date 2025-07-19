@@ -21,6 +21,16 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
+## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="Search URL truncate segment support" type="tip"/>
+
+:::hint Search URL truncate segment support <Badge vertical="top" text="New feature" type="tip"/>
+
+![](/img/2025.1.6/searchUrlTruncate_en.png)
+
+If there is a URL prefix fragment such as context-path or gateway in the project, add a truncated fragment to the project global config, and the SearchEveryWhere search will automatically truncate the fragment and search for the corresponding results.
+:::
+
 ## 2025.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-05-20" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Function compilation error in Windows" type="danger"/>
 
