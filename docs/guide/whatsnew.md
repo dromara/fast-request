@@ -29,7 +29,7 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 ## 2025.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="搜索 URL 支持片段截断" type="danger"/>
-- <Badge text="Kotlin Solon 支持" type="tip"/>
+- <Badge text="Kotlin Solon 框架支持" type="tip"/>
 
 ## 2025.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-07-07" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Windows 系统 Function 编译错误" type="danger"/>
