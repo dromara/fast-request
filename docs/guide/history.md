@@ -22,6 +22,7 @@ icon: changelog
 
 ## 2025.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="搜索 URL 支持片段截断" type="tip"/>
+- <Badge text="Kotlin Solon 支持" type="tip"/>
 
 :::hint 搜索 URL 支持片段截断 <Badge vertical="top" text="新功能" type="tip"/>
 

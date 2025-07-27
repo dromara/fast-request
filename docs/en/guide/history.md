@@ -23,6 +23,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Search URL truncate segment support" type="tip"/>
+- <Badge text="Solon framework linemarker and API scan support" type="tip"/>
 
 :::hint Search URL truncate segment support <Badge vertical="top" text="New feature" type="tip"/>
 

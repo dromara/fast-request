@@ -31,6 +31,7 @@ Because developing version is still in development, the documentation of develop
 
 ## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Search URL truncate segment support" type="tip"/>
+- <Badge text="Solon framework linemarker and API scan support" type="tip"/>
 
 ## 2025.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-05-20" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Function compilation error in Windows" type="danger"/>
