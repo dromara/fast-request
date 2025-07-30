@@ -20,7 +20,7 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
-## 2025.1.6 <Badge text="免费试用" type="tip"/> <Badge text="开发中" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.6 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" type="pink"/> <Badge text="2025-07-30" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="搜索 URL 支持片段截断" type="tip"/>
 - <Badge text="Kotlin Solon 框架支持" type="tip"/>
 
@@ -32,7 +32,7 @@ icon: changelog
 :::
 
 
-## 2025.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2025-07-07" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.5.1 <Badge text="免费试用" type="tip"/> <Badge text="2025-07-07" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Windows 系统 Function 编译错误" type="danger"/>
 
 ## 2025.1.5 <Badge text="免费试用" type="tip"/> <Badge text="2025-06-24" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>

@@ -21,7 +21,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization function" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove function" type="danger"/>
 
-## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Developing" type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-07-30" color="SandyBrown"/>  <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Search URL truncate segment support" type="tip"/>
 - <Badge text="Solon framework linemarker and API scan support" type="tip"/>
 
@@ -32,10 +32,10 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 If there is a URL prefix fragment such as context-path or gateway in the project, add a truncated fragment to the project global config, and the SearchEveryWhere search will automatically truncate the fragment and search for the corresponding results.
 :::
 
-## 2025.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-05-20" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="2025-07-07" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Function compilation error in Windows" type="danger"/>
 
-## 2025.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2025-05-20" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2025-06-24" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Formatting performance optimization" type="tip"/>
 - <Badge text="Function compilation encoding error" type="danger"/>
 
