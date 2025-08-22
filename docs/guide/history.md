@@ -20,6 +20,39 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
+## 2025.1.7 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="支持本地模式开关" type="tip"/>
+- <Badge text="列表字段支持快速查找定位" type="tip"/>
+- <Badge text="字段支持启用快捷过略" type="tip"/>
+
+:::hint 支持本地模式开关 <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2025.1.7/localMode.png)
+
+
+本地模式会忽略 `.fastRequest` 目录并且让它不可见，与[如何忽略 .fastRequest 目录](./faq.md#s-%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5-fastrequest-%E7%9B%AE%E5%BD%95) 中的方式 1 一致。
+
+:::
+
+
+
+:::hint 列表字段支持快速查找定位 <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2025.1.7/fieldSpeedSearch.png)
+
+支持在列表中快速查找定位字段 key，输入关键字后再按方向键可以快速定位到对应的字段。此功能在 `Headers` 、`Path Params`、`URL Params`、`Form URL-Encoded`、`Form-data` 等 tab 中支持。
+
+:::
+
+:::hint 字段支持启用快捷过略 <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2025.1.7/enabledFieldList.png)
+
+此功能可以在针对字段过多的情况下，快速查阅启用的字段定位字段的值。
+
+:::
+
+
 ## 2025.1.6 <Badge text="免费试用" type="tip"/>  <Badge text="最新版" type="pink"/> <Badge text="2025-07-30" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="搜索 URL 支持片段截断" type="tip"/>
 - <Badge text="Kotlin Solon 框架支持" type="tip"/>
