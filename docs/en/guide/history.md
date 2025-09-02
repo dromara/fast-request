@@ -30,9 +30,14 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ::: hint Local mode support <Badge vertical="top" text="New feature" type="tip"/>
 
-![](/img/2025.1.7/localMode_en.png)
+![](/img/2025.1.7/globalLocalMode_en.png)
 
-In local mode, `.fastRequest` directory is ignored and made invisible, which is consistent with Solution 1 in [How to ignore .fastRequest directory](./faq.md#s-how-to-ignore-fastrequest-directory).
+In global local mode, `.fastRequest` directory is ignored and made invisible, which is consistent with Solution 1 in [How to ignore .fastRequest directory](./faq.md#s-how-to-ignore-fastrequest-directory).
+It is suitable for non-git projects.
+
+
+![](/img/2025.1.7/localMode.png)
+It is suggested to use project-level local mode for git projects.
 
 :::
 

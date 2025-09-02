@@ -29,10 +29,15 @@ icon: changelog
 
 :::hint 支持本地模式开关 <Badge vertical="top" text="新功能" type="tip"/>
 
+![](/img/2025.1.7/globalLocalMode.png)
+
+    全局本地模式会忽略 `.fastRequest` 目录并且让它不可见，与[如何忽略 .fastRequest 目录](./faq.md#s-%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5-fastrequest-%E7%9B%AE%E5%BD%95) 中的方式 1 一致。
+
+
 ![](/img/2025.1.7/localMode.png)
 
+如果是 git 管理的项目，建议使用项目级别本地模式。
 
-本地模式会忽略 `.fastRequest` 目录并且让它不可见，与[如何忽略 .fastRequest 目录](./faq.md#s-%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5-fastrequest-%E7%9B%AE%E5%BD%95) 中的方式 1 一致。
 
 :::
 
