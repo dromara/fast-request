@@ -31,8 +31,10 @@ Because developing version is still in development, the documentation of develop
 
 ## 2025.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Local mode support" type="tip"/>
+- <Badge text="Domain generation support pom variable scan" type="tip"/>
 - <Badge text="Field speed search" type="tip"/>
 - <Badge text="Field enabled search" type="tip"/>
+- <Badge text="Quick modify shortcuts support" type="tip"/>
 
 ## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-07-30" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Search URL truncate segment support" type="tip"/>

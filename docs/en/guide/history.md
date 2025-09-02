@@ -23,8 +23,10 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ## 2025.1.7 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Local mode support" type="tip"/>
+- <Badge text="Domain generation support pom variable scan" type="tip"/>
 - <Badge text="Field speed search" type="tip"/>
 - <Badge text="Field enabled search" type="tip"/>
+- <Badge text="Quick modify shortcuts support" type="tip"/>
 
 ::: hint Local mode support <Badge vertical="top" text="New feature" type="tip"/>
 
@@ -32,6 +34,12 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 In local mode, `.fastRequest` directory is ignored and made invisible, which is consistent with Solution 1 in [How to ignore .fastRequest directory](./faq.md#s-how-to-ignore-fastrequest-directory).
 
+:::
+
+::: hint Domain generation support pom variable scan <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2025.1.7/pomScanProp_en.png)
+
+When generating domain, it supports scanning variables in `pom.xml`, such as `${server.port}`.
 :::
 
 ::: hint Field speed search <Badge vertical="top" text="New feature" type="tip"/>
@@ -46,6 +54,13 @@ Support quickly locate the field key in the list, after entering the keyword, yo
 ![](/img/2025.1.7/enabledFieldList.png)
 
 This feature allows you to quickly locate the value of an enabled field when there are too many fields.
+:::
+
+::: hint Quick modify shortcuts support <Badge vertical="top" text="New feature" type="tip"/>
+![](/img/2025.1.7/shortcuts_en.png)
+
+Support quickly locate and modify shortcuts for the action.
+
 :::
 
 

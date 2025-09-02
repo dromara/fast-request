@@ -22,8 +22,10 @@ icon: changelog
 
 ## 2025.1.7 <Badge text="免费试用" type="tip"/>  <Badge text="开发中..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="支持本地模式开关" type="tip"/>
+- <Badge text="域名生成支持读取变量" type="tip"/>  
 - <Badge text="列表字段支持快速查找定位" type="tip"/>
 - <Badge text="字段支持启用快捷过略" type="tip"/>
+- <Badge text="支持快捷键快速修改" type="tip"/>
 
 :::hint 支持本地模式开关 <Badge vertical="top" text="新功能" type="tip"/>
 
@@ -34,6 +36,14 @@ icon: changelog
 
 :::
 
+:::hint 域名生成支持读取变量 <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2025.1.7/pomScanProp.png)
+
+
+域名自动生成支持 pom 变量扫描
+
+:::
 
 
 :::hint 列表字段支持快速查找定位 <Badge vertical="top" text="新功能" type="tip"/>
@@ -49,6 +59,14 @@ icon: changelog
 ![](/img/2025.1.7/enabledFieldList.png)
 
 此功能可以在针对字段过多的情况下，快速查阅启用的字段定位字段的值。
+
+:::
+
+:::hint 支持快捷键快速修改 <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2025.1.7/shortcuts.png)
+
+支持快速定位和修改插件快捷键
 
 :::
 
