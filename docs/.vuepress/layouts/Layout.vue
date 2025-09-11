@@ -24,9 +24,6 @@ const sidebarTopArray = [
   `<a href="https://doc.xiaominfo.com/?utm_source=FastRequest" target="_blank">
     <img className="no-zoom" src="/img/sponsor/knife4j.svg">
   </a>`,
-  `<a href="http://apifox.com/?utm_source=pay&utm_medium=fast-request" target="_blank">
-    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/apifox-line.png">
-  </a>`,
   `<a href="https://www.jnpfsoft.com/index.html?from=fast-request" target="_blank">
     <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/jnpfsoft.jpg">
   </a>`,
