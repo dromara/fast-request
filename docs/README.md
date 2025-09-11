@@ -71,23 +71,6 @@ preview="/img/sponsor/codegeex-home.png"
 style="max-width:370px"
 />
 
-<SiteInfo
-name="Apifox"
-desc="API 设计、开发、测试一体化协作平台"
-url="http://apifox.com/?utm_source=pay&utm_medium=fast-request"
-logo="/img/sponsor/apifox.png"
-preview="/img/sponsor/apifox-home.png"
-style="max-width:370px"
-/>
-
-<SiteInfo
-  name="引迈信息"
-  desc="一键生成表单信息"
-  url="https://www.jnpfsoft.com/index.html?from=fast-request"
-  logo="/img/sponsor/jnpfsoft-logo.png"
-  preview="/img/sponsor/jnpfsoft-home.png"
-  style="max-width:370px"
-/>
 
 ## 优势
 
