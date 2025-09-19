@@ -169,6 +169,12 @@ def response = request.execute()
 
 调整工具窗口宽度至`610`+像素，达到最佳视觉效果
 
+## S: 怀疑插件卡顿
+
+<MyCarousel :imgList="['/img/faq/startCpuProfile.png','/img/faq/stopCpuProfile.png']" />
+
+点击 Help 菜单选择 `Start CPU usage profile` -> `执行你认为卡顿的操作` -> `Stop CPU usage profile`。将生成出来的 jfr 文件发给我们分析
+
 ## Q: Origin等请求头失效
 
 由于 `sun.net.www.protocol.http.HttpURLConnection` 设置了**受限标头**,以下一些请求头如果想使用,则需要给IDEA配置vm参数

@@ -174,6 +174,13 @@ you can click <ColorIcon icon="regenerate" />([Re generate](/guide/features/rege
 
 Adjust tool window width to `610`+ pixel and will achieve the best visual effect
 
+## S: Plugin cause UI hang.
+
+<MyCarousel :imgList="['/img/faq/startCpuProfile.png','/img/faq/stopCpuProfile.png']" />
+
+Click Help menu select `Start CPU usage profile` -> `Execute the operation that you think is causing the UI hang` -> `Stop CPU usage profile`.
+Send the generated jfr file to us for analysis.
+
 ## Q: Header likes Origin not effect
 
 Because the **restrictedHeaders** strategy of `sun.net.www.protocol.http.HttpURLConnection` . If you want to use the following headers, you need to configure vm parameters for IDEA
