@@ -39,6 +39,12 @@ export default hopeTheme(
       },
     },
 
+      navbarLayout: {
+          start: ["Brand"],
+          center: ["Links"],
+          end: ["BgMusic","Language",  "Repo", "Outlook", "Search"],
+      },
+
     markdown: {
       highlighter: {
         type: "shiki",
