@@ -48,3 +48,4 @@ dist
 docs/.vuepress/.cache
 docs/.vuepress/.temp
 .fastRequest
+.DS_Store
