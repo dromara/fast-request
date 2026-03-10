@@ -71,6 +71,15 @@ preview="/img/sponsor/codegeex-home.png"
 style="max-width:370px"
 />
 
+<SiteInfo
+name="Easysearch"
+desc="企业级的分布式搜索型数据库"
+url="https://easysearch.cn?utm_source=pay&utm_medium=fast-request"
+logo="/img/sponsor/easysearch.svg"
+preview="/img/sponsor/easysearch-home.png"
+style="max-width:370px"
+/>
+
 
 ## 优势
 

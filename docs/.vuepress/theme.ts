@@ -105,7 +105,7 @@ export default hopeTheme(
           path: "/",
           title: "将在2024.1.9推出",
           content:
-            '<ul><li><a href="https://gitee.com/activity/2025opensource?ident=IJUYSU">FR正在参与Gitee举办的【2025最受欢迎的开源软件】投票活动，需要您的投票支持，百忙之中劳烦您的小手，帮FR投下您宝贵的一票❤️</a></li><br/><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">免费插件Bean Assistant实现快速注入 Bean</a></li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+            '<ul><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">免费插件Bean Assistant实现快速注入 Bean</a></li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
           actions: [
             {
               text: "去投票→",

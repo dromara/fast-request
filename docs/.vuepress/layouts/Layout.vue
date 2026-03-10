@@ -24,8 +24,8 @@ const sidebarTopArray = [
   `<a href="https://doc.xiaominfo.com/?utm_source=FastRequest" target="_blank">
     <img className="no-zoom" src="/img/sponsor/knife4j.svg">
   </a>`,
-  `<a href="https://t.zsxq.com/hqBj7" target="_blank">
-    <img className="no-zoom" height="50px" width="220px" src="/img/sponsor/mnhs.svg">
+  `<a href="https://easysearch.cn?utm_source=pay&utm_medium=fast-request" target="_blank">
+    <img className="no-zoom" src="/img/sponsor/easysearch-line.svg">
   </a>`,
 ];
 
