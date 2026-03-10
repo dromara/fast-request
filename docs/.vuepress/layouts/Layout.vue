@@ -25,7 +25,7 @@ const sidebarTopArray = [
     <img className="no-zoom" src="/img/sponsor/knife4j.svg">
   </a>`,
   `<a href="https://easysearch.cn?utm_source=pay&utm_medium=fast-request" target="_blank">
-    <img className="no-zoom" src="/img/sponsor/easysearch-line.svg">
+    <img className="no-zoom" src="/img/sponsor/easysearch-line.svg" width="220px" >
   </a>`,
 ];
 
