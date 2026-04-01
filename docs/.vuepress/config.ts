@@ -95,8 +95,6 @@ export default defineUserConfig({
     llmsPlugin({
       // 为所有语言环境生成 llms.txt
       locale: "all",
-      // 添加域名（可选，生成绝对路径）
-      domain: "https://api-buddy.com",
       // 生成 llms.txt 索引文件
       llmsTxt: true,
       // 生成完整文档合并文件
@@ -105,6 +103,19 @@ export default defineUserConfig({
       llmsPageTxt: true,
       // 剥离 HTML 标签
       stripHTML: true,
+      // 自定义域名配置：根据语言环境动态设置
+      llmsTxtTemplateGetter: {
+        // 自定义目录生成函数，根据语言环境使用不同域名
+        toc: (pages, state) => {
+          const domain = state.currentLocale === "/en/" ? "https://api-buddy.com" : "https://api-buddy.cn";
+          return pages
+            .map((page) => {
+              const url = `${domain}${page.path.replace(/\.html$/, ".md")}`;
+              return `- [${page.title}](${url})${page.excerpt ? `: ${page.excerpt}` : ""}`;
+            })
+            .join("\n");
+        },
+      },
     }),
   ],
 
