@@ -1,0 +1,1 @@
+var e=`/img/features/aiPromptTrigger.png`;export{e as t};

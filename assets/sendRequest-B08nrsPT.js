@@ -1,0 +1,1 @@
+var e=`/img/sendRequest.png`;export{e as t};

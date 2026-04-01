@@ -1,0 +1,1 @@
+var e=`/img/icon/array.svg`,t=`/img/icon/object.svg`,n=`/img/icon/number.svg`,r=`/img/icon/string.svg`,i=`/img/icon/boolean.svg`,a=`/img/icon/file.svg`;export{t as a,n as i,i as n,e as o,r,a as t};

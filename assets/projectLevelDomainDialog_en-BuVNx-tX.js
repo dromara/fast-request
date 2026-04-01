@@ -1,0 +1,1 @@
+var e=`/img/2023.1.1/projectLevelDomainConfig_en.png`,t=`/img/2023.1.1/projectLevelDomainDialog_en.png`;export{e as n,t};

@@ -1,0 +1,1 @@
+var e=`/img/2024.1.2/customToolbar.png`;export{e as t};

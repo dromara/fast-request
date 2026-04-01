@@ -1,0 +1,1 @@
+var e=`/img/apis_hd.png`;export{e as t};

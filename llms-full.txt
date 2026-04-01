@@ -1,0 +1,5260 @@
+---
+url: /index.md
+---
+# Api Buddy
+[![Twitter](https://img.shields.io/static/v1?label=Twitter\&message=FastRequest666\&logo=twitter\&color=FC8D34)](https://twitter.com/FastRequest666)
+[![github](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request) [![Jetbrains Plugins][plugin-img]][plugin] ![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)
+
+## 🌈 赞助商
+
+1. [**赞助可以为您带来什么(必看)**](./guide/sponsor.md#优势)
+
+2. [成为赞助者](./guide/sponsor.md)
+
+## 优势
+
+## 🥇 功能
+
+**深度优化的领先的智能 API 调试插件**
+
+IDEA 2021.2+
+人性化
+功能丰富
+高阶
+
+* \[x] API 一键生成(**更加人性化的参数生成策略**)
+* \[x] API 保存、管理
+* \[x] SearchEveryWhere(支持接口名称查询)
+* \[x] cUrl 拷贝
+* \[x] API 导航
+* \[x] [ API 导出到 Postman](/guide/features/apiToPostman.md)
+* \[x] [ 团队协作](/guide/teamwork.md)
+* \[x] [ 动态图标](/guide/features/makeIconMove.md)
+* \[x] [ 脚本支持](/guide/features/script.md)
+* \[x] [ AI 字段替换](/guide/features/ai.md)
+* \[x] [ 项目级别全局参数支持](/guide/features/projectValueConfig.md)
+* \[x] [ Environment](/guide/features/environment.md)
+* \[x] [ 函数](/guide/features/function.md)
+* \[x] [ Yaml、Properties 自动识别](/guide/features/projectLevelDomainConfig.md)
+* \[x] [ 终止 API 请求功能](/guide/features/stopRequest.md)
+* \[x] [当前方法定位](/guide/features/navigateCurrentMethod.md)
+* \[x] [ 多窗口 Tab](/guide/features/navigateCurrentMethodJson.md)
+* \[x] [  API 分组](/guide/features/apiGroup.md)
+* \[x] [ 临时请求](/guide/features/tempRequest.md)
+* \[x] [ Apifox 集成](/guide/features/apifox.md)
+* \[x] [ Postman 集成](/guide/features/postmanSync.md)
+* \[x] [ 一键清除参数](/guide/features/clear.md)
+* \[x] [ cURL 导入](/guide/features/clear.md)
+* \[x] [ 一键拷贝 Url](/guide/features/copyUrl.md)
+* \[x] [ 历史请求预览](/guide/features/historyRequest.md)
+* \[x] [ API 文档同步](/guide/features/apiDocSync.md)
+* \[x] [ API 文档导出](/guide/features/shareApiDoc.md)
+* \[x] [ OpenAPI导出](/guide/features/openApi.md)
+* \[x] [ 全屏](/guide/features/fullScreen.md)
+* \[x] [ 常用头参数](/guide/features/commonHeader.md)
+* \[x] [ Html 预览](/guide/features/htmlPreview.md)
+* \[x] [ APIs 导入导出](/guide/features/apiImportExport.md)
+* \[x] [ 批量导出 API 文档](/guide/features/batchExportApiDoc.md)
+* \[x] [ Swagger 默认值解析](/guide/features/swaggerDefaultValueParse.md)
+* \[x] [ API 自动生成注释](/guide/features/autoDescription.md)
+* \[x] [ API 一览表预览](/guide/features/apiPreview.md)
+* \[x] [ Api 注释预览](/guide/features/apiCommentPreview.md)
+* \[x] [ 自动域名](/guide/features/autoDomain.md)
+* \[x] [ Headers 预设](/guide/features/headersPreset.md)
+* \[x] [ 年度报告](/guide/features/annualReport.md)
+* \[x] [更多...](./guide/features/)
+
+购买
+
+**基础 API 调试插件**
+
+IDEA 2020.3~2021.1.3
+基础使用
+
+* \[x] API 一键生成
+* \[x] API 保存、管理
+* \[x] SearchEveryWhere(不支持接口名称查询)
+* \[x] cUrl 拷贝
+* \[x] API 导航
+* \[x] [ API 导出到 Postman](/guide/features/apiToPostman.md)
+
+## 🎉 致谢
+
+**Fast Request** 简称 **FR** 。自从 2021 年上线以来获得了很多人的支持。目前微信社区群 1000 多人，下载超过 ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857)，感谢各位支持者的一路同行，我们会努力提升软件的人性化程度，同时也让软件变得有趣。
+
+感谢 OSCHINA 和 Gitee 官方平台对 **FR** 项目的推荐和肯定。**Restful Fast Request**在 [**2021**](https://www.oschina.net/question/2918182_2324736) 年度获得"OSC 年度最受欢迎个人项目" Top 15 殊荣。
+
+## 🤝 联系我们
+
+如果您遇到了任何使用上的问题，请通过以下方式联系我们，将会有更快为你解决问题，同时群里全部都是 Javaer，经常会讨论一些技术问题，热点新闻，跳槽，吐槽等，可以帮助你学到一些东西。
+
+| ![微信技术群](https://img.shields.io/static/v1?label=wechat\&message=微信技术群\&logo=wechat\&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter\&message=FastRequest666\&logo=twitter\&color=FC8D34)](https://twitter.com/FastRequest666) |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| !\[wechat group]\(/img/wechatGroup.png =300x300)                                                           | !\[twitter]\(/img/twitter.png =300x300)                                                                                                             |
+| 如果扫码失败请直接搜微信号 FastRequest99                                                                 | 欢迎关注官方 Twitter                                                                                                                              |
+
+[plugin]: https://plugins.jetbrains.com/plugin/16988
+
+[plugin-img]: https://img.shields.io/badge/plugin-主页-x.svg?logo=IntelliJ%20IDEA
+
+---
+
+---
+url: /guide/activity.md
+---
+# 活动
+## 20231205
+
+B站粉丝突破**1000**，我决定抽个奖,感谢开发者的支持。==关注+点赞+留言==下方视频，进行抽奖，赠送1年license，已购买的开发者可以延长插件license到期时间1年
+
+官网: <https://api-buddy.com/guide/activity.html#_20231205>
+
+抽奖程序：[https://injectrl.github.io/BiliCLOnline/](https://api-buddy.com/guide/activity.html)
+
+规则如下:
+
+1. 预期抽出3个幸运开发者，如果点赞和留言多考虑增加
+2. 抽奖规则会去除重复UID，刷评论无效
+3. 抽奖公布时间12月27号,结果以直播或者录制视频的形式反馈。
+4. \==未点赞或关注作者视为放弃==
+
+## 20230524
+
+使用答疑，欢迎提出问题，还有免费 License 赠送
+
+![使用答疑](/img/bilibili/20230524.jpg)
+
+## 20221024
+
+微信参与抽奖 1 年 license 8 名，半年 license 15 名
+
+![](/img/activity/20221024.png)
+
+![](/img/activity/20221024-1.png)
+
+## 活动 1
+
+* 活动时间: 2022-10-09 12:00 ~ 2022-10-19 18:00
+* 活动要求:
+  * 内容: 关于 IDEA 插件 Fast Request 的使用体验、技巧、教程等(需原创)
+  * 形式: oschina 博客、BiliBili 视频
+  * 要求: 获得 3000+阅读量或者播放量
+* 活动奖励: 1 年免费 Fast Request 授权 License (已有可累加到期年限)，共 5 个名额，根据内容质量及阅读和播放量综合排名决定胜出者
+
+![](/img/activity/activity1.png)
+
+---
+
+---
+url: /guide/buy.md
+---
+# 购买
+**购买分为 2 种方式**
+
+* 账号模式: 注册 [jetbrains 账号](https://account.jetbrains.com/licenses) 购买(推荐)
+* 邮件模式: 直接使用 email 邮箱接收 license
+
+[comment]: <> "- License server 模式: <Badge text=\"不支持\" type=\"danger\" vertical=\"middle\"/>"
+
+**注册 jetbrains 账号购买方式可以方便后续找 license，且不容易丢失**
+
+请参考 JetBrains 提供的 [文档](https://plugins.jetbrains.com/docs/marketplace/how-to-buy-a-plugin.html)，也可以参考以下作者提供的几个步骤。
+
+## Step0: 前往插件激活页面
+
+点击**激活插件**，当然你也可以先免费试用插件 30 天，点击 start trial。
+
+路径： `Help(菜单栏) -> Register... -> Fast Request`
+
+![](/img/buy/activate.png)
+
+## Step1: 点击 Buy license
+
+![](/img/buy/step1.png)
+
+## Step2: 选择一个套餐点击 Buy
+
+* 套餐 1: 按月计费订阅
+* 套餐 2: 按年计费订阅(推荐)
+
+直走链接：<https://plugins.jetbrains.com/plugin/16988/pricing>
+
+![](/img/buy/step2.png)
+
+## Step3: 邮箱确认(非 jetbrains 账号方式购买)
+
+如果您没有注册 jetbrains 账号并登录，则会进入此页面，这边需要输入接受 license 的邮箱地址
+点击 next 进入购买确认页面
+
+![](/img/buy/step3.png)
+
+## Step4: 填写信息并点击支付宝或者微信扫码付款
+
+![](/img/buy/step4.png)
+
+::: tip
+场景：支付页面发现只能用信用卡支付，无法使用微信、支付宝
+
+解决方案：打开链接 <https://account.jetbrains.com/profile-details>
+
+`country/Region` 修改为 `China Mainland` 中国大陆再返回点击购买即可
+如果没有这个选项，可以换个账号用购买并使用离线激活来激活插件，或者邮件联系 Sales.cn@jetbrains.com 声明修改账号的 country/Region 成 `China Mainland` 中国大陆
+:::
+
+## Step5: 填写 License 信息激活插件
+
+> 在线激活
+
+点击 **Help(菜单栏) -> Register... -> Add New License**
+
+需要登录 Jetbrains 账号
+
+![](/img/buy/step5.png)
+
+> 离线激活
+
+* 1.[下载离线激活码](https://account.jetbrains.com/licenses)
+
+![](/img/buy/offlineCodeDownload.png)
+
+* 2.在 Activation code 中输入激活码
+
+![](/img/buy/offline.png)
+
+## Tips💡
+
+::: caution License 信息
+
+**请妥善保存好您的激活码信息，不要泄露证书信息**
+![](/img/buy/accountLicense.png)
+
+:::
+
+**如果您还有其他疑问，请加入群聊联系我 ↓↓↓**
+
+![wechat group](/img/wechatGroup.png)
+
+入正
+
+---
+
+---
+url: /guide/concatGroup.md
+---
+# 群聊
+1. **加入微信群购买享折扣️**， 教程已放群公告，不定期发放 license [福利](./activity.md)以及活动通告
+2. 群里全都是 Javaer，经常会讨论一些技术问题，热点新闻，跳槽，吐槽等，可以帮助你学到一些东西。
+3. 如果群二维码**过期**请直接添加二维码下方作者微信
+
+[![Slack](https://img.shields.io/static/v1?label=Slack\&message=Restful%20Fast%20Request\&logo=slack\&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw)
+
+![wechat group](/img/wechatGroup.png)
+
+如果扫码失败，请直接搜微信号==FastRequest99==
+
+---
+
+---
+url: /guide/eula.md
+---
+# EULA
+## Fast Request for JetBrains IDEs EULA
+
+“**开发者**”指 DKingSoft。
+
+“**JetBrains**”是指 JetBrains sro，其注册办事处位于捷克共和国布拉格 Na Hrebenech II 1718/10，14000，在布拉格市法院保存的商业登记处注册，C 部分，文件 86211，ID.Nr.：265 02 275。
+
+“**JetBrains Affiliate**”是指 JetBrains 的子公司和/或任何关联公司。
+
+“**JetBrains Marketplace**”是指由 JetBrains 或 JetBrains 附属公司运营的任何平台，JetBrains 或 JetBrains 附属公司在其上销售 JetBrains 产品的插件，包括网站 https://plugins.jetbrains.com 和/或任何其他网站或其他平台，无论是命名为 JetBrains Marketplace、JetBrains Plugins Repository 或其他名称。
+
+“**JetBrains 产品**”是指 JetBrains 提供的任何软件程序或服务。
+
+“**插件**”是指开发人员根据本 EULA 提供的适用于 JetBrains 产品的插件。
+
+“**插件信息**”是指以下信息和材料：(a) JetBrains Marketplace 插件标题、标签/类别、开发者名称、产品描述、图标、徽标或横幅图像，以及与插件相关的任何其他信息; (b) 与开发者相关或与插件相关的元数据、图形、艺术品、图像、商标、商品名称、徽标和其他描述性或识别信息和材料；(c) 在云托管插件的情况下，插件的 XML/JSON 描述符。
+
+“**插件用户**”是指能够同时访问和使用插件的用户。
+
+“**您**”是指签订本 EULA 的个人或实体。
+
+本 EULA 管辖通过 JetBrains Marketplace 向您提供的插件的使用条款。本 EULA 在您和开发者之间签订。
+
+本插件为付费插件(版本>=2022.1.4)，您必须确保插件用户的最大数量不超过您为其购买插件的插件用户数量。
+
+您被授权根据开发者提供的文档并在开发者指定的期限内使用插件。
+
+您不得：
+
+* 编辑、更改、修改、改编、翻译或以其他方式更改本软件的全部或任何部分，不允许将本软件的全部或任何部分与任何其他软件组合或合并到任何其他软件中，也不得反编译、反汇编或反向工程软件或尝试做任何此类事情
+* 出于任何商业目的复制、复制、分发、转售或以其他方式使用本软件
+* 允许任何第三方代表任何第三方或为任何第三方的利益使用本软件
+* 以任何违反任何适用的当地、国家或国际法律的方式使用本软件
+* 将软件用于 DKingSoft 认为违反本 EULA 协议的任何目的
+
+插件受版权和其他知识产权法律和条约的保护。开发者或其许可方拥有插件中的所有所有权、版权和其他知识产权。
+
+DKingSoft 保留向第三方授予使用本软件的许可的权利。
+
+所有插件均按“**原样**”和“**可用**”提供给您，使用插件的风险由您自己承担。开发者对插件的使用或性能不做任何保证。在适用法律允许的最大范围内，开发商否认所有其他明示或默示的保证和条件，包括但不限于对适销性、特定用途的适用性、所有权和不侵权的默示保证插件，以及提供或未能提供支持服务。开发者不保证插件是准确、可靠或正确的；该插件满足您的要求；插件将在任何特定时间或地点可用，不间断或安全；将纠正任何缺陷或错误；或者插件没有病毒或其他有害成分。
+
+在任何情况下，开发者均不对与使用开发者插件相关的任何直接或间接成本、损失或损害负责。
+
+开发者不对您造成的任何利润损失或间接损害承担责任，无论是何种原因造成的，并且在任何情况下，开发者因本协议或使用插件而产生的或与之相关的总责任都不会超过您通过 JETBRAINS 插件市场服务支付的费用适用于索赔前三个月内的插件。即使开发商已被告知责任可能超过金额，并且任何有限补救措施的基本目的未能实现，此限制仍将适用。JETBRAINS 不承担全部责任，因为 JETBRAINS 不是开发者和客户之间合同关系的一方。
+
+本 EULA 协议以及由本 EULA 协议引起或与之相关的任何争议均应受法律管辖并按法律解释。
+
+更新时间: 2022-08-20
+
+---
+
+---
+url: /guide/faq.md
+---
+# FAQ
+> 关键字含义
+> &#x20;&#x20;
+>
+> ***
+>
+> 我们将持续更新开发者遇到的问题以及解决方案
+
+\[\[toc]]
+
+## S: 如何忽略 .fastRequest 目录
+
+* 方式 1：在 IDEA 中不可见
+
+有些开发者不希望看到`.fastRequest`目录，可以前往 idea 设置中的`File Types`，在`Ignore files and folders`中添加`.fastRequest`即可
+
+![ignoreFastRequestDir](/img/faq/ignoreFastRequestDir.png)
+
+* 方式 2：设置全局 gitignore
+
+当你想要在 git 管理的项目中忽略`.fastRequest`目录，可以设置全局 gitignore 文件。
+
+1. 创建全局 .gitignore 文件： 选择一个位置来存储全局 .gitignore 文件，例如在你的主目录中创建一个名为 .gitignore\_global 的文件。
+
+```shell
+touch ~/.gitignore_global
+```
+
+2. 配置 Git 使用全局 .gitignore 文件： 使用 Git 命令将这个文件设置为全局 .gitignore 文件。
+
+```shell
+git config --global core.excludesFile ~/.gitignore_global
+```
+
+3. 编辑全局 .gitignore 文件： 在 ~/.gitignore\_global 文件中添加你想要忽略的文件或目录模式。
+
+```
+.fastRequest
+```
+
+* 方式 3：针对已经提交到 git，但是后面想忽略该目录
+
+```shell
+git rm --cached .fastRequest
+git commit -m "rm ignore folder"
+```
+
+后面再参考方式 1 或者方式 2 进行忽略
+
+## S: Slow operations are prohibited on EDT
+
+报错`Slow operations are prohibited on EDT`相关错误。
+
+在 SearchEveryWhere 中输入关键字 `ide.slow.operations.assertion` ,并将下图所示的关闭。
+
+![slowOperationsConfig](/img/faq/slowOperationsConfig.png)
+
+## S: 发送按钮被禁用,但是没有任何提示
+
+需要手动开启通知消息。如果通知消息不开启,很多提示都不能被展现,所以需要配置 IDEA 的消息通知设置。其他情况类同处理。
+
+需要前往 `Setting-> Appearance & Behavior->Nofications` 选中 `Display ballon notifications`和`Enable system notifications`. 如果`Don't ask again nofications`勾选了FastRequest,则需要移除条目。
+
+![enableNotifications](/img/faq/enableNotifications.png)
+
+## S: 超时时间设置
+
+默认: 60 秒
+
+点击插件设置按钮**管理配置**,设置ConnectTimeout和ReadTimeout的值。
+
+![manageConfig](/img/manageConfig.png)
+
+![timeout](/img/faq/timeout.png)
+
+## S: 快捷添加域名
+
+请参考 [ 项目级别域名配置](./features/projectLevelDomainConfig.md)
+(插件版本>=**2023.1.1**)
+
+## S: Url 错误
+
+![urlError](/img/skill/urlError.png)
+
+## S: 解析如何忽略某个字段
+
+方式 1： 给字段使用如下 2 种注解中的一种
+
+```
+com.fasterxml.jackson.annotation.JsonIgnore
+
+com.alibaba.fastjson.annotation.JSONField(serialize = false)
+```
+
+方式 2： 给字段增加 `static` 修饰符
+
+方式 3：注释上加@fastRequestParseIgnore
+
+```java
+/**
+ * xxx description
+ * @fastRequestParseIgnore
+ */
+private String someIgnoreField ;
+```
+
+方式 4: 忽略字段名解析配置
+
+![ignoreFiled](/img/2024.1.1/ignoreFiled.png)
+
+只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
+
+## S: 快速定位
+
+获取到窗口或者弹出框焦点以后，输入需要搜索的字母，快读定位，然后使用`↑`箭头或者`↓`箭头进行跳跃定位
+
+例如:
+
+![apiDocExample](/img/apiPreview.gif)
+
+## S: 多文件上传
+
+输入多个值并将字段类型设置为 file
+
+![multiFileUpload](/img/skill/multiFileUpload.png)
+
+## S: Body 中想直接传 text
+
+在 header 中加入**Content-Type: text/plain**
+
+考虑使用[常用头参数](./features/commonHeader.md)快速添加
+
+## S: 没有 Controller，如何发送请求
+
+参考[临时请求](./features/tempRequest.md)
+
+## S: 写脚本时得到提示
+
+复制一下代码，完成脚本编辑后删除
+
+```
+import cn.hutool.http.HttpUtil
+
+def request = HttpUtil.createGet("shouldremove")
+def response = request.execute()
+```
+
+## S: API 文档同步
+
+当你修改了你的接口参数，从 APIs 列表双击回来的 api 是你未更新前保存的 API，此时你想保证在线 API 文档是你修改后的，
+需要再点一下 (保存) 或者左侧图标  ,再进行同步。
+
+建议：不需要提前在 Github、Gitee、Gitlab 创建仓库，插件自动会帮助创建，开发者只需要提供仓库名就行
+
+## S: APIs 回显
+
+针对保存后的 api，又进行了修改，那么你需要手动补参数并保存。如果你完全不想要之前的参数了，直接点击([重新生成](/guide/features/regenerate.md))
+
+**请确保你每次修改参数后点击`保存`按钮**
+
+## S: 最佳视觉效果
+
+调整工具窗口宽度至`610`+像素，达到最佳视觉效果
+
+## S: 怀疑插件卡顿
+
+点击 Help 菜单选择 `Start CPU usage profile` -> `执行你认为卡顿的操作` -> `Stop CPU usage profile`。将生成出来的 jfr 文件发给我们分析
+
+## Q: Origin等请求头失效
+
+由于 `sun.net.www.protocol.http.HttpURLConnection` 设置了**受限标头**,以下一些请求头如果想使用,则需要给IDEA配置vm参数
+
+```java
+private static final String[] restrictedHeaders = {
+        /* Restricted by XMLHttpRequest2 */
+        //"Accept-Charset",
+        //"Accept-Encoding",
+        "Access-Control-Request-Headers",
+        "Access-Control-Request-Method",
+        "Connection", /* close is allowed */
+        "Content-Length",
+        //"Cookie",
+        //"Cookie2",
+        "Content-Transfer-Encoding",
+        //"Date",
+        //"Expect",
+        "Host",
+        "Keep-Alive",
+        "Origin",
+        // "Referer",
+        // "TE",
+        "Trailer",
+        "Transfer-Encoding",
+        "Upgrade",
+        //"User-Agent",
+        "Via"
+    };
+```
+
+点击 **help->Edit Custom Vm Options...**,在 **idea.vmoptions**(linux) 或者 **idea64.exe.vmoptions** (windows)中加入加入如下配置
+
+```
+-Dsun.net.http.allowRestrictedHeaders=true
+```
+
+## Q: 响应返回 Unexpected end of file from server
+
+造成的原图大致如下
+
+```
+1. 网络连接丢失
+2. 服务器决定关闭连接
+3. 客户端和服务器之间的某些东西（nginx、路由器等）终止了请求
+4. 服务端 api 需要代理但是 IDEA 没有配置,尤其是一些内网项目
+```
+
+IDEA配置代理: `Setting-> Appearance & Behavior->System Settings->HTTP Proxy`
+
+## Q: Spring Get参数带数组/集合参数报 400错误
+
+例如Url `http://localhost:8081/test?a[0].b[0].token=xxx&a[0].b[0].name=yyy`
+
+加入如下配置
+
+```java
+import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class WebConfig {
+
+    @Bean
+    public ConfigurableServletWebServerFactory webServerFactory() {
+        TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+        factory.addConnectorCustomizers((TomcatConnectorCustomizer) connector -> connector.setProperty("relaxedQueryChars", "|{}[]\\"));
+        return factory;
+    }
+
+}
+```
+
+## Q: 操作按钮不可见
+
+点击 `Options` 勾选 `Show Toolbar`
+
+![](/img/faq/showToolbar.png)
+
+## Q: 生成参数、跳转错乱
+
+**A:** controller 代码里面不要出现方法名一样的方法
+
+## Q: 左侧图标不显示
+
+左侧图标不显示。
+
+**A:** 打开配置 `setting->Editor->Gutter icons->show gutter icon`
+
+**B:** 检查是否安装了 forestx 插件，该插件目前会引起 Fast Request 插件图标不展示
+
+**C:** 复制该类内容删除该类并重新新建该类
+
+## Q: 输入参数后调用 API 发现无效
+
+**A:** 插件版本小于 2022.2.3 的在 table 控件编辑某个值的时候，需要在编辑完值后==先在空白处点一下==，再发送请求，该问题在 2022.2.3+版本得到修复
+
+## Q: 为啥插件没反应
+
+**A:** 请先完善配置，参考[快速开始](/guide/getstarted/start.md)，再点击图标
+
+## Q: 点击图标后 idea 卡死
+
+**A:** 你设计的实体类嵌套递归，插件不支持，比如说 A 实体类有 B 实体类的属性，B 实体类有 A 实体类的属性
+
+```java
+public class A {
+    private B b;
+    private int xx;
+}
+public class B {
+    private A a;
+    private String xx;
+}
+```
+
+以上这种情况如果你不需要 B 属性，那么你可以在生成的时候手动给 B 加一个 static 属性
+
+```java
+public class A {
+    private static B b;
+    private int xx;
+}
+```
+
+## S: APIs 丢失
+
+非常抱歉，安装过 2023.1.3 版本的(已隐藏)会导致历史 apis 丢失，此时需要手动找回数据。==请不要回退插件版本==
+
+0. 下载插件版本>=2023.1.3.2+的版本
+1. 找到项目下的.idea 目录，右键并点击 Local history(本地历史记录)，找到关于`.idea/FastRequestCollection.xml`的变更日志(标题包含了 Deleting)，找到最后一个版本，把其中的内容拷贝到`.idea/fastRequest/fastRequestCollection.xml`中，
+2. 重启 idea
+3. 在 APIs tab 下点击图标并确认数据转移
+
+![dataTransfer20231](/img/faq/dataTransfer202313.png)
+
+---
+
+---
+url: /guide/feature.md
+---
+# 功能
+\==不再维护==，[请点击这边的文档](./features/README.md)
+
+\[\[toc]]
+
+## 让图标动起来&#x20;
+
+开发者可以在下拉框里面自由选择并切换你想要的颜色，并且可以让它==动起来==(性能佳)
+
+![newLogo](/img/2022.2.4/newLogo.gif)
+
+![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
+
+## 调试 API 发送请求&#x20;
+
+![example](/img/example.gif)
+
+新版本中发送按钮在工具栏
+
+![sendRequest](/img/sendRequest.png)
+
+## SearchEveryWhere 支持&#x20;
+
+```
+输入案例
+/url              (查询指定url)
+get /list         (指定get方式指定url)
+post /save        (指定post方式指定url)
+方法关键字          (查询指定描述)
+```
+
+![searchEveryWhere](/img/searchEveryWhere.gif)
+
+## 针对响应是文件的 API&#x20;
+
+点击 Send and download
+
+![example\_download](/img/downloadFile.png)
+
+## 脚本&#x20;
+
+脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理\
+具体请参考-------> [脚本](./script.md)
+
+![scriptProject](/img/2022.2.3/scriptProject.png)
+
+![scriptModule](/img/2022.2.3/scriptModule.png)
+
+## API 导出到 Postman&#x20;
+
+![export2postman](/img/export2postman.gif)
+
+## API 列表&#x20;
+
+::: tip API 列表 name 取值:
+
+1. 如果方法使用了 swagger 的@io.swagger.annotations.ApiOperation，则取该注解的 value 值
+2. 如果没有 swagger 直接修饰，则取方法的 javaDoc 描述
+3. 如果以上都没有则返回 New Request
+
+API 的 name 值支持修改
+
+:::
+
+![api](/img/apis_hd.png)
+![apiManager](/img/apiManager.png)
+
+## 保存请求&#x20;
+
+::: tip 特别说明
+
+1. 保存的请求默认会放入*Default Group*中，支持拉拽放入别的组，当然最好是加入 module 分组，请查看 api 分组自动关联
+
+2. API 取名:如果 api 使用了 swagger 注解`@ApiOperation("xxx")`，则 api 取名 xxx，如果没加 swagger 注解，则使用 javadoc 作为 api 的名称，否则将取名 New Request
+
+```
+if (@ApiOperation("xxx"))
+    apiName = xxx
+else if(java doc)
+    apiName = java doc
+else
+    apiName = New Request
+```
+
+:::
+![example\_download](/img/saveRequest.png)
+
+## API 分组参数保存支持&#x20;
+
+目的:一个 API 下保存不同组合的参数
+
+[*B 站教程*](https://www.bilibili.com/video/BV1zU4y1S7pC?share_source=copy_web\&vd_source=c46db3e7c134b1948dabbea9717a72ac)
+
+如何操作:输入参数后点击==分组请求保存==
+
+\==原保存操作将默认归类到 Default 分组==
+
+![groupSave](/img/2022.2.1/groupSave_en.png)
+
+**切换参数**
+
+以下是 book 列表 3 种语言的查询
+
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif)
+
+## 临时请求保存支持&#x20;
+
+目的:项目中保存任意不属于本项目的请求，用于临时调用，跟当前项目代码不关联
+
+临时请求保存的 Request 的 Url 必须以==http==或者==https==开头
+
+![tempSave](/img/2022.2.1/tempSave_en.png)
+
+## 重新生成请求&#x20;
+
+::: tip 特别说明
+如果你已经保存一个请求，但是想彻底重新修改其中的参数，那么你可以选择该操作
+:::
+
+![regenerate](/img/regenerate.png)
+
+## CURL 拷贝&#x20;
+
+必须是先生成方法 url 及参数后，点击工具栏![curl](/img/icon/curl_dark.svg)
+
+![curl](/img/curl.png)
+
+## 快速添加 header&#x20;
+
+如果你的请求需要一个 token 而 token 可以通过一个登陆接口得到，那么你可以不用每次手动添加，只需要访问一下登录接口再通过以下操作来处理
+
+![fastAddToken](/img/fastAddToken.gif)
+
+## API 分组自动关联&#x20;
+
+api 分组是为了将保存的 api 保存到不同分组以便区分不同的 api，当处于多模块的项目情况下，支持扫描项目中的 module，并且快速得将 module 添加到分组中，这种方式会将分组添加到 root 下
+
+**v2.1.2 保存 api 的时候自动创建 module group**
+
+![apiGroup](/img/apiGroup.gif)
+
+::: tip 特别说明
+
+1. 如果没有创建 module 分组，那么保存请求的时候会将保存的请求放入 Default Group
+2. 如果创建 module 分组，那么保存请求的时候会自动根据当前 API 所处于的 module 自动归类到对应的 Module Group
+3. 当然你可以通过拉拽的方式自行移动 API 到对应的更小的 group，并不冲突
+
+:::
+
+模块支持快速搜索(光标焦点放在列表上输入关键字即可)
+
+![moduleSearch](/img/moduleSearch.gif)
+
+## Json 语法检查&#x20;
+
+右上角提供了 json 语法检查，如果输入有误会提示对应的错误\
+当然也支持格式化等操作
+
+![json](/img/json.png)
+
+## API 导航树&#x20;
+
+```
+选中树输入关键字，再按回车或者鼠标左键双击即可定位到API
+
+悬浮鼠标显示api的doc
+
+API Navigate树默认是懒加载的，需要点击刷新按钮，同样每次新增了API你也需要刷新才能得到
+懒加载有利于加快idea启动速度
+```
+
+![apinavi](/img/apinav.gif)
+
+## Headers 分组&#x20;
+
+```
+场景:SpringBoot等多模块项目不同项目、不同环境下头参数不同，为了快速自动切换headers，引入了header分组
+操作方式：
+1.在headers group里修改约束:输入的值必须是标准json格式
+2.直接切换环境，然后再headers表格中输入对应的key、value值
+```
+
+![headerSwitch](/img/headerSwitch.gif)
+
+## APIs 导入导出&#x20;
+
+利用改功能，你可以非常方便得将自己已有的 APIs 分享给别的开发者，或者导入到其他设备上的 IDEA
+
+::: caution 注意点
+
+* 导出的时候会新增一个名为 fastRequestCollection.xml 的 xml 文件，你不能重命名它， 默认导出到当前项目路径下
+
+* 导入的时候会做默认备份，并且会在.idea 文件夹下生成一个名为 fastRequestCollection-yyyyMMddHHmmssSSS.xml 的文件，
+  如果是导入误操作，可以通过导入它来还原
+
+* 如果 fastRequestCollection.xml 不可见，点击 file->Reload All from Disk 来强制刷新
+
+:::
+
+![headerSwitch](/img/exportImportApis.gif)
+
+## swagger 默认值解析支持&#x20;
+
+以下是一些 example
+
+优先级: swagger 配置的值 > 配置默认值
+
+::: code-tabs
+
+@tab swagger2
+
+```java
+* @ApiParam
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",defaultValue="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+
+* @ApiImplicitParam
+
+@ApiImplicitParams({
+    @ApiImplicitParam(paramType="query",name="pageNo",dataType="String",required=true,value="pageNo",defaultValue="1"),
+    @ApiImplicitParam(paramType="query",name="pageSize",dataType="String",required=true,value="pageSize",defaultValue="10")
+})
+@GetMapping(value="/testPage)
+public String testPage(@RequestParam("pageNo") Integer pageNo, @RequestParam("pageSize") Integer pageSize) {
+    return "";
+}
+
+
+* @ApiModelProperty
+@Data
+public class UserDto {
+    @ApiModelProperty(example = "Bob")
+    private String userName;
+}
+```
+
+@tab swagger3
+
+```java
+* @Parameter
+
+@GetMapping(value="/test/{id}")
+public String test3(@Parameter(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+* @Schema(swagger3)
+
+@Data
+public class UserDto {
+    @Schema(example = "Bob")
+    private String userName;
+}
+```
+
+:::
+
+## API 自动生成注释&#x20;
+
+字段注释需要符合标准注释规范，使用`/**描述*/`
+
+可以通过点击隐藏或显示 Description
+
+![paramDescription](/img/paramDescription.png)
+
+## API 生成 Markdown 文档&#x20;
+
+请注意 word 形式的 API 内部采用 html 来实现的，所以不要觉得奇怪，导出就行
+
+Response Example 需要运行你的 API 后才会被显示
+
+![shareDocButton](/img/shareApi.png)
+
+![apiDocExample](/img/apiDocExample.png)
+
+## API 一览表预览&#x20;
+
+聚焦窗口后输入关键字，根据 API 的路径关键字可以快速搜索
+
+![apiDocExample](/img/apiPreview.gif)
+
+## 项目级别全局参数支持&#x20;
+
+支持项目级别内的全局参数，不受多模块影响
+
+配置优先级`api头 > 项目级别全局请求头 > 全局请求头`
+
+![projectConfigParam](/img/projectConfigParam.png)
+
+## cURL 导入&#x20;
+
+![importByCurl](/img/2022.2.1/importByCurl.gif)
+
+\==请注意如果需要绑定方法，则需要将光标放置到方法名上==
+
+## 当前方法定位&#x20;
+
+当你生成好方法的 url 以后，又切换到代码中的别的地方，然后又想开始调试该 API 方法，可以通过此功能快速定位到代码
+
+![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
+
+## 历史请求预览&#x20;
+
+隐藏技能:双击记录可以展示详情
+
+![history](/img/history.png)
+
+## 终止 API 请求功能&#x20;
+
+![stopApi](/img/2022.2.2/stopApi.gif)
+
+## 批量导出 API 文档&#x20;
+
+![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)
+
+## 一键拷贝 Url&#x20;
+
+![copyUrl](/img/2022.2.3/copyUrl.png)
+
+## Raw 中 html 预览&#x20;
+
+可以对 html 进行预览
+
+![rawHtmlPreview](/img/rawHtmlPreview.png)
+
+## Api 注释预览&#x20;
+
+![showCommentConfig](/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](/img/2022.2.6/showCommentInNavigate.png)
+
+---
+
+---
+url: /guide/features/index.md
+---
+# 功能列表
+
+文档中的图标对应插件中的按钮图标，大标题对应 tab 以及功能
+
+![toolwindowNew](/img/toolwindowNew.png)
+
+## Request
+
+* [ 让图标动起来](./makeIconMove.md)
+* [ 自定义工具栏](./customToolbar.md)
+* [ 项目域名配置](./projectLevelDomainConfig.md)
+* [ Environment](./environment.md)
+* [ 项目级别全局参数支持](./projectValueConfig.md)
+* [ SearchEveryWhere](./searchEveryWhere.md)
+* [ 调试 API 发送请求](./debugApi.md)
+* [ 下载文件](./downloadApi.md)
+* [ 终止 API 请求功能](./stopRequest.md)
+* [ 保存请求](./saveRequest.md)
+* [ API 分组保存](./apiGroup.md)
+* [ 临时请求](./tempRequest.md)
+* [ Apifox 集成](./apifox.md)
+* [ 函数](./function.md)
+* [ Postman 集成](./postmanSync.md)
+* [ API 分组切换](./apiGroup.md)
+* [ 当前方法定位](./navigateCurrentMethod.md)
+* [ 多窗口 Tab](./navigateCurrentMethodJson.md)
+* [ 重新生成请求](./regenerate.md)
+* [ 清除](./clear.md)
+* [ cURL 导入](./curlImport.md)
+* [ cURL 拷贝](./copyCurl.md)
+* [ 一键拷贝 Url](./copyUrl.md)
+* [ 历史请求预览](./historyRequest.md)
+* [   API 文档同步](./apiDocSync.md)
+* [ API 文档导出](./shareApiDoc.md)
+* [ OpenAPI导出](./openApi.md)
+* [ Markdown 文档模板配置](./markdownDocTemplateConfig.md)
+* [ 项目配置刷新](./projectConfigRefresh.md)
+* [ 年度报告](./annualReport.md)
+
+***
+
+* [ 管理配置](./settingManager.md)
+* [ 全屏](./fullScreen.md)
+* [ 文档/快速联系](./docAndContact.md)
+* [ EULA](../eula.md)
+
+***
+
+* [ 自动域名](./autoDomain.md)
+* [ AI](./ai.md)
+* [ Headers 分组](./headerGroup.md)
+* [ 常用头参数](./commonHeader.md)
+* [ Headers 预设](./headersPreset.md)
+* [ Headers批量编辑](./bulkEdit.md)
+* [ Basei auth](./basicAuth.md)
+* [ Html 预览](./htmlPreview.md)
+
+## Apis
+
+* [ API 列表](./apiList.md)
+* [ API 导出到 Postman](./apiToPostman.md)
+* [ APIs 导入导出](./apiImportExport.md)
+* [ 批量导出 API 文档](./batchExportApiDoc.md)
+
+## Navigate
+
+* [ API 导航树](./apiNavigateTree.md)
+
+## Generate
+
+* [ Swagger 默认值](./swaggerDefaultValueParse.md)
+* [ API 自动生成注释](./autoDescription.md)
+
+## Editor
+
+* [ 项目域名快速配置](./projectLevelDomainConfig.md)
+* [ API 一览表预览](./apiPreview.md)
+* [ Api 注释预览](./apiCommentPreview.md)
+* [ 解析策略](./parseStrategy.md)
+
+## Script
+
+* [ 脚本](./script.md)
+
+## Other
+
+* [ 快速添加 header](./quickAddHeader.md)
+* [ Json 语法检查](./jsonGrammarCheck.md)
+
+---
+
+---
+url: /guide/features/ai.md
+---
+# AI
+
+版本要求:&#x20;
+
+## 1.功能
+
+![AI](/img/2024.1.4/ai.png)
+
+为了将 AI 的回复更加精准，我们将 AI 的 设置更加精细化，加入了3个维度，加入了`概述`、`提问范例`、`提问范例结果`。此设计即让 AI 先训练一次问答，从而使得结果更加符合预期
+
+我们可以在`概述`中尽量表述问题的各种可能，并在`提问范例`和`提问范例结果`中给于`概述`中描述的样本。
+
+以下是一个让 AI 帮忙优化 JSON 报文的指令案例
+
+::: code-tabs
+
+@tab 概述
+
+```
+你是一位优秀的 JSON 处理程序。每当用户向您发送 JSON 时，您都应该以固定的 JSON 格式响应用户，并根据
+JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只需修改 JSON 中的值，而无需更改其结构。
+```
+
+@tab 提问范例
+
+```
+{"id":1,"title":"title_ahska","simpleDesc":"simpleDesc_ohga1","content":"content_yujga"}
+```
+
+@tab 提问范例结果
+
+```
+{
+  "id": 1,
+  "title": "哈利·波特与魔法石",
+  "simpleDesc": "哈利·波特在霍格沃茨魔法学校展开惊心动魄的冒险，揭开危险的秘密并拯救有益的世界。"
+}
+
+```
+
+:::
+
+::: tip
+编辑器中选中的值需要用 **${SELECTION}** 来替换，完整例子如下。
+
+**${SELECTION}** 可以通过指令设置框中的{}图标快速生成
+:::
+
+![](/img/features/aiPromptExample.png)
+
+## 2. Api key 获取与配置
+
+1. [OpenAI](https://platform.openai.com/docs/api-reference/chat) 需要在生成后粘贴进 Api key 输入框
+2. [CodeGeeX](https://codegeex.cn/) 只需要点击 Get api key 登录后即可自动补全
+3. Custom OpenAI 即私有化部署的 OpenAI 服务，参考第 1 种方式获取 Api key
+
+![](/img/2024.1.3/aiManagenemt.png)
+
+## 3. 触发 AI 指令
+
+![](/img/features/aiPromptTrigger.png)
+
+选中编辑器中的内容以后，再点击指令。
+
+---
+
+---
+url: /guide/features/annualReport.md
+---
+# 年度报告
+
+版本要求:&#x20;
+
+统计了历年操作的数据，你是否要来**PK**一把。此处省略 1 个狗头
+
+![annualReport](/img/2023.1.2/annualReport.png)
+
+---
+
+---
+url: /guide/features/apiAssociation.md
+---
+# API 分组自动关联
+
+版本要求: &#x20;
+
+api 分组是为了将保存的 api 保存到不同分组以便区分不同的 api，当处于多模块的项目情况下，支持扫描项目中的 module，并且快速得将 module 添加到分组中，这种方式会将分组添加到 root 下
+
+**v2.1.2 保存 api 的时候自动创建 module group**
+
+![apiGroup](/img/apiGroup.gif)
+
+::: tip 特别说明
+
+1. 如果没有创建 module 分组，那么保存请求的时候会将保存的请求放入 Default Group
+2. 如果创建 module 分组，那么保存请求的时候会自动根据当前 API 所处于的 module 自动归类到对应的 Module Group
+3. 当然你可以通过拉拽的方式自行移动 API 到对应的更小的 group，并不冲突
+
+:::
+
+模块支持快速搜索(光标焦点放在列表上输入关键字即可)
+
+![moduleSearch](/img/moduleSearch.gif)
+
+---
+
+---
+url: /guide/features/apiCommentPreview.md
+---
+# Api 注释预览
+
+版本要求:&#x20;
+
+![showCommentConfig](/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](/img/2022.2.6/showCommentInNavigate.png)
+
+---
+
+---
+url: /guide/features/apiDocSync.md
+---
+# API 文档同步
+
+版本要求:&#x20;
+
+## 介绍
+
+用于将 API 文档同步至 Github、 Gitee、 Gitlab，
+生成在线文档，分享给其他的小伙伴看。
+
+![apiSync](/img/2022.2.7/apiSync.png)
+
+## 注意点
+
+* 内网无网络情况下请用私有域名 gitlab，gitlab 只支持 v4 不支持其他版本，不行考虑升级
+* 如果配置后的仓库在云端不存在，则默认创建==私有==的仓库
+* 项目访问 404 了，解决办法是分享的时候需要将仓库设置为 public 或者将小伙伴拉至仓库成为某一个成员
+* 一个项目对应同步一个仓库，确定好一个仓库并且同步了一部分文档以后，不要再在后面切换修改仓库，历史记录无法同步
+
+## 配置介绍
+
+![apiSyncSetting](/img/2022.2.7/apiSyncSetting.png "同步配置")
+
+注意点: 命名策略决定了同步至云端的文件名称，文件名称来自 Javadoc 或者 Swagger 方法命名注解，如果勾选使用 javadoc，请确保 Javadoc 和 Swagger 方法命名一定要==简短==，
+否则云端的文件名会非常长，这种情况下考虑勾选方法名来同步。
+
+## Token
+
+生成的 token 需要勾选对应的最小权限来支持 api 同步，同时需要确保 token 在有时间效期内
+
+* Gitee
+
+**必须勾选 projects**
+
+![giteeToken](/img/2022.2.7/giteeToken.png "Gitee token")
+
+* GitHub
+
+**必须勾选 repo**
+
+![githubToken](/img/2022.2.7/githubToken.png "Github token")
+
+* Gitlab
+
+**必须勾选 api**
+
+![gitlabToken](/img/2022.2.7/gitlabToken.png "Gitlab token")
+
+---
+
+---
+url: /guide/features/apifox.md
+---
+# Apifox 集成
+
+版本要求:&#x20;
+
+![apifoxIntegration](/img/2024.1.4/apifoxIntegration.png)
+
+## 1. 配置 API access token
+
+![apifoxGenerateApikey](/img/features/apifoxGenerateApikey.png)
+
+参考 Apifox 官方文档 [Apifox 开放 API](https://apifox.com/help/openapi), 获取 API access token 的功能路径：`头像-账号设置- API 访问令牌`。
+
+::: tip 有效期
+需要注意的是，过了 Api access token的有效期，插件关于 Apifox 同步的功能将全部失效，所以建议在创建 Api access token 的时候设置为`无限期`
+:::
+
+## 2. 映射项目
+
+![apifoxConfigProject](/img/features/apifoxConfigProject.png)
+
+当我们正确设置好 Api access token 之后，需要对 IDEA 项目与 Apifox 的项目进行一个映射关联，点击刷新项目，当项目加载完毕以后，点开团队选项，勾选对应的项目即可。
+
+## 3. 同步 Environment
+
+![apifoxSyncEnvironment](/img/features/apifoxSyncEnvironment.png)
+
+同步 Environment 会将项目的不同环境的域名、变量、全局参数全部同步至 Apifox，作为 Apifox 的服务参数、变量以及全局参数。这一步建议放在 API 同步之前**先执行**
+
+## 4. 同步 API
+
+![apifoxSyncApi](/img/features/apifoxSyncApi.png)
+
+同步 API 需要先将 API 进行保存，可以手动触发，也可以自动触发，自动触发需要在 Apifox 同步设置中勾选`保存 API 后同步 Apifox`选项。
+
+## 5.视频教程
+
+[Bilibili视频教程](https://www.bilibili.com/video/BV1pM4m1Q7c5)
+
+---
+
+---
+url: /guide/features/apiGroup.md
+---
+# API 分组
+
+版本要求:&#x20;
+
+目的:一个 API 下保存不同组合的参数
+
+[*B 站教程*](https://www.bilibili.com/video/BV1zU4y1S7pC?share_source=copy_web\&vd_source=c46db3e7c134b1948dabbea9717a72ac)
+
+如何操作:输入参数后点击分组请求保存
+
+::: tip
+原保存操作将默认归类到 Default 分组
+:::
+
+![groupSave](/img/2022.2.1/groupSave.png "保存分组")
+
+**切换参数**
+
+以下是 book 列表 3 种语言的查询,点击进行切换
+
+![apiParamGroup](/img/2022.2.1/apiParamGroup.png "切换分组")
+
+---
+
+---
+url: /guide/features/apiImportExport.md
+---
+# APIs 导入导出
+
+版本要求: &#x20;
+
+利用该功能，你可以非常方便得将自己已有的 APIs 分享给别的开发者，或者导入到其他设备上的 IDEA。
+
+::: caution 注意点
+
+* 导出的时候会新增一个名为 fastRequestCollection.xml 的 xml 文件，你不能重命名它， 默认导出到当前项目路径下。
+
+* 导入的时候会做默认备份，并且会在.idea 文件夹下生成一个名为 fastRequestCollection-yyyyMMddHHmmssSSS.xml 的文件，
+  如果是导入误操作，可以通过导入它来还原。
+
+* 如果 fastRequestCollection.xml 不可见，点击 file->Reload All from Disk 来强制刷新。
+
+:::
+
+![exportImportApis](/img/exportImportApis.gif)
+
+---
+
+---
+url: /guide/features/apiList.md
+---
+# API 列表
+
+::: tip API 列表 name 取值:
+
+1. 如果方法使用了 swagger 的 `@io.swagger.annotations.ApiOperation` ，则取该注解的 `value` 值
+2. 如果没有 swagger 直接修饰，则取方法的 javaDoc 描述
+3. 如果以上都没有则返回 New Request
+
+API 的 name 值支持修改。
+
+:::
+
+![api](/img/apis_hd.png "API列表")
+
+![apiManager](/img/apiManager.png "API管理")
+
+---
+
+---
+url: /guide/features/apiNavigateTree.md
+---
+# API 导航树
+
+版本要求:&#x20;
+
+::: tip
+
+1. 选中树输入关键字，再按回车或者鼠标左键双击即可定位到 API
+
+2. 悬浮鼠标显示 api 的 doc
+
+3. API Navigate 树需要点击刷新按钮，同样每次新增了 API 你也需要刷新才能得到
+
+:::
+
+![apinavi](/img/apinav.gif)
+
+---
+
+---
+url: /guide/features/apiPreview.md
+---
+# API 一览表预览
+
+版本要求:&#x20;
+
+1. 聚焦窗口后输入关键字，根据 API 的路径关键字可以快速搜索
+2. 双击条目即可跳转到方法所在代码位置
+
+![apiDocExample](/img/apiPreview.gif)
+
+---
+
+---
+url: /guide/features/apiToDoc.md
+---
+# API 生成文档
+
+版本要求:&#x20;
+
+请注意 word 形式的 API 内部采用 html 来实现的，所以不要觉得奇怪，导出就行。
+
+Response Example 需要运行你的 API 后才会被显示
+
+![shareDocButton](/img/shareApi.png)
+
+![apiDocExample](/img/apiDocExample.png)
+
+---
+
+---
+url: /guide/features/apiToPostman.md
+---
+# API 导出到 Postman
+
+![export2postman](/img/export2postman.gif)
+
+最新版本已废除，请移步[ Postman 集成](./postmanSync.md) 或者 [ OpenAPI导出](/guide/features/openApi.md)。
+
+---
+
+---
+url: /guide/features/autoDescription.md
+---
+# API 自动生成注释
+
+版本要求:&#x20;
+
+字段注释需要符合标准注释规范，使用`/**描述*/`。
+
+可以通过点击隐藏或显示 Description。
+
+![paramDescription](/img/paramDescription.png)
+
+---
+
+---
+url: /guide/features/autoDomain.md
+---
+# 自动域名
+
+版本要求:&#x20;
+
+## 触发点
+
+方法左侧点击的时候，如果没有配置域名，则自动创建一个。
+
+## 项目名取值
+
+自动生成的配置项目名取自当前 API 的模块名。
+
+为什么呢？因为比方说项目下有 2 个模块`Module-1`、`Module-2`的 API，如果`Module-1`的域名已存储，在`Module-2`下的 API 点击方法左侧点击的时候，
+**老版本**做不到自动切换项目名。
+
+\==建议后期不要手动添加项目名==，因为插件无法找到映射关系，这容易导致 API 保存的时候本该是用`Module-2`的域名，结果用了`Module-1`的域名。
+
+所以自动域名的另外一个好使是==API 域名的自动切换==，如果没有则自动生成，如果有需改改进，开发者只需要修改域名值即可！插件将自动适配!
+
+## 配置文件解析逻辑
+
+1. 读取`application.yml`或者`bootstrap.yml`。如果找到配置`server.port`或者`server.servlet.context-path`，则取该配置。
+2. 如果以上配置文件无法找到`server.port`或者`server.servlet.context-path`，则读取`spring.profiles.active`，作为变量`env`。接着寻找`application-env.yml`或者`bootstrap-env.yml`，寻找配置`server.port`或者`server.servlet.context-path`
+3. properties 文件逻辑类似
+4. 以上配置无法找到则`port=8080，context-path=/`
+5. 项目名称取自模块名
+6. `spring.profiles.active`不支持 Maven 变量读取解析，例如`spring.profiles.active=@active.env@`
+7. 针对历史已保存的 api，插件不做自动域名处理；针对新的 API，如果开关开启，将自动创建域名
+
+## 配置开关
+
+![autoDomain](/img/2023.1.4/autoDomain.png)
+
+---
+
+---
+url: /guide/features/basicAuth.md
+---
+# Basic auth
+
+功能: 用 Basic auth 的形式往 Headers 添加 Authorization 头
+
+![basicAuth](/img/basicAuth.png)
+
+---
+
+---
+url: /guide/features/batchExportApiDoc.md
+---
+# 批量导出 API 文档
+
+版本要求:&#x20;
+
+选中对应的文件夹，即可导出文件夹下的所有 API。
+
+![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)
+
+---
+
+---
+url: /guide/features/bulkEdit.md
+---
+# Headers批量编辑
+
+版本要求:&#x20;
+
+&#x20;此功能可以实现从浏览器直接复制header参数导入到插件
+
+```
+1.每组数据用换行符分隔
+2.key和value用:分隔
+3.在要添加但保持禁用状态的键前面加//
+```
+
+![batchEdit](/img/2023.1.6/batchEdit.png)
+
+---
+
+---
+url: /guide/features/clear.md
+---
+# Clear
+
+版本要求:&#x20;
+
+此功能帮助清除参数和内容
+
+![clear](/img/2022.2.6/clear.png)
+
+---
+
+---
+url: /guide/features/commonHeader.md
+---
+# 常用头参数
+
+版本要求:&#x20;
+
+此功能帮助快速添加一些比较常用的 Header 参数，支持多个选择后点击添加
+
+![commonHeader](/img/2022.2.7/commonHeader.gif)
+
+---
+
+---
+url: /guide/features/copyCurl.md
+---
+# CURL 拷贝
+
+版本要求：&#x20;
+
+必须是先生成方法 url 及参数后，点击工具栏  或者
+
+![curlCopyNew](/img/curlCopyNew.png)
+
+![curl](/img/curl.png)
+
+---
+
+---
+url: /guide/features/copyUrl.md
+---
+# 一键拷贝 Url
+
+版本要求:&#x20;
+
+![copyUrl](/img/2022.2.3/copyUrl.png)
+
+---
+
+---
+url: /guide/features/curlImport.md
+---
+# cURL 导入
+
+版本要求:&#x20;
+
+![importByCurl](/img/2022.2.1/importByCurl.png)
+
+![importByCurl](/img/2022.2.1/importByCurl.gif)
+
+\==请注意如果需要绑定方法，则需要将光标放置到方法名上==
+
+---
+
+---
+url: /guide/features/customToolbar.md
+---
+# 自定义工具栏
+
+版本要求:&#x20;
+
+![customToolbar](/img/2024.1.2/customToolbar.png)
+
+使用自定义工具栏，选择自己需要使用的功能，将其他功能按钮进行隐藏，设置完成需要重启 IDEA
+
+---
+
+---
+url: /guide/features/debugApi.md
+---
+# 调试 API 发送请求
+
+新版本中发送按钮在工具栏，左侧图标从::restfulFastRequest1::变为::restfulFastRequest::
+
+![sendRequest](/img/sendRequest.png)
+
+* 老版本
+
+![example](/img/example.gif)
+
+---
+
+---
+url: /guide/features/docAndContact.md
+---
+# 文档/快速联系
+
+* &#x20;快速打开文档功能页面,无需记忆
+* &#x20;快速打开历史变更,无需记忆
+* &#x20;快速添加作者微信,排查问题
+* &#x20;快速关注作者推特
+
+![docAndContact](/img/docAndContact.png)
+
+---
+
+---
+url: /guide/features/downloadApi.md
+---
+# 下载文件
+
+点击 Send and download&#x20;
+
+![example\_download](/img/downloadFile.png)
+
+---
+
+---
+url: /guide/features/environment.md
+---
+# Environment
+版本要求:&#x20;
+
+Environment中可以设置存储一些变量，并且在其他地方使用`{{key}}`来替换固定值或者魔法值。
+
+可以在以下场景中使用`{{key}}`
+
+* Url
+* Headers
+* Path Params
+* URL Params
+* Body
+  * JSON
+  * Form URL-Encoded
+  * Multipart
+
+## 定义
+
+Environment的Tab值取自项目域名配置中的`环境`，key需要满足正则表达式`^[a-zA-Z_$][a-zA-Z0-9_$]*$`
+
+![environment](/img/2023.1.8/environment.png)
+
+::: tip 小技巧
+聚焦表格后，可以输入key值来快速定位行
+:::
+
+## 使用
+
+在Value中直接输入`{{key}}`来替换固定值或者魔法值，当替换后，如果Environment中包含此key则会绿色高亮。鼠标悬浮500ms后可以显示当前的Environment值
+
+![useEnvironmentVariable](/img/2023.1.8/useEnvironmentVariable.png)
+
+也可以选中**单行**，并点击从列表从选择。
+
+![chooseEnvironmentVariable](/img/2023.1.8/chooseEnvironmentVariable.png)
+
+::: tip 小技巧
+聚焦表格后，可以输入key值来快速定位行
+:::
+
+## 脚本
+
+参考 [脚本 -> demo -> 设置一个Environment变量](../script.md#demo)
+
+![environmentScript](/img/2023.1.8/environmentScript.png)
+
+---
+
+---
+url: /guide/features/fullScreen.md
+---
+# 全屏
+
+版本要求:&#x20;
+
+点击全屏，在分屏幕的情况下，界面更加友好，点击图中标注 ② 即可还原
+
+![fullScreen](/img/2022.2.7/fullScreen.png)
+
+---
+
+---
+url: /guide/features/function.md
+---
+# 函数
+
+路径：`项目级别配置 -> Functions`
+
+使用 `{{$函数名}}` 形式来替换魔法值。==函数必须是无参数的==，否则不能正常工作。
+
+输入`{{$`后按快捷键可以唤起函数自动补全。
+
+开发者可以利用 jdk 中自带的类写属于自己定制化的函数，例如随机 5 个字符串
+
+```java
+public String randomString() {
+    StringBuilder sb = new StringBuilder(5);
+    for (int i = 0; i < 5; i++) {
+        int randomIndex = RANDOM.nextInt(CHAR_NORMAL.length());
+        sb.append(CHAR_NORMAL.charAt(randomIndex));
+    }
+    return sb.toString();
+}
+```
+
+更可以使用 [java-faker](https://github.com/DiUS/java-faker) 库，定制各种类型的参数随机生成。
+
+::: tip 如何设置代码补全快捷键
+在 `Setting -> Keymap` 下的 `Main Menu->Code->Code Completion->Basic`
+:::
+
+---
+
+---
+url: /guide/features/headerGroup.md
+---
+# Headers 分组
+
+版本要求:&#x20;
+
+```
+场景:SpringBoot等多模块项目不同项目、不同环境下头参数不同，为了快速自动切换headers，引入了header分组
+操作方式：
+1.在headers group里修改约束:输入的值必须是标准json格式
+2.直接切换环境，然后再headers表格中输入对应的key、value值
+```
+
+![headerGroup](/img/headerGroup.png)
+
+![headerSwitch](/img/headerSwitch.gif)
+
+---
+
+---
+url: /guide/features/headersGroup.md
+---
+# Headers 分组
+
+版本要求:&#x20;
+
+```
+场景:SpringBoot等多模块项目不同项目、不同环境下头参数不同，为了快速自动切换headers，引入了header分组
+操作方式：
+1.在headers group里修改约束:输入的值必须是标准json格式
+2.直接切换环境，然后再headers表格中输入对应的key、value值
+```
+
+![headerSwitch](/img/headerSwitch.gif)
+
+---
+
+---
+url: /guide/features/headersPreset.md
+---
+# Headers 预设
+
+版本要求:&#x20;
+
+Header 预设支持创建不同的 Header 分组，管理各自的请求头，通过下拉选择轻松快捷得添加预设的 Header 参数。
+
+---
+
+---
+url: /guide/features/historyRequest.md
+---
+# 历史请求预览
+
+版本要求:&#x20;
+
+隐藏技能:双击记录可以展示详情
+
+![history](/img/history.png)
+
+---
+
+---
+url: /guide/features/htmlPreview.md
+---
+# Html 预览
+
+版本要求:&#x20;
+
+可以对 html 进行预览
+
+![rawHtmlPreview](/img/rawHtmlPreview.png)
+
+---
+
+---
+url: /guide/features/jsonGrammarCheck.md
+---
+# Json 语法检查
+
+版本要求:&#x20;
+
+右上角提供了 json 语法检查如果输入有误会提示对应的错误\
+当然也支持格式化等操作
+
+![json](/img/json.png)
+
+---
+
+---
+url: /guide/features/makeIconMove.md
+---
+# 让图标动起来
+
+开发者可以在下拉框里面自由选择并切换你想要的颜色，并且可以让它==动起来==(性能佳)
+
+![newLogo](/img/2022.2.4/newLogo.gif)
+
+![newLogoConfig](/img/2022.2.4/newLogoConfig.png)
+
+---
+
+---
+url: /guide/features/markdownDocTemplateConfig.md
+---
+# Markdown文档模板配置
+
+版本要求:&#x20;
+
+提供了导出文档和[Api在线文档](./apiDocSync.md)的自定义格式实现.
+
+## 实现技术
+
+1. [Velocity](https://velocity.apache.org/)
+2. Markdown
+
+## 内置变量
+
+### 内容变量
+
+| 变量                   | 参数类型                      | 说明                                                                              |
+| :--------------------- | :---------------------------- | :-------------------------------------------------------------------------------- |
+| url                    | String                        | 最终url                                                                           |
+| originUrl              | String                        | 原始url,包含路径原值变量名                                                        |
+| namingPolicy           | String                        | 命名策略,固定值\[1.byMethodName:根据方法名 2.byDoc:根据JavaDoc或者Swagger方法描述] |
+| methodName             | String                        | Java方法名                                                                        |
+| methodDescription      | String                        | 方法描述,来源javadoc或者Swagger方法描述                                           |
+| methodType             | String                        | 方法类型,例如Get,Post,Put,Delete,Patch                                            |
+| headerList             | List<[Header](#header)>     | 头参数                                                                            |
+| pathKeyValueList       | List<[KeyValue](#keyvalue)> | Url路径参数                                                                       |
+| urlParamsKeyValueList  | List<[KeyValue](#keyvalue)> | Url Query参数                                                                     |
+| multipartKeyValueList  | List<[KeyValue](#keyvalue)> | Multipart参数                                                                     |
+| urlEncodedKeyValueList | List<[KeyValue](#keyvalue)> | Form Url-Encoded参数                                                              |
+| jsonParam              | String                        | Json参数                                                                          |
+| jsonParamDocument      | String                        | Json参数文档                                                                      |
+| responseExample        | String                        | 响应                                                                              |
+| returnDocument         | String                        | 响应参数文档                                                                      |
+
+### 语法变量
+
+| 变量 | 说明            |
+| :--- | :-------------- |
+| H1   | Markdown #      |
+| H2   | Markdown ##     |
+| H3   | Markdown ###    |
+| H4   | Markdown ####   |
+| H5   | Markdown #####  |
+| H6   | Markdown ###### |
+
+## 参数类型
+
+### Header
+
+| 变量    | 参数类型 | 说明            |
+| :------ | :------- | :-------------- |
+| enabled | Boolean  | 是否启用        |
+| type    | String   | Header的key值   |
+| value   | String   | Header的value值 |
+
+### KeyValue
+
+| 变量    | 参数类型 | 说明                                                  |
+| :------ | :------- | :---------------------------------------------------- |
+| enabled | Boolean  | 是否启用                                              |
+| key     | String   | 参数Key                                               |
+| type    | String   | 参数类型,固定格式\[Object Array String Number Boolean] |
+| value   | Object   | 参数Value                                             |
+| comment | String   | 参数备注                                              |
+
+## 默认模板
+
+````velocity
+    #if (${namingPolicy}=='byDoc')
+    $H1 ${methodDescription}
+    #else
+    $H1 $!{methodName}
+
+    $H3 Method description
+
+    ```
+    $!{methodDescription}
+    ```
+    #end
+
+    > URL: $!{url}
+    >
+    > Origin Url: $!{originUrl}
+    >
+    > Type: $!{methodType}
+
+
+    $H3 Request headers
+
+    |Header Name| Header Value|
+    |---------|------|
+    #foreach( $h in ${headerList})
+    |$h.type|$h.value|
+    #end
+
+    $H3 Parameters
+
+    $H5 Path parameters
+
+    | Parameter | Type | Value | Description |
+    |---------|------|------|------------|
+    #foreach( $node in ${pathKeyValueList})
+    |$node.key|$!{node.type}|$!{node.value}|$!{node.comment}|
+    #end
+
+
+    $H5 URL parameters
+
+    |Required| Parameter | Type | Value | Description |
+    |---------|---------|------|------|------------|
+    #foreach( $node in ${urlParamsKeyValueList})
+    |$!{node.enabled}|$!{node.key}|$!{node.type}|$!{node.value}|$!{node.comment}|
+    #end
+
+
+    $H5 Body parameters
+
+    $H6 JSON
+
+    ```
+    ${jsonParam}
+    ```
+
+    $H6 JSON document
+
+    ```
+    ${jsonParamDocument}
+    ```
+
+
+    $H5 Form URL-Encoded
+    |Required| Parameter | Type | Value | Description |
+    |---------|---------|------|------|------------|
+    #foreach( $node in ${urlEncodedKeyValueList})
+    |$!{node.enabled}|$!{node.key}|$!{node.type}|$!{node.value}|$!{node.comment}|
+    #end
+
+
+    $H5 Multipart
+    |Required | Parameter | Type | Value | Description |
+    |---------|---------|------|------|------------|
+    #foreach( $node in ${multipartKeyValueList})
+    |$!{node.enabled}|$!{node.key}|$!{node.type}|$!{node.value}|$!{node.comment}|
+    #end
+
+
+    $H3 Response
+
+    $H5 Response example
+
+    ```
+    $!{responseExample}
+    ```
+
+    $H5 Response document
+    ```
+    $!{returnDocument}
+    ```
+
+````
+
+---
+
+---
+url: /guide/features/navigateCurrentMethod.md
+---
+# 当前方法定位
+
+版本要求:&#x20;
+
+当你生成好方法的 url 以后又切换到代码中的别的地方然后又想开始调试该 API 方法,可以通过此功能  快速定位到`Controller`代码
+
+![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
+
+---
+
+---
+url: /guide/features/navigateCurrentMethodJson.md
+---
+# 多窗口 Tab
+
+版本要求:&#x20;
+
+可以定位到当前方法存储数据的文件，并以调试窗口形式打开
+
+`rapi`文件最终存储的是 `json` 格式的数据数据，并且以调试窗口形式展现，如果遇到数据冲突，请用 json 格式打开并编辑
+
+![openInTabAction](/img/2024.1.6/multiTab.png)
+
+当前 API 可以通过以下 Action 选项来使它在 Tab 中打开
+
+![openInTabAction](/img/2024.1.6/openInTabAction.png)
+
+你可以右键 Apis 中的条目后选择 Tab 中打开
+
+![openTabInApis](/img/2024.1.6/openTabInApis.png)
+
+---
+
+---
+url: /guide/features/openApi.md
+---
+# OpenAPI导出
+
+版本要求:&#x20;
+
+![](/img/2024.1.9/openApiExport_en.png)
+
+可以将 API 导出成 [OpenAPI](https://spec.openapis.org/oas/latest.html) 格式。
+
+---
+
+---
+url: /guide/features/parseStrategy.md
+---
+# 字段解析
+
+## 类型映射
+
+[了解详情](../getstarted/dataMapping.md)
+
+## 忽略字段
+
+方式 1： 给字段使用如下 2 种注解中的一种
+
+```
+com.fasterxml.jackson.annotation.JsonIgnore
+
+com.alibaba.fastjson.annotation.JSONField(serialize = false)
+```
+
+方式 2： 给字段增加 `static` 修饰符
+
+方式 3：注释上加@fastRequestParseIgnore
+
+```java
+/**
+ * xxx description
+ * @fastRequestParseIgnore
+ */
+private String someIgnoreField ;
+```
+
+方式 4: 忽略字段名解析配置
+
+![ignoreFiled](/img/2024.1.1/ignoreFiled.png)
+
+只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
+
+---
+
+---
+url: /guide/features/postmanSync.md
+---
+# Postman 集成
+
+版本要求:&#x20;
+
+:::tip
+由于历史原因,历史保存的持久化数据丢失了一部分字段,为了能够将同步至postman的数据更完整,
+建议在插件postman配置中勾上`保存后同步`postman选项,通过保存操作来触发同步.
+
+同时推荐使用该功能来同步api而不是导出
+:::
+
+::: caution Postman API 用量问题
+插件使用 Postman API 来同步数据，需要注意的是 Postman 同步涉及到 Postman API 的[用量](https://fastrequest.postman.co/billing/add-ons/overview)问题，点击链接需要注意 **Postman API Usage** 这一栏，每月最多免费使用 1000次。超过额度会导致同步失败！
+:::
+
+![postmanSync](/img/2023.2.3/postmanSync.png)
+
+## Api key
+
+Api key 用于使用 Postman 在线 API 执行一些手工行为.例如**创建Collection**、**创建目录**、**创建 Request** 等行为.
+
+打开 <https://postman.co/settings/me/api-keys> 并登录,并执行创建.注意最好是创建一个没有有效期的Api key.
+
+![postmanApiKey](/img/2023.2.3/postmanApiKey.png)
+
+## WorkspaceId
+
+Workspace id 是 Postman 工作空间的Id. 有2中策略来创建Workspace
+
+1. 每个项目来区分创建1个Workspace(推荐)
+2. 创建1个Workspace表示某个公司的,不同的Collection来表示公司下面不同的项目
+
+***
+
+**获取WorkspaceId的步骤如下↓↓↓**
+
+a. 创建一个 Workspace,已有则忽略
+
+![createWorkspace](/img/2023.2.3/createWorkspace.png)
+
+b. 点击 Workspace,并点击Workspace的info图标(注意不是点击Workspace Settings)
+
+![showWorkspaceId](/img/2023.2.3/showWorkspaceId.png)
+
+c.复制得到Workspace id
+
+![workspaceInfo](/img/2023.2.3/workspaceInfo.png)
+
+## Initial value 与 Current value
+
+Environment 中变量的值包含 **Initial value** 和 **Current value**,**Initial value**是云端共享的,与之对应的**Current value**仅保留在本地.
+Postman中实际Request使用的是**Current value**.
+
+但是,==**Restful Fast Request在对 Environment 同步的时候同步的是 Initial value**==.
+
+所以如果插件中更新了 Environment 值,并且同步到了 Postman ,此时在 Postman 中执行 Request 并不会立刻使用同步的值,
+而是需要在 Environment 中手工替换或者全部替换(点击Reset All).
+
+![workspaceInfo](/img/2023.2.3/resetEnvironmentValue.png)
+
+## 前后置脚本
+
+因为语言的不同,插件并不会同步前后置脚本.所以在使用插件的时候最好把一些共用的脚本写在[项目级别配置](./projectValueConfig.md)中的前后置脚本,这样子也只需要在同步到Postman以后,
+在Postman中的Collection级别下写前后置脚本.
+
+![postmanScript](/img/2023.2.3/postmanScript.png)
+
+## 注意事项
+
+1. 推荐勾选保存后即同步到Postman,如果没有勾选,则在手动触发的时候需要先保存,再点击同步
+2. 多方协作,如果发现同一个workspace出现多个相同的collection,只需使用其中一方的collection id在配置中手动替换即可
+3. 多方协作,如果发现同一个collection出现多个相同的folder,只需使用其中一方的`.fastRequest/collections/ROOT/模块名/类名/directory.json`中的`pmFolderId`属性即可
+4. 多方协作,如果发现同一个api在postman上有2份,则可以通过修改其中一份数据的`pmRequestId`和`pmResponseId`来是他们保持统一,可以通过[ 多窗口 Tab](./navigateCurrentMethodJson.md)来定位存储的文件.最好的方式是通过git管理提交`rapi`文件使api底层存储数据保持一致
+
+---
+
+---
+url: /guide/features/projectConfigRefresh.md
+---
+# 项目配置刷新
+
+版本要求:&#x20;
+
+配置文件更新后，UI 实现项目级别配置更新
+
+![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
+
+---
+
+---
+url: /guide/features/projectLevelDomainConfig.md
+---
+# Project 级别域名配置
+
+作用：本功能可以让开发者一键添加域名配置
+
+版本要求:&#x20;
+
+::: caution 建议
+建议使用项目级别域名配置，原来的[ 管理配置](./settingManager.md)将作为全配置配置，并且优先级小于项目级别配置，建议项目域名以项目级别隔离而不要使用全局配置。
+
+使用项目级别配置的好处是当项目多的时候，下拉框选项将减少（排除了其他项目的配置)，只取本项目级别域名与全局域名配置的交集。
+:::
+
+::: tip
+
+1. 项目名: Api 对应的项目名称。如果开启了自动域名，单模块项目，项目名将自动设置为项目名词，多模块则为模块名。不建议手动替换
+2. 环境名: 不同的环境，例如将本地命名为 local，开发环境命名为 dev，测试环境命名为 test,生产环境命名为 prod
+3. 域名: 项目名与环境名下对应的域名
+
+:::
+
+## 自动域名 or 配置文件快速生成
+
+1. 自动域名：参考此[文档](./autoDomain.md)，最后根据实际情况只需要修改域名值
+
+2. 配置文件快速生成：选择项目中的`application.properties`或者`application.yml`，通过配置文件，点击图标，可以快捷添加配置。
+
+![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig.png "域名配置")
+
+> 变量来源
+
+```
+a. 针对带有环境名如`application-dev.properties`，插件将自动适配`-`与`.`之间的变量作为环境名。
+b. 项目名来源于模块名
+c. 域名=`http://localhost:port/context-path`
+```
+
+## 2.手动配置域名
+
+![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog.png "域名列表")
+
+点击项目级别域名手动输入对应的值
+
+---
+
+---
+url: /guide/features/projectValueConfig.md
+---
+# 项目级别全局参数支持
+
+版本要求:&#x20;
+
+支持项目级别内的全局参数，不受多模块影响。
+
+**配置优先级**: `api头 > 项目级别全局请求头 > 全局请求头`
+
+![projectConfigParam](/img/projectConfigParam.png)
+
+---
+
+---
+url: /guide/features/quickAddHeader.md
+---
+# 快速添加 header
+
+版本要求:&#x20;
+
+如果你的请求需要一个 token 而 token 可以通过一个登陆接口得到，那么你可以不用每次手动添加，只需要访问一下登录接口再通过以下操作来处理
+
+![fastAddToken](/img/fastAddToken.gif)
+
+---
+
+---
+url: /guide/features/regenerate.md
+---
+# 重新生成请求
+
+版本要求:&#x20;
+
+::: tip 特别说明
+
+如果你已经保存一个请求，但是想彻底重新修改其中的参数，那么你可以选择该操作
+
+:::
+
+![regenerateNew](/img/regenerateNew.png)
+
+![regenerate](/img/regenerate.png)
+
+---
+
+---
+url: /guide/features/saveRequest.md
+---
+# 保存请求
+
+::: tip 特别说明
+**API 取名**：如果 api 使用了 swagger 注解 `@ApiOperation("xxx")`，则 api 取名 xxx，如果没加 swagger 注解，则使用 javadoc 作为 api 的名称，否则将取名 New Request
+
+```
+if (@ApiOperation("xxx"))
+    apiName = xxx
+else if(java doc)
+    apiName = java doc
+else
+    apiName = New Request
+```
+
+:::
+![example\_download](/img/saveRequest.png)
+
+---
+
+---
+url: /guide/features/script.md
+---
+# 脚本
+
+脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理\
+具体请参考-------> [脚本](../script.md)
+
+![scriptProject](/img/2022.2.3/scriptProject.png)
+
+![scriptModule](/img/2022.2.3/scriptModule.png)
+
+---
+
+---
+url: /guide/features/searchEveryWhere.md
+---
+# SearchEveryWhere
+
+```
+输入案例
+/url              (查询指定url)
+get /list         (指定get方式指定url)
+post /save        (指定post方式指定url)
+方法关键字          (查询指定描述)
+```
+
+![searchEveryWhere](/img/2023.1.7/searchEveryWhere.png)
+
+---
+
+---
+url: /guide/features/settingManager.md
+---
+# 管理配置
+
+::: tip
+建议使用  [项目级别域名配置](./projectLevelDomainConfig.md)
+:::
+
+可以快速定位到配置管理界面
+
+![settingManager](/img/settingManager.png)
+
+---
+
+---
+url: /guide/features/shareApiDoc.md
+---
+# API 文档分享
+
+请注意 word 形式的 API 内部采用 html 来实现的，所以不要觉得奇怪，导出就行
+
+Response Example 需要运行你的 API 后才会被显示
+
+![shareDocButton](/img/shareApi.png)
+
+![apiDocExample](/img/apiDocExample.png)
+
+---
+
+---
+url: /guide/features/stopRequest.md
+---
+# 终止 API 请求功能
+
+版本要求:&#x20;
+
+点击&#x20;
+
+![stopApi](/img/2022.2.2/stopApi.png)
+
+---
+
+---
+url: /guide/features/swaggerDefaultValueParse.md
+---
+# Swagger 默认值
+
+版本要求:&#x20;
+
+已下是一些 example
+
+优先级: swagger 配置的值 > 配置默认值
+
+::: code-tabs
+
+@tab swagger2
+
+```java
+* @ApiParam
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+@GetMapping(value="/test/{id}")
+public String test3(@ApiParam(name = "id",defaultValue="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+
+* @ApiImplicitParam
+
+@ApiImplicitParams({
+    @ApiImplicitParam(paramType="query",name="pageNo",dataType="String",required=true,value="pageNo",defaultValue="1"),
+    @ApiImplicitParam(paramType="query",name="pageSize",dataType="String",required=true,value="pageSize",defaultValue="10")
+})
+@GetMapping(value="/testPage)
+public String testPage(@RequestParam("pageNo") Integer pageNo, @RequestParam("pageSize") Integer pageSize) {
+    return "";
+}
+
+
+* @ApiModelProperty
+@Data
+public class UserDto {
+    @ApiModelProperty(example = "Bob")
+    private String userName;
+}
+```
+
+@tab swagger3
+
+```java
+* @Parameter
+
+@GetMapping(value="/test/{id}")
+public String test3(@Parameter(name = "id",example="2") @PathVariable("id") Integer id) {
+    return "";
+}
+
+* @Schema(swagger3)
+
+@Data
+public class UserDto {
+    @Schema(example = "Bob")
+    private String userName;
+}
+```
+
+:::
+
+---
+
+---
+url: /guide/features/tempRequest.md
+---
+# 临时请求保存支持
+
+版本要求:&#x20;
+
+目的:项目中保存任意不属于本项目的请求，用于临时调用，跟当前项目代码不关联
+
+临时请求保存的 Request 的 Url 必须以 ==http== 或者 ==https== 开头
+
+![tempSave](/img/2022.2.1/tempSave.png)
+
+---
+
+---
+url: /guide/getstarted/dataMapping.md
+---
+# 类型映射
+## 自定义类型映射
+
+场景: 分页实体类 `com.baomidou.mybatisplus.extension.plugins.pagination.Page` 中有 n 个属性，但是我只需要 `size` 和 `current`
+
+自定义类型映射一共需要设置 2 个值，即解析的类型以及对应的模板值。
+
+**Java Type** 为对应的对象类型，必须是包含包名和类名
+
+```java
+com.baomidou.mybatisplus.extension.plugins.pagination.Page
+```
+
+**Default value** 必须是 JSON 格式
+
+```json
+{ "size": 10， "current": 1 }
+```
+
+![custom data mapping](/img/customDataMapping.png)
+
+## 默认类型映射
+
+该配置决定 Java 基础类型解析成对应的值，支持修改
+
+![default data mapping](/img/defaultDataMapping.png)
+
+## 忽略类型映射
+
+该配置决定对应的类是否解析，需要配置全路径(packageName+className)
+
+![ignore data mapping](/img/ignoreDataMapping.png)
+
+---
+
+---
+url: /guide/getstarted/icon.md
+---
+# 类型 Icon 映射
+## 图标和类型映射关系
+
+| Icon                              | Type    |
+| --------------------------------- | ------- |
+| ![array](/img/icon/array.svg)     | Array   |
+| ![object](/img/icon/object.svg)   | Object  |
+| ![number](/img/icon/number.svg)   | Number  |
+| ![string](/img/icon/string.svg)   | String  |
+| ![boolean](/img/icon/boolean.svg) | Boolean |
+| ![file](/img/icon/file.svg)       | File    |
+
+---
+
+---
+url: /guide/getstarted/otherConfig.md
+---
+# 其他配置
+控制器上的 url 固定变量可以由配置替换，例如类控制器上 url 写法如下:
+
+```java
+@RequestMapping("/api/${api-module}/user")
+@Controller
+public class XxxController(){
+  //code ...
+}
+```
+
+实际的 url 是 `/api/base/user`，那么可以通过以下配置来替换 `${api-module}` 变量
+
+![other config](/img/otherConfig.png)
+
+---
+
+---
+url: /guide/getstarted/projectEnv.md
+---
+# 项目/环境/域名
+::: caution 建议
+建议使用[ 项目级别域名配置](../features/projectLevelDomainConfig.md)，原来的配置将作为全配置配置，并且优先级小于项目级别配置。
+
+使用项目级别配置的好处是当项目多的时候，下拉框选项将减少（排除了其他项目的配置)，只取本项目级别域名与全局域名配置的交集。
+:::
+
+设置映射关系，配置对应项目下对应环境的 url 前缀地址
+
+![project env url](/img/projectEnvUrl.png)
+
+::: note
+
+* 图标 P 含义为 Project
+* 图标 E 含义为 Environment
+
+:::
+
+![dropdownProject](/img/dropdownProject.png)
+
+![dropdownEnv](/img/dropdownEnv.png)
+
+---
+
+---
+url: /guide/getstarted/shortcut.md
+---
+# 快捷键
+快捷键有利于提升操作的速度，熟练得使用会让操作变得更加简单。
+
+::: info 设置快捷键
+
+setting → keymap → 输入框输入 FastRequest → 右键对应的条目进行修改
+
+:::
+
+![shortcut](/img/shortcut.png)
+
+---
+
+---
+url: /guide/getstarted/start.md
+---
+# 快速开始
+```component VPBanner
+content: 如果您已经熟悉 Fast Request的基本操作，那么您可以直接转入到功能介绍页。
+background: url('/img/banner/bg1.svg') no-repeat -2100px -80px
+color: "#eee"
+actions:
+  - text: 功能
+    link: /guide/features/
+```
+
+::: tabs
+
+@tab 付费版
+
+1. 点击在方法左侧的 fastRequest 的图标 ::restfulFastRequest::
+2. 如果[自动域名](../features/autoDomain.md)的结果不符合预期，则在[Project 级别域名配置](../features/projectLevelDomainConfig.md)里面修改域名
+3. 点击发送请求按钮发送请求
+
+![](/img/start.png)
+
+> 视频教程↓↓↓
+
+```component BiliBili
+bvid: BV1V84y1f7uQ
+ratio: 5/4
+```
+
+[更多视频教程](../teachingVideo.md)
+
+@tab 免费版
+
+1. 点击配置添加项目名 (如微信卡片) 和环境名 (如 local、dev)
+2. 设置对应项目及环境的域名
+3. 打开工具窗口(右上角位置)，选择当前项目想要启用的环境
+4. 点击在方法左侧的 fastRequest 的图标 ::restfulFastRequest1::
+5. 点击发送请求按钮发送请求
+
+![](/img/start.svg)
+
+![](/img/howToUse.gif)
+:::
+
+## 🤝 联系我们
+
+如果您遇到了任何使用上的问题，请通过以下方式联系我们，将会有更快为你解决问题，同时群里全部都是 Javaer，经常会讨论一些技术问题，热点新闻，跳槽，吐槽等，可以帮助你学到一些东西。
+
+| ![微信技术群](https://img.shields.io/static/v1?label=wechat\&message=微信技术群\&logo=wechat\&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter\&message=FastRequest666\&logo=twitter\&color=FC8D34)](https://twitter.com/FastRequest666) |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| !\[wechat group]\(/img/wechatGroup.png =300x300)                                                           | !\[twitter]\(/img/twitter.png =300x300)                                                                                                             |
+| 如果扫码失败请直接搜微信号 FastRequest99                                                                 | 欢迎关注官方 Twitter                                                                                                                              |
+
+---
+
+---
+url: /guide/getstarted/stringGenerationStrategy.md
+---
+# String 生成策略
+## 策略
+
+* name+random (字段名加随机字符串)
+* random (随机字符串)
+* none (不生成)
+
+![string generate](/img/stringGenerate.png)
+
+---
+
+---
+url: /guide/history.md
+---
+# 最新变化
+::: important 公告
+
+[**收费版 VS 免费版**](./versionCompare.md)
+
+购买**License**流程请参考[**购买插件**](./buy.md)，Issue 提报请到[*Github*](https://github.com/dromara/fast-request/issues)
+
+| ![微信技术群](https://img.shields.io/static/v1?label=wechat\&message=微信技术群\&logo=wechat\&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter\&message=FastRequest666\&logo=twitter\&color=FC8D34)](https://twitter.com/FastRequest666) |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![wechat group](/img/wechatGroup.png)                                                           | ![twitter](/img/twitter.png)                                                                                                             |
+| 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 欢迎关注官方 Twitter                                                                                                                              |
+
+:::
+
+> **由于开发版本仍在开发中，开发版本的文档可能不完全准确，因此可能会发生变化。**
+>
+> important:      feat:       perf:       fix:&#x20;
+
+## 2025.1.8   &#x20;
+
+## 2025.1.7  &#x20;
+
+:::hint 支持本地模式开关&#x20;
+
+![](/img/2025.1.7/globalLocalMode.png)
+
+全局本地模式会忽略 `.fastRequest` 目录并且让它不可见，与 [如何忽略.fastRequest 目录](./faq.md#s-%E5%A6%82%E4%BD%95%E5%BF%BD%E7%95%A5-fastrequest-%E7%9B%AE%E5%BD%95) 中的方式 1 一致。
+
+![](/img/2025.1.7/localMode.png)
+
+如果是 git 管理的项目，建议使用项目级别本地模式。
+
+:::
+
+:::hint 域名生成支持读取变量&#x20;
+
+![](/img/2025.1.7/pomScanProp.png)
+
+域名自动生成支持 pom 变量扫描
+
+:::
+
+:::hint 列表字段支持快速查找定位&#x20;
+
+![](/img/2025.1.7/fieldSpeedSearch.png)
+
+支持在列表中快速查找定位字段 key，输入关键字后再按方向键可以快速定位到对应的字段。此功能在 `Headers` 、`Path Params`、`URL Params`、`Form URL-Encoded`、`Form-data` 等 tab 中支持。
+
+:::
+
+:::hint 字段支持启用快捷过略&#x20;
+
+![](/img/2025.1.7/enabledFieldList.png)
+
+此功能可以在针对字段过多的情况下，快速查阅启用的字段定位字段的值。
+
+:::
+
+:::hint 支持快捷键快速修改&#x20;
+
+![](/img/2025.1.7/shortcuts.png)
+
+支持快速定位和修改插件快捷键
+
+:::
+
+## 2025.1.6   &#x20;
+
+:::hint 搜索 URL 支持片段截断&#x20;
+
+![](/img/2025.1.6/searchUrlTruncate.png)
+
+当项目中有 context-path 或者 网关等 url 前缀片段时，在项目全局参数配置中加入截断片段，SearchEveryWhere 搜索时会自动截断片段，搜索出对应的结果。
+:::
+
+## 2025.1.5.1  &#x20;
+
+## 2025.1.5  &#x20;
+
+## 2025.1.4  &#x20;
+
+:::hint Script 支持调用本地项目 Class&#x20;
+
+![](/img/2025.1.4/script.png)
+
+可以点击代码片段快捷方式快速生成代码。
+
+```groovy
+def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+```
+
+SpringBoot 项目编译后会在模块 target 目录下生成一个 classes 目录。使用 `FrLocalClassLoader` 可以加载这个目录下的类,并且可以直接调用类中的方法。
+
+注意需要将 `path/to/classes` 替换成 classes 目录的绝对路径，将 `some.package.XxxUtil` 替换成你要调用的类的全名。
+
+:::
+
+## 2025.1.3  &#x20;
+
+::: hint Api预览支持父类 api 的扫描&#x20;
+![](/img/2025.1.3/apiPreviewSuperClass.png)
+
+Api预览支持父类 api 的扫描，支持在Api预览中生成父类 API 相关信息的生成，支持保存
+
+:::
+
+::: hint 快捷忽略字段解析&#x20;
+
+
+针对一些全局都不希望生成参数的字段，可以通过选择并快速添加到忽略字段解析配置。更多字段忽略字段的方法，请查看[字段解析](/guide/features/parseStrategy)
+
+:::
+
+::: hint Apis 配置化可以不跳转到方法&#x20;
+![](/img/2025.1.3/apisJumpMethodConfig.png)
+
+通过该配置，在执行 API 的时候可以使代码跳转不再执行，可以有效地避免已保存的 API 执行的时候打开多个代码标签页。
+
+:::
+
+::: hint 批量同步 API 到 Apifox&#x20;
+![](/img/2025.1.3/apifoxBatchSync.png)
+
+选择目录后，即可将目录下的 API 批量同步到 Apifox 中。
+
+:::
+
+## 2025.1.2  &#x20;
+
+::: hint 默认不开启非核心功能&#x20;
+![](/img/2025.1.2/customToolbar.png)
+
+默认将禁用非核心功能，可以通过可配置化自定义勾选开启需要的非核心功能。重启后将生效。
+
+:::
+
+::: hint 修复API一览表未展示&#x20;
+![](/img/2025.1.2/apiPreview.png)
+
+修复了前几个版本 API 一览表未展示
+
+:::
+
+## 2025.1.1   &#x20;
+
+::: hint OpenAPI 批量导出&#x20;
+![](/img/2025.1.1/openApiBatch.png)
+
+支持保存的 API 的 [OpenAPI](https://spec.openapis.org/oas/latest.html) 批量导出
+
+:::
+
+## 2024.1.9  &#x20;
+
+::: hint OpenAPI 导出支持&#x20;
+![](/img/2024.1.9/openApiExport_en.png)
+
+可以将 API 导出成 [OpenAPI](https://spec.openapis.org/oas/latest.html) 格式。
+
+:::
+
+::: hint Solon 框架解析支持&#x20;
+![](/img/2024.1.9/solon.png)
+
+支持国产 [Solon](https://solon.noear.org/) 框架的解析。
+
+:::
+
+::: hint 运行后切换 Tab 可配置化&#x20;
+![](/img/2024.1.9/runSwitchTab.png)
+
+可以在 APIs 列表直接运行 API 并且不切换到运行界面，可配置化。这使得在 APIs 页面运行一个 API 以后可以再运行下一个 API。
+
+:::
+
+::: hint 响应文档展示支持&#x20;
+![](/img/2024.1.9/responseDocument.png)
+
+可以在 Response 页签下查看响应的字段含义。
+
+:::
+
+::: hint 文件导出默认目录支持自定义&#x20;
+![](/img/2024.1.9/exportPath.png)
+
+文件导出例如将 API 导出成 markdown 、html、word、openapi 等文档的默认目录地址支持自定义。
+
+:::
+
+## 2024.1.8.1  &#x20;
+
+## 2024.1.8  &#x20;
+
+::: hint Header 预设&#x20;
+
+
+Header 预设支持创建不同的 Header 分组，管理各自的请求头，通过下拉选择轻松快捷得添加预设的 Header 参数。
+
+:::
+
+::: hint Binary 支持&#x20;
+![](/img/2024.1.8/binary.png)
+
+支持 Binary 格式上传
+
+:::
+
+## 2024.1.7  &#x20;
+
+::: hint 函数与变量支持代码补全&#x20;
+
+
+支持变量 `{{xx}}` 与 `{{$函数名}}`的代码补全
+
+函数支持更多信息请参考---->[函数](/guide/features/function.md)
+:::
+
+::: hint JSON filter支持&#x20;
+![jsonFilter](/img/2024.1.7/jsonFilter.png)
+
+当 JSON 字段较多，但是只需要一部分的时候，可以通过该功能对 JSON进行字段过滤
+:::
+
+::: hint Header 常用值支持代码补全&#x20;
+![header](/img/2024.1.7/header.png)
+
+对于一些例如 `Authorization`、`token` 的请求头支持代码补全
+:::
+
+::: hint @FeignClient 扫描&#x20;
+![feignClientSupport](/img/2024.1.7/feignClientSupport.png)
+
+支持对 `org.springframework.cloud.openfeign.FeignClient` 的扫描，优化 path 路径解析结果
+:::
+
+::: hint 文件默认值支持&#x20;
+![defaultMultipartFile](/img/2024.1.7/defaultMultipartFile.png)
+
+Multipart 类型字段可以通过该配置设置默认文件路径
+:::
+
+::: hint 异常上报支持&#x20;
+![errorReport](/img/2024.1.7/errorReport.png)
+
+更加方便得上报错误，这可以使得作者可以更好得修复和定位 bug。
+:::
+
+::: hint SearchEveryWhere 结果排序优化&#x20;
+![searchEveryWhere](/img/2024.1.7/searchEveryWhere.png)
+
+按照Url 路径优化了匹配的排序规则，将匹配度高的排在前面
+:::
+
+::: hint Script 语法提示优化&#x20;
+
+![scriptHint](/img/2024.1.7/scriptHint.png)
+
+前提是需要点击安装依赖 lib，使用`rfr.request`、`rfr.response` 替换以获得代码补全提示。
+
+原先的内置变量 `request`、`response` 依然可以使用，但是代码补全提示不友好。
+
+更多内置变量请参考 [Script->rfr](./script.md#rfr)
+:::
+
+## 2024.1.6.3  &#x20;
+
+## 2024.1.6.2  &#x20;
+
+::: hint 组合注解支持&#x20;
+
+针对如下类型的自定义 RestController 注解在 Controller 类中的扫描支持
+
+```java
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@RestController
+@RequestMapping
+public @interface CustomRestController {
+
+    @AliasFor(annotation = RequestMapping.class)
+    String name() default "";
+
+    @AliasFor(annotation = RequestMapping.class)
+    String[] value() default {};
+}
+```
+
+:::
+
+## 2024.1.6  &#x20;
+
+::: hint 多 Tab 窗口&#x20;
+
+
+`rapi`文件打开展现调试界面，支持多 Tab 打开。更多请查阅[**多 Tab 窗口**](/guide/features/navigateCurrentMethodJson.md)
+
+:::
+
+::: hint Apis 标记&#x20;
+
+
+增加了对 Apis 标签页中对 Api 的标记支持，使其标记红色高亮圆点，并增加了标记 Api 搜索。 可将一些常用的 Api 标记，便于后续的查找。
+:::
+
+::: hint Apis 与 Navigate 标签页 Url 复制&#x20;
+
+
+右键选项支持复制原始 Url
+:::
+
+::: hint Json path&#x20;
+
+![jsonPath](/img/2024.1.6/jsonPath.png)
+
+在 `Body->Raw` 和 `Response->Pretty` tab下支持 Json 路径查找，但是这依赖于 [JSONPath](https://plugins.jetbrains.com/plugin/22044-jsonpath) 插件.
+:::
+
+## 2024.1.5.1  &#x20;
+
+## 2024.1.5  &#x20;
+
+::: hint 脚本增加 Add script library支持&#x20;
+
+![](/img/2024.1.5/addLibrary.png)
+
+提示脚本库增加 library 支持，使得具备 [Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html) 功能
+:::
+
+::: hint 类型下拉框优化&#x20;
+![](/img/2024.1.5/typeDropdown.png)
+
+下拉框使用更加明确的英文类型，并使用不同颜色区分不同的类型
+:::
+
+::: hint 原始url展示优化&#x20;
+![](/img/2024.1.5/originUrl.png)
+
+调试界面 Url 输入框和 APIs 界面 url 展示成原始 url，不对路径参数进行替换。
+:::
+
+::: hint cUrl 同一 url 匹配 method type优化&#x20;
+针对匹配到的 url 一样，但是方法的类型(Get、Post等)不一样的绑定配对进行了优化，使得他们可以正确的匹配。
+:::
+
+## 2024.1.4  &#x20;
+
+::: hint Apifox 集成&#x20;
+
+Apifox集成，支持同步 API、环境变量、域名信息等。只要配置一个 `API key`，并设定项目映射关系即可进行同步。
+
+更多信息请点击 [Apifox 集成](/guide/features/apifox.md)
+
+[Bilibili视频教程](https://www.bilibili.com/video/BV1pM4m1Q7c5)
+
+:::
+
+::: hint AI支持优化&#x20;
+![AI](/img/2024.1.4/ai.png)
+
+为了将 AI 的回复更加精准，我们将 AI 的 设置更加精细化，加入了3个维度，加入了`概述`、`提问范例`、`提问范例结果`。此设计即让 AI 先训练一次问答，从而使得结果更加符合预期
+
+我们可以在`概述`中尽量表述问题的各种可能，并在`提问范例`和`提问范例结果`中给于`概述`中描述的样本。
+
+以下是一个让 AI 帮忙优化 JSON 报文的案例,更多详情请参考 [AI](/guide/features/ai.md)
+
+::: code-tabs
+
+@tab 概述
+
+```
+你是一位优秀的 JSON 处理程序。每当用户向您发送 JSON 时，您都应该以固定的 JSON 格式响应用户，并根据
+JSON 键的含义将 JSON 字段中的值替换为人类可读的内容。您只需修改 JSON 中的值，而无需更改其结构。
+```
+
+@tab 提问范例
+
+```
+{"id":1,"title":"title_ahska","simpleDesc":"simpleDesc_ohga1","content":"content_yujga"}
+```
+
+@tab 提问范例结果
+
+```
+{"id":1,"title":"书画标题","simpleDesc":"简介内容","content":"整体内容"}
+```
+
+:::
+
+::: hint 变更 moduleHeader 为 apiHeader&#x20;
+
+![Header](/img/2024.1.4/header.png)
+
+1. 前置、后置脚本中的变量 `moduleHeader` 变更 `为apiHeader`。
+2. 主界面 Header 选项卡作用域变更为仅面向 API 级别，
+   即每个 API 可以拥有不同的 Header，如果需要公共 Header，请前往[项目级别 Header](/guide/features/projectValueConfig.md) 设置。
+
+:::
+
+::: hint cURL导入优化&#x20;
+在去除域名后，如果 Url 与项目中方法的 Url 一致则自动绑定。
+:::
+
+## 2024.1.3 &#x20;
+
+::: hint AI支持优化&#x20;
+
+
+增加了 OpenAi、CodeGeeX、自定义三种形式的 AI 支持，通过可配置化的指令，可将选中的文本替换成目标文本。
+
+可以在 `Body -> JSON`, `Body -> Form URL-Encoded -> Text`,`URL Params -> Text` 3个 Tab 下操作。
+:::
+
+## 2024.1.2.1 &#x20;
+
+## 2024.1.2 &#x20;
+
+::: hint 自定义工具栏&#x20;
+
+![customToolbar](/img/2024.1.2/customToolbar.png)
+
+使用自定义工具栏，选择自己需要使用的功能，将其他功能按钮进行隐藏，设置完成需要重启 IDEA
+:::
+
+## 2024.1.1 &#x20;
+
+::: hint SearchEveryWhere 支持类名搜索&#x20;
+
+![searchEveryWhere](/img/2024.1.1/searchEveryWhere.png)
+
+输入 Url 所在的类名，即可搜索该类下面的所有 API
+:::
+
+::: hint .fastRequest目录生成策略&#x20;
+默认打开 Project 不再生成.fastRequest目录，只有操作插件才生成
+:::
+
+::: hint 忽略字段名解析支持&#x20;
+![ignoreFiled](/img/2024.1.1/ignoreFiled.png)
+
+只需要在配置中增加字段名，即可将实体类中的特定字段忽略生成
+:::
+
+::: hint Apis,Navigate弹框打开支持&#x20;
+
+可以通过快捷键快速打开 Apis 和 Navigate 窗口查看信息, 窗口打开的情况下再按 ESC 可以关闭窗口
+:::
+
+::: hint 手动更新检测&#x20;
+![manualUpdateCheck](/img/2024.1.1/manualUpdateCheck.png)
+
+点击检查插件更新
+:::
+
+::: hint SearchEveryWhere性能优化&#x20;
+优化了SearchEveryWhere搜索逻辑，大大提生大项目的搜索性能。我们测试了拥有 7000个 API 的项目，搜索响应非常快
+:::
+
+::: hint Content-Disposition支持优化&#x20;
+
+文件下载支持针对一下 2 种格式的支持，同时支持文件名转码
+
+```
+Content-Disposition:attachment; filename*=UTF-8''fastRequest%20.txt
+Content-Disposition:attachment; filename=fastRequest.txt
+```
+
+:::
+
+## 2023.2.3.1 &#x20;
+
+## 2023.2.3 &#x20;
+
+::: hint API同步至Postman&#x20;
+仅需配置Postman的token和对应workspace的ID即可将API云上传到Postman.享受fast request不支持的功能.
+
+由于历史原因,历史保存的持久化数据丢失了一部分字段,为了能够将同步至postman的数据更完整,
+建议在插件postman配置中勾上保存后同步postman选项,通过保存操作来触发同步.
+
+更多详情参考[Postman 同步](./features/postmanSync.md)
+:::
+
+::: hint 自动域名切换项目名下拉框自动切换&#x20;
+不同 Module 下的 API 生成参数的时候，如果开启了自动域名,自动切换项目名下拉框
+:::
+
+::: hint Environment重构&#x20;
+![environment](/img/2023.2.3/environment.png)
+
+Environment区分为本地值(Current value)和共享值(Initial value)
+
+Initial value可以通过提交 `.fastRequest/config/fastRequestCurrentProjectEnvironment.json` 实现共享
+:::
+
+::: hint 项目域名添加优化&#x20;
+
+![projectName](/img/2023.2.3/projectName.png)
+
+自动识别 module 名称作为下拉框选项,也可以自定义输入.
+
+:::
+
+::: hint 忽略字段使用@fastRequestParseIgnore&#x20;
+针对实体类字段忽略解析,可以在注释中添加`@fastRequestParseIgnore`来实现,原来的注解`@parseIgnore`依然适用
+
+```java
+/**
+ * xxx description
+ * @fastRequestParseIgnore
+ */
+private String someIgnoreField ;
+```
+
+:::
+
+## 2023.2.2 &#x20;
+
+::: hint Markdown文档模板配置&#x20;
+提供了导出文档和[Api在线文档](./features/apiDocSync.md)的自定义格式实现.查看[更多详情](./features/markdownDocTemplateConfig.md)
+:::
+
+::: hint JSON5支持&#x20;
+![json5](/img/2023.2.2/json5.png)
+
+请求体JSON5格式支持,json字段注释支持
+
+:::
+
+## 2023.2.1.1&#x20;
+
+## 2023.2.1&#x20;
+
+::: hint UI简化&#x20;
+![urlInputWithMethod](/img/2023.2.1/urlInputWithMethod.png)
+
+将老版本横向的3个组件(method下拉框,url输入框,响应下拉框)简化为1个,并且移除响应下拉框.增加简捷度
+
+:::
+
+::: hint api文档支持保存和打开&#x20;
+
+![openDoc](/img/2023.2.1/openDoc.png)
+:::
+
+::: hint apis放入到右键菜单&#x20;
+
+![openDoc](/img/2023.2.1/showApis.png)
+:::
+
+::: hint 统计页面加入了版本号&#x20;
+
+![pluginVersion](/img/2023.2.1/pluginVersion.png)
+:::
+
+## 2023.1.9&#x20;
+
+::: hint 快捷添加Environment变量&#x20;
+![quickAddEnvironmentVariable](/img/2023.1.9/quickAddEnvironmentVariable.png)
+
+选中一行需要添加到环境变量的点击添加按钮，可以快捷将该变量保存到当前Env中
+
+:::
+
+::: hint Environment使用界面增删改支持&#x20;
+![environmentVariableEditRemoveModify](/img/2023.1.9/environmentVariableEditRemoveModify.png)
+:::
+
+::: hint Show apis快捷触发&#x20;
+![showApis](/img/2023.1.9/showApis.gif)
+
+在Controller中任意位置右键唤起 `Generate`，选择`Show apis` 即可展示当前控制器中的所有API
+:::
+
+::: hint Response新增Size属性&#x20;
+![responseSize.png](/img/2023.1.9/responseSize.png)
+:::
+
+::: hint Api名称保存优化&#x20;
+详看Bilibili视频讲解 -> [IDEA插件Fast Request之API命名机制](https://www.bilibili.com/video/BV1wu4y1d7c4)
+:::
+
+## 2023.1.8&#x20;
+
+::: hint Environment&#x20;
+引入了  nvironment变量，[详情](./features/environment.md)
+:::
+
+::: hint 方法描述截断&#x20;
+![methodDescriptionLength](/img/2023.1.8/methodDescriptionLength.png)
+
+针对方法名过于长，导致显示或者数据保存的时候方法描述过程，可以进行截断设置。例如`SearchEveryWhere`
+
+:::
+
+## 2023.1.7.1&#x20;
+
+::: hint SearchEveryWhere增加自动生成策略&#x20;
+![searchEveryWhere](/img/2023.1.7.1/searchEveryWhere.png)
+
+选择自动生成后，即可回显或者自动生成API相关url及参数信息
+
+:::
+
+::: hint 主窗口弹出配置化&#x20;
+在`设置->Request Fast Request->其他配置中`增加了配置项`动作触发时显示主工具窗口`
+:::
+
+::: hint 参数解析&#x20;
+针对入参为`@RequestBody Set<String>set`的解析优化，默认给字符串加双引号
+
+::: code-tabs#shell
+
+@tab spring
+
+```java
+@PostMapping("test3")
+public Set<String> test3(@RequestBody Set<String>set) {
+    return set;
+}
+```
+
+:::
+
+## 2023.1.7&#x20;
+
+::: hint 全新扁平化图标&#x20;
+![toolwindowNew](/img/toolwindowNew.png)
+:::
+
+::: hint SearchEveryWhere 加入过滤条件&#x20;
+![searchEveryWhere](/img/2023.1.7/searchEveryWhere.png)
+
+支持`module`、`methodType`、`library`搜索
+
+:::
+
+::: hint 精简版 http 图标&#x20;
+
+同时支持在 `setting -> Restful Fast Request -> 使用精简http图标` 修改
+
+| 方法名 |                    新图标                     |                  老图标                   |
+| :----: | :-------------------------------------------: | :---------------------------------------: |
+|  Get   |    ![get\_dark](/img/http/new/get_dark.svg)    |    ![get\_dark](/img/http/get_dark.svg)    |
+|  Post  |   ![post\_dark](/img/http/new/post_dark.svg)   |   ![post\_dark](/img/http/post_dark.svg)   |
+| Delete | ![delete\_dark](/img/http/new/delete_dark.svg) | ![delete\_dark](/img/http/delete_dark.svg) |
+|  Put   |    ![put\_dark](/img/http/new/put_dark.svg)    |    ![put\_dark](/img/http/put_dark.svg)    |
+| Patch  |  ![patch\_dark](/img/http/new/patch_dark.svg)  |  ![patch\_dark](/img/http/patch_dark.svg)  |
+
+:::
+
+::: hint 字段拷贝&#x20;
+![fieldDup](/img/2023.1.7/fieldDup.png)
+
+支持字段行拷贝，key用`-dup`结尾标注。集合场景不变更key，开发者需要自行处理修改下标
+:::
+
+## 2023.1.6&#x20;
+
+::: hint Header 批量编辑&#x20;
+
+![batchEdit](/img/2023.1.6/batchEdit.png)
+
+:::
+
+## 2023.1.5&#x20;
+
+::: hint 编辑器图标位置&#x20;
+![editorAction](/img/2023.1.5/editorAction.png)
+
+从原先按钮容易挡住文本的位置移至编辑器右上角
+
+:::
+
+::: caution SearchEveryWhere 样式错乱
+这个问题伴随了很多版本，该版本彻底修复了。SearchEveryWhere 不会出现 Tab 宽度变大而导致 Tab 显示不全
+:::
+
+## 2023.1.4.2&#x20;
+
+## 2023.1.4.1&#x20;
+
+## 2023.1.4&#x20;
+
+::: hint 自动域名&#x20;
+自动识别或增加一个默认的域名,---->[详情](./features/autoDomain.md)
+:::
+
+## 2023.1.3.2&#x20;
+
+[FAQ:安装过 2023.1.3 版本的数据丢失](./faq.md#s-apis%E4%B8%A2%E5%A4%B1)
+
+::: hint OpenAI API 接口优化字段支持&#x20;
+![AI](/img/2023.1.3/ai.gif)
+
+利用[OpenAI 接口](https://platform.openai.com/docs/api-reference/chat)，替换随机字段值。注意由于 API 是非结构向数据，所以返回的内容可能会有误差。
+
+:::
+
+::: hint API 与存储文件跳转&#x20;
+
+![jumpToJsonData](/img/2023.1.3/jumpToJsonData.png)
+
+![API列表跳转到json](/img/2023.1.3/listJump2JsonData.png)
+
+实现 API 以及底层保存的 json 数据进行关联跳转
+:::
+
+::: hint 项目配置刷新&#x20;
+
+![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
+
+配置文件更新后，UI 实现项目级别配置更新
+
+:::
+
+::: hint rfr.currentModuleName 支持&#x20;
+[脚本](./script.md#rfr)中用于获取当前 API 所属模块支持
+:::
+
+::: hint Api 文档同步支持自定义分支&#x20;
+
+![apiSyncSupportBranch](/img/2023.1.3/apiSyncSupportBranch.png)
+
+支持特定分支，因为有些情况下 master 被保护不允许 push
+:::
+
+::: hint 工具栏&#x20;
+
+![htoolbar](/img/2023.1.3/htoolbar.png)
+
+![vtoolbar](/img/2023.1.3/vtoolbar.png)
+
+![toolbarSetting](/img/2023.1.3/toolbarSetting.png)
+
+1. 垂直工具栏支持
+2. 按钮位置调整和折叠
+
+:::
+
+::: hint GET、POST、DELETE、PUT、PATCH 图标&#x20;
+
+![toolbar](/img/2023.1.3/apis.png)
+
+对图标进行了圆角处理，并且调整了背景色
+
+:::
+
+## 2023.1.2&#x20;
+
+::: hint 图片响应渲染&#x20;
+
+![imageRender](/img/2023.1.2/imageRender.png)
+
+针对响应是图片的请求，自动渲染出图片，适合验证码场景
+
+:::
+
+::: hint 年度报告&#x20;
+![annualReport](/img/2023.1.2/annualReport.png)
+
+统计了历年操作的数据，你是否要来**PK**一把。此处省略 1 个狗头
+:::
+
+::: hint Url 解析逻辑&#x20;
+优化了 url 针对变量拼接的最终结果，例如几个变量拼接最终计算出一个 url。
+
+插件将最终计算出 url=`/test/a.htm`
+
+```java
+public class MyConstant {
+  public static final String MODULE_NAME = "a";
+  public static final String DYNAMIC_WEB_SUFFIX = ".htm";
+  public static final String REPAYMENT_REPAY = MODULE_NAME + DYNAMIC_WEB_SUFFIX;
+}
+@PostMapping(MyConstant.REPAYMENT_REPAY)
+  public String test2() {
+  return "";
+}
+```
+
+:::
+
+::: hint cUrl 导入&#x20;
+
+1. 自动解析 query param 进入`Url params` tab 页
+2. json 解析优化
+3. 已知 bug 修复
+   :::
+
+::: hint Url 特殊字符编码&#x20;
+针对带 query param 的 url 中的参数值待特殊字符进行了处理，不需要用户再额外进行特殊编码再传参
+:::
+
+::: hint Url 输入框回车事件&#x20;
+url 输入框点击回车，自动发送请求
+:::
+
+## 2023.1.1&#x20;
+
+::: hint 项目级别域名配置&#x20;
+
+![projectLevelDomainConfig](/img/2023.1.1/projectLevelDomainConfig.png "域名配置")
+
+![projectLevelDomainDialog](/img/2023.1.1/projectLevelDomainDialog.png "域名列表")
+
+支持直接从`yml`和`properties`配置文件快速配置域名，更多详情请查看 [ 项目域名配置](./features/projectLevelDomainConfig.md)
+:::
+
+::: hint 图标排版&#x20;
+对按钮进行了归类整理，让开发者更加容易找到和理解对应按钮的功能。
+:::
+
+::: hint 新 UI 工具窗口图标&#x20;
+新 UI 下工具窗口图标清晰度进行了优化。
+:::
+
+## 2022.3.1&#x20;
+
+::: hint 注释增加@fastRequestParseIgnore 用来忽略字段解析&#x20;
+
+以下的代码，插件会忽略解析该字段，请使用`@fastRequestParseIgnore`
+
+```java
+/**
+ * xxx description
+ * @fastRequestParseIgnore
+ */
+private String someIgnoreField ;
+```
+
+:::
+
+::: hint Script 中增加 rfr.currentDomain 支持&#x20;
+在脚本中可以通过`rfr.currentDomain`获取当前作用的域名
+:::
+
+## 2022.2.9&#x20;
+
+::: hint 全局动画配置&#x20;
+![animateConfig](/img/2022.2.9/animateConfig.png)
+
+你可以在此关闭全局动画，如果关闭了，图标将不再动
+
+:::
+
+## 2022.2.8&#x20;
+
+::: hint 下载文件适配&#x20;
+当 response 加了`content-disposition:attachment`，点击 send 自动适配下载
+:::
+
+## v2022.2.7&#x20;
+
+::: hint Api 文档同步&#x20;
+
+在线文档同步---->[详情](./features/apiDocSync.md)
+
+:::
+
+::: hint Api 文档显示返回值类型参数文档&#x20;
+![returnValueDoc](/img/2022.2.7/returnValueDoc.png)
+:::
+
+::: hint 插件更新通知机制&#x20;
+![upgradeNotice](/img/2022.2.7/upgradeNotice.png)
+
+从显式的对话框改为通知，同时自动更新也修改为==打开==了，如果你想关闭，请到配置页面手动关闭它，但我建议==开启它==，这样子就可以及时接收到更新。
+
+需要注意的是，前一个版本的更新依然会是弹窗，这个版本以后就是消息通知机制了
+
+:::
+
+::: hint 公共请求头&#x20;
+
+![commonHeader](/img/2022.2.7/commonHeader.gif)
+
+[---->详情](./features/commonHeader.md)
+
+:::
+
+::: hint 全屏&#x20;
+
+![fullScreen](/img/2022.2.7/fullScreen.png)
+
+[---->详情](./features/fullScreen.md)
+
+:::
+
+::: hint 注释预览&#x20;
+![fullScreen](/img/2022.2.7/commentPreview.png)
+:::
+
+## v2022.2.6&#x20;
+
+::: hint 一键清除参数&#x20;
+
+![clear](/img/2022.2.6/clear.png)
+全局清空
+
+![clearColumnValue](/img/2022.2.6/clearColumnValue.png)
+批量清空列值
+:::
+
+::: hint API 注释预览&#x20;
+![showCommentConfig](/img/2022.2.6/showCommentConfig.png)
+![showCommentInClass](/img/2022.2.6/showCommentInClass.png)
+![showCommentInNavigate](/img/2022.2.6/showCommentInNavigate.png)
+:::
+
+::: hint 参数列根据 key 排序&#x20;
+![sortColumn](/img/2022.2.6/sortColumn.png)
+:::
+
+## v2022.2.5.2&#x20;
+
+## v2022.2.5.1&#x20;
+
+## v2022.2.5&#x20;
+
+::: hint Console 支持&#x20;
+![console](/img/2022.2.5/console.png)
+
+Console 帮助开发者打印一些你想要的信息
+
+更多信息请看-----> [script->console](./script.md#console)
+
+:::
+
+::: hint 内置变量 rfr 添加 currentProjectName、currentEnvName 属性&#x20;
+可以使用这 2 个变量用于一些判断
+
+更多信息请看-----> [script->内置变量->rfr](./script.md#rfr)
+:::
+
+::: hint 从 Javadoc 读取注释&#x20;
+
+![console](/img/2022.2.5/parseDocDesc.png)
+
+读取 Javadoc 形式的参数注释，适用于 path 参数以及 request param 是非实体类的参数
+
+:::
+
+::: hint 新增推特&#x20;
+有推特账号的请关注我，感谢
+
+![](/img/twitter.png)
+
+![twitterAction](/img/2022.2.5/twitterAction.png)
+:::
+
+## v2022.2.4.1&#x20;
+
+## v2022.2.4&#x20;
+
+::: hint 全新的 Logo&#x20;
+
+:::
+
+::: hint 支持通过 DateTimeFormat 注释解析日期&#x20;
+![dateTimeFormat](/img/2022.2.4/dateTimeFormat.png)
+:::
+
+::: hint 支持解析 BaseController&#x20;
+![baseController](/img/2022.2.4/baseController.png)
+:::
+
+::: hint 自动更新可配置化&#x20;
+如果你不需要接收自动更新，则可以关闭，通过手动的形式更新(建议开启)
+![autoUpdate](/img/2022.2.4/autoUpdate.png)
+:::
+
+## v2022.2.3.1&#x20;
+
+## v2022.2.3&#x20;
+
+::: hint 脚本支持&#x20;
+![scriptProject](/img/2022.2.3/scriptProject.png)
+
+![scriptModule](/img/2022.2.3/scriptModule.png)
+
+脚本可以让开发者更加灵活地、动态地、方便地修改请求过程的一些入参，以及响应的处理\
+具体请参考-------> [脚本](./script.md)
+
+:::
+
+::: hint 一键拷贝 Url&#x20;
+![copyUrl](/img/2022.2.3/copyUrl.png)
+:::
+
+::: hint 点击按钮时触发表格单元格值更改&#x20;
+\==2022.2.3 版本之前==在输入表格中的参数时候，若光标还在表格内部，此时去点击操作按钮，某些场景下会报错或者值无法被修改，该问题在此版本得到解决
+
+老版本如何处理: [FAQ:输入参数后调用 API 发现无效](./faq.md)
+:::
+
+## v2022.2.2&#x20;
+
+::: hint 终止 API 请求功能&#x20;
+![stopApi](/img/2022.2.2/stopApi.gif)
+:::
+
+::: hint 批量导出 API 文档&#x20;
+![batchExportApiDoc](/img/2022.2.2/batchExportApiDoc.png)
+:::
+
+## v2022.2.1&#x20;
+
+::: hint API 分组参数保存支持&#x20;
+目的:一个 API 下保存不同组合的参数
+
+[B 站教程](https://www.bilibili.com/video/BV1zU4y1S7pC?share_source=copy_web\&vd_source=c46db3e7c134b1948dabbea9717a72ac)
+
+\==原保存操作将默认归类到 Default 分组==
+
+如何操作:输入参数后点击==分组请求保存==
+
+![groupSave](/img/2022.2.1/groupSave.png)
+
+**切换参数**
+
+以下是 book 列表 3 种语言的查询
+
+![apiParamGroup](/img/2022.2.1/apiParamGroup_en.gif)
+:::
+
+::: hint 临时请求保存支持&#x20;
+目的:保存任意不属于本项目的请求，用于临时调用，跟当前项目代码不关联
+
+临时请求保存的 Request 的 Url 必须以==http==或者==https==开头
+
+![tempSave](/img/2022.2.1/tempSave.png)
+
+:::
+
+::: hint cURL 导入支持&#x20;
+
+![importByCurl](/img/2022.2.1/importByCurl.gif)
+
+\==请注意如果需要绑定方法，则需要将光标放置到方法名上==
+:::
+
+::: hint Response Header 展示&#x20;
+
+![responseHeader](/img/2022.2.1/responseHeader.png)
+
+:::
+
+::: hint 添加对 Url 尾缀支持&#x20;
+
+![responseHeader](/img/2022.2.1/urlSuffix.png)
+
+目的:有些请求需要在 url 结尾加上.do
+
+:::
+
+::: hint 优化解析&#x20;
+优化了`List<Entity>`的解析
+:::
+
+## v2022.1.10&#x20;
+
+::: hint 添加对历史请求预览的支持&#x20;
+
+![history](/img/history.png)
+
+隐藏技能:双击记录可以展示详情
+
+:::
+
+::: hint 超时时间自定义设置&#x20;
+
+![timeoutSetting](/img/timeoutSetting.png)
+
+默认: 60 秒
+
+:::
+
+::: hint SearchEveryWhere 支持方法注释搜索&#x20;
+
+![searchEveryWhereDescription](/img/searchEveryWhereDescription.png)
+
+支持注释搜索 API
+:::
+
+::: hint 优化&#x20;
+
+:::
+
+## v2022.1.9&#x20;
+
+::: hint 工具窗口跳转增加快捷键&#x20;
+
+![toolwindowShortcut](/img/toolwindowShortcut.png)
+
+提供了快捷键可以快速跳转，可以在`setting->Keymap`中修改
+
+:::
+
+::: hint 添加自动添加 Cookie 支持&#x20;
+
+![autoStoreCookie](/img/autoStoreCookie.png)
+
+开启此配置，cookie 再自动存入==项目全局参数==中的`cookies`中，此配置默认开启
+:::
+
+::: hint 响应 raw 中增加 html 预览&#x20;
+
+![rawHtmlPreview](/img/rawHtmlPreview.png)
+
+raw 中不再截断 html 返回类型的响应，同时可以对 html 进行预览
+
+:::
+
+::: hint 忽略字段解析优化&#x20;
+
+:::
+
+::: hint 泛型参数解析支持&#x20;
+支持此类泛型参数解析
+
+```java
+@Data
+public class CommonDTO<T,R> implements Serializable {
+    private String accessToken;
+    private String appKey;
+    private String clientId;
+    private T data;
+    private List<R> dataList;
+}
+
+@PostMapping(value = "/apply")
+public Integer loanApply(@RequestBody CommonDTO<Book, TestDTO> req){
+    return 1;
+}
+```
+
+:::
+
+::: hint 完善项目全局参数&#x20;
+
+![projectConfigParam](/img/projectGlobalParam.png)
+
+加入了`URL Params`、`URL-Encoded Params`、`Cookies`
+
+:::
+
+::: hint 优化&#x20;
+
+* 界面优化
+  * 优化了 tab 间距(windows 下不正常)、背景颜色、个别突出的 tab 颜色等
+* 保存 API 插入顺序优化
+  * 后保存的放在最上面
+
+:::
+
+::: hint APIs 列表视图优化&#x20;
+
+![apisList](/img/apisList.png)
+
+渲染进行了优化，新保存的 api 图标会自动优化，历史保存的 api 可以右键进行选择变更
+
+:::
+
+## v2022.1.8&#x20;
+
+::: hint 项目级别全局参数支持&#x20;
+
+![projectConfigParam](/img/projectConfigParam.png)
+
+支持项目级别内的全局参数，不受多模块影响
+
+配置优先级`api头 > 项目级别全局请求头 > 全局请求头`
+
+:::
+
+::: hint 快速添加到头参数&#x20;
+
+![add2projectConfig](/img/add2projectConfig.png)
+
+![cookie2projectConfig](/img/cookie2projectConfig.png)
+
+原响应结果从添加到 ~~全局请求头~~ 变更为添加到 ==项目全局请求头==，cookie 也是如此
+
+:::
+
+## v2022.1.7&#x20;
+
+::: hint Kotlin spring 系列框架支持&#x20;
+
+![kotlinSupport](/img/kotlinSupport.png)
+
+添加了 Kotlin 语言下，Spring 系列框架支持
+
+:::
+
+::: hint 新增 SearchEveryWhere 范围搜索策略&#x20;
+
+![searchEveryWhereStrategy](/img/searchEveryWhereStrategy.png)
+
+2022.1.7 版本默认可以搜索到 feign 或者 controller 中的 mapping
+
+默认搜索策略是根据注解来搜索的，再提供 2 种选项，如果在搜索过程中需要排除类似 feign 中的接口，可以通过去除 Interface 的勾选来处理.
+
+:::
+
+::: hint 编辑器 ToggleUseSoftWrap 支持&#x20;
+
+![toggleUseSoftWrap](/img/toggleUseSoftWrap.png)
+:::
+
+::: hint 响应数据一键添加 Global Header 支持&#x20;
+
+![add2GlobalHeader](/img/add2GlobalHeader.png)
+
+多模块项目下建议使用，因为 Add to Headers 只能添加到当前模块项目下
+
+:::
+
+::: hint 添加导航到当前方法的支持&#x20;
+
+![navigate2CurrentMethod](/img/navigate2CurrentMethod.png)
+
+当你生成好方法的 url 以后，又切换到代码中的别的地方，然后又想开始调试该 API 方法，可以通过此功能快速定位到代码
+
+:::
+
+::: hint 优化多模块下保存的 API 回显自动绑定项目&#x20;
+优化了**多模块**下下针对保存的 api 回显需要**手动切换项目下拉框**
+:::
+
+## v2022.1.6&#x20;
+
+::: hint 添加一键添加 Cookie 到 Header 的支持&#x20;
+
+![addCookie2Header](/img/addCookie2Header.png)
+
+针对登录需要 Cookie 支持的，可以将响应中的 Cookie 快速添加到 Header 来实现
+
+:::
+
+::: hint 添加 API 分享 Word 和 html 的支持&#x20;
+
+![shareApi](/img/shareApi.png)
+
+请注意 word 形式的 API 内部采用 html 来实现的，所以不要觉得奇怪，导出就行
+
+:::
+
+[comment]: <> "::: note 添加 YouTrack 跟踪 bug 支持"
+
+[comment]: <> "Fast Request 接通了 YouTrack Issue 自动上报的功能，直接点击上报 bug 即可反馈问题，无需手动再复制粘贴到 Github 提报 bug"
+
+[comment]: <> "Fast Request YouTrack 官方网址: [https://darkings.youtrack.cloud/issues](https://darkings.youtrack.cloud/issues)"
+
+[comment]: <> "![youtrackSubmit](/img/youtrackSubmit.png)"
+
+[comment]: <> "::: "
+
+## v2022.1.5&#x20;
+
+::: hint 添加对自动生成参数描述的支持&#x20;
+
+![paramDescription](/img/paramDescription.png)
+
+可选择性的对描述进行隐藏
+
+:::
+
+::: hint 添加一键生成 API 文档的支持&#x20;
+
+![shareDocButton](/img/shareDocButton.png)
+
+![apiDocExample](/img/apiDocExample.png)
+
+点击生成参数后，可通过分享直接生成 Markdown 文档
+
+:::
+
+::: hint 添加单个类的 API 整体预览&#x20;
+
+![apiDocExample](/img/apiPreview.gif)
+
+聚焦窗口后输入关键字可快速定位
+
+:::
+
+## v2022.1.4&#x20;
+
+\==idea 版本 2021.3+==
+
+::: hint SearchEveryWhere 高亮优化&#x20;
+
+![searchEveryWhereHighlight](/img/searchEveryWhereHighlight.png)
+
+高亮展示搜索关键字，加快真实想要查找的 API 的查找速度，同时展示 api 对应的 javadoc
+
+:::
+
+::: hint APIs 导入导出支持&#x20;
+
+![exportImportApis](/img/exportImportApis.gif)
+
+增加对 APIs 的导入导出支持，利用改功能，你可以非常方便得将自己已有的 APIs 分享给别的开发者，或者导入到其他设备上的 IDEA
+
+更多详情请看 **[功能->APIs 导入导出](./feature.md#apis导入导出)**
+:::
+
+::: hint APIs 支持直接运行&#x20;
+
+![runInApiManagement](/img/runInApiManagement.png)
+
+你可以在 APIs tab 页直接运行你保存的请求
+:::
+
+::: hint 自动生成参数可选化&#x20;
+![generateSwitch](/img/generateSwitch.png)
+:::
+
+::: hint swagger 注解默认值参数解析支持&#x20;
+增加了 swagger 注解默认值的解析，该功能对于入参的传递更加人性化
+
+* @ApiParam(swagger2)
+* @ApiImplicitParam(swagger2)
+* @ApiModelProperty(swagger2)
+* @Parameter(swagger3)
+* @Schema(swagger3)
+
+更多详情请看 **[功能->swagger 默认值解析支持](./feature.md#swagger默认值解析支持)**
+:::
+
+::: hint 对 Send 和 Send and Download 按钮进行了合并&#x20;
+
+![mergeRunAndDownload](/img/mergeRunAndDownload.png)
+对按钮进行了合并，因为常见的操作都是非下载操作，减少了工具栏按钮个数，看上去更加简捷
+
+:::
+
+::: hint 使用引导上的细节优化&#x20;
+![help](/img/help.png)
+我们在不同的操作窗口，增加?选项用来展示一些注意事项及操作指引，对于初次使用的用户，操作门槛更低
+
+并且随着版本的迭代，后续可能会加入更多的提示操作指引
+
+:::
+
+::: hint url 解析优化&#x20;
+
+历史逻辑只会取第一个 url 即 test1，考虑到实际使用中，有可能你需要的是另外一个 url，所以添加了随机支持
+
+以下 demo，url 将随着点击::restfulFastRequest::随机生成 **/url1/test1,/url1/test2,/url2/test1,/url2/test2**
+
+```java
+@RequestMapping({"url1","url2"})
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = {"test1","test2"})
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+
+支持变量计算，以下 demo 将生成 **/url/public/test1**
+
+```java
+public class Constant {
+    public static final String PUBLIC_URL = "/public";
+}
+@RequestMapping("url")
+@RestController
+public class MultiUrlController {
+    @GetMapping(value = Constant.PUBLIC_URL + "/test1")
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+
+:::
+
+::: hint Tab 页 API Navigate 重命名 Navigate&#x20;
+在工具窗口比较小的情况下，API Navigate 会被隐藏，为了在尽可能小的工具窗口展示更多内容，所以命名更加简短
+:::
+
+## v2.1.3&#x20;
+
+* 参数特殊符号编码支持
+* curl 加入 global headers
+
+## v2.1.2&#x20;
+
+* 添加对导出 api 到 Postman 的支持
+* 首次打开 idea 懒加载 API Navigate 树
+* SearchEveryWhere module 标识
+* Url 解析优化
+* API navigate tree 展示优化
+* API 保存分组优化
+* 全局请求头支持
+
+::: hint Url 解析优化&#x20;
+支持以下 example 的解析
+
+不再需要单独配置 url replace config
+:::
+
+::: code-tabs
+
+@tab 场景 1: url 是类常量引用
+
+```java
+@RequestMapping(Url1.URL_TEST)
+@RestController
+public class UrlTestController {
+    private static final String URL= "xxx";
+
+    @GetMapping(value = URL)
+    public Integer testUrl(){
+        return 1;
+    }
+}
+```
+
+@tab 场景 2: value 是一个数组
+
+```java
+@RequestMapping(
+    value = {"/v1/save"},
+    method = {RequestMethod.POST}
+)
+public Integer testUrl(){
+   return 1;
+}
+```
+
+:::
+
+::: hint 添加对导出 api 到 Postman 的支持&#x20;
+
+![export2postman](/img/export2postman.gif)
+:::
+
+::: hint SearchEveryWhere module 标识&#x20;
+
+![searchEveryWhereModule](/img/searchEveryWhereModule.png)
+:::
+
+::: hint API 保存分组优化&#x20;
+
+```
+保存api的时候，api将会保存到对应的请求指定到控制器名所在的分组(更加直观)
+```
+
+![save2ControllerGroup](/img/save2ControllerGroup.png)
+:::
+
+::: hint 全局请求头支持&#x20;
+
+![globalRequestHeader](/img/globalRequestHeader.png)
+:::
+
+## v2.1.1&#x20;
+
+* SearchEveryWhere 支持
+* 增加一个最新按钮可以随时查看最新版本
+* 优化枚举的解析
+* 增加对 http 重定向的支持
+
+::: hint SearchEveryWhere support&#x20;
+
+```
+输入案例
+/url              (查询指定url)
+get /list         (指定get方式指定url)
+post /save        (指定post方式指定url)
+```
+
+![searchEveryWhere](/img/searchEveryWhere.gif)
+:::
+
+::: hint 最新版本快速查看&#x20;
+![whatsnewNotifcation](/img/whatsnewNotifcation.png)
+:::
+
+## v2.1.0.2&#x20;
+
+* 加入了组织[**Dromara**](https://dromara.org/zh/)(致力于微服务云原生解决方案的组织)
+
+## v2.1.0.1&#x20;
+
+* 修复 Get 参数错误
+
+## v2.1.0&#x20;
+
+* 修复 POST 形式的 API 中@RequestBody、@RequestParam 混合使用参数解析导致请求 400 异常
+* 对嵌套类的解析支持
+* 增加支持对控制器类级别@RequestMapping(path="/xxx")path 的解析
+* Api tree 针对带@RequestMapping 类的扫描支持
+
+## v2.0.9&#x20;
+
+* 2021.3+版本修复"Slow operations are prohibited on EDT"
+* 修复快速从 response 添加 Headers
+* 添加项目级别的配置，切换项目 env 和 project 不受变化
+* 文本编辑器添加了快捷格式化按钮
+
+::: hint 从 response 添加 Headers&#x20;
+
+```
+如果你的api需要再header里面塞入token，你可以像这样子从响应里面快速加参数塞入headers
+```
+
+![format](/img/quickAddHeaders.gif)
+:::
+
+::: hint 文本编辑器添加了快捷格式化按钮&#x20;
+![format](/img/format.gif)
+:::
+
+## v2.0.8.1&#x20;
+
+* 修复 searchEveryWhere 冲突警告
+* 调整低版本 idea 工具栏操作按钮至工具栏顶部位置
+* 移除多余依赖，插件从 11.1M 降至 5.9M
+
+## v2.0.8&#x20;
+
+* 修复初次添加项目或环境 npe
+* json 树响应字符渲染最大限制
+* 添加 Api navigate 对 methodType 的支持
+* 添加对忽略参数解析的支持
+* 线程导致的 EDT 问题
+* send/sendDownload 支持自定义快捷键
+* 修复 2021.3 响应不显示
+
+::: hint send/sendDownload 支持自定义快捷键&#x20;
+
+```
+快捷键在任意位置点击均可触发，不再需要聚焦到工具窗口
+```
+
+![shortcutSendAndDownload](/img/shortcutSendAndDownload.png)
+:::
+
+::: hint 添加 Api navigate 对 methodType 的支持&#x20;
+
+![shortcutSendAndDownload](/img/methodFilter.png)
+:::
+
+## v2.0.7&#x20;
+
+* 添加 API 导航树
+* 添加 Headers 随项目和环境切换自动切换的支持
+* 优化 windows 系统某些情况下下载文件无法弹出目录
+* 优化@RequestParam 的参数解析
+* 优化工具窗口 project 和 env 下拉组件及布局
+* curl 拷贝提示优化
+* regenerate 提示优化
+* 删除 project 和 env 配置增加确认操作
+* 修复 json 字段输出循序被打乱
+* 将发送请求按钮至工具栏同时支持快捷键
+
+::: hint API 导航树&#x20;
+
+```
+选中树输入关键字，再按回车或者鼠标左键双击即可定位到API
+
+悬浮鼠标显示api的doc
+```
+
+![apinavi](/img/apinav.gif)
+:::
+
+::: hint Headers 自动切换&#x20;
+
+```
+场景:SpringBoot等多模块项目不同项目、不同环境下头参数不同，为了快速自动切换headers，引入了header分组
+操作方式：
+1.在headers group里修改约束:输入的值必须是标准json格式
+2.直接切换环境，然后再headers表格中输入对应的key、value值
+```
+
+![headerSwitch](/img/headerSwitch.gif)
+:::
+
+::: hint 优化@RequestParam 的参数解析&#x20;
+@RequestParam 注解的参数将优先按照别名\
+`@RequestParam("nameAlias")List<String> nameList` 输入参数将变成 nameAlias\
+:::
+
+::: hint 将发送请求按钮至工具栏同时支持快捷键&#x20;
+
+```
+send request: alt =
+send and download: alt -
+前提条件:工具窗口需要被聚焦
+```
+
+![toolbarSend](/img/toolbarSend.png)
+:::
+
+::: hint 优化工具窗口 project 和 env 下拉组件及布局&#x20;
+
+```
+图标p代表project
+图标e代表environment
+```
+
+![dropdownProject](/img/dropdownProject.png)
+
+![dropdownEnv](/img/dropdownEnv.png)
+:::
+
+## v2.0.6&#x20;
+
+* Fix "Light files should have PSI only in one project"
+* 添加对 json 的语法支持
+* 添加对 PATCH 的支持
+* 添加 API 保存时候存入对应的模块分组的支持
+* 修复响应中 null 值不输出的问题
+* 添加对 JAX-RS 的支持
+* 最新功能展示
+
+在不影响使用的情况下，有时候会经常弹出*Light files should have PSI only in one project*.2.0.6 版本得到修复
+
+::: hint json 语法支持&#x20;
+![json](/img/json.png)
+:::
+
+::: hint 添加 API 保存时候存入对应的模块分组的支持&#x20;
+![apiGroup](/img/apiGroup.gif)
+
+同时模块支持快速搜索
+![apiGroup](/img/moduleSearch.gif)
+:::
+
+::: hint JAX-RS 的支持&#x20;
+![apiGroup](/img/jaxrs.gif)
+:::
+
+::: hint 最新功能展示&#x20;
+只会展示一次
+![apiGroup](/img/whatsnew.png)
+:::
+
+## v2.0.5&#x20;
+
+* JSON 内置编辑器支持
+* 修复全选参数框隐藏问题
+* 修复 API 回显 Headers 参数异常
+* 优化了请求进度条显示
+
+## v2.0.4&#x20;
+
+* 修复因 response 内容过道导致的界面错乱问题
+* Response json 超长显示优化
+* 优化图标尺寸
+* 中文文档迁移至 gitee
+
+## v2.0.3&#x20;
+
+* 删除 API 的时候增加了确认
+* 添加了参数全选反选的功能
+* 修复诸如【@RequestParam(value="address\[]") Set address】的参数解析
+* 修复快速添加 headers 界面错乱
+
+## v2.0.2&#x20;
+
+* 修复项目多开情况下 A 请求显示到 B 项目
+* 修复@ResponseBody 修饰的数组与集合解析问题
+* 修复 List 参数无泛型解析问题
+* 添加对文件下载的支持
+* 发送请求时展示进度条
+* 全新的 document，点击工具栏 doc 图标
+* 一些优化
+
+## v2.0.1&#x20;
+
+* rename from Fast Request to Restful Fast Request
+* Json、Form URL-Encoded、Multipart Tab 合并减小工具窗口宽度
+* 修复全局配置下修改配置报错
+* 将 get、post、delete、put 图标添加到保存的请求
+* 保存的请求支持更多搜索策略
+* tab 重命名 collection->APIs
+* YearMonth 解析支持
+
+## v2.0.0&#x20;
+
+* 支持请求的存储
+* 支持参数可选
+* 优化了 UI
+* 修复了一些 bug
+
+---
+
+---
+url: /guide/install.md
+---
+# 安装
+点击安装
+
+## 在线安装(推荐)
+
+IDEA 插件市场搜索 `Restful Fast Request` 并安装
+
+![download](/img/download.png)
+
+## 离线安装
+
+> 适用内网使用或者体验版使用
+
+1. 前往 <https://plugins.jetbrains.com/plugin/16988/versions> 下载安装包
+2. 前往 setting → plugins → Install plugin from disk
+3. 选择下载好的安装包并重启 (==请不要解压压缩包==)
+
+![installLocal](/img/installLocal.png)
+
+## EAP
+
+\==IDEA 版本 2021.2+==
+
+eap 版本为抢先版本,可能会相对不大稳定,但是很多用户希望提前使用一些高级的功能,那么可以尝试使用.
+
+eap 版本需要先去下载对应的 eap 压缩包,安装请参考方式**离线安装**,忽略步骤 a
+
+[前往下载](https://plugins.jetbrains.com/plugin/16988/versions/eap)
+
+::: caution 注意
+使用 eap 版本的时候需要注意,一般低版本升级到高版本的 eap 不大会出什么问题,但是从高版本的 eap 版本降级到低版本的稳定版本,eap 版本中一些新的功能保存的数据,
+可能会丢失
+:::
+
+---
+
+---
+url: /guide/introduce.md
+---
+# 简介
+[![twitter](https://img.shields.io/static/v1?label=Twitter\&message=FastRequest666\&logo=twitter\&color=FC8D34)](https://twitter.com/FastRequest666)
+[![](https://badgen.net/badge/Github/fast-request/21D789?icon=github)](https://github.com/dromara/fast-request)
+[![](https://img.shields.io/static/v1?label=Gitee\&message=fast-request\&color=FF318C\&logo=gitee)](https://gitee.com/dromara/fast-request)
+[![Jetbrains Plugins][plugin-img]][plugin]
+![Version](https://img.shields.io/jetbrains/plugin/v/16988?logo=IntelliJ%20IDEA) ![Downloads](https://img.shields.io/jetbrains/plugin/d/16988?color=FE2857) ![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/r/rating/16988) [![Slack](https://img.shields.io/static/v1?label=Slack\&message=Fast%20Request\&logo=slack\&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw)
+
+[**::restfulFastRequest::estful ::rfr-f::ast ::restfulFastRequest::equest**](https://plugins.jetbrains.com/plugin/16988) 是一个类似于 Postman 的 IDEA 插件。它是一个强大的 restful api 工具包插件，可以根据已有的方法帮助您快速生成 url 和 params。
+`Restful Fast Request = API调试工具 + API管理工具 + API搜索工具`。 它有一个漂亮的界面来完成请求、检查服务器响应、存储你的 api 请求和导出 api 请求。插件帮助你在 IDEA 界面内更快更高效得调试你的 API。
+
+对比于 HTTP Client，Fast Request 不仅拥有 HTTP Client 内置的功能，还提供了友好易懂直观的界面，让使用者调试 API 的时候能够更加方便、简捷。同时各种类型参数也提供了不同的定制方式，更加灵活。而且集成了搜索、Postman 集成，Swagger 支持等额外的[功能](/guide/features/)。
+
+::: important 宗旨
+
+插件的宗旨是为简化开发、提高效率而生，我们的愿景是成为 IDEA 最好的搭档，就像魂斗罗中的 1P、2P，基友搭配，效率翻倍。
+:::
+
+## 支持的框架
+
+* Spring体系框架 (Spring MVC / Spring Boot)
+* JAX-RS
+* Kotlin Spring体系框架
+* Solon
+
+## API 工具对比
+
+::: chartjs
+
+```json
+{
+  "type": "radar",
+  "data": {
+    "labels": ["易用性", "Swagger", "Java", "Kotlin", "压测", "集成"],
+    "datasets": [
+      {
+        "label": "Fast Request",
+        "data": [95, 90, 90, 70, 40, 60],
+        "fill": true,
+        "backgroundColor": "rgba(0, 250, 154, 0.2)",
+        "borderColor": "rgb(0, 250, 154)",
+        "pointBackgroundColor": "rgb(0, 250, 154)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(0, 250, 154)"
+      },
+      {
+        "label": "Postman",
+        "data": [80, 80, 80, 50, 90, 100],
+        "fill": true,
+        "backgroundColor": "rgba(54, 162, 235, 0.2)",
+        "borderColor": "rgb(54, 162, 235)",
+        "pointBackgroundColor": "rgb(54, 162, 235)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgb(54, 162, 235)"
+      }
+    ]
+  },
+  "options": {
+    "elements": {
+      "line": {
+        "borderWidth": 3
+      }
+    }
+  }
+}
+```
+
+:::
+
+## 关于作者
+
+```component VPCard
+title: Kings
+desc: <b>Make it easier...faster...stronger...</b><br/>
+logo: /img/fastRequest.svg
+link: https://github.com/kings1990
+background: rgb(39 117 182 / 38%)
+```
+
+职务: 从事 java 软件开发。Fast Request 作者、设计师、星推官。[Bean Assistant](https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper)作者
+
+## 🤝 联系我们
+
+如果您遇到了任何使用上的问题，请通过以下方式联系我们，将会有更快为你解决问题，同时群里全部都是 Javaer，经常会讨论一些技术问题，热点新闻，跳槽，吐槽等，可以帮助你学到一些东西。
+
+| ![微信技术群](https://img.shields.io/static/v1?label=wechat\&message=微信技术群\&logo=wechat\&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter\&message=FastRequest666\&logo=twitter\&color=FC8D34)](https://twitter.com/FastRequest666) |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| !\[wechat group]\(/img/wechatGroup.png =300x300)                                                           | !\[twitter]\(/img/twitter.png =300x300)                                                                                                             |
+| 如果扫码失败请直接搜微信号 FastRequest99                                                                 | 欢迎关注官方 Twitter                                                                                                                              |
+
+## 支持
+
+
+
+
+[plugin]: https://plugins.jetbrains.com/plugin/16988
+
+[plugin-img]: https://img.shields.io/badge/plugin-主页-x.svg?logo=IntelliJ%20IDEA
+
+---
+
+---
+url: /guide/java.md
+---
+# Java资源
+## 优秀博客社区
+
+在互联网上，有许多非常优秀的博客、论坛和网站，它们提供了丰富的信息资源和知识分享平台，可以帮助我们更好地了解和学习各种知识。
+
+大家可以根据自己的需求，进一步发掘和了解这些优秀的资源和平台，学到更多的技能。
+
+* [程序员DD](https://didispace.com)
+* [JavaGuide](https://javaguide.cn)
+* [bugstack 虫洞栈](https://bugstack.cn/)
+
+---
+
+---
+url: /guide/link.md
+---
+# 友情链接
+## 网站主题及 logo
+
+Restful Fast Request 首页的 logo 及背景由 **森阳** 提供，感谢她的创作，如果要插画和 logo 商业化合作小伙伴可以找她
+
+```text
+邮件：sssenyang@qq.com | 微信：ArtSenyang
+```
+
+## Dromara 组织成员项目
+
+## 低代码
+
+## 工具
+
+---
+
+---
+url: /guide/priceAdjust.md
+---
+# 价格调整
+自 Restful Fast Request 推出订阅以来，我们从未提高过插件的价格，并且我们一直在不断地更新新的功能，速度相当快，甚至有些人都跟不上更新的节奏，到此为止我们一共迭代了 19 个版本，加了许多许多非常实用的功能，例如 API 文档同步，是一个性价比非常高的插件。
+我们同时也为用户提供最低至六折的续费优惠（第二年八折），同时还有国内群折扣码，这也是我们感激长期使用的忠实用户的一种方式。
+
+然而，我们也到了需要提高订阅价格的时间节点。新价格将于 ==2023 年 1 月 1== 日生效。个人版将从原来的$1/月调整至$1.9/月，组织版将从原来的$2/月调整至$2.9/月，年订阅价格是月订阅价格的 10 倍(按 10 个月收费)。
+
+> 在新价格生效前按当前价格预付订阅
+
+我们为新老客户调整了预付订阅的长度限制，开发者可以前往[账户中心](https://account.jetbrains.com/licenses)，按当前价格进行超过一年的==提前==续订。现在，个人订阅允许最多至三年，企业订阅最多至两年。
+::: right
+2022-11-15 Kings
+:::
+
+---
+
+---
+url: /guide/script.md
+---
+# 脚本
+**脚本的作用**: 开发者可以利用 Groovy 脚本来自定义一些逻辑,从而使得 api 更加灵活,例如对参数进行动态加密签名,放入 header,而不是直接写死。脚本包括前置脚本和后置脚本。
+
+**实现技术**: [Groovy](https://groovy-lang.org/)
+
+看到 Groovy 不熟悉请==不要慌==,语法和 Java 几乎一致(Java 就是香,手动一个狗头)
+
+## 脚本流程图
+
+![](/img/script.svg)
+
+## 前置脚本
+
+在执行请求之前执行,可以在这里对请求的参数进行处理,例如加密、签名、动态修改 header 等等。
+
+## 后置脚本
+
+在请求执行完成之后执行,可以在这里对响应的结果进行处理,例如提取 token、动态修改 header 等等。
+
+## 执行优先级
+
+项目级别前置脚本 > 单 API 前置脚本 -> 项目级别后置脚本 -> 单 API 后置脚本
+
+## 测试项目
+
+<https://github.com/kings1990/fast-request-samples>
+
+## 内置变量
+
+::: caution 注意
+
+开发者在自己编辑的脚本中,应该注意内置变量已被声明,而不是再去 new 一个 Request 或者 Response 对象,对象名是 request 或者 response,否则可能会造成不可预期的错误
+
+:::
+
+插件底层采用[hutool](https://hutool.cn/)的`cn.hutool.http.HttpRequest`来实现请求的发送
+
+### request &#x20;
+
+废弃: **使用 `rfr.request` 代替**
+
+* 作用: 包含了请求相关的信息,例如 url、header、body、各种参数
+* 类型: cn.hutool.http.HttpRequest
+
+可以通过修改 request 值来动态调整参数
+
+### response &#x20;
+
+废弃: **使用 `rfr.response` 代替**
+
+* 作用: 包含了请求响应的信息
+* 类型: cn.hutool.http.HttpResponse
+
+可以通过 response 值来获取响应的结果
+
+### rfr&#x20;
+
+* 作用: 包含了跟插件交互相关的一些属性,用于后期定制
+
+#### rfr.request&#x20;
+
+* 作用: 包含了请求相关的信息,例如 url、header、body、各种参数
+* 类型: cn.hutool.http.HttpRequest
+
+可以通过修改 request 值来动态调整参数
+
+#### rfr.response&#x20;
+
+* 作用: 包含了请求响应的信息
+* 类型: cn.hutool.http.HttpResponse
+
+#### rfr.projectHeader&#x20;
+
+```
+作用: 包含了项目级别头,可以通过修改来动态往UI里面设置值
+类型: java.util.LinkedHashMap<String,String>
+```
+
+#### rfr.apiHeader&#x20;
+
+```
+作用: 包含了模块级别头,可以通过修改来动态往UI里面设置值
+类型: java.util.LinkedHashMap<String,String>
+```
+
+#### rfr.currentProjectName&#x20;
+
+```
+作用: 当前下拉框选择的项目名
+类型: java.lang.String
+```
+
+#### rfr.currentEnvName&#x20;
+
+```
+作用: 当前下拉框选择的环境名称
+类型: java.lang.String
+```
+
+#### rfr.currentDomain&#x20;
+
+```
+作用: 当前作用的域名
+类型: java.lang.String
+```
+
+#### rfr.currentModuleName&#x20;
+
+```
+作用: 当前API的模块名
+类型: java.lang.String
+```
+
+#### rfr.environment&#x20;
+
+```
+作用: 当前环境的变量
+类型: java.util.LinkedHashMap<String,String>
+```
+
+## 引入第三方 Jar
+
+::: tip 内置的 Jar
+
+```
+com.alibaba:fastjson:1.2.78
+cn.hutool:hutool-all:5.8.5
+com.google.guava:guava:30.1.1-jre
+```
+
+Jar 的版本会不定期更新,如果发现 bug 请联系作者要求作者升级
+
+开发者可以利用以上 3 个 Jar 所提供的工具方法,直接在脚本中引用,不需要再依赖第三方的 Jar(hutool 就是香,已经加入许多工具类)
+
+前往[Demo](#demo)查看如何获得[Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html)功能
+:::
+
+* \[x] 引入 jar(maven 形式)
+
+下载 jar 可能会需要花费额外的时间
+
+```groovy
+@Grab("org.apache.commons:commons-lang3:3.12.0")
+import org.apache.commons.lang3.StringUtils
+
+String debug = request.header("debug")
+if(StringUtils.isNotBlank(debug)){
+    //some logic
+}
+```
+
+* \[x] 引入 jar(通过本地 jar)
+
+```groovy
+//注意此处的file:前缀
+this.class.classLoader.addURL(new URL("file:/path/to/jar"))
+def StringUtils = Class.forName("org.apache.commons.lang3.StringUtils").getDeclaredConstructor().newInstance()
+
+String debug = request.header("debug")//获取header
+if(StringUtils.isNotBlank(debug)){
+    //some logic
+}
+```
+
+## 作用范围与顺序
+
+分为`项目级别`和`单API级别`，项目全局作用需要点击 [ 项目级别全局参数支持](./features/projectValueConfig.md) 进行配置
+
+项目级别将作用项目中所有的 API，单 API 级别只作用于单个 API。
+
+执行顺序：`项目级别`->`单API级别`
+
+![scriptScope](/img/script.png)
+
+## Console&#x20;
+
+Console 帮助开发者打印一些你想要的信息
+
+```groovy
+console.info("info")
+console.print("print info")
+console.warn("warn")
+console.success("success")
+console.error("error")
+
+```
+
+![console](/img/2022.2.5/console.png)
+
+## Demo
+
+::: tip Code completion支持
+
+在项目中加入如下依赖(如果没有),即可在编辑器脚本中处理针对插件核心类的[Code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html)功能(快速导入类(import)、得到方法提示等操作)
+
+![](/img/2024.1.5/addLibrary.png)
+
+:::
+
+### 1. 签名参数
+
+在你的本地新建一个 xxx.groovy 文件,粘贴以下代码,适当修改后,能保证本地可以正常运行,再把代码粘贴到脚本中
+
+\~~HttpRequest request = HttpUtil.createPost("http://localhost:8081/book/add")~~
+
+```groovy
+import cn.hutool.core.util.CharsetUtil
+import cn.hutool.core.util.StrUtil
+import cn.hutool.crypto.digest.DigestUtil
+import cn.hutool.http.HttpRequest
+import cn.hutool.http.HttpUtil
+
+//脚本逻辑正式开始
+String body = StrUtil.str(request.bodyBytes(), CharsetUtil.CHARSET_UTF_8)
+body = "xxxx"//just for test
+String sign = DigestUtil.md5Hex(body)
+request.header("sign",sign)
+```
+
+### 2. 利用某一个请求的响应充当请求的 Header 参数
+
+注意获取 token 的逻辑得结合接口返回的数据结构来处理。例如返回
+
+```json
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "token": "xxxxx"
+  }
+}
+```
+
+则需要这么写
+`JSON.parseObject(myResponse.body()).getJSONObject("data").getString("token")`
+
+```groovy
+import cn.hutool.core.util.CharsetUtil
+import cn.hutool.core.util.StrUtil
+import cn.hutool.crypto.digest.DigestUtil
+import cn.hutool.http.HttpRequest
+import cn.hutool.http.HttpResponse
+import cn.hutool.http.HttpUtil
+import com.alibaba.fastjson.JSON
+
+HttpRequest myRequest = HttpUtil.createPost("http://localhost:8081/api/v1.0/login")
+HttpResponse myResponse = myRequest.execute()
+if(myResponse.isOk()){
+    String token = JSON.parseObject(myResponse.body()).getString("token")
+    request.header("token",token)
+}
+```
+
+### 3. 设置一个Environment变量
+
+假定响应报文格式
+
+```json
+{
+  "success": true,
+  "code": 200,
+  "data": {
+    "token": "xxxxx"
+  }
+}
+```
+
+在后置脚本中植入以下代码
+
+```groovy
+import cn.hutool.core.util.CharsetUtil
+import cn.hutool.core.util.StrUtil
+import cn.hutool.crypto.digest.DigestUtil
+import cn.hutool.http.HttpRequest
+import cn.hutool.http.HttpResponse
+import cn.hutool.http.HttpUtil
+import com.alibaba.fastjson.JSON
+
+HttpRequest myRequest = HttpUtil.createPost("http://localhost:8081/api/v1.0/login")
+HttpResponse myResponse = myRequest.execute()
+if(myResponse.isOk()){
+    String token = JSON.parseObject(myResponse.body()).getJSONObject("data").getString("token")
+    rfr.environment.put("token",token)
+}
+```
+
+### 4.SpringBoot 项目中的类调用&#x20;
+
+```groovy
+def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+```
+
+SpringBoot 项目编译后会在模块 target 目录下生成一个 classes 目录。使用 `FrLocalClassLoader` 可以加载这个目录下的类,并且可以直接调用类中的方法。
+
+注意需要将 `path/to/classes` 替换成 classes 目录的绝对路径，将 `some.package.XxxUtil` 替换成你要调用的类的全名。
+
+## 注意点
+
+* Groovy 脚本对 ==;== 不敏感,Java 用;作为语句代码的结束,Groovy 用换行表示一句代码的结束
+* 内置变量已被申明,例如 Demo2 中需要额外新建一个请求,变量命名需要注意不能与内置变量相同
+
+## 脚本投稿 :star2:
+
+为了将脚本做的更加强大,评论区开放社区脚本投递,欢迎将强大脚本通过**下方留言** 的形式上报,让更多人使用你开发的脚本
+
+* 格式
+
+```groovy
+/**
+ * 作者:Kings
+ * 主页:https://github.com/kings1990
+ * 功能:xxxxx
+ */
+
+//脚本内容
+....
+```
+
+![scriptDonate](/img/2022.2.3/scriptDonate.png)
+
+---
+
+---
+url: /guide/sponsor.md
+---
+# 赞助
+## 优势
+
+1. 本软件下载量&#x20;
+2. \==每次==软件更新均会在软件内部推送更新链接，告知用户==返回网站==查看相关的更新日志
+3. 软件内部增设文档按钮可以==快速返回网站首页==，促使开发者前往网站查看功能
+4. 开发者也会让软件用户主动先去看文档，再提问
+
+综上因素，赞助者将在本站有更大机会得到曝光.
+
+![为什么要赞助](/img/whySponsor.png)
+
+## 首页上墙需提供的资料
+
+提供 **Logo**(透明背景最佳、256×256px) 、**链接**、横向 logo(660\*150px)、背景主页(宽度370px下显示清晰即可，提供超过尺寸的会被压缩)
+
+## 联系我们
+
+1. 扫码添加微信，添加好友时请备注：==赞助==
+2. 好友添加成功后请发送赞助支付截图
+
+---
+
+---
+url: /guide/sponsorList.md
+---
+# 赞助列表
+## 如何赞助
+
+[**1.赞助可以为您带来什么(必看)**](./sponsor.md#优势)
+
+[2.成为赞助者](./sponsor.md#我要赞助)
+
+## 赞助列表
+
+感谢每一位赞助的小伙伴，祝你们早日升职加薪，登临人生绝颠 ❤️❤️❤️
+
+| 赞助人                                        | 金额 | 他的分享及留言                                      | 赞助时间   |
+| --------------------------------------------- | ---- | --------------------------------------------------- | ---------- |
+| [Kings](https://space.bilibili.com/370110042) | 100  | [Fast Request](https://api-buddy.com)，API 调试神器 | 2022-08-21 |
+
+---
+
+---
+url: /guide/teachingVideo.md
+---
+# 视频教程
+[![Bilibili](https://img.shields.io/static/v1?label=BiliBili\&message=BiliBili\&logo=bilibili\&color=FC8D34)](https://space.bilibili.com/370110042) 站系列视频,==关注我==最快时间获得视频更新文档，给我==一键三连==是对我最大的创作鼓励
+
+![bilibili](/img/bilibili.jpg)
+
+```component BiliBili
+bvid: BV1pM4m1Q7c5
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1Ju4y1A7Qi
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV13N4y1R7B4
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1wu4y1d7c4
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1Nk4y1M7Wu
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1vt4y1M7rV
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1xg41127TF
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1RF411u766
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1u5411S7ih
+ratio: 5/4
+```
+
+```component BiliBili
+bvid: BV1zU4y1S7pC
+ratio: 5/4
+```
+
+---
+
+---
+url: /guide/teamwork.md
+---
+# 团队协作
+版本要求:&#x20;
+
+## 原理
+
+基于版本控制系统，共享**部分配置**以及**API 数据**。
+
+## 特性
+
+* 零部署
+* 私有化
+* 不限人数
+* 不限 API 数
+* 不限项目数
+* 不限功能
+* 离线运转
+* 安全
+
+## 如何使用
+
+基于原理，所以当我们需要共享或者拉取别人的配置或者 API 时，假设我们利用 Git 作为我们的版本控制系统，我们只需要**push**即可共享配置和 API 数据，**pull**即可获取别人提交的配置和 API 数据。
+
+### 更新配置
+
+版本控制系统 pull 后，例如 `Git pull`，点击刷新项目配置按钮，即可获取其他成员提交的配置
+
+![refreshProjectConfig](/img/2023.1.3/refreshProjectConfig.png)
+
+## 更新 API
+
+版本控制系统 pull 后，例如 `Git pull`，点击 API 刷新按钮，即可获取其他成员提交的 API
+
+![refreshProjectConfig](/img/2023.1.3/refreshAPI.png)
+
+## 本地文件存储结构
+
+插件会默认在项目根目录下创建一个 **.fastRequest** 的目录，API 存储在 **collections** 目录下，配置存储在 **config** 目录下，API 按照 `模块->类名->API` 的结构进行存储，每一个目录下存放一个 **directory.json** 文件，用于标识该目录。
+其他 API 用方法的**方法名.rapi**进行存储，该文件可能会在版本控制系统中因为多方修改产生冲突，最终需要用户解决冲突，并满足标准的 json 以及数据结构。
+
+![teamDirectory](/img/2023.1.3/teamDirectory.png)
+
+## 历史数据转移
+
+插件默认会进行一次历史数据转移，数据转移的时候(版本<=2023.1.3 的数据)，如果你的数据在**版本管理系统**上未提交，则不需要关心历史数据。
+如果版本管理系统其他人已提交 API，则会进行覆盖。 注意如果想看 API 历史数据，可以结合**版本控制系统**的文件**历史记录**来还原，也可以结合**本地文件历史记录**来还原。
+
+如果发现数据未转移，也可手动操作！
+
+![transferData](/img/2023.1.3/transferData.png)
+
+## 文件权限
+
+如果发现因为`Permission denied`导致的错误，执行以下指令
+
+::: code-tabs#shell
+
+@tab Linux
+
+```bash
+cd [current project root dir]
+chmod -R 777 .fastRequest/*
+```
+
+@tab Windows
+
+```bash
+cd [current project root dir]
+takeown /f /r /d n .fastRequest/*
+```
+
+:::
+
+---
+
+---
+url: /guide/versionCompare.md
+---
+# 版本对比
+收费版本将推出更多**优秀**并且**人性化**的功能，欢迎大家使用！
+
+**深度优化的领先的智能 API 调试插件**
+
+IDEA 2021.2+
+人性化
+功能丰富
+高阶
+
+* \[x] API 一键生成(**更加人性化的参数生成策略**)
+* \[x] API 保存、管理
+* \[x] SearchEveryWhere(支持接口名称查询)
+* \[x] cUrl 拷贝
+* \[x] API 导航
+* \[x] [ API 导出到 Postman](/guide/features/apiToPostman.md)
+* \[x] [ 团队协作](/guide/teamwork.md)
+* \[x] [ 动态图标](/guide/features/makeIconMove.md)
+* \[x] [ 脚本支持](/guide/features/script.md)
+* \[x] [ AI 字段替换](/guide/features/ai.md)
+* \[x] [ 项目级别全局参数支持](/guide/features/projectValueConfig.md)
+* \[x] [ Environment](/guide/features/environment.md)
+* \[x] [ 函数](/guide/features/function.md)
+* \[x] [ Yaml、Properties 自动识别](/guide/features/projectLevelDomainConfig.md)
+* \[x] [ 终止 API 请求功能](/guide/features/stopRequest.md)
+* \[x] [当前方法定位](/guide/features/navigateCurrentMethod.md)
+* \[x] [ 多窗口 Tab](/guide/features/navigateCurrentMethodJson.md)
+* \[x] [  API 分组](/guide/features/apiGroup.md)
+* \[x] [ 临时请求](/guide/features/tempRequest.md)
+* \[x] [ Apifox 集成](/guide/features/apifox.md)
+* \[x] [ Postman 集成](/guide/features/postmanSync.md)
+* \[x] [ 一键清除参数](/guide/features/clear.md)
+* \[x] [ cURL 导入](/guide/features/clear.md)
+* \[x] [ 一键拷贝 Url](/guide/features/copyUrl.md)
+* \[x] [ 历史请求预览](/guide/features/historyRequest.md)
+* \[x] [ API 文档同步](/guide/features/apiDocSync.md)
+* \[x] [ API 文档导出](/guide/features/shareApiDoc.md)
+* \[x] [ OpenAPI导出](/guide/features/openApi.md)
+* \[x] [ 全屏](/guide/features/fullScreen.md)
+* \[x] [ 常用头参数](/guide/features/commonHeader.md)
+* \[x] [ Html 预览](/guide/features/htmlPreview.md)
+* \[x] [ APIs 导入导出](/guide/features/apiImportExport.md)
+* \[x] [ 批量导出 API 文档](/guide/features/batchExportApiDoc.md)
+* \[x] [ Swagger 默认值解析](/guide/features/swaggerDefaultValueParse.md)
+* \[x] [ API 自动生成注释](/guide/features/autoDescription.md)
+* \[x] [ API 一览表预览](/guide/features/apiPreview.md)
+* \[x] [ Api 注释预览](/guide/features/apiCommentPreview.md)
+* \[x] [ 自动域名](/guide/features/autoDomain.md)
+* \[x] [ Headers 预设](/guide/features/headersPreset.md)
+* \[x] [ 年度报告](/guide/features/annualReport.md)
+* \[x] [更多...](./guide/features/)
+
+购买
+
+**基础 API 调试插件**
+
+IDEA 2020.3~2021.1.3
+基础使用
+
+* \[x] API 一键生成
+* \[x] API 保存、管理
+* \[x] SearchEveryWhere(不支持接口名称查询)
+* \[x] cUrl 拷贝
+* \[x] API 导航
+* \[x] [ API 导出到 Postman](/guide/features/apiToPostman.md)
+
+---
+
+---
+url: /guide/whatsnew.md
+---
+# 历史变更
+::: tip 公告
+
+插件版本 2022.1.4+即氪金版(但是你可以免费试用 30 天后再决定是否值得氪金)，对比氪金版和免费有什么更强大的功能，只需要看更新日志>=2021.1.4+的，或者简单看一下以下的对比
+
+[**收费版 VS 免费版->**](./versionCompare.md)
+
+购买**License**流程请参考[**购买插件**](./buy.md)
+
+Issue 提报请到[*Github*](https://github.com/dromara/fast-request/issues)
+
+| ![微信技术群](https://img.shields.io/static/v1?label=wechat\&message=微信技术群\&logo=wechat\&color=07C160) | [![twitter](https://img.shields.io/static/v1?label=Twitter\&message=FastRequest666\&logo=twitter\&color=FC8D34)](https://twitter.com/FastRequest666) |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| !\[wechat group]\(/img/wechatGroup.png =300x300)                                                           | !\[twitter]\(/img/twitter.png =300x300)                                                                                                             |
+| 如果扫码失败请直接搜微信号==FastRequest99==                                                              | 欢迎关注官方 Twitter                                                                                                                              |
+
+***
+
+important:      feat:       perf:       fix:&#x20;
+
+由于开发版本仍在开发中，开发版本的文档可能不完全准确，可能会发生变化。
+:::
+
+[**务必查看变更详情----------------->**](./history.md)
+
+## 2025.1.8   &#x20;
+
+## 2025.1.7  &#x20;
+
+## 2025.1.6  &#x20;
+
+## 2025.1.5.1  &#x20;
+
+## 2025.1.5  &#x20;
+
+## 2025.1.4  &#x20;
+
+## 2025.1.3  &#x20;
+
+## 2025.1.2  &#x20;
+
+## 2025.1.1   &#x20;
+
+## 2024.1.9  &#x20;
+
+## 2024.1.8.1  &#x20;
+
+## 2024.1.8   &#x20;
+
+## 2024.1.7  &#x20;
+
+## 2024.1.6.3  &#x20;
+
+## 2024.1.6.2  &#x20;
+
+## 2024.1.6  &#x20;
+
+## 2024.1.5.1  &#x20;
+
+## 2024.1.5  &#x20;
+
+## 2024.1.4  &#x20;
+
+## 2024.1.3 &#x20;
+
+## 2024.1.2.1 &#x20;
+
+## 2024.1.2 &#x20;
+
+## 2024.1.1 &#x20;
+
+## 2023.2.3.1&#x20;
+
+## 2023.2.3&#x20;
+
+## 2023.2.2&#x20;
+
+## 2023.2.1.1&#x20;
+
+## 2023.2.1&#x20;
+
+## 2023.1.9&#x20;
+
+## 2023.1.8&#x20;
+
+## 2023.1.7.1&#x20;
+
+## 2023.1.7&#x20;
+
+## 2023.1.6&#x20;
+
+## 2023.1.5&#x20;
+
+## 2023.1.4.2&#x20;
+
+## 2023.1.4.1&#x20;
+
+## 2023.1.4&#x20;
+
+## 2023.1.3.2&#x20;
+
+## 2023.1.2&#x20;
+
+## 2023.1.1&#x20;
+
+## 2022.3.1&#x20;
+
+## 2022.2.9&#x20;
+
+## 2022.2.8&#x20;
+
+## v2022.2.7&#x20;
+
+## v2022.2.6&#x20;
+
+## v2022.2.5.2&#x20;
+
+## v2022.2.5.1&#x20;
+
+## v2022.2.5&#x20;
+
+## v2022.2.4.1&#x20;
+
+## v2022.2.4&#x20;
+
+## v2022.2.3.1&#x20;
+
+## v2022.2.3&#x20;
+
+## v2022.2.2&#x20;
+
+## v2022.2.1&#x20;
+
+## v2022.1.10&#x20;
+
+## v2022.1.9&#x20;
+
+## v2022.1.8&#x20;
+
+## v2022.1.7&#x20;
+
+## v2022.1.6&#x20;
+
+## v2022.1.5&#x20;
+
+## v2022.1.4.0&#x20;

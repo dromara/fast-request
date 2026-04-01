@@ -1,0 +1,1 @@
+var e=`/img/2024.1.4/ai_en.png`;export{e as t};

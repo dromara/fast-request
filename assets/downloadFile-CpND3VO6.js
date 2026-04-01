@@ -1,0 +1,1 @@
+var e=`/img/downloadFile.png`;export{e as t};

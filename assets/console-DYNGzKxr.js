@@ -1,0 +1,1 @@
+var e=`/img/2022.2.5/console.png`;export{e as t};
