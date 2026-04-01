@@ -1,5 +1,6 @@
 import { container } from "@mdit/plugin-container";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { llmsPlugin } from "@vuepress/plugin-llms";
 import { defineUserConfig } from "vuepress";
 import { path } from "vuepress/utils";
 
@@ -89,6 +90,23 @@ export default defineUserConfig({
   bundler: viteBundler(),
 
   theme,
+
+  plugins: [
+    llmsPlugin({
+      // 为所有语言环境生成 llms.txt
+      locale: "all",
+      // 添加域名（可选，生成绝对路径）
+      domain: "https://api-buddy.com",
+      // 生成 llms.txt 索引文件
+      llmsTxt: true,
+      // 生成完整文档合并文件
+      llmsFullTxt: true,
+      // 为每个页面生成 Markdown 版本
+      llmsPageTxt: true,
+      // 剥离 HTML 标签
+      stripHTML: true,
+    }),
+  ],
 
   pagePatterns: ["**/*.md", "!*.snippet.md", "!.vuepress", "!node_modules"],
 
