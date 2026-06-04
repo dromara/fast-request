@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import { usePageData, usePageFrontmatter, useRoutePath } from "vuepress/client";
-import { ref, watch } from "vue";
+import { useRoutePath } from "vuepress/client";
+import { computed, ref, watch } from "vue";
 
-import CommonWrapper from "@theme-hope/components/CommonWrapper";
-import HomePage from "@theme-hope/components/HomePage";
-import NormalPage from "@theme-hope/components/NormalPage";
-import SkipLink from "@theme-hope/components/SkipLink";
-import { FadeSlideY } from "@theme-hope/components/transitions/index";
+import MainFadeInUpTransition from "@theme-hope/components/base/MainFadeInUpTransition";
+import MainLayout from "@theme-hope/components/base/MainLayout";
+import PageContent from "@theme-hope/components/base/PageContent";
+import SkipLink from "@theme-hope/components/base/SkipLink";
+import HomePage from "@theme-hope/components/home/HomePage";
+import PortfolioHome from "@theme-hope/components/home/PortfolioHome";
+import { useData } from "@theme-hope/composables/useData";
 
-import type { ThemePageFrontmatter } from "vuepress-theme-hope";
-
-const frontmatter = usePageFrontmatter<ThemePageFrontmatter>();
+const { frontmatter, page } = useData();
 const routePath = useRoutePath();
-const page = usePageData();
 
 const sidebarTopArray = [
   `<a href="https://codegeex.cn/?utm_source=pay&utm_medium=fast-request" target="_blank">
@@ -30,10 +29,15 @@ const sidebarTopArray = [
 ];
 
 const sidebarContent = ref("");
+const showSidebarTop = computed(
+  () => !frontmatter.value.home && sidebarContent.value.length > 0,
+);
 
-function shuffle(arr) {
-  var l = arr.length;
-  var index, temp;
+function shuffle<T>(arr: T[]): T[] {
+  let l = arr.length;
+  let index: number;
+  let temp: T;
+
   while (l > 0) {
     index = Math.floor(Math.random() * l);
     temp = arr[l - 1];
@@ -44,12 +48,10 @@ function shuffle(arr) {
   return arr;
 }
 
-
-
-function renderSponsor(){
+function renderSponsor(): void {
   if (page.value.path.startsWith("/en/")) {
     sidebarContent.value = "";
-    return
+    return;
   } else {
     shuffle(sidebarTopArray);
     sidebarContent.value = `\
@@ -64,22 +66,21 @@ function renderSponsor(){
     `;
   }
 }
-renderSponsor();
-watch(routePath, () => {
-  renderSponsor();
-});
+
+watch(routePath, renderSponsor, { immediate: true });
 </script>
 <template>
-<!--  <SkipLink />-->
-  <CommonWrapper>
+  <SkipLink />
+  <MainLayout>
     <template #default>
-      <HomePage v-if="frontmatter.home" />
-      <FadeSlideY v-else>
-        <NormalPage :key="page.path" />
-      </FadeSlideY>
+      <PortfolioHome v-if="frontmatter.portfolio" />
+      <HomePage v-else-if="frontmatter.home" />
+      <MainFadeInUpTransition v-else>
+        <PageContent :key="page.path" />
+      </MainFadeInUpTransition>
     </template>
-    <template v-if="!frontmatter.home" #sidebarTop>
+    <template v-if="showSidebarTop" #sidebarTop>
       <div v-html="sidebarContent" />
     </template>
-  </CommonWrapper>
+  </MainLayout>
 </template>
