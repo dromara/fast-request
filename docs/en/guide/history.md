@@ -10,9 +10,9 @@ Issue report please refer to [GitHub](https://github.com/dromara/fast-request/is
 
 Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
-| [![Slack](https://img.shields.io/static/v1?label=Slack&message=Restful%20Fast%20Request&logo=slack&color=38B580)](https://join.slack.com/t/restfulfastrequest/shared_invite/zt-1we57vum8-TALhTHI2uNmPF2bx1NDyWw) | [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![slack](/img/slack.png)                                                                                                                                                                                | ![twitter](/img/twitter.png)                                                                                                             |
+| [![twitter](https://img.shields.io/static/v1?label=Twitter&message=FastRequest666&logo=twitter&color=FC8D34)](https://twitter.com/FastRequest666) |
+ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![twitter](/img/twitter.png)                                                                                                             |
 
 :::
 
@@ -20,6 +20,29 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 > important: <Badge text="Important feature" type="important"/> feat: <Badge text="New feature" type="tip"/>
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
+
+## 2025.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="AI inline completion" type="important"/>
+- <Badge text="JSON key support one-click conversion" type="tip"/>
+
+::: hint AI inline completion <Badge vertical="top" text="Important feature" type="important"/>
+
+<MyCarousel :imgList="['/img/2025.1.9/aiInlineCompletion1.png','/img/2025.1.9/aiInlineCompletion2.png','/img/2025.1.9/aiInlineCompletion3.png']" />
+
+![](/img/2025.1.9/aiConfig.png)
+
+Fields support AI completion, allowing users to automatically complete field values when entering or removing field names. The first step is that you need to configure the ApiKey.
+
+
+:::
+
+
+::: hint JSON key support one-click conversion<Badge vertical="top" text="New feature" type="tip"/>
+
+![](/img/2025.1.9/jsonKeyCaseConversion.png)
+
+Support one-click conversion to camelCase, snake_case, kebab-case, and pascalCase for JSON keys.
+:::
 
 ## 2025.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Compatible with IDEA 2026.2" type="info"/>

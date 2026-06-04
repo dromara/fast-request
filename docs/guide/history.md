@@ -20,6 +20,28 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
+## 2025.1.8.1 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/><Badge text="IDEA 2023.3+" color="pink"/>
+- <Badge text="AI 字段补全" type="important"/>
+- <Badge text="JSON key 支持一键转换驼峰" type="tip"/> 
+
+:::hint AI 字段补全 <Badge vertical="top" text="重要功能" type="important"/>
+
+<MyCarousel :imgList="['/img/2025.1.9/aiInlineCompletion1.png','/img/2025.1.9/aiInlineCompletion2.png','/img/2025.1.9/aiInlineCompletion3.png']" />
+
+![](/img/2025.1.9/aiConfig.png)
+
+字段支持 AI 补全，用户可以在输入字段值或者删除字段值时，自动补全字段值。前提是需要先配置 ApiKey。
+
+:::
+
+:::hint JSON key 支持一键转换驼峰 <Badge vertical="top" text="新功能" type="tip"/>
+
+![](/img/2025.1.9/jsonKeyCaseConversion.png)
+
+支持对 JSON 数据中的 key 进行命名格式转换，可将字段名一键转换为 camelCase 驼峰格式，同时支持 snake_case、kebab-case、PascalCase、SCREAMING_SNAKE_CASE 等多种常见命名风格
+
+:::
+
 ## 2025.1.8.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="兼容 IDEA 2026.2" type="info"/>
 - <Badge text="Fix Kotlin时间注解解析" type="danger"/>
