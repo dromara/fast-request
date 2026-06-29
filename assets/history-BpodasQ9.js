@@ -1,0 +1,1 @@
+var e=`/img/history.png`;export{e as t};

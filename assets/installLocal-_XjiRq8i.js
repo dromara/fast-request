@@ -1,0 +1,1 @@
+var e=`/img/download.png`,t=`/img/installLocal.png`;export{e as n,t};

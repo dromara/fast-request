@@ -1,0 +1,1 @@
+var e=`/img/2022.2.1/tempSave.png`;export{e as t};
