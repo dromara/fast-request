@@ -27,11 +27,11 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2025.1.9 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." type="pink"/><Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.9 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2026-06-29" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="AI 字段补全" type="tip"/>
 - <Badge text="JSON key 支持一键转换驼峰" type="tip"/> 
 
-## 2025.1.8.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" type="pink"/> <Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.8.1 <Badge text="免费试用" type="tip"/><Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="兼容 IDEA 2026.2" type="info"/>
 - <Badge text="Fix Kotlin时间注解解析" type="danger"/>
 

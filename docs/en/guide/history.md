@@ -21,7 +21,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2025.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2026-06-29" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="AI inline completion" type="important"/>
 - <Badge text="JSON key support one-click conversion" type="tip"/>
 
@@ -44,7 +44,7 @@ Fields support AI completion, allowing users to automatically complete field val
 Support one-click conversion to camelCase, snake_case, kebab-case, and pascalCase for JSON keys.
 :::
 
-## 2025.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Compatible with IDEA 2026.2" type="info"/>
 - <Badge text="Fix Kotlin time annotation parsing" type="danger"/>
 

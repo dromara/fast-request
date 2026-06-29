@@ -29,11 +29,11 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2025.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." type="pink"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.9 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2026-06-29" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="AI inline completion" type="tip"/>
 - <Badge text="JSON key support one-click conversion" type="tip"/>
 
-## 2025.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.8.1 <Badge text="Free trial" type="tip"/> <Badge text="2026-05-08" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Compatible with IDEA 2026.2" type="info"/>
 - <Badge text="Fix Kotlin time annotation parsing" type="danger"/>
 
