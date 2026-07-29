@@ -36,6 +36,9 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 - <Badge text="Param copy and import" type="tip"/>
 - <Badge text="Parameter editor optimization" type="info"/>
 - <Badge text="History request refactor" type="info"/>
+- <Badge text="SearchEveryWhere supports searching paths with a context path" type="info"/>
+- <Badge text="Script supports direct references to local project classes" type="info"/>
+- <Badge text="Environment and Function value highlighting" type="info"/>
 - <Badge text="Fix minor non-blocking issues" type="danger"/>
 
 ::: hint Online Document <Badge vertical="top" text="Important feature" type="important"/>
@@ -124,6 +127,26 @@ History requests are grouped by date directory. Requests inside each group are s
 History data is now stored under the project root `.fastRequest/history`, with one directory for each date and one JSON file for each history record, for example `.fastRequest/history/2026-07-11/update_book_20260711133641_xxxxxxxx.json`. The file structure is aligned with the displayed history tree.
 
 The previous save limit has been removed. You can delete a single history record, or select a date group to delete the whole date directory. A confirmation dialog is shown before deletion.
+
+:::
+
+::: hint SearchEveryWhere supports searching paths with a context path <Badge vertical="top" text="Optimization feature" type="info"/>
+
+Optimized URL searches in SearchEveryWhere. When a search path contains prefixes such as a `context-path` or gateway path, SearchEveryWhere automatically tries matching path suffixes against APIs in the project. No truncation configuration is required. The same behavior applies to searches that include an HTTP method, while method filtering is preserved. See [SearchEveryWhere](./features/searchEveryWhere.md#search-urls-with-a-context-path).
+
+:::
+
+::: hint Script supports direct references to local project classes <Badge vertical="top" text="Optimization feature" type="info"/>
+
+Optimized support for referencing local project classes from scripts. Scripts automatically load the compiled output and runtime dependencies of the module containing the current API. After compiling the project, you can directly `import` local classes and call their methods without specifying an absolute path through `FrLocalClassLoader`. See [Script](./features/script.md#reference-local-project-classes-directly).
+
+:::
+
+::: hint Environment and Function value highlighting <Badge vertical="top" text="Optimization feature" type="info"/>
+
+![Environment and Function value highlighting](/img/2026.1.1/envFunctionValueHighlight.png)
+
+Improved the display of dynamic values in request parameter editors. Environment variables such as `{{key}}` and Function values such as `{{$functionName}}` are highlighted in different colors.
 
 :::
 

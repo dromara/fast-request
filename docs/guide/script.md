@@ -288,15 +288,16 @@ if(myResponse.isOk()){
 }
 ```
 
-### 4.SpringBoot 项目中的类调用 <Badge text="2025.1.4️" type="tip"/>
+### 4.直接引用项目中的类 <Badge text="2026.1.1" type="info"/>
 
 ```groovy
-def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+import com.example.YourClass
+
+def value = YourClass.someMethod()
+console.info(value)
 ```
 
-SpringBoot 项目编译后会在模块 target 目录下生成一个 classes 目录。使用 `FrLocalClassLoader` 可以加载这个目录下的类,并且可以直接调用类中的方法。
-
-注意需要将 `path/to/classes` 替换成 classes 目录的绝对路径，将 `some.package.XxxUtil` 替换成你要调用的类的全名。
+Script 会自动加载当前 API 所属模块的编译输出和运行时依赖，可以直接导入本地项目类并调用类中的方法。使用前请先编译项目，确保目标类及其依赖已生成，无需手动指定 `target/classes` 的绝对路径。
 
 
 ## 注意点

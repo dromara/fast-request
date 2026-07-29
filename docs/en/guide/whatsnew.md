@@ -42,6 +42,9 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Param copy and import" type="tip"/>
 - <Badge text="Parameter editor optimization" type="info"/>
 - <Badge text="History request refactor" type="info"/>
+- <Badge text="SearchEveryWhere supports searching paths with a context path" type="info"/>
+- <Badge text="Script supports direct references to local project classes" type="info"/>
+- <Badge text="Environment and Function value highlighting" type="info"/>
 - <Badge text="Fix minor non-blocking issues" type="danger"/>
 
 ## 2025.1.9 <Badge text="Free trial" type="tip"/> <Badge text="2026-06-29" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>

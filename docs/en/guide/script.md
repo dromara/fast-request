@@ -282,17 +282,16 @@ if(myResponse.isOk()){
 }
 ```
 
-### 4.Call SpringBoot class's method <Badge text="2025.1.4️" type="tip"/>
+### 4.Reference a project class directly <Badge text="2026.1.1" type="info"/>
 
 ```groovy
-def XxxUtil = new FrLocalClassLoader("path/to/classes").loadClass("some.package.XxxUtil")
+import com.example.YourClass
+
+def value = YourClass.someMethod()
+console.info(value)
 ```
 
-After the SpringBoot project is compiled, a `classes` directory will be generated in the `target` directory of the module. 
-
-You can use `FrLocalClassLoader` to load the classes in this directory and call the methods directly.
-
-Note that you need to replace `path/to/classes` with the absolute path and `some.package.XxxUtil` with the full name of the class.
+Scripts automatically load the compiled output and runtime dependencies of the module containing the current API. You can import local project classes and call their methods directly. Compile the project first so that the target class and its dependencies are available; no absolute path to `target/classes` is required.
 
 ## Note
 

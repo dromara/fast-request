@@ -34,6 +34,9 @@ icon: changelog
 - <Badge text="参数复制导入" type="tip"/>
 - <Badge text="参数编辑区优化" type="info"/>
 - <Badge text="历史请求重构" type="info"/>
+- <Badge text="SearchEveryWhere 支持带 context-path 路径的搜索" type="info"/>
+- <Badge text="Script 支持本地项目类的直接引用" type="info"/>
+- <Badge text="Environment 与 Function 值高亮优化" type="info"/>
 - <Badge text="修复若干非阻断问题" type="danger"/>
 
 
@@ -117,6 +120,26 @@ URL Params 和 Form URL-Encoded 支持将启用的参数复制为文本，也支
 历史数据调整为保存到项目根目录 `.fastRequest/history` 下，每个日期一个目录，每条历史记录一个 JSON 文件，例如 `.fastRequest/history/2026-07-11/update_book_20260711133641_xxxxxxxx.json`。文件结构与历史树结构保持一致。
 
 同时取消历史保存上限，支持删除单条历史记录，也支持选中日期分组后删除整个日期目录，删除前会进行确认。
+
+:::
+
+:::hint SearchEveryWhere 支持带 context-path 路径的搜索 <Badge vertical="top" text="优化" type="info"/>
+
+优化 SearchEveryWhere 的 URL 搜索。当搜索路径包含 `context-path` 或网关路径等前缀时，会自动尝试使用路径后缀匹配项目中的 API，无需额外配置截断片段。带 HTTP 方法搜索同样支持该能力，并保留方法过滤。详见 [SearchEveryWhere](./features/searchEveryWhere.md#搜索带-context-path-的-url)。
+
+:::
+
+:::hint Script 支持本地项目类的直接引用 <Badge vertical="top" text="优化" type="info"/>
+
+优化 Script 对本地项目类的引用支持。Script 会自动加载当前 API 所属模块的编译输出和运行时依赖，项目编译后即可直接 `import` 本地项目类并调用其方法，无需使用 `FrLocalClassLoader` 指定绝对路径。详见 [Script](./features/script.md#直接引用本地项目类)。
+
+:::
+
+:::hint Environment 与 Function 值高亮优化 <Badge vertical="top" text="优化" type="info"/>
+
+![Environment 与 Function 值高亮](/img/2026.1.1/envFunctionValueHighlight.png)
+
+优化请求参数编辑器中的动态值展示，Environment 变量 `{{key}}` 与 Function 函数 `{{$functionName}}` 使用不同颜色高亮。
 
 :::
 
