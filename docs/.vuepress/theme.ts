@@ -104,33 +104,33 @@ export default hopeTheme(
       notice: [
         {
           path: "/",
-          title: "将在2024.1.9推出",
+          title: "将在2026.1.1推出",
           content:
-            '<ul><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">免费插件Bean Assistant实现快速注入 Bean</a></li></ul><div class="addthis_inline_follow_toolbox_qssu"></div>',
+            '<ul><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">免费插件Bean Assistant实现快速注入 Bean</a></li><li>AI 参数智能优化</li><li>API 批量生成保存</li><li>Run Method 支持</li><li>在线文档支持</li></ul>',
           actions: [
             {
-              text: "去投票→",
-              link: "https://gitee.com/activity/2025opensource?ident=IJUYSU",
+              text: "了解更多→",
+              link: "/guide/history.html#_2026-1-1",
               type: "primary",
             },
           ],
           showOnce: true,
-          key: "2024.1.9.1",
+          key: "2026.1.1",
         },
         {
           path: "/en",
-          title: "Coming in <b>2024.1.9</b>",
+          title: "Coming in <b>2026.1.1</b>",
           content:
-            '<ul><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">Another plugin Bean Assistant help injected bean easily</a></li><li>OpenAPI export support</li><li>Solon framework support</li></ul><div class="addthis_inline_follow_toolbox"></div>',
+            '<ul><li><a href="https://plugins.jetbrains.com/plugin/24576-bean-assistant--spring-code-helper" target="_blank">Another plugin Bean Assistant help injected bean easily</a></li><li>AI parameter optimization</li><li>API batch generation save</li><li>Run Method support</li><li>Online documentation support</li></ul>',
           actions: [
             {
               text: "Learn more→",
-              link: "/en/guide/history.html#_2024-1-9",
+              link: "/en/guide/history.html#_2026-1-1",
               type: "primary",
             },
           ],
           showOnce: true,
-          key: "2024.1.9",
+          key: "2026.1.1",
         },
       ],
     },
