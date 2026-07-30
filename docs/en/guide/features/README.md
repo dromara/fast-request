@@ -8,14 +8,11 @@ The icon in the document corresponds to the button icon in the plugin
 
 ![toolwindow](/img/toolwindowNew_en.png)
 
-## 2026.1.1 Highlights
+## Request
 
 - [<ColorIcon icon="doc" /> Online Document](./onlineDocument.md)
 - [<ColorIcon icon="openai" /> AI Parameter Optimization](./aiParameterOptimization.md)
-- [<ColorIcon icon="settings" /> AI Settings Update](./ai.md#_2026-1-1-ai-settings-update)
-- [<ColorIcon icon="apis" /> Batch API Generation](./batchGenerateApi.md)
-
-## Request
+- [<ColorIcon icon="settings" /> AI](./ai.md#_2026-1-1-ai-settings-update)
 
 - [<ColorIcon icon="restfulFastRequest" /> Make icon move](./makeIconMove.md)
 - [<ColorIcon icon="customToolbar" /> Custom toolbar](./customToolbar.md)
@@ -58,7 +55,6 @@ The icon in the document corresponds to the button icon in the plugin
 ---
 
 - [<ColorIcon icon="restfulFastRequest" /> Auto domain](./autoDomain.md)
-- [<ColorIcon icon="openai" /> AI](./ai.md)
 - [<ColorIcon icon="headerGroupNew" /> Header group](./headerGroup.md)
 - [<ColorIcon icon="commonHeaderNew" /> Common header](./commonHeader.md)
 - [<ColorIcon icon="headersPreset" /> Headers Preset](./headersPreset.md)
@@ -87,6 +83,7 @@ The icon in the document corresponds to the button icon in the plugin
 
 ## Generate
 
+- [<ColorIcon icon="apis" /> Batch API Generation](./batchGenerateApi.md)
 - [<ColorIcon icon="swagger" /> Swagger default value parsing support](./swaggerDefaultValueParse.md)
 - [<ColorIcon icon="java" /> Auto Description](./autoDescription.md)
 
