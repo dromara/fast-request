@@ -3,6 +3,55 @@ title: 活动
 icon: activity
 ---
 
+## 20260804~20260910
+
+2026.1.1版本我们加强了对 AI 的支持（基于上下文生成更加符合语义化的参数 ）
+
+![AI 参数智能优化](/img/2026.1.1/aiParameterOptimization.png)
+
+以及 API批量生成（更加方便大家生成 api）
+
+![批量生成 API](/img/2026.1.1/batchGeneratePackageApi.png)
+
+
+更推出了在线文档功能
+
+![](/img/activity/onlinedoc.png)
+
+![](/img/activity/doclogin.png)
+
+
+
+功能焕然一新！
+
+为感谢大家对 Fast Request 的支持， 现推出用户免费领取活动：
+
+用户可免费领取 ==2== 个月 Fast Request License
+
+::: info 领取方式
+1. 扫码进入微信群 
+2. 在群里@作者发送：“领取 License”，等待回复。
+3. 收到 0 折 码即可免费兑换 2 个月 Fast Request License。
+:::
+ ![wechat group](/img/wechatGroup.png)
+
+
+
+::: tip 邀请奖励
+1. 每成功邀请 5 名新用户 完成登记并领取 License，邀请人可额外获得：1 个月 Fast Request License
+2. 邀请奖励可累计，每位用户、每个账号累计领取上限为 1 年 License。
+:::
+
+
+
+::: important 活动规则
+1. 免费领取仅限首次参加活动的新用户。
+2. 被邀请用户需完成登记并成功领取，方可计入有效邀请人数。
+3. 同一用户或重复账号不重复计算。
+4. 请在 2026 年 9 月 10 日 10:00 前完成领取登记，逾期将无法兑换。
+5. License 发放及有效期以实际登记结果为准。
+:::
+
 ## 20231205
 
 B站粉丝突破**1000**，我决定抽个奖,感谢开发者的支持。==关注+点赞+留言==下方视频，进行抽奖，赠送1年license，已购买的开发者可以延长插件license到期时间1年
