@@ -19,6 +19,7 @@ actions:
 1. 点击在方法左侧的 fastRequest 的图标 ::restfulFastRequest::
 2. 如果[自动域名](../features/autoDomain.md)的结果不符合预期，则在[Project 级别域名配置](../features/projectLevelDomainConfig.md)里面修改域名
 3. 点击发送请求按钮发送请求
+4. [保存参数](/guide/features/saveRequest)以便下次使用
 
 ![](/img/start.png)
 

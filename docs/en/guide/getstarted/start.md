@@ -19,6 +19,8 @@ actions:
 1. Click ::restfulFastRequest:: on method left
 2. If the result of [Auto domain](../features/autoDomain.md) did not meet expectations，change the domain in [Project-level domain config](../features/projectLevelDomainConfig.md)
 3. Click send button for sending request
+4. [Save parameters](/en/guide/features/saveRequest) for next use
+
 
 ```component VidStack
 src: youtube/FiLfA8GKCoI
