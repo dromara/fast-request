@@ -29,7 +29,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/>  <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 <Badge text="In this version, we have made extensive code optimizations and refactoring. If you encounter any issues, please report them to us and we will fix them as soon as possible." color="pink" vertical="middle"/>
 
 - <Badge text="Online Document" type="important"/>
@@ -69,10 +69,10 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Search URL truncate segment support" type="tip"/>
 - <Badge text="Solon framework linemarker and API scan support" type="tip"/>
 
-## 2025.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-07-07" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.5.1 <Badge text="Free trial" type="tip"/> <Badge text="2025-07-07" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Function compilation error in Windows" type="danger"/>
 
-## 2025.1.5 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-06-24" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.5 <Badge text="Free trial" type="tip"/> <Badge text="2025-06-24" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 - <Badge text="Formatting performance optimization" type="tip"/>
 - <Badge text="Function compilation encoding error" type="danger"/>
 

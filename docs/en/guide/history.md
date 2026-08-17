@@ -21,7 +21,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 > [!important]
 > We have made extensive code optimizations and refactoring in this version.If you encounter any issues, feel free to report them to us and we will fix them as soon as possible.
@@ -234,7 +234,7 @@ Support quickly locate and modify shortcuts for the action.
 
 :::
 
-## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" type="pink"/> <Badge text="2025-07-30" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2025.1.6 <Badge text="Free trial" type="tip"/> <Badge text="2025-07-30" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Search URL truncate segment support" type="tip"/>
 - <Badge text="Solon framework linemarker and API scan support" type="tip"/>
