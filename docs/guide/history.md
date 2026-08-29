@@ -20,7 +20,71 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
-## 2026.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="请求参数必填识别与标记" type="important"/>
+- <Badge text="API Navigate 与 Methods tab 支持快速搜索" type="tip"/>
+- <Badge text="在线文档支持参数分组" type="tip"/>
+- <Badge text="在线文档支持自定义同步环境" type="tip"/>
+- <Badge text="优化在线文档同步、登录和参数展示体验" type="info"/>
+- <Badge text="修复在线文档 Form 参数异常" type="danger"/>
+
+:::hint 请求参数必填识别与标记 <Badge vertical="top" text="重要功能" type="important"/>
+![requiredParam](/img/2026.1.2/requiredParam.png)
+支持自动识别 Spring、Solon 以及常用校验注解中的必填定义，并在 Query、Form URL-Encoded 和 Multipart 参数表格中展示必填状态。必填状态也可以手动或批量调整，并同步展示到[在线文档](./features/onlineDocument.md)。。
+
+:::
+
+:::hint API Navigate 与 Methods tab 支持快速搜索 <Badge vertical="top" text="新功能" type="tip"/>
+
+<MyCarousel :imgList="['/img/2026.1.2/searchInNav.png', '/img/2026.1.2/searchInMethods.png']" />
+
+API Navigate（`Nav`）支持按 URL、接口描述和类名搜索，并可结合模块与请求方法过滤。Methods tab 支持按类名、方法名和参数类型快速查找，同时原有的 Speed Search 依然支持。
+
+
+
+:::
+
+:::hint 在线文档支持参数分组 <Badge vertical="top" text="新功能" type="tip"/>
+
+![apiDocParamGroup.png](/img/2026.1.2/apiDocParamGroup.png)
+在线文档会保留 API 的参数分组和当前分组。在文档调试界面切换分组后，会自动载入对应的 Path、Query、Header 和 Body 参数。
+
+:::
+
+:::hint 在线文档支持自定义同步环境 <Badge vertical="top" text="新功能" type="tip"/>
+
+![docEnvIgnoreSyncConfig](/img/2026.1.2/docEnvIgnoreSyncConfig.png)
+可以设置不需要在在线文档中展示的项目环境。被忽略的环境会在同步时移除，重新启用后可在下次同步时恢复。
+
+:::
+
+:::hint 优化在线文档同步、登录和参数展示体验 <Badge vertical="top" text="优化" type="info"/>
+
+同步完成后自动启动在线文档服务，并支持从通知中直接打开文档。在线文档可以保持登录状态，同时优化了参数表格布局、悬停效果和必填信息展示。
+
+:::
+
+:::hint 修复在线文档 Form 参数异常 <Badge vertical="top" text="修复" type="danger"/>
+
+修复在线文档中 Form 参数展示异常的问题，确保表单参数能够正确用于文档调试。
+
+:::
+
+## 2026.1.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="API Navigate 扫描策略支持配置" type="tip"/>
+- <Badge text="Run Method 默认超时增加至 10 分钟" type="info"/>
+- <Badge text="修复历史记录中 API Header 丢失" type="danger"/>
+
+:::hint API Navigate 扫描策略支持配置 <Badge vertical="top" text="新功能" type="tip"/>
+
+![Nav Config](/img/2026.1.1.1/navConfig.png)
+API Navigate（`Nav`）支持配置是否启用默认扫描和定时扫描。
+
+:::
+
+## 2026.1.1 <Badge text="免费试用" type="tip"/> <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 > [!important]
 > 该版本，我们进行了大量的代码优化与重构，所以如果出现问题，请及时反馈给我们，我们会尽快修复。
 

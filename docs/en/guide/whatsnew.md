@@ -29,7 +29,22 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/>  <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Required parameter detection and marking" type="important"/>
+- <Badge text="Quick search for API Navigate and saved methods" type="tip"/>
+- <Badge text="Online Document parameter groups" type="tip"/>
+- <Badge text="Custom environment synchronization for Online Document" type="tip"/>
+- <Badge text="Improved Online Document synchronization, login, and parameter display" type="info"/>
+- <Badge text="Fixed Form parameter issues in Online Document" type="danger"/>
+
+## 2026.1.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Configurable API Navigate scan strategy" type="tip"/>
+- <Badge text="Run Method default timeout increased to 10 minutes" type="info"/>
+- <Badge text="Fix missing API headers in request history" type="danger"/>
+
+## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 <Badge text="In this version, we have made extensive code optimizations and refactoring. If you encounter any issues, please report them to us and we will fix them as soon as possible." color="pink" vertical="middle"/>
 
 - <Badge text="Online Document" type="important"/>

@@ -21,7 +21,70 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Required parameter detection and marking" type="important"/>
+- <Badge text="Quick search for API Navigate and saved methods" type="tip"/>
+- <Badge text="Online Document parameter groups" type="tip"/>
+- <Badge text="Custom environment synchronization for Online Document" type="tip"/>
+- <Badge text="Improved Online Document synchronization, login, and parameter display" type="info"/>
+- <Badge text="Fixed Form parameter issues in Online Document" type="danger"/>
+
+::: hint Required parameter detection and marking <Badge vertical="top" text="Important feature" type="important"/>
+
+![requiredParam](/img/2026.1.2/requiredParam_en.png)
+Automatically detects required definitions from Spring, Solon, and common validation annotations, and displays the required status in Query, Form URL-Encoded, and Multipart parameter tables. The status can also be adjusted individually or in bulk and is synchronized to [Online Document](./features/onlineDocument.md).
+
+:::
+
+::: hint Quick search for API Navigate and saved methods <Badge vertical="top" text="New feature" type="tip"/>
+
+<MyCarousel :imgList="['/img/2026.1.2/searchInNav_en.png', '/img/2026.1.2/searchInMethods_en.png']" />
+
+API Navigate (`Nav`) supports searching by URL, API description, and class name, together with module and HTTP method filters. The Methods tab supports searching by class name, method name, and parameter type, while the existing Speed Search remains available.
+
+:::
+
+::: hint Online Document parameter groups <Badge vertical="top" text="New feature" type="tip"/>
+
+![apiDocParamGroup.png](/img/2026.1.2/apiDocParamGroup_en.png)
+Online Document preserves API parameter groups and the active group. Switching groups in the document debugger automatically loads the corresponding Path, Query, Header, and Body parameters.
+
+:::
+
+::: hint Custom environment synchronization for Online Document <Badge vertical="top" text="New feature" type="tip"/>
+
+![docEnvIgnoreSyncConfig](/img/2026.1.2/docEnvIgnoreSyncConfig_en.png)
+Project environments that should not appear in Online Document can now be configured. Ignored environments are removed during synchronization and restored on the next synchronization after being enabled again.
+
+:::
+
+::: hint Improved Online Document synchronization, login, and parameter display <Badge vertical="top" text="Optimization feature" type="info"/>
+
+The Online Document service now starts automatically after synchronization, with a direct link available in the notification. Login sessions can be preserved, and parameter table layout, hover feedback, and required indicators have been improved.
+
+:::
+
+::: hint Fixed Form parameter issues in Online Document <Badge vertical="top" text="Fix" type="danger"/>
+
+Fixed incorrect Form parameter display in Online Document so that form parameters are correctly available during document debugging.
+
+:::
+
+## 2026.1.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Configurable API Navigate scan strategy" type="tip"/>
+- <Badge text="Run Method default timeout increased to 10 minutes" type="info"/>
+- <Badge text="Fix missing API headers in request history" type="danger"/>
+
+::: hint Configurable API Navigate scan strategy <Badge vertical="top" text="New feature" type="tip"/>
+
+![Nav Config](/img/2026.1.1.1/navConfig_en.png)
+API Navigate (`Nav`) now supports configuring whether the default scan and scheduled scan are enabled.
+
+:::
+
+## 2026.1.1 <Badge text="Free trial" type="tip"/> <Badge text="2026-08-17" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 > [!important]
 > We have made extensive code optimizations and refactoring in this version.If you encounter any issues, feel free to report them to us and we will fix them as soon as possible.
