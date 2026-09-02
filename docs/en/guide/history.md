@@ -24,6 +24,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 ## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Required parameter detection and marking" type="important"/>
+- <Badge text="Response comment display" type="tip"/>
 - <Badge text="Quick search for API Navigate and saved methods" type="tip"/>
 - <Badge text="Online Document parameter groups" type="tip"/>
 - <Badge text="Custom environment synchronization for Online Document" type="tip"/>
@@ -34,6 +35,13 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 
 ![requiredParam](/img/2026.1.2/requiredParam_en.png)
 Automatically detects required definitions from Spring, Solon, and common validation annotations, and displays the required status in Query, Form URL-Encoded, and Multipart parameter tables. The status can also be adjusted individually or in bulk and is synchronized to [Online Document](./features/onlineDocument.md).
+
+:::
+
+::: hint Response comment display <Badge vertical="top" text="New feature" type="tip"/>
+
+![responseShowComment](/img/2026.1.2/responseShowComment.png)
+Response results now display field comments.
 
 :::
 

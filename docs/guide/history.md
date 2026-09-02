@@ -23,6 +23,7 @@ icon: changelog
 ## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="请求参数必填识别与标记" type="important"/>
+- <Badge text="Response 支持注释展示" type="tip"/>
 - <Badge text="API Navigate 与 Methods tab 支持快速搜索" type="tip"/>
 - <Badge text="在线文档支持参数分组" type="tip"/>
 - <Badge text="在线文档支持自定义同步环境" type="tip"/>
@@ -32,6 +33,13 @@ icon: changelog
 :::hint 请求参数必填识别与标记 <Badge vertical="top" text="重要功能" type="important"/>
 ![requiredParam](/img/2026.1.2/requiredParam.png)
 支持自动识别 Spring、Solon 以及常用校验注解中的必填定义，并在 Query、Form URL-Encoded 和 Multipart 参数表格中展示必填状态。必填状态也可以手动或批量调整，并同步展示到[在线文档](./features/onlineDocument.md)。。
+
+:::
+
+:::hint Response 支持注释展示 <Badge vertical="top" text="新功能" type="tip"/>
+
+![responseShowComment](/img/2026.1.2/responseShowComment.png)
+Response 结果支持展示字段注释。
 
 :::
 

@@ -30,6 +30,7 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 ## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="请求参数必填识别与标记" type="important"/>
+- <Badge text="Response 支持注释展示" type="tip"/>
 - <Badge text="API Navigate 与已保存方法支持快速搜索" type="tip"/>
 - <Badge text="在线文档支持参数分组" type="tip"/>
 - <Badge text="在线文档支持自定义同步环境" type="tip"/>
