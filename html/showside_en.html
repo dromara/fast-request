@@ -1,0 +1,283 @@
+<style>
+  .image-gallery {
+    display: flex;
+  }
+
+  .image-gallery__image {
+    padding: 5px;
+    width: 70%;
+    height: 500px;
+    background-image: url(/img/index/0.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .image-gallery__list {
+    width: 30%;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .image-gallery__item {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 8px;
+  }
+
+  .image-gallery__item-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .image-gallery__item-description {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+
+  .image-gallery__item-progress {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 8px;
+  }
+
+  .image-gallery__item-progress__foreground {
+    width: 0;
+    height: 100%;
+    background-color: rgba(31, 214, 140, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 10s linear;
+    border-radius: 8px;
+  }
+
+  #more {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    position: relative;
+    border-radius: 8px;
+  }
+</style>
+<body style="margin: 0; background: #0c1117">
+  <div class="image-gallery">
+    <div class="image-gallery__image"></div>
+    <div class="image-gallery__list">
+      <div class="image-gallery__item" imgName="0.png">
+        <div class="image-gallery__item-title">
+          Generate URLs and parameters
+        </div>
+        <div class="image-gallery__item-description">
+          Just click the icon on the left side of the method to generate the
+          method URL and corresponding parameters, Supports Spring, JAX-Rs
+          frameworks, and Java and Kotlin languages, save your handwriting time.
+        </div>
+        <div class="image-gallery__item-progress">
+          <div class="image-gallery__item-progress__foreground"></div>
+        </div>
+      </div>
+      <div class="image-gallery__item" imgName="2.png">
+        <div class="image-gallery__item-title">SearchEveryWhere</div>
+        <div class="image-gallery__item-description">
+          Added Module, Method, and Library search strategies.
+        </div>
+        <div class="image-gallery__item-progress">
+          <div class="image-gallery__item-progress__foreground"></div>
+        </div>
+      </div>
+      <div class="image-gallery__item" imgName="3.png">
+        <div class="image-gallery__item-title">APIs</div>
+        <div class="image-gallery__item-description">
+          Listed the saved APIs, which can be searched according to the
+          strategies, and can quickly locate the corresponding method of the API
+          or directly run the API.
+        </div>
+        <div class="image-gallery__item-progress">
+          <div class="image-gallery__item-progress__foreground"></div>
+        </div>
+      </div>
+      <div class="image-gallery__item" imgName="4.png">
+        <div class="image-gallery__item-title">Script</div>
+        <div class="image-gallery__item-description">
+          Groovy scripts support, which can be used to write pre/post scripts
+          and flexibly modify the behavior of APIs. This feature supports both
+          global and API-specific scopes.
+        </div>
+        <div class="image-gallery__item-progress">
+          <div class="image-gallery__item-progress__foreground"></div>
+        </div>
+      </div>
+      <div class="image-gallery__item" imgName="5.png">
+        <div class="image-gallery__item-title">Auto domain</div>
+        <div class="image-gallery__item-description">
+          Automatically recognize properties and yml files to form a local
+          domain name, reducing manual operations.
+        </div>
+        <div class="image-gallery__item-progress">
+          <div class="image-gallery__item-progress__foreground"></div>
+        </div>
+      </div>
+      <div class="image-gallery__item" imgName="6.png">
+        <div class="image-gallery__item-title">API doc sycn</div>
+        <div class="image-gallery__item-description">
+          API documents can be synchronized to Github, Gitlab, and Gitee
+          repositories, and automatic synchronization after running APIs, this
+          allowing developers to share API documents
+        </div>
+        <div class="image-gallery__item-progress">
+          <div class="image-gallery__item-progress__foreground"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var gallery = document.querySelector(".image-gallery");
+    var image = gallery.querySelector(".image-gallery__image");
+    var items = gallery.querySelectorAll(".image-gallery__item");
+
+    var currentIndex = 0; // 当前显示的图片索引
+
+    // 初始化第一个item的进度条
+    var currentProgress = items[currentIndex].querySelector(
+      ".image-gallery__item-progress__foreground",
+    );
+
+    // 切换图片
+    function switchImage(index) {
+      // 隐藏之前的图片和进度条
+      image.style.opacity = "0";
+      var currentProgressBar = items[currentIndex].querySelector(
+        ".image-gallery__item-progress__foreground",
+      );
+
+      // 更新当前索引
+      currentIndex = index;
+
+      // 显示新的图片和进度条
+      var imgName = items[index].getAttribute("imgName");
+      image.style.backgroundImage = "url(/img/index/" + imgName + ")";
+      image.style.opacity = "1";
+
+      // 遍历所有的图片项，将除了当前图片项的描述元素都隐藏
+      items.forEach(function (item, i) {
+        var otherDescription = item.querySelector(
+          ".image-gallery__item-description",
+        );
+        if (i !== currentIndex) {
+          otherDescription.style.display = "none";
+        }
+      });
+      var description = items[currentIndex].querySelector(
+        ".image-gallery__item-description",
+      );
+      description.style.display = "block";
+
+      var nextProgressBar = items[currentIndex].querySelector(
+        ".image-gallery__item-progress__foreground",
+      );
+      nextProgressBar.style.opacity = 1;
+      nextProgressBar.style.width = "100%";
+
+      // 延迟将上一个进度条的宽度设置为 0
+      setTimeout(function () {
+        currentProgressBar.style.width = "0";
+        currentProgressBar.style.opacity = "0";
+      }, 10);
+
+      // 判断是否到达最后一张图片，如果是则从第一张图片开始轮播
+      if (currentIndex === items.length - 1) {
+        items[0].querySelector(
+          ".image-gallery__item-progress__foreground",
+        ).style.opacity = 1;
+      }
+    }
+
+    // 遍历所有的图片项
+    items.forEach(function (item, index) {
+      // 获取标题元素和描述元素
+      var title = item.querySelector(".image-gallery__item-title");
+      var description = item.querySelector(".image-gallery__item-description");
+      var progress = item.querySelector(".image-gallery__item-progress");
+
+      // 将描述元素默认隐藏
+      description.style.display = "none";
+      //第一个默认显示
+      if (index === 0) {
+        items[0].querySelector(
+          ".image-gallery__item-description",
+        ).style.display = "block";
+      }
+
+      // 当用户点击标题元素时，展开或隐藏描述元素
+      progress.addEventListener("click", function () {
+        // 停止轮播
+        clearInterval(timerId);
+        // 如果描述元素已经展开，则直接返回
+        if (description.style.display === "block") {
+          return;
+        }
+
+        var currentProgressBar = items[index].querySelector(
+          ".image-gallery__item-progress__foreground",
+        );
+        currentProgressBar.style.opacity = 0;
+
+        // 遍历所有的图片项，将除了当前图片项的描述元素都隐藏
+        items.forEach(function (item, i) {
+          var otherDescription = item.querySelector(
+            ".image-gallery__item-description",
+          );
+          if (i !== index) {
+            otherDescription.style.display = "none";
+          }
+        });
+
+        // 展开当前图片项的描述元素
+        description.style.display = "block";
+        console.log(item);
+        var imgName = item.getAttribute("imgName");
+        image.style.backgroundImage = "url(/img/index/" + imgName + ")";
+      });
+    });
+
+    // 自动切换图片
+    timerId = setInterval(function () {
+      // 计算下一个索引
+      var nextIndex = currentIndex + 1;
+      if (nextIndex >= items.length) {
+        nextIndex = 0;
+      }
+
+      // 切换图片
+      switchImage(nextIndex);
+    }, 10000);
+
+    var first = true;
+    timerFirst = setInterval(function () {
+      items[currentIndex].querySelector(
+        ".image-gallery__item-progress__foreground",
+      ).style.width = "100%";
+      first = false;
+    }, 10);
+    if (!first) {
+      clearInterval(timerFirst);
+    }
+  </script>
+</body>

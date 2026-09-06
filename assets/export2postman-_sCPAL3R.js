@@ -1,0 +1,1 @@
+var e=`/img/export2postman.gif`;export{e as t};

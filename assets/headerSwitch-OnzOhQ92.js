@@ -1,0 +1,1 @@
+var e=`/img/headerSwitch.gif`;export{e as t};

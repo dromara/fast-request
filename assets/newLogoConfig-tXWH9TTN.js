@@ -1,0 +1,1 @@
+var e=`/img/2022.2.4/newLogo.gif`,t=`/img/2022.2.4/newLogoConfig.png`;export{e as n,t};

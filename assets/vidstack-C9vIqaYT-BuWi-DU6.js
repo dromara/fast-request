@@ -1,0 +1,1 @@
+function e(e){return e instanceof Error?e:Error(typeof e==`string`?e:JSON.stringify(e))}function t(e,t){if(!e)throw Error(`Assertion failed.`)}export{e as n,t};

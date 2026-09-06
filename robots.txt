@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow:
+User-agent:*
+Disallow:
+
+Sitemap: https://api-buddy.com/sitemap.xml

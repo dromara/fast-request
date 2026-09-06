@@ -1,0 +1,1 @@
+var e=`/img/projectConfigParam.png`;export{e as t};

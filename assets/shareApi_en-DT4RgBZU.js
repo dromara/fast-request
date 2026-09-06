@@ -1,0 +1,1 @@
+var e=`/img/shareApi_en.png`;export{e as t};

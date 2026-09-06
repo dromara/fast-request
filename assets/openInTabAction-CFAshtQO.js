@@ -1,0 +1,1 @@
+var e=`/img/2024.1.6/multiTab.png`,t=`/img/2024.1.6/openInTabAction.png`;export{e as n,t};

@@ -1,0 +1,1 @@
+var e=`/img/twitter.png`;export{e as t};

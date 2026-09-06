@@ -1,0 +1,1 @@
+var e=`/img/paramDescription.png`;export{e as t};
