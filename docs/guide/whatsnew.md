@@ -27,7 +27,7 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="请求参数必填识别与标记" type="important"/>
 - <Badge text="Response 支持注释展示" type="tip"/>
@@ -37,7 +37,7 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 - <Badge text="优化在线文档同步、登录和参数展示体验" type="info"/>
 - <Badge text="修复在线文档 Form 参数异常" type="danger"/>
 
-## 2026.1.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.1.1 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="API Navigate 扫描策略支持配置" type="tip"/>
 - <Badge text="Run Method 默认超时增加至 10 分钟" type="info"/>

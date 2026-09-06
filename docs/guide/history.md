@@ -20,7 +20,7 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
-## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="开发中..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="请求参数必填识别与标记" type="important"/>
 - <Badge text="Response 支持注释展示" type="tip"/>
@@ -79,7 +79,7 @@ API Navigate（`Nav`）支持按 URL、接口描述和类名搜索，并可结�
 
 :::
 
-## 2026.1.1.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.1.1 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="API Navigate 扫描策略支持配置" type="tip"/>
 - <Badge text="Run Method 默认超时增加至 10 分钟" type="info"/>

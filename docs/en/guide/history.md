@@ -21,7 +21,7 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Required parameter detection and marking" type="important"/>
 - <Badge text="Response comment display" type="tip"/>
@@ -79,7 +79,7 @@ Fixed incorrect Form parameter display in Online Document so that form parameter
 
 :::
 
-## 2026.1.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.1.1 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Configurable API Navigate scan strategy" type="tip"/>
 - <Badge text="Run Method default timeout increased to 10 minutes" type="info"/>

@@ -29,7 +29,7 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Developing..." color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Required parameter detection and marking" type="important"/>
 - <Badge text="Response comment display" type="tip"/>
@@ -39,7 +39,7 @@ Because developing version is still in development, the documentation of develop
 - <Badge text="Improved Online Document synchronization, login, and parameter display" type="info"/>
 - <Badge text="Fixed Form parameter issues in Online Document" type="danger"/>
 
-## 2026.1.1.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.1.1 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Configurable API Navigate scan strategy" type="tip"/>
 - <Badge text="Run Method default timeout increased to 10 minutes" type="info"/>
