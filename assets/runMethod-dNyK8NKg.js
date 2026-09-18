@@ -1,0 +1,1 @@
+var e=`/img/2026.1.1/runMethod.png`;export{e as t};

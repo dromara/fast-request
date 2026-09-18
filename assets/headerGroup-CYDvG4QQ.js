@@ -1,0 +1,1 @@
+var e=`/img/headerGroup.png`;export{e as t};

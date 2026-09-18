@@ -1,0 +1,1 @@
+var e=`/img/2023.1.8/environment.png`,t=`/img/2023.1.8/useEnvironmentVariable.png`,n=`/img/2023.1.8/chooseEnvironmentVariable.png`;export{t as n,e as r,n as t};

@@ -1,0 +1,1 @@
+var e=`/img/toolwindowNew.png`;export{e as t};
