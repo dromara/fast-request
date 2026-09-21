@@ -29,7 +29,15 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="cURL listener import" type="tip"/>
+- <Badge text="cURL parsing optimization" type="info"/>
+- <Badge text="Entity parsing optimization" type="info"/>
+- <Badge text="Confirmation dialog for quickly adding ignored fields" type="info"/>
+- <Badge text="Fix inaccurate button positioning when clicking RunMethod scripts" type="danger"/>
+
+## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Required parameter detection and marking" type="important"/>
 - <Badge text="Response comment display" type="tip"/>

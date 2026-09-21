@@ -20,7 +20,24 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
-## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="cURL 监听导入" type="tip"/>
+- <Badge text="cURL 解析优化" type="info"/>
+- <Badge text="实体类解析优化" type="info"/>
+- <Badge text="快速添加忽略字段增加弹窗确认" type="info"/>
+- <Badge text="修复 RunMethod 脚本点击按钮定位失准" type="danger"/>
+
+:::hint cURL 监听导入 <Badge vertical="top" text="新功能" type="tip"/>
+
+<MyCarousel :imgList="['/img/2026.1.2.3/curlImportNotify.png', '/img/2026.1.2.3/curlImportNotifyConfig.png']" />
+打开 Fast Request 工具窗口后，从浏览器复制 cURL 命令并切回 IDEA，插件会监听剪贴板中的 cURL 内容，并支持将其导入为可编辑的 API 请求。
+
+使用该功能时，Fast Request 工具窗口必须保持打开。
+
+:::
+
+## 2026.1.2 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="请求参数必填识别与标记" type="important"/>
 - <Badge text="Response 支持注释展示" type="tip"/>

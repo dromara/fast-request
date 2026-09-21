@@ -21,7 +21,23 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="cURL listener import" type="tip"/>
+- <Badge text="cURL parsing optimization" type="info"/>
+- <Badge text="Entity parsing optimization" type="info"/>
+- <Badge text="Confirmation dialog for quickly adding ignored fields" type="info"/>
+- <Badge text="Fix inaccurate button positioning when clicking RunMethod scripts" type="danger"/>
+
+::: hint cURL listener import <Badge vertical="top" text="New feature" type="tip"/>
+<MyCarousel :imgList="['/img/2026.1.2.3/curlImportNotify_en.png', '/img/2026.1.2.3/curlImportNotifyConfig_en.png']" />
+After opening the Fast Request tool window, copy a cURL command in the browser and switch back to IDEA. The plugin listens for the cURL content in the clipboard and allows it to be imported as an editable API request.
+
+The Fast Request tool window must remain open while using this feature.
+
+:::
+
+## 2026.1.2 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Required parameter detection and marking" type="important"/>
 - <Badge text="Response comment display" type="tip"/>
