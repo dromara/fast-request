@@ -1,0 +1,1 @@
+var e=`/img/apiDocExample.png`;export{e as t};
