@@ -27,7 +27,15 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2026.1.2.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="AI 支持配置 Temperature" type="tip"/>
+- <Badge text="Run Method 特殊参数处理优化" type="info"/>
+- <Badge text="JDK 25 运行依赖调整" type="info"/>
+- <Badge text="cURL 导入窗口自动填充调整" type="info"/>
+- <Badge text="在线文档请求示例补充 Query 参数" type="info"/>
+
+## 2026.1.2.3 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="cURL 监听导入" type="tip"/>
 - <Badge text="cURL 解析优化" type="info"/>

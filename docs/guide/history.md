@@ -20,7 +20,45 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
-## 2026.1.2.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="AI 支持配置 Temperature" type="tip"/>
+- <Badge text="Run Method 特殊参数处理优化" type="info"/>
+- <Badge text="JDK 25 运行依赖调整" type="info"/>
+- <Badge text="cURL 导入窗口自动填充调整" type="info"/>
+- <Badge text="在线文档请求示例补充 Query 参数" type="info"/>
+
+:::hint AI 支持配置 Temperature <Badge vertical="top" text="新功能" type="tip"/>
+
+AI 设置新增 Temperature 配置项，可为每个 AI 配置单独设置，默认值为 `0.2`。发送 AI 请求时使用该配置值。
+
+:::
+
+:::hint Run Method 特殊参数处理优化 <Badge vertical="top" text="优化" type="info"/>
+
+生成方法参数时，框架上下文参数及文件类型参数默认填充为 `null`。文件路径保留为字符串，不再按 JSON 解析；空字符串、`{}` 和 `null` 按空文件参数处理。请求参数解析补充对 `Part`、`Reader` 类型的识别。
+
+:::
+
+:::hint JDK 25 运行依赖调整 <Badge vertical="top" text="优化" type="info"/>
+
+调整 Run Method 内置 Agent 的相关依赖，处理 JDK 25 环境下的兼容性问题。
+
+:::
+
+:::hint cURL 导入窗口自动填充调整 <Badge vertical="top" text="优化" type="info"/>
+
+打开 cURL 导入窗口时，先检查剪贴板内容，仅自动填入包含 HTTP 或 HTTPS 地址的 cURL 命令。
+
+:::
+
+:::hint 在线文档请求示例补充 Query 参数 <Badge vertical="top" text="优化" type="info"/>
+
+在线文档生成的 cURL、Fetch 和 Axios 请求示例会将已启用且名称非空的 Query 参数拼接到 URL，并对参数名称和值进行 URL 编码。
+
+:::
+
+## 2026.1.2.3 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="cURL 监听导入" type="tip"/>
 - <Badge text="cURL 解析优化" type="info"/>

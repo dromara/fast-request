@@ -21,7 +21,45 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2026.1.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Configurable AI Temperature" type="tip"/>
+- <Badge text="Run Method parameter handling" type="info"/>
+- <Badge text="Runtime dependency updates for JDK 25" type="info"/>
+- <Badge text="cURL import dialog prefill" type="info"/>
+- <Badge text="Query parameters in Online Document examples" type="info"/>
+
+::: hint Configurable AI Temperature <Badge vertical="top" text="New feature" type="tip"/>
+
+Added a Temperature field to each AI configuration, with a default value of `0.2`. AI requests use the configured value.
+
+:::
+
+::: hint Run Method parameter handling <Badge vertical="top" text="Optimization feature" type="info"/>
+
+Framework context and file parameters now default to `null` when generating method arguments. File paths remain strings instead of being parsed as JSON. Empty strings, `{}`, and `null` are treated as empty file arguments. Request parameter parsing also recognizes `Part` and `Reader` types.
+
+:::
+
+::: hint Runtime dependency updates for JDK 25 <Badge vertical="top" text="Optimization feature" type="info"/>
+
+Updated dependencies in the bundled Run Method agent to address compatibility issues with JDK 25.
+
+:::
+
+::: hint cURL import dialog prefill <Badge vertical="top" text="Optimization feature" type="info"/>
+
+The cURL import dialog now checks clipboard content before prefilling it. Only cURL commands containing an HTTP or HTTPS URL are inserted automatically.
+
+:::
+
+::: hint Query parameters in Online Document examples <Badge vertical="top" text="Optimization feature" type="info"/>
+
+Generated cURL, Fetch, and Axios examples in Online Document now append enabled query parameters with non-empty names to the URL. Parameter names and values are URL-encoded.
+
+:::
+
+## 2026.1.2.3 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="cURL listener import" type="tip"/>
 - <Badge text="cURL parsing optimization" type="info"/>

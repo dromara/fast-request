@@ -29,7 +29,15 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2026.1.2.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Configurable AI Temperature" type="tip"/>
+- <Badge text="Run Method parameter handling" type="info"/>
+- <Badge text="Runtime dependency updates for JDK 25" type="info"/>
+- <Badge text="cURL import dialog prefill" type="info"/>
+- <Badge text="Query parameters in Online Document examples" type="info"/>
+
+## 2026.1.2.3 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="cURL listener import" type="tip"/>
 - <Badge text="cURL parsing optimization" type="info"/>
