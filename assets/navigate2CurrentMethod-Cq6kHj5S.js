@@ -1,0 +1,1 @@
+var e=`/img/navigate2CurrentMethod.png`;export{e as t};

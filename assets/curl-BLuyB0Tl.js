@@ -1,0 +1,1 @@
+var e=`/img/curl.png`;export{e as t};

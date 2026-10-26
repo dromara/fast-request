@@ -1,0 +1,1 @@
+var e=`/img/icon/curl_dark.svg`;export{e as t};

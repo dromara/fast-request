@@ -1,0 +1,1 @@
+var e=`/img/apiGroup.gif`;export{e as t};

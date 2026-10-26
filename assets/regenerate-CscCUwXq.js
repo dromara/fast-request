@@ -1,0 +1,1 @@
+var e=`/img/regenerate.png`;export{e as t};

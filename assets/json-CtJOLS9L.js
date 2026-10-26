@@ -1,0 +1,1 @@
+var e=`/img/json.png`;export{e as t};

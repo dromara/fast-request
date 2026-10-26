@@ -1,0 +1,1 @@
+var e=`/img/2023.1.2/annualReport.png`;export{e as t};
