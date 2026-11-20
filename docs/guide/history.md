@@ -20,7 +20,24 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
-## 2026.1.3 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.4.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Search Everywhere 支持完整 URL 和路径参数搜索" type="info"/>
+- <Badge text="Run Method 光标恢复" type="info"/>
+
+:::hint Search Everywhere 支持完整 URL 和路径参数搜索 <Badge vertical="top" text="优化" type="info"/>
+
+搜索时支持输入完整 URL，按路径匹配 API，忽略域名、Query 参数和锚点。支持使用实际路径参数值匹配接口，例如 `/users/123` 匹配 `/users/{id}`。用法见 [Search Everywhere](./features/searchEveryWhere.md)。
+
+:::
+
+:::hint Run Method 光标恢复 <Badge vertical="top" text="优化" type="info"/>
+
+鼠标悬停在编辑区的运行图标上时显示手形光标，移出图标后恢复编辑器光标。
+
+:::
+
+## 2026.1.3 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="AI 支持配置 Temperature" type="tip"/>
 - <Badge text="Run Method 特殊参数处理优化" type="info"/>

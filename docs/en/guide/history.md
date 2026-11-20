@@ -21,7 +21,24 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2026.1.3 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2024.1.4.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Search Everywhere: full URLs and path parameters" type="info"/>
+- <Badge text="Run Method cursor restoration" type="info"/>
+
+::: hint Search Everywhere: full URLs and path parameters <Badge vertical="top" text="Optimization feature" type="info"/>
+
+Search accepts full URLs and matches APIs by path, ignoring the host, query parameters, and fragment. Actual path parameter values can also match API templates, for example, `/users/123` matches `/users/{id}`. See [Search Everywhere](./features/searchEveryWhere.md) for usage.
+
+:::
+
+::: hint Run Method cursor restoration <Badge vertical="top" text="Optimization feature" type="info"/>
+
+The pointer displays a hand cursor when hovering over the run icon in the editing area. Moving it away restores the editor cursor.
+
+:::
+
+## 2026.1.3 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Configurable AI Temperature" type="tip"/>
 - <Badge text="Run Method parameter handling" type="info"/>
