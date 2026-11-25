@@ -20,7 +20,17 @@ icon: changelog
 >
 > important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>feat: <Badge text="新功能" type="tip"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> perf: <Badge text="优化" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="修复/移除" type="danger"/>
 
-## 2024.1.4.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.4.2 <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="修复 Run Method 泛型参数转换" type="danger"/>
+
+:::hint 修复 Run Method 泛型参数转换 <Badge vertical="top" text="修复" type="danger"/>
+
+修复 Run Method 调用时泛型参数类型转换错误的问题，包括代理类和继承场景。
+
+:::
+
+## 2024.1.4.1 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Search Everywhere 支持完整 URL 和路径参数搜索" type="info"/>
 - <Badge text="Run Method 光标恢复" type="info"/>

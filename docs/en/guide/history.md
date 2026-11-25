@@ -21,7 +21,17 @@ Join and follow us to solve your question ❤️❤️❤️↓↓↓
 >
 > perf: <Badge text="Optimization feature" type="info"/> <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> fix: <Badge text="Fix or Remove feature" type="danger"/>
 
-## 2024.1.4.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.4.2 <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Fixed Run Method generic parameter conversion" type="danger"/>
+
+::: hint Fixed Run Method generic parameter conversion <Badge vertical="top" text="Fix" type="danger"/>
+
+Fixed incorrect generic parameter type conversion in Run Method, including proxy and inheritance scenarios.
+
+:::
+
+## 2024.1.4.1 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Search Everywhere: full URLs and path parameters" type="info"/>
 - <Badge text="Run Method cursor restoration" type="info"/>

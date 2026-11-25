@@ -29,7 +29,11 @@ Because developing version is still in development, the documentation of develop
 
 [**More detail ---------------->**](./history.md)
 
-## 2024.1.4.1 <Badge text="Free trial" type="tip"/> <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.4.2 <Badge text="Newest version" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="Fixed Run Method generic parameter conversion" type="danger"/>
+
+## 2024.1.4.1 <Badge text="Free trial" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Search Everywhere: full URLs and path parameters" type="info"/>
 - <Badge text="Run Method cursor restoration" type="info"/>

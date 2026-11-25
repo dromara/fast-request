@@ -27,7 +27,11 @@ important: <Badge text="重要功能" type="important"/> <span>&nbsp;&nbsp;&nbsp
 
 [**务必查看变更详情----------------->**](./history.md)
 
-## 2024.1.4.1 <Badge text="免费试用" type="tip"/> <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+## 2026.1.4.2 <Badge text="最新版" color="SandyBrown"/> <Badge text="IDEA 2023.3+" color="pink"/>
+
+- <Badge text="修复 Run Method 泛型参数转换" type="danger"/>
+
+## 2024.1.4.1 <Badge text="免费试用" type="tip"/> <Badge text="IDEA 2023.3+" color="pink"/>
 
 - <Badge text="Search Everywhere 支持完整 URL 和路径参数搜索" type="info"/>
 - <Badge text="Run Method 光标恢复" type="info"/>
