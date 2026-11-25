@@ -6,6 +6,8 @@ icon: featuresNew
 
 The icon in the document corresponds to the button icon in the plugin
 
+[Interface guide](../ui-guide.md): Find features in the plugin interface and click a button to open its documentation.
+
 ![toolwindow](/img/toolwindowNew_en.png)
 
 ## Request

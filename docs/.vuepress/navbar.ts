@@ -8,8 +8,11 @@ export const enNavbar = navbar([
   },
   {
     text: "Features",
-    link: "/en/guide/features/README.md",
     icon: "featuresNew",
+    children: [
+      { text: "Feature list", link: "/en/guide/features/README.md" },
+      { text: "Interface guide", link: "/en/guide/ui-guide" },
+    ],
   },
   {
     text: "What's New",
@@ -56,8 +59,11 @@ export const zhNavbar = navbar([
   },
   {
     text: "功能",
-    link: "/guide/features/README.md",
     icon: "featuresNew",
+    children: [
+      { text: "功能列表", link: "/guide/features/README.md" },
+      { text: "界面导览", link: "/guide/ui-guide" },
+    ],
   },
   {
     text: "最新变化",

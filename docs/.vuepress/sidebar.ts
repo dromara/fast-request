@@ -5,6 +5,7 @@ export const enSidebar = sidebar({
 
   "/en/guide/": [
     "introduce",
+    "ui-guide",
     {
       text: "Getting started",
       icon: "leibie",
@@ -96,6 +97,7 @@ export const zhSidebar = sidebar({
 
   "/guide/": [
     "introduce",
+    "ui-guide",
     {
       text: "快速上手",
       icon: "leibie",

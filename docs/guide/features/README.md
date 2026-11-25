@@ -6,6 +6,8 @@ icon: featuresNew
 
 文档中的图标对应插件中的按钮图标，大标题对应 tab 以及功能
 
+[界面导览](../ui-guide.md)：按插件界面查找功能，点击按钮打开对应文档。
+
 ![toolwindowNew](/img/toolwindowNew.png)
 
 ## Request

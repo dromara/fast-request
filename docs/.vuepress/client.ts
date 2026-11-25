@@ -3,6 +3,7 @@ import { defineClientConfig } from "vuepress/client";
 import { ColorIcon } from "./components/ColorIcon.js";
 import CarouselComponent from "./components/MyCarousel.vue";
 import HomeAdvantage from "./components/HomeAdvantage.vue";
+import PluginUiGuide from "./components/PluginUiGuide.vue";
 import PremiumBorder from "./components/PremiumBorder.vue";
 import SiteCursor from "./components/SiteCursor.vue";
 import CursorEffectToggle from "./components/CursorEffectToggle.vue";
@@ -19,6 +20,7 @@ export default defineClientConfig({
     app.component("ColorIcon", ColorIcon);
     app.component("MyCarousel", CarouselComponent);
     app.component("HomeAdvantage", HomeAdvantage);
+    app.component("PluginUiGuide", PluginUiGuide);
     app.component("PremiumBorder", PremiumBorder);
     // Included Markdown snippets may retain the old name in VuePress's dev cache.
     app.component("ElectricBorder", PremiumBorder);
