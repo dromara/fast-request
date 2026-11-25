@@ -2,14 +2,26 @@ import { defineClientConfig } from "vuepress/client";
 
 import { ColorIcon } from "./components/ColorIcon.js";
 import CarouselComponent from "./components/MyCarousel.vue";
+import HomeAdvantage from "./components/HomeAdvantage.vue";
+import PremiumBorder from "./components/PremiumBorder.vue";
+import SiteCursor from "./components/SiteCursor.vue";
+import CursorEffectToggle from "./components/CursorEffectToggle.vue";
+import { createCursorPreference, cursorPreferenceKey } from "./composables/useCursorPreference.js";
 import BgMusic from "./components/BgMusic.vue";
 import { onMounted, onUnmounted } from "vue";
 
 
 export default defineClientConfig({
+  rootComponents: [SiteCursor],
   enhance: ({ app }) => {
+    app.provide(cursorPreferenceKey, createCursorPreference());
+    app.component("CursorEffectToggle", CursorEffectToggle);
     app.component("ColorIcon", ColorIcon);
     app.component("MyCarousel", CarouselComponent);
+    app.component("HomeAdvantage", HomeAdvantage);
+    app.component("PremiumBorder", PremiumBorder);
+    // Included Markdown snippets may retain the old name in VuePress's dev cache.
+    app.component("ElectricBorder", PremiumBorder);
     app.component("BgMusic",BgMusic)
   },
     setup() {

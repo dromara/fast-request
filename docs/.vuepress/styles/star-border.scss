@@ -1,0 +1,76 @@
+.vp-project-home .vp-hero-action.primary {
+  position: relative;
+  isolation: isolate;
+  box-shadow:
+    0 0 0 1px rgb(184 255 235 / 16%),
+    0 0 18px rgb(94 242 200 / 10%);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: inherit;
+    background-image: radial-gradient(
+      ellipse at 50% 100%,
+      #effffb 0%,
+      #5ef2c8 12%,
+      rgb(94 242 200 / 55%) 20%,
+      transparent 40%
+    );
+    background-repeat: no-repeat;
+    background-size: 300% 100%;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: hero-star-border 5s ease-in-out infinite alternate;
+  }
+
+  &::after {
+    background-image: radial-gradient(
+      ellipse at 50% 0%,
+      #effffb 0%,
+      #5ef2c8 12%,
+      rgb(94 242 200 / 55%) 20%,
+      transparent 40%
+    );
+    animation-direction: alternate-reverse;
+  }
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px rgb(184 255 235 / 30%),
+      0 0 24px rgb(94 242 200 / 22%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #8ff8da;
+    outline-offset: 5px;
+  }
+}
+
+@keyframes hero-star-border {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vp-project-home .vp-hero-action.primary {
+    &::before,
+    &::after {
+      background-position: 50% 0%;
+      animation: none;
+    }
+  }
+}

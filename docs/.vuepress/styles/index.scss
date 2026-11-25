@@ -1,4 +1,5 @@
 @use "@sass-palette/hope-config";
+@use "./star-border";
 
 @font-face {
   font-family: "alimamaYuanMainTitle";
@@ -208,6 +209,11 @@ h2 {
 
   .hint-container {
     border: none;
+    &.paid-version {
+      position: relative;
+      isolation: isolate;
+    }
+
     &.info .compare-title {
       background: #087cfa;
     }

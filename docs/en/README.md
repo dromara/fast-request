@@ -54,18 +54,7 @@ head:
 ## Advantage
 
 <div class="home-advantage">
- <div style="border-radius: 10px;overflow: hidden">
-  <iframe
-  title="Advantage"
-  :src="$withBase('/html/showsideNew_en.html')"
-  width="100%"
-  height="550px"
-  frameborder="0"
-  scrolling="No"
-  leftmargin="0"
-  topmargin="0"
-  />
- </div>
+ <HomeAdvantage title="Advantage" :src="$withBase('/html/showsideNew_en.html')" :height="550" lang="en" />
 
  <div style="margin-top: 20px"></div>
  <a class="advantage-more" href="en/guide/features/">More features</a>

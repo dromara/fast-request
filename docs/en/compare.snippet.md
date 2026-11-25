@@ -2,7 +2,9 @@
 
 <div class="compare-wrapper" style="display:flex">
 
-<div class="hint-container info" style="margin-right:15px;width:50%">
+<div class="hint-container info paid-version" style="margin-right:15px;width:50%">
+
+<PremiumBorder />
 
 <div class="compare-title">
   <ColorIcon icon="restfulFastRequest" />Paid Version

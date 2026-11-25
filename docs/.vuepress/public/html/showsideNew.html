@@ -107,11 +107,12 @@
     width: 100%;
   }
 </style>
+<link rel="stylesheet" href="./image-preview.css" />
 <body style="margin: 0; background: #0c1117">
   <div class="carousel-container">
     <div class="left-section">
       <!-- 添加图片容器 -->
-      <div class="image-container">
+      <button class="image-container" type="button" aria-label="放大当前图片">
         <img src="/img/index/0.png" data-index="0" class="active show" />
         <img src="/img/index/7.png" data-index="1" />
         <img src="/img/index/2.png" data-index="2" />
@@ -120,7 +121,8 @@
         <img src="/img/index/5.png" data-index="5" />
         <img src="/img/index/6.png" data-index="6" />
         
-      </div>
+        <span class="image-zoom-hint" aria-hidden="true">⤢ 点击放大</span>
+      </button>
     </div>
 
     <div class="right-section">
@@ -183,6 +185,7 @@
   </div>
 
   <!-- 引入 JavaScript -->
+  <script src="./image-preview.js"></script>
   <script>
     class Carousel {
       constructor() {
@@ -216,7 +219,7 @@
           this.setActive(0, true);
 
           // 启动自动播放，从索引1开始
-          setTimeout(() => {
+          this.timer = setTimeout(() => {
             this.currentIndex = 0;
             this.autoPlay();
           }, this.interval);
@@ -277,7 +280,7 @@
 
     // 初始化
     document.addEventListener("DOMContentLoaded", () => {
-      new Carousel();
+      initImagePreview(new Carousel());
     });
   </script>
 </body>

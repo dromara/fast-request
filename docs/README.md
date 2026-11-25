@@ -84,18 +84,7 @@ style="max-width:370px"
 ## 优势
 
 <div class="home-advantage">
-  <div style="border-radius: 10px;overflow: hidden">
-    <iframe
-      title="优势"
-      :src="$withBase('/html/showsideNew.html')"
-      width="100%"
-      height="500px"
-      frameborder="0"
-      scrolling="No"
-      leftmargin="0"
-      topmargin="0"
-    />
-  </div>
+  <HomeAdvantage title="优势" :src="$withBase('/html/showsideNew.html')" />
   <div style="margin-top: 20px"></div>
   <a class="advantage-more" href="guide/features/">更多功能</a>
 </div>

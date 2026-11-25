@@ -42,7 +42,7 @@ export default hopeTheme(
       navbarLayout: {
           start: ["Brand"],
           center: ["Links"],
-          end: ["BgMusic","Language",  "Repo", "Outlook", "Search"],
+          end: ["CursorEffectToggle", "BgMusic","Language",  "Repo", "Outlook", "Search"],
       },
 
     markdown: {
