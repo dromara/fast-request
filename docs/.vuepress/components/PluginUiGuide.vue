@@ -1,14 +1,21 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import { withBase } from "vuepress/client";
-import GuideAction from "./ui-guide/GuideAction.vue";
+import GuideSplitAction from "./ui-guide/GuideSplitAction.vue";
+import GuideTabs from "./ui-guide/GuideTabs.vue";
+import ApisPanel from "./ui-guide/ApisPanel.vue";
+import NavPanel from "./ui-guide/NavPanel.vue";
+import RunMethodPanel from "./ui-guide/RunMethodPanel.vue";
+import MethodsPanel from "./ui-guide/MethodsPanel.vue";
+import RequestPanels from "./ui-guide/RequestPanels.vue";
 import { useGuidePreview } from "./ui-guide/useGuidePreview.js";
+import { useGuideGroups } from "./ui-guide/useGuideGroups.js";
 import { closeOutsideGuideDropdowns } from "./ui-guide/dropdowns.js";
 import {
   getGuideHref,
   guideFeatures,
   guideLayout,
-  searchGuideFeatures,
+  groupGuideFeatures,
 } from "./ui-guide/features.js";
 
 const props = defineProps({ lang: { type: String, default: "zh" } });
@@ -26,14 +33,31 @@ const { selected, pinned, preview, cancelPreview, togglePin } = useGuidePreview(
   byId.document,
 );
 const query = ref("");
-const showAll = ref(false);
-const results = computed(() =>
-  query.value.trim() || showAll.value
-    ? searchGuideFeatures(query.value)
-    : guideLayout.quickLinks.map((id) => byId[id]),
+const groups = computed(() => groupGuideFeatures(query.value));
+const {
+  collapsedGroups,
+  allExpanded,
+  allCollapsed,
+  setGroupOpen,
+  setAllGroupsOpen,
+} = useGuideGroups(query, groups);
+const resultCount = computed(() =>
+  groups.value.reduce((count, group) => count + group.items.length, 0),
 );
 const href = (item) => withBase(getGuideHref(item, props.lang));
 const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
+const activeWindow = ref("debug");
+const windowTabs = guideLayout.windowTabs.map((id, i) => ({
+  id,
+  label: windowCaptions[i],
+  icon: i === 0 ? "runWithCoverage" : byId[id].icon,
+}));
+const previewWindow = (item, event) => preview(byId[item.id], event);
+function selectWindow(id) {
+  activeWindow.value = id;
+  preview(byId[id], { type: "focus" });
+  closeOutsideGuideDropdowns(guideRoot.value, null);
+}
 </script>
 
 <template>
@@ -44,232 +68,137 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   >
     <header class="guide-heading">
       <div>
-        <p class="guide-eyebrow">
-          FAST REQUEST <span>/</span> {{ text("界面导览", "INTERFACE GUIDE") }}
-        </p>
-        <h1>
-          {{ text("界面导览", "Interface guide") }}
-        </h1>
         <p class="guide-intro">
           {{
             text(
-              "按插件界面查看功能说明，点击按钮打开对应文档。",
-              "View features by their position in the plugin. Click a button to open its documentation.",
+              "按插件界面查看功能说明。",
+              "View features by their position in the plugin.",
+            )
+          }}
+        </p>
+        <p class="guide-interaction-hint">
+          {{
+            text(
+              "悬停显示说明 · 点击打开文档 · 下拉查看操作",
+              "Hover for details · Click for documentation · Expand for actions",
             )
           }}
         </p>
       </div>
-      <a
-        class="guide-overview"
-        :href="withBase(`${lang === 'en' ? '/en' : ''}/guide/features/`)"
-        >{{ text("浏览功能列表", "Browse all features") }}</a
-      >
+      <div class="guide-heading-actions">
+        <a class="guide-overview" href="#guide-find-title">{{
+          text("浏览功能文档", "Browse feature documentation")
+        }}</a>
+      </div>
     </header>
-
-    <div class="guide-canvas-heading">
-      <span>{{ text("插件界面", "PLUGIN INTERFACE") }}</span>
-      <span>{{
-        text(
-          "悬停显示说明 · 点击打开文档 · 下拉查看操作",
-          "Hover for details · Click for documentation · Expand for actions",
-        )
-      }}</span>
-    </div>
 
     <div class="guide-workspace">
       <div class="guide-window" @mouseleave="cancelPreview">
-        <div class="guide-window-top">
-          <nav
-            class="guide-window-tabs"
-            :aria-label="text('工具窗口', 'Tool windows')"
-          >
-            <GuideAction
-              v-for="(id, i) in guideLayout.windowTabs"
-              :key="id"
-              :feature="byId[id]"
-              :lang="lang"
-              :caption="windowCaptions[i]"
-              :icon="i === 0 ? 'runWithCoverage' : ''"
-              :class="{ 'request-tab': i === 0 }"
-              @preview="preview"
-            />
-          </nav>
-          <div class="guide-title-actions">
-            <GuideAction
-              v-for="id in guideLayout.titleActions"
-              :key="id"
-              :feature="byId[id]"
-              :lang="lang"
-              @preview="preview"
-            />
-          </div>
-        </div>
-
-        <nav
-          class="guide-toolbar"
-          :aria-label="text('请求工具栏', 'Request toolbar')"
+        <GuideTabs
+          :model-value="activeWindow"
+          :items="windowTabs"
+          :label="text('工具窗口', 'Tool windows')"
+          window-tabs
+          @update:model-value="selectWindow"
+          @preview="previewWindow"
         >
-          <div
-            v-for="(group, groupIndex) in guideLayout.toolbarGroups"
-            :key="groupIndex"
-            class="guide-toolbar-group"
-          >
-            <div v-for="ids in group" :key="ids[0]" class="guide-split-action">
-              <GuideAction
-                :feature="byId[ids[0]]"
+          <template #tab="{ item }">
+            <img
+              :src="withBase(`/img/ui-guide/${item.icon}.svg`)"
+              width="22"
+              height="22"
+              alt=""
+              no-view
+            />
+            {{ item.label }}
+          </template>
+          <template #actions>
+            <div class="guide-title-actions">
+              <GuideSplitAction
+                v-for="id in guideLayout.titleActions"
+                :key="id"
+                :features="
+                  id === 'help'
+                    ? guideLayout.helpActions.map((key) => byId[key])
+                    : [byId[id]]
+                "
                 :lang="lang"
-                :active="selected.id === ids[0]"
+                :active="selected.id"
                 @preview="preview"
               />
-              <details
-                v-if="ids.length > 1"
-                class="guide-dropdown"
-                name="guide-toolbar-menu"
-                @keydown.esc.prevent="$event.currentTarget.open = false"
-              >
-                <summary
-                  :aria-label="`${byId[ids[0]].label[index]} · ${text('更多操作', 'More actions')}`"
-                >
-                  <span class="guide-chevron" />
-                </summary>
-                <div class="guide-dropdown-panel">
-                  <GuideAction
-                    v-for="id in ids"
-                    :key="id"
-                    :feature="byId[id]"
-                    :lang="lang"
-                    :caption="byId[id].label[index]"
-                    @preview="preview"
-                  />
-                </div>
-              </details>
             </div>
+          </template>
+
+          <div v-show="activeWindow === 'debug'" data-window-panel="debug">
+            <nav
+              class="guide-toolbar"
+              :aria-label="text('请求工具栏', 'Request toolbar')"
+            >
+              <div
+                v-for="(group, groupIndex) in guideLayout.toolbarGroups"
+                :key="groupIndex"
+                class="guide-toolbar-group"
+              >
+                <GuideSplitAction
+                  v-for="ids in group"
+                  :key="ids[0]"
+                  :features="ids.map((id) => byId[id])"
+                  :lang="lang"
+                  :active="selected.id"
+                  @preview="preview"
+                />
+              </div>
+            </nav>
+
+            <div class="guide-env-row">
+              <a
+                :href="href(byId.domain)"
+                class="guide-select"
+                @mouseenter="preview(byId.domain, $event)"
+                @focus="preview(byId.domain, $event)"
+                ><span class="guide-env-letter">P</span
+                ><span>fast-request-demo</span><span class="guide-chevron"
+              /></a>
+              <a
+                :href="href(byId.environment)"
+                class="guide-select"
+                @mouseenter="preview(byId.environment, $event)"
+                @focus="preview(byId.environment, $event)"
+                ><span class="guide-env-letter">E</span><span>local</span
+                ><span class="guide-chevron"
+              /></a>
+            </div>
+            <a
+              class="guide-url"
+              :href="href(byId.debug)"
+              @mouseenter="preview(byId.debug, $event)"
+              @focus="preview(byId.debug, $event)"
+              ><span>GET</span><code>http://localhost:8080/api/users</code></a
+            >
+
+            <RequestPanels :lang="lang" @preview="preview" />
           </div>
-        </nav>
-
-        <div class="guide-env-row">
-          <a
-            :href="href(byId.domain)"
-            class="guide-select"
-            @mouseenter="preview(byId.domain, $event)"
-            @focus="preview(byId.domain, $event)"
-            ><span class="guide-env-letter">P</span
-            ><span>fast-request-demo</span><span class="guide-chevron"
-          /></a>
-          <a
-            :href="href(byId.environment)"
-            class="guide-select"
-            @mouseenter="preview(byId.environment, $event)"
-            @focus="preview(byId.environment, $event)"
-            ><span class="guide-env-letter">E</span><span>local</span
-            ><span class="guide-chevron"
-          /></a>
-        </div>
-        <a
-          class="guide-url"
-          :href="href(byId.debug)"
-          @mouseenter="preview(byId.debug, $event)"
-          @focus="preview(byId.debug, $event)"
-          ><span>GET</span><code>http://localhost:8080/api/users</code></a
-        >
-
-        <nav
-          class="guide-param-tabs"
-          :aria-label="
-            text('参数与响应文档', 'Parameters and response documentation')
-          "
-        >
-          <a
-            class="is-current"
-            :href="href(byId.headers)"
-            @mouseenter="preview(byId.headers, $event)"
-            @focus="preview(byId.headers, $event)"
-            >Headers</a
-          >
-          <a
-            :href="href(byId.debug)"
-            @mouseenter="preview(byId.debug, $event)"
-            @focus="preview(byId.debug, $event)"
-            >Path Param</a
-          >
-          <a
-            :href="href(byId.debug)"
-            @mouseenter="preview(byId.debug, $event)"
-            @focus="preview(byId.debug, $event)"
-            >URL Param</a
-          >
-          <a
-            :href="href(byId.debug)"
-            @mouseenter="preview(byId.debug, $event)"
-            @focus="preview(byId.debug, $event)"
-            >Body</a
-          >
-          <a
-            class="guide-script-tab"
-            :href="href(byId.script)"
-            @mouseenter="preview(byId.script, $event)"
-            @focus="preview(byId.script, $event)"
-            >Script</a
-          >
-          <a
-            class="guide-response-tab"
-            :href="href(byId.debug)"
-            @mouseenter="preview(byId.debug, $event)"
-            @focus="preview(byId.debug, $event)"
-            >&gt; Response</a
-          >
-          <a
-            class="guide-console-tab"
-            :href="href(byId.debug)"
-            @mouseenter="preview(byId.debug, $event)"
-            @focus="preview(byId.debug, $event)"
-            >Console</a
-          >
-        </nav>
-
-        <div class="guide-parameter-tools">
-          <GuideAction
-            v-for="id in guideLayout.parameterActions"
-            :key="id"
-            :feature="byId[id]"
+          <ApisPanel
+            v-show="activeWindow === 'apis'"
             :lang="lang"
             @preview="preview"
           />
-          <span class="guide-tools-divider" />
-          <GuideAction
-            :feature="byId.environment"
+          <NavPanel
+            v-show="activeWindow === 'nav'"
             :lang="lang"
             @preview="preview"
           />
-          <GuideAction
-            :feature="byId.function"
+          <RunMethodPanel
+            v-show="activeWindow === 'run'"
             :lang="lang"
             @preview="preview"
           />
-        </div>
-        <div class="guide-table-scroll">
-          <table class="guide-param-table">
-            <thead>
-              <tr>
-                <th aria-label="Enabled">✓</th>
-                <th>Header Name</th>
-                <th>Header Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>✓</td>
-                <td>Content-Type</td>
-                <td>application/json</td>
-              </tr>
-              <tr>
-                <td>✓</td>
-                <td>Accept</td>
-                <td>application/json</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <MethodsPanel
+            v-show="activeWindow === 'methods'"
+            :lang="lang"
+            @preview="preview"
+          />
+        </GuideTabs>
         <div class="guide-window-footer">
           <span>Fast Request Pro</span
           ><span>{{
@@ -324,7 +253,7 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
         </div>
         <h2>{{ selected.label[index] }}</h2>
         <p>{{ selected.description[index] }}</p>
-        <a class="guide-read-doc" :href="href(selected)">{{
+        <a v-if="selected.doc" class="guide-read-doc" :href="href(selected)">{{
           text("阅读功能文档", "Read documentation")
         }}</a>
       </aside>
@@ -332,85 +261,101 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
 
     <section class="guide-find" aria-labelledby="guide-find-title">
       <div class="guide-find-heading">
-        <div>
-          <h2 id="guide-find-title">
-            {{ text("功能文档", "Feature documentation") }}
-          </h2>
-          <p>
-            {{
-              text(
-                "按名称筛选功能文档。",
-                "Filter feature documentation by name.",
-              )
-            }}
-          </p>
-        </div>
+        <h2 id="guide-find-title">
+          {{ text("功能文档", "Feature documentation") }}
+        </h2>
         <div class="guide-search">
-          <label for="guide-feature-search">{{
-            text("搜索功能", "Search features")
-          }}</label
-          ><input
+          <input
             id="guide-feature-search"
             v-model="query"
             type="search"
+            :aria-label="text('搜索功能', 'Search features')"
             :placeholder="
               text('搜索功能，如 AI、保存、cURL…', 'Search AI, save, cURL…')
             "
           />
         </div>
       </div>
-      <p class="guide-result-count" role="status">
-        {{
-          query.trim()
-            ? text(
-                `找到 ${results.length} 项功能`,
-                `${results.length} features found`,
-              )
-            : text("常用功能", "COMMON FEATURES")
-        }}
-      </p>
-      <div v-if="results.length" class="guide-feature-grid">
-        <a
-          v-for="item in results"
-          :key="item.id"
-          class="guide-feature-card"
-          :href="href(item)"
+      <div class="guide-find-toolbar">
+        <p class="guide-result-count" role="status">
+          {{
+            query.trim()
+              ? text(
+                  `找到 ${resultCount} 项功能`,
+                  `${resultCount} features found`,
+                )
+              : text(
+                  `共 ${resultCount} 项功能，${groups.length} 个分类`,
+                  `${resultCount} features in ${groups.length} categories`,
+                )
+          }}
+        </p>
+        <div class="guide-group-actions">
+          <button
+            type="button"
+            :disabled="!groups.length || allExpanded"
+            @click="setAllGroupsOpen(true)"
+          >
+            {{ text("全部展开", "Expand all") }}
+          </button>
+          <button
+            type="button"
+            :disabled="!groups.length || allCollapsed"
+            @click="setAllGroupsOpen(false)"
+          >
+            {{ text("全部折叠", "Collapse all") }}
+          </button>
+        </div>
+      </div>
+      <div v-if="groups.length" class="guide-feature-groups">
+        <details
+          v-for="group in groups"
+          :key="group.id"
+          class="guide-feature-group"
+          :open="!collapsedGroups.has(group.id)"
+          :aria-labelledby="`guide-category-${group.id}`"
         >
-          <img
-            :src="withBase(`/img/ui-guide/${item.icon}.svg`)"
-            width="24"
-            height="24"
-            alt=""
-            no-view
-          />
-          <div>
-            <h3>{{ item.label[index] }}</h3>
-            <p>{{ item.description[index] }}</p>
+          <summary
+            class="guide-group-summary"
+            @click.prevent="
+              setGroupOpen(group.id, collapsedGroups.has(group.id))
+            "
+          >
+            <span class="guide-group-chevron" aria-hidden="true" />
+            <h3 :id="`guide-category-${group.id}`" class="guide-group-heading">
+              {{ group.label[index] }} <span>{{ group.items.length }}</span>
+            </h3>
+          </summary>
+          <div class="guide-feature-grid">
+            <a
+              v-for="item in group.items"
+              :key="item.id"
+              class="guide-feature-card"
+              :href="href(item)"
+            >
+              <img
+                :src="withBase(`/img/ui-guide/${item.icon}.svg`)"
+                width="24"
+                height="24"
+                alt=""
+                no-view
+              />
+              <div>
+                <h4>{{ item.label[index] }}</h4>
+                <p>{{ item.description[index] }}</p>
+              </div>
+            </a>
           </div>
-        </a>
+        </details>
       </div>
       <p v-else class="guide-no-results">
         {{ text("未找到匹配的功能。", "No matching features.") }}
       </p>
-      <button
-        v-if="!query.trim()"
-        type="button"
-        class="guide-show-all"
-        :aria-expanded="showAll"
-        @click="showAll = !showAll"
-      >
-        {{
-          showAll
-            ? text("收起功能列表", "Show common features")
-            : text(
-                `查看全部 ${guideFeatures.length} 项功能`,
-                `View all ${guideFeatures.length} features`,
-              )
-        }}
-      </button>
     </section>
   </section>
 </template>
+
+<style src="./ui-guide/window-panels.css" />
 
 <style>
 .plugin-guide-page {
@@ -436,26 +381,24 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
 .plugin-ui-guide * {
   box-sizing: border-box;
 }
-.plugin-ui-guide a {
-  text-decoration: none;
+.plugin-ui-guide :deep(a) {
+  text-decoration: none !important;
 }
 .guide-heading {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
-.guide-eyebrow {
-  margin: 0 0 1rem;
-  color: var(--vp-c-text-mute, #a0a9bc);
-  font-size: 0.75rem;
-  font-weight: 650;
-  letter-spacing: 0.12em;
+.guide-heading > div {
+  min-width: 0;
 }
-.guide-eyebrow span {
-  margin-inline: 0.6rem;
-  color: #7285ac;
+.guide-heading-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
 }
 .guide-heading h1 {
   margin: 0;
@@ -466,30 +409,40 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
 }
 .guide-intro {
   margin: 0.9rem 0 0;
-  color: var(--vp-c-text-mute, #a0a9bc);
+  color: #fff;
+  font-size: 0.95rem;
 }
 .guide-overview {
   flex-shrink: 0;
   padding: 0.6rem 1rem;
-  border: 1px solid var(--vp-c-divider, #3b4355);
+  border: 2px solid rgba(255, 255, 255, 0.55);
   border-radius: 8px;
-  color: var(--vp-c-text, #dfe1e5);
+  color: #fff;
   font-size: 0.875rem;
 }
 .guide-overview:hover {
-  border-color: #6d8fe3;
+  border-color: #fff;
 }
-.guide-canvas-heading {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin: 0 0 0.8rem;
-  color: var(--vp-c-text-mute, #a0a9bc);
-  font-size: 0.8rem;
+.guide-interaction-hint {
+  margin: 0.5rem 0 0;
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: left;
 }
-.guide-canvas-heading > :first-child {
-  font-weight: 650;
-  letter-spacing: 0.1em;
+.guide-intro::before,
+.guide-interaction-hint::before {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  content: "";
+}
+.guide-intro::before {
+  background: #6d8fe3;
+}
+.guide-interaction-hint::before {
+  background: #ef4b50;
 }
 .guide-workspace {
   display: grid;
@@ -504,34 +457,9 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   background: #2b2d30;
   box-shadow: 0 14px 45px #0002;
 }
-.guide-window-top {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #1e1f22;
-  background: #25262a;
-  border-radius: 10px 10px 0 0;
-}
-.guide-window-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px;
-  padding: 5px 5px 0;
-}
-.guide-window-tabs :deep(.guide-action) {
-  min-height: 48px;
-  padding-inline: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  font-weight: 550;
-}
-.guide-window-tabs :deep(.request-tab) {
-  border-bottom: 3px solid #548af7;
-  background: #32353b;
-}
 .guide-title-actions {
   display: flex;
+  position: relative;
   padding: 4px 7px;
 }
 .guide-toolbar {
@@ -542,6 +470,15 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   padding: 8px 5px;
   border-bottom: 1px solid #1e1f22;
 }
+.guide-toolbar :deep(.guide-action) {
+  min-width: 30px;
+  min-height: 32px;
+  padding: 5px;
+}
+.guide-toolbar :deep(.guide-action img) {
+  width: 18px;
+  height: 18px;
+}
 .guide-toolbar-group {
   display: flex;
   flex-wrap: wrap;
@@ -551,62 +488,6 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
 }
 .guide-toolbar-group:last-child {
   border-right: 0;
-}
-.guide-split-action {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.guide-dropdown {
-  position: relative;
-}
-.guide-dropdown summary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 38px;
-  border-radius: 4px;
-  list-style: none;
-  cursor: pointer;
-}
-.guide-dropdown summary::-webkit-details-marker {
-  display: none;
-}
-.guide-dropdown summary:hover,
-.guide-dropdown[open] summary {
-  background: #414652;
-}
-.guide-dropdown summary:focus-visible {
-  outline: 2px solid #88aaff;
-  outline-offset: 1px;
-}
-.guide-chevron {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-right: 1.5px solid #b3b9c6;
-  border-bottom: 1.5px solid #b3b9c6;
-  transform: rotate(45deg) translateY(-2px);
-}
-.guide-dropdown-panel {
-  display: grid;
-  position: absolute;
-  top: calc(100% + 5px);
-  right: 0;
-  z-index: 10;
-  width: max-content;
-  min-width: 190px;
-  max-width: 280px;
-  padding: 5px;
-  border: 1px solid #5a6272;
-  border-radius: 7px;
-  background: #30343b;
-  box-shadow: 0 10px 32px #0006;
-}
-.guide-dropdown-panel :deep(.guide-action) {
-  width: 100%;
-  white-space: normal;
 }
 .guide-env-row {
   display: grid;
@@ -632,8 +513,14 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   text-overflow: ellipsis;
 }
 .guide-select .guide-chevron {
+  display: inline-block;
   flex-shrink: 0;
+  width: 7px;
+  height: 7px;
   margin-left: auto;
+  border-right: 1.5px solid #b3b9c6;
+  border-bottom: 1.5px solid #b3b9c6;
+  transform: rotate(45deg) translateY(-2px);
 }
 .guide-env-letter {
   display: grid;
@@ -667,88 +554,6 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   color: #cbd0dc;
   padding: 0;
   font-size: 0.875rem;
-}
-.guide-param-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;
-  padding: 0 7px;
-  border-bottom: 1px solid #1e1f22;
-}
-.guide-param-tabs a {
-  display: flex;
-  align-items: center;
-  min-height: 49px;
-  padding: 10px 12px;
-  border-bottom: 3px solid transparent;
-  color: #dfe1e5;
-  font-size: 0.875rem;
-}
-.guide-param-tabs .is-current {
-  border-bottom-color: #548af7;
-}
-.guide-param-tabs .guide-script-tab {
-  color: #e5a778;
-}
-.guide-param-tabs .guide-response-tab {
-  color: #57cba2;
-}
-.guide-param-tabs .guide-console-tab {
-  color: #ed8e99;
-}
-.guide-param-tabs a:hover {
-  background: #3a4354;
-}
-.guide-parameter-tools {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 3px;
-  padding: 5px 10px;
-  border-bottom: 1px solid #1e1f22;
-}
-.guide-tools-divider {
-  height: 22px;
-  width: 1px;
-  background: #51545c;
-  margin-inline: 5px;
-}
-.guide-table-scroll {
-  overflow-x: auto;
-  min-height: 160px;
-}
-.guide-param-table {
-  display: table;
-  width: 100%;
-  margin: 0;
-  border-collapse: collapse;
-  background: #2b2d30;
-  color: #bec4d0;
-  font-size: 0.875rem;
-  white-space: nowrap;
-}
-.guide-param-table th,
-.guide-param-table td {
-  padding: 10px 13px;
-  border: 0;
-  border-right: 1px solid #3c3e44;
-  border-bottom: 1px solid #3c3e44;
-  background: #2b2d30;
-  font-weight: 400;
-  text-align: left;
-}
-.guide-param-table th {
-  color: #e0e2e8;
-  background: #303237;
-}
-.guide-param-table td:first-child,
-.guide-param-table th:first-child {
-  width: 38px;
-  text-align: center;
-  color: #86a9f0;
-}
-.guide-param-table td:nth-child(2) {
-  color: #ccaf88;
 }
 .guide-window-footer {
   display: flex;
@@ -794,7 +599,7 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   padding: 4px 9px;
   border: 1px solid #52627e;
   border-radius: 7px;
-  color: #c2d0eb;
+  color: #fff;
   background: #ffffff05;
   font: inherit;
   font-size: 0.8125rem;
@@ -819,13 +624,13 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   margin: 18px 0 10px;
   padding: 0;
   border: 0;
-  color: #f1f4fa;
+  color: #fff;
   font-size: 1.25rem;
   line-height: 1.45;
 }
 .guide-inspector > p {
   margin: 0 0 22px;
-  color: #b9c5dc;
+  color: #fff;
   font-size: 0.9375rem;
 }
 .guide-read-doc {
@@ -859,20 +664,9 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   color: var(--vp-c-text, #e4e8f1);
   font-size: 1.4rem;
 }
-.guide-find-heading p {
-  margin: 0.35rem 0 0;
-  color: var(--vp-c-text-mute, #a0a9bc);
-  font-size: 0.9375rem;
-}
 .guide-search {
   width: 320px;
   max-width: 100%;
-}
-.guide-search label {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--vp-c-text-mute, #a0a9bc);
-  font-size: 0.8125rem;
 }
 .guide-search input {
   box-sizing: border-box;
@@ -885,16 +679,103 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   font: inherit;
   font-size: 0.875rem;
 }
-.guide-result-count {
+.guide-find-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
   margin: 1.5rem 0 0.65rem;
+}
+.guide-result-count {
+  margin: 0;
   color: var(--vp-c-text-mute, #a0a9bc);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
+}
+.guide-group-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.guide-group-actions button {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--vp-c-divider, #454c60);
+  border-radius: 6px;
+  color: var(--vp-c-text, #e4e8f1);
+  background: transparent;
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+.guide-group-actions button:hover:not(:disabled) {
+  border-color: #8ba9ed;
+  background: #30394c;
+}
+.guide-group-actions button:disabled {
+  opacity: 0.45;
+  cursor: default;
 }
 .guide-feature-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
+}
+.guide-feature-group + .guide-feature-group {
+  margin-top: 28px;
+}
+.guide-group-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--vp-c-divider, #454c60);
+  list-style: none;
+  cursor: pointer;
+}
+.guide-group-summary::-webkit-details-marker {
+  display: none;
+}
+.guide-feature-group[open] > .guide-group-summary {
+  margin-bottom: 14px;
+}
+.guide-group-summary:hover {
+  color: var(--guide-accent);
+}
+.guide-group-summary:focus-visible {
+  outline: 2px solid #88aaff;
+  outline-offset: 3px;
+}
+.guide-group-chevron {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-left: 2px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  color: var(--guide-muted);
+  transform: rotate(-45deg);
+}
+.guide-feature-group[open] > .guide-group-summary .guide-group-chevron {
+  transform: rotate(45deg);
+}
+.guide-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--vp-c-text, #e4e8f1);
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+.guide-group-heading span {
+  padding: 1px 7px;
+  border: 1px solid var(--vp-c-divider, #454c60);
+  border-radius: 5px;
+  color: var(--vp-c-text-mute, #a0a9bc);
+  font-size: 0.75rem;
+  font-weight: 400;
 }
 .guide-feature-card {
   display: flex;
@@ -909,9 +790,9 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   flex-shrink: 0;
   margin-top: 3px;
 }
-.guide-feature-card h3 {
+.guide-feature-card h4 {
   margin: 0 0 6px;
-  color: #e4e8f1;
+  color: #fff;
   font-size: 0.9375rem;
   line-height: 1.5;
 }
@@ -924,18 +805,6 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
 .guide-feature-card:hover {
   border-color: #8ba9ed;
   background: #30394c;
-}
-.guide-show-all {
-  display: block;
-  margin: 1.5rem auto 0;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--vp-c-divider, #454c60);
-  border-radius: 6px;
-  color: var(--vp-c-text, #dfe1e5);
-  background: transparent;
-  font: inherit;
-  font-size: 0.875rem;
-  cursor: pointer;
 }
 .guide-no-results {
   padding: 2rem;
@@ -996,16 +865,6 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
   .guide-toolbar-group {
     position: relative;
   }
-  .guide-split-action,
-  .guide-dropdown {
-    position: static;
-  }
-  .guide-dropdown-panel {
-    top: 100%;
-    right: auto;
-    left: 0;
-    max-width: calc(100vw - 80px);
-  }
   .guide-heading,
   .guide-find-heading {
     flex-direction: column;
@@ -1013,29 +872,19 @@ const windowCaptions = ["Request", "APIs", "Nav", "RunMethod", "Methods"];
     gap: 1rem;
   }
   .guide-heading {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1rem;
   }
-  .guide-canvas-heading {
-    flex-direction: column;
-    gap: 0.25rem;
+  .guide-heading-actions {
+    align-items: flex-start;
   }
-  .guide-window-tabs :deep(.guide-action) {
-    gap: 5px;
-    padding-inline: 7px;
-    font-size: 0.8125rem;
-  }
-  .guide-window-tabs :deep(img) {
-    width: 18px;
-    height: 18px;
+  .guide-interaction-hint {
+    text-align: left;
   }
   .guide-title-actions {
     margin-left: auto;
   }
   .guide-env-row {
     grid-template-columns: 1fr;
-  }
-  .guide-param-tabs a {
-    padding-inline: 9px;
   }
   .guide-inspector {
     grid-template-columns: 48px 1fr;

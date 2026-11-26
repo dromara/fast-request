@@ -5,7 +5,7 @@ export const enSidebar = sidebar({
 
   "/en/guide/": [
     "introduce",
-    "ui-guide",
+    { text: "Interface guide", link: "/en/guide/features/README.md" },
     {
       text: "Getting started",
       icon: "leibie",
@@ -97,7 +97,7 @@ export const zhSidebar = sidebar({
 
   "/guide/": [
     "introduce",
-    "ui-guide",
+    { text: "界面导览", link: "/guide/features/README.md" },
     {
       text: "快速上手",
       icon: "leibie",

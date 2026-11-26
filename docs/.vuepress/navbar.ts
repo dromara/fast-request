@@ -9,10 +9,7 @@ export const enNavbar = navbar([
   {
     text: "Features",
     icon: "featuresNew",
-    children: [
-      { text: "Feature list", link: "/en/guide/features/README.md" },
-      { text: "Interface guide", link: "/en/guide/ui-guide" },
-    ],
+    link: "/en/guide/features/",
   },
   {
     text: "What's New",
@@ -60,10 +57,7 @@ export const zhNavbar = navbar([
   {
     text: "功能",
     icon: "featuresNew",
-    children: [
-      { text: "功能列表", link: "/guide/features/README.md" },
-      { text: "界面导览", link: "/guide/ui-guide" },
-    ],
+    link: "/guide/features/",
   },
   {
     text: "最新变化",

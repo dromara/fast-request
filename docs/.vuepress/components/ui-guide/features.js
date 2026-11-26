@@ -57,7 +57,7 @@ export const guideFeatures = [
   ),
   feature(
     "shortcuts",
-    "code",
+    "shortcuts",
     "getstarted/shortcut",
     ["快捷键", "Shortcuts"],
     [
@@ -67,7 +67,7 @@ export const guideFeatures = [
   ),
   feature(
     "settings",
-    "config",
+    "setting",
     "features/settingManager",
     ["管理配置", "Settings"],
     [
@@ -94,6 +94,30 @@ export const guideFeatures = [
       "打开使用文档，了解联系与反馈渠道。",
       "Open the documentation and find contact and feedback channels.",
     ],
+  ),
+  feature(
+    "releaseNotes",
+    "whatsnew",
+    "history",
+    ["更新记录", "Release notes"],
+    [
+      "查看各版本的功能与修复记录。",
+      "Read feature changes and fixes for each release.",
+    ],
+  ),
+  feature(
+    "faq",
+    "help",
+    "faq",
+    ["常见问题", "FAQ"],
+    ["查看插件使用中的常见问题与解答。", "Find answers to common plugin questions."],
+  ),
+  feature(
+    "updates",
+    "pluginUpdate",
+    "history",
+    ["检查更新", "Check for updates"],
+    ["查看插件版本和更新记录。", "View plugin versions and release notes."],
   ),
   feature(
     "toolbar",
@@ -209,10 +233,30 @@ export const guideFeatures = [
     "apifox",
     "apifox",
     "features/apifox",
-    ["Apifox 集成", "Apifox integration"],
+    ["同步 API 到 Apifox", "Sync API to Apifox"],
     [
-      "配置 Apifox 集成，同步 API 与环境。",
-      "Configure Apifox integration and synchronize APIs and environments.",
+      "将已保存的 API 同步到映射的 Apifox 项目。",
+      "Synchronize a saved API to the mapped Apifox project.",
+    ],
+  ),
+  feature(
+    "apifoxEnvironment",
+    "apifoxEnvironment",
+    "features/apifox",
+    ["同步 Apifox 环境", "Sync Apifox environments"],
+    [
+      "将项目环境的域名、变量和全局参数同步到 Apifox。",
+      "Synchronize project environment domains, variables and global parameters with Apifox.",
+    ],
+  ),
+  feature(
+    "apifoxSettings",
+    "syncConfig",
+    "features/apifox",
+    ["Apifox 同步配置", "Apifox sync settings"],
+    [
+      "配置 Apifox 项目映射，以及保存 API 后自动同步。",
+      "Configure Apifox project mappings and automatic synchronization after saving an API.",
     ],
   ),
   feature(
@@ -224,6 +268,23 @@ export const guideFeatures = [
       "配置 Postman 集成，同步 API 与环境。",
       "Configure Postman integration and synchronize APIs and environments.",
     ],
+  ),
+  feature(
+    "postmanEnvironment",
+    "pmSyncEnvironment",
+    "features/postmanSync",
+    ["同步 Postman 环境", "Sync Postman environments"],
+    [
+      "将环境配置同步到 Postman。",
+      "Synchronize environment settings with Postman.",
+    ],
+  ),
+  feature(
+    "postmanSettings",
+    "syncConfig",
+    "features/postmanSync",
+    ["Postman 同步设置", "Postman sync settings"],
+    ["配置 Postman 同步。", "Configure Postman synchronization."],
   ),
   feature(
     "group",
@@ -257,7 +318,7 @@ export const guideFeatures = [
   ),
   feature(
     "regenerate",
-    "retry",
+    "redo",
     "features/regenerate",
     ["重新生成请求", "Regenerate request"],
     [
@@ -294,7 +355,7 @@ export const guideFeatures = [
   ),
   feature(
     "copyCurl",
-    "curl",
+    "curl_new",
     "features/copyCurl",
     ["拷贝 cURL", "Copy cURL"],
     [
@@ -316,10 +377,30 @@ export const guideFeatures = [
     "export",
     "share",
     "features/shareApiDoc",
-    ["导出 API 文档", "Export API documentation"],
+    ["导出 Markdown 文档", "Export Markdown documentation"],
     [
-      "将 API 文档导出为 Markdown、HTML 等格式。",
-      "Export API documentation as Markdown, HTML and other formats.",
+      "将当前 API 文档导出为 Markdown 格式。",
+      "Export the current API documentation in Markdown format.",
+    ],
+  ),
+  feature(
+    "exportHtml",
+    "html",
+    "features/shareApiDoc",
+    ["导出 HTML 文档", "Export HTML documentation"],
+    [
+      "将当前 API 文档导出为 HTML 格式。",
+      "Export the current API documentation in HTML format.",
+    ],
+  ),
+  feature(
+    "exportWord",
+    "word",
+    "features/shareApiDoc",
+    ["导出 Word 文档", "Export Word documentation"],
+    [
+      "将当前 API 文档导出为 Word 文档。",
+      "Export the current API documentation as a Word document.",
     ],
   ),
   feature(
@@ -331,7 +412,7 @@ export const guideFeatures = [
   ),
   feature(
     "template",
-    "config",
+    "syncConfig",
     "features/markdownDocTemplateConfig",
     ["Markdown 模板", "Markdown template"],
     [
@@ -347,6 +428,16 @@ export const guideFeatures = [
     [
       "重新加载项目中的 Fast Request 配置。",
       "Reload the project's Fast Request configuration.",
+    ],
+  ),
+  feature(
+    "localMode",
+    "localMode",
+    "history#_2025-1-7",
+    ["本地模式", "Local mode"],
+    [
+      "设置项目的 .fastRequest 目录是否参与 Git 管理。",
+      "Control whether the project's .fastRequest directory is tracked by Git.",
     ],
   ),
   feature(
@@ -402,7 +493,7 @@ export const guideFeatures = [
   ),
   feature(
     "bulk",
-    "edit",
+    "bulkEdit",
     "features/bulkEdit",
     ["批量编辑", "Bulk edit"],
     ["以文本方式批量编辑 Headers。", "Edit multiple headers in text form."],
@@ -438,6 +529,16 @@ export const guideFeatures = [
     ],
   ),
   feature(
+    "aiRegenerate",
+    "openai",
+    "features/aiParameterOptimization",
+    ["全部重新生成参数", "Regenerate all parameters"],
+    [
+      "使用 AI 重新生成当前参数表中的全部参数值。",
+      "Use AI to regenerate all values in the current parameter table.",
+    ],
+  ),
+  feature(
     "function",
     "function",
     "features/function",
@@ -447,13 +548,145 @@ export const guideFeatures = [
       "Use functions in request parameters to generate dynamic values.",
     ],
   ),
+  feature(
+    "addHeader",
+    "add",
+    "features/quickAddHeader",
+    ["添加请求头", "Add header"],
+    ["为请求添加 Header。", "Add a header to a request."],
+  ),
+  feature(
+    "addEnvironment",
+    "addEnvironmentVariable",
+    "features/environment",
+    ["添加环境变量", "Add environment variable"],
+    ["将参数保存为环境变量。", "Save a parameter as an environment variable."],
+  ),
+  feature(
+    "autoDomain",
+    "fastRequest",
+    "features/autoDomain",
+    ["自动域名", "Auto domain"],
+    [
+      "根据模块名和项目配置自动创建、切换 API 域名。",
+      "Create and switch API domains using module names and project configuration.",
+    ],
+  ),
+  feature(
+    "apiDocSync",
+    "github",
+    "features/apiDocSync",
+    ["API 文档同步", "API document sync"],
+    [
+      "将 API 文档同步到 GitHub、Gitee 或 GitLab 仓库。",
+      "Synchronize API documentation to GitHub, Gitee or GitLab repositories.",
+    ],
+  ),
+  feature(
+    "makeIconMove",
+    "fastRequest",
+    "features/makeIconMove",
+    ["让图标动起来", "Make icon move"],
+    [
+      "设置插件图标的颜色与动画效果。",
+      "Configure the plugin icon color and animation.",
+    ],
+  ),
+  feature(
+    "eula",
+    "eula",
+    "eula",
+    ["最终用户许可协议", "End user license agreement"],
+    ["查看插件的 EULA 使用条款。", "Read the plugin EULA and terms of use."],
+  ),
+  feature(
+    "batchExportApiDoc",
+    "share",
+    "features/batchExportApiDoc",
+    ["批量导出 API 文档", "Batch export API documents"],
+    [
+      "选中文件夹，批量导出其中的 API 文档。",
+      "Select a folder to export its API documentation in a batch.",
+    ],
+  ),
+  feature(
+    "batchGenerateApi",
+    "apis",
+    "features/batchGenerateApi",
+    ["批量生成 API", "Batch API generation"],
+    [
+      "按 Controller 类或源码包批量生成并保存 API。",
+      "Generate and save APIs from a Controller class or source package.",
+    ],
+  ),
+  feature(
+    "swaggerDefaultValueParse",
+    "code",
+    "features/swaggerDefaultValueParse",
+    ["Swagger 默认值", "Swagger default values"],
+    [
+      "读取 Swagger 注解中的示例值与默认值，生成请求参数。",
+      "Generate request parameters from examples and defaults in Swagger annotations.",
+    ],
+  ),
+  feature(
+    "autoDescription",
+    "class",
+    "features/autoDescription",
+    ["API 自动生成注释", "Auto description"],
+    [
+      "从字段注释生成参数描述，并切换 Description 列的显示。",
+      "Generate parameter descriptions from field comments and toggle the Description column.",
+    ],
+  ),
+  feature(
+    "apiPreview",
+    "fastRequest",
+    "features/apiPreview",
+    ["API 一览表预览", "API list preview"],
+    [
+      "按路径关键字搜索 API，双击条目定位源码方法。",
+      "Search APIs by path keywords and double-click an entry to locate its source method.",
+    ],
+  ),
+  feature(
+    "apiCommentPreview",
+    "class",
+    "features/apiCommentPreview",
+    ["API 注释预览", "API comment preview"],
+    [
+      "配置并查看类与导航树中的 API 注释。",
+      "Configure and view API comments in classes and the navigation tree.",
+    ],
+  ),
+  feature(
+    "parseStrategy",
+    "ignored",
+    "features/parseStrategy",
+    ["字段解析", "Field parsing"],
+    [
+      "配置类型映射，通过注解、修饰符或字段名忽略字段生成。",
+      "Configure type mappings and exclude fields using annotations, modifiers or field names.",
+    ],
+  ),
+  feature(
+    "jsonGrammarCheck",
+    "json",
+    "features/jsonGrammarCheck",
+    ["JSON 语法检查", "JSON syntax check"],
+    [
+      "检查 JSON 语法错误，并格式化 JSON 内容。",
+      "Check JSON syntax errors and format JSON content.",
+    ],
+  ),
 ];
 
-// Split buttons follow the current Pro toolbar order. Hidden document-sync
-// actions and actions without their own documentation are intentionally omitted.
+// Include every configurable action in the current Pro toolbar, even when its
+// default configuration hides it. Source: CustomMainToolbarView / FastRequestToolWindow.
 export const guideLayout = {
   windowTabs: ["debug", "apis", "nav", "run", "methods"],
-  titleActions: ["shortcuts", "settings", "fullscreen", "help"],
+  titleActions: ["updates", "shortcuts", "settings", "fullscreen", "help"],
+  helpActions: ["help", "releaseNotes", "eula", "faq"],
   toolbarGroups: [
     [["toolbar"], ["domain"], ["global"], ["apis"], ["nav"]],
     [
@@ -462,8 +695,8 @@ export const guideLayout = {
       ["stop"],
       ["save", "saveGroup", "temporary"],
       ["document", "documentSettings"],
-      ["apifox"],
-      ["postman"],
+      ["apifox", "apifoxEnvironment", "apifoxSettings"],
+      ["postman", "postmanEnvironment", "postmanSettings"],
       ["group"],
       ["locate"],
       ["tabs"],
@@ -474,22 +707,123 @@ export const guideLayout = {
       ["curlImport"],
       ["copyUrl", "copyCurl"],
       ["history"],
-      ["export", "openApi", "template"],
+      ["export", "exportHtml", "exportWord", "openApi", "template"],
     ],
-    [["refresh"], ["report"], ["aiSettings"]],
+    [["refresh"], ["localMode"], ["report"], ["aiSettings"]],
   ],
-  parameterActions: ["headers", "presets", "commonHeaders", "bulk", "auth"],
-  quickLinks: [
-    "document",
-    "ai",
-    "debug",
-    "domain",
-    "script",
-    "curlImport",
-    "run",
-    "apis",
-  ],
+  parameterActions: ["commonHeaders", "presets", "bulk", "auth"],
+  parameterAiActions: ["ai", "aiRegenerate"],
 };
+
+export const guideCategories = [
+  {
+    id: "debugging",
+    label: ["请求调试", "Request debugging"],
+    features: ["debug", "download", "stop", "regenerate", "clear"],
+  },
+  {
+    id: "saving",
+    label: ["请求保存与复用", "Request saving and reuse"],
+    features: ["save", "saveGroup", "group", "temporary", "history"],
+  },
+  {
+    id: "parameters",
+    label: ["参数、脚本与 AI", "Parameters, scripts and AI"],
+    features: ["ai", "aiRegenerate", "function", "script", "aiSettings"],
+  },
+  {
+    id: "configuration",
+    label: ["环境与配置", "Environment and configuration"],
+    features: [
+      "domain",
+      "global",
+      "environment",
+      "addEnvironment",
+      "settings",
+      "refresh",
+      "localMode",
+    ],
+  },
+  {
+    id: "integrations",
+    label: ["导入与集成", "Import and integrations"],
+    features: [
+      "curlImport",
+      "copyCurl",
+      "copyUrl",
+      "apifox",
+      "apifoxEnvironment",
+      "apifoxSettings",
+      "postman",
+      "postmanEnvironment",
+      "postmanSettings",
+    ],
+  },
+  {
+    id: "documentation",
+    label: ["文档与分享", "Documentation and sharing"],
+    features: [
+      "document",
+      "documentSettings",
+      "export",
+      "exportHtml",
+      "exportWord",
+      "openApi",
+      "template",
+    ],
+  },
+  {
+    id: "headers",
+    label: ["请求头与认证", "Headers and authentication"],
+    features: [
+      "addHeader",
+      "headers",
+      "presets",
+      "commonHeaders",
+      "bulk",
+      "auth",
+    ],
+  },
+  {
+    id: "workspace",
+    label: ["工作区与辅助", "Workspace and utilities"],
+    features: [
+      "apis",
+      "nav",
+      "run",
+      "methods",
+      "search",
+      "locate",
+      "tabs",
+      "toolbar",
+      "fullscreen",
+      "report",
+      "help",
+      "shortcuts",
+      "updates",
+      "releaseNotes",
+      "faq",
+    ],
+  },
+  {
+    id: "additional",
+    label: ["其他功能", "Additional features"],
+    features: [
+      "autoDomain",
+      "apiDocSync",
+      "makeIconMove",
+      "eula",
+      "batchExportApiDoc",
+      "batchGenerateApi",
+      "swaggerDefaultValueParse",
+      "autoDescription",
+      "apiPreview",
+      "apiCommentPreview",
+      "parseStrategy",
+      "jsonGrammarCheck",
+    ],
+  },
+];
 
 export function getGuideHref(feature, lang = "zh") {
   const [path, anchor] = feature.doc.split("#");
@@ -508,4 +842,19 @@ export function searchGuideFeatures(query) {
       value.toLocaleLowerCase().includes(term),
     ),
   );
+}
+
+export function groupGuideFeatures(query = "") {
+  const matches = new Map(
+    searchGuideFeatures(query).map((item) => [item.id, item]),
+  );
+  return guideCategories
+    .map((category) => ({
+      id: category.id,
+      label: category.label,
+      items: category.features
+        .filter((id) => matches.has(id))
+        .map((id) => matches.get(id)),
+    }))
+    .filter((category) => category.items.length > 0);
 }
