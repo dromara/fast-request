@@ -1,0 +1,1 @@
+var e=`/img/2022.2.2/batchExportApiDoc.png`;export{e as t};

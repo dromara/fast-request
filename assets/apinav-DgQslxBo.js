@@ -1,0 +1,1 @@
+var e=`/img/apinav.gif`;export{e as t};

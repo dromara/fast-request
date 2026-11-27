@@ -1,0 +1,1 @@
+var e=`/img/apiManager.png`;export{e as t};

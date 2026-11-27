@@ -1,0 +1,1 @@
+var e=`/img/basicAuth.png`;export{e as t};

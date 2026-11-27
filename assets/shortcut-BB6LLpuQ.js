@@ -1,0 +1,1 @@
+var e=`/img/shortcut.png`;export{e as t};

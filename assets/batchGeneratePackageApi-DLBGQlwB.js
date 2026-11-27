@@ -1,0 +1,1 @@
+var e=`/img/2026.1.1/batchGeneratePackageApi.png`;export{e as t};

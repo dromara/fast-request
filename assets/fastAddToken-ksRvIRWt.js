@@ -1,0 +1,1 @@
+var e=`/img/fastAddToken.gif`;export{e as t};

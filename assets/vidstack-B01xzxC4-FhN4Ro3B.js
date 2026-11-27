@@ -1,0 +1,1 @@
+var e={setAuto:Symbol(0),enableAuto:Symbol(0)};export{e as t};

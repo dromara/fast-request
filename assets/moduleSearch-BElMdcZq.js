@@ -1,0 +1,1 @@
+var e=`/img/moduleSearch.gif`;export{e as t};

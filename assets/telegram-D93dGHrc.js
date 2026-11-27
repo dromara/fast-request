@@ -1,0 +1,1 @@
+var e=`/img/telegram.png`;export{e as t};

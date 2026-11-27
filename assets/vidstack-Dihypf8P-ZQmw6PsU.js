@@ -1,0 +1,1 @@
+function e(e,t=2){return Number(e.toFixed(t))}function t(e){return String(e).split(`.`)[1]?.length??0}function n(e,t,n){return Math.max(e,Math.min(n,t))}export{t as n,e as r,n as t};
