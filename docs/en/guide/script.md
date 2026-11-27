@@ -11,7 +11,7 @@ The groovy syntax is almost identical to Java.
 
 ## Script flow chart
 
-![](/img/script_en.svg)
+<ScriptPipeline lang="en" />
 
 ## Pre-request script
 The pre-request script is executed before the request is sent. You can process the request parameters here, such as encryption, signing, dynamic modification of headers, etc.

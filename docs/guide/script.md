@@ -12,7 +12,7 @@ headerDepth: 4
 
 ## 脚本流程图
 
-![](/img/script.svg)
+<ScriptPipeline />
 
 ## 前置脚本
 在执行请求之前执行,可以在这里对请求的参数进行处理,例如加密、签名、动态修改 header 等等。
