@@ -16,11 +16,13 @@ let lastMove = 0,
 let pressed = false,
   hovering = false;
 const timers = new Set<ReturnType<typeof setTimeout>>();
+const frames = new Map<HTMLIFrameElement, () => void>();
+let frameObserver: MutationObserver | undefined;
 
 function nativeTarget(target: EventTarget | null) {
   return (
-    target instanceof Element &&
-    !!target.closest(
+    !!target && "closest" in target &&
+    !!(target as Element).closest(
       'input, textarea, select, [contenteditable]:not([contenteditable="false"]), [data-cursor="native"]',
     )
   );
@@ -53,20 +55,21 @@ function wake() {
   if (!frame) frame = requestAnimationFrame(animate);
 }
 
-function move(event: PointerEvent) {
+function move(event: PointerEvent, offsetX = 0, offsetY = 0) {
   if (event.pointerType !== "mouse") return;
-  const dx = event.clientX - x,
-    dy = event.clientY - y;
+  const nextX = event.clientX + offsetX, nextY = event.clientY + offsetY;
+  const dx = nextX - x,
+    dy = nextY - y;
   if (visible.value && Math.hypot(dx, dy) > 1) {
     target = (Math.atan2(dy, dx) * 180) / Math.PI + 90;
     lastMove = performance.now();
   }
-  x = event.clientX;
-  y = event.clientY;
+  x = nextX;
+  y = nextY;
   visible.value = !nativeTarget(event.target);
   hovering =
-    event.target instanceof Element &&
-    !!event.target.closest('a, button, [role="button"]');
+    !!event.target && "closest" in event.target &&
+    !!(event.target as Element).closest('a, button, [role="button"]');
   document.documentElement.classList.toggle(
     "gyroscope-cursor-active",
     visible.value,
@@ -74,12 +77,12 @@ function move(event: PointerEvent) {
   wake();
 }
 
-function down(event: PointerEvent) {
+function down(event: PointerEvent, offsetX = 0, offsetY = 0) {
   if (!visible.value || event.pointerType !== "mouse") return;
   pressed = true;
   wake();
   const id = nextId++;
-  ripples.value.push({ id, x: event.clientX, y: event.clientY });
+  ripples.value.push({ id, x: event.clientX + offsetX, y: event.clientY + offsetY });
   const timer = setTimeout(() => {
     ripples.value = ripples.value.filter((ripple) => ripple.id !== id);
     timers.delete(timer);
@@ -95,20 +98,83 @@ function leave() {
   document.documentElement.classList.remove("gyroscope-cursor-active");
 }
 
+function watchFrame(iframe: HTMLIFrameElement) {
+  let disposeDocument = () => {};
+  function connect() {
+    disposeDocument();
+    try {
+      const doc = iframe.contentDocument;
+      if (!doc?.head) return;
+      const style = doc.createElement("style");
+      style.textContent = "html.gyroscope-frame-active, html.gyroscope-frame-active * { cursor: none !important; }";
+      doc.head.appendChild(style);
+      const onMove = (event: PointerEvent) => {
+        const rect = iframe.getBoundingClientRect();
+        move(event, rect.left + iframe.clientLeft, rect.top + iframe.clientTop);
+        doc.documentElement.classList.toggle("gyroscope-frame-active", visible.value);
+      };
+      const onDown = (event: PointerEvent) => {
+        onMove(event);
+        const rect = iframe.getBoundingClientRect();
+        down(event, rect.left + iframe.clientLeft, rect.top + iframe.clientTop);
+      };
+      doc.addEventListener("pointermove", onMove);
+      doc.addEventListener("pointerdown", onDown);
+      doc.addEventListener("pointerup", up);
+      disposeDocument = () => {
+        doc.removeEventListener("pointermove", onMove);
+        doc.removeEventListener("pointerdown", onDown);
+        doc.removeEventListener("pointerup", up);
+        doc.documentElement.classList.remove("gyroscope-frame-active");
+        style.remove();
+      };
+    } catch {
+      // Cross-origin frames retain their native cursor.
+    }
+  }
+  iframe.addEventListener("load", connect);
+  connect();
+  frames.set(iframe, () => {
+    iframe.removeEventListener("load", connect);
+    disposeDocument();
+  });
+}
+
+function syncFrames() {
+  for (const [iframe, dispose] of frames) {
+    if (!iframe.isConnected) { dispose(); frames.delete(iframe); }
+  }
+  document.querySelectorAll<HTMLIFrameElement>("iframe[data-gyroscope-frame]").forEach((iframe) => {
+    if (!frames.has(iframe)) watchFrame(iframe);
+  });
+}
+
+function enterOtherFrame(event: PointerEvent) {
+  if (event.target instanceof HTMLIFrameElement && !event.target.hasAttribute("data-gyroscope-frame")) leave();
+}
+
 onMounted(() => {
   window.addEventListener("pointermove", move);
+  window.addEventListener("pointerover", enterOtherFrame);
   window.addEventListener("pointerdown", down);
   window.addEventListener("pointerup", up);
   window.addEventListener("blur", leave);
   document.documentElement.addEventListener("pointerleave", leave);
+  syncFrames();
+  frameObserver = new MutationObserver(syncFrames);
+  frameObserver.observe(document.body, { childList: true, subtree: true });
 });
 onUnmounted(() => {
   window.removeEventListener("pointermove", move);
+  window.removeEventListener("pointerover", enterOtherFrame);
   window.removeEventListener("pointerdown", down);
   window.removeEventListener("pointerup", up);
   window.removeEventListener("blur", leave);
   document.documentElement.removeEventListener("pointerleave", leave);
   document.documentElement.classList.remove("gyroscope-cursor-active");
+  frameObserver?.disconnect();
+  frames.forEach((dispose) => dispose());
+  frames.clear();
   cancelAnimationFrame(frame);
   timers.forEach(clearTimeout);
 });
@@ -138,6 +204,9 @@ onUnmounted(() => {
 html.gyroscope-cursor-active,
 html.gyroscope-cursor-active * {
   cursor: none !important;
+}
+html.gyroscope-cursor-active iframe:not([data-gyroscope-frame]) {
+  cursor: auto !important;
 }
 </style>
 <style scoped>

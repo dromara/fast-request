@@ -69,6 +69,7 @@ onUnmounted(() => {
   <div class="home-advantage-frame">
     <iframe
       ref="frame"
+      data-gyroscope-frame
       :title="title"
       :src="src"
       width="100%"
