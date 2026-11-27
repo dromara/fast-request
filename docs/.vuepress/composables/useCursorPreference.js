@@ -5,26 +5,33 @@ export const cursorPreferenceKey = Symbol("cursor-preference");
 const storageKey = "fast-request:mouse-effects";
 
 export function createCursorPreference() {
-  const enabled = ref(true);
+  const effect = ref("gyroscope");
 
   function restore() {
     try {
-      enabled.value = window.localStorage.getItem(storageKey) !== "false";
+      const saved = window.localStorage.getItem(storageKey);
+      effect.value =
+        saved === "false" || saved === "off"
+          ? "off"
+          : saved === "glow"
+            ? "glow"
+            : "gyroscope";
     } catch {
       // Storage can be unavailable in private or restricted browsing contexts.
     }
   }
 
-  function toggle() {
-    enabled.value = !enabled.value;
+  function setEffect(value) {
+    if (!["gyroscope", "glow", "off"].includes(value)) return;
+    effect.value = value;
     try {
-      window.localStorage.setItem(storageKey, String(enabled.value));
+      window.localStorage.setItem(storageKey, value);
     } catch {
       // The switch still works for this visit when preferences cannot be saved.
     }
   }
 
-  return { enabled: readonly(enabled), restore, toggle };
+  return { effect: readonly(effect), restore, setEffect };
 }
 
 export function useCursorPreference() {

@@ -116,6 +116,22 @@ test(
         name: "鼠标特效",
         exact: true,
       });
+      const labels = {
+        gyroscope: "旋转光标",
+        glow: "烟雾轨迹",
+        off: "关闭特效",
+      };
+      const selectEffect = async (value) => {
+        await toggle.click();
+        await page
+          .getByRole("button", { name: labels[value], exact: true })
+          .click();
+      };
+      const selectedEffect = () =>
+        page.evaluate(
+          () =>
+            localStorage.getItem("fast-request:mouse-effects") || "gyroscope",
+        );
       const frames = () => page.evaluate(() => window.cursorStats.frames);
       const waitForRest = async () => {
         await page.waitForFunction(
@@ -132,6 +148,47 @@ test(
         await page.waitForTimeout(400);
         assert.equal(await frames(), before);
       };
+      assert.equal(await selectedEffect(), "gyroscope");
+      await page.mouse.move(300, 400);
+      await page.mouse.move(500, 400, { steps: 5 });
+      await page.locator(".gyroscope-cursor.is-visible").waitFor();
+      await page.mouse.move(500, 30);
+      assert.equal(
+        await page.evaluate(() => {
+          const cursor = document
+            .querySelector(".gyroscope-cursor svg")
+            .getBoundingClientRect();
+          return (
+            document
+              .elementFromPoint(
+                cursor.left + cursor.width / 2,
+                cursor.top + cursor.height / 2,
+              )
+              ?.closest(".site-cursor") !== null
+          );
+        }),
+        false,
+      ); // The overlay must never intercept pointer events.
+      assert.ok(
+        await page
+          .locator(".site-cursor")
+          .evaluate(
+            (el) =>
+              Number(getComputedStyle(el).zIndex) >
+              Number(
+                getComputedStyle(document.querySelector(".vp-navbar")).zIndex ||
+                  0,
+              ),
+          ),
+      );
+      assert.equal(
+        await page.evaluate(() => getComputedStyle(document.body).cursor),
+        "none",
+      );
+      await page.mouse.down();
+      assert.equal(await page.locator(".gyroscope-ripple").count(), 1);
+      await page.mouse.up();
+      await selectEffect("glow");
       await canvas.waitFor();
 
       await t.test(
@@ -146,7 +203,7 @@ test(
           const control = await toggle.boundingBox();
           const music = await page.locator(".sound-toggle").boundingBox();
           assert.ok(control.x + control.width <= music.x);
-          assert.equal(await toggle.getAttribute("aria-pressed"), "true");
+          assert.equal(await selectedEffect(), "glow");
           assert.equal(
             await page
               .locator(".site-cursor")
@@ -180,7 +237,7 @@ test(
         async () => {
           const music = page.locator(".sound-toggle");
           const musicState = await music.getAttribute("aria-pressed");
-          await toggle.click();
+          await selectEffect("off");
           await canvas.waitFor({ state: "detached" });
           assert.equal(await music.getAttribute("aria-pressed"), musicState);
           const stats = await page.evaluate(() => window.cursorStats);
@@ -190,12 +247,11 @@ test(
           await page.waitForTimeout(300);
           assert.equal(await frames(), before);
           await page.reload({ waitUntil: "networkidle" });
-          assert.equal(await toggle.getAttribute("aria-pressed"), "false");
+          assert.equal(await selectedEffect(), "off");
           assert.equal(await canvas.count(), 0);
-          await toggle.focus();
-          await toggle.press("Space");
+          await selectEffect("glow");
           await canvas.waitFor();
-          assert.equal(await toggle.getAttribute("aria-pressed"), "true");
+          assert.equal(await selectedEffect(), "glow");
         },
       );
 
@@ -264,7 +320,7 @@ test(
           );
           await page.emulateMedia({ reducedMotion: "reduce" });
           await canvas.waitFor({ state: "detached" });
-          assert.equal(await toggle.getAttribute("aria-pressed"), "true");
+          assert.equal(await selectedEffect(), "glow");
           await page.emulateMedia({ reducedMotion: "no-preference" });
           await canvas.waitFor();
           assert.equal(await canvas.count(), 1);
@@ -274,12 +330,12 @@ test(
       await t.test(
         "page navigation retains the setting and resizing keeps a single canvas",
         async () => {
-          await toggle.click();
+          await selectEffect("off");
           await page.locator(".vp-hero-action.primary").click();
           await page.waitForURL((url) => url.pathname !== "/");
           assert.equal(await canvas.count(), 0);
-          assert.equal(await toggle.getAttribute("aria-pressed"), "false");
-          await toggle.click();
+          assert.equal(await selectedEffect(), "off");
+          await selectEffect("glow");
           await canvas.waitFor();
           await page.setViewportSize({ width: 1200, height: 800 });
           await page.waitForFunction(
@@ -304,8 +360,8 @@ test(
           await page.mouse.move(500, 400, { steps: 10 });
           await page.waitForTimeout(300);
           assert.equal(await frames(), before);
-          await toggle.click();
-          await toggle.click();
+          await selectEffect("off");
+          await selectEffect("glow");
           await canvas.waitFor();
           await page.mouse.move(800, 500, { steps: 10 });
           await page.waitForFunction(
@@ -334,14 +390,13 @@ test(
             exact: true,
           });
           await control.waitFor();
+          await control.click();
+          await english.getByRole("button", { name: "Smoke trail" }).click();
           await english.waitForFunction(
             () => document.querySelector(".site-cursor canvas")?.width === 2160,
           );
           await control.click();
-          assert.equal(
-            await control.getAttribute("title"),
-            "Enable mouse effects",
-          );
+          await english.getByRole("button", { name: "Effects off" }).click();
           assert.equal(await english.locator(".site-cursor").count(), 0);
           await english.close();
           const mobile = await newPage({
@@ -372,7 +427,7 @@ test(
             waitUntil: "networkidle",
           });
           await canvas.waitFor();
-          await toggle.click();
+          await selectEffect("off");
           assert.equal(await canvas.count(), 0);
           await page.locator(".vp-hero-action.primary").click();
           await page.waitForURL((url) => url.pathname !== "/");

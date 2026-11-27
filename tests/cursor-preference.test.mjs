@@ -10,11 +10,9 @@ import {
 afterEach(() => {
   delete globalThis.window;
 });
-
+const key = "fast-request:mouse-effects";
 function storage(initial) {
-  const values = new Map(
-    initial === undefined ? [] : [["fast-request:mouse-effects", initial]],
-  );
+  const values = new Map(initial === undefined ? [] : [[key, initial]]);
   globalThis.window = {
     localStorage: {
       getItem: (key) => values.get(key) ?? null,
@@ -23,69 +21,63 @@ function storage(initial) {
   };
   return values;
 }
-
-test("defaults on and isolates preferences between app instances", () => {
-  const first = createCursorPreference();
-  const second = createCursorPreference();
-  assert.equal(first.enabled.value, true);
-  first.toggle();
-  assert.equal(first.enabled.value, false);
-  assert.equal(second.enabled.value, true);
+test("defaults to gyroscope and isolates app instances", () => {
+  const first = createCursorPreference(),
+    second = createCursorPreference();
+  first.setEffect("glow");
+  assert.equal(first.effect.value, "glow");
+  assert.equal(second.effect.value, "gyroscope");
 });
-
-test("restores explicit choices and defaults on for missing or invalid preferences", () => {
+test("restores choices and migrates the previous switch", () => {
   for (const [value, expected] of [
-    [undefined, true],
-    ["true", true],
-    ["false", false],
-    ["invalid", true],
+    [undefined, "gyroscope"],
+    ["true", "gyroscope"],
+    ["false", "off"],
+    ["off", "off"],
+    ["glow", "glow"],
+    ["gyroscope", "gyroscope"],
+    ["invalid", "gyroscope"],
   ]) {
     storage(value);
     const preference = createCursorPreference();
     preference.restore();
-    assert.equal(preference.enabled.value, expected);
+    assert.equal(preference.effect.value, expected);
   }
 });
-
-test("saves both off and on and restores the choice in a new app", () => {
+test("persists selections and rejects invalid values", () => {
   const values = storage();
   const preference = createCursorPreference();
-  preference.toggle();
-  assert.equal(values.get("fast-request:mouse-effects"), "false");
-  const reloaded = createCursorPreference();
-  reloaded.restore();
-  assert.equal(reloaded.enabled.value, false);
-  reloaded.toggle();
-  assert.equal(values.get("fast-request:mouse-effects"), "true");
+  for (const value of ["glow", "off", "gyroscope"]) {
+    preference.setEffect(value);
+    assert.equal(values.get(key), value);
+    const reloaded = createCursorPreference();
+    reloaded.restore();
+    assert.equal(reloaded.effect.value, value);
+  }
+  preference.setEffect("invalid");
+  assert.equal(preference.effect.value, "gyroscope");
+  assert.equal(values.get(key), "gyroscope");
 });
-
-test("keeps working when storage reads and writes fail", () => {
+test("works when storage is unavailable", () => {
   globalThis.window = {
     get localStorage() {
-      throw new Error("Storage unavailable");
+      throw new Error("unavailable");
     },
   };
   const preference = createCursorPreference();
   preference.restore();
-  assert.equal(preference.enabled.value, true);
-  preference.toggle();
-  assert.equal(preference.enabled.value, false);
-  preference.toggle();
-  assert.equal(preference.enabled.value, true);
+  preference.setEffect("off");
+  assert.equal(preference.effect.value, "off");
 });
-
-test("injects the same preference into controls and the renderer", () => {
+test("injects the preference and reports a missing provider", (t) => {
   const app = createSSRApp({ render: () => null });
   const preference = createCursorPreference();
   app.provide(cursorPreferenceKey, preference);
   assert.equal(app.runWithContext(useCursorPreference), preference);
-});
-
-test("reports a missing preference provider clearly", (t) => {
   t.mock.method(console, "warn", () => {});
-  const app = createSSRApp({ render: () => null });
   assert.throws(
-    () => app.runWithContext(useCursorPreference),
+    () =>
+      createSSRApp({ render: () => null }).runWithContext(useCursorPreference),
     /Mouse effect preference is unavailable/,
   );
 });

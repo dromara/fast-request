@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
 import GlowCursor from "./glow-cursor/GlowCursor.vue";
+import GyroscopeCursor from "./GyroscopeCursor.vue";
 import { useCursorPreference } from "../composables/useCursorPreference.js";
 
-const { enabled, restore } = useCursorPreference();
+const { effect, restore } = useCursorPreference();
 const motionAllowed = ref(false);
 let motionQuery: MediaQueryList | null = null;
 
@@ -24,8 +25,14 @@ onUnmounted(() => motionQuery?.removeEventListener("change", syncMotion));
 </script>
 
 <template>
-  <div v-if="enabled && motionAllowed" class="site-cursor" aria-hidden="true">
+  <div
+    v-if="effect !== 'off' && motionAllowed"
+    class="site-cursor"
+    aria-hidden="true"
+  >
+    <GyroscopeCursor v-if="effect === 'gyroscope'" />
     <GlowCursor
+      v-else
       color="#ffffff"
       secondary-color="#9b9b9b"
       :intensity="0.9"
@@ -45,7 +52,7 @@ onUnmounted(() => motionQuery?.removeEventListener("change", syncMotion));
 <style scoped>
 .site-cursor {
   position: fixed;
-  z-index: 100;
+  z-index: 2147483647;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
